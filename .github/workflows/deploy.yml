@@ -1,0 +1,115 @@
+name: Fetch Papers and Deploy
+
+on:
+  # Her gece saat 03:00 (Türkiye saati UTC+3 = 00:00 UTC)
+  schedule:
+    - cron: '0 0 * * *'
+  
+  # Manuel tetikleme
+  workflow_dispatch:
+  
+  # Push'ta sadece deploy çalışsın (main branch)
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  # ===================================
+  # Job 1: Fetch new papers from Arxiv
+  # ===================================
+  fetch-papers:
+    runs-on: ubuntu-latest
+    # Sadece schedule veya manuel tetiklemede çalış
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: 'backend/requirements.txt'
+
+      - name: 📦 Install Python dependencies
+        run: |
+          cd backend
+          pip install -r requirements.txt
+
+      - name: 🔍 Fetch papers from Arxiv
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          cd backend
+          python fetch_papers.py
+
+      - name: 📊 Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet public/data.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ Yeni makale yok, data.json değişmedi"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "✅ Yeni makaleler bulundu!"
+          fi
+
+      - name: 📤 Commit and push changes
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/data.json
+          git commit -m "📚 Auto-update: Yeni makaleler eklendi ($(date +'%Y-%m-%d'))"
+          git push
+
+  # ===================================
+  # Job 2: Build and deploy to GitHub Pages
+  # ===================================
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    needs: [fetch-papers]
+    # fetch-papers başarılı olduysa veya push eventi ise çalış
+    if: |
+      always() && 
+      (needs.fetch-papers.result == 'success' || needs.fetch-papers.result == 'skipped')
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          # Eğer fetch-papers yeni commit yaptıysa, onu al
+          fetch-depth: 0
+
+      - name: 🔄 Pull latest changes
+        run: git pull origin main || true
+
+      - name: 📦 Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🔨 Build for production
+        run: npm run build
+
+      - name: 📤 Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
