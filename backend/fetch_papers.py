@@ -41,7 +41,7 @@ def setup_gemini():
         return None
     
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-2.5-flash-lite')
     return model
 
 
@@ -57,10 +57,9 @@ def generate_turkish_summary(model, title: str, abstract: str) -> str:
 
 Kurallar:
 1. Markdown formatında yaz (## Özet başlığı, madde işaretleri, **kalın** yazı kullan)
-2. Makaleyi'nin ana katkısını, metodolojisini ve sonuçlarını özetle
-3. Teknik terimleri Türkçe karşılıklarıyla birlikte kullan (örn: "Derin Öğrenme (Deep Learning)")
-4. Maksimum 150 kelime olsun
-5. Akademik ama anlaşılır bir dil kullan
+2. Makalenin ana katkısını, metodolojisini ve sonuçlarını özetle
+3. Teknik terimleri doğrudan İngilizce olarak kullan (parantez içinde Türkçe karşılık YAZMA)
+4. Akademik ama anlaşılır bir dil kullan
 
 Makale Başlığı: {title}
 
