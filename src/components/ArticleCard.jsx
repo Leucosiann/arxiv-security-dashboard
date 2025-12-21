@@ -1,148 +1,92 @@
-import { useState, useEffect } from 'react'
-import ReactMarkdown from 'react-markdown'
+import { useState } from 'react'
 
-const TAG_COLORS = {
-    'cs.CR': 'bg-gray-600/60 text-gray-300',
-    'cs.AI': 'bg-purple-600/60 text-purple-200',
-    'cs.LG': 'bg-blue-600/60 text-blue-200',
-    'cs.PL': 'bg-green-600/60 text-green-200',
-}
+export default function ArticleCard({ article }) {
+    const [lang, setLang] = useState('tr') // Default to TR as requested before, but keep toggle capability
 
-export default function ArticleCard({ article, defaultLang = 'tr' }) {
-    const [lang, setLang] = useState(defaultLang)
-    const [expanded, setExpanded] = useState(false)
+    // Helper to format date "Today, 10:42 AM" or "Oct 23, 2023"
+    const formatDate = (dateString) => {
+        const date = new Date(dateString)
+        const today = new Date()
+        const isToday = date.toDateString() === today.toDateString()
 
-    // Sync with global language toggle
-    useEffect(() => {
-        setLang(defaultLang)
-    }, [defaultLang])
+        // Check if yesterday
+        const yesterday = new Date(today)
+        yesterday.setDate(yesterday.getDate() - 1)
+        const isYesterday = date.toDateString() === yesterday.toDateString()
 
-    const formatDate = (dateStr) => {
-        const date = new Date(dateStr)
-        return date.toLocaleDateString('tr-TR', {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric'
-        })
+        if (isToday) return `Today, ${date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`
+        if (isYesterday) return `Yesterday, ${date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`
+
+        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
     }
 
-    const content = lang === 'tr' ? article.content.tr : article.content.en
+    const content = lang === 'tr' && article.content.tr ? article.content.tr : article.content.en
 
     return (
-        <article className="group bg-dark-700 rounded-2xl border border-dark-600 hover:border-dark-500 transition-all duration-300 overflow-hidden">
-            {/* Header */}
-            <div className="p-5 pb-0">
-                <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1 min-w-0">
-                        {/* Tags */}
-                        <div className="flex flex-wrap gap-1.5 mb-3">
-                            {article.tags.map(tag => (
-                                <span
-                                    key={tag}
-                                    className={`px-2 py-0.5 rounded text-xs font-medium ${TAG_COLORS[tag] || 'bg-gray-600/60 text-gray-300'}`}
-                                >
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
+        <div className="group relative flex flex-col md:flex-row md:items-center justify-between p-6 rounded-2xl bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark hover:shadow-md transition-all duration-300">
+            <div className="flex-1 md:pr-8">
+                <div className="flex items-center space-x-3 mb-2">
+                    {article.tags.slice(0, 3).map(tag => (
+                        <span key={tag} className="px-2.5 py-1 rounded text-xs font-semibold bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700">
+                            {tag}
+                        </span>
+                    ))}
+                    <span className="text-xs text-text-muted-light dark:text-text-muted-dark font-mono">
+                        {article.id}
+                    </span>
+                    <span className="text-xs text-text-muted-light dark:text-text-muted-dark">
+                        • {formatDate(article.published_date)}
+                    </span>
+                </div>
 
-                        {/* Title */}
-                        <h2 className="text-lg font-semibold text-white group-hover:text-accent-purple transition-colors leading-tight mb-2">
-                            <a
-                                href={article.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:underline decoration-accent-purple/50"
-                            >
-                                {article.title}
-                            </a>
-                        </h2>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-tight mb-2 group-hover:underline decoration-1 underline-offset-4">
+                    <a href={article.link} target="_blank" rel="noreferrer">
+                        {article.title}
+                    </a>
+                </h3>
 
-                        {/* Authors & Date */}
-                        <div className="flex items-center gap-3 text-sm text-gray-400">
-                            <span className="truncate max-w-[300px]">
-                                {article.authors.join(', ')}
-                            </span>
-                            <span className="text-gray-600">•</span>
-                            <span className="whitespace-nowrap">{formatDate(article.published_date)}</span>
-                        </div>
-                    </div>
-
-                    {/* Language Toggle */}
-                    <div className="flex-shrink-0">
-                        <div className="flex bg-dark-800 rounded-lg p-0.5">
-                            <button
-                                onClick={() => setLang('tr')}
-                                className={`px-3 py-1 rounded-md text-xs font-medium transition-all ${lang === 'tr'
-                                        ? 'bg-accent-purple text-white shadow-lg shadow-accent-purple/20'
-                                        : 'text-gray-400 hover:text-white'
-                                    }`}
-                            >
-                                TR Özet
-                            </button>
-                            <button
-                                onClick={() => setLang('en')}
-                                className={`px-3 py-1 rounded-md text-xs font-medium transition-all ${lang === 'en'
-                                        ? 'bg-accent-blue text-white shadow-lg shadow-accent-blue/20'
-                                        : 'text-gray-400 hover:text-white'
-                                    }`}
-                            >
-                                EN Abstract
-                            </button>
-                        </div>
-                    </div>
+                <div className="text-sm text-text-muted-light dark:text-text-muted-dark line-clamp-3 md:line-clamp-2 markdown-content">
+                    {content.replace(/##/g, '').replace(/\*\*/g, '')} {/* Simple cleanup for preview, full markdown might break layout or need prose class */}
                 </div>
             </div>
 
-            {/* Content */}
-            <div className="p-5 pt-4">
-                <div
-                    className={`markdown-content text-gray-300 text-sm leading-relaxed ${!expanded ? 'line-clamp-4' : ''
-                        }`}
-                >
-                    <ReactMarkdown>{content}</ReactMarkdown>
-                </div>
-
-                {content.length > 300 && (
+            <div className="flex items-center mt-4 md:mt-0 space-x-6 flex-shrink-0">
+                <div className="flex space-x-2">
+                    {/* EN Button */}
                     <button
-                        onClick={() => setExpanded(!expanded)}
-                        className="mt-3 text-sm text-accent-purple hover:text-accent-purple/80 transition-colors"
+                        onClick={() => setLang('en')}
+                        className={`h-6 w-6 rounded-full flex items-center justify-center text-[10px] font-bold transition-colors ${lang === 'en'
+                                ? 'bg-gray-900 dark:bg-white text-white dark:text-black'
+                                : 'bg-gray-200 dark:bg-zinc-700 text-gray-700 dark:text-gray-300'
+                            }`}
                     >
-                        {expanded ? '← Küçült' : 'Devamını oku →'}
+                        EN
                     </button>
-                )}
-            </div>
 
-            {/* Footer */}
-            <div className="px-5 py-3 bg-dark-800/50 border-t border-dark-600 flex items-center justify-between">
-                <span className="text-xs text-gray-500">
-                    arxiv:{article.id}
-                </span>
-                <div className="flex items-center gap-3">
-                    <a
-                        href={article.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs text-gray-400 hover:text-accent-purple transition-colors flex items-center gap-1"
+                    {/* TR Button */}
+                    <button
+                        onClick={() => setLang('tr')}
+                        disabled={!article.content.tr}
+                        className={`h-6 w-6 rounded-full flex items-center justify-center text-[10px] font-bold transition-colors ${lang === 'tr'
+                                ? 'bg-gray-900 dark:bg-white text-white dark:text-black'
+                                : (article.content.tr
+                                    ? 'bg-gray-200 dark:bg-zinc-700 text-gray-700 dark:text-gray-300'
+                                    : 'border border-gray-300 dark:border-zinc-700 text-gray-400 dark:text-zinc-500 line-through bg-transparent')
+                            }`}
                     >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                        Arxiv
-                    </a>
-                    <a
-                        href={article.pdf_link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs text-gray-400 hover:text-accent-blue transition-colors flex items-center gap-1"
-                    >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                        PDF
-                    </a>
+                        TR
+                    </button>
                 </div>
+
+                <a
+                    href={article.pdf_link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center justify-center h-10 w-10 rounded-full border border-gray-200 dark:border-gray-700 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black text-gray-500 dark:text-gray-400 transition-colors"
+                >
+                    <span className="material-symbols-outlined text-xl">arrow_outward</span>
+                </a>
             </div>
-        </article>
+        </div>
     )
 }

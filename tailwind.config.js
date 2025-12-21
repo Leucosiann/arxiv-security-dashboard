@@ -1,30 +1,41 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+    darkMode: "class",
     content: [
         "./index.html",
-        "./src/**/*.{js,ts,jsx,tsx}",
+        "./src/**/*.{js,ts,jsx,tsx}"
     ],
     theme: {
         extend: {
-            fontFamily: {
-                sans: ['Inter', 'system-ui', 'sans-serif'],
-            },
             colors: {
-                dark: {
-                    900: '#0a0a0f',
-                    800: '#0f0f14',
-                    700: '#14141a',
-                    600: '#1a1a22',
-                    500: '#22222c',
-                },
-                accent: {
-                    purple: '#a855f7',
-                    blue: '#3b82f6',
-                    green: '#22c55e',
-                    orange: '#f97316',
-                }
+                primary: "#FFFFFF",
+                "background-light": "#fcfcfc",
+                "background-dark": "#121212",
+                "surface-dark": "#1e1e1e",
+                "surface-light": "#f2f2f2",
+                "border-dark": "#2e2e2e",
+                "border-light": "#e5e5e5",
+                "accent-mono-light": "#e4e4e7",
+                "accent-mono-dark": "#3f3f46",
+                "text-muted-dark": "#a1a1aa",
+                "text-muted-light": "#71717a",
+                // Shadcn/Base overrides or compatibility if needed, but prioritized user's colors
+            },
+            fontFamily: {
+                display: ["Inter", "sans-serif"],
+                sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+                DEFAULT: "0.5rem",
+                lg: "0.75rem",
+                xl: "1rem",
+                '2xl': "1.5rem",
             },
         },
     },
-    plugins: [],
+    plugins: [
+        require("tailwindcss-animate"),
+        require("@tailwindcss/typography"),
+        require("@tailwindcss/forms") // code.html uses this plugin
+    ],
 }
