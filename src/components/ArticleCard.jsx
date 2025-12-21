@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 
 export default function ArticleCard({ article }) {
-    const [lang, setLang] = useState('tr') // Default to TR as requested before, but keep toggle capability
+    const [lang, setLang] = useState('tr')
+    const [isExpanded, setIsExpanded] = useState(false)
 
-    // Helper to format date "Today, 10:42 AM" or "Oct 23, 2023"
+    // Helper to format date
     const formatDate = (dateString) => {
         const date = new Date(dateString)
         const today = new Date()
@@ -20,10 +21,31 @@ export default function ArticleCard({ article }) {
         return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
     }
 
-    const content = lang === 'tr' && article.content.tr ? article.content.tr : article.content.en
+    // Parse Turkish content to separate Title and Abstract
+    const trContent = useMemo(() => {
+        const text = article.content.tr || ""
+        // Regex matches "Makale Başlığı: [capturing group]" and "Özet: [capturing group]"
+        // Case insensitive, handles Markdown bolding (**...**)
+        const titleMatch = text.match(/(?:Makale Başlığı|Article Title)[:\s]*\**\s*(.*?)\s*\**(?:$|\n)/i)
+        const abstractMatch = text.match(/(?:Özet|Abstract)[:\s]*\**\s*([\s\S]*)/i)
+
+        return {
+            title: titleMatch ? titleMatch[1].replace(/\*\*/g, '').trim() : "",
+            abstract: abstractMatch ? abstractMatch[1].replace(/\*\*/g, '').trim() : text
+        }
+    }, [article.content.tr])
+
+    // Determine what to display
+    const displayTitle = (lang === 'tr' && trContent.title) ? trContent.title : article.title
+    const displayAbstract = lang === 'tr'
+        ? (trContent.abstract || article.content.tr)
+        : article.content.en
+
+    // Clean up markdown artifacts for display if needed
+    const cleanAbstract = displayAbstract?.replace(/\*\*/g, '').replace(/##/g, '')
 
     return (
-        <div className="group relative flex flex-col md:flex-row md:items-center justify-between p-6 rounded-2xl bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark hover:shadow-md transition-all duration-300">
+        <div className="group relative flex flex-col md:flex-row md:items-start justify-between p-6 rounded-2xl bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark hover:shadow-md transition-all duration-300">
             <div className="flex-1 md:pr-8">
                 <div className="flex items-center space-x-3 mb-2">
                     {article.tags.slice(0, 3).map(tag => (
@@ -41,13 +63,33 @@ export default function ArticleCard({ article }) {
 
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-tight mb-2 group-hover:underline decoration-1 underline-offset-4">
                     <a href={article.link} target="_blank" rel="noreferrer">
-                        {article.title}
+                        {displayTitle}
                     </a>
                 </h3>
 
-                <div className="text-sm text-text-muted-light dark:text-text-muted-dark line-clamp-3 md:line-clamp-2 markdown-content">
-                    {content.replace(/##/g, '').replace(/\*\*/g, '')} {/* Simple cleanup for preview, full markdown might break layout or need prose class */}
+                <div
+                    className={`text-sm text-text-muted-light dark:text-text-muted-dark cursor-pointer transition-all ${isExpanded ? '' : 'line-clamp-3'}`}
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    title="Click to expand/collapse"
+                >
+                    {cleanAbstract}
                 </div>
+                {!isExpanded && (
+                    <button
+                        onClick={(e) => { e.stopPropagation(); setIsExpanded(true); }}
+                        className="text-xs font-medium text-gray-500 dark:text-gray-400 mt-1 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    >
+                        Read more
+                    </button>
+                )}
+                {isExpanded && (
+                    <button
+                        onClick={(e) => { e.stopPropagation(); setIsExpanded(false); }}
+                        className="text-xs font-medium text-gray-500 dark:text-gray-400 mt-1 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    >
+                        Show less
+                    </button>
+                )}
             </div>
 
             <div className="flex items-center mt-4 md:mt-0 space-x-6 flex-shrink-0">
