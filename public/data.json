@@ -1,5 +1,184 @@
 [
   {
+    "id": "2512.21241v1",
+    "title": "Improving the Convergence Rate of Ray Search Optimization for Query-Efficient Hard-Label Attacks",
+    "authors": [
+      "Xinjie Xu",
+      "Shuyu Cheng",
+      "Dongwei Xu",
+      "Qi Xuan",
+      "Chen Ma"
+    ],
+    "published_date": "2025-12-24",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR",
+      "cs.CV"
+    ],
+    "link": "http://arxiv.org/abs/2512.21241v1",
+    "pdf_link": "https://arxiv.org/pdf/2512.21241v1",
+    "content": {
+      "en": "In hard-label black-box adversarial attacks, where only the top-1 predicted label is accessible, the prohibitive query complexity poses a major obstacle to practical deployment. In this paper, we focus on optimizing a representative class of attacks that search for the optimal ray direction yielding the minimum $\\ell_2$-norm perturbation required to move a benign image into the adversarial region. Inspired by Nesterov's Accelerated Gradient (NAG), we propose a momentum-based algorithm, ARS-OPT, which proactively estimates the gradient with respect to a future ray direction inferred from accumulated momentum. We provide a theoretical analysis of its convergence behavior, showing that ARS-OPT enables more accurate directional updates and achieves faster, more stable optimization. To further accelerate convergence, we incorporate surrogate-model priors into ARS-OPT's gradient estimation, resulting in PARS-OPT with enhanced performance. The superiority of our approach is supported by theoretical guarantees under standard assumptions. Extensive experiments on ImageNet and CIFAR-10 demonstrate that our method surpasses 13 state-of-the-art approaches in query efficiency.",
+      "tr": "İşte akademik makale başlığının ve özetinin Türkçe çevirisi:\n\n**Makale Başlığı:** Sorgu Verimliliği Yüksek Zorlu Etiket Saldırıları İçin Işın Arama Optimizasyonunun Yakınsama Oranının İyileştirilmesi\n\n**Özet:**\n\nZorlu etiketli (hard-label) siyah-kutu (black-box) zararlı saldırılarda, yalnızca en yüksek puana sahip tahmin edilen etiketin erişilebilir olduğu durumlarda, kabul edilemez query complexity pratik uygulamalar önünde büyük bir engel teşkil etmektedir. Bu çalışmada, zararsız bir görüntüyü zararlı bölgeye taşımak için gereken minimum $\\ell_2$-norm pertürbasyonunu veren optimum ışın yönünü (ray direction) arayan, saldırıların temsili bir sınıfını optimize etmeye odaklanıyoruz. Nesterov's Accelerated Gradient (NAG)'dan ilham alarak, bir momentum tabanlı algoritma olan ARS-OPT'yi öneriyoruz. Bu algoritma, birikmiş momentumdan çıkarılan gelecek bir ışın yönüne ilişkin gradient'i proaktif olarak tahmin eder. Yakınsama davranışının teorik analizini sunarak, ARS-OPT'nin daha doğru yönel güncelleştirmeleri sağladığını ve daha hızlı, daha kararlı bir optimizasyon gerçekleştirdiğini gösteriyoruz. Yakınsamayı daha da hızlandırmak için, ARS-OPT'nin gradient tahminine surrogate-model priors'ları entegre ederek, geliştirilmiş performans sergileyen PARS-OPT'yi elde ediyoruz. Yaklaşımımızın üstünlüğü, standart varsayımlar altında teorik garantilerle desteklenmektedir. ImageNet ve CIFAR-10 üzerindeki kapsamlı deneyler, yöntemimizin query efficiency açısından 13 adet son teknoloji (state-of-the-art) yaklaşımın önüne geçtiğini göstermektedir."
+    }
+  },
+  {
+    "id": "2512.21238v1",
+    "title": "Assessing the Software Security Comprehension of Large Language Models",
+    "authors": [
+      "Mohammed Latif Siddiq",
+      "Natalie Sekerak",
+      "Antonio Karam",
+      "Maria Leal",
+      "Arvin Islam-Gomes"
+    ],
+    "published_date": "2025-12-24",
+    "tags": [
+      "cs.SE",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2512.21238v1",
+    "pdf_link": "https://arxiv.org/pdf/2512.21238v1",
+    "content": {
+      "en": "Large language models (LLMs) are increasingly used in software development, but their level of software security expertise remains unclear. This work systematically evaluates the security comprehension of five leading LLMs: GPT-4o-Mini, GPT-5-Mini, Gemini-2.5-Flash, Llama-3.1, and Qwen-2.5, using Blooms Taxonomy as a framework. We assess six cognitive dimensions: remembering, understanding, applying, analyzing, evaluating, and creating. Our methodology integrates diverse datasets, including curated multiple-choice questions, vulnerable code snippets (SALLM), course assessments from an Introduction to Software Security course, real-world case studies (XBOW), and project-based creation tasks from a Secure Software Engineering course. Results show that while LLMs perform well on lower-level cognitive tasks such as recalling facts and identifying known vulnerabilities, their performance degrades significantly on higher-order tasks that require reasoning, architectural evaluation, and secure system creation. Beyond reporting aggregate accuracy, we introduce a software security knowledge boundary that identifies the highest cognitive level at which a model consistently maintains reliable performance. In addition, we identify 51 recurring misconception patterns exhibited by LLMs across Blooms levels.",
+      "tr": "**Makale Başlığı:** Büyük Dil Modellerinin Yazılım Güvenliği Kavrayışının Değerlendirilmesi\n\n**Özet:**\n\nBüyük dil modelleri (LLM'ler) yazılım geliştirmede giderek daha fazla kullanılmakla birlikte, yazılım güvenliği uzmanlıkları düzeyleri belirsizliğini korumaktadır. Bu çalışma, Blooms Taksonomisi'ni bir çerçeve olarak kullanarak beş önde gelen LLM'nin - GPT-4o-Mini, GPT-5-Mini, Gemini-2.5-Flash, Llama-3.1 ve Qwen-2.5 - güvenlik kavrayışını sistematik olarak değerlendirmektedir. Altı bilişsel boyutu değerlendirmekteyiz: hatırlama, anlama, uygulama, analiz etme, değerlendirme ve yaratma. Metodolojimiz, özenle hazırlanmış çoktan seçmeli sorular, güvenlik açığı içeren kod parçacıkları (SALLM), bir Giriş Düzeyinde Yazılım Güvenliği dersinden alınan kurs değerlendirmeleri, gerçek dünya vaka çalışmaları (XBOW) ve Güvenli Yazılım Mühendisliği dersinden proje tabanlı yaratma görevleri dahil olmak üzere çeşitli veri kümelerini entegre etmektedir. Sonuçlar, LLM'lerin bilgileri hatırlama ve bilinen güvenlik açıklarını belirleme gibi alt düzey bilişsel görevlerde iyi performans gösterdiğini, ancak reasoning, mimari değerlendirme ve güvenli sistem oluşturma gerektiren üst düzey görevlerde performanslarının önemli ölçüde düştüğünü göstermektedir. Toplam doğruluğu raporlamanın ötesinde, bir modelin güvenilir performansı sürekli olarak sürdürdüğü en yüksek bilişsel düzeyi belirleyen bir yazılım güvenliği knowledge boundary sunuyoruz. Ek olarak, Blooms seviyelerinde LLM'lerin sergilediği 51 tekrarlayan yanlış anlama paterni tespit ediyoruz."
+    }
+  },
+  {
+    "id": "2512.21236v1",
+    "title": "Casting a SPELL: Sentence Pairing Exploration for LLM Limitation-breaking",
+    "authors": [
+      "Yifan Huang",
+      "Xiaojun Jia",
+      "Wenbo Guo",
+      "Yuqiang Sun",
+      "Yihao Huang"
+    ],
+    "published_date": "2025-12-24",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.SE"
+    ],
+    "link": "http://arxiv.org/abs/2512.21236v1",
+    "pdf_link": "https://arxiv.org/pdf/2512.21236v1",
+    "content": {
+      "en": "Large language models (LLMs) have revolutionized software development through AI-assisted coding tools, enabling developers with limited programming expertise to create sophisticated applications. However, this accessibility extends to malicious actors who may exploit these powerful tools to generate harmful software. Existing jailbreaking research primarily focuses on general attack scenarios against LLMs, with limited exploration of malicious code generation as a jailbreak target. To address this gap, we propose SPELL, a comprehensive testing framework specifically designed to evaluate the weakness of security alignment in malicious code generation. Our framework employs a time-division selection strategy that systematically constructs jailbreaking prompts by intelligently combining sentences from a prior knowledge dataset, balancing exploration of novel attack patterns with exploitation of successful techniques. Extensive evaluation across three advanced code models (GPT-4.1, Claude-3.5, and Qwen2.5-Coder) demonstrates SPELL's effectiveness, achieving attack success rates of 83.75%, 19.38%, and 68.12% respectively across eight malicious code categories. The generated prompts successfully produce malicious code in real-world AI development tools such as Cursor, with outputs confirmed as malicious by state-of-the-art detection systems at rates exceeding 73%. These findings reveal significant security gaps in current LLM implementations and provide valuable insights for improving AI safety alignment in code generation applications.",
+      "tr": "Makale Başlığı: SPELL'i Yansıtmak: LLM Sınırlılıklarını Kırma İçin Cümle Eşleştirme Keşfi\n\nÖzet:\nLarge language models (LLMs), yazılım geliştirme alanında AI-assisted coding tools aracılığıyla devrim yaratmıştır ve sınırlı programlama uzmanlığına sahip geliştiricilerin sofistike uygulamalar oluşturmasını sağlamıştır. Ancak bu erişilebilirlik, bu güçlü araçları zararlı yazılımlar üretmek için istismar edebilecek kötü niyetli aktörlere de uzanmaktadır. Mevcut jailbreaking araştırmaları öncelikle LLM'lere karşı genel saldırı senaryolarına odaklanmakta, malicious code generation'ı bir jailbreak hedefi olarak keşfetme konusunda ise sınırlı kalmaktadır. Bu boşluğu gidermek için, malicious code generation'daki security alignment'ın zayıflıklarını değerlendirmek üzere özel olarak tasarlanmış kapsamlı bir testing framework olan SPELL'i öneriyoruz. Framework'ümüz, novel attack patterns'ın keşfini başarılı tekniklerin istismarıyla dengeleyerek, önceden oluşturulmuş bir knowledge dataset'inden cümleleri akıllıca birleştirerek jailbreaking prompts'ları sistematik olarak oluşturan bir time-division selection strategy benimsemektedir. Üç gelişmiş code model (GPT-4.1, Claude-3.5 ve Qwen2.5-Coder) üzerinde yapılan kapsamlı değerlendirme, SPELL'in etkinliğini göstermekte ve sekiz adet malicious code kategorisinde sırasıyla %83.75, %19.38 ve %68.12 saldırı başarı oranları elde etmektedir. Üretilen prompts, Cursor gibi gerçek dünya AI development tools'larında başarıyla malicious code üretmekte, çıktıları ise %73'ün üzerinde oranlarda state-of-the-art detection systems tarafından zararlı olarak doğrulanmaktadır. Bu bulgular, mevcut LLM implementations'ındaki önemli security gaps'leri ortaya koymakta ve code generation applications'larında AI safety alignment'ı iyileştirmek için değerli içgörüler sunmaktadır."
+    }
+  },
+  {
+    "id": "2512.21132v1",
+    "title": "AutoBaxBuilder: Bootstrapping Code Security Benchmarking",
+    "authors": [
+      "Tobias von Arx",
+      "Niels Mündler",
+      "Mark Vero",
+      "Maximilian Baader",
+      "Martin Vechev"
+    ],
+    "published_date": "2025-12-24",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG",
+      "cs.PL"
+    ],
+    "link": "http://arxiv.org/abs/2512.21132v1",
+    "pdf_link": "https://arxiv.org/pdf/2512.21132v1",
+    "content": {
+      "en": "As LLMs see wide adoption in software engineering, the reliable assessment of the correctness and security of LLM-generated code is crucial. Notably, prior work has demonstrated that security is often overlooked, exposing that LLMs are prone to generating code with security vulnerabilities. These insights were enabled by specialized benchmarks, crafted through significant manual effort by security experts. However, relying on manually-crafted benchmarks is insufficient in the long term, because benchmarks (i) naturally end up contaminating training data, (ii) must extend to new tasks to provide a more complete picture, and (iii) must increase in difficulty to challenge more capable LLMs. In this work, we address these challenges and present AutoBaxBuilder, a framework that generates tasks and tests for code security benchmarking from scratch. We introduce a robust pipeline with fine-grained plausibility checks, leveraging the code understanding capabilities of LLMs to construct functionality tests and end-to-end security-probing exploits. To confirm the quality of the generated benchmark, we conduct both a qualitative analysis and perform quantitative experiments, comparing it against tasks constructed by human experts. We use AutoBaxBuilder to construct entirely new tasks and release them to the public as AutoBaxBench, together with a thorough evaluation of the security capabilities of LLMs on these tasks. We find that a new task can be generated in under 2 hours, costing less than USD 10.",
+      "tr": "**Makale Başlığı:** AutoBaxBuilder: Kod Güvenliği Kıyaslamasını Başlatma\n\n**Özet:**\n\nYazılım mühendisliğinde LLM'lerin yaygın olarak benimsenmesiyle birlikte, LLM tarafından üretilen kodun doğruluğunun ve güvenliğinin güvenilir bir şekilde değerlendirilmesi hayati önem taşımaktadır. Özellikle önceki çalışmalar, güvenliğin genellikle göz ardı edildiğini ve LLM'lerin güvenlik açıkları içeren kod üretme eğiliminde olduğunu ortaya koymuştur. Bu bulgular, güvenlik uzmanları tarafından büyük manuel çaba gerektirerek oluşturulan özel kıyaslamalar sayesinde mümkün olmuştur. Ancak, manuel olarak hazırlanmış kıyaslamalara güvenmek uzun vadede yetersiz kalmaktadır, çünkü kıyaslamalar (i) doğal olarak eğitim verilerini kirletir, (ii) daha eksiksiz bir resim sunmak için yeni görevlere genişletilmeli ve (iii) daha yetenekli LLM'leri zorlamak için zorluk seviyeleri artırılmalıdır. Bu çalışmada, bu zorlukları ele alıyoruz ve kod güvenliği kıyaslamaları için sıfırdan görevler ve testler üreten bir çerçeve olan AutoBaxBuilder'ı sunuyoruz. LLM'lerin kod anlama yeteneklerinden yararlanarak işlevsellik testleri ve uçtan uca güvenlik sorgulama istismarları oluşturmak için, ince taneli makuliyet kontrolleri içeren sağlam bir işlem hattı tanıtıyoruz. Üretilen kıyaslamanın kalitesini doğrulamak için, hem nitel bir analiz yürütüyor hem de insan uzmanları tarafından oluşturulan görevlerle karşılaştırarak nicel deneyler gerçekleştiriyoruz. AutoBaxBuilder'ı tamamen yeni görevler oluşturmak için kullanıyoruz ve bunları, LLM'lerin bu görevlerdeki güvenlik yeteneklerinin kapsamlı bir değerlendirmesiyle birlikte AutoBaxBench olarak kamuoyuna sunuyoruz. Yeni bir görevin 2 saatten kısa sürede ve 10 USD'den daha az bir maliyetle üretilebildiğini buluyoruz."
+    }
+  },
+  {
+    "id": "2512.21110v1",
+    "title": "Beyond Context: Large Language Models Failure to Grasp Users Intent",
+    "authors": [
+      "Ahmed M. Hussain",
+      "Salahuddin Salahuddin",
+      "Panos Papadimitratos"
+    ],
+    "published_date": "2025-12-24",
+    "tags": [
+      "cs.AI",
+      "cs.CL",
+      "cs.CR",
+      "cs.CY"
+    ],
+    "link": "http://arxiv.org/abs/2512.21110v1",
+    "pdf_link": "https://arxiv.org/pdf/2512.21110v1",
+    "content": {
+      "en": "Current Large Language Models (LLMs) safety approaches focus on explicitly harmful content while overlooking a critical vulnerability: the inability to understand context and recognize user intent. This creates exploitable vulnerabilities that malicious users can systematically leverage to circumvent safety mechanisms. We empirically evaluate multiple state-of-the-art LLMs, including ChatGPT, Claude, Gemini, and DeepSeek. Our analysis demonstrates the circumvention of reliable safety mechanisms through emotional framing, progressive revelation, and academic justification techniques. Notably, reasoning-enabled configurations amplified rather than mitigated the effectiveness of exploitation, increasing factual precision while failing to interrogate the underlying intent. The exception was Claude Opus 4.1, which prioritized intent detection over information provision in some use cases. This pattern reveals that current architectural designs create systematic vulnerabilities. These limitations require paradigmatic shifts toward contextual understanding and intent recognition as core safety capabilities rather than post-hoc protective mechanisms.",
+      "tr": "Makale Başlığı: Bağlamın Ötesi: Büyük Dil Modellerinin Kullanıcı Niyetini Kavramada Başarısızlığı\n\nÖzet:\nMevcut Büyük Dil Modelleri (LLMs) güvenlik yaklaşımları, açıkça zararlı içeriğe odaklanırken kritik bir zafiyeti göz ardı etmektedir: bağlamı anlama ve kullanıcı niyetini tanıma konusundaki yetersizlik. Bu durum, kötü niyetli kullanıcıların güvenlik mekanizmalarını aşmak için sistematik olarak kullanabilecekleri istismar edilebilir zafiyetler yaratmaktadır. ChatGPT, Claude, Gemini ve DeepSeek dahil olmak üzere birden fazla en gelişmiş LLM'yi ampirik olarak değerlendiriyoruz. Analizimiz, duygusal çerçeveleme, aşamalı ifşa ve akademik gerekçelendirme teknikleri aracılığıyla güvenilir güvenlik mekanizmalarının atlatıldığını göstermektedir. Özellikle, reasoning-enabled konfigürasyonlar istismarın etkinliğini hafifletmek yerine artırmış, olgusal kesinliği artırırken altta yatan niyeti sorgulamakta başarısız olmuştur. Bunun istisnası, bazı kullanım durumlarında bilgi sağlama yerine niyet tespitine öncelik veren Claude Opus 4.1 olmuştur. Bu örüntü, mevcut mimari tasarımların sistematik zafiyetler yarattığını ortaya koymaktadır. Bu sınırlamalar, sonradan koruyucu mekanizmalar yerine bağlamsal anlama ve niyet tanımayı temel güvenlik yetenekleri olarak benimseyen paradigmatik değişimler gerektirmektedir."
+    }
+  },
+  {
+    "id": "2512.21048v1",
+    "title": "zkFL-Health: Blockchain-Enabled Zero-Knowledge Federated Learning for Medical AI Privacy",
+    "authors": [
+      "Savvy Sharma",
+      "George Petrovic",
+      "Sarthak Kaushik"
+    ],
+    "published_date": "2025-12-24",
+    "tags": [
+      "cs.CR",
+      "cs.DC",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2512.21048v1",
+    "pdf_link": "https://arxiv.org/pdf/2512.21048v1",
+    "content": {
+      "en": "Healthcare AI needs large, diverse datasets, yet strict privacy and governance constraints prevent raw data sharing across institutions. Federated learning (FL) mitigates this by training where data reside and exchanging only model updates, but practical deployments still face two core risks: (1) privacy leakage via gradients or updates (membership inference, gradient inversion) and (2) trust in the aggregator, a single point of failure that can drop, alter, or inject contributions undetected. We present zkFL-Health, an architecture that combines FL with zero-knowledge proofs (ZKPs) and Trusted Execution Environments (TEEs) to deliver privacy-preserving, verifiably correct collaborative training for medical AI. Clients locally train and commit their updates; the aggregator operates within a TEE to compute the global update and produces a succinct ZK proof (via Halo2/Nova) that it used exactly the committed inputs and the correct aggregation rule, without revealing any client update to the host. Verifier nodes validate the proof and record cryptographic commitments on-chain, providing an immutable audit trail and removing the need to trust any single party. We outline system and threat models tailored to healthcare, the zkFL-Health protocol, security/privacy guarantees, and a performance evaluation plan spanning accuracy, privacy risk, latency, and cost. This framework enables multi-institutional medical AI with strong confidentiality, integrity, and auditability, key properties for clinical adoption and regulatory compliance.",
+      "tr": "**Makale Başlığı:** zkFL-Health: Tıbbi Yapay Zeka Gizliliği İçin Blokzincir Destekli Sıfır Bilgi Bileşik Öğrenme\n\n**Özet:**\n\nSağlık yapay zekası, büyük ve çeşitli veri kümelerine ihtiyaç duymaktadır. Ancak, sıkı gizlilik ve yönetişim kısıtlamaları, kurumlar arasında ham veri paylaşımını engellemektedir. Bileşik öğrenme (FL), verinin bulunduğu yerde model eğitimi yaparak ve yalnızca model güncellemelerini değiş tokuş ederek bunu hafifletir. Ancak, pratik uygulamalar hala iki temel riskle karşı karşıyadır: (1) gizlilik sızıntısı (membership inference, gradient inversion) gradientler veya güncellemeler aracılığıyla ve (2) tespit edilmeden katkıları düşürebilen, değiştirebilen veya enjekte edebilen tek hata noktası olan aggregator'a güven. Biz, tıbbi yapay zeka için gizliliği koruyan, doğrulanabilir şekilde doğru işbirlikçi eğitimi sunmak üzere FL'yi zero-knowledge proofs (ZKPs) ve Trusted Execution Environments (TEEs) ile birleştiren bir mimari olan zkFL-Health'i sunuyoruz. Müşteriler yerel olarak modellerini eğitir ve güncellemelerini commit ederler; aggregator, global güncellemeyi hesaplamak için bir TEE içinde çalışır ve herhangi bir müşteri güncellemesini host'a açıklamadan, tam olarak commit edilmiş girdileri ve doğru aggregation rule'u kullandığını gösteren özlü bir ZK proof (Halo2/Nova aracılığıyla) üretir. Doğrulayıcı düğümler, proof'u doğrular ve on-chain üzerine kriptografik commitment'ları kaydeder. Bu, değişmez bir denetim izi sağlar ve herhangi tek bir tarafa güvenme ihtiyacını ortadan kaldırır. Sağlık hizmetlerine özel sistem ve tehdit modellerini, zkFL-Health protokolünü, güvenlik/gizlilik garantilerini ve accuracy, privacy risk, latency ve cost'u kapsayan bir performans değerlendirme planını ana hatlarıyla belirtiyoruz. Bu çerçeve, klinik kabul ve mevzuata uygunluk için temel özellikler olan güçlü gizlilik, bütünlük ve denetlenebilirlik ile çok kurumsal tıbbi yapay zekayı mümkün kılar."
+    }
+  },
+  {
+    "id": "2512.20872v1",
+    "title": "Better Call Graphs: A New Dataset of Function Call Graphs for Malware Classification",
+    "authors": [
+      "Jakir Hossain",
+      "Gurvinder Singh",
+      "Lukasz Ziarek",
+      "Ahmet Erdem Sarıyüce"
+    ],
+    "published_date": "2025-12-24",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2512.20872v1",
+    "pdf_link": "https://arxiv.org/pdf/2512.20872v1",
+    "content": {
+      "en": "Function call graphs (FCGs) have emerged as a powerful abstraction for malware detection, capturing the behavioral structure of applications beyond surface-level signatures. Their utility in traditional program analysis has been well established, enabling effective classification and analysis of malicious software. In the mobile domain, especially in the Android ecosystem, FCG-based malware classification is particularly critical due to the platform's widespread adoption and the complex, component-based structure of Android apps. However, progress in this direction is hindered by the lack of large-scale, high-quality Android-specific FCG datasets. Existing datasets are often outdated, dominated by small or redundant graphs resulting from app repackaging, and fail to reflect the diversity of real-world malware. These limitations lead to overfitting and unreliable evaluation of graph-based classification methods. To address this gap, we introduce Better Call Graphs (BCG), a comprehensive dataset of large and unique FCGs extracted from recent Android application packages (APKs). BCG includes both benign and malicious samples spanning various families and types, along with graph-level features for each APK. Through extensive experiments using baseline classifiers, we demonstrate the necessity and value of BCG compared to existing datasets. BCG is publicly available at https://erdemub.github.io/BCG-dataset.",
+      "tr": "**Makale Başlığı:** Better Call Graphs: Kötü Amaçlı Yazılım Sınıflandırması İçin Yeni Bir Fonksiyon Çağrı Grafikleri Veri Kümesi\n\n**Özet:**\n\nFunction call graphs (FCGs), uygulamaların davranışsal yapısını yüzeyel imzaların ötesinde yakalayarak kötü amaçlı yazılım tespiti için güçlü bir soyutlama olarak ortaya çıkmıştır. Geleneksel program analizindeki faydaları, kötü amaçlı yazılımların etkili sınıflandırılmasına ve analizine olanak tanıdığı için iyi bir şekilde kurulmuştur. Mobil alanda, özellikle Android ekosisteminde, FCG tabanlı kötü amaçlı yazılım sınıflandırması, platformun yaygın benimsenmesi ve Android uygulamalarının karmaşık, bileşen tabanlı yapısı nedeniyle özellikle kritiktir. Ancak, bu yöndeki ilerleme, büyük ölçekli, yüksek kaliteli Android'e özgü FCG veri kümelerinin eksikliği ile engellenmektedir. Mevcut veri kümeleri genellikle güncelliğini yitirmiş, uygulama yeniden paketlenmesinden kaynaklanan küçük veya gereksiz grafikler tarafından domine edilmiş ve gerçek dünya kötü amaçlı yazılımlarının çeşitliliğini yansıtamamaktadır. Bu sınırlamalar, aşırı uyumlanmaya (overfitting) ve grafik tabanlı sınıflandırma yöntemlerinin güvenilmez değerlendirilmesine yol açmaktadır. Bu boşluğu gidermek için, en son Android uygulama paketlerinden (APKs) çıkarılan büyük ve benzersiz FCG'lerden oluşan kapsamlı bir veri kümesi olan Better Call Graphs'ı (BCG) sunuyoruz. BCG, her APK için grafik seviyesi özelliklerin yanı sıra çeşitli aileleri ve türleri kapsayan hem zararsız hem de kötü amaçlı örnekleri içermektedir. Temel sınıflandırıcılar (baseline classifiers) kullanılarak yapılan kapsamlı deneyler aracılığıyla, mevcut veri kümelerine kıyasla BCG'nin gerekliliğini ve değerini gösteriyoruz. BCG, https://erdemub.github.io/BCG-dataset adresinde kamuya açık olarak mevcuttur."
+    }
+  },
+  {
+    "id": "2512.20712v1",
+    "title": "Real-World Adversarial Attacks on RF-Based Drone Detectors",
+    "authors": [
+      "Omer Gazit",
+      "Yael Itzhakev",
+      "Yuval Elovici",
+      "Asaf Shabtai"
+    ],
+    "published_date": "2025-12-23",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2512.20712v1",
+    "pdf_link": "https://arxiv.org/pdf/2512.20712v1",
+    "content": {
+      "en": "Radio frequency (RF) based systems are increasingly used to detect drones by analyzing their RF signal patterns, converting them into spectrogram images which are processed by object detection models. Existing RF attacks against image based models alter digital features, making over-the-air (OTA) implementation difficult due to the challenge of converting digital perturbations to transmittable waveforms that may introduce synchronization errors and interference, and encounter hardware limitations. We present the first physical attack on RF image based drone detectors, optimizing class-specific universal complex baseband (I/Q) perturbation waveforms that are transmitted alongside legitimate communications. We evaluated the attack using RF recordings and OTA experiments with four types of drones. Our results show that modest, structured I/Q perturbations are compatible with standard RF chains and reliably reduce target drone detection while preserving detection of legitimate drones.",
+      "tr": "**Makale Başlığı: RF Tabanlı Drone Dedektörlerine Yönelik Gerçek Dünya Çevresel Saldırıları**\n\n**Özet:**\n\nRadyo frekansı (RF) tabanlı sistemler, drone'ların RF sinyal kalıplarını analiz ederek, bunları nesne tespit modelleri tarafından işlenen spectrogram görüntüleri haline dönüştürerek drone'ları tespit etmek için giderek daha fazla kullanılmaktadır. Görüntü tabanlı modellere yönelik mevcut RF saldırıları, dijital özellikleri değiştirerek, dijital pertürbasyonların senkronizasyon hataları ve parazit oluşturabilecek iletilebilir dalga formlarına dönüştürülmesindeki zorluk ve donanım sınırlamaları nedeniyle over-the-air (OTA) uygulamasını zorlaştırmaktadır. Biz, RF görüntü tabanlı drone dedektörlerine yönelik ilk fiziksel saldırıyı sunuyoruz; burada sınıf özel evrensel karma temel bant (I/Q) pertürbasyon dalga formları, meşru iletişimlerle birlikte iletilmek üzere optimize edilmiştir. Saldırıyı dört farklı drone türüyle yapılan RF kayıtları ve OTA deneyleri kullanarak değerlendirdik. Sonuçlarımız, mütevazı, yapılandırılmış I/Q pertürbasyonlarının standart RF zincirleriyle uyumlu olduğunu ve meşru drone'ların tespitini korurken hedef drone tespitini güvenilir bir şekilde azalttığını göstermektedir."
+    }
+  },
+  {
     "id": "2512.20423v1",
     "title": "Evasion-Resilient Detection of DNS-over-HTTPS Data Exfiltration: A Practical Evaluation and Toolkit",
     "authors": [
@@ -15,7 +194,7 @@
     "pdf_link": "https://arxiv.org/pdf/2512.20423v1",
     "content": {
       "en": "The purpose of this project is to assess how well defenders can detect DNS-over-HTTPS (DoH) file exfiltration, and which evasion strategies can be used by attackers. While providing a reproducible toolkit to generate, intercept and analyze DoH exfiltration, and comparing Machine Learning vs threshold-based detection under adversarial scenarios. The originality of this project is the introduction of an end-to-end, containerized pipeline that generates configurable file exfiltration over DoH using several parameters (e.g., chunking, encoding, padding, resolver rotation). It allows for file reconstruction at the resolver side, while extracting flow-level features using a fork of DoHLyzer. The pipeline contains a prediction side, which allows the training of machine learning models based on public labelled datasets and then evaluates them side-by-side with threshold-based detection methods against malicious and evasive DNS-Over-HTTPS traffic. We train Random Forest, Gradient Boosting and Logistic Regression classifiers on a public DoH dataset and benchmark them against evasive DoH exfiltration scenarios. The toolkit orchestrates traffic generation, file capture, feature extraction, model training and analysis. The toolkit is then encapsulated into several Docker containers for easy setup and full reproducibility regardless of the platform it is run on. Future research regarding this project is directed at validating the results on mixed enterprise traffic, extending the protocol coverage to HTTP/3/QUIC request, adding a benign traffic generation, and working on real-time traffic evaluation. A key objective is to quantify when stealth constraints make DoH exfiltration uneconomical and unworthy for the attacker.",
-      "tr": "**Makale Başlığı:** DNS-over-HTTPS Veri Sızdırmanın Kaçınmaya Dayanıklı Tespiti: Pratik Bir Değerlendirme ve Araç Seti\n\n**Özet:**\n\nBu projenin amacı, savunmacıların DNS-over-HTTPS (DoH) dosya sızdırmayı ne kadar iyi tespit edebileceğini ve saldırganların hangi kaçınma stratejilerini kullanabileceğini değerlendirmektir. DoH sızdırmayı üreten, kesen ve analiz eden tekrarlanabilir bir araç seti sunarken, makine öğrenmesi ile eşik tabanlı algılamayı düşmanca senaryolar altında karşılaştırmaktadır. Bu projenin özgünlüğü, çeşitli parametreler (örneğin, chunking, encoding, padding, resolver rotation) kullanarak DoH üzerinden yapılandırılabilir dosya sızdırmayı üreten uçtan uca, kapsüllenmiş bir pipeline'ın tanıtılmasıdır. Bu pipeline, DoHLyzer'ın bir fork'unu kullanarak flow-level features'ı çıkarırken, resolver tarafında dosya yeniden yapılandırmasına olanak tanır. Pipeline, halka açık etiketlenmiş veri kümelerine dayalı makine öğrenmesi modellerinin eğitilmesine ve ardından bunları kötü niyetli ve kaçıngan DNS-Over-HTTPS trafiğine karşı eşik tabanlı algılama yöntemleriyle yan yana değerlendirmeye olanak tanıyan bir prediction side içerir. Random Forest, Gradient Boosting ve Logistic Regression sınıflandırıcılarını halka açık bir DoH veri kümesi üzerinde eğitiyor ve bunları kaçıngan DoH sızdırma senaryolarına karşı kıyaslıyoruz. Araç seti, trafik üretimi, dosya yakalama, feature extraction, model eğitimi ve analizi koordine eder. Araç seti daha sonra kurulumunun kolaylığı ve üzerinde çalıştığı platformdan bağımsız tam tekrarlanabilirlik için çeşitli Docker container'larına kapsüllenir. Bu projeyle ilgili gelecekteki araştırmalar, sonuçları karma kurumsal trafik üzerinde doğrulamaya, protokol kapsamını HTTP/3/QUIC isteklere genişletmeye, iyi huylu trafik üretimi eklemeye ve gerçek zamanlı trafik değerlendirmesi üzerinde çalışmaya yöneliktir. Temel bir hedef, gizlilik kısıtlamalarının DoH sızdırmayı saldırgan için ekonomiyi boşa çıkarıp değersiz hale getirdiği noktayı ölçmektir."
+      "tr": "Elbette, makale başlığını ve özetini akademik ve resmi bir dille Türkçeye çevirdim. Teknik terimler olduğu gibi İngilizce bırakıldı.\n\n**Makale Başlığı:** DNS-over-HTTPS Veri Sızdırma Olaylarının Engellenmeye Dayanıklı Tespiti: Pratik Bir Değerlendirme ve Toolkit\n\n**Özet:**\nBu projenin amacı, savunmacıların DNS-over-HTTPS (DoH) dosya sızdırma olaylarını ne kadar iyi tespit edebildiğini ve saldırganların hangi engelleme stratejilerini kullanabileceğini değerlendirmektir. DoH sızdırmayı üreten, araya giren ve analiz eden tekrarlanabilir bir toolkit sunarken, saldırgan senaryoları altında Machine Learning ve eşik tabanlı tespit yöntemlerini karşılaştırmaktadır. Bu projenin özgünlüğü, birkaç parametre (örneğin, chunking, encoding, padding, resolver rotation) kullanarak DoH üzerinden yapılandırılabilir dosya sızdırmayı üreten uçtan uca, containerized bir pipeline'ın tanıtılmasıdır. Bu pipeline, resolver tarafında dosya yeniden yapılandırmaya izin verirken, DoHLyzer'ın bir çatalını kullanarak flow-level features'ı çıkarmaktadır. Pipeline, kamuya açık etiketli veri setlerine dayalı machine learning modellerini eğitmeye ve ardından saldırgan ve engellemeye eğilimli DNS-Over-HTTPS trafiğine karşı bu modelleri eşik tabanlı tespit yöntemleriyle yan yana değerlendirmeye olanak tanıyan bir prediction side içermektedir. Random Forest, Gradient Boosting ve Logistic Regression sınıflandırıcılarını kamuya açık bir DoH veri setinde eğitiyor ve onları engellemeye eğilimli DoH sızdırma senaryolarına karşı benchmark ediyoruz. Toolkit, trafik üretimi, dosya yakalama, feature extraction, model eğitimi ve analizi koordine etmektedir. Toolkit, üzerinde çalıştırıldığı platformdan bağımsız olarak kolay kurulum ve tam tekrarlanabilirlik için birkaç Docker container'ına kapsüllenmiştir. Bu projeyle ilgili gelecekteki araştırmalar, sonuçları karma kurumsal trafik üzerinde doğrulamaya, protokol kapsamını HTTP/3/QUIC request'lerine genişletmeye, benign trafik üretimi eklemeye ve gerçek zamanlı trafik değerlendirmesi üzerinde çalışmaya yöneliktir. Temel bir hedef, stealth constraints'in DoH sızdırmayı saldırgan için ekonomik olmayan ve değersiz kıldığı noktaları nicel olarak belirlemektir."
     }
   },
   {
@@ -36,178 +215,7 @@
     "pdf_link": "https://arxiv.org/pdf/2512.20396v1",
     "content": {
       "en": "We introduce a scalable, modular, and sound approach for automatically constructing formal security specifications for Java bytecode programs in the form of method summaries. A summary provides an abstract representation of a method's security behavior, consisting of the conditions under which the method can be securely invoked, together with specifications of information flows and aliasing updates. Such summaries can be consumed by static code analysis tools and also help developers understand the behavior of code segments, such as libraries, in order to evaluate their security implications when reused in applications. Our approach is implemented in a tool called Symmaries, which automates the generation of security summaries. We applied Symmaries to Java API libraries to extract their security specifications and to large real-world applications to evaluate its scalability. Our results show that the tool successfully scales to analyze applications with hundreds of thousands of lines of code, and that Symmaries achieves a promising precision depending on the heap model used. We prove the soundness of our approach in terms of guaranteeing termination-insensitive non-interference.",
-      "tr": "Makale Başlığı: Symmaries: Java Programları İçin Resmi Güvenlik Özetlerinin Otomatik Çıkarımı\n\nÖzet:\nJava bytecode programları için method özetleri biçiminde resmi güvenlik spesifikasyonlarının otomatik olarak oluşturulmasına yönelik ölçeklenebilir, modüler ve tutarlı bir yaklaşım sunuyoruz. Bir özet, yöntemin güvenli bir şekilde çağrılabileceği koşulları ve bilgi akışları ile aliasing güncellemelerinin spesifikasyonlarını içeren, bir yöntemin güvenlik davranışının soyut bir temsilini sağlar. Bu tür özetler, statik kod analizi araçları tarafından tüketilebilir ve aynı zamanda geliştiricilerin, uygulamalarda yeniden kullanıldıklarında güvenlik etkilerini değerlendirmek amacıyla kod parçalarının (kütüphaneler gibi) davranışlarını anlamalarına yardımcı olur. Yaklaşımımız, güvenlik özetlerinin üretimini otomatikleştiren Symmaries adlı bir araçta uygulanmıştır. Symmaries'i, güvenlik spesifikasyonlarını çıkarmak için Java API kütüphanelerine ve ölçeklenebilirliğini değerlendirmek için büyük gerçek dünya uygulamalarına uyguladık. Sonuçlarımız, aracın yüz binlerce satır kod içeren uygulamaları analiz etmeye başarılı bir şekilde ölçeklendiğini ve Symmaries'in kullanılan heap modeline bağlı olarak umut verici bir kesinlik elde ettiğini göstermektedir. Yaklaşımımızın, termination-insensitive non-interference'ı garanti etme açısından tutarlılığını kanıtlıyoruz."
-    }
-  },
-  {
-    "id": "2512.20168v1",
-    "title": "Odysseus: Jailbreaking Commercial Multimodal LLM-integrated Systems via Dual Steganography",
-    "authors": [
-      "Songze Li",
-      "Jiameng Cheng",
-      "Yiming Li",
-      "Xiaojun Jia",
-      "Dacheng Tao"
-    ],
-    "published_date": "2025-12-23",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2512.20168v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.20168v1",
-    "content": {
-      "en": "By integrating language understanding with perceptual modalities such as images, multimodal large language models (MLLMs) constitute a critical substrate for modern AI systems, particularly intelligent agents operating in open and interactive environments. However, their increasing accessibility also raises heightened risks of misuse, such as generating harmful or unsafe content. To mitigate these risks, alignment techniques are commonly applied to align model behavior with human values. Despite these efforts, recent studies have shown that jailbreak attacks can circumvent alignment and elicit unsafe outputs. Currently, most existing jailbreak methods are tailored for open-source models and exhibit limited effectiveness against commercial MLLM-integrated systems, which often employ additional filters. These filters can detect and prevent malicious input and output content, significantly reducing jailbreak threats. In this paper, we reveal that the success of these safety filters heavily relies on a critical assumption that malicious content must be explicitly visible in either the input or the output. This assumption, while often valid for traditional LLM-integrated systems, breaks down in MLLM-integrated systems, where attackers can leverage multiple modalities to conceal adversarial intent, leading to a false sense of security in existing MLLM-integrated systems. To challenge this assumption, we propose Odysseus, a novel jailbreak paradigm that introduces dual steganography to covertly embed malicious queries and responses into benign-looking images. Extensive experiments on benchmark datasets demonstrate that our Odysseus successfully jailbreaks several pioneering and realistic MLLM-integrated systems, achieving up to 99% attack success rate. It exposes a fundamental blind spot in existing defenses, and calls for rethinking cross-modal security in MLLM-integrated systems.",
-      "tr": "**Makale Başlığı:** Odysseus: Dual Steganography Yöntemiyle Ticari Multimodal LLM-Entegre Sistemlerin Jailbreak'i\n\n**Özet:**\n\nDil anlayışını görüntü gibi algısal modalitelerle entegre eden multimodal large language models (MLLMs), özellikle açık ve etkileşimli ortamlarda çalışan akıllı ajanlar gibi modern yapay zeka sistemleri için kritik bir altyapı oluşturmaktadır. Ancak, artan erişilebilirliği, zararlı veya güvensiz içerik üretme gibi kötüye kullanım risklerini de beraberinde getirmektedir. Bu riskleri azaltmak için, model davranışını insan değerleriyle uyumlu hale getirmek amacıyla alignment teknikleri yaygın olarak uygulanmaktadır. Bu çabalara rağmen, son çalışmalar jailbreak saldırılarının alignment'ı atlatarak güvensiz çıktılar üretebildiğini göstermiştir. Şu anda, mevcut jailbreak yöntemlerinin çoğu açık kaynaklı modellere göre uyarlanmış olup, ek filtreler kullanan ticari MLLM-integrated sistemlere karşı sınırlı etkililik sergilemektedir. Bu filtreler, kötü niyetli girdi ve çıktı içeriklerini tespit edip engelleyerek jailbreak tehditlerini önemli ölçüde azaltabilir. Bu makalede, bu güvenlik filtrelerinin başarısının büyük ölçüde, kötü niyetli içeriğin girdi veya çıktıda açıkça görünmesi gerektiği yönündeki kritik bir varsayıma dayandığını ortaya koymaktayız. Geleneksel LLM-integrated sistemler için genellikle geçerli olan bu varsayım, saldırganların çoklu modaliteleri kullanarak kötü niyetli amacı gizleyebildiği ve mevcut MLLM-integrated sistemlerde yanlış bir güvenlik hissi yarattığı MLLM-integrated sistemlerde çöküyor. Bu varsayıma meydan okumak için, kötü niyetli sorguları ve yanıtları zararsız görünen görüntülere gizlice gömmek için dual steganography'yi tanıtan yeni bir jailbreak paradigması olan Odysseus'u öneriyoruz. Kıyaslama veri kümeleri üzerinde yapılan kapsamlı deneyler, Odysseus'umuzun birkaç öncü ve gerçekçi MLLM-integrated sistemi başarıyla jailbreak'lediğini ve %99'a varan saldırı başarı oranı elde ettiğini göstermektedir. Mevcut savunmalarda temel bir kör noktayı ortaya koymakta ve MLLM-integrated sistemlerde çapraz modal güvenlik konusunda yeniden düşünme çağrısı yapmaktadır."
-    }
-  },
-  {
-    "id": "2512.20062v1",
-    "title": "On the Effectiveness of Instruction-Tuning Local LLMs for Identifying Software Vulnerabilities",
-    "authors": [
-      "Sangryu Park",
-      "Gihyuk Ko",
-      "Homook Cho"
-    ],
-    "published_date": "2025-12-23",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2512.20062v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.20062v1",
-    "content": {
-      "en": "Large Language Models (LLMs) show significant promise in automating software vulnerability analysis, a critical task given the impact of security failure of modern software systems. However, current approaches in using LLMs to automate vulnerability analysis mostly rely on using online API-based LLM services, requiring the user to disclose the source code in development. Moreover, they predominantly frame the task as a binary classification(vulnerable or not vulnerable), limiting potential practical utility. This paper addresses these limitations by reformulating the problem as Software Vulnerability Identification (SVI), where LLMs are asked to output the type of weakness in Common Weakness Enumeration (CWE) IDs rather than simply indicating the presence or absence of a vulnerability. We also tackle the reliance on large, API-based LLMs by demonstrating that instruction-tuning smaller, locally deployable LLMs can achieve superior identification performance. In our analysis, instruct-tuning a local LLM showed better overall performance and cost trade-off than online API-based LLMs. Our findings indicate that instruct-tuned local models represent a more effective, secure, and practical approach for leveraging LLMs in real-world vulnerability management workflows.",
-      "tr": "**Makale Başlığı:** Yazılım Güvenlik Açıklarını Tespit Etmek İçin Lokal LLM'lerin Instruction-Tuning Etkinliği Üzerine\n\n**Özet:**\nBüyük Dil Modelleri (LLM'ler), modern yazılım sistemlerinin güvenlik arızalarının etkileri göz önüne alındığında kritik bir görev olan yazılım güvenlik açığı analizini otomatikleştirmede önemli vaatler sunmaktadır. Ancak, LLM'leri güvenlik açığı analizini otomatikleştirmek için kullanma konusundaki mevcut yaklaşımlar çoğunlukla çevrimiçi API tabanlı LLM hizmetlerine dayanmaktadır ve bu da kullanıcının geliştirme aşamasında kaynak kodunu ifşa etmesini gerektirmektedir. Dahası, bu yaklaşımlar görevi çoğunlukla ikili sınıflandırma (güvenli veya güvensiz) olarak çerçevelemektedir, bu da potansiyel pratik faydayı sınırlamaktadır. Bu makale, problemi Yazılım Güvenlik Açığı Tespiti (Software Vulnerability Identification - SVI) olarak yeniden formüle ederek bu sınırlamaları ele almaktadır; burada LLM'lerden bir güvenlik açığının varlığını veya yokluğunu basitçe belirtmek yerine Common Weakness Enumeration (CWE) ID'lerinde zayıflık türünü çıktı olarak vermeleri istenmektedir. Ayrıca, daha küçük, lokal olarak dağıtılabilir LLM'lerin instruction-tuning'inin üstün tespit performansı sağlayabileceğini göstererek büyük, API tabanlı LLM'lere olan bağımlılığı da ele alıyoruz. Analizimizde, bir lokal LLM'nin instruction-tuning'inin çevrimiçi API tabanlı LLM'lere kıyasla daha iyi genel performans ve maliyet dengesi gösterdiği ortaya konulmuştur. Bulgularımız, instruction-tuned lokal modellerin, gerçek dünya güvenlik açığı yönetimi iş akışlarında LLM'lerden yararlanmak için daha etkili, güvenli ve pratik bir yaklaşımı temsil ettiğini göstermektedir."
-    }
-  },
-  {
-    "id": "2512.20004v1",
-    "title": "IoT-based Android Malware Detection Using Graph Neural Network With Adversarial Defense",
-    "authors": [
-      "Rahul Yumlembam",
-      "Biju Issac",
-      "Seibu Mary Jacob",
-      "Longzhi Yang"
-    ],
-    "published_date": "2025-12-23",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2512.20004v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.20004v1",
-    "content": {
-      "en": "Since the Internet of Things (IoT) is widely adopted using Android applications, detecting malicious Android apps is essential. In recent years, Android graph-based deep learning research has proposed many approaches to extract relationships from applications as graphs to generate graph embeddings. First, we demonstrate the effectiveness of graph-based classification using a Graph Neural Network (GNN)-based classifier to generate API graph embeddings. The graph embeddings are combined with Permission and Intent features to train multiple machine learning and deep learning models for Android malware detection. The proposed classification approach achieves an accuracy of 98.33 percent on the CICMaldroid dataset and 98.68 percent on the Drebin dataset. However, graph-based deep learning models are vulnerable, as attackers can add fake relationships to evade detection by the classifier. Second, we propose a Generative Adversarial Network (GAN)-based attack algorithm named VGAE-MalGAN targeting graph-based GNN Android malware classifiers. The VGAE-MalGAN generator produces adversarial malware API graphs, while the VGAE-MalGAN substitute detector attempts to mimic the target detector. Experimental results show that VGAE-MalGAN can significantly reduce the detection rate of GNN-based malware classifiers. Although the model initially fails to detect adversarial malware, retraining with generated adversarial samples improves robustness and helps mitigate adversarial attacks.",
-      "tr": "**Makale Başlığı:** Graph Neural Network ile Yapay Savunma Kullanılarak IoT Tabanlı Android Kötü Amaçlı Yazılım Tespiti\n\n**Özet:**\n\nİnternet of Things (IoT)'nin Android uygulamaları aracılığıyla yaygın olarak benimsenmesi göz önüne alındığında, kötü amaçlı Android uygulamaların tespiti büyük önem taşımaktadır. Son yıllarda, Android'in grafik tabanlı derin öğrenme araştırmaları, uygulamalardan grafikler şeklinde ilişkileri çıkarmak ve bu grafiklerden graph embeddings üretmek için birçok yaklaşım sunmuştur. İlk olarak, API graph embeddings üretmek amacıyla bir Graph Neural Network (GNN)-tabanlı sınıflandırıcı kullanarak grafik tabanlı sınıflandırmanın etkinliğini gösteriyoruz. Bu graph embeddings, İzin (Permission) ve Niyet (Intent) özellikleri ile birleştirilerek Android kötü amaçlı yazılım tespiti için çoklu makine öğrenmesi ve derin öğrenme modellerini eğitmek üzere kullanılmıştır. Önerilen sınıflandırma yaklaşımı, CICMaldroid veri kümesinde %98.33 ve Drebin veri kümesinde %98.68 doğruluk elde etmiştir. Ancak, grafik tabanlı derin öğrenme modelleri savunmasızdır; saldırganlar, sınıflandırıcı tarafından tespitten kaçınmak için sahte ilişkiler ekleyebilirler. İkinci olarak, grafik tabanlı GNN Android kötü amaçlı yazılım sınıflandırıcılarını hedef alan VGAE-MalGAN adlı bir Generative Adversarial Network (GAN)-tabanlı saldırı algoritması öneriyoruz. VGAE-MalGAN jeneratörü, adversarial malware API graphs üretirken, VGAE-MalGAN substitute detector hedef dedektörü taklit etmeye çalışır. Deneysel sonuçlar, VGAE-MalGAN'ın GNN tabanlı kötü amaçlı yazılım sınıflandırıcılarının tespit oranını önemli ölçüde azaltabildiğini göstermektedir. Model başlangıçta adversarial kötü amaçlı yazılımları tespit edemese de, üretilen adversarial örneklerle yeniden eğitilmesi, dayanıklılığı artırır ve adversarial saldırıları azaltmaya yardımcı olur."
-    }
-  },
-  {
-    "id": "2512.19935v1",
-    "title": "Conditional Adversarial Fragility in Financial Machine Learning under Macroeconomic Stress",
-    "authors": [
-      "Samruddhi Baviskar"
-    ],
-    "published_date": "2025-12-22",
-    "tags": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2512.19935v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.19935v1",
-    "content": {
-      "en": "Machine learning models used in financial decision systems operate in nonstationary economic environments, yet adversarial robustness is typically evaluated under static assumptions. This work introduces Conditional Adversarial Fragility, a regime dependent phenomenon in which adversarial vulnerability is systematically amplified during periods of macroeconomic stress. We propose a regime aware evaluation framework for time indexed tabular financial classification tasks that conditions robustness assessment on external indicators of economic stress. Using volatility based regime segmentation as a proxy for macroeconomic conditions, we evaluate model behavior across calm and stress periods while holding model architecture, attack methodology, and evaluation protocols constant. Baseline predictive performance remains comparable across regimes, indicating that economic stress alone does not induce inherent performance degradation. Under adversarial perturbations, however, models operating during stress regimes exhibit substantially greater degradation across predictive accuracy, operational decision thresholds, and risk sensitive outcomes. We further demonstrate that this amplification propagates to increased false negative rates, elevating the risk of missed high risk cases during adverse conditions. To complement numerical robustness metrics, we introduce an interpretive governance layer based on semantic auditing of model explanations using large language models. Together, these results demonstrate that adversarial robustness in financial machine learning is a regime dependent property and motivate stress aware approaches to model risk assessment in high stakes financial deployments.",
-      "tr": "Makale Başlığı: Makroekonomik Stres Altında Finansal Makine Öğreniminde Koşullu Çekişmeli Kırılganlık\n\nÖzet:\nFinansal karar sistemlerinde kullanılan makine öğrenimi modelleri durağan olmayan ekonomik ortamlarda çalışır; ancak çekişmeli sağlamlık (adversarial robustness) tipik olarak statik varsayımlar altında değerlendirilir. Bu çalışma, makroekonomik stres dönemlerinde çekişmeli savunmasızlığın sistematik olarak arttığı rejim bağımlı bir olgu olan Conditional Adversarial Fragility'yi sunmaktadır. Ekonomik stresin dışsal göstergelerine göre sağlamlık değerlendirmesini koşullandıran, zaman indeksli tablo finansal sınıflandırma görevleri için rejim farkındalığı olan bir değerlendirme çerçevesi öneriyoruz. Makroekonomik koşulların vekili olarak oynaklık tabanlı rejim segmentasyonunu kullanarak, model mimarisini, attack methodology'sini ve evaluation protocols'ü sabit tutarak sakin ve stres dönemleri boyunca model davranışını değerlendiriyoruz. Temel tahmin performansı rejimler arasında karşılaştırılabilir düzeyde kalır, bu da ekonomik stresin tek başına içsel performans düşüşüne neden olmadığını göstermektedir. Ancak, çekişmeli pertürbasyonlar altında, stres rejimleri sırasında çalışan modellerin tahmin doğruluğu, operasyonel karar eşikleri ve risk duyarlı çıktılar boyunca önemli ölçüde daha fazla bozulma sergilediği görülmektedir. Ayrıca, bu amplifikasyonun artan yanlış negatif oranlarına yayıldığını ve olumsuz koşullar sırasında yüksek riskli vakaların kaçırılma riskini yükselttiğini gösteriyoruz. Sayısal sağlamlık metriklerini tamamlamak üzere, large language models kullanılarak model açıklamalarının anlamsal denetimine dayanan yorumlayıcı bir yönetişim katmanı sunuyoruz. Birlikte ele alındığında, bu sonuçlar finansal makine öğrenimindeki çekişmeli sağlamlığın rejim bağımlı bir özellik olduğunu göstermekte ve yüksek riskli finansal konuşlandırmalarda model risk değerlendirmesi için stres farkındalığı olan yaklaşımları teşvik etmektedir."
-    }
-  },
-  {
-    "id": "2512.19297v1",
-    "title": "Causal-Guided Detoxify Backdoor Attack of Open-Weight LoRA Models",
-    "authors": [
-      "Linzhi Chen",
-      "Yang Sun",
-      "Hongru Wei",
-      "Yuqi Chen"
-    ],
-    "published_date": "2025-12-22",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2512.19297v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.19297v1",
-    "content": {
-      "en": "Low-Rank Adaptation (LoRA) has emerged as an efficient method for fine-tuning large language models (LLMs) and is widely adopted within the open-source community. However, the decentralized dissemination of LoRA adapters through platforms such as Hugging Face introduces novel security vulnerabilities: malicious adapters can be easily distributed and evade conventional oversight mechanisms. Despite these risks, backdoor attacks targeting LoRA-based fine-tuning remain relatively underexplored. Existing backdoor attack strategies are ill-suited to this setting, as they often rely on inaccessible training data, fail to account for the structural properties unique to LoRA, or suffer from high false trigger rates (FTR), thereby compromising their stealth. To address these challenges, we propose Causal-Guided Detoxify Backdoor Attack (CBA), a novel backdoor attack framework specifically designed for open-weight LoRA models. CBA operates without access to original training data and achieves high stealth through two key innovations: (1) a coverage-guided data generation pipeline that synthesizes task-aligned inputs via behavioral exploration, and (2) a causal-guided detoxification strategy that merges poisoned and clean adapters by preserving task-critical neurons. Unlike prior approaches, CBA enables post-training control over attack intensity through causal influence-based weight allocation, eliminating the need for repeated retraining. Evaluated across six LoRA models, CBA achieves high attack success rates while reducing FTR by 50-70\\% compared to baseline methods. Furthermore, it demonstrates enhanced resistance to state-of-the-art backdoor defenses, highlighting its stealth and robustness.",
-      "tr": "**Makale Başlığı: Causal-Guided Detoxify Backdoor Attack of Open-Weight LoRA Models**\n\n**Özet:**\n\nLow-Rank Adaptation (LoRA), büyük dil modellerini (LLM) ince ayar yapmak için verimli bir yöntem olarak öne çıkmış ve açık kaynak topluluğu içinde yaygın olarak benimsenmiştir. Ancak, Hugging Face gibi platformlar aracılığıyla LoRA adaptörlerinin merkezi olmayan dağıtımı, yeni güvenlik açıkları getirmektedir: kötü niyetli adaptörler kolayca dağıtılabilir ve geleneksel denetim mekanizmalarından kaçabilir. Bu risklere rağmen, LoRA tabanlı ince ayarı hedefleyen backdoor saldırıları nispeten yeterince araştırılmamıştır. Mevcut backdoor saldırı stratejileri bu ortam için uygun değildir, çünkü genellikle erişilemeyen eğitim verilerine dayanır, LoRA'ya özgü yapısal özellikleri dikkate alamaz veya yüksek false trigger rates (FTR) ile sonuçlanır, bu da gizliliklerini tehlikeye atar. Bu zorlukları ele almak için, açık ağırlıklı LoRA modelleri için özel olarak tasarlanmış yeni bir backdoor saldırı çerçevesi olan Causal-Guided Detoxify Backdoor Attack (CBA) öneriyoruz. CBA, orijinal eğitim verilerine erişim olmadan çalışır ve iki temel yenilikle yüksek gizlilik sağlar: (1) davranışsal keşif yoluyla göreve uyumlu girdileri sentezleyen bir coverage-guided data generation pipeline ve (2) göreve kritik nöronları koruyarak zehirlenmiş ve temiz adaptörleri birleştiren bir causal-guided detoxification strategy. Önceki yaklaşımların aksine, CBA, causal influence-based weight allocation aracılığıyla saldırı yoğunluğu üzerinde eğitim sonrası kontrolü mümkün kılar, bu da tekrarlanan yeniden eğitim ihtiyacını ortadan kaldırır. Altı LoRA modeli üzerinde değerlendirilen CBA, yüksek saldırı başarı oranları elde ederken, temel yöntemlere kıyasla FTR'yi %50-70 oranında azaltır. Ayrıca, state-of-the-art backdoor savunmalarına karşı gelişmiş direnç göstererek gizliliğini ve sağlamlığını vurgular."
-    }
-  },
-  {
-    "id": "2512.19286v1",
-    "title": "GShield: Mitigating Poisoning Attacks in Federated Learning",
-    "authors": [
-      "Sameera K. M.",
-      "Serena Nicolazzo",
-      "Antonino Nocera",
-      "Vinod P.",
-      "Rafidha Rehiman K. A"
-    ],
-    "published_date": "2025-12-22",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2512.19286v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.19286v1",
-    "content": {
-      "en": "Federated Learning (FL) has recently emerged as a revolutionary approach to collaborative training Machine Learning models. In particular, it enables decentralized model training while preserving data privacy, but its distributed nature makes it highly vulnerable to a severe attack known as Data Poisoning. In such scenarios, malicious clients inject manipulated data into the training process, thereby degrading global model performance or causing targeted misclassification. In this paper, we present a novel defense mechanism called GShield, designed to detect and mitigate malicious and low-quality updates, especially under non-independent and identically distributed (non-IID) data scenarios. GShield operates by learning the distribution of benign gradients through clustering and Gaussian modeling during an initial round, enabling it to establish a reliable baseline of trusted client behavior. With this benign profile, GShield selectively aggregates only those updates that align with the expected gradient patterns, effectively isolating adversarial clients and preserving the integrity of the global model. An extensive experimental campaign demonstrates that our proposed defense significantly improves model robustness compared to the state-of-the-art methods while maintaining a high accuracy of performance across both tabular and image datasets. Furthermore, GShield improves the accuracy of the targeted class by 43\\% to 65\\% after detecting malicious and low-quality clients.",
-      "tr": "İşte akademik makale başlığı ve özetinin istenen dilde çevirisi:\n\n**Makale Başlığı:** GShield: Federated Learning'de Zehirlenme Saldırılarını Azaltma\n\n**Özet:**\nFederated Learning (FL), Makine Öğrenmesi modellerinin işbirlikçi eğitimi için devrim niteliğinde bir yaklaşım olarak son zamanlarda ortaya çıkmıştır. Özellikle, veri gizliliğini korurken merkezi olmayan model eğitimini mümkün kılar, ancak dağıtık doğası onu Veri Zehirlenmesi olarak bilinen ciddi bir saldırıya karşı son derece savunmasız hale getirir. Bu tür senaryolarda, kötü niyetli istemciler eğitim sürecine manipüle edilmiş veriler enjekte ederek global model performansını düşürür veya hedeflenen yanlış sınıflandırmalara neden olur. Bu çalışmada, özellikle non-independent and identically distributed (non-IID) veri senaryolarında kötü niyetli ve düşük kaliteli güncellemeleri tespit etmek ve azaltmak için tasarlanmış GShield adlı yeni bir savunma mekanizması sunuyoruz. GShield, ilk tur sırasında kümeleme ve Gaussian modeling yoluyla benign gradientlerin dağılımını öğrenerek çalışır, bu da güvenilir bir trusted client behavior temeli oluşturmasına olanak tanır. Bu benign profile sahip GShield, yalnızca beklenen gradient patterns ile uyumlu olan güncellemeleri seçici olarak toplar, böylece adversarial clients'ı etkili bir şekilde izole eder ve global modelin bütünlüğünü korur. Kapsamlı bir deneysel kampanya, önerdiğimiz savunmanın state-of-the-art yöntemlere kıyasla model sağlamlığını önemli ölçüde artırdığını ve hem tabular hem de görüntü veri kümelerinde yüksek bir performans doğruluğunu koruduğunu göstermektedir. Dahası, GShield, kötü niyetli ve düşük kaliteli istemcileri tespit ettikten sonra hedeflenen sınıfın doğruluğunu %43 ila %65 oranında iyileştirmektedir."
-    }
-  },
-  {
-    "id": "2512.19037v1",
-    "title": "Elevating Intrusion Detection and Security Fortification in Intelligent Networks through Cutting-Edge Machine Learning Paradigms",
-    "authors": [
-      "Md Minhazul Islam Munna",
-      "Md Mahbubur Rahman",
-      "Jaroslav Frnda",
-      "Muhammad Shahid Anwar",
-      "Alpamis Kutlimuratov"
-    ],
-    "published_date": "2025-12-22",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2512.19037v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.19037v1",
-    "content": {
-      "en": "The proliferation of IoT devices and their reliance on Wi-Fi networks have introduced significant security vulnerabilities, particularly the KRACK and Kr00k attacks, which exploit weaknesses in WPA2 encryption to intercept and manipulate sensitive data. Traditional IDS using classifiers face challenges such as model overfitting, incomplete feature extraction, and high false positive rates, limiting their effectiveness in real-world deployments. To address these challenges, this study proposes a robust multiclass machine learning based intrusion detection framework. The methodology integrates advanced feature selection techniques to identify critical attributes, mitigating redundancy and enhancing detection accuracy. Two distinct ML architectures are implemented: a baseline classifier pipeline and a stacked ensemble model combining noise injection, Principal Component Analysis (PCA), and meta learning to improve generalization and reduce false positives. Evaluated on the AWID3 data set, the proposed ensemble architecture achieves superior performance, with an accuracy of 98%, precision of 98%, recall of 98%, and a false positive rate of just 2%, outperforming existing state-of-the-art methods. This work demonstrates the efficacy of combining preprocessing strategies with ensemble learning to fortify network security against sophisticated Wi-Fi attacks, offering a scalable and reliable solution for IoT environments. Future directions include real-time deployment and adversarial resilience testing to further enhance the model's adaptability.",
-      "tr": "Makale Başlığı: Akıllı Ağlarda Siber Güvenlik ve Sistem Analizi Konularında Keskin Makine Öğrenmesi Paradigmaları ile Saldırı Tespitinin ve Güvenlik Güçlendirmesinin Yükseltilmesi\n\nÖzet:\nIoT cihazlarının yaygınlaşması ve Wi-Fi ağlarına olan bağımlılıkları, özellikle KRACK ve Kr00k saldırıları gibi önemli güvenlik zafiyetlerini ortaya çıkarmıştır. Bu saldırılar, WPA2 şifrelemesindeki zayıflıkları istismar ederek hassas verilerin kesilmesine ve manipüle edilmesine neden olmaktadır. Sınıflandırıcılar kullanan geleneksel IDS'ler, model aşırı uyumu (model overfitting), eksik özellik çıkarımı (incomplete feature extraction) ve yüksek yanlış pozitif oranları gibi zorluklarla karşı karşıya kalmakta, bu da gerçek dünya uygulamalarındaki etkinliklerini sınırlamaktadır. Bu zorlukların üstesinden gelmek için bu çalışma, sağlam bir multiclass machine learning tabanlı saldırı tespit çerçevesi önermektedir. Metodoloji, kritik nitelikleri belirlemek, gereksizliği azaltmak ve tespit doğruluğunu artırmak için gelişmiş özellik seçimi (feature selection) tekniklerini entegre etmektedir. İki farklı ML mimarisi uygulanmaktadır: bir baseline classifier pipeline ve gürültü enjeksiyonu (noise injection), Principal Component Analysis (PCA) ve meta öğrenmeyi (meta learning) birleştiren ve genelleştirmeyi iyileştiren ve yanlış pozitifleri azaltan bir stacked ensemble model. AWID3 veri kümesi üzerinde değerlendirilen önerilen ensemble mimarisi, %98 doğruluk (accuracy), %98 kesinlik (precision), %98 geri çağırma (recall) ve yalnızca %2 yanlış pozitif oranı (false positive rate) ile üstün performans sergileyerek mevcut en gelişmiş yöntemleri geride bırakmaktadır. Bu çalışma, sofistike Wi-Fi saldırılarına karşı ağ güvenliğini güçlendirmek için ön işleme stratejilerinin (preprocessing strategies) ensemble öğrenme ile birleştirilmesinin etkinliğini göstermekte ve IoT ortamları için ölçeklenebilir ve güvenilir bir çözüm sunmaktadır. Gelecek yönelimleri arasında modelin adaptasyonunu daha da geliştirmek için gerçek zamanlı dağıtım (real-time deployment) ve adversarial resilience testing yer almaktadır."
-    }
-  },
-  {
-    "id": "2512.19025v2",
-    "title": "The Erasure Illusion: Stress-Testing the Generalization of LLM Forgetting Evaluation",
-    "authors": [
-      "Hengrui Jia",
-      "Taoran Li",
-      "Jonas Guan",
-      "Varun Chandrasekaran"
-    ],
-    "published_date": "2025-12-22",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2512.19025v2",
-    "pdf_link": "https://arxiv.org/pdf/2512.19025v2",
-    "content": {
-      "en": "Machine unlearning aims to remove specific data influences from trained models, a capability essential for adhering to copyright laws and ensuring AI safety. Current unlearning metrics typically measure success by monitoring the model's performance degradation on the specific unlearning dataset ($D_u$). We argue that for Large Language Models (LLMs), this evaluation paradigm is insufficient and potentially misleading. Many real-world uses of unlearning--motivated by copyright or safety--implicitly target not only verbatim content in $D_u$, but also behaviors influenced by the broader generalizations the model derived from it. We demonstrate that LLMs can pass standard unlearning evaluation and appear to have \"forgotten\" the target knowledge, while simultaneously retaining strong capabilities on content that is semantically adjacent to $D_u$. This phenomenon indicates that erasing exact sentences does not necessarily equate to removing the underlying knowledge. To address this gap, we propose Proximal Surrogate Generation (PSG), an automated stress-testing framework that generates a surrogate dataset, $\\tilde{D}_u$. This surrogate set is constructed to be semantically derived from $D_u$ yet sufficiently distinct in embedding space. By comparing unlearning metric scores between $D_u$ and $\\tilde{D}_u$, we can stress-test the reliability of the metric itself. Our extensive evaluation across three LLM families (Llama-3-8B, Qwen2.5-7B, and Zephyr-7B-$β$), three distinct datasets, and seven standard metrics reveals widespread inconsistencies. We find that current metrics frequently overestimate unlearning success, failing to detect retained knowledge exposed by our stress-test datasets.",
-      "tr": "Elbette, akademik makalenin başlığını ve özetini talep ettiğiniz şekilde çevirdim:\n\n**Makale Başlığı:** The Erasure Illusion: LLM Forgetting Evaluation'ın Generalization'ını Stres Testinden Geçirme\n\n**Özet:**\nMachine unlearning, eğitilmiş modellerden belirli veri etkilerini kaldırmayı hedefler; bu yetenek, telif hakkı yasalarına uyumluluk ve AI safety'nin sağlanması için temeldir. Mevcut unlearning metrikleri, genellikle unlearning dataset'i ($D_u$) üzerindeki model performansındaki düşüşü izleyerek başarıyı ölçer. Büyük Dil Modelleri (LLM'ler) için bu değerlendirme paradigmasının yetersiz ve potansiyel olarak yanıltıcı olduğunu savunuyoruz. Unlearning'in telif hakkı veya safety tarafından motive edilen birçok gerçek dünya kullanımı, yalnızca $D_u$'daki kelimesi kelimesine içeriği değil, aynı zamanda ondan türetilen daha geniş genellemelere dayanan davranışları da örtük olarak hedefler. Standart unlearning değerlendirmesini geçen ve hedef bilgiyi \"unutmuş\" gibi görünen LLM'lerin, aynı zamanda $D_u$'ya anlamsal olarak bitişik içeriğe yönelik güçlü yeteneklerini koruyabildiğini gösteriyoruz. Bu olgu, tam cümleleri silmenin mutlaka altında yatan bilgiyi kaldırmakla eşdeğer olmadığını göstermektedir. Bu boşluğu gidermek için, bir surrogate dataset, $\\tilde{D}_u$ üreten otomatik bir stres-testing framework'ü olan Proximal Surrogate Generation'ı (PSG) öneriyoruz. Bu surrogate set, $D_u$'dan anlamsal olarak türetilmiş ancak embedding space'te yeterince farklı olacak şekilde oluşturulmuştur. $D_u$ ve $\\tilde{D}_u$ arasındaki unlearning metrik puanlarını karşılaştırarak, metriğin kendisinin güvenilirliğini stres testinden geçirebiliriz. Üç LLM ailesi (Llama-3-8B, Qwen2.5-7B ve Zephyr-7B-$β$), üç farklı dataset ve yedi standart metrik üzerindeki kapsamlı değerlendirmemiz, yaygın tutarsızlıkları ortaya koymaktadır. Mevcut metriklerin, stres-testi dataset'lerimiz tarafından ortaya konan saklanan bilgiyi tespit edemeyerek, unlearning başarısını sıklıkla aşırı tahmin ettiğini bulduk."
+      "tr": "Aşağıda, verilen akademik makale başlığının ve özetinin Türkçe çevirisi bulunmaktadır:\n\n**Makale Başlığı:** Symmaries: Java Programları İçin Formal Güvenlik Özelliklerinin Otomatik Çıkarımı\n\n**Özet:**\nJava bytecode programları için method özetleri biçiminde formal güvenlik özelliklerini otomatik olarak oluşturan ölçeklenebilir, modüler ve sağlam bir yaklaşım sunmaktayız. Bir özet, methodun güvenli bir şekilde çağrılabileceği koşulları, bilgi akışları ve aliasing güncellemelerine ilişkin özellikler ile birlikte, methodun güvenlik davranışının soyut bir temsilini sağlar. Bu tür özetler, statik kod analizi araçları tarafından tüketilebilir ve aynı zamanda geliştiricilerin, özellikle kütüphaneler gibi kod segmentlerinin davranışlarını anlamalarına, uygulamalarda yeniden kullanıldıklarında güvenlik etkilerini değerlendirmelerine yardımcı olur. Yaklaşımımız, güvenlik özetlerinin üretimini otomatikleştiren Symmaries adlı bir araçta uygulanmıştır. Symmaries'i Java API kütüphanelerine uygulayarak güvenlik özelliklerini çıkardık ve ölçeklenebilirliğini değerlendirmek için büyük gerçek dünya uygulamalarına uyguladık. Sonuçlarımız, aracın yüz binlerce satır koda sahip uygulamaları analiz etme konusunda başarılı bir şekilde ölçeklenebildiğini ve kullanılan heap modeline bağlı olarak Symmaries'in umut verici bir precision elde ettiğini göstermektedir. Yaklaşımımızın, termination-insensitive non-interference'ı garanti etme açısından sağlamlığını kanıtladık."
     }
   }
 ]
