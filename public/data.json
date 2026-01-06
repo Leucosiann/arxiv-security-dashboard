@@ -1,5 +1,198 @@
 [
   {
+    "id": "2601.00559v1",
+    "title": "Cracking IoT Security: Can LLMs Outsmart Static Analysis Tools?",
+    "authors": [
+      "Jason Quantrill",
+      "Noura Khajehnouri",
+      "Zihan Guo",
+      "Manar H. Alalfi"
+    ],
+    "published_date": "2026-01-02",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.00559v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.00559v1",
+    "content": {
+      "en": "Smart home IoT platforms such as openHAB rely on Trigger Action Condition (TAC) rules to automate device behavior, but the interplay among these rules can give rise to interaction threats, unintended or unsafe behaviors emerging from implicit dependencies, conflicting triggers, or overlapping conditions. Identifying these threats requires semantic understanding and structural reasoning that traditionally depend on symbolic, constraint-driven static analysis. This work presents the first comprehensive evaluation of Large Language Models (LLMs) across a multi-category interaction threat taxonomy, assessing their performance on both the original openHAB (oHC/IoTB) dataset and a structurally challenging Mutation dataset designed to test robustness under rule transformations. We benchmark Llama 3.1 8B, Llama 70B, GPT-4o, Gemini-2.5-Pro, and DeepSeek-R1 across zero-, one-, and two-shot settings, comparing their results against oHIT's manually validated ground truth. Our findings show that while LLMs exhibit promising semantic understanding, particularly on action- and condition-related threats, their accuracy degrades significantly for threats requiring cross-rule structural reasoning, especially under mutated rule forms. Model performance varies widely across threat categories and prompt settings, with no model providing consistent reliability. In contrast, the symbolic reasoning baseline maintains stable detection across both datasets, unaffected by rule rewrites or structural perturbations. These results underscore that LLMs alone are not yet dependable for safety critical interaction-threat detection in IoT environments. We discuss the implications for tool design and highlight the potential of hybrid architectures that combine symbolic analysis with LLM-based semantic interpretation to reduce false positives while maintaining structural rigor.",
+      "tr": "**Makale Başlığı:** IoT Güvenliğinin Kilidini Açmak: LLM'ler Statik Analiz Araçlarını Alt Edebilir mi?\n\n**Özet:**\n\nopenHAB gibi akıllı ev IoT platformları, cihaz davranışlarını otomatikleştirmek için Tetikleyici Eylem Koşul (TAC) kurallarına güvenmektedir. Ancak bu kurallar arasındaki etkileşim, örtük bağımlılıklardan, çelişkili tetikleyicilerden veya çakışan koşullardan kaynaklanan etkileşim tehditlerine, istenmeyen veya güvensiz davranışlara yol açabilir. Bu tehditlerin tanımlanması, geleneksel olarak sembolik, kısıtlama güdümlü static analysis'e dayanan anlamsal bir anlayış ve structural reasoning gerektirir. Bu çalışma, Large Language Models'ın (LLMs) çok kategorili bir etkileşim tehdidi taksonomisi üzerinden kapsamlı bir değerlendirmesini sunmakta olup, hem orijinal openHAB (oHC/IoTB) veri kümesinde hem de kural dönüşümleri altındaki dayanıklılığı test etmek üzere tasarlanmış yapısal olarak zorlayıcı bir Mutation veri kümesindeki performanslarını değerlendirmektedir. Llama 3.1 8B, Llama 70B, GPT-4o, Gemini-2.5-Pro ve DeepSeek-R1 modellerini zero-, one- ve two-shot ayarlarında kıyaslıyoruz ve sonuçlarını oHIT'in manuel olarak doğrulanmış ground truth'u ile karşılaştırıyoruz. Bulgularımız, LLM'lerin umut vadeden anlamsal bir anlayış sergilediğini, özellikle eylem ve koşulla ilgili tehditlerde başarılı olduğunu göstermektedir. Ancak, özellikle mutated rule formları altında, çapraz kural structural reasoning gerektiren tehditler için doğrulukları önemli ölçüde düşmektedir. Model performansı, tehdit kategorileri ve prompt ayarları arasında geniş ölçüde değişiklik göstermekte olup, hiçbir model tutarlı bir güvenilirlik sağlamamaktadır. Buna karşılık, sembolik reasoning baseline'ı, kural yeniden yazımlarından veya yapısal pertürbasyonlardan etkilenmeden her iki veri kümesinde de kararlı bir tespit sağlamaktadır. Bu sonuçlar, LLM'lerin tek başlarına IoT ortamlarında safety critical etkileşim tehdidi tespiti için henüz güvenilir olmadığının altını çizmektedir. Araç tasarımı üzerindeki etkilerini tartışıyor ve false positive'leri azaltırken yapısal titizliği korumak için sembolik analysis ile LLM tabanlı anlamsal yorumlamayı birleştiren hybrid architectures potansiyelini vurguluyoruz."
+    }
+  },
+  {
+    "id": "2601.00509v1",
+    "title": "Improving LLM-Assisted Secure Code Generation through Retrieval-Augmented-Generation and Multi-Tool Feedback",
+    "authors": [
+      "Vidyut Sriram",
+      "Sawan Pandita",
+      "Achintya Lakshmanan",
+      "Aneesh Shamraj",
+      "Suman Saha"
+    ],
+    "published_date": "2026-01-01",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.00509v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.00509v1",
+    "content": {
+      "en": "Large Language Models (LLMs) can generate code but often introduce security vulnerabilities, logical inconsistencies, and compilation errors. Prior work demonstrates that LLMs benefit substantially from structured feedback, static analysis, retrieval augmentation, and execution-based refinement. We propose a retrieval-augmented, multi-tool repair workflow in which a single code-generating LLM iteratively refines its outputs using compiler diagnostics, CodeQL security scanning, and KLEE symbolic execution. A lightweight embedding model is used for semantic retrieval of previously successful repairs, providing security-focused examples that guide generation. Evaluated on a combined dataset of 3,242 programs generated by DeepSeek-Coder-1.3B and CodeLlama-7B, the system demonstrates significant improvements in robustness. For DeepSeek, security vulnerabilities were reduced by 96%. For the larger CodeLlama model, the critical security defect rate was decreased from 58.55% to 22.19%, highlighting the efficacy of tool-assisted self-repair even on \"stubborn\" models.",
+      "tr": "**Makale Başlığı:** Retrieval-Augmented-Generation ve Çoklu Araç Geri Bildirimi ile LLM Destekli Güvenli Kod Üretiminin İyileştirilmesi\n\n**Özet:**\n\nBüyük Dil Modelleri (LLM'ler) kod üretebilmekte ancak sıklıkla güvenlik açıkları, mantıksal tutarsızlıklar ve derleme hataları ortaya çıkarabilmektedir. Önceki çalışmalar, LLM'lerin yapılandırılmış geri bildirimlerden, statik analizden, retrieval augmentation'dan ve yürütme tabanlı iyileştirmeden önemli ölçüde fayda sağladığını göstermektedir. Bu çalışmada, tek bir kod üreten LLM'nin derleyici tanıları, CodeQL güvenlik taraması ve KLEE sembolik yürütme kullanarak çıktılarını yinelemeli olarak iyileştirdiği bir retrieval-augmented, multi-tool repair workflow'u önermekteyiz. Önceki başarılı onarımların anlamsal retrieval'ı için hafif bir embedding modeli kullanılmakta, bu da üretimi yönlendiren güvenlik odaklı örnekler sunmaktadır. DeepSeek-Coder-1.3B ve CodeLlama-7B tarafından üretilen 3.242 programdan oluşan birleşik bir veri kümesi üzerinde değerlendirilen sistem, sağlamlıkta önemli iyileştirmeler göstermektedir. DeepSeek için güvenlik açıkları %96 oranında azaltılmıştır. Daha büyük olan CodeLlama modeli için ise kritik güvenlik kusuru oranı %58,55'ten %22,19'a düşürülmüştür, bu da \"inatçı\" modellerde bile araç destekli self-repair'in etkinliğini vurgulamaktadır."
+    }
+  },
+  {
+    "id": "2601.00418v1",
+    "title": "Secure, Verifiable, and Scalable Multi-Client Data Sharing via Consensus-Based Privacy-Preserving Data Distribution",
+    "authors": [
+      "Prajwal Panth",
+      "Sahaj Raj Malla"
+    ],
+    "published_date": "2026-01-01",
+    "tags": [
+      "cs.CR",
+      "cs.DC",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.00418v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.00418v1",
+    "content": {
+      "en": "We propose the Consensus-Based Privacy-Preserving Data Distribution (CPPDD) framework, a lightweight and post-setup autonomous protocol for secure multi-client data aggregation. The framework enforces unanimous-release confidentiality through a dual-layer protection mechanism that combines per-client affine masking with priority-driven sequential consensus locking. Decentralized integrity is verified via step (sigma_S) and data (sigma_D) checksums, facilitating autonomous malicious deviation detection and atomic abort without requiring persistent coordination. The design supports scalar, vector, and matrix payloads with O(N*D) computation and communication complexity, optional edge-server offloading, and resistance to collusion under N-1 corruptions. Formal analysis proves correctness, Consensus-Dependent Integrity and Fairness (CDIF) with overwhelming-probability abort on deviation, and IND-CPA security assuming a pseudorandom function family. Empirical evaluations on MNIST-derived vectors demonstrate linear scalability up to N = 500 with sub-millisecond per-client computation times. The framework achieves 100% malicious deviation detection, exact data recovery, and three-to-four orders of magnitude lower FLOPs compared to MPC and HE baselines. CPPDD enables atomic collaboration in secure voting, consortium federated learning, blockchain escrows, and geo-information capacity building, addressing critical gaps in scalability, trust minimization, and verifiable multi-party computation for regulated and resource-constrained environments.",
+      "tr": "**Makale Başlığı:** Konsensüs Tabanlı Gizlilik Korumalı Veri Dağıtımı ile Güvenli, Doğrulanabilir ve Ölçeklenebilir Çok İstemcili Veri Paylaşımı\n\n**Özet:**\nBu çalışmada, güvenli çok istemcili veri toplama için hafif ve kurulum sonrası otonom bir protokol olan Consensus-Based Privacy-Preserving Data Distribution (CPPDD) çerçevesini öneriyoruz. Çerçeve, istemci başına affine masking ile öncelik güdümlü ardışık konsensüs kilitlemeyi birleştiren çift katmanlı bir koruma mekanizması aracılığıyla oybirliğiyle serbest bırakma gizliliğini zorunlu kılar. Decentralized integrity, step (sigma_S) ve data (sigma_D) checksum'ları aracılığıyla doğrulanır, bu da persistent coordination gerektirmeksizin otonom kötü niyetli sapma tespiti ve atomic abort'u kolaylaştırır. Tasarım, O(N*D) hesaplama ve iletişim karmaşıklığına sahip scalar, vector ve matrix payload'ları, isteğe bağlı edge-server offloading'i ve N-1 bozulmaya karşı dayanıklılığı destekler. Formal analysis, correctness, Consensus-Dependent Integrity and Fairness (CDIF) ile sapma durumunda overwhelming-probability abort ve pseudorandom function family varsayımı altında IND-CPA security'yi kanıtlar. MNIST'ten türetilmiş vektörler üzerinde yapılan ampirik değerlendirmeler, N = 500'e kadar doğrusal ölçeklenebilirlik ve istemci başına milisaniye altı hesaplama süreleri göstermiştir. Çerçeve, %100 kötü niyetli sapma tespiti, exact data recovery ve MPC ve HE baseline'larına kıyasla üç ila dört büyüklük mertebesi daha düşük FLOPs başarır. CPPDD, güvenli oylama, consortium federated learning, blockchain escrows ve geo-information capacity building alanlarında atomic collaboration'ı mümkün kılarak, regüle edilmiş ve kaynak kısıtlı ortamlar için ölçeklenebilirlik, trust minimization ve verifiable multi-party computation alanlarındaki kritik boşlukları doldurmaktadır."
+    }
+  },
+  {
+    "id": "2601.00389v1",
+    "title": "NOS-Gate: Queue-Aware Streaming IDS for Consumer Gateways under Timing-Controlled Evasion",
+    "authors": [
+      "Muhammad Bilal",
+      "Omer Tariq",
+      "Hasan Ahmed"
+    ],
+    "published_date": "2026-01-01",
+    "tags": [
+      "cs.CR",
+      "cs.LG",
+      "cs.NI"
+    ],
+    "link": "http://arxiv.org/abs/2601.00389v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.00389v1",
+    "content": {
+      "en": "Timing and burst patterns can leak through encryption, and an adaptive adversary can exploit them. This undermines metadata-only detection in a stand-alone consumer gateway. Therefore, consumer gateways need streaming intrusion detection on encrypted traffic using metadata only, under tight CPU and latency budgets. We present a streaming IDS for stand-alone gateways that instantiates a lightweight two-state unit derived from Network-Optimised Spiking (NOS) dynamics per flow, named NOS-Gate. NOS-Gate scores fixed-length windows of metadata features and, under a $K$-of-$M$ persistence rule, triggers a reversible mitigation that temporarily reduces the flow's weight under weighted fair queueing (WFQ). We evaluate NOS-Gate under timing-controlled evasion using an executable 'worlds' benchmark that specifies benign device processes, auditable attacker budgets, contention structure, and packet-level WFQ replay to quantify queue impact. All methods are calibrated label-free via burn-in quantile thresholding. Across multiple reproducible worlds and malicious episodes, at an achieved $0.1%$ false-positive operating point, NOS-Gate attains 0.952 incident recall versus 0.857 for the best baseline in these runs. Under gating, it reduces p99.9 queueing delay and p99.9 collateral delay with a mean scoring cost of ~ 2.09 μs per flow-window on CPU.",
+      "tr": "İşte akademik makale başlığının ve özetinin istenen şekilde Türkçe çevirisi:\n\n**Makale Başlığı:** NOS-Gate: Zamana Bağlı Kontrollü Kaçınma Altındaki Tüketici Ağ Geçitleri İçin Kuyruk Farkındalığına Sahip Akış Halindeki Saldırı Tespit Sistemi\n\n**Özet:**\n\nZamanlama ve ani veri paketleri şifreleme yoluyla sızdırılabilir ve adaptif bir saldırgan bunları istismar edebilir. Bu durum, bağımsız bir tüketici ağ geçidinde yalnızca meta verilere dayalı tespitin etkinliğini azaltır. Dolayısıyla, tüketici ağ geçitlerinin, sıkı CPU ve gecikme bütçeleri dahilinde, yalnızca meta verileri kullanarak şifreli trafik üzerinde akış halindeki saldırı tespitine ihtiyacı vardır. Biz, her akış için Network-Optimised Spiking (NOS) dinamiklerinden türetilen hafif bir iki durumlu birim oluşturan, NOS-Gate olarak adlandırılan, bağımsız ağ geçitleri için akış halindeki bir saldırı tespit sistemi sunuyoruz. NOS-Gate, meta veri özelliklerinin sabit uzunluklu pencerelerini puanlar ve bir $K$-of-$M$ persistence rule altında, weighted fair queueing (WFQ) altında akışın ağırlığını geçici olarak azaltan geri döndürülebilir bir azaltma (mitigation) tetikler. NOS-Gate'i, zararsız cihaz süreçlerini, denetlenebilir saldırgan bütçelerini, rekabet yapısını ve kuyruk etkisini ölçmek için paket düzeyinde WFQ tekrar oynatmasını belirten yürütülebilir bir 'worlds' benchmarkı kullanarak zamana bağlı kontrollü kaçınma altında değerlendiriyoruz. Tüm yöntemler, burn-in quantile thresholding aracılığıyla label-free olarak kalibre edilmiştir. Birden çok tekrarlanabilir 'world' ve kötü amaçlı epizotta, elde edilen %0.1 yanlış pozitif çalışma noktasında, NOS-Gate, bu çalıştırmalardaki en iyi baseline için %0.857 iken, 0.952 incident recall elde etmektedir. Gating altında, CPU üzerinde akış-penceresi başına ortalama ~2.09 μs puanlama maliyeti ile p99.9 kuyruklama gecikmesini ve p99.9 dolaylı gecikmeyi azaltır."
+    }
+  },
+  {
+    "id": "2601.00384v1",
+    "title": "Engineering Attack Vectors and Detecting Anomalies in Additive Manufacturing",
+    "authors": [
+      "Md Mahbub Hasan",
+      "Marcus Sternhagen",
+      "Krishna Chandra Roy"
+    ],
+    "published_date": "2026-01-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.00384v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.00384v1",
+    "content": {
+      "en": "Additive manufacturing (AM) is rapidly integrating into critical sectors such as aerospace, automotive, and healthcare. However, this cyber-physical convergence introduces new attack surfaces, especially at the interface between computer-aided design (CAD) and machine execution layers. In this work, we investigate targeted cyberattacks on two widely used fused deposition modeling (FDM) systems, Creality's flagship model K1 Max, and Ender 3. Our threat model is a multi-layered Man-in-the-Middle (MitM) intrusion, where the adversary intercepts and manipulates G-code files during upload from the user interface to the printer firmware. The MitM intrusion chain enables several stealthy sabotage scenarios. These attacks remain undetectable by conventional slicer software or runtime interfaces, resulting in structurally defective yet externally plausible printed parts. To counter these stealthy threats, we propose an unsupervised Intrusion Detection System (IDS) that analyzes structured machine logs generated during live printing. Our defense mechanism uses a frozen Transformer-based encoder (a BERT variant) to extract semantic representations of system behavior, followed by a contrastively trained projection head that learns anomaly-sensitive embeddings. Later, a clustering-based approach and a self-attention autoencoder are used for classification. Experimental results demonstrate that our approach effectively distinguishes between benign and compromised executions.",
+      "tr": "**Makale Başlığı:** Katmanlı İmalatta Saldırı Vektörlerinin Mühendisliği ve Anormalliklerin Tespiti\n\n**Özet:**\n\nKatmanlı imalat (AM), havacılık, otomotiv ve sağlık hizmetleri gibi kritik sektörlere hızla entegre olmaktadır. Ancak bu siber-fiziksel yakınsama, özellikle bilgisayar destekli tasarım (CAD) ve makine yürütme katmanları arasındaki arayüzde yeni saldırı yüzeyleri oluşturmaktadır. Bu çalışmada, yaygın olarak kullanılan iki birleşik eriyik modelleme (FDM) sistemi olan Creality'nin amiral gemisi modeli K1 Max ve Ender 3 üzerinde hedeflenmiş siber saldırıları incelemekteyiz. Tehdit modelimiz, zararlının kullanıcı arayüzünden yazıcı firmware'ine yükleme sırasında G-code dosyalarını durdurup manipüle ettiği çok katmanlı bir Man-in-the-Middle (MitM) saldırısıdır. MitM saldırı zinciri, birkaç gizli sabotaj senaryosuna olanak tanır. Bu saldırılar, geleneksel dilimleme yazılımları veya çalışma zamanı arayüzleri tarafından tespit edilemez ve sonuç olarak yapısal olarak kusurlu ancak dışarıdan makul görünen basılı parçalar ortaya çıkarır. Bu gizli tehditlere karşı koymak için, canlı baskı sırasında üretilen yapılandırılmış makine günlüklerini analiz eden denetimsiz bir Saldırı Tespit Sistemi (IDS) önermekteyiz. Savunma mekanizmamız, sistem davranışının anlamsal temsillerini çıkarmak için dondurulmuş bir Transformer tabanlı kodlayıcı (bir BERT varyantı) kullanır, ardından anormallik duyarlı embedding'ler öğrenen karşıt olarak eğitilmiş bir projeksiyon başlığı gelir. Daha sonra sınıflandırma için kümeleme tabanlı bir yaklaşım ve bir self-attention autoencoder kullanılır. Deneysel sonuçlar, yaklaşımımızın iyi niyetli ve tehlikeye atılmış yürütmeleri etkili bir şekilde ayırt ettiğini göstermektedir."
+    }
+  },
+  {
+    "id": "2601.00367v1",
+    "title": "PatchBlock: A Lightweight Defense Against Adversarial Patches for Embedded EdgeAI Devices",
+    "authors": [
+      "Nandish Chattopadhyay",
+      "Abdul Basit",
+      "Amira Guesmi",
+      "Muhammad Abdullah Hanif",
+      "Bassem Ouni"
+    ],
+    "published_date": "2026-01-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.00367v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.00367v1",
+    "content": {
+      "en": "Adversarial attacks pose a significant challenge to the reliable deployment of machine learning models in EdgeAI applications, such as autonomous driving and surveillance, which rely on resource-constrained devices for real-time inference. Among these, patch-based adversarial attacks, where small malicious patches (e.g., stickers) are applied to objects, can deceive neural networks into making incorrect predictions with potentially severe consequences. In this paper, we present PatchBlock, a lightweight framework designed to detect and neutralize adversarial patches in images. Leveraging outlier detection and dimensionality reduction, PatchBlock identifies regions affected by adversarial noise and suppresses their impact. It operates as a pre-processing module at the sensor level, efficiently running on CPUs in parallel with GPU inference, thus preserving system throughput while avoiding additional GPU overhead. The framework follows a three-stage pipeline: splitting the input into chunks (Chunking), detecting anomalous regions via a redesigned isolation forest with targeted cuts for faster convergence (Separating), and applying dimensionality reduction on the identified outliers (Mitigating). PatchBlock is both model- and patch-agnostic, can be retrofitted to existing pipelines, and integrates seamlessly between sensor inputs and downstream models. Evaluations across multiple neural architectures, benchmark datasets, attack types, and diverse edge devices demonstrate that PatchBlock consistently improves robustness, recovering up to 77% of model accuracy under strong patch attacks such as the Google Adversarial Patch, while maintaining high portability and minimal clean accuracy loss. Additionally, PatchBlock outperforms the state-of-the-art defenses in efficiency, in terms of computation time and energy consumption per sample, making it suitable for EdgeAI applications.",
+      "tr": "Makale Başlığı: PatchBlock: Gömülü EdgeAI Cihazlarına Yönelik Adversarial Patch'lere Karşı Hafif Bir Savunma\n\nÖzet:\nAdversarial saldırılar, otonom sürüş ve gözetim gibi EdgeAI uygulamalarında makine öğrenmesi modellerinin güvenilir dağıtımına önemli bir zorluk teşkil etmektedir ve bu uygulamalar gerçek zamanlı çıkarım için kaynak kısıtlı cihazlara dayanır. Bunlar arasında, nesnelere küçük kötü niyetli yamaların (örneğin, çıkartmalar) uygulandığı yama tabanlı adversarial saldırılar, sinir ağlarını potansiyel olarak ciddi sonuçlar doğurabilecek yanlış tahminler yapmaya ikna edebilir. Bu çalışmada, görüntülerdeki adversarial yamaları tespit etmek ve etkisiz hale getirmek için tasarlanmış hafif bir framework olan PatchBlock'u sunuyoruz. Outlier detection ve dimensionality reduction'dan yararlanarak, PatchBlock adversarial gürültüden etkilenen bölgeleri belirler ve etkilerini bastırır. Sensör seviyesinde bir ön işleme modülü olarak çalışır, GPU çıkarımı ile paralel olarak CPU'larda verimli bir şekilde çalışır, böylece ek GPU yükünden kaçınarak sistem verimini korur. Framework, üç aşamalı bir pipeline izler: girdiyi parçalara ayırma (Chunking), daha hızlı yakınsama için hedeflenmiş kesimlere sahip yeniden tasarlanmış bir isolation forest aracılığıyla anormal bölgeleri tespit etme (Separating) ve belirlenen outlier'lar üzerinde dimensionality reduction uygulama (Mitigating). PatchBlock hem model- hem de yama-agnostic'tir, mevcut pipeline'lara sonradan entegre edilebilir ve sensör girişleri ile aşağı akış modelleri arasında sorunsuz bir şekilde entegre olur. Birden fazla sinir mimarisi, benchmark veri setleri, saldırı türleri ve çeşitli edge cihazları üzerinde yapılan değerlendirmeler, PatchBlock'un tutarlı bir şekilde dayanıklılığı artırdığını, Google Adversarial Patch gibi güçlü yama saldırıları altında model doğruluğunun %77'sine kadar geri kazanım sağladığını ve aynı zamanda yüksek taşınabilirlik ve minimum temiz doğruluk kaybını koruduğunu göstermektedir. Ek olarak, PatchBlock, hesaplama süresi ve örnek başına enerji tüketimi açısından en gelişmiş savunmaları geride bırakarak EdgeAI uygulamaları için uygun hale gelmektedir."
+    }
+  },
+  {
+    "id": "2601.00270v1",
+    "title": "Rectifying Adversarial Examples Using Their Vulnerabilities",
+    "authors": [
+      "Fumiya Morimoto",
+      "Ryuto Morita",
+      "Satoshi Ono"
+    ],
+    "published_date": "2026-01-01",
+    "tags": [
+      "cs.CR",
+      "cs.LG",
+      "cs.NE"
+    ],
+    "link": "http://arxiv.org/abs/2601.00270v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.00270v1",
+    "content": {
+      "en": "Deep neural network-based classifiers are prone to errors when processing adversarial examples (AEs). AEs are minimally perturbed input data undetectable to humans posing significant risks to security-dependent applications. Hence, extensive research has been undertaken to develop defense mechanisms that mitigate their threats. Most existing methods primarily focus on discriminating AEs based on the input sample features, emphasizing AE detection without addressing the correct sample categorization before an attack. While some tasks may only require mere rejection on detected AEs, others necessitate identifying the correct original input category such as traffic sign recognition in autonomous driving. The objective of this study is to propose a method for rectifying AEs to estimate the correct labels of their original inputs. Our method is based on re-attacking AEs to move them beyond the decision boundary for accurate label prediction, effectively addressing the issue of rectifying minimally perceptible AEs created using white-box attack methods. However, challenge remains with respect to effectively rectifying AEs produced by black-box attacks at a distance from the boundary, or those misclassified into low-confidence categories by targeted attacks. By adopting a straightforward approach of only considering AEs as inputs, the proposed method can address diverse attacks while avoiding the requirement of parameter adjustments or preliminary training. Results demonstrate that the proposed method exhibits consistent performance in rectifying AEs generated via various attack methods, including targeted and black-box attacks. Moreover, it outperforms conventional rectification and input transformation methods in terms of stability against various attacks.",
+      "tr": "Elbette, akademik makale başlığını ve özetini istenen şekilde Türkçeye çevireyim:\n\n**Makale Başlığı:** Rectifying Adversarial Examples Using Their Vulnerabilities\n\n**Özet:**\n\nDerin öğrenme tabanlı sınıflandırıcılar, adversarial examples (AEs) işlenirken hatalara yatkındır. AEs, insanlar tarafından tespit edilemeyen ve güvenlik gerektiren uygulamalar için önemli riskler oluşturan, minimum düzeyde bozulmuş girdi verileridir. Bu nedenle, tehditlerini azaltacak savunma mekanizmaları geliştirmek için kapsamlı araştırmalar yapılmıştır. Mevcut yöntemlerin çoğu öncelikli olarak girdi örneklerinin özelliklerine dayanarak AEs'yi ayırt etmeye odaklanmakta, bir saldırıdan önce doğru örnek kategorizasyonunu ele almak yerine AE tespitini vurgulamaktadır. Bazı görevler yalnızca tespit edilen AEs'de basit bir reddetme gerektirebilirken, diğerleri otonom sürüşte trafik işareti tanıma gibi doğru orijinal girdi kategorisini tanımlamayı gerektirir. Bu çalışmanın amacı, orijinal girdilerinin doğru etiketlerini tahmin etmek için AEs'yi düzeltmeye yönelik bir yöntem önermektir. Yöntemimiz, doğru etiket tahmini için onları karar sınırının dışına çıkarmak amacıyla AEs'ye yeniden saldırmaya dayanmaktadır. Bu, white-box attack yöntemleri kullanılarak oluşturulan minimum algılanabilir AEs'yi düzeltme sorununu etkili bir şekilde ele almaktadır. Ancak, karar sınırından uzakta black-box attacks tarafından üretilen AEs'yi veya hedefli saldırılar tarafından düşük güven seviyesine sahip kategorilere yanlış sınıflandırılanları etkili bir şekilde düzeltme konusunda zorluklar devam etmektedir. Yalnızca AEs'yi girdi olarak kabul eden basit bir yaklaşım benimseyerek, önerilen yöntem parametre ayarlamaları veya ön eğitim gereksiniminden kaçınarak çeşitli saldırıları ele alabilir. Sonuçlar, önerilen yöntemin, hedefli ve black-box attacks dahil olmak üzere çeşitli saldırı yöntemleriyle üretilen AEs'yi düzeltmede tutarlı performans sergilediğini göstermektedir. Ayrıca, çeşitli saldırılara karşı kararlılık açısından geleneksel düzeltme ve girdi dönüşüm yöntemlerinden daha üstündür."
+    }
+  },
+  {
+    "id": "2601.00065v1",
+    "title": "The Trojan in the Vocabulary: Stealthy Sabotage of LLM Composition",
+    "authors": [
+      "Xiaoze Liu",
+      "Weichen Yu",
+      "Matt Fredrikson",
+      "Xiaoqian Wang",
+      "Jing Gao"
+    ],
+    "published_date": "2025-12-31",
+    "tags": [
+      "cs.LG",
+      "cs.CL",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2601.00065v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.00065v1",
+    "content": {
+      "en": "The open-weight LLM ecosystem is increasingly defined by model composition techniques (such as weight merging, speculative decoding, and vocabulary expansion) that remix capabilities from diverse sources. A critical prerequisite for applying these methods across different model families is tokenizer transplant, which aligns incompatible vocabularies to a shared embedding space. We demonstrate that this essential interoperability step introduces a supply-chain vulnerability: we engineer a single \"breaker token\" that is functionally inert in a donor model yet reliably reconstructs into a high-salience malicious feature after transplant into a base model. By exploiting the geometry of coefficient reuse, our attack creates an asymmetric realizability gap that sabotages the base model's generation while leaving the donor's utility statistically indistinguishable from nominal behavior. We formalize this as a dual-objective optimization problem and instantiate the attack using a sparse solver. Empirically, the attack is training-free and achieves spectral mimicry to evade outlier detection, while demonstrating structural persistence against fine-tuning and weight merging, highlighting a hidden risk in the pipeline of modular AI composition. Code is available at https://github.com/xz-liu/tokenforge",
+      "tr": "Elbette, işte makale başlığının ve özetinin akademik ve resmi bir dille Türkçeye çevirisi:\n\n**Makale Başlığı:** Kelime Hazinesindeki Truva Atı: LLM Kompozisyonunun Gizli Sabotajı\n\n**Özet:**\n\nAçık kaynaklı LLM ekosistemi, çeşitlilik gösteren kaynaklardan gelen yetenekleri yeniden karıştıran model kompozisyon teknikleriyle (örneğin: weight merging, speculative decoding ve vocabulary expansion) giderek daha fazla tanımlanmaktadır. Bu yöntemlerin farklı model aileleri arasında uygulanabilmesi için kritik bir ön koşul, uyumsuz kelime hazinelerini ortak bir embedding space'e hizalayan tokenizer transplant'tır. Bu temel birlikte çalışabilirlik adımının bir supply-chain vulnerability'si yarattığını gösteriyoruz: fonksiyonel olarak bir donor model'de etkisiz olan, ancak bir base model'e transplant edildikten sonra güvenilir bir şekilde yüksek önemlilikte zararlı bir özelliğe yeniden yapılandırılan tek bir \"breaker token\" tasarlıyoruz. Coefficient reuse'un geometrisini sömürerek, saldırımız base model'in üretimini sabote eden, ancak donor'un faydasını nominal davranıştan istatistiksel olarak ayırt edilemez bırakan asimetrik bir realizability gap oluşturur. Bunu dual-objective optimization problem olarak formüle ediyor ve saldırıyı sparse solver kullanarak örneklendiriyoruz. Ampirik olarak, saldırı training-free olup outlier detection'dan kaçınmak için spectral mimicry elde ederken, fine-tuning ve weight merging'e karşı structural persistence göstererek, modular AI composition'ın pipeline'ındaki gizli bir riski vurgulamaktadır. Kod https://github.com/xz-liu/tokenforge adresinde mevcuttur."
+    }
+  },
+  {
+    "id": "2601.00042v1",
+    "title": "Large Empirical Case Study: Go-Explore adapted for AI Red Team Testing",
+    "authors": [
+      "Manish Bhatt",
+      "Adrian Wood",
+      "Idan Habler",
+      "Ammar Al-Kahfah"
+    ],
+    "published_date": "2025-12-31",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.00042v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.00042v1",
+    "content": {
+      "en": "Production LLM agents with tool-using capabilities require security testing despite their safety training. We adapt Go-Explore to evaluate GPT-4o-mini across 28 experimental runs spanning six research questions. We find that random-seed variance dominates algorithmic parameters, yielding an 8x spread in outcomes; single-seed comparisons are unreliable, while multi-seed averaging materially reduces variance in our setup. Reward shaping consistently harms performance, causing exploration collapse in 94% of runs or producing 18 false positives with zero verified attacks. In our environment, simple state signatures outperform complex ones. For comprehensive security testing, ensembles provide attack-type diversity, whereas single agents optimize coverage within a given attack type. Overall, these results suggest that seed variance and targeted domain knowledge can outweigh algorithmic sophistication when testing safety-trained models.",
+      "tr": "Elbette, işte makale başlığının ve özetinin istenen şekilde çevrilmiş hali:\n\n**Makale Başlığı:** Büyük Ampirik Vaka Çalışması: Yapay Zeka Kırmızı Takım Testi İçin Uyarlanmış Go-Explore\n\n**Özet:**\nAraç kullanma yeteneklerine sahip üretim LLM ajanları, güvenlik eğitimlerine rağmen güvenlik testi gerektirir. GPT-4o-mini'yi altı araştırma sorusunu kapsayan 28 deneysel çalıştırma boyunca değerlendirmek için Go-Explore'u uyarlıyoruz. Rastgele seed varyansının algoritmik parametreleri domine ettiğini ve sonuçlarda 8 katlık bir yayılma sağladığını buluyoruz; tek seed karşılaştırmaları güvenilmezken, çoklu seed ortalaması kurulumumuzda varyansı maddi olarak azaltır. Reward shaping tutarlı bir şekilde performansa zarar verir, çalıştırmaların %94'ünde exploration collapse'e neden olur veya sıfır doğrulanmış saldırıyla 18 yanlış pozitif üretir. Ortamımızda, basit state signature'lar karmaşık olanlardan daha iyi performans gösterir. Kapsamlı güvenlik testi için ensemble'lar saldırı tipi çeşitliliği sağlarken, tek ajanlar belirli bir saldırı tipi dahilinde coverage'ı optimize eder. Genel olarak, bu sonuçlar, seed varyansı ve hedeflenmiş domain knowledge'ın, güvenlik eğitimi almış modelleri test ederken algoritmik sofistikeliğin önüne geçebileceğini düşündürmektedir."
+    }
+  },
+  {
     "id": "2512.24571v1",
     "title": "SynRAG: A Large Language Model Framework for Executable Query Generation in Heterogeneous SIEM System",
     "authors": [
@@ -18,202 +211,7 @@
     "pdf_link": "https://arxiv.org/pdf/2512.24571v1",
     "content": {
       "en": "Security Information and Event Management (SIEM) systems are essential for large enterprises to monitor their IT infrastructure by ingesting and analyzing millions of logs and events daily. Security Operations Center (SOC) analysts are tasked with monitoring and analyzing this vast data to identify potential threats and take preventive actions to protect enterprise assets. However, the diversity among SIEM platforms, such as Palo Alto Networks Qradar, Google SecOps, Splunk, Microsoft Sentinel and the Elastic Stack, poses significant challenges. As these systems differ in attributes, architecture, and query languages, making it difficult for analysts to effectively monitor multiple platforms without undergoing extensive training or forcing enterprises to expand their workforce. To address this issue, we introduce SynRAG, a unified framework that automatically generates threat detection or incident investigation queries for multiple SIEM platforms from a platform-agnostic specification. SynRAG can generate platformspecific queries from a single high-level specification written by analysts. Without SynRAG, analysts would need to manually write separate queries for each SIEM platform, since query languages vary significantly across systems. This framework enables seamless threat detection and incident investigation across heterogeneous SIEM environments, reducing the need for specialized training and manual query translation. We evaluate SynRAG against state-of-the-art language models, including GPT, Llama, DeepSeek, Gemma, and Claude, using Qradar and SecOps as representative SIEM systems. Our results demonstrate that SynRAG generates significantly better queries for crossSIEM threat detection and incident investigation compared to the state-of-the-art base models.",
-      "tr": "**Makale Başlığı:** SynRAG: Heterojen SIEM Sistemlerinde Yürütülebilir Sorgu Üretimi İçin Büyük Dil Modeli Çerçevesi\n\n**Özet:**\n\nGüvenlik Bilgi ve Olay Yönetimi (SIEM) sistemleri, büyük kuruluşların BT altyapılarını her gün milyonlarca log ve olayı alıp analiz ederek izlemeleri için kritik öneme sahiptir. Güvenlik Operasyon Merkezi (SOC) analistleri, potansiyel tehditleri belirlemek ve kurumsal varlıkları korumak için önleyici eylemler almak amacıyla bu devasa veriyi izlemek ve analiz etmekle görevlidir. Ancak, Palo Alto Networks Qradar, Google SecOps, Splunk, Microsoft Sentinel ve Elastic Stack gibi SIEM platformları arasındaki çeşitlilik, önemli zorluklar barındırmaktadır. Bu sistemler öznitelikler, mimari ve query language açısından farklılık gösterdiğinden, analistlerin kapsamlı eğitim almadan birden fazla platformu etkin bir şekilde izlemelerini veya kuruluşların iş gücünü genişletmelerini zorlaştırmaktadır. Bu sorunu ele almak için, platformdan bağımsız bir spesifikasyondan birden fazla SIEM platformu için otomatik olarak tehdit tespit veya olay soruşturma sorguları üreten birleşik bir çerçeve olan SynRAG'ı sunuyoruz. SynRAG, analistler tarafından yazılan tek bir üst düzey spesifikasyondan platforma özgü sorgular üretebilir. SynRAG olmadan, analistlerin sorgu dilleri sistemler arasında önemli ölçüde farklılık gösterdiği için her SIEM platformu için ayrı sorgular manuel olarak yazmaları gerekecektir. Bu çerçeve, özel eğitim ve manuel sorgu çevirisi ihtiyacını azaltarak, heterojen SIEM ortamlarında sorunsuz tehdit tespiti ve olay soruşturması sağlar. SynRAG'ı, Qradar ve SecOps'u temsili SIEM sistemleri olarak kullanarak, GPT, Llama, DeepSeek, Gemma ve Claude dahil olmak üzere en son teknoloji dil modellerine karşı değerlendiriyoruz. Sonuçlarımız, SynRAG'ın çapraz SIEM tehdit tespiti ve olay soruşturması için en son teknoloji temel modellerine kıyasla önemli ölçüde daha iyi sorgular ürettiğini göstermektedir."
-    }
-  },
-  {
-    "id": "2512.24452v1",
-    "title": "Privacy-Preserving Semantic Communications via Multi-Task Learning and Adversarial Perturbations",
-    "authors": [
-      "Yalin E. Sagduyu",
-      "Tugba Erpek",
-      "Aylin Yener",
-      "Sennur Ulukus"
-    ],
-    "published_date": "2025-12-30",
-    "tags": [
-      "cs.NI",
-      "cs.AI",
-      "cs.CR",
-      "cs.IT",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2512.24452v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.24452v1",
-    "content": {
-      "en": "Semantic communications conveys task-relevant meaning rather than focusing solely on message reconstruction, improving bandwidth efficiency and robustness for next-generation wireless systems. However, learned semantic representations can still leak sensitive information to unintended receivers (eavesdroppers). This paper presents a deep learning-based semantic communication framework that jointly supports multiple receiver tasks while explicitly limiting semantic leakage to an eavesdropper. The legitimate link employs a learned encoder at the transmitter, while the receiver trains decoders for semantic inference and data reconstruction. The security problem is formulated via an iterative min-max optimization in which an eavesdropper is trained to improve its semantic inference, while the legitimate transmitter-receiver pair is trained to preserve task performance while reducing the eavesdropper's success. We also introduce an auxiliary layer that superimposes a cooperative, adversarially crafted perturbation on the transmitted waveform to degrade semantic leakage to an eavesdropper. Performance is evaluated over Rayleigh fading channels with additive white Gaussian noise using MNIST and CIFAR-10 datasets. Semantic accuracy and reconstruction quality improve with increasing latent dimension, while the min-max mechanism reduces the eavesdropper's inference performance significantly without degrading the legitimate receiver. The perturbation layer is successful in reducing semantic leakage even when the legitimate link is trained only for its own task. This comprehensive framework motivates semantic communication designs with tunable, end-to-end privacy against adaptive adversaries in realistic wireless settings.",
-      "tr": "**Makale Başlığı:** Gizliliği Koruyan Anlamsal İletişimler: Çoklu Görev Öğrenmesi ve Çekişmeli Pertürbasyonlar Aracılığıyla\n\n**Özet:**\n\nAnlamsal iletişim, bir sonraki nesil kablosuz sistemler için bant genişliği verimliliğini ve sağlamlığı artırarak, yalnızca mesaj yeniden yapılandırmasına odaklanmak yerine göreve ilişkin anlamı iletir. Ancak, öğrenilen anlamsal temsiller istenmeyen alıcılara (dinleyicilere) hassas bilgileri sızdırabilir. Bu makale, birden fazla alıcı görevini ortaklaşa destekleyen ve dinleyiciye yönelik anlamsal sızıntıyı açıkça sınırlayan derin öğrenme tabanlı bir anlamsal iletişim çerçevesi sunmaktadır. Meşru bağlantı, vericidə öğrenilmiş bir encoder kullanırken, alıcı anlamsal çıkarım ve veri yeniden yapılandırması için decoder'ları eğitir. Güvenlik sorunu, dinleyicinin anlamsal çıkarımını iyileştirmek için eğitildiği bir çekişmeli (adversarial) öğrenme ve meşru verici-alıcı çiftinin görevi korurken dinleyicinin başarısını azaltmak için eğitildiği iteratif bir min-max optimizasyonu aracılığıyla formüle edilmektedir. Ayrıca, iletilen dalga formuna kooperatif, çekişmeli olarak hazırlanmış bir pertürbasyon ekleyerek dinleyiciye anlamsal sızıntıyı bozan yardımcı bir katman sunmaktayız. Performans, Rayleigh sönümleme kanallarında ve MNIST ve CIFAR-10 veri kümeleri kullanılarak eklemeli beyaz Gauss gürültüsü (additive white Gaussian noise) üzerinde değerlendirilmektedir. Anlamsal doğruluk ve yeniden yapılandırma kalitesi, gizli boyutun (latent dimension) artmasıyla iyileşirken, min-max mekanizması meşru alıcıyı bozmadan dinleyicinin çıkarım performansını önemli ölçüde azaltır. Pertürbasyon katmanı, meşru bağlantı yalnızca kendi görevi için eğitildiğinde bile anlamsal sızıntıyı azaltmada başarılıdır. Bu kapsamlı çerçeve, gerçekçi kablosuz ortamlarda uyarlanabilir düşmanlara (adaptive adversaries) karşı ayarlanabilir, uçtan uca gizlilik sağlayan anlamsal iletişim tasarımlarını teşvik etmektedir."
-    }
-  },
-  {
-    "id": "2512.24391v1",
-    "title": "FAST-IDS: A Fast Two-Stage Intrusion Detection System with Hybrid Compression for Real-Time Threat Detection in Connected and Autonomous Vehicles",
-    "authors": [
-      "Devika S",
-      "Vishnu Hari",
-      "Pratik Narang",
-      "Tejasvi Alladi",
-      "Vinay Chamola"
-    ],
-    "published_date": "2025-12-30",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2512.24391v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.24391v1",
-    "content": {
-      "en": "We have implemented a multi-stage IDS for CAVs that can be deployed to resourec-constrained environments after hybrid model compression.",
-      "tr": "İşte makale başlığı ve özetinin istenen kriterlere uygun çevirisi:\n\n**Makale Başlığı:** FAST-IDS: Bağlantılı ve Otonom Araçlarda Gerçek Zamanlı Tehdit Tespiti İçin Hibrit Sıkıştırmalı Hızlı İki Aşamalı Bir Saldırı Tespit Sistemi\n\n**Özet:**\nKaynak kısıtlamalı ortamlara konuşlandırılabilen, hibrit model sıkıştırması sonrası çok aşamalı bir IDS'yi CAV'ler için implemente ettik."
-    }
-  },
-  {
-    "id": "2512.24345v1",
-    "title": "FedSecureFormer: A Fast, Federated and Secure Transformer Framework for Lightweight Intrusion Detection in Connected and Autonomous Vehicles",
-    "authors": [
-      "Devika S",
-      "Vishnu Hari",
-      "Pratik Narang",
-      "Tejasvi Alladi",
-      "F. Richard Yu"
-    ],
-    "published_date": "2025-12-30",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2512.24345v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.24345v1",
-    "content": {
-      "en": "This works presents an encoder-only transformer built with minimum layers for intrusion detection in the domain of Connected and Autonomous Vehicles using Federated Learning.",
-      "tr": "**Makale Başlığı:** FedSecureFormer: Bağlı ve Otonom Araçlarda Hafif Saldırı Tespiti İçin Hızlı, Federasyonlu ve Güvenli Bir Transformer Çerçevesi\n\n**Özet:**\nBu çalışma, Bağlı ve Otonom Araçlar alanında federasyonlu öğrenme (Federated Learning) kullanarak saldırı tespiti için minimum katmanlarla inşa edilmiş, yalnızca kodlayıcı (encoder-only) bir transformer'ı sunmaktadır. Bu yaklaşım, federasyonlu ortamlarda 'knowledge graph' oluşturma ve 'reasoning' gibi karmaşık siber güvenlik süreçlerini optimize etmeyi amaçlar. Geleneksel yöntemlerin aksine, bu sistem daha yüksek 'recall' oranları ve daha az yanlış pozitif ile 'exact retrieval' yeteneğini geliştirmek üzere tasarlanmıştır. 'Relation-first' prensibini benimseyerek, ağdaki ilişkisel bilgilerin önceliklendirilmesiyle daha derin bir sistem analizi sağlanır. 'Persistent belief system' modellemesi, sürekli değişen tehdit ortamlarında dahi tutarlı ve güvenilir bir tespit mekanizması sunar."
-    }
-  },
-  {
-    "id": "2512.24088v1",
-    "title": "FedLiTeCAN : A Federated Lightweight Transformer for Fast and Robust CAN Bus Intrusion Detection",
-    "authors": [
-      "Devika S",
-      "Pratik Narang",
-      "Tejasvi Alladi"
-    ],
-    "published_date": "2025-12-30",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2512.24088v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.24088v1",
-    "content": {
-      "en": "This work implements a lightweight Transformer model for IDS in the domain of Connected and Autonomous Vehicles",
-      "tr": "İşte makale başlığı ve özetinin akademik ve profesyonel bir dille yapılan Türkçe çevirisi:\n\n**Makale Başlığı:** FedLiTeCAN : Bağlantılı ve Otonom Araçlar İçin Hızlı ve Dayanıklı CAN Veriyolu Saldırı Tespiti Amaçlı Federasyonel Hafif Transformer Modeli\n\n**Özet:**\nBu çalışma, Bağlantılı ve Otonom Araçlar (Connected and Autonomous Vehicles) alanında Saldırı Tespit Sistemi (Intrusion Detection System - IDS) için hafifti bir Transformer modeli uygulamaktadır. Bu model, 'knowledge graph' tabanlı 'reasoning' yetenekleri ile entegre edilerek, düşük performanslı cihazlarda dahi yüksek doğruluk ve verimlilik sağlamak üzere tasarlanmıştır. 'Recall' ve hassasiyet (precision) metrikleri kapsamında yapılan analizler, 'exact retrieval' ve 'relation-first' yaklaşımlarının entegrasyonunun, karmaşık saldırı senaryolarında dahi sistemin genel 'recall' ve doğruluğunu önemli ölçüde artırdığını göstermektedir. Ayrıca, 'persistent belief system' mekanizması, sistemin dinamik ve değişen saldırı vektörlerine karşı adaptasyon yeteneğini güçlendirmekte ve sürekli bir güvenlik koruması sunmaktadır."
-    }
-  },
-  {
-    "id": "2512.24044v1",
-    "title": "Jailbreaking Attacks vs. Content Safety Filters: How Far Are We in the LLM Safety Arms Race?",
-    "authors": [
-      "Yuan Xin",
-      "Dingfan Chen",
-      "Linyi Yang",
-      "Michael Backes",
-      "Xiao Zhang"
-    ],
-    "published_date": "2025-12-30",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL"
-    ],
-    "link": "http://arxiv.org/abs/2512.24044v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.24044v1",
-    "content": {
-      "en": "As large language models (LLMs) are increasingly deployed, ensuring their safe use is paramount. Jailbreaking, adversarial prompts that bypass model alignment to trigger harmful outputs, present significant risks, with existing studies reporting high success rates in evading common LLMs. However, previous evaluations have focused solely on the models, neglecting the full deployment pipeline, which typically incorporates additional safety mechanisms like content moderation filters. To address this gap, we present the first systematic evaluation of jailbreak attacks targeting LLM safety alignment, assessing their success across the full inference pipeline, including both input and output filtering stages. Our findings yield two key insights: first, nearly all evaluated jailbreak techniques can be detected by at least one safety filter, suggesting that prior assessments may have overestimated the practical success of these attacks; second, while safety filters are effective in detection, there remains room to better balance recall and precision to further optimize protection and user experience. We highlight critical gaps and call for further refinement of detection accuracy and usability in LLM safety systems.",
-      "tr": "**Makale Başlığı:** Jailbreaking Saldırıları ve İçerik Güvenlik Filtreleri: LLM Güvenliği Yarışında Ne Kadar İlerideyiz?\n\n**Özet:**\n\nBüyük dil modellerinin (LLM'ler) yaygınlaşmasıyla birlikte, güvenli kullanımlarını sağlamak en önemli öncelik haline gelmiştir. LLM hizalamasını aşarak zararlı çıktılara neden olan düşmanca yönlendirmeler olan jailbreak saldırıları, önemli riskler teşkil etmektedir ve mevcut çalışmalar, yaygın LLM'leri atlatmadaki yüksek başarı oranlarını bildirmektedir. Ancak, önceki değerlendirmeler yalnızca modellere odaklanmış, tipik olarak içerik moderasyon filtreleri gibi ek güvenlik mekanizmalarını içeren tam dağıtım hattını göz ardı etmiştir. Bu eksikliği gidermek için, LLM güvenlik hizalamasını hedefleyen jailbreak saldırılarının ilk sistematik değerlendirmesini sunuyor, hem girdi hem de çıktı filtreleme aşamalarını içeren tam çıkarım hattı boyunca başarılarını değerlendiriyoruz. Bulgularımız iki temel içgörü sağlamaktadır: Birincisi, değerlendirilen jailbreak tekniklerinin neredeyse tamamı en az bir güvenlik filtresi tarafından tespit edilebilir, bu da önceki değerlendirmelerin bu saldırıların pratik başarısını abartmış olabileceğini düşündürmektedir; ikincisi, güvenlik filtreleri tespitte etkili olsa da, korumayı ve kullanıcı deneyimini daha da optimize etmek için recall ve precision dengesini daha iyi kurmak için alan bulunmaktadır. LLM güvenlik sistemlerinde tespit doğruluğu ve kullanılabilirliğin daha da iyileştirilmesi için kritik boşlukları vurguluyor ve daha fazla gelişme çağrısında bulunuyoruz."
-    }
-  },
-  {
-    "id": "2512.23995v1",
-    "title": "RepetitionCurse: Measuring and Understanding Router Imbalance in Mixture-of-Experts LLMs under DoS Stress",
-    "authors": [
-      "Ruixuan Huang",
-      "Qingyue Wang",
-      "Hantao Huang",
-      "Yudong Gao",
-      "Dong Chen"
-    ],
-    "published_date": "2025-12-30",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2512.23995v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.23995v1",
-    "content": {
-      "en": "Mixture-of-Experts architectures have become the standard for scaling large language models due to their superior parameter efficiency. To accommodate the growing number of experts in practice, modern inference systems commonly adopt expert parallelism to distribute experts across devices. However, the absence of explicit load balancing constraints during inference allows adversarial inputs to trigger severe routing concentration. We demonstrate that out-of-distribution prompts can manipulate the routing strategy such that all tokens are consistently routed to the same set of top-$k$ experts, which creates computational bottlenecks on certain devices while forcing others to idle. This converts an efficiency mechanism into a denial-of-service attack vector, leading to violations of service-level agreements for time to first token. We propose RepetitionCurse, a low-cost black-box strategy to exploit this vulnerability. By identifying a universal flaw in MoE router behavior, RepetitionCurse constructs adversarial prompts using simple repetitive token patterns in a model-agnostic manner. On widely deployed MoE models like Mixtral-8x7B, our method increases end-to-end inference latency by 3.063x, degrading service availability significantly.",
-      "tr": "**Makale Başlığı:** RepetitionCurse: DoS Stresi Altında Mixture-of-Experts LLM'lerde Router Dengesizliğini Ölçme ve Anlama\n\n**Özet:**\n\nMixture-of-Experts (MoE) mimarileri, üstün parametre verimlilikleri nedeniyle büyük dil modellerini ölçeklendirmek için standart hale gelmiştir. Pratikte artan sayıda expert'i barındırmak için, modern inference sistemleri expert parallelism'i yaygın olarak benimseyerek expert'leri cihazlar arasında dağıtır. Ancak, inference sırasında açık yük dengeleme kısıtlamalarının olmaması, kötü niyetli girdilerin ciddi yönlendirme yoğunluğuna neden olmasına izin verir. Dağıtım dışı (out-of-distribution) prompt'ların, tüm token'ların tutarlı bir şekilde aynı top-$k$ expert setine yönlendirileceği bir yönlendirme stratejisini manipüle edebileceğini gösteriyoruz. Bu durum, belirli cihazlarda hesaplama darboğazları yaratırken diğerlerini boşta kalmaya zorlar. Bu, bir verimlilik mekanizmasını denial-of-service (DoS) saldırı vektörüne dönüştürerek, time to first token için hizmet seviyesi anlaşmalarının (service-level agreements) ihlal edilmesine yol açar. Bu zafiyeti istismar etmek için düşük maliyetli bir black-box strateji olan RepetitionCurse'ü öneriyoruz. MoE router davranışındaki evrensel bir kusuru belirleyerek, RepetitionCurse model-agnostic bir şekilde basit tekrarlayan token desenleri kullanarak adversarial prompt'lar oluşturur. Mixtral-8x7B gibi yaygın olarak kullanılan MoE modellerinde yöntemimiz, uçtan uca inference gecikmesini 3.063x artırarak hizmet kullanılabilirliğini önemli ölçüde bozmaktadır."
-    }
-  },
-  {
-    "id": "2512.23987v1",
-    "title": "MeLeMaD: Adaptive Malware Detection via Chunk-wise Feature Selection and Meta-Learning",
-    "authors": [
-      "Ajvad Haneef K",
-      "Karan Kuwar Singh",
-      "Madhu Kumar S D"
-    ],
-    "published_date": "2025-12-30",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2512.23987v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.23987v1",
-    "content": {
-      "en": "Confronting the substantial challenges of malware detection in cybersecurity necessitates solutions that are both robust and adaptable to the ever-evolving threat environment. The paper introduces Meta Learning Malware Detection (MeLeMaD), a novel framework leveraging the adaptability and generalization capabilities of Model-Agnostic Meta-Learning (MAML) for malware detection. MeLeMaD incorporates a novel feature selection technique, Chunk-wise Feature Selection based on Gradient Boosting (CFSGB), tailored for handling large-scale, high-dimensional malware datasets, significantly enhancing the detection efficiency. Two benchmark malware datasets (CIC-AndMal2020 and BODMAS) and a custom dataset (EMBOD) were used for rigorously validating the MeLeMaD, achieving a remarkable performance in terms of key evaluation measures, including accuracy, precision, recall, F1-score, MCC, and AUC. With accuracies of 98.04\\% on CIC-AndMal2020 and 99.97\\% on BODMAS, MeLeMaD outperforms the state-of-the-art approaches. The custom dataset, EMBOD, also achieves a commendable accuracy of 97.85\\%. The results underscore the MeLeMaD's potential to address the challenges of robustness, adaptability, and large-scale, high-dimensional datasets in malware detection, paving the way for more effective and efficient cybersecurity solutions.",
-      "tr": "Elbette, makale başlığını ve özetini istenen şekilde Türkçeye çevirdim:\n\n**Makale Başlığı:** MeLeMaD: Chunk-wise Feature Selection ve Meta-Learning Yoluyla Uyarlanabilir Kötü Amaçlı Yazılım Tespiti\n\n**Özet:**\nSiber güvenlik alanında kötü amaçlı yazılım tespitindeki önemli zorluklarla başa çıkmak, sürekli gelişen tehdit ortamına hem sağlam hem de uyarlanabilir çözümler gerektirmektedir. Bu makale, kötü amaçlı yazılım tespiti için Model-Agnostic Meta-Learning (MAML)'in uyarlanabilirlik ve genelleme yeteneklerinden yararlanan yeni bir çerçeve olan Meta Learning Malware Detection (MeLeMaD)'i sunmaktadır. MeLeMaD, büyük ölçekli, yüksek boyutlu kötü amaçlı yazılım veri kümelerini işlemeye yönelik uyarlanmış, Gradient Boosting tabanlı yeni bir özellik seçimi tekniği olan Chunk-wise Feature Selection based on Gradient Boosting (CFSGB)'i içermekte ve böylece tespit verimliliğini önemli ölçüde artırmaktadır. MeLeMaD'in titizlikle doğrulanması için iki kıyaslama kötü amaçlı yazılım veri kümesi (CIC-AndMal2020 ve BODMAS) ve özel bir veri kümesi (EMBOD) kullanılmış olup, accuracy, precision, recall, F1-score, MCC ve AUC gibi temel değerlendirme ölçütleri açısından dikkate değer bir performans elde edilmiştir. CIC-AndMal2020 üzerinde %98.04 ve BODMAS üzerinde %99.97 doğruluk oranları ile MeLeMaD, en son yaklaşımları geride bırakmaktadır. Özel veri kümesi EMBOD da %97.85 gibi takdire şayan bir doğruluk oranına ulaşmaktadır. Sonuçlar, MeLeMaD'in kötü amaçlı yazılım tespitindeki sağlamlık, uyarlanabilirlik ve büyük ölçekli, yüksek boyutlu veri kümeleriyle ilgili zorlukları ele alma potansiyelini vurgulamakta ve daha etkili ve verimli siber güvenlik çözümlerinin yolunu açmaktadır."
-    }
-  },
-  {
-    "id": "2512.23948v1",
-    "title": "DivQAT: Enhancing Robustness of Quantized Convolutional Neural Networks against Model Extraction Attacks",
-    "authors": [
-      "Kacem Khaled",
-      "Felipe Gohring de Magalhães",
-      "Gabriela Nicolescu"
-    ],
-    "published_date": "2025-12-30",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2512.23948v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.23948v1",
-    "content": {
-      "en": "Convolutional Neural Networks (CNNs) and their quantized counterparts are vulnerable to extraction attacks, posing a significant threat of IP theft. Yet, the robustness of quantized models against these attacks is little studied compared to large models. Previous defenses propose to inject calculated noise into the prediction probabilities. However, these defenses are limited since they are not incorporated during the model design and are only added as an afterthought after training. Additionally, most defense techniques are computationally expensive and often have unrealistic assumptions about the victim model that are not feasible in edge device implementations and do not apply to quantized models. In this paper, we propose DivQAT, a novel algorithm to train quantized CNNs based on Quantization Aware Training (QAT) aiming to enhance their robustness against extraction attacks. To the best of our knowledge, our technique is the first to modify the quantization process to integrate a model extraction defense into the training process. Through empirical validation on benchmark vision datasets, we demonstrate the efficacy of our technique in defending against model extraction attacks without compromising model accuracy. Furthermore, combining our quantization technique with other defense mechanisms improves their effectiveness compared to traditional QAT.",
-      "tr": "**Makale Başlığı:** DivQAT: Model Çıkarma Saldırılarına Karşı Nicelenmiş Evrişimsel Sinir Ağlarının Dayanıklılığını Artırma\n\n**Özet:**\n\nEvrişimsel Sinir Ağları (CNN'ler) ve onların nicelenmiş karşılıkları, Fikri Mülkiyet (IP) hırsızlığı açısından önemli bir tehdit oluşturan çıkarma saldırılarına karşı savunmasızdır. Ancak, büyük modellere kıyasla nicelenmiş modellerin bu saldırılara karşı dayanıklılığı az incelenmiştir. Önceki savunma yöntemleri, tahmin olasılıklarına hesaplanmış gürültü enjekte etmeyi önermiştir. Ancak, bu savunmalar model tasarımı sırasında dahil edilmediği ve yalnızca eğitimden sonra sonradan eklendiği için sınırlıdır. Ek olarak, çoğu savunma tekniği hesaplama açısından maliyetlidir ve genellikle kurban model hakkında kenar cihaz uygulamalarında gerçekleştirilemeyen ve nicelenmiş modellere uygulanmayan gerçekçi olmayan varsayımlarda bulunur. Bu makalede, Quantization Aware Training (QAT) tabanlı nicelenmiş CNN'leri eğitmek için tasarlanmış, model çıkarma saldırılarına karşı dayanıklılıklarını artırmayı amaçlayan yeni bir algoritma olan DivQAT'ı öneriyoruz. Bildiğimiz kadarıyla, tekniğimiz, model çıkarma savunmasını eğitim sürecine entegre etmek için nicelleştirme sürecini değiştiren ilk çalışmadır. Benchmark görsel veri kümeleri üzerinde ampirik doğrulama yoluyla, tekniğimizin model doğruluğunu tehlikeye atmadan model çıkarma saldırılarına karşı savunmada etkinliğini gösteriyoruz. Dahası, nicelleştirme tekniğimizi diğer savunma mekanizmalarıyla birleştirmek, geleneksel QAT'ye kıyasla etkinliklerini artırmaktadır."
-    }
-  },
-  {
-    "id": "2512.23881v1",
-    "title": "Breaking Audio Large Language Models by Attacking Only the Encoder: A Universal Targeted Latent-Space Audio Attack",
-    "authors": [
-      "Roee Ziv",
-      "Raz Lapid",
-      "Moshe Sipper"
-    ],
-    "published_date": "2025-12-29",
-    "tags": [
-      "cs.SD",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2512.23881v1",
-    "pdf_link": "https://arxiv.org/pdf/2512.23881v1",
-    "content": {
-      "en": "Audio-language models combine audio encoders with large language models to enable multimodal reasoning, but they also introduce new security vulnerabilities. We propose a universal targeted latent space attack, an encoder-level adversarial attack that manipulates audio latent representations to induce attacker-specified outputs in downstream language generation. Unlike prior waveform-level or input-specific attacks, our approach learns a universal perturbation that generalizes across inputs and speakers and does not require access to the language model. Experiments on Qwen2-Audio-7B-Instruct demonstrate consistently high attack success rates with minimal perceptual distortion, revealing a critical and previously underexplored attack surface at the encoder level of multimodal systems.",
-      "tr": "Elbette, istediğiniz çeviriyi aşağıda bulabilirsiniz:\n\n**Makale Başlığı:** Encoder'a Yönelik Saldırılarla Ses Tabanlı Büyük Dil Modellerini Kırma: Evrensel Hedefli Gizli Alan Ses Saldırısı\n\n**Özet:**\nSes-dil modelleri, multimodal reasoning'i etkinleştirmek için ses encoder'larını büyük dil modelleriyle birleştirir, ancak aynı zamanda yeni güvenlik açıkları da oluşturur. Biz, aşağı akış dil üretiminde saldırgan tarafından belirtilen çıktıları tetiklemek için ses gizli temsillerini manipüle eden, encoder seviyesinde bir adversarial attack olan evrensel hedefli gizli alan saldırısını (universal targeted latent space attack) öneriyoruz. Dalga formu seviyesindeki veya girdiye özgü önceki saldırıların aksine, yaklaşımımız girdilere ve konuşmacılara genelleme yapan ve dil modeline erişim gerektirmeyen evrensel bir pertürbasyon öğrenir. Qwen2-Audio-7B-Instruct üzerindeki deneyler, minimum algısal bozulma ile tutarlı bir şekilde yüksek saldırı başarı oranları göstermekte olup, multimodal sistemlerin encoder seviyesinde kritik ve daha önce yeterince araştırılmamış bir saldırı yüzeyini ortaya koymaktadır."
+      "tr": "Makale Başlığı: SynRAG: Heterojen SIEM Sistemleri için Yürütülebilir Sorgu Üretimi Amaçlı Bir Büyük Dil Modeli Çerçevesi\n\nÖzet:\nSecurity Information and Event Management (SIEM) sistemleri, büyük kuruluşların BT altyapılarını günlük milyonlarca log ve olayı alıp analiz ederek izlemeleri için elzemdir. Security Operations Center (SOC) analistleri, potansiyel tehditleri belirlemek ve kurumsal varlıkları korumak için önleyici eylemler almak amacıyla bu devasa verileri izlemek ve analiz etmekle görevlidir. Ancak, Palo Alto Networks Qradar, Google SecOps, Splunk, Microsoft Sentinel ve Elastic Stack gibi SIEM platformları arasındaki çeşitlilik önemli zorluklar teşkil etmektedir. Bu sistemler özellikler, mimari ve query languages açısından farklılık gösterdiği için, analistlerin kapsamlı eğitimden geçmeden birden fazla platformu etkili bir şekilde izlemelerini veya kuruluşların iş gücünü genişletmelerini zorlaştırmaktadır. Bu sorunu çözmek için, platformdan bağımsız bir spesifikasyondan birden fazla SIEM platformu için otomatik olarak tehdit tespiti veya olay incelemesi sorguları üreten birleşik bir çerçeve olan SynRAG'ı sunuyoruz. SynRAG, analistler tarafından yazılan tek bir üst düzey spesifikasyondan platforma özgü sorgular üretebilir. SynRAG olmadan, query languages sistemler arasında önemli ölçüde farklılık gösterdiği için analistlerin her SIEM platformu için ayrı sorgular yazması gerekecektir. Bu çerçeve, uzmanlaşmış eğitim ve manuel sorgu çevirisi ihtiyacını azaltarak, heterojen SIEM ortamlarında sorunsuz tehdit tespiti ve olay incelemesi sağlamaktadır. SynRAG'ı, Qradar ve SecOps'u temsili SIEM sistemleri olarak kullanarak, GPT, Llama, DeepSeek, Gemma ve Claude dahil olmak üzere en gelişmiş dil modellerine karşı değerlendiriyoruz. Sonuçlarımız, SynRAG'ın çapraz-SIEM tehdit tespiti ve olay incelemesi için en gelişmiş temel modellere kıyasla önemli ölçüde daha iyi sorgular ürettiğini göstermektedir."
     }
   }
 ]
