@@ -1,225 +1,219 @@
 [
   {
-    "id": "2601.04940v1",
-    "title": "CurricuLLM: Designing Personalized and Workforce-Aligned Cybersecurity Curricula Using Fine-Tuned LLMs",
+    "id": "2601.05988v1",
+    "title": "CyberGFM: Graph Foundation Models for Lateral Movement Detection in Enterprise Networks",
     "authors": [
-      "Arthur Nijdam",
-      "Harri Kähkönen",
-      "Valtteri Niemi",
-      "Paul Stankovski Wagner",
-      "Sara Ramezanian"
+      "Isaiah J. King",
+      "Bernardo Trindade",
+      "Benjamin Bowman",
+      "H. Howie Huang"
     ],
-    "published_date": "2026-01-08",
+    "published_date": "2026-01-09",
     "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.04940v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.04940v1",
-    "content": {
-      "en": "The cybersecurity landscape is constantly evolving, driven by increased digitalization and new cybersecurity threats. Cybersecurity programs often fail to equip graduates with skills demanded by the workforce, particularly concerning recent developments in cybersecurity, as curriculum design is costly and labor-intensive. To address this misalignment, we present a novel Large Language Model (LLM)-based framework for automated design and analysis of cybersecurity curricula, called CurricuLLM. Our approach provides three key contributions: (1) automation of personalized curriculum design, (2) a data-driven pipeline aligned with industry demands, and (3) a comprehensive methodology for leveraging fine-tuned LLMs in curriculum development.   CurricuLLM utilizes a two-tier approach consisting of PreprocessLM, which standardizes input data, and ClassifyLM, which assigns course content to nine Knowledge Areas in cybersecurity. We systematically evaluated multiple Natural Language Processing (NLP) architectures and fine-tuning strategies, ultimately selecting the Bidirectional Encoder Representations from Transformers (BERT) model as ClassifyLM, fine-tuned on foundational cybersecurity concepts and workforce competencies.   We are the first to validate our method with human experts who analyzed real-world cybersecurity curricula and frameworks, motivating that CurricuLLM is an efficient solution to replace labor-intensive curriculum analysis. Moreover, once course content has been classified, it can be integrated with established cybersecurity role-based weights, enabling alignment of the educational program with specific job roles, workforce categories, or general market needs. This lays the foundation for personalized, workforce-aligned cybersecurity curricula that prepare students for the evolving demands in cybersecurity.",
-      "tr": "**Makale Başlığı:** CurricuLLM: Fine-Tuned LLM'ler Kullanılarak Kişiselleştirilmiş ve İşgücüyle Uyumlu Siber Güvenlik Müfredatlarının Tasarlanması\n\n**Özet:**\nDijitalleşmenin artması ve yeni siber güvenlik tehditlerinin ortaya çıkmasıyla birlikte siber güvenlik alanı sürekli gelişmektedir. Siber güvenlik programları, özellikle siber güvenlikteki son gelişmelerle ilgili olarak, mezunları işgücünün talep ettiği becerilerle donatmakta sıklıkla başarısız olmaktadır, zira müfredat tasarımı maliyetli ve yoğun emek gerektiren bir süreçtir. Bu uyumsuzluğu gidermek için, CurricuLLM olarak adlandırılan, siber güvenlik müfredatlarının otomatik tasarımı ve analizi için yeni bir Large Language Model (LLM)-tabanlı çerçeve sunuyoruz. Yaklaşımımız üç temel katkı sağlamaktadır: (1) kişiselleştirilmiş müfredat tasarımının otomasyonu, (2) endüstri talepleriyle uyumlu veri odaklı bir pipeline ve (3) müfredat geliştirmede fine-tuned LLM'lerden yararlanmak için kapsamlı bir metodoloji. CurricuLLM, girdi verilerini standartlaştıran PreprocessLM ve kurs içeriğini siber güvenliğin dokuz Knowledge Area'sına atayan ClassifyLM'den oluşan iki katmanlı bir yaklaşım kullanır. Bidirectional Encoder Representations from Transformers (BERT) modelini, temel siber güvenlik kavramları ve işgücü yetkinlikleri üzerinde fine-tuned edilmiş ClassifyLM olarak seçmeden önce çeşitli Natural Language Processing (NLP) mimarilerini ve fine-tuning stratejilerini sistematik olarak değerlendirdik. Yöntemimizi, gerçek dünya siber güvenlik müfredatlarını ve çerçevelerini analiz eden insan uzmanlarla ilk kez doğruladık; bu da CurricuLLM'nin yoğun emek gerektiren müfredat analizini değiştirmek için verimli bir çözüm olduğunu göstermektedir. Dahası, kurs içeriği sınıflandırıldıktan sonra, bunu belirli iş rolleri, işgücü kategorileri veya genel pazar ihtiyaçlarıyla eğitim programının uyumunu sağlayarak, yerleşik siber güvenlik rol tabanlı ağırlıklarla entegre edilebilir. Bu, öğrencileri siber güvenlikteki gelişen taleplere hazırlayan, kişiselleştirilmiş, işgücüyle uyumlu siber güvenlik müfredatları için temel oluşturmaktadır."
-    }
-  },
-  {
-    "id": "2601.04795v1",
-    "title": "Defense Against Indirect Prompt Injection via Tool Result Parsing",
-    "authors": [
-      "Qiang Yu",
-      "Xinran Cheng",
-      "Chuanyi Liu"
-    ],
-    "published_date": "2026-01-08",
-    "tags": [
-      "cs.AI",
-      "cs.CL",
-      "cs.CR",
-      "cs.MA"
-    ],
-    "link": "http://arxiv.org/abs/2601.04795v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.04795v1",
-    "content": {
-      "en": "As LLM agents transition from digital assistants to physical controllers in autonomous systems and robotics, they face an escalating threat from indirect prompt injection. By embedding adversarial instructions into the results of tool calls, attackers can hijack the agent's decision-making process to execute unauthorized actions. This vulnerability poses a significant risk as agents gain more direct control over physical environments. Existing defense mechanisms against Indirect Prompt Injection (IPI) generally fall into two categories. The first involves training dedicated detection models; however, this approach entails high computational overhead for both training and inference, and requires frequent updates to keep pace with evolving attack vectors. Alternatively, prompt-based methods leverage the inherent capabilities of LLMs to detect or ignore malicious instructions via prompt engineering. Despite their flexibility, most current prompt-based defenses suffer from high Attack Success Rates (ASR), demonstrating limited robustness against sophisticated injection attacks. In this paper, we propose a novel method that provides LLMs with precise data via tool result parsing while effectively filtering out injected malicious code. Our approach achieves competitive Utility under Attack (UA) while maintaining the lowest Attack Success Rate (ASR) to date, significantly outperforming existing methods. Code is available at GitHub.",
-      "tr": "**Makale Başlığı:** Araç Sonuç Ayrıştırması Yoluyla Dolaylı Komut Enjeksiyonuna Karşı Savunma\n\n**Özet:**\n\nLLM ajanları, dijital asistanlardan otonom sistemler ve robotikte fiziksel kontrolcülere doğru geçiş yaparken, dolaylı komut enjeksiyonundan kaynaklanan artan bir tehditle karşı karşıya kalmaktadır. Saldırganlar, araç çağrılarının sonuçlarına kötü niyetli talimatlar gömerek, ajanın karar verme sürecini ele geçirip yetkisiz eylemleri gerçekleştirebilir. Bu güvenlik açığı, ajanlar fiziksel ortamlar üzerinde daha doğrudan kontrol kazandıkça önemli bir risk oluşturmaktadır. Dolaylı Komut Enjeksiyonu (IPI) için mevcut savunma mekanizmaları genellikle iki kategoriye ayrılır. Birincisi, özel tespit modelleri eğitmeyi içerir; ancak bu yaklaşım, hem eğitim hem de çıkarım için yüksek hesaplama yükü gerektirir ve gelişen saldırı vektörlerine ayak uydurmak için sık sık güncellemeler yapılmasını zorunlu kılar. Alternatif olarak, komut tabanlı yöntemler, komut mühendisliği yoluyla kötü niyetli talimatları tespit etmek veya göz ardı etmek için LLM'lerin doğasında var olan yeteneklerden yararlanır. Esnekliklerine rağmen, mevcut komut tabanlı savunmaların çoğu, yüksek Saldırı Başarı Oranlarına (ASR) sahiptir ve gelişmiş enjeksiyon saldırılarına karşı sınırlı sağlamlık göstermektedir. Bu makalede, araç sonuç ayrıştırması yoluyla LLM'lere kesin veri sağlayan ve enjekte edilen kötü niyetli kodu etkili bir şekilde filtreleyen yeni bir yöntem sunuyoruz. Yaklaşımımız, günümüze kadarki en düşük Saldırı Başarı Oranını (ASR) korurken rekabetçi Saldırı Altında Fayda (UA) elde etmekte ve mevcut yöntemlerden önemli ölçüde daha iyi performans göstermektedir. Kod GitHub'da mevcuttur."
-    }
-  },
-  {
-    "id": "2601.04666v1",
-    "title": "Know Thy Enemy: Securing LLMs Against Prompt Injection via Diverse Data Synthesis and Instruction-Level Chain-of-Thought Learning",
-    "authors": [
-      "Zhiyuan Chang",
-      "Mingyang Li",
-      "Yuekai Huang",
-      "Ziyou Jiang",
-      "Xiaojun Jia"
-    ],
-    "published_date": "2026-01-08",
-    "tags": [
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2601.04666v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.04666v1",
-    "content": {
-      "en": "Large language model (LLM)-integrated applications have become increasingly prevalent, yet face critical security vulnerabilities from prompt injection (PI) attacks. Defending against PI attacks faces two major issues: malicious instructions can be injected through diverse vectors, and injected instructions often lack clear semantic boundaries from the surrounding context, making them difficult to identify. To address these issues, we propose InstruCoT, a model enhancement method for PI defense that synthesizes diverse training data and employs instruction-level chain-of-thought fine-tuning, enabling LLMs to effectively identify and reject malicious instructions regardless of their source or position in the context. We evaluate InstruCoT across three critical dimensions: Behavior Deviation, Privacy Leakage, and Harmful Output. Experimental results across four LLMs demonstrate that InstruCoT significantly outperforms baselines in all dimensions while maintaining utility performance without degradation",
-      "tr": "Makale Başlığı: Bil Düşmanını: Çeşitli Veri Sentezi ve Instruction-Level Chain-of-Thought Öğrenimi ile LLM'leri Prompt Injection'a Karşı Güvenli Hale Getirmek\n\nÖzet:\nBüyük dil modeli (LLM) entegre edilmiş uygulamalar giderek daha yaygın hale gelmekle birlikte, prompt injection (PI) saldırılarından kaynaklanan kritik güvenlik açıklarıyla karşı karşıyadır. PI saldırılarına karşı savunma yapmak iki temel sorunla karşı karşıyadır: kötü niyetli komutlar çeşitli vektörler aracılığıyla enjekte edilebilir ve enjekte edilen komutlar genellikle çevreleyen bağlamdan net semantik sınırlara sahip olmadığından, tanımlanmaları zordur. Bu sorunları ele almak için, PI savunması için bir model geliştirme yöntemi olan InstruCoT'u öneriyoruz. Bu yöntem, çeşitli eğitim verilerini sentezler ve instruction-level chain-of-thought fine-tuning kullanarak LLM'lerin, kaynakları veya bağlamdaki konumları ne olursa olsun kötü niyetli komutları etkili bir şekilde tanımlamasını ve reddetmesini sağlar. InstruCoT'u üç kritik boyutta değerlendiriyoruz: Behavior Deviation, Privacy Leakage ve Harmful Output. Dört LLM üzerindeki deneysel sonuçlar, InstruCoT'un, fayda performansını düşürmeden tüm boyutlarda temel yöntemlerden önemli ölçüde daha iyi performans gösterdiğini ortaya koymaktadır."
-    }
-  },
-  {
-    "id": "2601.04641v1",
-    "title": "DP-MGTD: Privacy-Preserving Machine-Generated Text Detection via Adaptive Differentially Private Entity Sanitization",
-    "authors": [
-      "Lionel Z. Wang",
-      "Yusheng Zhao",
-      "Jiabin Luo",
-      "Xinfeng Li",
-      "Lixu Wang"
-    ],
-    "published_date": "2026-01-08",
-    "tags": [
-      "cs.CR",
-      "cs.CL",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2601.04641v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.04641v1",
-    "content": {
-      "en": "The deployment of Machine-Generated Text (MGT) detection systems necessitates processing sensitive user data, creating a fundamental conflict between authorship verification and privacy preservation. Standard anonymization techniques often disrupt linguistic fluency, while rigorous Differential Privacy (DP) mechanisms typically degrade the statistical signals required for accurate detection. To resolve this dilemma, we propose \\textbf{DP-MGTD}, a framework incorporating an Adaptive Differentially Private Entity Sanitization algorithm. Our approach utilizes a two-stage mechanism that performs noisy frequency estimation and dynamically calibrates privacy budgets, applying Laplace and Exponential mechanisms to numerical and textual entities respectively. Crucially, we identify a counter-intuitive phenomenon where the application of DP noise amplifies the distinguishability between human and machine text by exposing distinct sensitivity patterns to perturbation. Extensive experiments on the MGTBench-2.0 dataset show that our method achieves near-perfect detection accuracy, significantly outperforming non-private baselines while satisfying strict privacy guarantees.",
-      "tr": "**Makale Başlığı:** DP-MGTD: Adaptif Diferansiyel Olarak Özel Varlık Sanitizasyonu Yoluyla Gizlilik Korumalı Makine Tarafından Üretilen Metin Tespiti\n\n**Özet:**\n\nMakine Tarafından Üretilen Metin (MGT) tespit sistemlerinin devreye alınması, hassas kullanıcı verilerinin işlenmesini gerektirir, bu da yazarlık doğrulama ile gizliliğin korunması arasında temel bir çatışma yaratır. Standart anonimleştirme teknikleri genellikle dilsel akıcılığı bozar; buna karşılık, titiz Differential Privacy (DP) mekanizmaları genellikle doğru tespit için gerekli olan istatistiksel sinyalleri düşürür. Bu ikilemi çözmek için, Adaptif Differentially Private Entity Sanitization algoritmasını içeren bir çerçeve olan **DP-MGTD**'yi öneriyoruz. Yaklaşımımız, gürültülü frekans tahmini yapan ve gizlilik bütçelerini dinamik olarak kalibre eden iki aşamalı bir mekanizma kullanır; bu mekanizma sayısal ve metinsel varlıklara sırasıyla Laplace ve Exponential mekanizmalarını uygular. Kritik olarak, DP gürültüsünün uygulanmasının, pertürbasyona karşı farklı hassasiyet modelleri açığa çıkararak insan ve makine metni arasındaki ayırt edilebilirliği artırdığı sezgilere aykırı bir olgu tespit ettik. MGTBench-2.0 veri kümesi üzerinde yapılan kapsamlı deneyler, yöntemimizin katı gizlilik garantilerini karşılarken, özel olmayan temel yöntemlere göre önemli ölçüde daha iyi performans göstererek neredeyse mükemmel bir tespit doğruluğu elde ettiğini göstermektedir."
-    }
-  },
-  {
-    "id": "2601.04603v1",
-    "title": "Constitutional Classifiers++: Efficient Production-Grade Defenses against Universal Jailbreaks",
-    "authors": [
-      "Hoagy Cunningham",
-      "Jerry Wei",
-      "Zihan Wang",
-      "Andrew Persic",
-      "Alwin Peng"
-    ],
-    "published_date": "2026-01-08",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.04603v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.04603v1",
-    "content": {
-      "en": "We introduce enhanced Constitutional Classifiers that deliver production-grade jailbreak robustness with dramatically reduced computational costs and refusal rates compared to previous-generation defenses. Our system combines several key insights. First, we develop exchange classifiers that evaluate model responses in their full conversational context, which addresses vulnerabilities in last-generation systems that examine outputs in isolation. Second, we implement a two-stage classifier cascade where lightweight classifiers screen all traffic and escalate only suspicious exchanges to more expensive classifiers. Third, we train efficient linear probe classifiers and ensemble them with external classifiers to simultaneously improve robustness and reduce computational costs. Together, these techniques yield a production-grade system achieving a 40x computational cost reduction compared to our baseline exchange classifier, while maintaining a 0.05% refusal rate on production traffic. Through extensive red-teaming comprising over 1,700 hours, we demonstrate strong protection against universal jailbreaks -- no attack on this system successfully elicited responses to all eight target queries comparable in detail to an undefended model. Our work establishes Constitutional Classifiers as practical and efficient safeguards for large language models.",
-      "tr": "Makale Başlığı: Constitutional Classifiers++: Evrensel Jailbreak'lere Karşı Verimli Üretim Sınıfı Savunmalar\n\nÖzet:\nÖnceki nesil savunmalarla karşılaştırıldığında dramatik şekilde azaltılmış hesaplama maliyetleri ve reddetme oranları ile üretim sınıfı jailbreak dayanıklılığı sunan geliştirilmiş Constitutional Classifiers'ı tanıtıyoruz. Sistemimiz birkaç önemli içgörüyü birleştirmektedir. İlk olarak, model yanıtlarını tam konuşma bağlamlarında değerlendiren exchange classifiers geliştiriyoruz, bu da çıktıları izole olarak inceleyen son nesil sistemlerdeki güvenlik açıklarını ele almaktadır. İkinci olarak, hafif sınıflandırıcıların tüm trafiği taradığı ve yalnızca şüpheli alışverişleri daha pahalı sınıflandırıcılara yükselttiği iki aşamalı bir sınıflandırıcı kaskadı uyguluyoruz. Üçüncü olarak, verimli linear probe classifiers eğitiyor ve bunları harici sınıflandırıcılarla birlikte kullanarak dayanıklılığı eş zamanlı olarak artırıyor ve hesaplama maliyetlerini azaltıyoruz. Birlikte ele alındığında, bu teknikler, reddetme oranını üretim trafiğinde %0,05 düzeyinde tutarken, temel exchange classifier'ımıza kıyasla 40 kat hesaplama maliyeti azaltımı sağlayan üretim sınıfı bir sistem sunmaktadır. 1.700 saati aşan kapsamlı red-teaming çalışmaları aracılığıyla, evrensel jailbreak'lere karşı güçlü bir koruma gösteriyoruz; bu sisteme yönelik hiçbir saldırı, sekiz hedef sorgunun tamamına, savunmasız bir modelle karşılaştırılabilir ayrıntıda yanıtlar üretmeyi başaramamıştır. Çalışmamız, Constitutional Classifiers'ı büyük dil modelleri için pratik ve verimli korumalar olarak ortaya koymaktadır."
-    }
-  },
-  {
-    "id": "2601.04486v1",
-    "title": "Decision-Aware Trust Signal Alignment for SOC Alert Triage",
-    "authors": [
-      "Israt Jahan Chowdhury",
-      "Md Abu Yousuf Tanvir"
-    ],
-    "published_date": "2026-01-08",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.HC"
-    ],
-    "link": "http://arxiv.org/abs/2601.04486v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.04486v1",
-    "content": {
-      "en": "Detection systems that utilize machine learning are progressively implemented at Security Operations Centers (SOCs) to help an analyst to filter through high volumes of security alerts. Practically, such systems tend to reveal probabilistic results or confidence scores which are ill-calibrated and hard to read when under pressure. Qualitative and survey based studies of SOC practice done before reveal that poor alert quality and alert overload greatly augment the burden on the analyst, especially when tool outputs are not coherent with decision requirements, or signal noise. One of the most significant limitations is that model confidence is usually shown without expressing that there are asymmetric costs in decision making where false alarms are much less harmful than missed attacks. The present paper presents a decision-sensitive trust signal correspondence scheme of SOC alert triage. The framework combines confidence that has been calibrated, lightweight uncertainty cues, and cost-sensitive decision thresholds into coherent decision-support layer, instead of making changes to detection models. To enhance probabilistic consistency, the calibration is done using the known post-hoc methods and the uncertainty cues give conservative protection in situations where model certainty is low. To measure the model-independent performance of the suggested model, we apply the Logistic Regression and the Random Forest classifiers to the UNSW-NB15 intrusion detection benchmark. According to simulation findings, false negatives are greatly amplified by the presence of misaligned displays of confidence, whereas cost weighted loss decreases by orders of magnitude between models with decision aligned trust signals. Lastly, we describe a human-in-the-loop study plan that would allow empirically assessing the decision-making of the analysts with aligned and misaligned trust interfaces.",
-      "tr": "**Makale Başlığı:** SOC Alert Triage İçin Karar-Farkındalığı Olan Güven Sinyali Hizalaması\n\n**Özet:**\n\nGüvenlik Operasyon Merkezleri'nde (SOC) makine öğrenimi kullanan algılama sistemleri, analistlerin yüksek hacimli güvenlik uyarılarını filtrelemesine yardımcı olmak amacıyla giderek daha fazla uygulanmaktadır. Uygulamada, bu tür sistemler, baskı altındayken ayarlanamamış ve okunması zor olasılıksal sonuçlar veya güven skorları sunma eğilimindedir. SOC uygulamalarına yönelik daha önce yapılmış niteliksel ve anket temelli çalışmalar, düşük uyarı kalitesinin ve uyarı yükünün analist üzerindeki yükünü büyük ölçüde artırdığını ortaya koymuştur; özellikle araç çıktıları karar gereksinimleriyle veya sinyal gürültüsüyle tutarlı olmadığında bu durum daha da kötüleşmektedir. En önemli sınırlamalardan biri, model güveninin genellikle karar vermedeki asimetrik maliyetleri ifade etmeden gösterilmesidir; bu durumda yanlış alarmlar, kaçırılan saldırılardan çok daha az zararlıdır. Bu çalışma, SOC uyarı sınıflandırması için karar-hassasiyetli bir güven sinyali karşılık şeması sunmaktadır. Çerçeve, tespit modellerinde değişiklik yapmak yerine, kalibre edilmiş güveni, hafif belirsizlik ipuçlarını ve maliyet-hassas karar eşiklerini tutarlı bir karar destek katmanına entegre eder. Olasılıksal tutarlılığı artırmak için kalibrasyon, bilinen post-hoc yöntemler kullanılarak yapılır ve belirsizlik ipuçları, model kesinliğinin düşük olduğu durumlarda muhafazakâr bir koruma sağlar. Önerilen modelin modele bağımsız performansını ölçmek için, UNSW-NB15 izinsiz giriş tespit referans veri kümesine Logistic Regression ve Random Forest sınıflandırıcılarını uyguluyoruz. Simülasyon bulgularına göre, yanlış negatifler, tutarsız güven gösterimlerinin varlığıyla büyük ölçüde artarken, maliyet ağırlıklı kayıp, karar hizalı güven sinyallerine sahip modeller arasında büyüklük mertebelerinde azalmaktadır. Son olarak, analistlerin hizalanmış ve hizalanmamış güven arayüzleriyle karar verme süreçlerini ampirik olarak değerlendirmeyi sağlayacak bir insan-merkezli çalışma planını detaylandırıyoruz."
-    }
-  },
-  {
-    "id": "2601.04443v1",
-    "title": "Large Language Models for Detecting Cyberattacks on Smart Grid Protective Relays",
-    "authors": [
-      "Ahmad Mohammad Saber",
-      "Saeed Jafari",
-      "Zhengmao Ouyang",
-      "Paul Budnarain",
-      "Amr Youssef"
-    ],
-    "published_date": "2026-01-07",
-    "tags": [
-      "cs.CR",
-      "cs.LG",
-      "eess.SP"
-    ],
-    "link": "http://arxiv.org/abs/2601.04443v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.04443v1",
-    "content": {
-      "en": "This paper presents a large language model (LLM)-based framework for detecting cyberattacks on transformer current differential relays (TCDRs), which, if undetected, may trigger false tripping of critical transformers. The proposed approach adapts and fine-tunes compact LLMs such as DistilBERT to distinguish cyberattacks from actual faults using textualized multidimensional TCDR current measurements recorded before and after tripping. Our results demonstrate that DistilBERT detects 97.6% of cyberattacks without compromising TCDR dependability and achieves inference latency below 6 ms on a commercial workstation. Additional evaluations confirm the framework's robustness under combined time-synchronization and false-data-injection attacks, resilience to measurement noise, and stability across prompt formulation variants. Furthermore, GPT-2 and DistilBERT+LoRA achieve comparable performance, highlighting the potential of LLMs for enhancing smart grid cybersecurity. We provide the full dataset used in this study for reproducibility.",
-      "tr": "**Makale Başlığı:** Akıllı Şebeke Koruyucu Rölelerindeki Siber Saldırıları Tespit Etmek İçin Büyük Dil Modelleri\n\n**Özet:**\n\nBu çalışma, trafo akım diferansiyel röleleri (TCDR) üzerindeki siber saldırıları tespit etmek için büyük dil modeli (LLM) tabanlı bir çerçeve sunmaktadır. Tespit edilmeyen bu saldırılar, kritik trafoların yanlış açılmasına (false tripping) neden olabilir. Önerilen yaklaşım, DistilBERT gibi kompakt LLM'leri adapte ederek ve fine-tune ederek, rölenin açılmasından önce ve sonra kaydedilen metinleştirilmiş çok boyutlu TCDR akım ölçümlerini kullanarak siber saldırıları gerçek arızalardan ayırt etmektedir. Sonuçlarımız, DistilBERT'in TCDR'nin güvenilirliğini (dependability) tehlikeye atmadan siber saldırıların %97,6'sını tespit ettiğini ve ticari bir iş istasyonunda 6 ms'nin altında çıkarım gecikmesi (inference latency) elde ettiğini göstermektedir. Ek değerlendirmeler, çerçevenin birleşik zaman senkronizasyonu (time-synchronization) ve yanlış veri enjeksiyonu (false-data-injection) saldırıları altındaki sağlamlığını (robustness), ölçüm gürültüsüne karşı dayanıklılığını (resilience) ve prompt formülasyonu varyantları genelindeki istikrarını (stability) doğrulamaktadır. Ayrıca, GPT-2 ve DistilBERT+LoRA'nın karşılaştırılabilir performans elde etmesi, LLM'lerin akıllı şebeke siber güvenliğini artırma potansiyelini vurgulamaktadır. Tekrarlanabilirlik (reproducibility) için bu çalışmada kullanılan tam veri setini sunmaktayız."
-    }
-  },
-  {
-    "id": "2601.04034v1",
-    "title": "HoneyTrap: Deceiving Large Language Model Attackers to Honeypot Traps with Resilient Multi-Agent Defense",
-    "authors": [
-      "Siyuan Li",
-      "Xi Lin",
-      "Jun Wu",
-      "Zehao Liu",
-      "Haoyu Li"
-    ],
-    "published_date": "2026-01-07",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.04034v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.04034v1",
-    "content": {
-      "en": "Jailbreak attacks pose significant threats to large language models (LLMs), enabling attackers to bypass safeguards. However, existing reactive defense approaches struggle to keep up with the rapidly evolving multi-turn jailbreaks, where attackers continuously deepen their attacks to exploit vulnerabilities. To address this critical challenge, we propose HoneyTrap, a novel deceptive LLM defense framework leveraging collaborative defenders to counter jailbreak attacks. It integrates four defensive agents, Threat Interceptor, Misdirection Controller, Forensic Tracker, and System Harmonizer, each performing a specialized security role and collaborating to complete a deceptive defense. To ensure a comprehensive evaluation, we introduce MTJ-Pro, a challenging multi-turn progressive jailbreak dataset that combines seven advanced jailbreak strategies designed to gradually deepen attack strategies across multi-turn attacks. Besides, we present two novel metrics: Mislead Success Rate (MSR) and Attack Resource Consumption (ARC), which provide more nuanced assessments of deceptive defense beyond conventional measures. Experimental results on GPT-4, GPT-3.5-turbo, Gemini-1.5-pro, and LLaMa-3.1 demonstrate that HoneyTrap achieves an average reduction of 68.77% in attack success rates compared to state-of-the-art baselines. Notably, even in a dedicated adaptive attacker setting with intensified conditions, HoneyTrap remains resilient, leveraging deceptive engagement to prolong interactions, significantly increasing the time and computational costs required for successful exploitation. Unlike simple rejection, HoneyTrap strategically wastes attacker resources without impacting benign queries, improving MSR and ARC by 118.11% and 149.16%, respectively.",
-      "tr": "Makale Başlığı: HoneyTrap: Large Language Model Saldırganlarını Honeypot Tuzaklarına Çekerek Aldatmak ve Dayanıklı Çoklu Ajan Savunması\n\nÖzet:\nJailbreak saldırıları, büyük dil modellerinin (LLM) güvenlik önlemlerini aşmalarına olanak tanıyarak önemli tehditler oluşturmaktadır. Ancak, mevcut reaktif savunma yaklaşımları, saldırganların güvenlik açıklarından yararlanmak için saldırılarını sürekli derinleştirdiği hızla gelişen çok turlu jailbreak'lerle başa çıkmakta zorlanmaktadır. Bu kritik zorluğun üstesinden gelmek için, jailbreak saldırılarına karşı işbirlikçi savunuculardan yararlanan yenilikçi bir aldatıcı LLM savunma çerçevesi olan HoneyTrap'ı öneriyoruz. Her biri özel bir güvenlik rolü üstlenen ve aldatıcı bir savunmayı tamamlamak üzere işbirliği yapan dört savunma ajanını entegre eder: Threat Interceptor, Misdirection Controller, Forensic Tracker ve System Harmonizer. Kapsamlı bir değerlendirme sağlamak için, çok turlu saldırılar boyunca saldırı stratejilerini aşamalı olarak derinleştirmek üzere tasarlanmış yedi gelişmiş jailbreak stratejisini birleştiren zorlu bir çok turlu aşamalı jailbreak veri kümesi olan MTJ-Pro'yu sunuyoruz. Ayrıca, yanıltıcı savunmanın geleneksel ölçütlerin ötesinde daha incelikli değerlendirmeler sağlayan iki yeni metrik sunuyoruz: Mislead Success Rate (MSR) ve Attack Resource Consumption (ARC). GPT-4, GPT-3.5-turbo, Gemini-1.5-pro ve LLaMa-3.1 üzerindeki deneysel sonuçlar, HoneyTrap'in mevcut en gelişmiş temel sistemlere kıyasla saldırı başarı oranlarında ortalama %68,77'lik bir azalma sağladığını göstermektedir. Özellikle, yoğunlaştırılmış koşullara sahip özel bir uyarlanabilir saldırgan ortamında bile HoneyTrap, etkileşimleri uzatmak için aldatıcı etkileşimden yararlanarak dayanıklı kalır ve başarılı istismar için gereken süre ve hesaplama maliyetlerini önemli ölçüde artırır. Basit reddetmenin aksine, HoneyTrap zararsız sorguları etkilemeden saldırgan kaynaklarını stratejik olarak boşa harcar, MSR ve ARC'yi sırasıyla %118,11 ve %149,16 oranında iyileştirir."
-    }
-  },
-  {
-    "id": "2601.04278v1",
-    "title": "From Domains to Instances: Dual-Granularity Data Synthesis for LLM Unlearning",
-    "authors": [
-      "Xiaoyu Xu",
-      "Minxin Du",
-      "Zitong Li",
-      "Zi Liang",
-      "Zhibiao Guo"
-    ],
-    "published_date": "2026-01-07",
-    "tags": [
-      "cs.CL",
-      "cs.AI",
       "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2601.04278v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.04278v1",
+    "link": "http://arxiv.org/abs/2601.05988v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.05988v1",
     "content": {
-      "en": "Although machine unlearning is essential for removing private, harmful, or copyrighted content from LLMs, current benchmarks often fail to faithfully represent the true \"forgetting scope\" learned by the model. We formalize two distinct unlearning granularities, domain-level and instance-level, and propose BiForget, an automated framework for synthesizing high-quality forget sets. Unlike prior work relying on external generators, BiForget exploits the target model per se to elicit data that matches its internal knowledge distribution through seed-guided and adversarial prompting. Our experiments across diverse benchmarks show that it achieves a superior balance of relevance, diversity, and efficiency. Quantitatively, in the Harry Potter domain, it improves relevance by ${\\sim}20$ and diversity by ${\\sim}$0.05 while halving the total data size compared to SOTAs. Ultimately, it facilitates more robust forgetting and better utility preservation, providing a more rigorous foundation for evaluating LLM unlearning.",
-      "tr": "**Makale Başlığı:** Alanlardan Örneklemelere: LLM Unlearning için Çift Kademeli Veri Sentezi\n\n**Özet:**\n\nMakine unlearning, LLM'lerden özel, zararlı veya telif hakkıyla korunan içeriği kaldırmak için esastır, ancak mevcut benchmarklar, modelin öğrendiği gerçek \"unutma kapsamını\" doğru bir şekilde temsil etmekte sıklıkla başarısız olmaktadır. İki farklı unlearning granülaritesi olan alan-seviyesi (domain-level) ve örneklem-seviyesi (instance-level) olgularını formüle ediyor ve yüksek kaliteli unutma kümeleri (forget sets) sentezlemek için otomatik bir çerçeve olan BiForget'i öneriyoruz. Dış üreticilere (external generators) dayanan önceki çalışmalardan farklı olarak BiForget, hedef modeli (target model) kendisi kullanarak, seed-guided ve adversarial prompting yoluyla içsel bilgi dağılımıyla (internal knowledge distribution) eşleşen verileri ortaya çıkarmaktadır. Çeşitli benchmarklar üzerinde yapılan deneylerimiz, BiForget'in alaka düzeyi (relevance), çeşitlilik (diversity) ve verimlilik (efficiency) açısından üstün bir denge sağladığını göstermektedir. Nicel olarak, Harry Potter alanında, SOTA'lara kıyasla toplam veri boyutunu yarıya indirirken alaka düzeyini yaklaşık %20 ve çeşitliliği yaklaşık 0.05 oranında artırmaktadır. Nihayetinde, daha sağlam bir unutma ve daha iyi bir fayda korunumu (utility preservation) sağlayarak LLM unlearning'in değerlendirilmesi için daha titiz bir temel sunmaktadır."
+      "en": "Representing networks as a graph and training a link prediction model using benign connections is an effective method of anomaly-based intrusion detection. Existing works using this technique have shown great success using temporal graph neural networks and skip-gram-based approaches on random walks. However, random walk-based approaches are unable to incorporate rich edge data, while the GNN-based approaches require large amounts of memory to train. In this work, we propose extending the original insight from random walk-based skip-grams--that random walks through a graph are analogous to sentences in a corpus--to the more modern transformer-based foundation models. Using language models that take advantage of GPU optimizations, we can quickly train a graph foundation model to predict missing tokens in random walks through a network of computers. The graph foundation model is then finetuned for link prediction and used as a network anomaly detector. This new approach allows us to combine the efficiency of random walk-based methods and the rich semantic representation of deep learning methods. This system, which we call CyberGFM, achieved state-of-the-art results on three widely used network anomaly detection datasets, delivering a up to 2$\\times$ improvement in average precision. We found that CyberGFM outperforms all prior works in unsupervised link prediction for network anomaly detection, using the same number of parameters, and with equal or better efficiency than the previous best approaches.",
+      "tr": "Makale Başlığı: Kurumsal Ağlarda Yanal Hareket Tespiti İçin SiberGFM: Graph Foundation Models\n\nÖzet:\nAğları bir grafik olarak temsil etmek ve kötü niyetli olmayan bağlantıları kullanarak bir link prediction modeli eğitmek, anomali tabanlı saldırı tespiti için etkili bir yöntemdir. Bu tekniği kullanan mevcut çalışmalar, rastgele yürüyüşler üzerinde zamansal grafik sinir ağları (temporal graph neural networks) ve skip-gram tabanlı yaklaşımlar kullanarak büyük başarı göstermiştir. Ancak, rastgele yürüyüş tabanlı yaklaşımlar zengin kenar verilerini (rich edge data) dahil edememekte, GNN tabanlı yaklaşımlar ise eğitmek için büyük miktarda bellek gerektirmektedir. Bu çalışmada, rastgele yürüyüş tabanlı skip-gram'lardan gelen orijinal içgörüyü - grafik üzerinden rastgele yürüyüşlerin bir veri kümesindeki cümlelere benzetilmesi - daha modern transformer tabanlı foundation models'lara genişletmeyi öneriyoruz. GPU optimizasyonlarından faydalanan dil modellerini kullanarak, bir bilgisayar ağındaki rastgele yürüyüşlerde eksik token'ları (missing tokens) tahmin etmek üzere bir graph foundation modelini hızla eğitebiliriz. Ardından, graph foundation model link prediction için finetune edilerek bir ağ anomali dedektörü olarak kullanılır. Bu yeni yaklaşım, rastgele yürüyüş tabanlı yöntemlerin verimliliğini ve deep learning yöntemlerinin zengin anlamsal temsilini (rich semantic representation) birleştirmemize olanak tanır. SiberGFM olarak adlandırdığımız bu sistem, üç yaygın olarak kullanılan ağ anomali tespiti veri kümesi üzerinde state-of-the-art sonuçlar elde etmiş ve ortalama precision'da (average precision) 2 katına kadar iyileşme sağlamıştır. SiberGFM'nin, parametre sayısı aynı olmakla birlikte, önceki en iyi yaklaşımlarla eşit veya daha iyi verimlilikle, ağ anomali tespiti için denetimsiz link prediction'da (unsupervised link prediction) tüm önceki çalışmalardan daha iyi performans gösterdiğini bulduk."
     }
   },
   {
-    "id": "2601.03868v1",
-    "title": "What Matters For Safety Alignment?",
+    "id": "2601.05918v1",
+    "title": "Agentic LLMs as Powerful Deanonymizers: Re-identification of Participants in the Anthropic Interviewer Dataset",
     "authors": [
-      "Xing Li",
-      "Hui-Ling Zhen",
-      "Lihao Yin",
-      "Xianzhi Yu",
-      "Zhenhua Dong"
+      "Tianshi Li"
     ],
-    "published_date": "2026-01-07",
+    "published_date": "2026-01-09",
     "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CY"
+    ],
+    "link": "http://arxiv.org/abs/2601.05918v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.05918v1",
+    "content": {
+      "en": "On December 4, 2025, Anthropic released Anthropic Interviewer, an AI tool for running qualitative interviews at scale, along with a public dataset of 1,250 interviews with professionals, including 125 scientists, about their use of AI for research. Focusing on the scientist subset, I show that widely available LLMs with web search and agentic capabilities can link six out of twenty-four interviews to specific scientific works, recovering associated authors and, in some cases, uniquely identifying the interviewees. My contribution is to show that modern LLM-based agents make such re-identification attacks easy and low-effort: off-the-shelf tools can, with a few natural-language prompts, search the web, cross-reference details, and propose likely matches, effectively lowering the technical barrier. Existing safeguards can be bypassed by breaking down the re-identification into benign tasks. I outline the attack at a high level, discuss implications for releasing rich qualitative data in the age of LLM agents, and propose mitigation recommendations and open problems. I have notified Anthropic of my findings.",
+      "tr": "Elbette, makale başlığını ve özetini istediğiniz şekilde Türkçeye çevirdim:\n\n**Makale Başlığı:** Agentic LLMs as Powerful Deanonymizers: Re-identification of Participants in the Anthropic Interviewer Dataset\n\n**Özet:**\n4 Aralık 2025 tarihinde Anthropic, nicel görüşmeleri geniş ölçekte yürütmek için tasarlanmış bir yapay zeka aracı olan Anthropic Interviewer'ı ve araştırmada yapay zeka kullanımına ilişkin 125'i bilim insanı olmak üzere 1.250 profesyonel ile yapılan görüşmelerden oluşan bir kamu veri setini yayınlamıştır. Bilim insanı alt kümesine odaklanarak, web araması ve agentic yeteneklere sahip yaygın olarak erişilebilen LLM'lerin, yirmi dört görüşmenin altısını belirli bilimsel çalışmalarla ilişkilendirebildiğini, ilgili yazarları geri alabildiğini ve bazı durumlarda görüşmecileri benzersiz bir şekilde tanımlayabildiğini göstermekteyim. Katkım, modern LLM tabanlı ajanların bu tür yeniden tanımlama saldırılarını kolay ve düşük çaba gerektiren hale getirdiğini göstermektir: hazır araçlar, birkaç doğal dil istemiyle web'de arama yapabilir, ayrıntıları çapraz referansla kontrol edebilir ve olası eşleşmeler önerebilir, böylece teknik engeli etkili bir şekilde düşürmektedir. Yeniden tanımlamayı zararsız görevlere bölerek mevcut güvenlik önlemleri aşılabilir. Saldırıyı üst düzeyde özetlemekte, LLM ajanları çağında zengin nitel verilerin yayınlanmasına ilişkin çıkarımları tartışmakta ve azaltma önerileri ile açık sorunları sunmaktayım. Bulgularımı Anthropic'e bildirmiş bulunmaktayım."
+    }
+  },
+  {
+    "id": "2601.05828v1",
+    "title": "Influence of Parallelism in Vector-Multiplication Units on Correlation Power Analysis",
+    "authors": [
+      "Manuel Brosch",
+      "Matthias Probst",
+      "Stefan Kögler",
+      "Georg Sigl"
+    ],
+    "published_date": "2026-01-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.IR"
+    ],
+    "link": "http://arxiv.org/abs/2601.05828v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.05828v1",
+    "content": {
+      "en": "The use of neural networks in edge devices is increasing, which introduces new security challenges related to the neural networks' confidentiality. As edge devices often offer physical access, attacks targeting the hardware, such as side-channel analysis, must be considered. To enhance the performance of neural network inference, hardware accelerators are commonly employed. This work investigates the influence of parallel processing within such accelerators on correlation-based side-channel attacks that exploit power consumption. The focus is on neurons that are part of the same fully-connected layer, which run parallel and simultaneously process the same input value. The theoretical impact of concurrent multiply-and-accumulate operations on overall power consumption is evaluated, as well as the success rate of correlation power analysis. Based on the observed behavior, equations are derived that describe how the correlation decreases with increasing levels of parallelism. The applicability of these equations is validated using a vector-multiplication unit implemented on an FPGA.",
+      "tr": "**Makale Başlığı:** Influence of Parallelism in Vector-Multiplication Units on Correlation Power Analysis\n\n**Özet:**\n\nKenar cihazlarda yapay sinir ağlarının kullanımının artması, bu ağların gizliliğiyle ilgili yeni güvenlik zorlukları ortaya çıkarmaktadır. Kenar cihazlar genellikle fiziksel erişim imkanı sunduğundan, yan kanal analizi gibi donanımı hedef alan saldırılar göz önünde bulundurulmalıdır. Yapay sinir ağı çıkarım performansını artırmak için donanım hızlandırıcıları yaygın olarak kullanılmaktadır. Bu çalışma, söz konusu hızlandırıcılardaki paralel işlemenin, güç tüketimini kullanan korelasyon tabanlı yan kanal saldırıları üzerindeki etkisini incelemektedir. Odak noktası, aynı tam bağlı katmanın parçası olan ve aynı girdi değerini paralel ve eş zamanlı olarak işleyen nöronlardır. Eş zamanlı çarpma-biriktirme (multiply-and-accumulate) işlemlerinin toplam güç tüketimi üzerindeki teorik etkisi ile korelasyon gücü analizinin (correlation power analysis) başarı oranı değerlendirilmektedir. Gözlemlenen davranışa dayanarak, korelasyonun paralelcilik düzeyi arttıkça nasıl azaldığını tanımlayan denklemler türetilmiştir. Bu denklemlerin uygulanabilirliği, bir FPGA üzerinde uygulanan bir vector-multiplication unit kullanılarak doğrulanmıştır."
+    }
+  },
+  {
+    "id": "2601.05755v1",
+    "title": "VIGIL: Defending LLM Agents Against Tool Stream Injection via Verify-Before-Commit",
+    "authors": [
+      "Junda Lin",
+      "Zhaomeng Zhou",
+      "Zhi Zheng",
+      "Shuochen Liu",
+      "Tong Xu"
+    ],
+    "published_date": "2026-01-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.05755v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.05755v1",
+    "content": {
+      "en": "LLM agents operating in open environments face escalating risks from indirect prompt injection, particularly within the tool stream where manipulated metadata and runtime feedback hijack execution flow. Existing defenses encounter a critical dilemma as advanced models prioritize injected rules due to strict alignment while static protection mechanisms sever the feedback loop required for adaptive reasoning. To reconcile this conflict, we propose \\textbf{VIGIL}, a framework that shifts the paradigm from restrictive isolation to a verify-before-commit protocol. By facilitating speculative hypothesis generation and enforcing safety through intent-grounded verification, \\textbf{VIGIL} preserves reasoning flexibility while ensuring robust control. We further introduce \\textbf{SIREN}, a benchmark comprising 959 tool stream injection cases designed to simulate pervasive threats characterized by dynamic dependencies. Extensive experiments demonstrate that \\textbf{VIGIL} outperforms state-of-the-art dynamic defenses by reducing the attack success rate by over 22\\% while more than doubling the utility under attack compared to static baselines, thereby achieving an optimal balance between security and utility. Code is available at https://anonymous.4open.science/r/VIGIL-378B/.",
+      "tr": "**Makale Başlığı:** VIGIL: LLM Agent'larını Verify-Before-Commit Aracılığıyla Tool Stream Injection'a Karşı Savunmak\n\n**Özet:**\nAçık ortamlarda çalışan LLM agent'ları, özellikle manipüle edilmiş metadata ve çalışma zamanı geri bildirimlerinin yürütme akışını ele geçirdiği tool stream'de, dolaylı prompt injection'dan kaynaklanan artan risklerle karşı karşıyadır. Mevcut savunmalar, gelişmiş modellerin sıkı hizalamaları nedeniyle enjekte edilmiş kurallara öncelik vermesi ve statik koruma mekanizmalarının uyarlanabilir reasoning için gereken geri bildirim döngüsünü kesmesi gibi kritik bir ikilemle karşılaşır. Bu çatışmayı çözmek için, kısıtlayıcı izolasyondan verify-before-commit protokolüne paradigma değiştiren \\textbf{VIGIL} çerçevesini öneriyoruz. Spekülatif hipotez üretimini kolaylaştırarak ve niyet temelli verification yoluyla güvenliği sağlayarak, \\textbf{VIGIL} sağlam kontrol sağlarken reasoning esnekliğini korur. Ayrıca, dinamik bağımlılıklarla karakterize edilen yaygın tehditleri simüle etmek üzere tasarlanmış 959 tool stream injection vakasından oluşan bir benchmark olan \\textbf{SIREN}'ı sunuyoruz. Kapsamlı deneyler, \\textbf{VIGIL}'in saldırı başarı oranını %22'den fazla azaltırken, statik temellere kıyasla saldırı altındaki faydayı iki katından fazla artırarak en son teknoloji dinamik savunmalardan daha iyi performans gösterdiğini ve böylece güvenlik ile fayda arasında optimum bir denge sağladığını göstermektedir. Kod https://anonymous.4open.science/r/VIGIL-378B/ adresinde mevcuttur."
+    }
+  },
+  {
+    "id": "2601.05742v1",
+    "title": "The Echo Chamber Multi-Turn LLM Jailbreak",
+    "authors": [
+      "Ahmad Alobaid",
+      "Martí Jordà Roca",
+      "Carlos Castillo",
+      "Joan Vendrell"
+    ],
+    "published_date": "2026-01-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.05742v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.05742v1",
+    "content": {
+      "en": "The availability of Large Language Models (LLMs) has led to a new generation of powerful chatbots that can be developed at relatively low cost. As companies deploy these tools, security challenges need to be addressed to prevent financial loss and reputational damage. A key security challenge is jailbreaking, the malicious manipulation of prompts and inputs to bypass a chatbot's safety guardrails. Multi-turn attacks are a relatively new form of jailbreaking involving a carefully crafted chain of interactions with a chatbot. We introduce Echo Chamber, a new multi-turn attack using a gradual escalation method. We describe this attack in detail, compare it to other multi-turn attacks, and demonstrate its performance against multiple state-of-the-art models through extensive evaluation.",
+      "tr": "İşte makale başlığı ve özetinin Türkçeye çevrilmiş hali:\n\n**Makale Başlığı:** The Echo Chamber Multi-Turn LLM Jailbreak\n\n**Özet:**\nBüyük Dil Modellerinin (LLM) yaygınlaşması, nispeten düşük maliyetle geliştirilebilen yeni nesil güçlü sohbet botlarının ortaya çıkmasına yol açmıştır. Şirketler bu araçları kullanıma sundukça, finansal kayıp ve itibar zedelenmesini önlemek için güvenlik zorluklarının ele alınması gerekmektedir. Önemli bir güvenlik zorluğu, sohbet botunun güvenlik mekanizmalarını atlatmak amacıyla prompt ve girdilerin kötü niyetli manipülasyonu olan jailbreaking'dir. Multi-turn saldırılar, sohbet botu ile dikkatlice tasarlanmış bir dizi etkileşim içeren nispeten yeni bir jailbreaking biçimidir. Biz, kademeli bir tırmanma yöntemi kullanan yeni bir multi-turn saldırı olan Echo Chamber'ı sunuyoruz. Bu saldırıyı ayrıntılı olarak tanımlıyor, diğer multi-turn saldırılarla karşılaştırıyor ve kapsamlı bir değerlendirme yoluyla birden fazla state-of-the-art model üzerinde performansını gösteriyoruz."
+    }
+  },
+  {
+    "id": "2601.05739v1",
+    "title": "PII-VisBench: Evaluating Personally Identifiable Information Safety in Vision Language Models Along a Continuum of Visibility",
+    "authors": [
+      "G M Shahariar",
+      "Zabir Al Nazi",
+      "Md Olid Hasan Bhuiyan",
+      "Zhouxing Shi"
+    ],
+    "published_date": "2026-01-09",
+    "tags": [
+      "cs.AI",
       "cs.CL",
+      "cs.CR",
+      "cs.CV"
+    ],
+    "link": "http://arxiv.org/abs/2601.05739v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.05739v1",
+    "content": {
+      "en": "Vision Language Models (VLMs) are increasingly integrated into privacy-critical domains, yet existing evaluations of personally identifiable information (PII) leakage largely treat privacy as a static extraction task and ignore how a subject's online presence--the volume of their data available online--influences privacy alignment. We introduce PII-VisBench, a novel benchmark containing 4000 unique probes designed to evaluate VLM safety through the continuum of online presence. The benchmark stratifies 200 subjects into four visibility categories: high, medium, low, and zero--based on the extent and nature of their information available online. We evaluate 18 open-source VLMs (0.3B-32B) based on two key metrics: percentage of PII probing queries refused (Refusal Rate) and the fraction of non-refusal responses flagged for containing PII (Conditional PII Disclosure Rate). Across models, we observe a consistent pattern: refusals increase and PII disclosures decrease (9.10% high to 5.34% low) as subject visibility drops. We identify that models are more likely to disclose PII for high-visibility subjects, alongside substantial model-family heterogeneity and PII-type disparities. Finally, paraphrasing and jailbreak-style prompts expose attack and model-dependent failures, motivating visibility-aware safety evaluation and training interventions.",
+      "tr": "**Makale Başlığı:** PII-VisBench: Görsel Dil Modellerinde Kişisel Olarak Tanımlanabilir Bilgi Güvenliğinin Görünürlük Sürekliliği Boyunca Değerlendirilmesi\n\n**Özet:**\n\nGörsel Dil Modelleri (VLMs), giderek artan bir şekilde gizlilik açısından kritik alanlara entegre edilmektedir. Ancak, kişisel olarak tanımlanabilir bilgi (PII) sızıntısına yönelik mevcut değerlendirmeler, gizliliği büyük ölçüde statik bir extraction task olarak ele almakta ve bir bireyin online varlığının – çevrimiçi olarak mevcut olan verilerinin hacminin – gizlilik uyumunu nasıl etkilediğini göz ardı etmektedir. Çevrimiçi varlığın sürekliliği aracılığıyla VLM güvenliğini değerlendirmek üzere tasarlanmış 4000 benzersiz probe içeren yeni bir benchmark olan PII-VisBench'i sunuyoruz. Benchmark, çevrimiçi olarak mevcut olan bilgilerinin kapsamı ve doğasına dayanarak 200 bireyi yüksek, orta, düşük ve sıfır olmak üzere dört visibility kategorisine ayırmaktadır. İki temel metriğe dayanarak 18 açık kaynaklı VLM (0.3B-32B) değerlendirmekteyiz: reddedilen PII probing queries yüzdesi (Refusal Rate) ve PII içeren olarak işaretlenen non-refusal response'ların oranı (Conditional PII Disclosure Rate). Modeller genelinde tutarlı bir örüntü gözlemlemekteyiz: birey visibility'si düştükçe, refusal'lar artmakta ve PII disclosure'lar azalmaktadır (yüksek %9.10'dan düşük %5.34'e). Yüksek visibility'li bireyler için modellerin PII'yi açıklama olasılığının daha yüksek olduğunu, bununla birlikte önemli model-family heterogeneity'si ve PII-type disparities'inin bulunduğunu tespit etmekteyiz. Son olarak, paraphrasing ve jailbreak-style prompt'lar, saldırı ve modele bağlı başarısızlıkları ortaya çıkarmakta, visibility-aware safety evaluation ve eğitim müdahalelerini motive etmektedir."
+    }
+  },
+  {
+    "id": "2601.05703v1",
+    "title": "AIBoMGen: Generating an AI Bill of Materials for Secure, Transparent, and Compliant Model Training",
+    "authors": [
+      "Wiebe Vandendriessche",
+      "Jordi Thijsman",
+      "Laurens D'hooge",
+      "Bruno Volckaert",
+      "Merlijn Sebrechts"
+    ],
+    "published_date": "2026-01-09",
+    "tags": [
+      "cs.SE",
       "cs.AI",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2601.03868v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.03868v1",
+    "link": "http://arxiv.org/abs/2601.05703v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.05703v1",
     "content": {
-      "en": "This paper presents a comprehensive empirical study on the safety alignment capabilities. We evaluate what matters for safety alignment in LLMs and LRMs to provide essential insights for developing more secure and reliable AI systems. We systematically investigate and compare the influence of six critical intrinsic model characteristics and three external attack techniques. Our large-scale evaluation is conducted using 32 recent, popular LLMs and LRMs across thirteen distinct model families, spanning a parameter scale from 3B to 235B. The assessment leverages five established safety datasets and probes model vulnerabilities with 56 jailbreak techniques and four CoT attack strategies, resulting in 4.6M API calls. Our key empirical findings are fourfold. First, we identify the LRMs GPT-OSS-20B, Qwen3-Next-80B-A3B-Thinking, and GPT-OSS-120B as the top-three safest models, which substantiates the significant advantage of integrated reasoning and self-reflection mechanisms for robust safety alignment. Second, post-training and knowledge distillation may lead to a systematic degradation of safety alignment. We thus argue that safety must be treated as an explicit constraint or a core optimization objective during these stages, not merely subordinated to the pursuit of general capability. Third, we reveal a pronounced vulnerability: employing a CoT attack via a response prefix can elevate the attack success rate by 3.34x on average and from 0.6% to 96.3% for Seed-OSS-36B-Instruct. This critical finding underscores the safety risks inherent in text-completion interfaces and features that allow user-defined response prefixes in LLM services, highlighting an urgent need for architectural and deployment safeguards. Fourth, roleplay, prompt injection, and gradient-based search for adversarial prompts are the predominant methodologies for eliciting unaligned behaviors in modern models.",
-      "tr": "Makale Başlığı: Güvenlik Uyumunda Neler Önemlidir?\n\nÖzet:\nBu makale, safety alignment yetenekleri üzerine kapsamlı bir ampirik çalışma sunmaktadır. Daha güvenli ve güvenilir yapay zeka sistemleri geliştirmek için temel içgörüler sağlamak amacıyla LLM'ler ve LRM'lerde safety alignment için nelerin önemli olduğunu değerlendiriyoruz. Altı kritik intrinsic model özelliği ve üç harici saldırı tekniğinin etkisini sistematik olarak araştırıyor ve karşılaştırıyoruz. Büyük ölçekli değerlendirmemiz, 3B ila 235B arası parametre ölçeğini kapsayan on üç farklı model ailesindeki 32 güncel, popüler LLM ve LRM kullanılarak gerçekleştirilmiştir. Değerlendirme, beş yerleşik güvenlik veri kümesinden yararlanmakta ve 56 jailbreak tekniği ile dört CoT attack strategy kullanarak model zayıflıklarını incelemekte, bu da 4.6M API call'a yol açmaktadır. Ana ampirik bulgularımız dört katlıdır. İlk olarak, LRMs GPT-OSS-20B, Qwen3-Next-80B-A3B-Thinking ve GPT-OSS-120B'yi en güvenli üç model olarak belirledik; bu, sağlam safety alignment için entegre reasoning ve self-reflection mekanizmalarının önemli avantajını desteklemektedir. İkinci olarak, post-training ve knowledge distillation, safety alignment'ın sistematik olarak bozulmasına yol açabilir. Bu nedenle, bu aşamalarda safety'nin, sadece genel yetenek arayışına tabi kılınmak yerine, açık bir kısıtlama veya temel bir optimization objective olarak ele alınması gerektiğini savunuyoruz. Üçüncü olarak, belirgin bir zayıflık ortaya koyuyoruz: bir response prefix aracılığıyla CoT attack kullanmak, Seed-OSS-36B-Instruct için ortalama 3.34 kat saldırı başarı oranını ve %0.6'dan %96.3'e kadar bir artış sağlayabilir. Bu kritik bulgu, text-completion arayüzlerinde ve LLM hizmetlerinde kullanıcı tanımlı response prefix'lere izin veren özelliklerde yerleşik güvenlik risklerini vurgulamakta ve mimari ve deployment safeguards'e acil bir ihtiyaç olduğunu göstermektedir. Dördüncü olarak, roleplay, prompt injection ve adversarial prompts için gradient-based search, modern modellerde uyumsuz davranışları ortaya çıkarmak için baskın metodolojilerdir."
+      "en": "The rapid adoption of complex AI systems has outpaced the development of tools to ensure their transparency, security, and regulatory compliance. In this paper, the AI Bill of Materials (AIBOM), an extension of the Software Bill of Materials (SBOM), is introduced as a standardized, verifiable record of trained AI models and their environments. Our proof-of-concept platform, AIBoMGen, automates the generation of signed AIBOMs by capturing datasets, model metadata, and environment details during training. The training platform acts as a neutral, third-party observer and root of trust. It enforces verifiable AIBOM creation for every job. The system uses cryptographic hashing, digital signatures, and in-toto attestations to ensure integrity and protect against threats such as artifact tampering by dishonest model creators. Our evaluation demonstrates that AIBoMGen reliably detects unauthorized modifications to all artifacts and can generate AIBOMs with negligible performance overhead. These results highlight the potential of AIBoMGen as a foundational step toward building secure and transparent AI ecosystems, enabling compliance with regulatory frameworks like the EUs AI Act.",
+      "tr": "**Makale Başlığı:** AIBoMGen: Güvenli, Şeffaf ve Uyumlu Model Eğitimi için Bir Yapay Zeka Malzeme Beyanı (AI Bill of Materials) Oluşturulması\n\n**Özet:**\nKarmaşık yapay zeka sistemlerinin hızlı benimsenmesi, şeffaflık, güvenlik ve düzenleyici uyumluluklarını sağlamaya yönelik araçların geliştirilme hızını geride bırakmıştır. Bu makalede, Yapay Zeka Malzeme Beyanı (AI Bill of Materials - AIBOM), Yazılım Malzeme Beyanı'nın (Software Bill of Materials - SBOM) bir uzantısı olarak, eğitilmiş yapay zeka modelleri ve çevreleri için standartlaştırılmış, doğrulanabilir bir kayıt olarak tanıtılmaktadır. Kavram kanıtı platformumuz AIBoMGen, eğitim sırasında veri kümelerini, model metadata'sını ve çevre detaylarını yakalayarak imzalı AIBOM'ların oluşturulmasını otomatikleştirir. Eğitim platformu, tarafsız bir üçüncü taraf gözlemcisi ve güven kökü (root of trust) olarak işlev görür. Her iş için doğrulanabilir AIBOM oluşturulmasını zorunlu kılar. Sistem, bütünlüğü sağlamak ve kötü niyetli model yaratıcıları tarafından yapılan artifact tampering gibi tehditlere karşı korumak için kriptografik hashing, dijital imzalar ve in-toto attestations kullanır. Değerlendirmemiz, AIBoMGen'in tüm artifact'lerdeki yetkisiz değişiklikleri güvenilir bir şekilde tespit edebildiğini ve ihmal edilebilir performans yüküyle AIBOM'lar oluşturabildiğini göstermektedir. Bu sonuçlar, AIBoMGen'in güvenli ve şeffaf yapay zeka ekosistemleri inşa etme yolunda temel bir adım olarak potansiyelini vurgulamakta ve AB Yapay Zeka Yasası gibi düzenleyici çerçevelere uyumluluğu mümkün kılmaktadır."
+    }
+  },
+  {
+    "id": "2601.05587v1",
+    "title": "HogVul: Black-box Adversarial Code Generation Framework Against LM-based Vulnerability Detectors",
+    "authors": [
+      "Jingxiao Yang",
+      "Ping He",
+      "Tianyu Du",
+      "Sun Bing",
+      "Xuhong Zhang"
+    ],
+    "published_date": "2026-01-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.05587v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.05587v1",
+    "content": {
+      "en": "Recent advances in software vulnerability detection have been driven by Language Model (LM)-based approaches. However, these models remain vulnerable to adversarial attacks that exploit lexical and syntax perturbations, allowing critical flaws to evade detection. Existing black-box attacks on LM-based vulnerability detectors primarily rely on isolated perturbation strategies, limiting their ability to efficiently explore the adversarial code space for optimal perturbations. To bridge this gap, we propose HogVul, a black-box adversarial code generation framework that integrates both lexical and syntax perturbations under a unified dual-channel optimization strategy driven by Particle Swarm Optimization (PSO). By systematically coordinating two-level perturbations, HogVul effectively expands the search space for adversarial examples, enhancing the attack efficacy. Extensive experiments on four benchmark datasets demonstrate that HogVul achieves an average attack success rate improvement of 26.05\\% over state-of-the-art baseline methods. These findings highlight the potential of hybrid optimization strategies in exposing model vulnerabilities.",
+      "tr": "İşte makale başlığı ve özetinin istediğiniz şekilde çevrilmiş hali:\n\n**Makale Başlığı:** HogVul: LM Tabanlı Güvenlik Açığı Tespit Cihazlarına Karşı Siyah Kutu Çekişmeli Kod Üretimi Çerçevesi\n\n**Özet:**\nYazılım güvenlik açığı tespitindeki son gelişmeler, Language Model (LM) tabanlı yaklaşımlarla yönlendirilmiştir. Ancak, bu modeller, kritik kusurların tespit edilmesinden kaçmasına olanak tanıyan leksikal ve sözdizimsel bozulmaları (perturbations) istismar eden çekişmeli saldırılara (adversarial attacks) karşı savunmasız kalmaktadır. LM tabanlı güvenlik açığı tespit cihazlarına yönelik mevcut siyah kutu (black-box) saldırılar, öncelikli olarak izole bozulma stratejilerine dayanmaktadır, bu da optimal bozulmalar için çekişmeli kod alanını (adversarial code space) verimli bir şekilde keşfetme yeteneklerini sınırlamaktadır. Bu boşluğu doldurmak için, Particle Swarm Optimization (PSO) tarafından yönlendirilen birleşik çift kanallı optimizasyon stratejisi (unified dual-channel optimization strategy) altında hem leksikal hem de sözdizimsel bozulmaları entegre eden bir siyah kutu çekişmeli kod üretimi çerçevesi olan HogVul'u öneriyoruz. İki seviyeli bozulmaları sistematik olarak koordine ederek, HogVul çekişmeli örnekler için arama alanını (search space) etkili bir şekilde genişletir ve saldırı etkinliğini artırır. Dört kıyaslama veri kümesi üzerinde yapılan kapsamlı deneyler, HogVul'un en gelişmiş temel yöntemlere (state-of-the-art baseline methods) kıyasla ortalama %26,05'lik bir saldırı başarı oranı iyileştirmesi elde ettiğini göstermektedir. Bu bulgular, modelin savunmasızlıklarını ortaya çıkarmada hibrit optimizasyon stratejilerinin potansiyelini vurgulamaktadır."
+    }
+  },
+  {
+    "id": "2601.05466v1",
+    "title": "Jailbreaking Large Language Models through Iterative Tool-Disguised Attacks via Reinforcement Learning",
+    "authors": [
+      "Zhaoqi Wang",
+      "Zijian Zhang",
+      "Daqing He",
+      "Pengtao Kou",
+      "Xin Li"
+    ],
+    "published_date": "2026-01-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.05466v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.05466v1",
+    "content": {
+      "en": "Large language models (LLMs) have demonstrated remarkable capabilities across diverse applications, however, they remain critically vulnerable to jailbreak attacks that elicit harmful responses violating human values and safety guidelines. Despite extensive research on defense mechanisms, existing safeguards prove insufficient against sophisticated adversarial strategies. In this work, we propose iMIST (\\underline{i}nteractive \\underline{M}ulti-step \\underline{P}rogre\\underline{s}sive \\underline{T}ool-disguised Jailbreak Attack), a novel adaptive jailbreak method that synergistically exploits vulnerabilities in current defense mechanisms. iMIST disguises malicious queries as normal tool invocations to bypass content filters, while simultaneously introducing an interactive progressive optimization algorithm that dynamically escalates response harmfulness through multi-turn dialogues guided by real-time harmfulness assessment. Our experiments on widely-used models demonstrate that iMIST achieves higher attack effectiveness, while maintaining low rejection rates. These results reveal critical vulnerabilities in current LLM safety mechanisms and underscore the urgent need for more robust defense strategies.",
+      "tr": "**Makale Başlığı:** Pekiştirmeli Öğrenme Yoluyla Tekrarlayan Araç-Gizlenmiş Saldırılar Aracılığıyla Büyük Dil Modellerini Jailbreak Etme\n\n**Özet:**\n\nBüyük Dil Modelleri (LLM'ler), çeşitli uygulamalarda dikkate değer yetenekler sergilemiş olmalarına rağmen, insan değerlerini ve güvenlik yönergelerini ihlal eden zararlı yanıtlar oluşturan jailbreak saldırılarına karşı kritik düzeyde savunmasız kalmaktadır. Savunma mekanizmaları üzerine kapsamlı araştırmalara rağmen, mevcut korumalar gelişmiş düşmanca stratejilere karşı yetersiz kalmaktadır. Bu çalışmada, mevcut savunma mekanizmalarındaki zafiyetleri sinerjik olarak sömüren yeni bir adaptif jailbreak yöntemi olan iMIST (interactive Multi-step Progressive Tool-disguised Jailbreak Attack) önermekteyiz. iMIST, içerik filtrelerini aşmak için kötü amaçlı sorguları normal araç çağrıları olarak gizlerken, aynı zamanda gerçek zamanlı harmfulness assessment ile yönlendirilen çok turlu diyaloglar aracılığıyla yanıt zararlılığını dinamik olarak artıran interaktif bir progressive optimization algoritması sunmaktadır. Yaygın olarak kullanılan modeller üzerindeki deneylerimiz, iMIST'in düşük reddetme oranlarını korurken daha yüksek saldırı etkinliği sağladığını göstermektedir. Bu sonuçlar, mevcut LLM güvenlik mekanizmalarındaki kritik zafiyetleri ortaya koymakta ve daha sağlam savunma stratejilerine olan acil ihtiyacın altını çizmektedir."
+    }
+  },
+  {
+    "id": "2601.05445v1",
+    "title": "Knowledge-Driven Multi-Turn Jailbreaking on Large Language Models",
+    "authors": [
+      "Songze Li",
+      "Ruishi He",
+      "Xiaojun Jia",
+      "Jun Wang",
+      "Zhihui Fu"
+    ],
+    "published_date": "2026-01-09",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.05445v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.05445v1",
+    "content": {
+      "en": "Large Language Models (LLMs) face a significant threat from multi-turn jailbreak attacks, where adversaries progressively steer conversations to elicit harmful outputs. However, the practical effectiveness of existing attacks is undermined by several critical limitations: they struggle to maintain a coherent progression over long interactions, often losing track of what has been accomplished and what remains to be done; they rely on rigid or pre-defined patterns, and fail to adapt to the LLM's dynamic and unpredictable conversational state. To address these shortcomings, we introduce Mastermind, a multi-turn jailbreak framework that adopts a dynamic and self-improving approach. Mastermind operates in a closed loop of planning, execution, and reflection, enabling it to autonomously build and refine its knowledge of model vulnerabilities through interaction. It employs a hierarchical planning architecture that decouples high-level attack objectives from low-level tactical execution, ensuring long-term focus and coherence. This planning is guided by a knowledge repository that autonomously discovers and refines effective attack patterns by reflecting on interactive experiences. Mastermind leverages this accumulated knowledge to dynamically recombine and adapt attack vectors, dramatically improving both effectiveness and resilience. We conduct comprehensive experiments against state-of-the-art models, including GPT-5 and Claude 3.7 Sonnet. The results demonstrate that Mastermind significantly outperforms existing baselines, achieving substantially higher attack success rates and harmfulness ratings. Moreover, our framework exhibits notable resilience against multiple advanced defense mechanisms.",
+      "tr": "Makale Başlığı: Large Language Models Üzerinde Knowledge-Driven Çok Dönemli Jailbreaking Saldırıları\n\nÖzet:\nLarge Language Models (LLMs), çok dönemli jailbreak saldırıları karşısında önemli bir tehdit altındadır; bu saldırılarda saldırganlar, zararlı çıktılar elde etmek amacıyla konuşmaları aşamalı olarak yönlendirirler. Ancak, mevcut saldırıların pratik etkinliği, çeşitli kritik sınırlamalarla zayıflamaktadır: uzun etkileşimler boyunca tutarlı bir ilerlemeyi sürdürmekte zorlanırlar, neyin başarıldığını ve neyin yapılması gerektiğini sıklıkla kaçırırlar; katı veya önceden tanımlanmış desenlere güvenirler ve LLM'nin dinamik ve öngörülemeyen konuşma durumuna uyum sağlayamazlar. Bu yetersizlikleri gidermek için, dinamik ve kendi kendini geliştiren bir yaklaşım benimseyen çok dönemli bir jailbreak çerçevesi olan Mastermind'ı sunuyoruz. Mastermind, otonom olarak etkileşim yoluyla modelin zayıflıkları hakkındaki bilgisini oluşturup iyileştirmesini sağlayan planlama, yürütme ve yansıtma kapalı döngüsünde çalışır. Yüksek seviyeli saldırı hedeflerini düşük seviyeli taktiksel yürütmeden ayıran hiyerarşik bir planlama mimarisi kullanır, bu da uzun vadeli odaklanma ve tutarlılığı sağlar. Bu planlama, etkileşimli deneyimler üzerine yansıtarak etkili saldırı desenlerini otonom olarak keşfeden ve iyileştiren bir knowledge repository tarafından yönlendirilir. Mastermind, hem etkinliği hem de dayanıklılığı önemli ölçüde artırarak saldırı vektörlerini dinamik olarak yeniden birleştirmek ve uyarlamak için bu birikmiş bilgiyi kullanır. GPT-5 ve Claude 3.7 Sonnet dahil olmak üzere son teknoloji modellere karşı kapsamlı deneyler yürütüyoruz. Sonuçlar, Mastermind'ın mevcut temel performans göstergelerinden önemli ölçüde daha iyi performans gösterdiğini, önemli ölçüde daha yüksek saldırı başarı oranları ve zararlılık dereceleri elde ettiğini göstermektedir. Dahası, çerçevemiz birden fazla gelişmiş savunma mekanizmasına karşı dikkate değer bir dayanıklılık sergilemektedir."
     }
   }
 ]
