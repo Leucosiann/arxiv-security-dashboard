@@ -1,5 +1,189 @@
 [
   {
+    "id": "2601.09647v1",
+    "title": "Identifying Models Behind Text-to-Image Leaderboards",
+    "authors": [
+      "Ali Naseh",
+      "Yuefeng Peng",
+      "Anshuman Suri",
+      "Harsh Chaudhari",
+      "Alina Oprea"
+    ],
+    "published_date": "2026-01-14",
+    "tags": [
+      "cs.CV",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.09647v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.09647v1",
+    "content": {
+      "en": "Text-to-image (T2I) models are increasingly popular, producing a large share of AI-generated images online. To compare model quality, voting-based leaderboards have become the standard, relying on anonymized model outputs for fairness. In this work, we show that such anonymity can be easily broken. We find that generations from each T2I model form distinctive clusters in the image embedding space, enabling accurate deanonymization without prompt control or training data. Using 22 models and 280 prompts (150K images), our centroid-based method achieves high accuracy and reveals systematic model-specific signatures. We further introduce a prompt-level distinguishability metric and conduct large-scale analyses showing how certain prompts can lead to near-perfect distinguishability. Our findings expose fundamental security flaws in T2I leaderboards and motivate stronger anonymization defenses.",
+      "tr": "**Makale Başlığı: Text-to-Image Lider Tablolarının Arkasındaki Modellerin Belirlenmesi**\n\n**Özet:**\n\nText-to-image (T2I) modelleri giderek daha popüler hale gelmekte ve çevrimiçi olarak üretilen yapay zeka (AI) görsellerinin büyük bir kısmını oluşturmaktadır. Model kalitesini karşılaştırmak amacıyla, adilliği sağlamak için anonimleştirilmiş model çıktılarına dayanan oylama tabanlı lider tabloları standart hale gelmiştir. Bu çalışmada, bu tür anonimliğin kolayca kırılabileceğini gösteriyoruz. Her bir T2I modelinden elde edilen üretimlerin, image embedding space'te ayırt edici kümeler oluşturduğunu ve prompt control veya training data olmadan doğru bir şekilde anonimlikten çıkarma (deanonymization) olanağı sağladığını buluyoruz. 22 model ve 280 prompt (150K görsel) kullanarak, centroid-based methodumuz yüksek doğruluk oranı elde etmekte ve sistematik model-spesifik imzaları ortaya çıkarmaktadır. Ayrıca, prompt-level distinguishability metric'ini tanıtıyoruz ve bazı prompt'ların nasıl neredeyse mükemmel distinguishability'ye yol açabileceğini gösteren büyük ölçekli analizler yürütüyoruz. Bulgularımız, T2I lider tablolarındaki temel güvenlik açıklarını ortaya koymakta ve daha güçlü anonimleştirme savunmalarını teşvik etmektedir."
+    }
+  },
+  {
+    "id": "2601.09625v1",
+    "title": "The Promptware Kill Chain: How Prompt Injections Gradually Evolved Into a Multi-Step Malware",
+    "authors": [
+      "Ben Nassi",
+      "Bruce Schneier",
+      "Oleg Brodt"
+    ],
+    "published_date": "2026-01-14",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.09625v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.09625v1",
+    "content": {
+      "en": "The rapid adoption of large language model (LLM)-based systems -- from chatbots to autonomous agents capable of executing code and financial transactions -- has created a new attack surface that existing security frameworks inadequately address. The dominant framing of these threats as \"prompt injection\" -- a catch-all phrase for security failures in LLM-based systems -- obscures a more complex reality: Attacks on LLM-based systems increasingly involve multi-step sequences that mirror traditional malware campaigns. In this paper, we propose that attacks targeting LLM-based applications constitute a distinct class of malware, which we term \\textit{promptware}, and introduce a five-step kill chain model for analyzing these threats. The framework comprises Initial Access (prompt injection), Privilege Escalation (jailbreaking), Persistence (memory and retrieval poisoning), Lateral Movement (cross-system and cross-user propagation), and Actions on Objective (ranging from data exfiltration to unauthorized transactions). By mapping recent attacks to this structure, we demonstrate that LLM-related attacks follow systematic sequences analogous to traditional malware campaigns. The promptware kill chain offers security practitioners a structured methodology for threat modeling and provides a common vocabulary for researchers across AI safety and cybersecurity to address a rapidly evolving threat landscape.",
+      "tr": "İşte akademik makalenin başlığı ve özetinin Türkçe çevirisi:\n\n**Makale Başlığı:** Promptware Kill Chain: Prompt Enjeksiyonları Nasıl Aşamalı Olarak Çok Adımlı Zararlı Yazılımlara Dönüştü\n\n**Özet:**\nSohbet robotlarından kod ve finansal işlemler gerçekleştirebilen otonom ajanlara kadar büyük dil modeli (LLM) tabanlı sistemlerin hızla benimsenmesi, mevcut güvenlik çerçevelerinin yetersiz kaldığı yeni bir saldırı yüzeyi oluşturmuştur. Bu tehditlerin hakim olarak \"prompt injection\" olarak çerçevelenmesi -- LLM tabanlı sistemlerdeki güvenlik hataları için kullanılan genel bir ifade -- daha karmaşık bir gerçeği gizlemektedir: LLM tabanlı sistemlere yönelik saldırılar giderek artan bir şekilde geleneksel zararlı yazılım kampanyalarını yansıtan çok adımlı diziler içermektedir. Bu makalede, LLM tabanlı uygulamaları hedef alan saldırıların, bizin \\textit{promptware} olarak adlandırdığımız ayırt edici bir zararlı yazılım sınıfı oluşturduğunu öne sürüyor ve bu tehditleri analiz etmek için beş adımlı bir kill chain modeli sunuyoruz. Çerçeve, İlk Erişim (prompt injection), Yetki Yükseltme (jailbreaking), Kalıcılık (memory and retrieval poisoning), Yanal Hareket (cross-system and cross-user propagation) ve Amaç Üzerindeki Eylemler (veri sızdırmadan yetkisiz işlemlere kadar) içermektedir. Son saldırıları bu yapıya haritalayarak, LLM ile ilgili saldırıların geleneksel zararlı yazılım kampanyalarına benzer sistematik dizileri takip ettiğini gösteriyoruz. Promptware kill chain, güvenlik uygulayıcılarına tehdit modellemesi için yapılandırılmış bir metodoloji sunar ve AI safety ile cybersecurity alanındaki araştırmacılara hızla gelişen bir tehdit ortamıyla başa çıkmak için ortak bir kelime dağarcığı sağlar."
+    }
+  },
+  {
+    "id": "2601.09460v1",
+    "title": "SoK: Enhancing Cryptographic Collaborative Learning with Differential Privacy",
+    "authors": [
+      "Francesco Capano",
+      "Jonas Böhler",
+      "Benjamin Weggenmann"
+    ],
+    "published_date": "2026-01-14",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.09460v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.09460v1",
+    "content": {
+      "en": "In collaborative learning (CL), multiple parties jointly train a machine learning model on their private datasets. However, data can not be shared directly due to privacy concerns. To ensure input confidentiality, cryptographic techniques, e.g., multi-party computation (MPC), enable training on encrypted data. Yet, even securely trained models are vulnerable to inference attacks aiming to extract memorized data from model outputs. To ensure output privacy and mitigate inference attacks, differential privacy (DP) injects calibrated noise during training. While cryptography and DP offer complementary guarantees, combining them efficiently for cryptographic and differentially private CL (CPCL) is challenging. Cryptography incurs performance overheads, while DP degrades accuracy, creating a privacy-accuracy-performance trade-off that needs careful design considerations. This work systematizes the CPCL landscape. We introduce a unified framework that generalizes common phases across CPCL paradigms, and identify secure noise sampling as the foundational phase to achieve CPCL. We analyze trade-offs of different secure noise sampling techniques, noise types, and DP mechanisms discussing their implementation challenges and evaluating their accuracy and cryptographic overhead across CPCL paradigms. Additionally, we implement identified secure noise sampling options in MPC and evaluate their computation and communication costs in WAN and LAN. Finally, we propose future research directions based on identified key observations, gaps and possible enhancements in the literature.",
+      "tr": "İşte akademik makale başlığı ve özetinin Türkçeye çevirisi, istenen teknik terimlerin İngilizce bırakıldığı ve resmi, akademik bir dilin kullanıldığı haliyle:\n\n**Makale Başlığı:** SoK: Differential Privacy ile Kriptografik İşbirlikçi Öğrenmenin Geliştirilmesi\n\n**Özet:**\nİşbirlikçi öğrenmede (CL), birden fazla taraf kendi özel veri kümeleri üzerinde ortaklaşa bir makine öğrenmesi modeli eğitir. Ancak, gizlilik endişeleri nedeniyle veriler doğrudan paylaşılamaz. Girdi gizliliğini sağlamak için kriptografik teknikler, örneğin multi-party computation (MPC), şifrelenmiş veriler üzerinde eğitime olanak tanır. Yine de, güvenli bir şekilde eğitilmiş modeller bile, model çıktılarından ezberlenmiş verileri çıkarmayı amaçlayan inference attacks saldırılarına karşı savunmasızdır. Çıktı gizliliğini sağlamak ve inference attacks saldırılarını azaltmak için differential privacy (DP), eğitim sırasında kalibre edilmiş gürültü ekler. Kriptografi ve DP tamamlayıcı garantiler sunarken, bunları kriptografik ve differentially private CL (CPCL) için verimli bir şekilde birleştirmek zorludur. Kriptografi performans maliyetleri getirirken, DP doğruluk oranını düşürür, bu da dikkatli tasarım gerektiren bir privacy-accuracy-performance trade-off'u oluşturur. Bu çalışma, CPCL manzarasını sistematikleştirir. CPCL paradigmaları boyunca ortak fazları genelleştiren bir birleşik framework sunuyoruz ve CPCL'yi başarmak için temel faz olarak secure noise sampling'i tanımlıyoruz. Farklı secure noise sampling tekniklerinin, noise türlerinin ve DP mekanizmalarının trade-off'larını analiz ediyor, uygulama zorluklarını tartışıyor ve CPCL paradigmaları boyunca doğruluk oranlarını ve kriptografik maliyetlerini değerlendiriyoruz. Ek olarak, belirlenmiş secure noise sampling seçeneklerini MPC içinde uyguluyor ve WAN ve LAN'daki hesaplama ve iletişim maliyetlerini değerlendiriyoruz. Son olarak, literatürdeki belirlenen temel gözlemler, boşluklar ve olası iyileştirmelere dayanan gelecekteki araştırma yönleri öneriyoruz."
+    }
+  },
+  {
+    "id": "2601.09292v1",
+    "title": "Blue Teaming Function-Calling Agents",
+    "authors": [
+      "Greta Dolcetti",
+      "Giulio Zizzo",
+      "Sergio Maffeis"
+    ],
+    "published_date": "2026-01-14",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.09292v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.09292v1",
+    "content": {
+      "en": "We present an experimental evaluation that assesses the robustness of four open source LLMs claiming function-calling capabilities against three different attacks, and we measure the effectiveness of eight different defences. Our results show how these models are not safe by default, and how the defences are not yet employable in real-world scenarios.",
+      "tr": "İşte akademik makale başlığının ve özetinin teknik terimler korunarak Türkçeye çevrilmiş hali:\n\n**Makale Başlığı:** Blue Teaming Function-Calling Agents\n\n**Özet:**\n\nDört açık kaynaklı LLM'nin function-calling yetenekleri iddiasını, üç farklı saldırıya karşı dayanıklılığını değerlendiren deneysel bir inceleme sunuyoruz ve sekiz farklı savunmanın etkinliğini ölçüyoruz. Sonuçlarımız, bu modellerin varsayılan olarak güvenli olmadığını ve savunmaların henüz gerçek dünya senaryolarında kullanılamayacağını göstermektedir."
+    }
+  },
+  {
+    "id": "2601.09287v1",
+    "title": "Explainable Autoencoder-Based Anomaly Detection in IEC 61850 GOOSE Networks",
+    "authors": [
+      "Dafne Lozano-Paredes",
+      "Luis Bote-Curiel",
+      "Juan Ramón Feijóo-Martínez",
+      "Ismael Gómez-Talal",
+      "José Luis Rojo-Álvarez"
+    ],
+    "published_date": "2026-01-14",
+    "tags": [
+      "cs.CR",
+      "cs.LG",
+      "eess.SP"
+    ],
+    "link": "http://arxiv.org/abs/2601.09287v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.09287v1",
+    "content": {
+      "en": "The IEC 61850 Generic Object-Oriented Substation Event (GOOSE) protocol plays a critical role in real-time protection and automation of digital substations, yet its lack of native security mechanisms can expose power systems to sophisticated cyberattacks. Traditional rule-based and supervised intrusion detection techniques struggle to detect protocol-compliant and zero-day attacks under significant class imbalance and limited availability of labeled data. This paper proposes an explainable, unsupervised multi-view anomaly detection framework for IEC 61850 GOOSE networks that explicitly separates semantic integrity and temporal availability. The approach employs asymmetric autoencoders trained only on real operational GOOSE traffic to learn distinct latent representations of sequence-based protocol semantics and timing-related transmission dynamics in normal traffic. Anomaly detection is implemented using reconstruction errors mixed with statistically grounded thresholds, enabling robust detection without specified attack types. Feature-level reconstruction analysis provides intrinsic explainability by directly linking detection outcomes to IEC 61850 protocol characteristics. The proposed framework is evaluated using real substation traffic for training and a public dataset containing normal traffic and message suppression, data manipulation, and denial-of-service attacks for testing. Experimental results show attack detection rates above 99% with false positives remaining below 5% of total traffic, demonstrating strong generalization across environments and effective operation under extreme class imbalance and interpretable anomaly attribution.",
+      "tr": "**Makale Başlığı:** IEC 61850 GOOSE Ağlarında Açıklanabilir Otomatik Kodlayıcı Tabanlı Anomali Tespiti\n\n**Özet:**\n\nIEC 61850 Generic Object-Oriented Substation Event (GOOSE) protokolü, dijital trafo merkezlerinin gerçek zamanlı koruma ve otomasyonunda kritik bir rol oynamaktadır. Ancak, yerleşik güvenlik mekanizmalarının eksikliği, enerji sistemlerini sofistike siber saldırılara maruz bırakabilmektedir. Geleneksel kural tabanlı ve denetimli saldırı tespit teknikleri, önemli sınıf dengesizliği ve etiketli veri kıtlığı altında, protokole uyumlu ve sıfır gün saldırılarını tespit etmekte zorlanmaktadır. Bu makale, IEC 61850 GOOSE ağları için, semantik bütünlük ve zamansal kullanılabilirliği açıkça ayıran, açıklanabilir, denetimsiz çok görünümlü bir anomali tespit çerçevesi sunmaktadır. Yaklaşım, yalnızca gerçek operasyonel GOOSE trafiği üzerinde eğitilmiş asimetrik autoencoders kullanarak, sıra tabanlı protokol semantiği ve zamanla ilgili iletim dinamiklerinin belirgin gizli temsillerini normal trafikte öğrenir. Anomali tespiti, belirtilen saldırı türleri olmadan sağlam bir tespit sağlayan, istatistiksel olarak temellendirilmiş eşiklerle karıştırılmış yeniden yapılandırma hataları kullanılarak gerçekleştirilir. Özellik düzeyinde yeniden yapılandırma analizi, tespit sonuçlarını doğrudan IEC 61850 protokol özelliklerine bağlayarak içsel açıklanabilirlik sağlar. Önerilen çerçeve, eğitim için gerçek trafo merkezi trafiği ve test için normal trafik ile mesaj bastırma, veri manipülasyonu ve hizmet reddi saldırıları içeren bir halka açık veri kümesi kullanılarak değerlendirilmiştir. Deneysel sonuçlar, toplam trafiğin %5'inin altında yanlış pozitifler ile %99'un üzerinde saldırı tespit oranları göstermektedir. Bu, ortamlar arasında güçlü genelleme yeteneği ve aşırı sınıf dengesizliği altında etkili operasyon ile yorumlanabilir anomali atıfı sergilemektedir."
+    }
+  },
+  {
+    "id": "2601.09166v1",
+    "title": "DP-FEDSOFIM: Differentially Private Federated Stochastic Optimization using Regularized Fisher Information Matrix",
+    "authors": [
+      "Sidhant R. Nair",
+      "Tanmay Sen",
+      "Mrinmay Sen"
+    ],
+    "published_date": "2026-01-14",
+    "tags": [
+      "cs.LG",
+      "cs.CR",
+      "cs.DC"
+    ],
+    "link": "http://arxiv.org/abs/2601.09166v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.09166v1",
+    "content": {
+      "en": "Differentially private federated learning (DP-FL) suffers from slow convergence under tight privacy budgets due to the overwhelming noise introduced to preserve privacy. While adaptive optimizers can accelerate convergence, existing second-order methods such as DP-FedNew require O(d^2) memory at each client to maintain local feature covariance matrices, making them impractical for high-dimensional models. We propose DP-FedSOFIM, a server-side second-order optimization framework that leverages the Fisher Information Matrix (FIM) as a natural gradient preconditioner while requiring only O(d) memory per client. By employing the Sherman-Morrison formula for efficient matrix inversion, DP-FedSOFIM achieves O(d) computational complexity per round while maintaining the convergence benefits of second-order methods. Our analysis proves that the server-side preconditioning preserves (epsilon, delta)-differential privacy through the post-processing theorem. Empirical evaluation on CIFAR-10 demonstrates that DP-FedSOFIM achieves superior test accuracy compared to first-order baselines across multiple privacy regimes.",
+      "tr": "Elbette, istenen çeviriyi aşağıda bulabilirsiniz:\n\n**Makale Başlığı:** DP-FEDSOFIM: Düzenlenmiş Fisher Bilgi Matrisi Kullanarak Diferansiyel Olarak Gizli Federated Stokastik Optimizasyon\n\n**Özet:**\nDifferentially private federated learning (DP-FL), gizliliği korumak için eklenen aşırı gürültü nedeniyle sıkı gizlilik bütçeleri altında yavaş yakınsama sorunundan muzdariptir. Adaptif optimizerlar yakınsamayı hızlandırabilirken, mevcut ikinci dereceden yöntemler olan DP-FedNew gibi her istemcide yerel özellik kovaryans matrislerini tutmak için O(d^2) bellek gerektirir, bu da onları yüksek boyutlu modeller için pratik olmaktan çıkarır. DP-FedSOFIM'i öneriyoruz; bu, Fisher Information Matrix'i (FIM) doğal bir gradyan ön koşullandırıcısı olarak kullanan, ancak istemci başına yalnızca O(d) bellek gerektiren sunucu tabanlı bir ikinci dereceden optimizasyon çerçevesidir. Verimli matris ters çevirme için Sherman-Morrison formülünü kullanarak, DP-FedSOFIM, ikinci dereceden yöntemlerin yakınsama avantajlarını korurken tur başına O(d) hesaplama karmaşıklığına ulaşır. Analizimiz, sunucu tarafı ön koşullandırmanın post-processing theorem aracılığıyla (epsilon, delta)-differential privacy'yi koruduğunu kanıtlamaktadır. CIFAR-10 üzerindeki ampirik değerlendirme, DP-FedSOFIM'in birden fazla gizlilik rejimi boyunca birinci dereceden temel çizgilere kıyasla üstün test doğruluğu elde ettiğini göstermektedir."
+    }
+  },
+  {
+    "id": "2601.09157v1",
+    "title": "Deep Learning-based Binary Analysis for Vulnerability Detection in x86-64 Machine Code",
+    "authors": [
+      "Mitchell Petingola"
+    ],
+    "published_date": "2026-01-14",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.09157v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.09157v1",
+    "content": {
+      "en": "While much of the current research in deep learning-based vulnerability detection relies on disassembled binaries, this paper explores the feasibility of extracting features directly from raw x86-64 machine code. Although assembly language is more interpretable for humans, it requires more complex models to capture token-level context. In contrast, machine code may enable more efficient, lightweight models and preserve all information that might be lost in disassembly. This paper approaches the task of vulnerability detection through an exploratory study on two specific deep learning model architectures and aims to systematically evaluate their performance across three vulnerability types. The results demonstrate that graph-based models consistently outperform sequential models, emphasizing the importance of control flow relationships, and that machine code contains sufficient information for effective vulnerability discovery.",
+      "tr": "**Makale Başlığı:** x86-64 Makine Kodunda Güvenlik Açığı Tespiti İçin Derin Öğrenme Tabanlı İkili Analiz\n\n**Özet:**\n\nMevcut derin öğrenme tabanlı güvenlik açığı tespiti araştırmalarının büyük bir kısmı ayrıştırılmış (disassembled) ikili (binaries) verilere dayanırken, bu çalışma ham x86-64 makine kodundan doğrudan özellik çıkarmanın fizibilitesini araştırmaktadır. Assembly dili insanlar için daha anlaşılır olsa da, token-seviyesi bağlamı yakalamak için daha karmaşık modellere ihtiyaç duyar. Buna karşılık, makine kodu daha verimli, hafif modelleri mümkün kılabilir ve ayrıştırma sırasında kaybolabilecek tüm bilgileri koruyabilir. Bu çalışma, iki spesifik derin öğrenme model mimarisi üzerinde yapılan keşifsel bir çalışma aracılığıyla güvenlik açığı tespiti görevine yaklaşmakta ve üç güvenlik açığı türündeki performanslarını sistematik olarak değerlendirmeyi amaçlamaktadır. Sonuçlar, graph-based modellerin sıralı (sequential) modellere göre tutarlı bir şekilde daha iyi performans gösterdiğini, kontrol akışı (control flow) ilişkilerinin önemini vurguladığını ve makine kodunun etkili güvenlik açığı keşfi için yeterli bilgi içerdiğini göstermektedir."
+    }
+  },
+  {
+    "id": "2601.09035v1",
+    "title": "A Decompilation-Driven Framework for Malware Detection with Large Language Models",
+    "authors": [
+      "Aniesh Chawla",
+      "Udbhav Prasad"
+    ],
+    "published_date": "2026-01-14",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.09035v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.09035v1",
+    "content": {
+      "en": "The parallel evolution of Large Language Models (LLMs) with advanced code-understanding capabilities and the increasing sophistication of malware presents a new frontier for cybersecurity research. This paper evaluates the efficacy of state-of-the-art LLMs in classifying executable code as either benign or malicious. We introduce an automated pipeline that first decompiles Windows executable into a C code using Ghidra disassembler and then leverages LLMs to perform the classification. Our evaluation reveals that while standard LLMs show promise, they are not yet robust enough to replace traditional anti-virus software. We demonstrate that a fine-tuned model, trained on curated malware and benign datasets, significantly outperforms its vanilla counterpart. However, the performance of even this specialized model degrades notably when encountering newer malware. This finding demonstrates the critical need for continuous fine-tuning with emerging threats to maintain model effectiveness against the changing coding patterns and behaviors of malicious software.",
+      "tr": "**Makale Başlığı:** Büyük Dil Modelleri ile Kötü Amaçlı Yazılım Tespiti için Bir Dekompilasyon Odaklı Çerçeve\n\n**Özet:**\n\nBüyük Dil Modelleri (LLMs)'nin gelişmiş kod anlama yetenekleri ile paralel gelişimi ve kötü amaçlı yazılımların artan karmaşıklığı, siber güvenlik araştırmaları için yeni bir alan sunmaktadır. Bu çalışma, en ileri düzey LLM'lerin yürütülebilir kodu zararsız veya kötü amaçlı olarak sınıflandırmadaki etkinliğini değerlendirmektedir. Otomatik bir pipeline sunuyoruz; bu pipeline öncelikle Ghidra disassembler kullanarak Windows yürütülebilir dosyasını C koduna decompile etmekte ve ardından sınıflandırma işlemini gerçekleştirmek için LLM'leri kullanmaktadır. Değerlendirmemiz, standart LLM'lerin umut vaat etmesine rağmen, geleneksel antivirüs yazılımlarının yerini alacak kadar henüz sağlam olmadığını ortaya koymaktadır. Derlenmiş kötü amaçlı yazılım ve zararsız veri kümeleri üzerinde eğitilmiş ince ayar yapılmış (fine-tuned) bir modelin, standart (vanilla) modeline göre önemli ölçüde daha iyi performans gösterdiğini göstermekteyiz. Bununla birlikte, bu özel modelin performansı bile daha yeni kötü amaçlı yazılımlarla karşılaştığında belirgin şekilde düşmektedir. Bu bulgu, değişen kodlama örüntülerine ve kötü amaçlı yazılımların davranışlarına karşı model etkinliğini sürdürmek için ortaya çıkan tehditlerle sürekli ince ayar yapmanın kritik gerekliliğini göstermektedir."
+    }
+  },
+  {
+    "id": "2601.09029v1",
+    "title": "Proactively Detecting Threats: A Novel Approach Using LLMs",
+    "authors": [
+      "Aniesh Chawla",
+      "Udbhav Prasad"
+    ],
+    "published_date": "2026-01-13",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.09029v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.09029v1",
+    "content": {
+      "en": "Enterprise security faces escalating threats from sophisticated malware, compounded by expanding digital operations. This paper presents the first systematic evaluation of large language models (LLMs) to proactively identify indicators of compromise (IOCs) from unstructured web-based threat intelligence sources, distinguishing it from reactive malware detection approaches. We developed an automated system that pulls IOCs from 15 web-based threat report sources to evaluate six LLM models (Gemini, Qwen, and Llama variants). Our evaluation of 479 webpages containing 2,658 IOCs (711 IPv4 addresses, 502 IPv6 addresses, 1,445 domains) reveals significant performance variations. Gemini 1.5 Pro achieved 0.958 precision and 0.788 specificity for malicious IOC identification, while demonstrating perfect recall (1.0) for actual threats.",
+      "tr": "**Makale Başlığı: Proaktif Tehdit Tespiti: LLM'ler Kullanılarak Yeni Bir Yaklaşım**\n\n**Özet:**\nKurumsal güvenlik, gelişmiş kötü amaçlı yazılımlardan kaynaklanan ve dijital operasyonların genişlemesiyle daha da karmaşıklaşan tehditlerle karşı karşıyadır. Bu makale, yapılandırılmamış web tabanlı tehdit istihbaratı kaynaklarından uzlaşma göstergelerini (IOCs) proaktif olarak tanımlamak için büyük dil modellerinin (LLMs) ilk sistematik değerlendirmesini sunmaktadır. Bu yaklaşım, reaktif kötü amaçlı yazılım tespit yöntemlerinden farklıdır. 15 web tabanlı tehdit raporu kaynağından IOC'leri çeken otomatik bir sistem geliştirdik ve altı LLM modelini (Gemini, Qwen ve Llama varyantları) değerlendirdik. 2.658 IOC (711 IPv4 adresi, 502 IPv6 adresi, 1.445 alan adı) içeren 479 web sayfasının değerlendirmemiz, önemli performans farklılıklarını ortaya koymaktadır. Gemini 1.5 Pro, kötü niyetli IOC tanımlamasında 0.958 precision ve 0.788 specificity elde etmiş, gerçek tehditler için ise mükemmel recall (1.0) sergilemiştir."
+    }
+  },
+  {
     "id": "2601.08623v1",
     "title": "SafeRedir: Prompt Embedding Redirection for Robust Unlearning in Image Generation Models",
     "authors": [
@@ -20,200 +204,7 @@
     "pdf_link": "https://arxiv.org/pdf/2601.08623v1",
     "content": {
       "en": "Image generation models (IGMs), while capable of producing impressive and creative content, often memorize a wide range of undesirable concepts from their training data, leading to the reproduction of unsafe content such as NSFW imagery and copyrighted artistic styles. Such behaviors pose persistent safety and compliance risks in real-world deployments and cannot be reliably mitigated by post-hoc filtering, owing to the limited robustness of such mechanisms and a lack of fine-grained semantic control. Recent unlearning methods seek to erase harmful concepts at the model level, which exhibit the limitations of requiring costly retraining, degrading the quality of benign generations, or failing to withstand prompt paraphrasing and adversarial attacks. To address these challenges, we introduce SafeRedir, a lightweight inference-time framework for robust unlearning via prompt embedding redirection. Without modifying the underlying IGMs, SafeRedir adaptively routes unsafe prompts toward safe semantic regions through token-level interventions in the embedding space. The framework comprises two core components: a latent-aware multi-modal safety classifier for identifying unsafe generation trajectories, and a token-level delta generator for precise semantic redirection, equipped with auxiliary predictors for token masking and adaptive scaling to localize and regulate the intervention. Empirical results across multiple representative unlearning tasks demonstrate that SafeRedir achieves effective unlearning capability, high semantic and perceptual preservation, robust image quality, and enhanced resistance to adversarial attacks. Furthermore, SafeRedir generalizes effectively across a variety of diffusion backbones and existing unlearned models, validating its plug-and-play compatibility and broad applicability. Code and data are available at https://github.com/ryliu68/SafeRedir.",
-      "tr": "Kesinlikle, işte istenen akademik makale başlığı ve özetinin Türkçe çevirisi:\n\n**Makale Başlığı:** SafeRedir: Image Generation Modellerinde Robust Unlearning İçin Prompt Embedding Redirection\n\n**Özet:**\n\nImage generation models (IGMs), etkileyici ve yaratıcı içerikler üretme yeteneğine sahip olmalarına rağmen, eğitim verilerinden geniş bir yelpazede istenmeyen kavramları ezberleyebilirler. Bu durum, NSFW (Not Safe For Work) görseller ve telif hakkıyla korunan sanatsal tarzlar gibi güvensiz içeriklerin yeniden üretilmesine yol açar. Bu tür davranışlar, gerçek dünya uygulamalarında kalıcı güvenlik ve uyumluluk riskleri oluşturur ve bu mekanizmaların sınırlı sağlamlığı ile ince taneli anlamsal kontrolün eksikliği nedeniyle, sonradan uygulanan filtreleme ile güvenilir bir şekilde azaltılamaz. Son unlearning yöntemleri, model düzeyinde zararlı kavramları silmeyi amaçlar; ancak bu yöntemler, maliyetli yeniden eğitim gerektirme, iyi niyetli üretimlerin kalitesini düşürme veya prompt paraphrasing ve adversarial attacks'e karşı koyamama gibi sınırlamalar sergiler. Bu zorlukların üstesinden gelmek için, prompt embedding redirection aracılığıyla robust unlearning için hafif bir inference-time framework olan SafeRedir'ı tanıtıyoruz. Temel IGMs'leri değiştirmeden, SafeRedir, embedding space'de token-level interventions aracılığıyla güvensiz promptları güvenli anlamsal bölgelere adaptif olarak yönlendirir. Framework, iki temel bileşenden oluşur: güvensiz üretim yörüngelerini belirlemek için latent-aware multi-modal safety classifier ve token masking ve adaptive scaling için yardımcı öngörücülerle donatılmış, müdahalenin yerini belirleyen ve düzenleyen token-level delta generator. Birden çok temsili unlearning görevi üzerindeki ampirik sonuçlar, SafeRedir'ın etkili unlearning kabiliyeti, yüksek anlamsal ve algısal koruma, sağlam görüntü kalitesi ve adversarial attacks'e karşı geliştirilmiş direnç sağladığını göstermektedir. Ayrıca, SafeRedir, plug-and-play uyumluluğunu ve geniş uygulanabilirliğini doğrulayarak, çeşitli diffusion backbones ve mevcut unlearned modeller arasında etkili bir şekilde genelleme yapar. Kod ve veriler https://github.com/ryliu68/SafeRedir adresinde mevcuttur."
-    }
-  },
-  {
-    "id": "2601.08511v1",
-    "title": "STAR: Detecting Inference-time Backdoors in LLM Reasoning via State-Transition Amplification Ratio",
-    "authors": [
-      "Seong-Gyu Park",
-      "Sohee Park",
-      "Jisu Lee",
-      "Hyunsik Na",
-      "Daeseon Choi"
-    ],
-    "published_date": "2026-01-13",
-    "tags": [
-      "cs.CL",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2601.08511v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.08511v1",
-    "content": {
-      "en": "Recent LLMs increasingly integrate reasoning mechanisms like Chain-of-Thought (CoT). However, this explicit reasoning exposes a new attack surface for inference-time backdoors, which inject malicious reasoning paths without altering model parameters. Because these attacks generate linguistically coherent paths, they effectively evade conventional detection. To address this, we propose STAR (State-Transition Amplification Ratio), a framework that detects backdoors by analyzing output probability shifts. STAR exploits the statistical discrepancy where a malicious input-induced path exhibits high posterior probability despite a low prior probability in the model's general knowledge. We quantify this state-transition amplification and employ the CUSUM algorithm to detect persistent anomalies. Experiments across diverse models (8B-70B) and five benchmark datasets demonstrate that STAR exhibits robust generalization capabilities, consistently achieving near-perfect performance (AUROC $\\approx$ 1.0) with approximately $42\\times$ greater efficiency than existing baselines. Furthermore, the framework proves robust against adaptive attacks attempting to bypass detection.",
-      "tr": "**Makale Başlığı:** STAR: Durum-Geçiş Amplifikasyon Oranı ile LLM Muhakemesinde Çıkarım Zamanı Arka Kapılarını Tespit Etme\n\n**Özet:**\nSon zamanlardaki LLM'ler, Chain-of-Thought (CoT) gibi muhakeme mekanizmalarını giderek daha fazla entegre etmektedir. Ancak bu açık muhakeme, çıkarım zamanı arka kapıları için yeni bir saldırı yüzeyi oluşturmaktadır; bu arka kapılar, model parametrelerini değiştirmeden zararlı muhakeme yolları enjekte eder. Bu saldırılar dilbilimsel olarak tutarlı yollar ürettiği için geleneksel tespitleri etkili bir şekilde atlatırlar. Bunu ele almak için, çıktının olasılık kaymalarını analiz ederek arka kapıları tespit eden bir çerçeve olan STAR (State-Transition Amplification Ratio)'ı öneriyoruz. STAR, kötü niyetli bir girdinin neden olduğu yolun, modelin genel bilgisindeki düşük bir ön olasılığa rağmen yüksek bir son olasılık sergilediği istatistiksel tutarsızlıktan yararlanır. Bu durum-geçiş amplifikasyonunu ölçüyor ve kalıcı anomalileri tespit etmek için CUSUM algoritmasını kullanıyoruz. Çeşitli modeller (8B-70B) ve beş karşılaştırma veri kümesi üzerinde yapılan deneyler, STAR'ın sağlam genelleme yetenekleri sergilediğini, sürekli olarak mükemmel performans yakınında (AUROC $\\approx$ 1.0) ve mevcut temel çizgilere göre yaklaşık $42\\times$ daha yüksek verimlilikle ulaştığını göstermektedir. Ayrıca, çerçeve, tespitleri atlatmaya çalışan adaptif saldırılara karşı da dayanıklı olduğunu kanıtlamaktadır."
-    }
-  },
-  {
-    "id": "2601.08406v1",
-    "title": "WebTrap Park: An Automated Platform for Systematic Security Evaluation of Web Agents",
-    "authors": [
-      "Xinyi Wu",
-      "Jiagui Chen",
-      "Geng Hong",
-      "Jiayi Dong",
-      "Xudong Pan"
-    ],
-    "published_date": "2026-01-13",
-    "tags": [
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2601.08406v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.08406v1",
-    "content": {
-      "en": "Web Agents are increasingly deployed to perform complex tasks in real web environments, yet their security evaluation remains fragmented and difficult to standardize. We present WebTrap Park, an automated platform for systematic security evaluation of Web Agents through direct observation of their concrete interactions with live web pages. WebTrap Park instantiates three major sources of security risk into 1,226 executable evaluation tasks and enables action based assessment without requiring agent modification. Our results reveal clear security differences across agent frameworks, highlighting the importance of agent architecture beyond the underlying model. WebTrap Park is publicly accessible at https://security.fudan.edu.cn/webagent and provides a scalable foundation for reproducible Web Agent security evaluation.",
-      "tr": "Aşağıdaki akademik makale başlığı ve özetinin Türkçe çevirisi, belirtilen teknik terimlerin İngilizce bırakılması ve resmi, akademik bir dil kullanılarak aşağıda sunulmuştur:\n\n**Makale Başlığı:** WebTrap Park: Web Ajanlarının Sistematik Güvenlik Değerlendirmesi İçin Otomatik Bir Platform\n\n**Özet:**\nWeb ajanları, gerçek web ortamlarında karmaşık görevleri yerine getirmek üzere giderek daha fazla konuşlandırılmaktadır, ancak güvenlik değerlendirmeleri parçalı kalmakta ve standartlaştırılması zorlaşmaktadır. WebTrap Park'ı sunuyoruz; bu, Web ajanlarının canlı web sayfalarıyla olan somut etkileşimlerinin doğrudan gözlemlenmesi yoluyla sistematik güvenlik değerlendirmesi için otomatik bir platformdur. WebTrap Park, ajan modifikasyonu gerektirmeksizin harekete dayalı bir değerlendirme sağlayarak, 1.226 çalıştırılabilir değerlendirme görevine üç ana güvenlik riski kaynağını somutlaştırmaktadır. Sonuçlarımız, ajan çerçeveleri arasında belirgin güvenlik farklılıklarını ortaya koymakta, temel modelin ötesinde ajan mimarisinin önemini vurgulamaktadır. WebTrap Park, https://security.fudan.edu.cn/webagent adresinde kamuya açık olarak erişilebilmekte ve tekrarlanabilir Web Ajan güvenlik değerlendirmesi için ölçeklenebilir bir temel sunmaktadır."
-    }
-  },
-  {
-    "id": "2601.08223v1",
-    "title": "DNF: Dual-Layer Nested Fingerprinting for Large Language Model Intellectual Property Protection",
-    "authors": [
-      "Zhenhua Xu",
-      "Yiran Zhao",
-      "Mengting Zhong",
-      "Dezhang Kong",
-      "Changting Lin"
-    ],
-    "published_date": "2026-01-13",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.08223v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.08223v1",
-    "content": {
-      "en": "The rapid growth of large language models raises pressing concerns about intellectual property protection under black-box deployment. Existing backdoor-based fingerprints either rely on rare tokens -- leading to high-perplexity inputs susceptible to filtering -- or use fixed trigger-response mappings that are brittle to leakage and post-hoc adaptation. We propose \\textsc{Dual-Layer Nested Fingerprinting} (DNF), a black-box method that embeds a hierarchical backdoor by coupling domain-specific stylistic cues with implicit semantic triggers. Across Mistral-7B, LLaMA-3-8B-Instruct, and Falcon3-7B-Instruct, DNF achieves perfect fingerprint activation while preserving downstream utility. Compared with existing methods, it uses lower-perplexity triggers, remains undetectable under fingerprint detection attacks, and is relatively robust to incremental fine-tuning and model merging. These results position DNF as a practical, stealthy, and resilient solution for LLM ownership verification and intellectual property protection.",
-      "tr": "Elbette, istenen çeviri aşağıdadır:\n\n**Makale Başlığı:** DNF: Büyük Dil Modeli Fikri Mülkiyet Koruması İçin İki Katmanlı İç İçe Parmak İzi\n\n**Özet:**\nBüyük dil modellerinin hızlı büyümesi, black-box dağıtım altında fikri mülkiyet korumasıyla ilgili acil endişeleri gündeme getirmektedir. Mevcut backdoor tabanlı parmak izleri ya nadir token'lara dayanır (bu da filtrelenmeye yatkın yüksek perplexity'li girdilere yol açar) ya da sızıntılara ve sonradan adaptasyona karşı dayanıksız olan sabit tetikleyici-yanıt eşleştirmeleri kullanır. Biz, alan-spesifik stilistik ipuçlarını örtük anlamsal tetikleyicilerle eşleştirerek hiyerarşik bir backdoor yerleştiren bir black-box yöntemi olan \\textsc{Dual-Layer Nested Fingerprinting} (DNF)'yi öneriyoruz. Mistral-7B, LLaMA-3-8B-Instruct ve Falcon3-7B-Instruct genelinde, DNF aşağı akış kullanımını koruyarak mükemmel fingerprint aktivasyonu sağlamaktadır. Mevcut yöntemlerle karşılaştırıldığında, daha düşük perplexity'li tetikleyiciler kullanır, fingerprint detection attacks altında tespit edilemez kalır ve artımlı fine-tuning ve model merging'e nispeten dayanıklıdır. Bu sonuçlar, DNF'yi LLM sahiplik doğrulaması ve fikri mülkiyet koruması için pratik, gizli ve dirençli bir çözüm olarak konumlandırmaktadır."
-    }
-  },
-  {
-    "id": "2601.08216v1",
-    "title": "One-Shot Federated Ridge Regression: Exact Recovery via Sufficient Statistic Aggregation",
-    "authors": [
-      "Zahir Alsulaimawi"
-    ],
-    "published_date": "2026-01-13",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2601.08216v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.08216v1",
-    "content": {
-      "en": "Federated learning protocols require repeated synchronization between clients and a central server, with convergence rates depending on learning rates, data heterogeneity, and client sampling. This paper asks whether iterative communication is necessary for distributed linear regression. We show it is not. We formulate federated ridge regression as a distributed equilibrium problem where each client computes local sufficient statistics -- the Gram matrix and moment vector -- and transmits them once. The server reconstructs the global solution through a single matrix inversion. We prove exact recovery: under a coverage condition on client feature matrices, one-shot aggregation yields the centralized ridge solution, not an approximation. For heterogeneous distributions violating coverage, we derive non-asymptotic error bounds depending on spectral properties of the aggregated Gram matrix. Communication reduces from $\\mathcal{O}(Rd)$ in iterative methods to $\\mathcal{O}(d^2)$ total; for high-dimensional settings, we propose and experimentally validate random projection techniques reducing this to $\\mathcal{O}(m^2)$ where $m \\ll d$. We establish differential privacy guarantees where noise is injected once per client, eliminating the composition penalty that degrades privacy in multi-round protocols. We further address practical considerations including client dropout robustness, federated cross-validation for hyperparameter selection, and comparison with gradient-based alternatives. Comprehensive experiments on synthetic heterogeneous regression demonstrate that one-shot fusion matches FedAvg accuracy while requiring up to $38\\times$ less communication. The framework applies to kernel methods and random feature models but not to general nonlinear architectures.",
-      "tr": "**Makale Başlığı:** Tek Atımlı Federe Ridge Regresyonu: Yeterli İstatistik Toplama Yoluyla Tam Kurtarma\n\n**Özet:**\n\nFedere öğrenme protokolleri, istemciler ve merkezi sunucu arasında tekrarlanan senkronizasyon gerektirir; yakınsama oranları öğrenme oranlarına, veri heterojenliğine ve istemci örneklemesine bağlıdır. Bu makale, dağıtılmış lineer regresyon için iteratif iletişimin gerekli olup olmadığını sorgulamaktadır. Gerekli olmadığını göstermekteyiz. Federe ridge regresyonunu, her istemcinin yerel yeterli istatistikleri -- Gram matrisi ve moment vektörü -- hesaplayıp bunları bir kez ilettiği dağıtılmış bir denge problemi olarak formüle ediyoruz. Sunucu, tek bir matris tersi alma yoluyla global çözümü yeniden yapılandırır. İstemci özellik matrisleri üzerinde bir kapsama koşulu altında, tek atımlı toplamanın bir yaklaşım değil, merkezileştirilmiş ridge çözümünü verdiği tam kurtarma teoremini ispatlıyoruz. Kapsamayı ihlal eden heterojen dağılımlar için, toplanmış Gram matrisinin spektral özelliklerine bağlı olarak asimptotik olmayan hata sınırları türetiyoruz. İletişim, iteratif yöntemlerde $\\mathcal{O}(Rd)$'den toplamda $\\mathcal{O}(d^2)$'ye düşer; yüksek boyutlu ayarlarda, bunun $\\mathcal{O}(m^2)$'ye indirgenmesi için rastgele projeksiyon teknikleri önerip deneysel olarak doğrulamaktayız, burada $m \\ll d$. Gürültünün istemci başına bir kez enjekte edildiği diferansiyel gizlilik garantileri kuruyoruz, bu da çok turlu protokollerde gizliliği bozan bileşim cezasını ortadan kaldırır. Ayrıca, istemci düşüşü dayanıklılığı, hiperparametre seçimi için federe çapraz doğrulama ve gradyan tabanlı alternatiflerle karşılaştırma gibi pratik hususları ele alıyoruz. Sentetik heterojen regresyon üzerindeki kapsamlı deneyler, tek atımlı füzyonun FedAvg doğruluğuyla eşleştiğini ve bunun için $38\\times$ daha az iletişim gerektirdiğini göstermektedir. Bu çerçeve, kernel yöntemleri ve rastgele özellik modelleri için geçerlidir, ancak genel doğrusal olmayan mimariler için geçerli değildir."
-    }
-  },
-  {
-    "id": "2601.08196v1",
-    "title": "Evaluating Implicit Regulatory Compliance in LLM Tool Invocation via Logic-Guided Synthesis",
-    "authors": [
-      "Da Song",
-      "Yuheng Huang",
-      "Boqi Chen",
-      "Tianshuo Cong",
-      "Randy Goebel"
-    ],
-    "published_date": "2026-01-13",
-    "tags": [
-      "cs.CL",
-      "cs.AI",
-      "cs.CR",
-      "cs.LO",
-      "cs.SE"
-    ],
-    "link": "http://arxiv.org/abs/2601.08196v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.08196v1",
-    "content": {
-      "en": "The integration of large language models (LLMs) into autonomous agents has enabled complex tool use, yet in high-stakes domains, these systems must strictly adhere to regulatory standards beyond simple functional correctness. However, existing benchmarks often overlook implicit regulatory compliance, thus failing to evaluate whether LLMs can autonomously enforce mandatory safety constraints. To fill this gap, we introduce LogiSafetyGen, a framework that converts unstructured regulations into Linear Temporal Logic oracles and employs logic-guided fuzzing to synthesize valid, safety-critical traces. Building on this framework, we construct LogiSafetyBench, a benchmark comprising 240 human-verified tasks that require LLMs to generate Python programs that satisfy both functional objectives and latent compliance rules. Evaluations of 13 state-of-the-art (SOTA) LLMs reveal that larger models, despite achieving better functional correctness, frequently prioritize task completion over safety, which results in non-compliant behavior.",
-      "tr": "Makale Başlığı: Mantık Güdümlü Sentez Yoluyla LLM Araç Çağırmada Örtük Düzenleyici Uyumluluğun Değerlendirilmesi\n\nÖzet:\nBüyük dil modellerinin (LLM'ler) otonom aracılara entegrasyonu, karmaşık araç kullanımını mümkün kılmış olsa da, yüksek riskli alanlarda bu sistemlerin yalnızca basit işlevsel doğruluktan daha fazlasını, düzenleyici standartlara sıkı sıkıya uyması gerekmektedir. Bununla birlikte, mevcut benchmarklar genellikle örtük düzenleyici uyumluluğu göz ardı etmekte, dolayısıyla LLM'lerin zorunlu güvenlik kısıtlamalarını otonom olarak uygulayıp uygulayamayacağını değerlendirememektedir. Bu boşluğu doldurmak için, yapılandırılmamış düzenlemeleri Linear Temporal Logic oracle'larına dönüştüren ve geçerli, güvenliğe duyarlı izleri sentezlemek için logic-guided fuzzing kullanan bir framework olan LogiSafetyGen'i tanıtıyoruz. Bu framework üzerine inşa ederek, LLM'lerin hem işlevsel hedefleri hem de gizli uyumluluk kurallarını karşılayan Python programları üretmesini gerektiren 240 insan tarafından doğrulanmış görevi içeren bir benchmark olan LogiSafetyBench'i oluşturuyoruz. 13 adet state-of-the-art (SOTA) LLM'nin değerlendirmeleri, daha büyük modellerin, daha iyi işlevsel doğruluk elde etmelerine rağmen, sıklıkla görev tamamlama önceliğini güvenliğe vermekte olduğunu ve bunun da uyumsuz davranışlara yol açtığını ortaya koymaktadır."
-    }
-  },
-  {
-    "id": "2601.08189v1",
-    "title": "ForgetMark: Stealthy Fingerprint Embedding via Targeted Unlearning in Language Models",
-    "authors": [
-      "Zhenhua Xu",
-      "Haobo Zhang",
-      "Zhebo Wang",
-      "Qichen Liu",
-      "Haitao Xu"
-    ],
-    "published_date": "2026-01-13",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.08189v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.08189v1",
-    "content": {
-      "en": "Existing invasive (backdoor) fingerprints suffer from high-perplexity triggers that are easily filtered, fixed response patterns exposed by heuristic detectors, and spurious activations on benign inputs. We introduce \\textsc{ForgetMark}, a stealthy fingerprinting framework that encodes provenance via targeted unlearning. It builds a compact, human-readable key--value set with an assistant model and predictive-entropy ranking, then trains lightweight LoRA adapters to suppress the original values on their keys while preserving general capabilities. Ownership is verified under black/gray-box access by aggregating likelihood and semantic evidence into a fingerprint success rate. By relying on probabilistic forgetting traces rather than fixed trigger--response patterns, \\textsc{ForgetMark} avoids high-perplexity triggers, reduces detectability, and lowers false triggers. Across diverse architectures and settings, it achieves 100\\% ownership verification on fingerprinted models while maintaining standard performance, surpasses backdoor baselines in stealthiness and robustness to model merging, and remains effective under moderate incremental fine-tuning. Our code and data are available at \\href{https://github.com/Xuzhenhua55/ForgetMark}{https://github.com/Xuzhenhua55/ForgetMark}.",
-      "tr": "İşte akademik makale başlığı ve özetinin çevirisi:\n\n**Makale Başlığı:** ForgetMark: Dil Modellerinde Hedeflenmiş Unlearning Yoluyla Gizli Parmak İzi Gömme\n\n**Özet:**\nMevcut istilacı (arka kapı) parmak izleri, kolayca filtrelenen yüksek perplexity tetikleyicilerinden, sezgisel dedektörler tarafından ortaya çıkarılan sabit yanıt modellerinden ve iyi huylu girdilerdeki yapay etkinleşmelerden muzdariptir. Hedeflenmiş unlearning yoluyla kökeni kodlayan gizli bir fingerprinting framework'ü olan \\textsc{ForgetMark}'ı tanıtıyoruz. Bir asistan model ve predictive-entropy ranking ile kompakt, insan tarafından okunabilir bir key--value set oluşturur, ardından orijinal değerleri anahtarları üzerindeyken bastırmak için hafif LoRA adapter'lar eğitir, genel yetenekleri koruyarak. Sahiplik, black/gray-box erişimi altında likelihood ve semantik kanıtı bir fingerprint success rate'e toplamak suretiyle doğrulanır. Sabit tetikleyici-yanıt modelleri yerine olasılıksal unutma izlerine dayanarak, \\textsc{ForgetMark} yüksek perplexity tetikleyicilerden kaçınır, tespit edilebilirliği azaltır ve yanlış tetikleyicileri düşürür. Çeşitli mimariler ve ayarlarda, parmak izli modellerde %100 sahiplik doğrulaması elde ederken standart performansı korur, gizlilik ve model birleştirmeye karşı sağlamlık açısından arka kapı temel çizgilerini geride bırakır ve orta düzeyde artımlı ince ayar altında etkili kalır. Kodumuz ve verilerimiz \\href{https://github.com/Xuzhenhua55/ForgetMark}{https://github.com/Xuzhenhua55/ForgetMark} adresinde mevcuttur."
-    }
-  },
-  {
-    "id": "2601.07654v1",
-    "title": "Towards Automating Blockchain Consensus Verification with IsabeLLM",
-    "authors": [
-      "Elliot Jones",
-      "William Knottenbelt"
-    ],
-    "published_date": "2026-01-12",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.07654v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.07654v1",
-    "content": {
-      "en": "Consensus protocols are crucial for a blockchain system as they are what allow agreement between the system's nodes in a potentially adversarial environment. For this reason, it is paramount to ensure their correct design and implementation to prevent such adversaries from carrying out malicious behaviour. Formal verification allows us to ensure the correctness of such protocols, but requires high levels of effort and expertise to carry out and thus is often omitted in the development process. In this paper, we present IsabeLLM, a tool that integrates the proof assistant Isabelle with a Large Language Model to assist and automate proofs. We demonstrate the effectiveness of IsabeLLM by using it to develop a novel model of Bitcoin's Proof of Work consensus protocol and verify its correctness. We use the DeepSeek R1 API for this demonstration and found that we were able to generate correct proofs for each of the non-trivial lemmas present in the verification.",
-      "tr": "**Akademik Makale Başlığı:** IsabeLLM ile Blockchain Konsensüs Doğrulamasının Otomasyonuna Doğru\n\n**Özet:**\n\nBlockchain sistemlerinde, potansiyel olarak hasmane bir ortamda sistemin düğümleri arasında anlaşmayı sağlayan konsensüs protokolleri hayati önem taşımaktadır. Bu nedenle, bu tür hasmane aktörlerin kötü niyetli davranışlar sergilemesini önlemek için tasarımlarının ve uygulamalarının doğruluğunu sağlamak büyük önem arz etmektedir. Formel doğrulama, bu tür protokollerin doğruluğunu güvence altına almamızı sağlarken, yüksek düzeyde çaba ve uzmanlık gerektirmekte olup, bu durum geliştirme sürecinde sıklıkla ihmal edilmesine yol açmaktadır. Bu çalışmada, ispat yardımcısı Isabelle'i bir Large Language Model ile entegre ederek ispatları otomatikleştirmeye ve kolaylaştırmaya yardımcı olan bir araç olan IsabeLLM'i sunmaktayız. IsabeLLM'in etkinliğini, Bitcoin'in Proof of Work konsensüs protokolüne dair yeni bir model geliştirmek ve doğruluğunu teyit etmek amacıyla kullanarak göstermekteyiz. Bu gösterim için DeepSeek R1 API'sini kullanmış olup, doğrulama sürecinde yer alan her bir aşamada doğru ispatlar üretebildiğimizi gözlemlemiş bulunmaktayız."
-    }
-  },
-  {
-    "id": "2601.07395v1",
-    "title": "MCP-ITP: An Automated Framework for Implicit Tool Poisoning in MCP",
-    "authors": [
-      "Ruiqi Li",
-      "Zhiqiang Wang",
-      "Yunhao Yao",
-      "Xiang-Yang Li"
-    ],
-    "published_date": "2026-01-12",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.07395v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.07395v1",
-    "content": {
-      "en": "To standardize interactions between LLM-based agents and their environments, the Model Context Protocol (MCP) was proposed and has since been widely adopted. However, integrating external tools expands the attack surface, exposing agents to tool poisoning attacks. In such attacks, malicious instructions embedded in tool metadata are injected into the agent context during MCP registration phase, thereby manipulating agent behavior. Prior work primarily focuses on explicit tool poisoning or relied on manually crafted poisoned tools. In contrast, we focus on a particularly stealthy variant: implicit tool poisoning, where the poisoned tool itself remains uninvoked. Instead, the instructions embedded in the tool metadata induce the agent to invoke a legitimate but high-privilege tool to perform malicious operations. We propose MCP-ITP, the first automated and adaptive framework for implicit tool poisoning within the MCP ecosystem. MCP-ITP formulates poisoned tool generation as a black-box optimization problem and employs an iterative optimization strategy that leverages feedback from both an evaluation LLM and a detection LLM to maximize Attack Success Rate (ASR) while evading current detection mechanisms. Experimental results on the MCPTox dataset across 12 LLM agents demonstrate that MCP-ITP consistently outperforms the manually crafted baseline, achieving up to 84.2% ASR while suppressing the Malicious Tool Detection Rate (MDR) to as low as 0.3%.",
-      "tr": "**Makale Başlığı:** MCP-ITP: MCP'de Örtük Araç Zehirlemesi İçin Otomatik Bir Çerçeve\n\n**Özet:**\nLLM tabanlı ajanlar ve ortamları arasındaki etkileşimleri standartlaştırmak amacıyla Model Context Protocol (MCP) önerilmiş ve o zamandan beri yaygın olarak benimsenmiştir. Ancak, harici araçların entegrasyonu saldırı yüzeyini genişleterek ajanları araç zehirlemesi saldırılarına maruz bırakır. Bu tür saldırılarda, araç meta verilerine gömülü kötü niyetli talimatlar, MCP kayıt aşaması sırasında ajan bağlamına enjekte edilerek ajan davranışını manipüle eder. Önceki çalışmalar ağırlıklı olarak açık araç zehirlemesine odaklanmış veya manuel olarak hazırlanmış zehirli araçlara dayanmıştır. Buna karşılık, biz özellikle gizli bir varyanta odaklanıyoruz: örtük araç zehirlemesi, burada zehirli araçın kendisi çağrılmaz. Bunun yerine, araç meta verilerindeki talimatlar, ajanı yasal ancak yüksek ayrıcalıklı bir aracı kötü niyetli işlemler gerçekleştirmek üzere çağırmaya yönlendirir. MCP ekosistemi içinde örtük araç zehirlemesi için ilk otomatik ve uyarlanabilir çerçeve olan MCP-ITP'yi öneriyoruz. MCP-ITP, zehirli araç üretimini bir black-box optimization problemi olarak formüle eder ve Attack Success Rate (ASR)'yi maksimize ederken mevcut detection mechanisms'ten kaçınmak için hem bir evaluation LLM hem de bir detection LLM'den gelen geri bildirimleri kullanan iteratif bir optimization strategy kullanır. 12 LLM ajanı üzerinde MCPTox veri kümesi üzerinde yapılan deneysel sonuçlar, MCP-ITP'nin manuel olarak hazırlanmış baseline'dan sürekli olarak daha iyi performans gösterdiğini, %84.2'ye kadar ASR elde ederken Malicious Tool Detection Rate (MDR)'i %0.3 gibi düşük bir seviyeye bastırdığını göstermektedir."
-    }
-  },
-  {
-    "id": "2601.07276v1",
-    "title": "A High-Recall Cost-Sensitive Machine Learning Framework for Real-Time Online Banking Transaction Fraud Detection",
-    "authors": [
-      "Karthikeyan V. R.",
-      "Premnath S.",
-      "Kavinraaj S.",
-      "J. Sangeetha"
-    ],
-    "published_date": "2026-01-12",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2601.07276v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.07276v1",
-    "content": {
-      "en": "Fraudulent activities on digital banking services are becoming more intricate by the day, challenging existing defenses. While older rule driven methods struggle to keep pace, even precision focused algorithms fall short when new scams are introduced. These tools typically overlook subtle shifts in criminal behavior, missing crucial signals. Because silent breaches cost institutions far more than flagged but legitimate actions, catching every possible case is crucial. High sensitivity to actual threats becomes essential when oversight leads to heavy losses. One key aim here involves reducing missed fraud cases without spiking incorrect alerts too much. This study builds a system using group learning methods adjusted through smart threshold choices. Using real world transaction records shared openly, where cheating acts rarely appear among normal activities, tests are run under practical skewed distributions. The outcomes reveal that approximately 91 percent of actual fraud is detected, outperforming standard setups that rely on unchanging rules when dealing with uneven examples across classes. When tested in live settings, the fraud detection system connects directly to an online banking transaction flow, stopping questionable activities before they are completed. Alongside this setup, a browser add on built for Chrome is designed to flag deceptive web links and reduce threats from harmful sites. These results show that adjusting decisions by cost impact and validating across entire systems makes deployment more stable and realistic for today's digital banking platforms.",
-      "tr": "İşte akademik makale başlığının ve özetinin resmi ve akademik bir dille yapılmış Türkçe çevirisi:\n\n**Makale Başlığı:** Gerçek Zamanlı Çevrimiçi Bankacılık İşlemleri Dolandırıcılık Tespiti İçin Yüksek `Recall` Maliyet-Hassasiyetli Makine Öğrenmesi Çerçevesi\n\n**Özet:**\n\nDijital bankacılık hizmetlerindeki dolandırıcılık faaliyetleri her geçen gün daha karmaşık hale gelmekte ve mevcut savunma mekanizmalarını zorlamaktadır. Eski kural tabanlı yöntemler bu hıza ayak uydurmakta zorlanırken, hatta hassasiyete odaklanan algoritmalar bile yeni dolandırıcılık yöntemleri ortaya çıktığında yetersiz kalmaktadır. Bu araçlar tipik olarak suçlu davranışlarındaki ince değişimleri göz ardı ederek kritik sinyalleri kaçırmaktadır. Sessiz ihlaller kurumlara işaretlenmiş ancak meşru eylemlerden çok daha pahalıya mal olduğundan, mümkün olan her vakayı yakalamak çok önemlidir. Gözetim ağır kayıplara yol açtığında gerçek tehditlere karşı yüksek hassasiyet esas haline gelir. Buradaki temel amaçlardan biri, yanlış uyarıları aşırı derecede artırmadan kaçırılan dolandırıcılık vakalarını azaltmaktır. Bu çalışma, akıllı eşik (threshold) seçimleriyle ayarlanmış grup öğrenme yöntemleri kullanan bir sistem inşa etmektedir. Hileli eylemlerin normal faaliyetler arasında nadiren göründüğü gerçek dünya işlem kayıtları açıkça paylaşıldığında, testler pratik eğri (skewed) dağılımlar altında gerçekleştirilir. Sonuçlar, sınıf genelindeki dengesiz örneklerle başa çıkmada değişmeyen kurallara dayanan standart kurulumlardan daha iyi performans göstererek, gerçek dolandırıcılığın yaklaşık yüzde 91'inin tespit edildiğini ortaya koymaktadır. Canlı ortamlarda test edildiğinde, dolandırıcılık tespit sistemi doğrudan bir çevrimiçi bankacılık işlem akışına bağlanarak, şüpheli etkinlikleri tamamlanmadan durdurmaktadır. Bu kurulumun yanı sıra, Chrome için tasarlanmış bir tarayıcı eklentisi, yanıltıcı web bağlantılarını işaretlemek ve zararlı sitelerden kaynaklanan tehditleri azaltmak üzere tasarlanmıştır. Bu sonuçlar, kararları maliyet etkisine göre ayarlamanın ve tüm sistemler genelinde doğrulama yapmanın, günümüzün dijital bankacılık platformları için dağıtımı daha istikrarlı ve gerçekçi hale getirdiğini göstermektedir."
+      "tr": "Makale Başlığı: SafeRedir: Image Generation Modellerinde Robust Unlearning için Prompt Embedding Redirection\n\nÖzet:\nImage generation models (IGMs), etkileyici ve yaratıcı içerikler üretme yeteneklerine rağmen, eğitim verilerinden geniş bir yelpazede istenmeyen kavramları sıklıkla ezberleyerek, NSFW görseller ve telif hakkıyla korunan sanatsal stiller gibi güvenli olmayan içeriklerin yeniden üretilmesine yol açmaktadır. Bu tür davranışlar, gerçek dünya konuşlandırmalarında kalıcı güvenlik ve uyumluluk riskleri oluşturmakta ve bu mekanizmaların sınırlı sağlamlığı ve ince taneli anlamsal kontrol eksikliği nedeniyle, sonradan yapılan filtreleme ile güvenilir bir şekilde azaltılamamaktadır. Son unlearning yöntemleri, modeli düzeyinde zararlı kavramları silmeyi amaçlamakta olup, bu yöntemler pahalı yeniden eğitim gerektirme, zararsız üretimlerin kalitesini düşürme veya prompt'ların yeniden ifade edilmesine ve adversarial saldırılara karşı koyamama gibi sınırlılıklar sergilemektedir. Bu zorlukların üstesinden gelmek için, prompt embedding redirection yoluyla robust unlearning için hafif bir inference-time framework olan SafeRedir'i sunuyoruz. Temel IGMs'leri değiştirmeden, SafeRedir embedding alanında token-level müdahaleler aracılığıyla güvensiz prompt'ları güvenli anlamsal bölgelere uyarlanabilir bir şekilde yönlendirir. Framework, iki temel bileşenden oluşmaktadır: güvensiz üretim yörüngelerini belirlemek için latent-aware multi-modal safety classifier ve token masking ve adaptif ölçeklendirme için yardımcı tahmincilerle donatılmış hassas anlamsal yönlendirme için token-level delta generator. Birden fazla temsili unlearning görevi boyunca elde edilen ampirik sonuçlar, SafeRedir'in etkili unlearning yeteneği, yüksek anlamsal ve algısal koruma, sağlam görüntü kalitesi ve adversarial saldırılara karşı geliştirilmiş direnç sağladığını göstermektedir. Dahası, SafeRedir, çeşitli diffusion backbones ve mevcut unlearned modeller arasında etkili bir şekilde genelleme yaparak, plug-and-play uyumluluğunu ve geniş uygulanabilirliğini doğrulamaktadır. Kod ve veriler https://github.com/ryliu68/SafeRedir adresinde mevcuttur."
     }
   }
 ]
