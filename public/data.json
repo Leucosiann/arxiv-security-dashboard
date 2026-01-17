@@ -1,210 +1,220 @@
 [
   {
-    "id": "2601.09647v1",
-    "title": "Identifying Models Behind Text-to-Image Leaderboards",
+    "id": "2601.10440v1",
+    "title": "AgentGuardian: Learning Access Control Policies to Govern AI Agent Behavior",
     "authors": [
-      "Ali Naseh",
-      "Yuefeng Peng",
-      "Anshuman Suri",
-      "Harsh Chaudhari",
-      "Alina Oprea"
+      "Nadya Abaev",
+      "Denis Klimov",
+      "Gerard Levinov",
+      "David Mimran",
+      "Yuval Elovici"
     ],
-    "published_date": "2026-01-14",
-    "tags": [
-      "cs.CV",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2601.09647v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.09647v1",
-    "content": {
-      "en": "Text-to-image (T2I) models are increasingly popular, producing a large share of AI-generated images online. To compare model quality, voting-based leaderboards have become the standard, relying on anonymized model outputs for fairness. In this work, we show that such anonymity can be easily broken. We find that generations from each T2I model form distinctive clusters in the image embedding space, enabling accurate deanonymization without prompt control or training data. Using 22 models and 280 prompts (150K images), our centroid-based method achieves high accuracy and reveals systematic model-specific signatures. We further introduce a prompt-level distinguishability metric and conduct large-scale analyses showing how certain prompts can lead to near-perfect distinguishability. Our findings expose fundamental security flaws in T2I leaderboards and motivate stronger anonymization defenses.",
-      "tr": "**Makale Başlığı: Text-to-Image Lider Tablolarının Arkasındaki Modellerin Belirlenmesi**\n\n**Özet:**\n\nText-to-image (T2I) modelleri giderek daha popüler hale gelmekte ve çevrimiçi olarak üretilen yapay zeka (AI) görsellerinin büyük bir kısmını oluşturmaktadır. Model kalitesini karşılaştırmak amacıyla, adilliği sağlamak için anonimleştirilmiş model çıktılarına dayanan oylama tabanlı lider tabloları standart hale gelmiştir. Bu çalışmada, bu tür anonimliğin kolayca kırılabileceğini gösteriyoruz. Her bir T2I modelinden elde edilen üretimlerin, image embedding space'te ayırt edici kümeler oluşturduğunu ve prompt control veya training data olmadan doğru bir şekilde anonimlikten çıkarma (deanonymization) olanağı sağladığını buluyoruz. 22 model ve 280 prompt (150K görsel) kullanarak, centroid-based methodumuz yüksek doğruluk oranı elde etmekte ve sistematik model-spesifik imzaları ortaya çıkarmaktadır. Ayrıca, prompt-level distinguishability metric'ini tanıtıyoruz ve bazı prompt'ların nasıl neredeyse mükemmel distinguishability'ye yol açabileceğini gösteren büyük ölçekli analizler yürütüyoruz. Bulgularımız, T2I lider tablolarındaki temel güvenlik açıklarını ortaya koymakta ve daha güçlü anonimleştirme savunmalarını teşvik etmektedir."
-    }
-  },
-  {
-    "id": "2601.09625v1",
-    "title": "The Promptware Kill Chain: How Prompt Injections Gradually Evolved Into a Multi-Step Malware",
-    "authors": [
-      "Ben Nassi",
-      "Bruce Schneier",
-      "Oleg Brodt"
-    ],
-    "published_date": "2026-01-14",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.09625v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.09625v1",
-    "content": {
-      "en": "The rapid adoption of large language model (LLM)-based systems -- from chatbots to autonomous agents capable of executing code and financial transactions -- has created a new attack surface that existing security frameworks inadequately address. The dominant framing of these threats as \"prompt injection\" -- a catch-all phrase for security failures in LLM-based systems -- obscures a more complex reality: Attacks on LLM-based systems increasingly involve multi-step sequences that mirror traditional malware campaigns. In this paper, we propose that attacks targeting LLM-based applications constitute a distinct class of malware, which we term \\textit{promptware}, and introduce a five-step kill chain model for analyzing these threats. The framework comprises Initial Access (prompt injection), Privilege Escalation (jailbreaking), Persistence (memory and retrieval poisoning), Lateral Movement (cross-system and cross-user propagation), and Actions on Objective (ranging from data exfiltration to unauthorized transactions). By mapping recent attacks to this structure, we demonstrate that LLM-related attacks follow systematic sequences analogous to traditional malware campaigns. The promptware kill chain offers security practitioners a structured methodology for threat modeling and provides a common vocabulary for researchers across AI safety and cybersecurity to address a rapidly evolving threat landscape.",
-      "tr": "İşte akademik makalenin başlığı ve özetinin Türkçe çevirisi:\n\n**Makale Başlığı:** Promptware Kill Chain: Prompt Enjeksiyonları Nasıl Aşamalı Olarak Çok Adımlı Zararlı Yazılımlara Dönüştü\n\n**Özet:**\nSohbet robotlarından kod ve finansal işlemler gerçekleştirebilen otonom ajanlara kadar büyük dil modeli (LLM) tabanlı sistemlerin hızla benimsenmesi, mevcut güvenlik çerçevelerinin yetersiz kaldığı yeni bir saldırı yüzeyi oluşturmuştur. Bu tehditlerin hakim olarak \"prompt injection\" olarak çerçevelenmesi -- LLM tabanlı sistemlerdeki güvenlik hataları için kullanılan genel bir ifade -- daha karmaşık bir gerçeği gizlemektedir: LLM tabanlı sistemlere yönelik saldırılar giderek artan bir şekilde geleneksel zararlı yazılım kampanyalarını yansıtan çok adımlı diziler içermektedir. Bu makalede, LLM tabanlı uygulamaları hedef alan saldırıların, bizin \\textit{promptware} olarak adlandırdığımız ayırt edici bir zararlı yazılım sınıfı oluşturduğunu öne sürüyor ve bu tehditleri analiz etmek için beş adımlı bir kill chain modeli sunuyoruz. Çerçeve, İlk Erişim (prompt injection), Yetki Yükseltme (jailbreaking), Kalıcılık (memory and retrieval poisoning), Yanal Hareket (cross-system and cross-user propagation) ve Amaç Üzerindeki Eylemler (veri sızdırmadan yetkisiz işlemlere kadar) içermektedir. Son saldırıları bu yapıya haritalayarak, LLM ile ilgili saldırıların geleneksel zararlı yazılım kampanyalarına benzer sistematik dizileri takip ettiğini gösteriyoruz. Promptware kill chain, güvenlik uygulayıcılarına tehdit modellemesi için yapılandırılmış bir metodoloji sunar ve AI safety ile cybersecurity alanındaki araştırmacılara hızla gelişen bir tehdit ortamıyla başa çıkmak için ortak bir kelime dağarcığı sağlar."
-    }
-  },
-  {
-    "id": "2601.09460v1",
-    "title": "SoK: Enhancing Cryptographic Collaborative Learning with Differential Privacy",
-    "authors": [
-      "Francesco Capano",
-      "Jonas Böhler",
-      "Benjamin Weggenmann"
-    ],
-    "published_date": "2026-01-14",
+    "published_date": "2026-01-15",
     "tags": [
       "cs.CR",
       "cs.AI",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2601.09460v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.09460v1",
+    "link": "http://arxiv.org/abs/2601.10440v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.10440v1",
     "content": {
-      "en": "In collaborative learning (CL), multiple parties jointly train a machine learning model on their private datasets. However, data can not be shared directly due to privacy concerns. To ensure input confidentiality, cryptographic techniques, e.g., multi-party computation (MPC), enable training on encrypted data. Yet, even securely trained models are vulnerable to inference attacks aiming to extract memorized data from model outputs. To ensure output privacy and mitigate inference attacks, differential privacy (DP) injects calibrated noise during training. While cryptography and DP offer complementary guarantees, combining them efficiently for cryptographic and differentially private CL (CPCL) is challenging. Cryptography incurs performance overheads, while DP degrades accuracy, creating a privacy-accuracy-performance trade-off that needs careful design considerations. This work systematizes the CPCL landscape. We introduce a unified framework that generalizes common phases across CPCL paradigms, and identify secure noise sampling as the foundational phase to achieve CPCL. We analyze trade-offs of different secure noise sampling techniques, noise types, and DP mechanisms discussing their implementation challenges and evaluating their accuracy and cryptographic overhead across CPCL paradigms. Additionally, we implement identified secure noise sampling options in MPC and evaluate their computation and communication costs in WAN and LAN. Finally, we propose future research directions based on identified key observations, gaps and possible enhancements in the literature.",
-      "tr": "İşte akademik makale başlığı ve özetinin Türkçeye çevirisi, istenen teknik terimlerin İngilizce bırakıldığı ve resmi, akademik bir dilin kullanıldığı haliyle:\n\n**Makale Başlığı:** SoK: Differential Privacy ile Kriptografik İşbirlikçi Öğrenmenin Geliştirilmesi\n\n**Özet:**\nİşbirlikçi öğrenmede (CL), birden fazla taraf kendi özel veri kümeleri üzerinde ortaklaşa bir makine öğrenmesi modeli eğitir. Ancak, gizlilik endişeleri nedeniyle veriler doğrudan paylaşılamaz. Girdi gizliliğini sağlamak için kriptografik teknikler, örneğin multi-party computation (MPC), şifrelenmiş veriler üzerinde eğitime olanak tanır. Yine de, güvenli bir şekilde eğitilmiş modeller bile, model çıktılarından ezberlenmiş verileri çıkarmayı amaçlayan inference attacks saldırılarına karşı savunmasızdır. Çıktı gizliliğini sağlamak ve inference attacks saldırılarını azaltmak için differential privacy (DP), eğitim sırasında kalibre edilmiş gürültü ekler. Kriptografi ve DP tamamlayıcı garantiler sunarken, bunları kriptografik ve differentially private CL (CPCL) için verimli bir şekilde birleştirmek zorludur. Kriptografi performans maliyetleri getirirken, DP doğruluk oranını düşürür, bu da dikkatli tasarım gerektiren bir privacy-accuracy-performance trade-off'u oluşturur. Bu çalışma, CPCL manzarasını sistematikleştirir. CPCL paradigmaları boyunca ortak fazları genelleştiren bir birleşik framework sunuyoruz ve CPCL'yi başarmak için temel faz olarak secure noise sampling'i tanımlıyoruz. Farklı secure noise sampling tekniklerinin, noise türlerinin ve DP mekanizmalarının trade-off'larını analiz ediyor, uygulama zorluklarını tartışıyor ve CPCL paradigmaları boyunca doğruluk oranlarını ve kriptografik maliyetlerini değerlendiriyoruz. Ek olarak, belirlenmiş secure noise sampling seçeneklerini MPC içinde uyguluyor ve WAN ve LAN'daki hesaplama ve iletişim maliyetlerini değerlendiriyoruz. Son olarak, literatürdeki belirlenen temel gözlemler, boşluklar ve olası iyileştirmelere dayanan gelecekteki araştırma yönleri öneriyoruz."
+      "en": "Artificial intelligence (AI) agents are increasingly used in a variety of domains to automate tasks, interact with users, and make decisions based on data inputs. Ensuring that AI agents perform only authorized actions and handle inputs appropriately is essential for maintaining system integrity and preventing misuse. In this study, we introduce the AgentGuardian, a novel security framework that governs and protects AI agent operations by enforcing context-aware access-control policies. During a controlled staging phase, the framework monitors execution traces to learn legitimate agent behaviors and input patterns. From this phase, it derives adaptive policies that regulate tool calls made by the agent, guided by both real-time input context and the control flow dependencies of multi-step agent actions. Evaluation across two real-world AI agent applications demonstrates that AgentGuardian effectively detects malicious or misleading inputs while preserving normal agent functionality. Moreover, its control-flow-based governance mechanism mitigates hallucination-driven errors and other orchestration-level malfunctions.",
+      "tr": "**Makale Başlığı:** AgentGuardian: Yapay Zeka Ajanlarının Davranışlarını Yönetmek İçin Erişim Kontrol Politikaları Öğrenme\n\n**Özet:**\n\nYapay zeka (AI) ajanları, görevleri otomatikleştirmek, kullanıcılarla etkileşim kurmak ve veri girdilerine dayalı kararlar almak için çeşitli alanlarda giderek daha fazla kullanılmaktadır. AI ajanlarının yalnızca yetkilendirilmiş eylemleri gerçekleştirmesini ve girdileri uygun şekilde işlemesini sağlamak, sistem bütünlüğünü korumak ve kötüye kullanımı önlemek için elzemdir. Bu çalışmada, bağlam-farkındalığına sahip erişim kontrolü politikalarını uygulayarak AI ajanlarının işlemlerini yöneten ve koruyan yeni bir güvenlik çerçevesi olan AgentGuardian'ı sunuyoruz. Kontrollü bir hazırlık aşaması sırasında çerçeve, meşru ajan davranışlarını ve girdi kalıplarını öğrenmek için yürütme izlerini izler. Bu aşamadan, hem gerçek zamanlı girdi bağlamı hem de çok adımlı ajan eylemlerinin kontrol akışı bağımlılıkları tarafından yönlendirilen, ajan tarafından yapılan araç çağrılarını düzenleyen uyarlanabilir politikalar türetir. İki gerçek dünya AI ajanı uygulaması üzerinde yapılan değerlendirme, AgentGuardian'ın normal ajan işlevselliğini korurken kötü niyetli veya yanıltıcı girdileri etkili bir şekilde tespit ettiğini göstermektedir. Dahası, kontrol akışı tabanlı yönetim mekanizması, hallucination-driven errors ve diğer orkestrasyon seviyesi arızalarını azaltır."
     }
   },
   {
-    "id": "2601.09292v1",
-    "title": "Blue Teaming Function-Calling Agents",
+    "id": "2601.10413v1",
+    "title": "LADFA: A Framework of Using Large Language Models and Retrieval-Augmented Generation for Personal Data Flow Analysis in Privacy Policies",
     "authors": [
-      "Greta Dolcetti",
-      "Giulio Zizzo",
-      "Sergio Maffeis"
+      "Haiyue Yuan",
+      "Nikolay Matyunin",
+      "Ali Raza",
+      "Shujun Li"
     ],
-    "published_date": "2026-01-14",
+    "published_date": "2026-01-15",
     "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.09292v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.09292v1",
-    "content": {
-      "en": "We present an experimental evaluation that assesses the robustness of four open source LLMs claiming function-calling capabilities against three different attacks, and we measure the effectiveness of eight different defences. Our results show how these models are not safe by default, and how the defences are not yet employable in real-world scenarios.",
-      "tr": "İşte akademik makale başlığının ve özetinin teknik terimler korunarak Türkçeye çevrilmiş hali:\n\n**Makale Başlığı:** Blue Teaming Function-Calling Agents\n\n**Özet:**\n\nDört açık kaynaklı LLM'nin function-calling yetenekleri iddiasını, üç farklı saldırıya karşı dayanıklılığını değerlendiren deneysel bir inceleme sunuyoruz ve sekiz farklı savunmanın etkinliğini ölçüyoruz. Sonuçlarımız, bu modellerin varsayılan olarak güvenli olmadığını ve savunmaların henüz gerçek dünya senaryolarında kullanılamayacağını göstermektedir."
-    }
-  },
-  {
-    "id": "2601.09287v1",
-    "title": "Explainable Autoencoder-Based Anomaly Detection in IEC 61850 GOOSE Networks",
-    "authors": [
-      "Dafne Lozano-Paredes",
-      "Luis Bote-Curiel",
-      "Juan Ramón Feijóo-Martínez",
-      "Ismael Gómez-Talal",
-      "José Luis Rojo-Álvarez"
-    ],
-    "published_date": "2026-01-14",
-    "tags": [
-      "cs.CR",
-      "cs.LG",
-      "eess.SP"
-    ],
-    "link": "http://arxiv.org/abs/2601.09287v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.09287v1",
-    "content": {
-      "en": "The IEC 61850 Generic Object-Oriented Substation Event (GOOSE) protocol plays a critical role in real-time protection and automation of digital substations, yet its lack of native security mechanisms can expose power systems to sophisticated cyberattacks. Traditional rule-based and supervised intrusion detection techniques struggle to detect protocol-compliant and zero-day attacks under significant class imbalance and limited availability of labeled data. This paper proposes an explainable, unsupervised multi-view anomaly detection framework for IEC 61850 GOOSE networks that explicitly separates semantic integrity and temporal availability. The approach employs asymmetric autoencoders trained only on real operational GOOSE traffic to learn distinct latent representations of sequence-based protocol semantics and timing-related transmission dynamics in normal traffic. Anomaly detection is implemented using reconstruction errors mixed with statistically grounded thresholds, enabling robust detection without specified attack types. Feature-level reconstruction analysis provides intrinsic explainability by directly linking detection outcomes to IEC 61850 protocol characteristics. The proposed framework is evaluated using real substation traffic for training and a public dataset containing normal traffic and message suppression, data manipulation, and denial-of-service attacks for testing. Experimental results show attack detection rates above 99% with false positives remaining below 5% of total traffic, demonstrating strong generalization across environments and effective operation under extreme class imbalance and interpretable anomaly attribution.",
-      "tr": "**Makale Başlığı:** IEC 61850 GOOSE Ağlarında Açıklanabilir Otomatik Kodlayıcı Tabanlı Anomali Tespiti\n\n**Özet:**\n\nIEC 61850 Generic Object-Oriented Substation Event (GOOSE) protokolü, dijital trafo merkezlerinin gerçek zamanlı koruma ve otomasyonunda kritik bir rol oynamaktadır. Ancak, yerleşik güvenlik mekanizmalarının eksikliği, enerji sistemlerini sofistike siber saldırılara maruz bırakabilmektedir. Geleneksel kural tabanlı ve denetimli saldırı tespit teknikleri, önemli sınıf dengesizliği ve etiketli veri kıtlığı altında, protokole uyumlu ve sıfır gün saldırılarını tespit etmekte zorlanmaktadır. Bu makale, IEC 61850 GOOSE ağları için, semantik bütünlük ve zamansal kullanılabilirliği açıkça ayıran, açıklanabilir, denetimsiz çok görünümlü bir anomali tespit çerçevesi sunmaktadır. Yaklaşım, yalnızca gerçek operasyonel GOOSE trafiği üzerinde eğitilmiş asimetrik autoencoders kullanarak, sıra tabanlı protokol semantiği ve zamanla ilgili iletim dinamiklerinin belirgin gizli temsillerini normal trafikte öğrenir. Anomali tespiti, belirtilen saldırı türleri olmadan sağlam bir tespit sağlayan, istatistiksel olarak temellendirilmiş eşiklerle karıştırılmış yeniden yapılandırma hataları kullanılarak gerçekleştirilir. Özellik düzeyinde yeniden yapılandırma analizi, tespit sonuçlarını doğrudan IEC 61850 protokol özelliklerine bağlayarak içsel açıklanabilirlik sağlar. Önerilen çerçeve, eğitim için gerçek trafo merkezi trafiği ve test için normal trafik ile mesaj bastırma, veri manipülasyonu ve hizmet reddi saldırıları içeren bir halka açık veri kümesi kullanılarak değerlendirilmiştir. Deneysel sonuçlar, toplam trafiğin %5'inin altında yanlış pozitifler ile %99'un üzerinde saldırı tespit oranları göstermektedir. Bu, ortamlar arasında güçlü genelleme yeteneği ve aşırı sınıf dengesizliği altında etkili operasyon ile yorumlanabilir anomali atıfı sergilemektedir."
-    }
-  },
-  {
-    "id": "2601.09166v1",
-    "title": "DP-FEDSOFIM: Differentially Private Federated Stochastic Optimization using Regularized Fisher Information Matrix",
-    "authors": [
-      "Sidhant R. Nair",
-      "Tanmay Sen",
-      "Mrinmay Sen"
-    ],
-    "published_date": "2026-01-14",
-    "tags": [
-      "cs.LG",
-      "cs.CR",
-      "cs.DC"
-    ],
-    "link": "http://arxiv.org/abs/2601.09166v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.09166v1",
-    "content": {
-      "en": "Differentially private federated learning (DP-FL) suffers from slow convergence under tight privacy budgets due to the overwhelming noise introduced to preserve privacy. While adaptive optimizers can accelerate convergence, existing second-order methods such as DP-FedNew require O(d^2) memory at each client to maintain local feature covariance matrices, making them impractical for high-dimensional models. We propose DP-FedSOFIM, a server-side second-order optimization framework that leverages the Fisher Information Matrix (FIM) as a natural gradient preconditioner while requiring only O(d) memory per client. By employing the Sherman-Morrison formula for efficient matrix inversion, DP-FedSOFIM achieves O(d) computational complexity per round while maintaining the convergence benefits of second-order methods. Our analysis proves that the server-side preconditioning preserves (epsilon, delta)-differential privacy through the post-processing theorem. Empirical evaluation on CIFAR-10 demonstrates that DP-FedSOFIM achieves superior test accuracy compared to first-order baselines across multiple privacy regimes.",
-      "tr": "Elbette, istenen çeviriyi aşağıda bulabilirsiniz:\n\n**Makale Başlığı:** DP-FEDSOFIM: Düzenlenmiş Fisher Bilgi Matrisi Kullanarak Diferansiyel Olarak Gizli Federated Stokastik Optimizasyon\n\n**Özet:**\nDifferentially private federated learning (DP-FL), gizliliği korumak için eklenen aşırı gürültü nedeniyle sıkı gizlilik bütçeleri altında yavaş yakınsama sorunundan muzdariptir. Adaptif optimizerlar yakınsamayı hızlandırabilirken, mevcut ikinci dereceden yöntemler olan DP-FedNew gibi her istemcide yerel özellik kovaryans matrislerini tutmak için O(d^2) bellek gerektirir, bu da onları yüksek boyutlu modeller için pratik olmaktan çıkarır. DP-FedSOFIM'i öneriyoruz; bu, Fisher Information Matrix'i (FIM) doğal bir gradyan ön koşullandırıcısı olarak kullanan, ancak istemci başına yalnızca O(d) bellek gerektiren sunucu tabanlı bir ikinci dereceden optimizasyon çerçevesidir. Verimli matris ters çevirme için Sherman-Morrison formülünü kullanarak, DP-FedSOFIM, ikinci dereceden yöntemlerin yakınsama avantajlarını korurken tur başına O(d) hesaplama karmaşıklığına ulaşır. Analizimiz, sunucu tarafı ön koşullandırmanın post-processing theorem aracılığıyla (epsilon, delta)-differential privacy'yi koruduğunu kanıtlamaktadır. CIFAR-10 üzerindeki ampirik değerlendirme, DP-FedSOFIM'in birden fazla gizlilik rejimi boyunca birinci dereceden temel çizgilere kıyasla üstün test doğruluğu elde ettiğini göstermektedir."
-    }
-  },
-  {
-    "id": "2601.09157v1",
-    "title": "Deep Learning-based Binary Analysis for Vulnerability Detection in x86-64 Machine Code",
-    "authors": [
-      "Mitchell Petingola"
-    ],
-    "published_date": "2026-01-14",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2601.09157v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.09157v1",
-    "content": {
-      "en": "While much of the current research in deep learning-based vulnerability detection relies on disassembled binaries, this paper explores the feasibility of extracting features directly from raw x86-64 machine code. Although assembly language is more interpretable for humans, it requires more complex models to capture token-level context. In contrast, machine code may enable more efficient, lightweight models and preserve all information that might be lost in disassembly. This paper approaches the task of vulnerability detection through an exploratory study on two specific deep learning model architectures and aims to systematically evaluate their performance across three vulnerability types. The results demonstrate that graph-based models consistently outperform sequential models, emphasizing the importance of control flow relationships, and that machine code contains sufficient information for effective vulnerability discovery.",
-      "tr": "**Makale Başlığı:** x86-64 Makine Kodunda Güvenlik Açığı Tespiti İçin Derin Öğrenme Tabanlı İkili Analiz\n\n**Özet:**\n\nMevcut derin öğrenme tabanlı güvenlik açığı tespiti araştırmalarının büyük bir kısmı ayrıştırılmış (disassembled) ikili (binaries) verilere dayanırken, bu çalışma ham x86-64 makine kodundan doğrudan özellik çıkarmanın fizibilitesini araştırmaktadır. Assembly dili insanlar için daha anlaşılır olsa da, token-seviyesi bağlamı yakalamak için daha karmaşık modellere ihtiyaç duyar. Buna karşılık, makine kodu daha verimli, hafif modelleri mümkün kılabilir ve ayrıştırma sırasında kaybolabilecek tüm bilgileri koruyabilir. Bu çalışma, iki spesifik derin öğrenme model mimarisi üzerinde yapılan keşifsel bir çalışma aracılığıyla güvenlik açığı tespiti görevine yaklaşmakta ve üç güvenlik açığı türündeki performanslarını sistematik olarak değerlendirmeyi amaçlamaktadır. Sonuçlar, graph-based modellerin sıralı (sequential) modellere göre tutarlı bir şekilde daha iyi performans gösterdiğini, kontrol akışı (control flow) ilişkilerinin önemini vurguladığını ve makine kodunun etkili güvenlik açığı keşfi için yeterli bilgi içerdiğini göstermektedir."
-    }
-  },
-  {
-    "id": "2601.09035v1",
-    "title": "A Decompilation-Driven Framework for Malware Detection with Large Language Models",
-    "authors": [
-      "Aniesh Chawla",
-      "Udbhav Prasad"
-    ],
-    "published_date": "2026-01-14",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.09035v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.09035v1",
-    "content": {
-      "en": "The parallel evolution of Large Language Models (LLMs) with advanced code-understanding capabilities and the increasing sophistication of malware presents a new frontier for cybersecurity research. This paper evaluates the efficacy of state-of-the-art LLMs in classifying executable code as either benign or malicious. We introduce an automated pipeline that first decompiles Windows executable into a C code using Ghidra disassembler and then leverages LLMs to perform the classification. Our evaluation reveals that while standard LLMs show promise, they are not yet robust enough to replace traditional anti-virus software. We demonstrate that a fine-tuned model, trained on curated malware and benign datasets, significantly outperforms its vanilla counterpart. However, the performance of even this specialized model degrades notably when encountering newer malware. This finding demonstrates the critical need for continuous fine-tuning with emerging threats to maintain model effectiveness against the changing coding patterns and behaviors of malicious software.",
-      "tr": "**Makale Başlığı:** Büyük Dil Modelleri ile Kötü Amaçlı Yazılım Tespiti için Bir Dekompilasyon Odaklı Çerçeve\n\n**Özet:**\n\nBüyük Dil Modelleri (LLMs)'nin gelişmiş kod anlama yetenekleri ile paralel gelişimi ve kötü amaçlı yazılımların artan karmaşıklığı, siber güvenlik araştırmaları için yeni bir alan sunmaktadır. Bu çalışma, en ileri düzey LLM'lerin yürütülebilir kodu zararsız veya kötü amaçlı olarak sınıflandırmadaki etkinliğini değerlendirmektedir. Otomatik bir pipeline sunuyoruz; bu pipeline öncelikle Ghidra disassembler kullanarak Windows yürütülebilir dosyasını C koduna decompile etmekte ve ardından sınıflandırma işlemini gerçekleştirmek için LLM'leri kullanmaktadır. Değerlendirmemiz, standart LLM'lerin umut vaat etmesine rağmen, geleneksel antivirüs yazılımlarının yerini alacak kadar henüz sağlam olmadığını ortaya koymaktadır. Derlenmiş kötü amaçlı yazılım ve zararsız veri kümeleri üzerinde eğitilmiş ince ayar yapılmış (fine-tuned) bir modelin, standart (vanilla) modeline göre önemli ölçüde daha iyi performans gösterdiğini göstermekteyiz. Bununla birlikte, bu özel modelin performansı bile daha yeni kötü amaçlı yazılımlarla karşılaştığında belirgin şekilde düşmektedir. Bu bulgu, değişen kodlama örüntülerine ve kötü amaçlı yazılımların davranışlarına karşı model etkinliğini sürdürmek için ortaya çıkan tehditlerle sürekli ince ayar yapmanın kritik gerekliliğini göstermektedir."
-    }
-  },
-  {
-    "id": "2601.09029v1",
-    "title": "Proactively Detecting Threats: A Novel Approach Using LLMs",
-    "authors": [
-      "Aniesh Chawla",
-      "Udbhav Prasad"
-    ],
-    "published_date": "2026-01-13",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.09029v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.09029v1",
-    "content": {
-      "en": "Enterprise security faces escalating threats from sophisticated malware, compounded by expanding digital operations. This paper presents the first systematic evaluation of large language models (LLMs) to proactively identify indicators of compromise (IOCs) from unstructured web-based threat intelligence sources, distinguishing it from reactive malware detection approaches. We developed an automated system that pulls IOCs from 15 web-based threat report sources to evaluate six LLM models (Gemini, Qwen, and Llama variants). Our evaluation of 479 webpages containing 2,658 IOCs (711 IPv4 addresses, 502 IPv6 addresses, 1,445 domains) reveals significant performance variations. Gemini 1.5 Pro achieved 0.958 precision and 0.788 specificity for malicious IOC identification, while demonstrating perfect recall (1.0) for actual threats.",
-      "tr": "**Makale Başlığı: Proaktif Tehdit Tespiti: LLM'ler Kullanılarak Yeni Bir Yaklaşım**\n\n**Özet:**\nKurumsal güvenlik, gelişmiş kötü amaçlı yazılımlardan kaynaklanan ve dijital operasyonların genişlemesiyle daha da karmaşıklaşan tehditlerle karşı karşıyadır. Bu makale, yapılandırılmamış web tabanlı tehdit istihbaratı kaynaklarından uzlaşma göstergelerini (IOCs) proaktif olarak tanımlamak için büyük dil modellerinin (LLMs) ilk sistematik değerlendirmesini sunmaktadır. Bu yaklaşım, reaktif kötü amaçlı yazılım tespit yöntemlerinden farklıdır. 15 web tabanlı tehdit raporu kaynağından IOC'leri çeken otomatik bir sistem geliştirdik ve altı LLM modelini (Gemini, Qwen ve Llama varyantları) değerlendirdik. 2.658 IOC (711 IPv4 adresi, 502 IPv6 adresi, 1.445 alan adı) içeren 479 web sayfasının değerlendirmemiz, önemli performans farklılıklarını ortaya koymaktadır. Gemini 1.5 Pro, kötü niyetli IOC tanımlamasında 0.958 precision ve 0.788 specificity elde etmiş, gerçek tehditler için ise mükemmel recall (1.0) sergilemiştir."
-    }
-  },
-  {
-    "id": "2601.08623v1",
-    "title": "SafeRedir: Prompt Embedding Redirection for Robust Unlearning in Image Generation Models",
-    "authors": [
-      "Renyang Liu",
-      "Kangjie Chen",
-      "Han Qiu",
-      "Jie Zhang",
-      "Kwok-Yan Lam"
-    ],
-    "published_date": "2026-01-13",
-    "tags": [
-      "cs.CV",
       "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2601.10413v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.10413v1",
+    "content": {
+      "en": "Privacy policies help inform people about organisations' personal data processing practices, covering different aspects such as data collection, data storage, and sharing of personal data with third parties. Privacy policies are often difficult for people to fully comprehend due to the lengthy and complex legal language used and inconsistent practices across different sectors and organisations. To help conduct automated and large-scale analyses of privacy policies, many researchers have studied applications of machine learning and natural language processing techniques, including large language models (LLMs). While a limited number of prior studies utilised LLMs for extracting personal data flows from privacy policies, our approach builds on this line of work by combining LLMs with retrieval-augmented generation (RAG) and a customised knowledge base derived from existing studies. This paper presents the development of LADFA, an end-to-end computational framework, which can process unstructured text in a given privacy policy, extract personal data flows and construct a personal data flow graph, and conduct analysis of the data flow graph to facilitate insight discovery. The framework consists of a pre-processor, an LLM-based processor, and a data flow post-processor. We demonstrated and validated the effectiveness and accuracy of the proposed approach by conducting a case study that involved examining ten selected privacy policies from the automotive industry. Moreover, it is worth noting that LADFA is designed to be flexible and customisable, making it suitable for a range of text-based analysis tasks beyond privacy policy analysis.",
+      "tr": "Kesinlikle, işte istenen çeviri:\n\n**Makale Başlığı:** LADFA: Kişisel Veri Akışının Gizlilik Politikalarında Analizi İçin Large Language Models ve Retrieval-Augmented Generation Kullanımına İlişkin Bir Çerçeve\n\n**Özet:**\n\nGizlilik politikaları, kuruluşların kişisel veri işleme uygulamaları hakkında insanları bilgilendirmeye yardımcı olurken, veri toplama, veri depolama ve üçüncü taraflarla kişisel veri paylaşımı gibi farklı yönleri kapsamaktadır. Kullanılan uzun ve karmaşık hukuki dil ve farklı sektörler ile kuruluşlar arasındaki tutarsız uygulamalar nedeniyle gizlilik politikalarının insanlar tarafından tam olarak anlaşılması genellikle zordur. Gizlilik politikalarının otomatik ve büyük ölçekli analizlerini yürütmeye yardımcı olmak amacıyla, birçok araştırmacı large language models (LLMs) dahil olmak üzere makine öğrenmesi ve doğal dil işleme tekniklerinin uygulamalarını incelemiştir. LLM'leri gizlilik politikalarından kişisel veri akışlarını çıkarmak için kullanan sınırlı sayıda önceki çalışma bulunsa da, yaklaşımımız, LLM'leri retrieval-augmented generation (RAG) ve mevcut çalışmalardan türetilmiş özelleştirilmiş bir knowledge base ile birleştirerek bu alandaki çalışmaları temel almaktadır. Bu makale, LADFA'nın, yani verilen bir gizlilik politikasındaki yapılandırılmamış metni işleyebilen, kişisel veri akışlarını çıkarıp bir personal data flow graph oluşturabilen ve insight discovery'yi kolaylaştırmak amacıyla data flow graph analizini yürütebilen uçtan uca bir computational framework'ün geliştirilmesini sunmaktadır. Bu framework, bir pre-processor, bir LLM-based processor ve bir data flow post-processor'dan oluşmaktadır. Otomotiv endüstrisinden seçilmiş on gizlilik politikasını incelemeyi içeren bir vaka çalışması yürütülerek önerilen yaklaşımın etkinliği ve doğruluğu gösterilmiş ve doğrulanmıştır. Dahası, LADFA'nın esnek ve özelleştirilebilir olacak şekilde tasarlandığı, böylece gizlilik politikası analizinin ötesinde bir dizi metin tabanlı analiz görevi için uygun olduğu belirtilmeye değerdir."
+    }
+  },
+  {
+    "id": "2601.10338v1",
+    "title": "Agent Skills in the Wild: An Empirical Study of Security Vulnerabilities at Scale",
+    "authors": [
+      "Yi Liu",
+      "Weizhe Wang",
+      "Ruitao Feng",
+      "Yao Zhang",
+      "Guangquan Xu"
+    ],
+    "published_date": "2026-01-15",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL",
+      "cs.SE"
+    ],
+    "link": "http://arxiv.org/abs/2601.10338v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.10338v1",
+    "content": {
+      "en": "The rise of AI agent frameworks has introduced agent skills, modular packages containing instructions and executable code that dynamically extend agent capabilities. While this architecture enables powerful customization, skills execute with implicit trust and minimal vetting, creating a significant yet uncharacterized attack surface. We conduct the first large-scale empirical security analysis of this emerging ecosystem, collecting 42,447 skills from two major marketplaces and systematically analyzing 31,132 using SkillScan, a multi-stage detection framework integrating static analysis with LLM-based semantic classification. Our findings reveal pervasive security risks: 26.1% of skills contain at least one vulnerability, spanning 14 distinct patterns across four categories: prompt injection, data exfiltration, privilege escalation, and supply chain risks. Data exfiltration (13.3%) and privilege escalation (11.8%) are most prevalent, while 5.2% of skills exhibit high-severity patterns strongly suggesting malicious intent. We find that skills bundling executable scripts are 2.12x more likely to contain vulnerabilities than instruction-only skills (OR=2.12, p<0.001). Our contributions include: (1) a grounded vulnerability taxonomy derived from 8,126 vulnerable skills, (2) a validated detection methodology achieving 86.7% precision and 82.5% recall, and (3) an open dataset and detection toolkit to support future research. These results demonstrate an urgent need for capability-based permission systems and mandatory security vetting before this attack vector is further exploited.",
+      "tr": "**Makale Başlığı:** Agent Skills in the Wild: An Empirical Study of Security Vulnerabilities at Scale\n\n**Özet:**\n\nYapay zeka agent framework'lerinin yükselişi, agent yeteneklerini dinamik olarak genişleten talimatlar ve yürütülebilir kod içeren modüler paketler olan agent skills'i beraberinde getirmiştir. Bu mimari güçlü özelleştirmelere olanak tanırken, skills'ler örtük güven ve minimum inceleme ile çalışmakta, bu da önemli ancak karakterize edilmemiş bir saldırı yüzeyi oluşturmaktadır. Bu gelişmekte olan ekosistemin ilk büyük ölçekli ampirik güvenlik analizini gerçekleştiriyor, iki büyük marketplace'ten 42.447 skill topluyor ve statik analiz ile LLM-based semantic classification'ı entegre eden çok aşamalı bir tespit çerçevesi olan SkillScan'i kullanarak 31.132 skill'i sistematik olarak analiz ediyoruz. Bulgularımız yaygın güvenlik risklerini ortaya koymaktadır: skills'lerin %26,1'i en az bir güvenlik açığı içermekte olup, bu açıkları dört kategori altında 14 farklı örüntü kapsamaktadır: prompt injection, data exfiltration, privilege escalation ve supply chain risks. Data exfiltration (%13,3) ve privilege escalation (%11,8) en yaygın olanlarıdır, oysa skills'lerin %5,2'si kötü niyetli bir amacı güçlü bir şekilde ima eden yüksek şiddetli örüntüler sergilemektedir. Yürütülebilir script'leri birleştiren skills'lerin, yalnızca talimat içeren skills'lere göre (%OR=2.12, p<0.001) %2,12 daha fazla güvenlik açığı içerme olasılığının daha yüksek olduğunu bulduk. Katkılarımız şunları içermektedir: (1) 8.126 savunmasız skill'den türetilmiş temellendirilmiş bir güvenlik açığı taksonomisi, (2) %86,7 kesinlik ve %82,5 recall sağlayan doğrulanmış bir tespit metodolojisi ve (3) gelecekteki araştırmaları destekleyecek açık bir veri kümesi ve tespit araç seti. Bu sonuçlar, bu saldırı vektörünün daha fazla istismar edilmesinden önce, yetenek tabanlı izin sistemlerine ve zorunlu güvenlik incelemesine acil bir ihtiyaç olduğunu göstermektedir."
+    }
+  },
+  {
+    "id": "2601.10237v1",
+    "title": "Fundamental Limitations of Favorable Privacy-Utility Guarantees for DP-SGD",
+    "authors": [
+      "Murat Bilgehan Ertan",
+      "Marten van Dijk"
+    ],
+    "published_date": "2026-01-15",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2601.10237v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.10237v1",
+    "content": {
+      "en": "Differentially Private Stochastic Gradient Descent (DP-SGD) is the dominant paradigm for private training, but its fundamental limitations under worst-case adversarial privacy definitions remain poorly understood. We analyze DP-SGD in the $f$-differential privacy framework, which characterizes privacy via hypothesis-testing trade-off curves, and study shuffled sampling over a single epoch with $M$ gradient updates. We derive an explicit suboptimal upper bound on the achievable trade-off curve. This result induces a geometric lower bound on the separation $κ$ which is the maximum distance between the mechanism's trade-off curve and the ideal random-guessing line. Because a large separation implies significant adversarial advantage, meaningful privacy requires small $κ$. However, we prove that enforcing a small separation imposes a strict lower bound on the Gaussian noise multiplier $σ$, which directly limits the achievable utility. In particular, under the standard worst-case adversarial model, shuffled DP-SGD must satisfy   $σ\\ge \\frac{1}{\\sqrt{2\\ln M}}$ $\\quad\\text{or}\\quad$ $κ\\ge\\ \\frac{1}{\\sqrt{8}}\\!\\left(1-\\frac{1}{\\sqrt{4π\\ln M}}\\right)$,   and thus cannot simultaneously achieve strong privacy and high utility. Although this bound vanishes asymptotically as $M \\to \\infty$, the convergence is extremely slow: even for practically relevant numbers of updates the required noise magnitude remains substantial. We further show that the same limitation extends to Poisson subsampling up to constant factors. Our experiments confirm that the noise levels implied by this bound leads to significant accuracy degradation at realistic training settings, thus showing a critical bottleneck in DP-SGD under standard worst-case adversarial assumptions.",
+      "tr": "İşte makale başlığının ve özetinin çevirisi:\n\n**Makale Başlığı:** DP-SGD için Elverişli Gizlilik-Fayda Garantilerinin Temel Sınırlılıkları\n\n**Özet:**\nDifferentially Private Stochastic Gradient Descent (DP-SGD), özel eğitim için baskın paradigma olmuştur, ancak worst-case adversarial privacy tanımları altındaki temel sınırlılıkları hala yeterince anlaşılmamıştır. DP-SGD'yi, gizliliği hypothesis-testing trade-off curves aracılığıyla karakterize eden $f$-differential privacy çerçevesinde analiz ediyoruz ve $M$ gradient güncellemesi ile tek bir epoch üzerindeki shuffled sampling'i inceliyoruz. Elde edilebilir trade-off curve için açıkça suboptimal bir üst sınır türetiyoruz. Bu sonuç, mekanizmanın trade-off curve'ü ile ideal random-guessing line arasındaki maksimum mesafe olan ayırım $κ$ üzerinde geometrik bir alt sınır zorlar. Çünkü büyük bir ayırım, önemli bir adversarial avantaj anlamına gelir, anlamlı gizlilik küçük $κ$ gerektirir. Bununla birlikte, küçük bir ayırımın zorlanmasının Gaussian noise multiplier $σ$ üzerinde kesin bir alt sınır dayattığını kanıtlıyoruz, bu da elde edilebilir faydayı doğrudan sınırlar. Özellikle, standart worst-case adversarial model altında, shuffled DP-SGD şu koşulları sağlamalıdır: $σ\\ge \\frac{1}{\\sqrt{2\\ln M}}$ $\\quad\\text{veya}\\quad$ $κ\\ge\\ \\frac{1}{\\sqrt{8}}\\!\\left(1-\\frac{1}{\\sqrt{4π\\ln M}}\\right)$, ve bu nedenle hem güçlü gizliliği hem de yüksek faydayı eş zamanlı olarak elde edemez. Bu sınır $M \\to \\infty$ olarak asimptotik olarak sıfır olsa da, yakınsama son derece yavaştır: pratik olarak ilgili sayıda güncelleme için bile gerekli gürültü büyüklüğü önemli kalmaktadır. Poisson subsampling'in de sabit faktörlere kadar aynı sınırlılığa sahip olduğunu daha da gösteriyoruz. Deneylerimiz, bu sınırlılığın ima ettiği gürültü seviyelerinin, gerçekçi eğitim ayarlarında önemli doğruluk düşüşlerine yol açtığını doğrulamaktadır, böylece standart worst-case adversarial varsayımlar altında DP-SGD'de kritik bir darboğaz göstermektedir."
+    }
+  },
+  {
+    "id": "2601.10212v1",
+    "title": "PADER: Paillier-based Secure Decentralized Social Recommendation",
+    "authors": [
+      "Chaochao Chen",
+      "Jiaming Qian",
+      "Fei Zheng",
+      "Yachuan Liu"
+    ],
+    "published_date": "2026-01-15",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.10212v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.10212v1",
+    "content": {
+      "en": "The prevalence of recommendation systems also brings privacy concerns to both the users and the sellers, as centralized platforms collect as much data as possible from them. To keep the data private, we propose PADER: a Paillier-based secure decentralized social recommendation system. In this system, the users and the sellers are nodes in a decentralized network. The training and inference of the recommendation model are carried out securely in a decentralized manner, without the involvement of a centralized platform. To this end, we apply the Paillier cryptosystem to the SoReg (Social Regularization) model, which exploits both user's ratings and social relations. We view the SoReg model as a two-party secure polynomial evaluation problem and observe that the simple bipartite computation may result in poor efficiency. To improve efficiency, we design secure addition and multiplication protocols to support secure computation on any arithmetic circuit, along with an optimal data packing scheme that is suitable for the polynomial computations of real values. Experiment results show that our method only takes about one second to iterate through one user with hundreds of ratings, and training with ~500K ratings for one epoch only takes <3 hours, which shows that the method is practical in real applications. The code is available at https://github.com/GarminQ/PADER.",
+      "tr": "**Makale Başlığı:** PADER: Paillier Tabanlı Güvenli Dağıtık Sosyal Öneri\n\n**Özet:**\n\nÖneri sistemlerinin yaygınlaşması, merkezi platformların kullanıcılar ve satıcılardan mümkün olduğunca fazla veri topladığı göz önüne alındığında, her iki taraf için de gizlilik endişelerini beraberinde getirmektedir. Verilerin gizliliğini korumak amacıyla, Paillier tabanlı güvenli dağıtık sosyal öneri sistemimiz olan PADER'ı sunuyoruz. Bu sistemde, kullanıcılar ve satıcılar dağıtık bir ağdaki düğümlerdir. Öneri modelinin eğitimi ve çıkarımı, merkezi bir platformun müdahalesi olmadan güvenli bir şekilde, dağıtık bir biçimde gerçekleştirilir. Bu amaçla, kullanıcıların derecelendirmelerini ve sosyal ilişkilerini birleştiren SoReg (Social Regularization) modeline Paillier cryptosystem'ini uyguluyoruz. SoReg modelini iki taraflı güvenli polinom değerlendirme problemi olarak ele alıyoruz ve basit iki yönlü hesaplamanın verimsizliğe yol açabileceğini gözlemliyoruz. Verimliliği artırmak için, herhangi bir aritmetik devre üzerinde güvenli hesaplamayı destekleyen güvenli toplama ve çarpma protokollerini ve reel değerlerin polinom hesaplamalarına uygun optimal bir veri paketleme şemasını tasarlıyoruz. Deney sonuçları, yöntemimizin yüzlerce derecelendirmeye sahip tek bir kullanıcıyı döngüye almak için yalnızca yaklaşık bir saniye sürdüğünü ve ~500K derecelendirme ile tek bir epokluk eğitimin yalnızca 3 saatten az sürdüğünü göstermektedir; bu da yöntemin gerçek uygulamalarda pratik olduğunu ortaya koymaktadır. Kod, https://github.com/GarminQ/PADER adresinde mevcuttur."
+    }
+  },
+  {
+    "id": "2601.10173v1",
+    "title": "ReasAlign: Reasoning Enhanced Safety Alignment against Prompt Injection Attack",
+    "authors": [
+      "Hao Li",
+      "Yankai Yang",
+      "G. Edward Suh",
+      "Ning Zhang",
+      "Chaowei Xiao"
+    ],
+    "published_date": "2026-01-15",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "link": "http://arxiv.org/abs/2601.10173v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.10173v1",
+    "content": {
+      "en": "Large Language Models (LLMs) have enabled the development of powerful agentic systems capable of automating complex workflows across various fields. However, these systems are highly vulnerable to indirect prompt injection attacks, where malicious instructions embedded in external data can hijack agent behavior. In this work, we present ReasAlign, a model-level solution to improve safety alignment against indirect prompt injection attacks. The core idea of ReasAlign is to incorporate structured reasoning steps to analyze user queries, detect conflicting instructions, and preserve the continuity of the user's intended tasks to defend against indirect injection attacks. To further ensure reasoning logic and accuracy, we introduce a test-time scaling mechanism with a preference-optimized judge model that scores reasoning steps and selects the best trajectory. Comprehensive evaluations across various benchmarks show that ReasAlign maintains utility comparable to an undefended model while consistently outperforming Meta SecAlign, the strongest prior guardrail. On the representative open-ended CyberSecEval2 benchmark, which includes multiple prompt-injected tasks, ReasAlign achieves 94.6% utility and only 3.6% ASR, far surpassing the state-of-the-art defensive model of Meta SecAlign (56.4% utility and 74.4% ASR). These results demonstrate that ReasAlign achieves the best trade-off between security and utility, establishing a robust and practical defense against prompt injection attacks in real-world agentic systems. Our code and experimental results could be found at https://github.com/leolee99/ReasAlign.",
+      "tr": "Makale Başlığı: ReasAlign: Prompt Injection Saldırısına Karşı Akıl Yürütme ile Güçlendirilmiş Güvenlik Uyumu\n\nÖzet:\nBüyük Dil Modelleri (LLM), çeşitli alanlarda karmaşık iş akışlarını otomatikleştirebilen güçlü agentic sistemlerin geliştirilmesini sağlamıştır. Ancak bu sistemler, dış veriye gömülü kötü niyetli talimatların agent davranışını ele geçirebileceği dolaylı prompt injection saldırılarına karşı oldukça savunmasızdır. Bu çalışmada, dolaylı prompt injection saldırılarına karşı güvenlik uyumunu iyileştirmek için model düzeyinde bir çözüm olan ReasAlign'i sunuyoruz. ReasAlign'in temel fikri, kullanıcı sorgularını analiz etmek, çelişkili talimatları tespit etmek ve dolaylı injection saldırılarına karşı savunmak için kullanıcının amaçladığı görevlerin sürekliliğini korumak üzere yapılandırılmış reasoning adımlarını dahil etmektir. Reasoning mantığını ve doğruluğunu daha da güvence altına almak için, reasoning adımlarını puanlayan ve en iyi trajectory'yi seçen, preference-optimized bir judge model ile bir test-time scaling mekanizması tanıtıyoruz. Çeşitli benchmarklar üzerinde yapılan kapsamlı değerlendirmeler, ReasAlign'in savunmasız bir modele kıyasla karşılaştırılabilir bir utility sürdürürken, en güçlü önceki guardrail olan Meta SecAlign'i sürekli olarak geride bıraktığını göstermektedir. Birden fazla prompt-injected görevi içeren temsili açık uçlu CyberSecEval2 benchmarkında, ReasAlign %94,6 utility ve yalnızca %3,6 ASR elde ederek, Meta SecAlign'in state-of-the-art savunma modelini (56,4% utility ve 74,4% ASR) büyük ölçüde geride bırakmaktadır. Bu sonuçlar, ReasAlign'in güvenlik ve utility arasında en iyi dengeyi sağladığını ve gerçek dünya agentic sistemlerinde prompt injection saldırılarına karşı sağlam ve pratik bir savunma oluşturduğunu göstermektedir. Kodumuz ve deneysel sonuçlarımız https://github.com/leolee99/ReasAlign adresinde bulunabilir."
+    }
+  },
+  {
+    "id": "2601.10004v1",
+    "title": "SoK: Privacy-aware LLM in Healthcare: Threat Model, Privacy Techniques, Challenges and Recommendations",
+    "authors": [
+      "Mohoshin Ara Tahera",
+      "Karamveer Singh Sidhu",
+      "Shuvalaxmi Dass",
+      "Sajal Saha"
+    ],
+    "published_date": "2026-01-15",
+    "tags": [
       "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2601.08623v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.08623v1",
+    "link": "http://arxiv.org/abs/2601.10004v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.10004v1",
     "content": {
-      "en": "Image generation models (IGMs), while capable of producing impressive and creative content, often memorize a wide range of undesirable concepts from their training data, leading to the reproduction of unsafe content such as NSFW imagery and copyrighted artistic styles. Such behaviors pose persistent safety and compliance risks in real-world deployments and cannot be reliably mitigated by post-hoc filtering, owing to the limited robustness of such mechanisms and a lack of fine-grained semantic control. Recent unlearning methods seek to erase harmful concepts at the model level, which exhibit the limitations of requiring costly retraining, degrading the quality of benign generations, or failing to withstand prompt paraphrasing and adversarial attacks. To address these challenges, we introduce SafeRedir, a lightweight inference-time framework for robust unlearning via prompt embedding redirection. Without modifying the underlying IGMs, SafeRedir adaptively routes unsafe prompts toward safe semantic regions through token-level interventions in the embedding space. The framework comprises two core components: a latent-aware multi-modal safety classifier for identifying unsafe generation trajectories, and a token-level delta generator for precise semantic redirection, equipped with auxiliary predictors for token masking and adaptive scaling to localize and regulate the intervention. Empirical results across multiple representative unlearning tasks demonstrate that SafeRedir achieves effective unlearning capability, high semantic and perceptual preservation, robust image quality, and enhanced resistance to adversarial attacks. Furthermore, SafeRedir generalizes effectively across a variety of diffusion backbones and existing unlearned models, validating its plug-and-play compatibility and broad applicability. Code and data are available at https://github.com/ryliu68/SafeRedir.",
-      "tr": "Makale Başlığı: SafeRedir: Image Generation Modellerinde Robust Unlearning için Prompt Embedding Redirection\n\nÖzet:\nImage generation models (IGMs), etkileyici ve yaratıcı içerikler üretme yeteneklerine rağmen, eğitim verilerinden geniş bir yelpazede istenmeyen kavramları sıklıkla ezberleyerek, NSFW görseller ve telif hakkıyla korunan sanatsal stiller gibi güvenli olmayan içeriklerin yeniden üretilmesine yol açmaktadır. Bu tür davranışlar, gerçek dünya konuşlandırmalarında kalıcı güvenlik ve uyumluluk riskleri oluşturmakta ve bu mekanizmaların sınırlı sağlamlığı ve ince taneli anlamsal kontrol eksikliği nedeniyle, sonradan yapılan filtreleme ile güvenilir bir şekilde azaltılamamaktadır. Son unlearning yöntemleri, modeli düzeyinde zararlı kavramları silmeyi amaçlamakta olup, bu yöntemler pahalı yeniden eğitim gerektirme, zararsız üretimlerin kalitesini düşürme veya prompt'ların yeniden ifade edilmesine ve adversarial saldırılara karşı koyamama gibi sınırlılıklar sergilemektedir. Bu zorlukların üstesinden gelmek için, prompt embedding redirection yoluyla robust unlearning için hafif bir inference-time framework olan SafeRedir'i sunuyoruz. Temel IGMs'leri değiştirmeden, SafeRedir embedding alanında token-level müdahaleler aracılığıyla güvensiz prompt'ları güvenli anlamsal bölgelere uyarlanabilir bir şekilde yönlendirir. Framework, iki temel bileşenden oluşmaktadır: güvensiz üretim yörüngelerini belirlemek için latent-aware multi-modal safety classifier ve token masking ve adaptif ölçeklendirme için yardımcı tahmincilerle donatılmış hassas anlamsal yönlendirme için token-level delta generator. Birden fazla temsili unlearning görevi boyunca elde edilen ampirik sonuçlar, SafeRedir'in etkili unlearning yeteneği, yüksek anlamsal ve algısal koruma, sağlam görüntü kalitesi ve adversarial saldırılara karşı geliştirilmiş direnç sağladığını göstermektedir. Dahası, SafeRedir, çeşitli diffusion backbones ve mevcut unlearned modeller arasında etkili bir şekilde genelleme yaparak, plug-and-play uyumluluğunu ve geniş uygulanabilirliğini doğrulamaktadır. Kod ve veriler https://github.com/ryliu68/SafeRedir adresinde mevcuttur."
+      "en": "Large Language Models (LLMs) are increasingly adopted in healthcare to support clinical decision-making, summarize electronic health records (EHRs), and enhance patient care. However, this integration introduces significant privacy and security challenges, driven by the sensitivity of clinical data and the high-stakes nature of medical workflows. These risks become even more pronounced across heterogeneous deployment environments, ranging from small on-premise hospital systems to regional health networks, each with unique resource limitations and regulatory demands. This Systematization of Knowledge (SoK) examines the evolving threat landscape across the three core LLM phases: Data preprocessing, Fine-tuning, and Inference within realistic healthcare settings. We present a detailed threat model that characterizes adversaries, capabilities, and attack surfaces at each phase, and we systematize how existing privacy-preserving techniques (PPTs) attempt to mitigate these vulnerabilities. While existing defenses show promise, our analysis identifies persistent limitations in securing sensitive clinical data across diverse operational tiers. We conclude with phase-aware recommendations and future research directions aimed at strengthening privacy guarantees for LLMs in regulated environments. This work provides a foundation for understanding the intersection of LLMs, threats, and privacy in healthcare, offering a roadmap toward more robust and clinically trustworthy AI systems.",
+      "tr": "**Makale Başlığı:** SoK: Sağlık Hizmetlerinde Gizliliğe Duyarlı LLM'ler: Tehdit Modeli, Gizlilik Teknikleri, Zorluklar ve Öneriler\n\n**Özet:**\n\nLarge Language Models (LLMs), klinik karar verme süreçlerini desteklemek, elektronik sağlık kayıtlarını (EHR) özetlemek ve hasta bakımını iyileştirmek amacıyla sağlık hizmetlerinde giderek daha fazla benimsenmektedir. Ancak, bu entegrasyon, klinik verilerin hassasiyeti ve tıbbi iş akışlarının yüksek riskli doğası nedeniyle önemli gizlilik ve güvenlik zorluklarını beraberinde getirmektedir. Bu riskler, her biri kendine özgü kaynak sınırlamalarına ve düzenleyici gereksinimlere sahip olan küçük şirket içi hastane sistemlerinden bölgesel sağlık ağlarına kadar uzanan heterojen dağıtım ortamlarında daha da belirgin hale gelmektedir. Bu Systematization of Knowledge (SoK), gerçekçi sağlık hizmetleri ortamlarında üç temel LLM aşaması boyunca gelişen tehdit manzarasını incelemektedir: Veri ön işleme (Data preprocessing), Fine-tuning ve Inference. Her aşamadaki kötü niyetli tarafları, yetenekleri ve saldırı yüzeylerini karakterize eden ayrıntılı bir tehdit modeli sunuyoruz ve mevcut gizlilik koruma tekniklerinin (PPTs) bu güvenlik açıklarını nasıl azaltmaya çalıştığını sistematize ediyoruz. Mevcut savunmalar umut verici görünse de, analizimiz çeşitli operasyonel seviyelerde hassas klinik verilerin güvenliğini sağlamada kalıcı sınırlamaları ortaya koymaktadır. Düzenlemeye tabi ortamlarda LLM'ler için gizlilik güvencelerini güçlendirmeyi amaçlayan aşama farkındalığına sahip öneriler ve gelecek araştırma yönleri ile sonuca varıyoruz. Bu çalışma, LLM'ler, tehditler ve sağlık hizmetlerinde gizlilik kesişimini anlamak için bir temel oluşturmakta ve daha sağlam ve klinik olarak güvenilir yapay zeka sistemlerine yönelik bir yol haritası sunmaktadır."
+    }
+  },
+  {
+    "id": "2601.09946v1",
+    "title": "Interpolation-Based Optimization for Enforcing lp-Norm Metric Differential Privacy in Continuous and Fine-Grained Domains",
+    "authors": [
+      "Chenxi Qiu"
+    ],
+    "published_date": "2026-01-15",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2601.09946v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.09946v1",
+    "content": {
+      "en": "Metric Differential Privacy (mDP) generalizes Local Differential Privacy (LDP) by adapting privacy guarantees based on pairwise distances, enabling context-aware protection and improved utility. While existing optimization-based methods reduce utility loss effectively in coarse-grained domains, optimizing mDP in fine-grained or continuous settings remains challenging due to the computational cost of constructing dense perterubation matrices and satisfying pointwise constraints.   In this paper, we propose an interpolation-based framework for optimizing lp-norm mDP in such domains. Our approach optimizes perturbation distributions at a sparse set of anchor points and interpolates distributions at non-anchor locations via log-convex combinations, which provably preserve mDP. To address privacy violations caused by naive interpolation in high-dimensional spaces, we decompose the interpolation process into a sequence of one-dimensional steps and derive a corrected formulation that enforces lp-norm mDP by design. We further explore joint optimization over perturbation distributions and privacy budget allocation across dimensions. Experiments on real-world location datasets demonstrate that our method offers rigorous privacy guarantees and competitive utility in fine-grained domains, outperforming baseline mechanisms. in high-dimensional spaces, we decompose the interpolation process into a sequence of one-dimensional steps and derive a corrected formulation that enforces lp-norm mDP by design. We further explore joint optimization over perturbation distributions and privacy budget allocation across dimensions. Experiments on real-world location datasets demonstrate that our method offers rigorous privacy guarantees and competitive utility in fine-grained domains, outperforming baseline mechanisms.",
+      "tr": "Elbette, akademik makale başlığı ve özetinin çevirisi aşağıdadır:\n\n**Makale Başlığı:** Sürekli ve İnce Taneli Alanlarda lp-Norm Metrik Ayırt Edici Gizliliği Uygulamak İçin Enterpolasyon Tabanlı Optimizasyon\n\n**Özet:**\nMetric Differential Privacy (mDP), ikili mesafelere dayanan gizlilik garantilerini uyarlayarak ve bağlama duyarlı koruma ile gelişmiş fayda sağlayarak Local Differential Privacy (LDP)yi genelleştirir. Mevcut optimizasyon tabanlı yöntemler, kaba taneli alanlarda fayda kaybını etkili bir şekilde azaltırken, mDPnin ince taneli veya sürekli ortamlarda optimize edilmesi, yoğun perterbasyon matrislerinin oluşturulmasının hesaplama maliyeti ve nokta bazlı kısıtlamaların sağlanması nedeniyle zorluğunu korumaktadır. Bu makalede, bu tür alanlarda lp-norm mDPyi optimize etmek için enterpolasyon tabanlı bir çerçeve sunuyoruz. Yaklaşımımız, seyrek bir dizi anchor pointte perterbasyon dağılımlarını optimize eder ve mDPyi ispatlanabilir şekilde koruyan log-dışbükey kombinasyonlar aracılığıyla anchor olmayan konumlardaki dağılımları enterpole eder. Yüksek boyutlu uzaylarda naif enterpolasyondan kaynaklanan gizlilik ihlallerini ele almak için enterpolasyon sürecini bir dizi tek boyutlu adıma ayırırız ve tasarımı gereği lp-norm mDPyi zorlayan düzeltilmiş bir formülasyon türetiriz. Ayrıca, perterbasyon dağılımları ve boyutlar arası gizlilik bütçesi tahsisi üzerinde ortak optimizasyonu araştırıyoruz. Gerçek dünya konum veri kümeleri üzerindeki deneyler, yöntemimizin ince taneli alanlarda titiz gizlilik garantileri ve rekabetçi fayda sunduğunu ve temel mekanizmaların performansını aştığını göstermektedir."
+    }
+  },
+  {
+    "id": "2601.09933v1",
+    "title": "Malware Classification using Diluted Convolutional Neural Network with Fast Gradient Sign Method",
+    "authors": [
+      "Ashish Anand",
+      "Bhupendra Singh",
+      "Sunil Khemka",
+      "Bireswar Banerjee",
+      "Vishi Singh Bhatia"
+    ],
+    "published_date": "2026-01-14",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CE",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.09933v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.09933v1",
+    "content": {
+      "en": "Android malware has become an increasingly critical threat to organizations, society and individuals, posing significant risks to privacy, data security and infrastructure. As malware continues to evolve in terms of complexity and sophistication, the mitigation and detection of these malicious software instances have become more time consuming and challenging particularly due to the requirement of large number of features to identify potential malware. To address these challenges, this research proposes Fast Gradient Sign Method with Diluted Convolutional Neural Network (FGSM DICNN) method for malware classification. DICNN contains diluted convolutions which increases receptive field, enabling the model to capture dispersed malware patterns across long ranges using fewer features without adding parameters. Additionally, the FGSM strategy enhance the accuracy by using one-step perturbations during training that provides more defensive advantage of lower computational cost. This integration helps to manage high classification accuracy while reducing the dependence on extensive feature sets. The proposed FGSM DICNN model attains 99.44% accuracy while outperforming other existing approaches such as Custom Deep Neural Network (DCNN).",
+      "tr": "Aşağıda, verilen akademik makale başlığı ve özetinin istenen şekilde çevrilmiş halini bulabilirsiniz:\n\n**Makale Başlığı:** Hızlı Gradyan İşaret Metodu ile Seyreltilmiş Evrişimli Sinir Ağı Kullanılarak Kötü Amaçlı Yazılım Sınıflandırması\n\n**Özet:**\nAndroid kötü amaçlı yazılımları, kuruluşlar, toplum ve bireyler için giderek daha kritik bir tehdit haline gelmiş, gizlilik, veri güvenliği ve altyapı açısından önemli riskler oluşturmaktadır. Kötü amaçlı yazılımların karmaşıklık ve sofistike olma açısından evrilmeye devam etmesiyle, bu kötü niyetli yazılım örneklerinin azaltılması ve tespiti, özellikle potansiyel kötü amaçlı yazılımları belirlemek için çok sayıda özelliğe duyulan ihtiyaç nedeniyle daha zaman alıcı ve zorlu hale gelmiştir. Bu zorlukların üstesinden gelmek için bu araştırma, kötü amaçlı yazılım sınıflandırması için Hızlı Gradyan İşaret Metodu ile Seyreltilmiş Evrişimli Sinir Ağı (FGSM DICNN) yöntemini önermektedir. DICNN, alıcı alanı artıran seyreltilmiş evrişimler içererek, parametre eklemeden daha az özellikle uzun mesafeler boyunca dağılmış kötü amaçlı yazılım kalıplarını yakalamayı mümkün kılar. Ek olarak, FGSM stratejisi, daha düşük hesaplama maliyetiyle daha fazla savunma avantajı sağlayan eğitim sırasında tek adımlı pertürbasyonlar kullanarak doğruluğu artırır. Bu entegrasyon, kapsamlı özellik kümelerine bağımlılığı azaltırken yüksek sınıflandırma doğruluğunu yönetmeye yardımcı olur. Önerilen FGSM DICNN modeli, Özel Derin Sinir Ağı (DCNN) gibi diğer mevcut yaklaşımlardan daha iyi performans göstererek %99,44'lük bir doğruluk elde etmektedir."
+    }
+  },
+  {
+    "id": "2601.09902v1",
+    "title": "A Novel Contrastive Loss for Zero-Day Network Intrusion Detection",
+    "authors": [
+      "Jack Wilkie",
+      "Hanan Hindy",
+      "Craig Michie",
+      "Christos Tachtatzis",
+      "James Irvine"
+    ],
+    "published_date": "2026-01-14",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG",
+      "cs.NI"
+    ],
+    "link": "http://arxiv.org/abs/2601.09902v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.09902v1",
+    "content": {
+      "en": "Machine learning has achieved state-of-the-art results in network intrusion detection; however, its performance significantly degrades when confronted by a new attack class -- a zero-day attack. In simple terms, classical machine learning-based approaches are adept at identifying attack classes on which they have been previously trained, but struggle with those not included in their training data. One approach to addressing this shortcoming is to utilise anomaly detectors which train exclusively on benign data with the goal of generalising to all attack classes -- both known and zero-day. However, this comes at the expense of a prohibitively high false positive rate. This work proposes a novel contrastive loss function which is able to maintain the advantages of other contrastive learning-based approaches (robustness to imbalanced data) but can also generalise to zero-day attacks. Unlike anomaly detectors, this model learns the distributions of benign traffic using both benign and known malign samples, i.e. other well-known attack classes (not including the zero-day class), and consequently, achieves significant performance improvements. The proposed approach is experimentally verified on the Lycos2017 dataset where it achieves an AUROC improvement of .000065 and .060883 over previous models in known and zero-day attack detection, respectively. Finally, the proposed method is extended to open-set recognition achieving OpenAUC improvements of .170883 over existing approaches.",
+      "tr": "**Makale Başlığı:** Zero-Day Ağ Saldırısı Tespitine Yönelik Yeni Bir Kontrastif Kayıp Fonksiyonu\n\n**Özet:**\n\nMakine öğrenmesi, ağ saldırısı tespitinde son derece gelişmiş sonuçlar elde etmiştir; ancak performansı, yeni bir saldırı sınıfı olan zero-day saldırılarla karşılaştığında önemli ölçüde düşmektedir. Basit bir ifadeyle, klasik makine öğrenmesi tabanlı yaklaşımlar, daha önce eğitildikleri saldırı sınıflarını belirlemede ustalaşmışlardır, ancak eğitim verilerinde yer almayanlarla mücadele ederler. Bu eksikliği gidermeye yönelik bir yaklaşım, yalnızca zararsız (benign) veriler üzerinde eğitilerek tüm saldırı sınıflarına (hem bilinen hem de zero-day) genelleme yapma hedefi güden anomali dedektörlerinin kullanılmasıdır. Ancak bu, aşırı derecede yüksek bir yanlış pozitif oranına mal olmaktadır. Bu çalışma, diğer kontrastif öğrenme tabanlı yaklaşımların avantajlarını (dengesiz verilere karşı sağlamlık) koruyabilen, aynı zamanda zero-day saldırılara da genelleme yapabilen yeni bir contrastive loss function önermektedir. Anomali dedektörlerinin aksine, bu model zararsız trafiğin dağılımlarını hem zararsız hem de bilinen kötü amaçlı örnekleri (yani zero-day sınıfı hariç diğer iyi bilinen saldırı sınıfları) kullanarak öğrenir ve sonuç olarak önemli performans iyileştirmeleri elde eder. Önerilen yaklaşım, Lycos2017 veri kümesinde deneysel olarak doğrulanmış olup, bilinen ve zero-day saldırı tespitinde sırasıyla önceki modellere kıyasla .000065 ve .060883'lük bir AUROC iyileştirmesi sağlamıştır. Son olarak, önerilen yöntem açık küme tanımaya (open-set recognition) genişletilerek mevcut yaklaşımlara kıyasla .170883'lük OpenAUC iyileştirmeleri elde etmiştir."
     }
   }
 ]
