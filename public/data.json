@@ -1,216 +1,222 @@
 [
   {
-    "id": "2601.11447v1",
-    "title": "IMS: Intelligent Hardware Monitoring System for Secure SoCs",
+    "id": "2601.14054v1",
+    "title": "SecureSplit: Mitigating Backdoor Attacks in Split Learning",
     "authors": [
-      "Wadid Foudhaili",
-      "Aykut Rencber",
-      "Anouar Nechi",
-      "Rainer Buchty",
-      "Mladen Berekovic"
+      "Zhihao Dou",
+      "Dongfei Cui",
+      "Weida Wang",
+      "Anjun Gao",
+      "Yueyang Quan"
     ],
-    "published_date": "2026-01-16",
+    "published_date": "2026-01-20",
     "tags": [
       "cs.CR",
-      "cs.AR",
+      "cs.DC",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2601.11447v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.11447v1",
+    "link": "http://arxiv.org/abs/2601.14054v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.14054v1",
     "content": {
-      "en": "In the modern Systems-on-Chip (SoC), the Advanced eXtensible Interface (AXI) protocol exhibits security vulnerabilities, enabling partial or complete denial-of-service (DoS) through protocol-violation attacks. The recent countermeasures lack a dedicated real-time protocol semantic analysis and evade protocol compliance checks. This paper tackles this AXI vulnerability issue and presents an intelligent hardware monitoring system (IMS) for real-time detection of AXI protocol violations. IMS is a hardware module leveraging neural networks to achieve high detection accuracy. For model training, we perform DoS attacks through header-field manipulation and systematic malicious operations, while recording AXI transactions to build a training dataset. We then deploy a quantization-optimized neural network, achieving 98.7% detection accuracy with <=3% latency overhead, and throughput of >2.5 million inferences/s. We subsequently integrate this IMS into a RISC-V SoC as a memory-mapped IP core to monitor its AXI bus. For demonstration and initial assessment for later ASIC integration, we implemented this IMS on an AMD Zynq UltraScale+ MPSoC ZCU104 board, showing an overall small hardware footprint (9.04% look-up-tables (LUTs), 0.23% DSP slices, and 0.70% flip-flops) and negligible impact on the overall design's achievable frequency. This demonstrates the feasibility of lightweight, security monitoring for resource-constrained edge environments.",
-      "tr": "Aşağıda, istediğiniz çeviri yer almaktadır:\n\n**Makale Başlığı: IMS: Güvenli SoC'ler için Akıllı Donanım İzleme Sistemi**\n\n**Özet:**\nModern Systems-on-Chip (SoC) içerisinde, Advanced eXtensible Interface (AXI) protokolü, protokol ihlali saldırıları aracılığıyla kısmi veya tam hizmet reddine (DoS) yol açabilen güvenlik açıkları sergilemektedir. Son zamanlardaki karşı önlemler, özel bir gerçek zamanlı protokol semantik analizinden yoksundur ve protokol uyumluluk denetimlerinden kaçınmaktadır. Bu çalışma, bu AXI güvenlik açığı sorununu ele almakta ve AXI protokol ihlallerinin gerçek zamanlı tespiti için akıllı bir donanım izleme sistemi (IMS) sunmaktadır. IMS, yüksek tespit doğruluğu elde etmek için neural networks'ten yararlanan bir donanım modülüdür. Model eğitimi için, eğitim veri kümesi oluşturmak amacıyla AXI işlemlerini kaydederken, header-field manipulation ve sistematik malicious operations yoluyla DoS saldırıları gerçekleştiriyoruz. Ardından, <=%3 gecikme yükü ile %98.7 tespit doğruluğu ve saniyede >2.5 milyon inference'lık verim elde eden quantization-optimized bir neural network dağıtıyoruz. Bu IMS'i, AXI veriyolunu izlemek üzere bir memory-mapped IP core olarak bir RISC-V SoC'ye entegre ediyoruz. Gösterim ve sonraki ASIC entegrasyonu için başlangıç değerlendirmesi amacıyla, bu IMS'i bir AMD Zynq UltraScale+ MPSoC ZCU104 kartı üzerinde uyguladık; bu da genel olarak küçük bir donanım ayak izi (%9.04 look-up-tables (LUTs), %0.23 DSP slices ve %0.70 flip-flops) ve tasarımın genel olarak elde edilebilir frekansı üzerinde ihmal edilebilir bir etki gösterdiğini ortaya koymaktadır. Bu, kaynak kısıtlı edge ortamları için hafif, güvenlik izlemenin fizibilitesini göstermektedir."
+      "en": "Split Learning (SL) offers a framework for collaborative model training that respects data privacy by allowing participants to share the same dataset while maintaining distinct feature sets. However, SL is susceptible to backdoor attacks, in which malicious clients subtly alter their embeddings to insert hidden triggers that compromise the final trained model. To address this vulnerability, we introduce SecureSplit, a defense mechanism tailored to SL. SecureSplit applies a dimensionality transformation strategy to accentuate subtle differences between benign and poisoned embeddings, facilitating their separation. With this enhanced distinction, we develop an adaptive filtering approach that uses a majority-based voting scheme to remove contaminated embeddings while preserving clean ones. Rigorous experiments across four datasets (CIFAR-10, MNIST, CINIC-10, and ImageNette), five backdoor attack scenarios, and seven alternative defenses confirm the effectiveness of SecureSplit under various challenging conditions.",
+      "tr": "**Makale Başlığı:** SecureSplit: Split Learning'de Arka Kapı Saldırılarını Azaltma\n\n**Özet:**\n\nSplit Learning (SL), katılımcıların aynı veri kümesini paylaşmalarına izin vererek ancak farklı öznitelik kümelerini koruyarak veri gizliliğini gözeten işbirlikçi model eğitimi için bir çerçeve sunar. Bununla birlikte, SL, kötü niyetli istemcilerin gizli tetikleyiciler yerleştirmek için gömülerini (embeddings) ustaca değiştirdiği ve nihai olarak eğitilmiş modeli tehlikeye attığı arka kapı saldırılarına karşı savunmasızdır. Bu savunmasızlığı gidermek için SL'ye özel bir savunma mekanizması olan SecureSplit'i sunuyoruz. SecureSplit, iyi niyetli ve zehirlenmiş gömüler arasındaki ince farklılıkları vurgulamak ve bunların ayrılmasını kolaylaştırmak için bir boyutluluk dönüşüm stratejisi uygular. Bu geliştirilmiş ayrım ile, temiz olanları korurken kontamine olmuş gömüleri kaldırmak için çoğunluk tabanlı bir oylama şeması kullanan adaptif bir filtreleme yaklaşımı geliştiriyoruz. Dört veri kümesi (CIFAR-10, MNIST, CINIC-10 ve ImageNette), beş arka kapı saldırı senaryosu ve yedi alternatif savunma üzerindeki titiz deneyler, çeşitli zorlu koşullar altında SecureSplit'in etkinliğini doğrulamaktadır."
     }
   },
   {
-    "id": "2601.11207v1",
-    "title": "LoRA as Oracle",
+    "id": "2601.14033v1",
+    "title": "PAC-Private Responses with Adversarial Composition",
     "authors": [
-      "Marco Arazzi",
-      "Antonino Nocera"
+      "Xiaochen Zhu",
+      "Mayuri Sridhar",
+      "Srinivas Devadas"
     ],
-    "published_date": "2026-01-16",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.11207v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.11207v1",
-    "content": {
-      "en": "Backdoored and privacy-leaking deep neural networks pose a serious threat to the deployment of machine learning systems in security-critical settings. Existing defenses for backdoor detection and membership inference typically require access to clean reference models, extensive retraining, or strong assumptions about the attack mechanism. In this work, we introduce a novel LoRA-based oracle framework that leverages low-rank adaptation modules as a lightweight, model-agnostic probe for both backdoor detection and membership inference.   Our approach attaches task-specific LoRA adapters to a frozen backbone and analyzes their optimization dynamics and representation shifts when exposed to suspicious samples. We show that poisoned and member samples induce distinctive low-rank updates that differ significantly from those generated by clean or non-member data. These signals can be measured using simple ranking and energy-based statistics, enabling reliable inference without access to the original training data or modification of the deployed model.",
-      "tr": "**Makale Başlığı:** LoRA as Oracle\n\n**Özet:**\n\nBackdoored ve gizlilik sızdıran derin sinir ağları, makine öğrenmesi sistemlerinin güvenlik açısından kritik ortamlarda konuşlandırılması için ciddi bir tehdit oluşturmaktadır. Geri kapı tespiti ve üyelik çıkarımı için mevcut savunmalar genellikle temiz referans modellere erişim, kapsamlı yeniden eğitim veya saldırı mekanizması hakkında güçlü varsayımlar gerektirir. Bu çalışmada, geri kapı tespiti ve üyelik çıkarımı için hafif, modelden bağımsız bir prob olarak low-rank adaptation modüllerini kullanan yeni bir LoRA tabanlı oracle framework'ü sunuyoruz. Yaklaşımımız, donmuş bir ana yapıya görev-spesifik LoRA adaptörleri ekler ve şüpheli örneklere maruz kaldıklarında bunların optimizasyon dinamiklerini ve temsil kaymalarını analiz eder. Zehirlenmiş ve üye örneklerin, temiz veya üye olmayan verilerden üretilenlerden önemli ölçüde farklı, ayırt edici low-rank güncellemeler oluşturduğunu gösteriyoruz. Bu sinyaller, basit sıralama ve enerji tabanlı istatistikler kullanılarak ölçülebilir, böylece orijinal eğitim verilerine erişim veya konuşlandırılmış modelin modifikasyonu olmaksızın güvenilir çıkarım sağlar."
-    }
-  },
-  {
-    "id": "2601.11199v1",
-    "title": "SD-RAG: A Prompt-Injection-Resilient Framework for Selective Disclosure in Retrieval-Augmented Generation",
-    "authors": [
-      "Aiman Al Masoud",
-      "Marco Arazzi",
-      "Antonino Nocera"
-    ],
-    "published_date": "2026-01-16",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.11199v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.11199v1",
-    "content": {
-      "en": "Retrieval-Augmented Generation (RAG) has attracted significant attention due to its ability to combine the generative capabilities of Large Language Models (LLMs) with knowledge obtained through efficient retrieval mechanisms over large-scale data collections. Currently, the majority of existing approaches overlook the risks associated with exposing sensitive or access-controlled information directly to the generation model. Only a few approaches propose techniques to instruct the generative model to refrain from disclosing sensitive information; however, recent studies have also demonstrated that LLMs remain vulnerable to prompt injection attacks that can override intended behavioral constraints. For these reasons, we propose a novel approach to Selective Disclosure in Retrieval-Augmented Generation, called SD-RAG, which decouples the enforcement of security and privacy constraints from the generation process itself. Rather than relying on prompt-level safeguards, SD-RAG applies sanitization and disclosure controls during the retrieval phase, prior to augmenting the language model's input. Moreover, we introduce a semantic mechanism to allow the ingestion of human-readable dynamic security and privacy constraints together with an optimized graph-based data model that supports fine-grained, policy-aware retrieval. Our experimental evaluation demonstrates the superiority of SD-RAG over baseline existing approaches, achieving up to a $58\\%$ improvement in the privacy score, while also showing a strong resilience to prompt injection attacks targeting the generative model.",
-      "tr": "Makale Başlığı: SD-RAG: Retrieval-Augmented Generation'da Seçici Açıklama İçin Prompt-Injection'a Dayanıklı Bir Çerçeve\n\nÖzet:\nRetrieval-Augmented Generation (RAG), Büyük Dil Modellerinin (LLMs) üretken yeteneklerini, büyük ölçekli veri koleksiyonları üzerinden verimli retrieval mekanizmaları aracılığıyla elde edilen bilgilerle birleştirme kabiliyeti nedeniyle büyük ilgi çekmiştir. Mevcut yaklaşımların çoğunluğu, hassas veya erişim kontrollü bilgilerin doğrudan üretim modeline maruz bırakılmasıyla ilgili riskleri göz ardı etmektedir. Sadece birkaç yaklaşım, üretken modele hassas bilgileri ifşa etmekten kaçınması yönünde talimat veren teknikler önermiştir; ancak, son çalışmalar LLM'lerin, amaçlanan davranışsal kısıtlamaları geçersiz kılabilecek prompt injection saldırılarına karşı hala savunmasız olduğunu göstermiştir. Bu nedenlerle, Retrieval-Augmented Generation'da Seçici Açıklama için SD-RAG adını verdiğimiz yeni bir yaklaşım öneriyoruz. Bu yaklaşım, güvenlik ve gizlilik kısıtlamalarının uygulanmasını, üretim sürecinden ayırmaktadır. Prompt seviyesindeki korumalara güvenmek yerine, SD-RAG dil modelinin girdisini zenginleştirmeden önce, retrieval aşamasında sanitizasyon ve açıklama kontrolleri uygular. Dahası, insan tarafından okunabilir dinamik güvenlik ve gizlilik kısıtlamalarının, ince taneli, politika-farkındalığına sahip retrieval'ı destekleyen optimize edilmiş bir graph-based data model ile birlikte alınmasını sağlayan anlamsal bir mekanizma sunuyoruz. Deneysel değerlendirmemiz, SD-RAG'ın temel mevcut yaklaşımlara göre üstünlüğünü göstermektedir. Gizlilik puanında %58'e kadar iyileşme sağlarken, aynı zamanda üretken modeli hedef alan prompt injection saldırılarına karşı güçlü bir dayanıklılık sergilemektedir."
-    }
-  },
-  {
-    "id": "2601.11113v1",
-    "title": "Differentially Private Subspace Fine-Tuning for Large Language Models",
-    "authors": [
-      "Lele Zheng",
-      "Xiang Wang",
-      "Tao Zhang",
-      "Yang Cao",
-      "Ke Cheng"
-    ],
-    "published_date": "2026-01-16",
+    "published_date": "2026-01-20",
     "tags": [
       "cs.LG",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2601.11113v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.11113v1",
+    "link": "http://arxiv.org/abs/2601.14033v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.14033v1",
     "content": {
-      "en": "Fine-tuning large language models on downstream tasks is crucial for realizing their cross-domain potential but often relies on sensitive data, raising privacy concerns. Differential privacy (DP) offers rigorous privacy guarantees and has been widely adopted in fine-tuning; however, naively injecting noise across the high-dimensional parameter space creates perturbations with large norms, degrading performance and destabilizing training. To address this issue, we propose DP-SFT, a two-stage subspace fine-tuning method that substantially reduces noise magnitude while preserving formal DP guarantees. Our intuition is that, during fine-tuning, significant parameter updates lie within a low-dimensional, task-specific subspace, while other directions change minimally. Hence, we only inject DP noise into this subspace to protect privacy without perturbing irrelevant parameters. In phase one, we identify the subspace by analyzing principal gradient directions to capture task-specific update signals. In phase two, we project full gradients onto this subspace, add DP noise, and map the perturbed gradients back to the original parameter space for model updates, markedly lowering noise impact. Experiments on multiple datasets demonstrate that DP-SFT enhances accuracy and stability under rigorous DP constraints, accelerates convergence, and achieves substantial gains over DP fine-tuning baselines.",
-      "tr": "**Makale Başlığı:** Büyük Dil Modelleri İçin Differentially Private Subspace Fine-Tuning\n\n**Özet:**\n\nBüyük dil modellerini farklı alanlardaki görevlere yönelik ince ayardan geçirmek, alanlar arası potansiyellerini gerçekleştirmeleri açısından kritik öneme sahiptir; ancak bu süreç sıklıkla hassas verilere dayanır, bu da gizlilik endişelerini beraberinde getirir. Differential privacy (DP), titiz gizlilik garantileri sunar ve ince ayar süreçlerinde yaygın olarak benimsenmiştir. Bununla birlikte, yüksek boyutlu parametre uzayına naif bir şekilde gürültü enjekte etmek, büyük normlara sahip pertürbasyonlar oluşturarak performansı düşürebilir ve eğitimi istikrarsızlaştırabilir. Bu sorunu ele almak amacıyla, gürültü büyüklüğünü önemli ölçüde azaltırken resmi DP garantilerini koruyan iki aşamalı bir subspace fine-tuning yöntemi olan DP-SFT'yi öneriyoruz. Sezgisel yaklaşımımız, ince ayar sırasında önemli parametre güncellemelerinin düşük boyutlu, göreve özgü bir subspace içinde yer aldığı, diğer yönlerin ise minimum düzeyde değiştiğidir. Bu nedenle, yalnızca bu subspace içine DP gürültüsü enjekte ederek, alakasız parametreleri pertübe etmeden gizliliği koruruz. Birinci aşamada, göreve özgü güncelleme sinyallerini yakalamak amacıyla principal gradient yönlerini analiz ederek subspace'i belirleriz. İkinci aşamada, tam gradyanları bu subspace'e yansıtır, DP gürültüsü ekler ve pertübe edilmiş gradyanları model güncellemeleri için orijinal parametre uzayına geri haritalayarak gürültü etkisini belirgin şekilde düşürürüz. Çeşitli veri kümeleri üzerindeki deneyler, DP-SFT'nin titiz DP kısıtlamaları altında doğruluğu ve kararlılığı artırdığını, yakınsamayı hızlandırdığını ve DP fine-tuning taban çizgilerine göre önemli kazanımlar elde ettiğini göstermektedir."
+      "en": "Modern machine learning models are increasingly deployed behind APIs. This renders standard weight-privatization methods (e.g. DP-SGD) unnecessarily noisy at the cost of utility. While model weights may vary significantly across training datasets, model responses to specific inputs are much lower dimensional and more stable. This motivates enforcing privacy guarantees directly on model outputs.   We approach this under PAC privacy, which provides instance-based privacy guarantees for arbitrary black-box functions by controlling mutual information (MI). Importantly, PAC privacy explicitly rewards output stability with reduced noise levels. However, a central challenge remains: response privacy requires composing a large number of adaptively chosen, potentially adversarial queries issued by untrusted users, where existing composition results on PAC privacy are inadequate. We introduce a new algorithm that achieves adversarial composition via adaptive noise calibration and prove that mutual information guarantees accumulate linearly under adaptive and adversarial querying.   Experiments across tabular, vision, and NLP tasks show that our method achieves high utility at extremely small per-query privacy budgets. On CIFAR-10, we achieve 87.79% accuracy with a per-step MI budget of $2^{-32}$. This enables serving one million queries while provably bounding membership inference attack (MIA) success rates to 51.08% -- the same guarantee of $(0.04, 10^{-5})$-DP. Furthermore, we show that private responses can be used to label public data to distill a publishable privacy-preserving model; using an ImageNet subset as a public dataset, our model distilled from 210,000 responses achieves 91.86% accuracy on CIFAR-10 with MIA success upper-bounded by 50.49%, which is comparable to $(0.02,10^{-5})$-DP.",
+      "tr": "**Makale Başlığı:** PAC-Private Responses with Adversarial Composition\n\n**Özet:**\n\nModern makine öğrenmesi modelleri giderek daha fazla API'lerin arkasına konuşlandırılmaktadır. Bu durum, standart ağırlık-özelleştirme (weight-privatization) yöntemlerini (örn. DP-SGD) fayda (utility) maliyetine gereksiz yere gürültülü hale getirmektedir. Model ağırlıkları eğitim veri kümeleri arasında önemli ölçüde farklılık gösterebilse de, modellerin belirli girdilere verdiği yanıtlar çok daha düşük boyutlu ve daha stabildir. Bu, gizlilik garantilerinin doğrudan model çıktılarına uygulanmasını teşvik eder. Bu konuya, mutual information (MI) kontrolü yoluyla keyfi black-box fonksiyonlar için örneğe dayalı (instance-based) gizlilik garantileri sağlayan PAC privacy kapsamında yaklaşmaktayız. Önemle belirtmek gerekir ki PAC privacy, daha düşük gürültü seviyeleri ile çıktı stabilitesini açıkça ödüllendirir. Ancak merkezi bir zorluk devam etmektedir: yanıt gizliliği, güvenilmeyen kullanıcılar tarafından verilen, uyarlanabilir şekilde seçilmiş ve potansiyel olarak adversarial (adversarial) bir sorgu kümesinin büyük bir sayısını gerektirir; bu tür durumlarda PAC privacy üzerindeki mevcut bileşim (composition) sonuçları yetersizdir. Biz, uyarlanabilir gürültü kalibrasyonu (adaptive noise calibration) yoluyla adversarial bileşim (adversarial composition) elde eden yeni bir algoritma sunuyoruz ve mutual information garantilerinin uyarlanabilir ve adversarial sorgulama altında doğrusal olarak biriktiğini kanıtlıyoruz. Tabular, vision ve NLP görevlerindeki deneyler, yöntemimizin aşırı derecede küçük sorgu başına gizlilik bütçeleri (per-query privacy budgets) ile yüksek fayda sağladığını göstermektedir. CIFAR-10 üzerinde, $2^{-32}$ sorgu başına MI bütçesi ile %87.79 doğruluk elde etmekteyiz. Bu, üyelik çıkarım saldırısı (membership inference attack - MIA) başarı oranlarını %51.08 ile sınırlayarak bir milyon sorgu sunmamızı sağlamaktadır; bu da $(0.04, 10^{-5})$-DP ile aynı garantiyi sunar. Dahası, gizli yanıtların, yayınlanabilir bir gizlilik-koruyucu model damıtmak (distill) için halka açık verileri etiketlemek amacıyla kullanılabileceğini göstermekteyiz; halka açık bir veri kümesi olarak bir ImageNet alt kümesi kullanarak, 210.000 yanıttan damıtılmış modelimiz, CIFAR-10 üzerinde %91.86 doğruluk elde etmekte ve MIA başarı oranı %50.49 ile sınırlanmaktadır, bu da $(0.02, 10^{-5})$-DP ile karşılaştırılabilirdir."
     }
   },
   {
-    "id": "2601.10955v1",
-    "title": "Beyond Max Tokens: Stealthy Resource Amplification via Tool Calling Chains in LLM Agents",
+    "id": "2601.13864v1",
+    "title": "HardSecBench: Benchmarking the Security Awareness of LLMs for Hardware Code Generation",
     "authors": [
-      "Kaiyu Zhou",
-      "Yongsen Zheng",
-      "Yicheng He",
-      "Meng Xue",
-      "Xueluan Gong"
+      "Qirui Chen",
+      "Jingxian Shuai",
+      "Shuangwu Chen",
+      "Shenghao Ye",
+      "Zijian Wen"
     ],
-    "published_date": "2026-01-16",
+    "published_date": "2026-01-20",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2601.10955v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.10955v1",
+    "link": "http://arxiv.org/abs/2601.13864v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.13864v1",
     "content": {
-      "en": "The agent-tool communication loop is a critical attack surface in modern Large Language Model (LLM) agents. Existing Denial-of-Service (DoS) attacks, primarily triggered via user prompts or injected retrieval-augmented generation (RAG) context, are ineffective for this new paradigm. They are fundamentally single-turn and often lack a task-oriented approach, making them conspicuous in goal-oriented workflows and unable to exploit the compounding costs of multi-turn agent-tool interactions. We introduce a stealthy, multi-turn economic DoS attack that operates at the tool layer under the guise of a correctly completed task. Our method adjusts text-visible fields and a template-governed return policy in a benign, Model Context Protocol (MCP)-compatible tool server, optimizing these edits with a Monte Carlo Tree Search (MCTS) optimizer. These adjustments leave function signatures unchanged and preserve the final payload, steering the agent into prolonged, verbose tool-calling sequences using text-only notices. This compounds costs across turns, escaping single-turn caps while keeping the final answer correct to evade validation. Across six LLMs on the ToolBench and BFCL benchmarks, our attack expands tasks into trajectories exceeding 60,000 tokens, inflates costs by up to 658x, and raises energy by 100-560x. It drives GPU KV cache occupancy from <1% to 35-74% and cuts co-running throughput by approximately 50%. Because the server remains protocol-compatible and task outcomes are correct, conventional checks fail. These results elevate the agent-tool interface to a first-class security frontier, demanding a paradigm shift from validating final answers to monitoring the economic and computational cost of the entire agentic process.",
-      "tr": "Makale Başlığı: Token Sınırlarının Ötesinde: LLM Ajanlarında Araç Çağırma Zincirleri Aracılığıyla Gizli Kaynak Artırma\n\nÖzet:\nAjan-araç iletişim döngüsü, modern Large Language Model (LLM) ajanlarında kritik bir saldırı yüzeyidir. Başlıca kullanıcı komutları veya enjekte edilmiş retrieval-augmented generation (RAG) bağlamı aracılığıyla tetiklenen mevcut Hizmet Reddi (DoS) saldırıları, bu yeni paradigma için etkisizdir. Temelde tek seferliktirler ve genellikle görev odaklı bir yaklaşımdan yoksundurlar, bu da onları hedefe yönelik iş akışlarında göze çarpan hale getirir ve çoklu-tur ajan-araç etkileşimlerinin birikimli maliyetlerinden yararlanamazlar. Doğru tamamlanmış bir görevin kisvesi altında, araç katmanında faaliyet gösteren gizli, çoklu-tur ekonomik bir DoS saldırısı sunuyoruz. Yöntemimiz, Monte Carlo Tree Search (MCTS) optimizer ile optimize edilmiş, iyi huylu, Model Context Protocol (MCP)-uyumlu bir araç sunucusunda metin-görünür alanları ve şablon güdümlü bir iade politikasını ayarlar. Bu ayarlamalar, fonksiyon imzalarını değiştirmeden bırakır ve son payload'ı koruyarak, yalnızca metin tabanlı bildirimler kullanarak ajanı uzun, ayrıntılı araç çağırma dizilerine yönlendirir. Bu, tek seferlik sınırları aşarak maliyetleri turlar boyunca biriktirir ve doğrulama ve validasyon'dan kaçınmak için son cevabı doğru tutar. ToolBench ve BFCL benchmarklarında altı LLM üzerinde gerçekleştirilen saldırımız, görevleri 60.000 token'ı aşan yörüngelere genişletir, maliyetleri 658 kata kadar artırır ve enerjiyi 100-560 kat yükseltir. GPU KV cache occupancy'sini <%1'den %35-74'e çıkarır ve eş zamanlı çalışan throughput'u yaklaşık %50 oranında azaltır. Sunucu protokol uyumlu kaldığı ve görev sonuçları doğru olduğu için geleneksel kontroller başarısız olur. Bu sonuçlar, ajan-araç arayüzünü birinci sınıf bir güvenlik sınırı olarak yükselterek, son cevapları doğrulama yerine tüm ajanlık sürecinin ekonomik ve hesaplama maliyetinin izlenmesine yönelik bir paradigma değişikliği talep etmektedir."
+      "en": "Large language models (LLMs) are being increasingly integrated into practical hardware and firmware development pipelines for code generation. Existing studies have primarily focused on evaluating the functional correctness of LLM-generated code, yet paid limited attention to its security issues. However, LLM-generated code that appears functionally sound may embed security flaws which could induce catastrophic damages after deployment. This critical research gap motivates us to design a benchmark for assessing security awareness under realistic specifications. In this work, we introduce HardSecBench, a benchmark with 924 tasks spanning Verilog Register Transfer Level (RTL) and firmware-level C, covering 76 hardware-relevant Common Weakness Enumeration (CWE) entries. Each task includes a structured specification, a secure reference implementation, and executable tests. To automate artifact synthesis, we propose a multi-agent pipeline that decouples synthesis from verification and grounds evaluation in execution evidence, enabling reliable evaluation. Using HardSecBench, we evaluate a range of LLMs on hardware and firmware code generation and find that models often satisfy functional requirements while still leaving security risks. We also find that security results vary with prompting. These findings highlight pressing challenges and offer actionable insights for future advancements in LLM-assisted hardware design. Our data and code will be released soon.",
+      "tr": "Makale Başlığı: HardSecBench: Donanım Kodu Üretimi İçin LLM'lerin Güvenlik Farkındalığının Kıyaslanması\n\nÖzet:\nBüyük dil modelleri (LLM'ler), kod üretimi için donanım ve firmware geliştirme süreçlerine giderek daha fazla entegre edilmektedir. Mevcut çalışmalar öncelikli olarak LLM tarafından üretilen kodun işlevsel doğruluğunu değerlendirmeye odaklanmış olsa da, güvenlik sorunlarına yeterince dikkat göstermemiştir. Ancak, işlevsel olarak sağlam görünen LLM tarafından üretilen kod, dağıtıldıktan sonra yıkıcı hasarlara yol açabilecek güvenlik kusurları içerebilir. Bu kritik araştırma boşluğu, gerçekçi spesifikasyonlar altında güvenlik farkındalığını değerlendirmek için bir benchmark tasarlamamızı teşvik etmektedir. Bu çalışmada, Verilog Register Transfer Level (RTL) ve firmware seviyesi C'yi kapsayan, 76 donanımla ilgili Common Weakness Enumeration (CWE) girişini içeren 924 görevden oluşan bir benchmark olan HardSecBench'i tanıtıyoruz. Her görev, yapılandırılmış bir spesifikasyon, güvenli bir referans uygulama ve yürütülebilir testler içermektedir. Artifact sentezini otomatikleştirmek için, sentezi doğrulama işleminden ayıran ve değerlendirmeyi yürütme kanıtlarına dayandıran, güvenilir değerlendirmeye olanak tanıyan çoklu ajanlı bir pipeline öneriyoruz. HardSecBench'i kullanarak, bir dizi LLM'yi donanım ve firmware kodu üretiminde değerlendirdik ve modellerin genellikle işlevsel gereksinimleri karşılarken hala güvenlik riskleri bıraktığını bulduk. Ayrıca, güvenlik sonuçlarının prompting ile değiştiğini de tespit ettik. Bu bulgular, LLM destekli donanım tasarımında acil zorlukları vurgulamakta ve gelecekteki gelişmeler için uygulanabilir içgörüler sunmaktadır. Verilerimiz ve kodumuz yakında yayınlanacaktır."
     }
   },
   {
-    "id": "2601.10440v1",
-    "title": "AgentGuardian: Learning Access Control Policies to Govern AI Agent Behavior",
+    "id": "2601.13569v1",
+    "title": "DRGW: Learning Disentangled Representations for Robust Graph Watermarking",
     "authors": [
-      "Nadya Abaev",
-      "Denis Klimov",
-      "Gerard Levinov",
-      "David Mimran",
-      "Yuval Elovici"
+      "Jiasen Li",
+      "Yanwei Liu",
+      "Zhuoyi Shang",
+      "Xiaoyan Gu",
+      "Weiping Wang"
     ],
-    "published_date": "2026-01-15",
+    "published_date": "2026-01-20",
     "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2601.10440v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.10440v1",
-    "content": {
-      "en": "Artificial intelligence (AI) agents are increasingly used in a variety of domains to automate tasks, interact with users, and make decisions based on data inputs. Ensuring that AI agents perform only authorized actions and handle inputs appropriately is essential for maintaining system integrity and preventing misuse. In this study, we introduce the AgentGuardian, a novel security framework that governs and protects AI agent operations by enforcing context-aware access-control policies. During a controlled staging phase, the framework monitors execution traces to learn legitimate agent behaviors and input patterns. From this phase, it derives adaptive policies that regulate tool calls made by the agent, guided by both real-time input context and the control flow dependencies of multi-step agent actions. Evaluation across two real-world AI agent applications demonstrates that AgentGuardian effectively detects malicious or misleading inputs while preserving normal agent functionality. Moreover, its control-flow-based governance mechanism mitigates hallucination-driven errors and other orchestration-level malfunctions.",
-      "tr": "**Makale Başlığı:** AgentGuardian: AI Agent Davranışlarını Yönetmek İçin Erişim Kontrol Politikaları Öğrenme\n\n**Özet:**\n\nYapay zeka (AI) ajanları, görevleri otomatikleştirmek, kullanıcılarla etkileşim kurmak ve veri girdilerine dayalı kararlar almak için çeşitli alanlarda giderek daha fazla kullanılmaktadır. AI ajanlarının yalnızca yetkilendirilmiş eylemleri gerçekleştirdiğinden ve girdileri uygun şekilde işlediğinden emin olmak, sistem bütünlüğünü korumak ve kötüye kullanımı önlemek açısından esastır. Bu çalışmada, bağlam-farkındalığı olan erişim kontrol politikalarını uygulayarak AI ajan operasyonlarını yöneten ve koruyan yeni bir güvenlik çerçevesi olan AgentGuardian'ı tanıtıyoruz. Kontrollü bir hazırlık aşaması sırasında çerçeve, meşru ajan davranışlarını ve girdi kalıplarını öğrenmek için execution traces'i izler. Bu aşamadan, hem gerçek zamanlı girdi bağlamı hem de çok adımlı ajan eylemlerinin control flow dependencies'i tarafından yönlendirilen, ajan tarafından yapılan tool call'ları düzenleyen adaptif politikalar türetir. İki gerçek dünya AI ajanı uygulaması üzerindeki değerlendirme, AgentGuardian'ın normal ajan işlevselliğini korurken kötü amaçlı veya yanıltıcı girdileri etkili bir şekilde tespit ettiğini göstermektedir. Ayrıca, control-flow-based governance mekanizması, hallucination-driven hatalarını ve diğer orchestration-level malfunctions'ları hafifletir."
-    }
-  },
-  {
-    "id": "2601.10413v1",
-    "title": "LADFA: A Framework of Using Large Language Models and Retrieval-Augmented Generation for Personal Data Flow Analysis in Privacy Policies",
-    "authors": [
-      "Haiyue Yuan",
-      "Nikolay Matyunin",
-      "Ali Raza",
-      "Shujun Li"
-    ],
-    "published_date": "2026-01-15",
-    "tags": [
-      "cs.AI",
+      "cs.LG",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2601.10413v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.10413v1",
+    "link": "http://arxiv.org/abs/2601.13569v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.13569v1",
     "content": {
-      "en": "Privacy policies help inform people about organisations' personal data processing practices, covering different aspects such as data collection, data storage, and sharing of personal data with third parties. Privacy policies are often difficult for people to fully comprehend due to the lengthy and complex legal language used and inconsistent practices across different sectors and organisations. To help conduct automated and large-scale analyses of privacy policies, many researchers have studied applications of machine learning and natural language processing techniques, including large language models (LLMs). While a limited number of prior studies utilised LLMs for extracting personal data flows from privacy policies, our approach builds on this line of work by combining LLMs with retrieval-augmented generation (RAG) and a customised knowledge base derived from existing studies. This paper presents the development of LADFA, an end-to-end computational framework, which can process unstructured text in a given privacy policy, extract personal data flows and construct a personal data flow graph, and conduct analysis of the data flow graph to facilitate insight discovery. The framework consists of a pre-processor, an LLM-based processor, and a data flow post-processor. We demonstrated and validated the effectiveness and accuracy of the proposed approach by conducting a case study that involved examining ten selected privacy policies from the automotive industry. Moreover, it is worth noting that LADFA is designed to be flexible and customisable, making it suitable for a range of text-based analysis tasks beyond privacy policy analysis.",
-      "tr": "**Makale Başlığı:** LADFA: Gizlilik Politikalarında Kişisel Veri Akışı Analizi İçin Büyük Dil Modelleri ve Retrieval-Augmented Generation Kullanımına İlişkin Bir Çerçeve\n\n**Özet:**\n\nGizlilik politikaları, kuruluşların kişisel veri işleme uygulamaları hakkında insanları bilgilendirmeye yardımcı olmakta ve veri toplama, veri depolama ve üçüncü taraflarla kişisel verilerin paylaşılması gibi farklı yönleri kapsamaktadır. Gizlilik politikaları, kullanılan uzun ve karmaşık yasal dil ile farklı sektörler ve kuruluşlar arasındaki tutarsız uygulamalar nedeniyle genellikle insanların tam olarak anlaması için güçlük teşkil etmektedir. Gizlilik politikalarının otomatik ve büyük ölçekli analizlerini gerçekleştirmeye yardımcı olmak amacıyla birçok araştırmacı, büyük dil modelleri (LLMs) dahil olmak üzere makine öğrenimi ve doğal dil işleme tekniklerinin uygulamalarını incelemiştir. LLM'lerin gizlilik politikalarından kişisel veri akışlarını çıkarmak için kullanıldığı sınırlı sayıda önceki çalışma olsa da, bizim yaklaşımımız, LLM'leri retrieval-augmented generation (RAG) ve mevcut çalışmalardan türetilen özel bir knowledge base ile birleştirerek bu çalışma çizgisini geliştirmektedir. Bu makale, verilen bir gizlilik politikasındaki yapılandırılmamış metni işleyebilen, kişisel veri akışlarını çıkarıp bir personal data flow graph oluşturabilen ve içgörü keşfini kolaylaştırmak için data flow graph'ın analizini gerçekleştirebilen uçtan uca bir hesaplamalı çerçeve olan LADFA'nın geliştirilmesini sunmaktadır. Çerçeve, bir pre-processor, bir LLM-based processor ve bir data flow post-processor'dan oluşmaktadır. Otomotiv sektöründen seçilmiş on gizlilik politikasını incelemeyi içeren bir vaka çalışması yürüterek önerilen yaklaşımın etkinliğini ve doğruluğunu gösterdik ve doğruladık. Dahası, LADFA'nın esnek ve özelleştirilebilir olacak şekilde tasarlandığını belirtmekte fayda var, bu da onu gizlilik politikası analizinin ötesinde bir dizi metin tabanlı analiz görevi için uygun hale getirmektedir."
+      "en": "Graph-structured data is foundational to numerous web applications, and watermarking is crucial for protecting their intellectual property and ensuring data provenance. Existing watermarking methods primarily operate on graph structures or entangled graph representations, which compromise the transparency and robustness of watermarks due to the information coupling in representing graphs and uncontrollable discretization in transforming continuous numerical representations into graph structures. This motivates us to propose DRGW, the first graph watermarking framework that addresses these issues through disentangled representation learning. Specifically, we design an adversarially trained encoder that learns an invariant structural representation against diverse perturbations and derives a statistically independent watermark carrier, ensuring both robustness and transparency of watermarks. Meanwhile, we devise a graph-aware invertible neural network to provide a lossless channel for watermark embedding and extraction, guaranteeing high detectability and transparency of watermarks. Additionally, we develop a structure-aware editor that resolves the issue of latent modifications into discrete graph edits, ensuring robustness against structural perturbations. Experiments on diverse benchmark datasets demonstrate the superior effectiveness of DRGW.",
+      "tr": "**Makale Başlığı:** DRGW: Sağlam Grafik Filigranlama İçin Ayrıştırılmış Gösterimler Öğrenme\n\n**Özet:**\n\nGrafik yapıdaki veriler, çok sayıda web uygulaması için temel oluşturmakta ve filigranlama (watermarking), bunların fikri mülkiyetini korumak ve veri kökenini güvence altına almak için kritik öneme sahiptir. Mevcut filigranlama yöntemleri esas olarak grafik yapıları veya entangled graph representations üzerinde çalışmaktadır. Bu durum, grafiklerin temsilindeki bilgi eşleşmesi ve continuous numerical representations'ın grafik yapılarına dönüştürülmesindeki kontrolsüz ayrıştırma (discretization) nedeniyle filigranların şeffaflığını ve sağlamlığını (robustness) tehlikeye atmaktadır. Bu durum, bizi disentangled representation learning aracılığıyla bu sorunları ele alan ilk grafik filigranlama çerçevesi olan DRGW'yi önermeye motive etmektedir. Spesifik olarak, çeşitli pertürbasyonlara (perturbations) karşı değişmez bir structural representation öğrenen ve istatistiksel olarak bağımsız bir watermark carrier türeten, hem filigranların sağlamlığını hem de şeffaflığını sağlayan adversarially trained bir encoder tasarlıyoruz. Eş zamanlı olarak, watermark embedding ve extraction için lossless bir kanal sağlayan, filigranların yüksek tespit edilebilirliğini ve şeffaflığını garanti eden graph-aware bir invertible neural network geliştiriyoruz. Ek olarak, gizli değişikliklerin discrete graph edits sorununu çözen ve structural perturbations'a karşı sağlamlığı sağlayan structure-aware bir editor geliştiriyoruz. Çeşitli benchmark veri setleri üzerindeki deneyler, DRGW'nin üstün etkinliğini göstermektedir."
     }
   },
   {
-    "id": "2601.10338v1",
-    "title": "Agent Skills in the Wild: An Empirical Study of Security Vulnerabilities at Scale",
+    "id": "2601.13528v1",
+    "title": "Eliciting Harmful Capabilities by Fine-Tuning On Safeguarded Outputs",
     "authors": [
-      "Yi Liu",
-      "Weizhe Wang",
-      "Ruitao Feng",
-      "Yao Zhang",
-      "Guangquan Xu"
+      "Jackson Kaunismaa",
+      "Avery Griffin",
+      "John Hughes",
+      "Christina Q. Knight",
+      "Mrinank Sharma"
     ],
-    "published_date": "2026-01-15",
+    "published_date": "2026-01-20",
     "tags": [
       "cs.CR",
       "cs.AI",
       "cs.CL",
+      "cs.LG",
       "cs.SE"
     ],
-    "link": "http://arxiv.org/abs/2601.10338v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.10338v1",
+    "link": "http://arxiv.org/abs/2601.13528v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.13528v1",
     "content": {
-      "en": "The rise of AI agent frameworks has introduced agent skills, modular packages containing instructions and executable code that dynamically extend agent capabilities. While this architecture enables powerful customization, skills execute with implicit trust and minimal vetting, creating a significant yet uncharacterized attack surface. We conduct the first large-scale empirical security analysis of this emerging ecosystem, collecting 42,447 skills from two major marketplaces and systematically analyzing 31,132 using SkillScan, a multi-stage detection framework integrating static analysis with LLM-based semantic classification. Our findings reveal pervasive security risks: 26.1% of skills contain at least one vulnerability, spanning 14 distinct patterns across four categories: prompt injection, data exfiltration, privilege escalation, and supply chain risks. Data exfiltration (13.3%) and privilege escalation (11.8%) are most prevalent, while 5.2% of skills exhibit high-severity patterns strongly suggesting malicious intent. We find that skills bundling executable scripts are 2.12x more likely to contain vulnerabilities than instruction-only skills (OR=2.12, p<0.001). Our contributions include: (1) a grounded vulnerability taxonomy derived from 8,126 vulnerable skills, (2) a validated detection methodology achieving 86.7% precision and 82.5% recall, and (3) an open dataset and detection toolkit to support future research. These results demonstrate an urgent need for capability-based permission systems and mandatory security vetting before this attack vector is further exploited.",
-      "tr": "**Makale Başlığı: Agent Skills in the Wild: An Empirical Study of Security Vulnerabilities at Scale**\n\n**Özet:**\n\nYapay zeka agent framework'lerinin yükselişi, agent yeteneklerini dinamik olarak genişleten talimatlar ve yürütülebilir kod içeren modüler paketler olan agent skills'i beraberinde getirmiştir. Bu mimari güçlü özelleştirmeye olanak tanırken, skills örtük güven ve minimum inceleme ile yürütülür, bu da önemli ancak henüz karakterize edilmemiş bir attack surface oluşturur. Bu gelişmekte olan ekosistemin ilk büyük ölçekli ampirik güvenlik analizini gerçekleştirerek, iki büyük marketplace'ten 42.447 skill topladık ve SkillScan'i kullanarak 31.132'sini sistematik olarak analiz ettik. SkillScan, statik analiz ile LLM-based semantic classification'ı entegre eden çok aşamalı bir detection framework'üdür. Bulgularımız yaygın güvenlik risklerini ortaya koymaktadır: skill'lerin %26,1'i, dört kategori altında 14 farklı pattern'ı kapsayan en az bir vulnerability içermektedir: prompt injection, data exfiltration, privilege escalation ve supply chain risks. Data exfiltration (%13,3) ve privilege escalation (%11,8) en yaygın olanlarıdır, buna karşılık skill'lerin %5,2'si kötü niyetli amacı güçlü bir şekilde düşündüren yüksek-severity pattern'ları sergilemektedir. Yürütülebilir script'leri paketleyen skills'in, sadece talimat içeren skills'e göre vulnerability içerme olasılığının 2,12 kat daha fazla olduğunu bulduk (OR=2,12, p<0,001). Katkılarımız şunları içermektedir: (1) 8.126 vulnerable skill'den türetilmiş temellendirilmiş bir vulnerability taxonomy, (2) %86,7 precision ve %82,5 recall elde eden doğrulanmış bir detection methodology, ve (3) gelecekteki araştırmaları desteklemek için açık bir dataset ve detection toolkit. Bu sonuçlar, bu attack vector'ün daha fazla istismar edilmesinden önce capability-based permission systems ve zorunlu güvenlik vetting ihtiyacını ortaya koymaktadır."
+      "en": "Model developers implement safeguards in frontier models to prevent misuse, for example, by employing classifiers to filter dangerous outputs. In this work, we demonstrate that even robustly safeguarded models can be used to elicit harmful capabilities in open-source models through elicitation attacks. Our elicitation attacks consist of three stages: (i) constructing prompts in adjacent domains to a target harmful task that do not request dangerous information; (ii) obtaining responses to these prompts from safeguarded frontier models; (iii) fine-tuning open-source models on these prompt-output pairs. Since the requested prompts cannot be used to directly cause harm, they are not refused by frontier model safeguards. We evaluate these elicitation attacks within the domain of hazardous chemical synthesis and processing, and demonstrate that our attacks recover approximately 40% of the capability gap between the base open-source model and an unrestricted frontier model. We then show that the efficacy of elicitation attacks scales with the capability of the frontier model and the amount of generated fine-tuning data. Our work demonstrates the challenge of mitigating ecosystem level risks with output-level safeguards.",
+      "tr": "**Makale Başlığı:** Eliciting Harmful Capabilities by Fine-Tuning On Safeguarded Outputs\n\n**Özet:**\n\nModel geliştiricileri, kötüye kullanımı önlemek amacıyla en yeni modellerde, örneğin tehlikeli çıktıları filtrelemek için sınıflandırıcılar kullanarak, koruma mekanizmaları uygulamaktadır. Bu çalışmada, sağlam bir şekilde korunmuş modellerin bile, elicitation attacks yoluyla açık kaynaklı modellerde zararlı yetenekleri ortaya çıkarabileceğini göstermekteyiz. Elicitation attacks’lerimiz üç aşamadan oluşmaktadır: (i) hedef zararlı bir görevle ilişkili ancak tehlikeli bilgi talep etmeyen komşu alanlarda prompt’lar oluşturulması; (ii) bu prompt’lara korunmuş en yeni modellerden yanıtlar elde edilmesi; (iii) bu prompt-çıktı çiftleri üzerinde açık kaynaklı modellerin fine-tuning edilmesi. Talep edilen prompt’lar doğrudan zarar vermek için kullanılamayacağından, en yeni model koruma mekanizmaları tarafından reddedilmezler. Bu elicitation attacks’leri, tehlikeli kimyasal sentez ve işleme alanında değerlendirerek, saldırılarımızın temel açık kaynaklı model ile kısıtlanmamış en yeni model arasındaki yetenek boşluğunun yaklaşık %40'ını geri kazandığını göstermekteyiz. Ardından, elicitation attacks’lerinin etkinliğinin, en yeni modelin yeteneği ve üretilen fine-tuning verisi miktarıyla ölçeklendiğini göstermekteyiz. Çalışmamız, çıktı düzeyindeki korumalarla ekosistem düzeyindeki riskleri azaltmanın zorluğunu ortaya koymaktadır."
     }
   },
   {
-    "id": "2601.10237v1",
-    "title": "Fundamental Limitations of Favorable Privacy-Utility Guarantees for DP-SGD",
+    "id": "2601.13515v1",
+    "title": "Automatic Adjustment of HPA Parameters and Attack Prevention in Kubernetes Using Random Forests",
+    "authors": [
+      "Hanlin Zhou",
+      "Huah Yong Chan",
+      "Jingfei Ni",
+      "Mengchun Wu",
+      "Qing Deng"
+    ],
+    "published_date": "2026-01-20",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "link": "http://arxiv.org/abs/2601.13515v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.13515v1",
+    "content": {
+      "en": "In this paper, HTTP status codes are used as custom metrics within the HPA as the experimental scenario. By integrating the Random Forest classification algorithm from machine learning, attacks are assessed and predicted, dynamically adjusting the maximum pod parameter in the HPA to manage attack traffic. This approach enables the adjustment of HPA parameters using machine learning scripts in targeted attack scenarios while effectively managing attack traffic. All access from attacking IPs is redirected to honeypot pods, achieving a lower incidence of 5XX status codes through HPA pod adjustments under high load conditions. This method also ensures effective isolation of attack traffic, preventing excessive HPA expansion due to attacks. Additionally, experiments conducted under various conditions demonstrate the importance of setting appropriate thresholds for HPA adjustments.",
+      "tr": "**Makale Başlığı:** Automatic Adjustment of HPA Parameters and Attack Prevention in Kubernetes Using Random Forests\n\n**Özet:**\n\nBu çalışmada, HPA içinde deneysel senaryo olarak HTTP durum kodları özel metrikler olarak kullanılmaktadır. Makine öğrenmesinden Random Forest sınıflandırma algoritmasının entegrasyonu ile saldırılar değerlendirilip tahmin edilmekte, böylece saldırı trafiğini yönetmek amacıyla HPA'daki maksimum pod parametresi dinamik olarak ayarlanmaktadır. Bu yaklaşım, hedefli saldırı senaryolarında makine öğrenmesi scriptleri kullanılarak HPA parametrelerinin ayarlanmasına olanak tanıyarak saldırı trafiğinin etkili bir şekilde yönetilmesini sağlamaktadır. Saldıran IP'lerden gelen tüm erişimler honeypot podlarına yönlendirilmekte, yüksek yük koşulları altında HPA pod ayarlamaları sayesinde daha düşük oranda 5XX durum kodları elde edilmektedir. Bu yöntem ayrıca saldırı trafiğinin etkili bir şekilde izole edilmesini sağlayarak saldırılar nedeniyle HPA'nın aşırı genişlemesini önlemektedir. Ek olarak, çeşitli koşullar altında yürütülen deneyler, HPA ayarlamaları için uygun eşik değerlerinin belirlenmesinin önemini ortaya koymaktadır."
+    }
+  },
+  {
+    "id": "2601.13359v1",
+    "title": "Sockpuppetting: Jailbreaking LLMs Without Optimization Through Output Prefix Injection",
+    "authors": [
+      "Asen Dotsinski",
+      "Panagiotis Eustratiadis"
+    ],
+    "published_date": "2026-01-19",
+    "tags": [
+      "cs.CL",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.13359v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.13359v1",
+    "content": {
+      "en": "As open-weight large language models (LLMs) increase in capabilities, safeguarding them against malicious prompts and understanding possible attack vectors becomes ever more important. While automated jailbreaking methods like GCG [Zou et al., 2023] remain effective, they often require substantial computational resources and specific expertise. We introduce \"sockpuppetting'', a simple method for jailbreaking open-weight LLMs by inserting an acceptance sequence (e.g., \"Sure, here is how to...'') at the start of a model's output and allowing it to complete the response. Requiring only a single line of code and no optimization, sockpuppetting achieves up to 80% higher attack success rate (ASR) than GCG on Qwen3-8B in per-prompt comparisons. We also explore a hybrid approach that optimizes the adversarial suffix within the assistant message block rather than the user prompt, increasing ASR by 64% over GCG on Llama-3.1-8B in a prompt-agnostic setting. The results establish sockpuppetting as an effective low-cost attack accessible to unsophisticated adversaries, highlighting the need for defences against output-prefix injection in open-weight models.",
+      "tr": "Makale Başlığı: Sockpuppetting: Çıktı Öneki Enjeksiyonu ile Optimizasyon Yapmadan LLM'leri Kırmak\n\nÖzet:\nAçık ağırlıklı büyük dil modellerinin (LLM'ler) yetenekleri arttıkça, onları kötü amaçlı komutlardan korumak ve olası saldırı vektörlerini anlamak giderek daha önemli hale gelmektedir. GCG [Zou et al., 2023] gibi otomatik kırma yöntemleri etkili olmaya devam etse de, genellikle önemli hesaplama kaynakları ve özel uzmanlık gerektirirler. Biz, bir modelin çıktısının başına bir kabul dizisi (örneğin, \"Elbette, işte nasıl yapılacağı...\") ekleyerek ve yanıtı tamamlamasına izin vererek açık ağırlıklı LLM'leri kırmak için basit bir yöntem olan \"sockpuppetting\"i tanıtıyoruz. Sadece tek satır kod ve optimizasyon gerektirmeyen sockpuppetting, Qwen3-8B üzerinde komut bazlı karşılaştırmalarda GCG'den %80'e varan oranda daha yüksek saldırı başarı oranı (ASR) elde etmektedir. Ayrıca, komut bağımsız bir ortamda Llama-3.1-8B üzerinde GCG'ye kıyasla ASR'yi %64 artıran, kullanıcı komutundan ziyade asistan mesaj bloğundaki düşmanca soneki optimize eden hibrit bir yaklaşımı da inceliyoruz. Elde edilen sonuçlar, sockpuppetting'i sofistike olmayan rakiplerin erişebileceği etkili ve düşük maliyetli bir saldırı olarak ortaya koymakta, açık ağırlıklı modellerde çıktı öneki enjeksiyonuna karşı savunma ihtiyacını vurgulamaktadır."
+    }
+  },
+  {
+    "id": "2601.13197v1",
+    "title": "Diffusion-Driven Synthetic Tabular Data Generation for Enhanced DoS/DDoS Attack Classification",
+    "authors": [
+      "Aravind B",
+      "Anirud R. S.",
+      "Sai Surya Teja N",
+      "Bala Subrahmanya Sriranga Navaneeth A",
+      "Karthika R"
+    ],
+    "published_date": "2026-01-19",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.13197v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.13197v1",
+    "content": {
+      "en": "Class imbalance refers to a situation where certain classes in a dataset have significantly fewer samples than oth- ers, leading to biased model performance. Class imbalance in network intrusion detection using Tabular Denoising Diffusion Probability Models (TabDDPM) for data augmentation is ad- dressed in this paper. Our approach synthesizes high-fidelity minority-class samples from the CIC-IDS2017 dataset through iterative denoising processes. For the minority classes that have smaller samples, synthetic samples were generated and merged with the original dataset. The augmented training data enables an ANN classifier to achieve near-perfect recall on previously underrepresented attack classes. These results establish diffusion models as an effective solution for tabular data imbalance in security domains, with potential applications in fraud detection and medical diagnostics.",
+      "tr": "**Makale Başlığı:** Diffusion-Driven Sentetik Tablo Veri Üretimi ile Geliştirilmiş DoS/DDoS Saldırı Sınıflandırması\n\n**Özet:**\n\nClass imbalance, bir veri kümesindeki belirli sınıfların diğerlerine göre anlamlı derecede daha az örneğe sahip olması durumunu ifade eder ve bu da yanlı model performansına yol açar. Bu makalede, ağ saldırı tespiti bağlamında class imbalance, veri artırma amacıyla Tabular Denoising Diffusion Probability Models (TabDDPM) kullanılarak ele alınmaktadır. Yaklaşımımız, CIC-IDS2017 veri kümesinden iteratif denoise etme süreçleri aracılığıyla yüksek doğrulukta azınlık sınıfı örnekleri sentezler. Daha az örneğe sahip azınlık sınıfları için, sentetik örnekler üretilip orijinal veri kümesiyle birleştirilmiştir. Artırılmış eğitim verisi, bir ANN classifier'ın daha önce yeterince temsil edilmeyen saldırı sınıflarında neredeyse mükemmel bir recall elde etmesini sağlamaktadır. Elde edilen bu sonuçlar, diffusion models'ın güvenlik alanlarındaki tablo verisi dengesizliği için etkili bir çözüm olduğunu ve dolandırıcılık tespiti ile tıbbi teşhis gibi alanlarda potansiyel uygulamalara sahip olduğunu göstermektedir."
+    }
+  },
+  {
+    "id": "2601.13082v1",
+    "title": "Adversarial News and Lost Profits: Manipulating Headlines in LLM-Driven Algorithmic Trading",
+    "authors": [
+      "Advije Rizvani",
+      "Giovanni Apruzzese",
+      "Pavel Laskov"
+    ],
+    "published_date": "2026-01-19",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.13082v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.13082v1",
+    "content": {
+      "en": "Large Language Models (LLMs) are increasingly adopted in the financial domain. Their exceptional capabilities to analyse textual data make them well-suited for inferring the sentiment of finance-related news. Such feedback can be leveraged by algorithmic trading systems (ATS) to guide buy/sell decisions. However, this practice bears the risk that a threat actor may craft \"adversarial news\" intended to mislead an LLM. In particular, the news headline may include \"malicious\" content that remains invisible to human readers but which is still ingested by the LLM. Although prior work has studied textual adversarial examples, their system-wide impact on LLM-supported ATS has not yet been quantified in terms of monetary risk. To address this threat, we consider an adversary with no direct access to an ATS but able to alter stock-related news headlines on a single day. We evaluate two human-imperceptible manipulations in a financial context: Unicode homoglyph substitutions that misroute models during stock-name recognition, and hidden-text clauses that alter the sentiment of the news headline. We implement a realistic ATS in Backtrader that fuses an LSTM-based price forecast with LLM-derived sentiment (FinBERT, FinGPT, FinLLaMA, and six general-purpose LLMs), and quantify monetary impact using portfolio metrics. Experiments on real-world data show that manipulating a one-day attack over 14 months can reliably mislead LLMs and reduce annual returns by up to 17.7 percentage points. To assess real-world feasibility, we analyze popular scraping libraries and trading platforms and survey 27 FinTech practitioners, confirming our hypotheses. We notified trading platform owners of this security issue.",
+      "tr": "Elbette, akademik makale başlığını ve özetini istediğiniz şekilde çevirdim:\n\n**Makale Başlığı:** Adversarial News ve Kayıp Kârlar: LLM Güdümlü Algoritmik Ticarette Manşetlerin Manipülasyonu\n\n**Özet:**\n\nLarge Language Models (LLMs), finans sektöründe giderek daha fazla benimsenmektedir. Metin verilerini analiz etme konusundaki olağanüstü yetenekleri, finansla ilgili haberlerin sentimentini (duygu durumunu) çıkarmak için onları oldukça uygun hale getirmektedir. Bu geri bildirimler, algoritmik trading sistemleri (ATS) tarafından al/sat kararlarını yönlendirmek amacıyla kullanılabilir. Ancak bu uygulama, bir tehdit aktörünün bir LLM'yi yanıltmak amacıyla tasarlanmış \"adversarial news\" (düşmanca haberler) üretebilmesi riskini taşır. Özellikle, haber manşeti insan okuyucular tarafından görünmez kalan ancak LLM tarafından yine de işlenen \"kötü niyetli\" içerikler barındırabilir. Önceki çalışmalar metinsel adversarial examples'ları incelemiş olsa da, LLM destekli ATS üzerindeki sistem çapındaki etkileri, parasal risk açısından henüz nicelleştirilmemiştir. Bu tehdide karşı koymak amacıyla, bir ATS'ye doğrudan erişimi olmayan ancak tek bir günde borsa ile ilgili haber manşetlerini değiştirebilen bir saldırganı ele alıyoruz. Finansal bir bağlamda insan tarafından algılanamayan iki manipülasyonu değerlendiriyoruz: borsa adı tanıma sırasında modelleri yanlış yönlendiren Unicode homoglyph ikameleri ve haber manşetinin sentimentini değiştiren gizli metin maddeleri. Backtrader'da, bir LSTM tabanlı fiyat tahminini LLM'den türetilen sentiment ile birleştiren gerçekçi bir ATS uyguluyoruz (FinBERT, FinGPT, FinLLMA ve altı genel amaçlı LLM) ve portföy metriklerini kullanarak parasal etkiyi nicelleştiriyoruz. Gerçek dünya verileri üzerinde yapılan deneyler, 14 aylık bir süre zarfında tek günlük bir saldırının manipülasyonunun LLM'leri güvenilir bir şekilde yanıltabileceğini ve yıllık getirileri %17,7'ye kadar azaltabileceğini göstermektedir. Gerçek dünya fizibilitesini değerlendirmek için popüler scraping kütüphanelerini ve trading platformlarını analiz ediyoruz ve 27 FinTech uygulayıcısını anketleyerek hipotezlerimizi doğruluyoruz. Bu güvenlik sorununu trading platformu sahiplerine bildirdik."
+    }
+  },
+  {
+    "id": "2601.12937v1",
+    "title": "On the Evidentiary Limits of Membership Inference for Copyright Auditing",
     "authors": [
       "Murat Bilgehan Ertan",
+      "Emirhan Böge",
+      "Min Chen",
+      "Kaleel Mahmood",
       "Marten van Dijk"
     ],
-    "published_date": "2026-01-15",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2601.10237v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.10237v1",
-    "content": {
-      "en": "Differentially Private Stochastic Gradient Descent (DP-SGD) is the dominant paradigm for private training, but its fundamental limitations under worst-case adversarial privacy definitions remain poorly understood. We analyze DP-SGD in the $f$-differential privacy framework, which characterizes privacy via hypothesis-testing trade-off curves, and study shuffled sampling over a single epoch with $M$ gradient updates. We derive an explicit suboptimal upper bound on the achievable trade-off curve. This result induces a geometric lower bound on the separation $κ$ which is the maximum distance between the mechanism's trade-off curve and the ideal random-guessing line. Because a large separation implies significant adversarial advantage, meaningful privacy requires small $κ$. However, we prove that enforcing a small separation imposes a strict lower bound on the Gaussian noise multiplier $σ$, which directly limits the achievable utility. In particular, under the standard worst-case adversarial model, shuffled DP-SGD must satisfy   $σ\\ge \\frac{1}{\\sqrt{2\\ln M}}$ $\\quad\\text{or}\\quad$ $κ\\ge\\ \\frac{1}{\\sqrt{8}}\\!\\left(1-\\frac{1}{\\sqrt{4π\\ln M}}\\right)$,   and thus cannot simultaneously achieve strong privacy and high utility. Although this bound vanishes asymptotically as $M \\to \\infty$, the convergence is extremely slow: even for practically relevant numbers of updates the required noise magnitude remains substantial. We further show that the same limitation extends to Poisson subsampling up to constant factors. Our experiments confirm that the noise levels implied by this bound leads to significant accuracy degradation at realistic training settings, thus showing a critical bottleneck in DP-SGD under standard worst-case adversarial assumptions.",
-      "tr": "İşte makale başlığı ve özetinin akademik ve akıcı bir Türkçe çevirisi:\n\n**Makale Başlığı:** DP-SGD için Elverişli Gizlilik-Fayda Garantilerinin Temel Sınırlılıkları\n\n**Özet:**\nDifferentially Private Stochastic Gradient Descent (DP-SGD), özel eğitim için hakim paradigma olmasına rağmen, en kötü durumdaki adversarial privacy tanımları altındaki temel sınırlılıkları yeterince anlaşılmamıştır. DP-SGD'yi, gizliliği hypothesis-testing trade-off curves üzerinden karakterize eden $f$-differential privacy çerçevesinde analiz ediyor ve $M$ gradyan güncellemesi ile tek bir epoch üzerinden shuffled sampling'i inceliyoruz. Elde edilebilir trade-off curve üzerinde açıkça suboptimal bir üst sınır türetiyoruz. Bu sonuç, ideal rastgele tahmin çizgisi ile mekanizmanın trade-off curve'ü arasındaki maksimum mesafe olan ayrışım $κ$ üzerinde geometrik bir alt sınır doğurur. Büyük bir ayrışım, önemli bir adversarial avantajı ima ettiği için, anlamlı gizlilik küçük $κ$ gerektirir. Ancak, küçük bir ayrışım uygulamanın Gaussian gürültü çarpanı $σ$ üzerinde sıkı bir alt sınır getirdiğini ve bunun da elde edilebilir faydayı doğrudan sınırladığını kanıtlıyoruz. Özellikle, standart en kötü durum adversarial model altında, shuffled DP-SGD aşağıdaki koşulları sağlamalıdır:  $σ\\ge \\frac{1}{\\sqrt{2\\ln M}}$  veya  $κ\\ge\\ \\frac{1}{\\sqrt{8}}\\!\\left(1-\\frac{1}{\\sqrt{4π\\ln M}}\\right)$,  ve dolayısıyla aynı anda güçlü gizlilik ve yüksek fayda elde edilemez. Bu sınır, $M \\to \\infty$ ile asimptotik olarak sıfıra yaklaşsa da, yakınsama son derece yavaştır: pratik olarak ilgili sayıda güncelleme için bile gereken gürültü büyüklüğü önemli kalmaktadır. Ayrıca, aynı sınırlılığın sabit faktörlere kadar Poisson subsampling için de geçerli olduğunu gösteriyoruz. Deneylerimiz, bu sınırın ima ettiği gürültü seviyelerinin, gerçekçi eğitim ayarlarında önemli doğruluk bozulmalarına yol açtığını teyit etmektedir. Bu da standart en kötü durum adversarial varsayımları altında DP-SGD'de kritik bir darboğaz olduğunu göstermektedir."
-    }
-  },
-  {
-    "id": "2601.10212v1",
-    "title": "PADER: Paillier-based Secure Decentralized Social Recommendation",
-    "authors": [
-      "Chaochao Chen",
-      "Jiaming Qian",
-      "Fei Zheng",
-      "Yachuan Liu"
-    ],
-    "published_date": "2026-01-15",
+    "published_date": "2026-01-19",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2601.10212v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.10212v1",
+    "link": "http://arxiv.org/abs/2601.12937v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.12937v1",
     "content": {
-      "en": "The prevalence of recommendation systems also brings privacy concerns to both the users and the sellers, as centralized platforms collect as much data as possible from them. To keep the data private, we propose PADER: a Paillier-based secure decentralized social recommendation system. In this system, the users and the sellers are nodes in a decentralized network. The training and inference of the recommendation model are carried out securely in a decentralized manner, without the involvement of a centralized platform. To this end, we apply the Paillier cryptosystem to the SoReg (Social Regularization) model, which exploits both user's ratings and social relations. We view the SoReg model as a two-party secure polynomial evaluation problem and observe that the simple bipartite computation may result in poor efficiency. To improve efficiency, we design secure addition and multiplication protocols to support secure computation on any arithmetic circuit, along with an optimal data packing scheme that is suitable for the polynomial computations of real values. Experiment results show that our method only takes about one second to iterate through one user with hundreds of ratings, and training with ~500K ratings for one epoch only takes <3 hours, which shows that the method is practical in real applications. The code is available at https://github.com/GarminQ/PADER.",
-      "tr": "İşte akademik makalenin başlığının ve özetinin çevirisi:\n\n**Makale Başlığı:** PADER: Paillier Tabanlı Güvenli Merkezi Olmayan Sosyal Öneri\n\n**Özet:**\n\nÖneri sistemlerinin yaygınlığı, merkezi platformların kullanıcılardan ve satıcılardan mümkün olduğunca fazla veri topladığı için hem kullanıcılara hem de satıcılara yönelik gizlilik endişelerini de beraberinde getirmektedir. Veriyi gizli tutmak amacıyla, Paillier tabanlı güvenli ve merkezi olmayan bir sosyal öneri sistemi olan PADER'ı öneriyoruz. Bu sistemde, kullanıcılar ve satıcılar merkezi olmayan bir ağın düğümleridir. Öneri modelinin eğitimi ve çıkarımı, merkezi bir platformun müdahalesi olmadan güvenli bir şekilde ve merkezi olmayan bir biçimde gerçekleştirilir. Bu amaçla, kullanıcı oylamalarını ve sosyal ilişkileri birlikte kullanan SoReg (Social Regularization) modeline Paillier kriptosistemini uyguluyoruz. SoReg modelini iki taraflı güvenli bir polynomial evaluation problemi olarak görüyoruz ve basit iki taraflı hesaplamanın düşük verimliliğe yol açabileceğini gözlemliyoruz. Verimliliği artırmak için, herhangi bir aritmetik devre üzerinde güvenli hesaplamayı destekleyen güvenli toplama ve çarpma protokolleri tasarlıyoruz. Buna ek olarak, gerçek değerlerin polynomial hesaplamaları için uygun olan optimal bir veri paketleme şeması da geliştiriyoruz. Deneysel sonuçlar, yöntemimizin yüzlerce oylamaya sahip tek bir kullanıcıyı tekrarlaması için yaklaşık bir saniye sürdüğünü ve yaklaşık 500 bin oylamayla bir epoch'luk eğitimin sadece 3 saatten az sürdüğünü göstermektedir. Bu, yöntemin gerçek uygulamalarda pratik olduğunu kanıtlamaktadır. Kod, https://github.com/GarminQ/PADER adresinde mevcuttur."
+      "en": "As large language models (LLMs) are trained on increasingly opaque corpora, membership inference attacks (MIAs) have been proposed to audit whether copyrighted texts were used during training, despite growing concerns about their reliability under realistic conditions. We ask whether MIAs can serve as admissible evidence in adversarial copyright disputes where an accused model developer may obfuscate training data while preserving semantic content, and formalize this setting through a judge-prosecutor-accused communication protocol. To test robustness under this protocol, we introduce SAGE (Structure-Aware SAE-Guided Extraction), a paraphrasing framework guided by Sparse Autoencoders (SAEs) that rewrites training data to alter lexical structure while preserving semantic content and downstream utility. Our experiments show that state-of-the-art MIAs degrade when models are fine-tuned on SAGE-generated paraphrases, indicating that their signals are not robust to semantics-preserving transformations. While some leakage remains in certain fine-tuning regimes, these results suggest that MIAs are brittle in adversarial settings and insufficient, on their own, as a standalone mechanism for copyright auditing of LLMs.",
+      "tr": "**Makale Başlığı:** Telif Hakkı Denetimi İçin Üyelik Çıkarımının Kanıtlayıcı Sınırları Üzerine\n\n**Özet:**\n\nBüyük dil modelleri (LLMs) giderek daha opak veri kümeleri üzerinde eğitildikçe, üyelik çıkarım saldırıları (MIAs), artan güvenilirlik endişelerine rağmen, telif hakkıyla korunan metinlerin eğitim sırasında kullanılıp kullanılmadığını denetlemek için önerilmiştir. Savunulabilir bir şekilde üretilmiş metinler aracılığıyla adli telif hakkı anlaşmazlıklarında MIAs'ın kabul edilebilir kanıt olarak hizmet edip edemeyeceğini sorguluyoruz; burada suçlanan model geliştiricisi, anlamsal içeriği korurken eğitim verilerini gizleyebilir. Bu durumu, bir yargıç-savcı-sanık iletişim protokolü aracılığıyla resmileştiriyoruz. Bu protokol altında dayanıklılığı test etmek için, SAGE'ı (Structure-Aware SAE-Guided Extraction) tanıtıyoruz; bu, anlamsal içeriği ve aşağı akış kullanımını korurken sözlüksel yapıyı değiştirmek için eğitim verilerini yeniden yazan, Sparse Autoencoders (SAEs) tarafından yönlendirilen bir paralelizasyon çerçevesidir. Deneylerimiz, SAGE tarafından oluşturulan paralelizasyonlar üzerinde ince ayar yapılmış modellerde en gelişmiş MIAs'ın bozulduğunu göstermektedir; bu da sinyallerinin anlamsal olarak koruyucu dönüşümlere karşı dayanıklı olmadığını göstermektedir. Belirli ince ayar rejimlerinde bir miktar sızıntı devam etse de, bu sonuçlar MIAs'ın düşmanca ortamlarda kırılgan olduğunu ve LLM'lerin telif hakkı denetimi için bağımsız bir mekanizma olarak tek başına yetersiz kaldığını göstermektedir."
     }
   }
 ]
