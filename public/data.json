@@ -1,5 +1,201 @@
 [
   {
+    "id": "2601.16140v1",
+    "title": "Learning to Watermark in the Latent Space of Generative Models",
+    "authors": [
+      "Sylvestre-Alvise Rebuffi",
+      "Tuan Tran",
+      "Valeriu Lacatusu",
+      "Pierre Fernandez",
+      "Tomáš Souček"
+    ],
+    "published_date": "2026-01-22",
+    "tags": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2601.16140v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.16140v1",
+    "content": {
+      "en": "Existing approaches for watermarking AI-generated images often rely on post-hoc methods applied in pixel space, introducing computational overhead and potential visual artifacts. In this work, we explore latent space watermarking and introduce DistSeal, a unified approach for latent watermarking that works across both diffusion and autoregressive models. Our approach works by training post-hoc watermarking models in the latent space of generative models. We demonstrate that these latent watermarkers can be effectively distilled either into the generative model itself or into the latent decoder, enabling in-model watermarking. The resulting latent watermarks achieve competitive robustness while offering similar imperceptibility and up to 20x speedup compared to pixel-space baselines. Our experiments further reveal that distilling latent watermarkers outperforms distilling pixel-space ones, providing a solution that is both more efficient and more robust.",
+      "tr": "**Makale Başlığı:** Öğrenerek Üretici Modellerin Latent Space'inde Watermark Uygulamak\n\n**Özet:**\n\nYapay zeka tarafından üretilen görseller için mevcut watermark uygulaması yaklaşımları genellikle piksel uzayında uygulanan post-hoc yöntemlere dayanır, bu da hesaplama yükü ve potansiyel görsel bozulmalar meydana getirir. Bu çalışmada, latent uzay watermark uygulamasını araştırmakta ve hem diffusion hem de autoregressive modellerde işleyen, birleşik bir latent watermark yaklaşımı olan DistSeal'ı sunmaktayız. Yaklaşımımız, üretici modellerin latent uzayında post-hoc watermark modellerini eğiterek çalışmaktadır. Bu latent watermarker'ların, ya üretici modelin kendisine ya da latent dekodere etkili bir şekilde distilled edilebileceğini ve böylece model içi watermark uygulamasını mümkün kıldığını göstermekteyiz. Elde edilen latent watermark'lar, piksel uzayı temel çizgilerine kıyasla benzer algılanamazlık ve 20 kata kadar hız artışı sunarken rekabetçi bir dayanıklılık sağlamaktadır. Deneylerimiz ayrıca, latent watermarker'ları distilling etmenin, piksel uzayı olanları distilling etmeye göre daha üstün olduğunu ortaya koymaktadır, bu da hem daha verimli hem de daha dayanıklı bir çözüm sunmaktadır."
+    }
+  },
+  {
+    "id": "2601.15824v1",
+    "title": "Introducing the Generative Application Firewall (GAF)",
+    "authors": [
+      "Joan Vendrell Farreny",
+      "Martí Jordà Roca",
+      "Miquel Cornudella Gaya",
+      "Rodrigo Fernández Baón",
+      "Víctor García Martínez"
+    ],
+    "published_date": "2026-01-22",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.15824v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.15824v1",
+    "content": {
+      "en": "This paper introduces the Generative Application Firewall (GAF), a new architectural layer for securing LLM applications. Existing defenses -- prompt filters, guardrails, and data-masking -- remain fragmented; GAF unifies them into a single enforcement point, much like a WAF coordinates defenses for web traffic, while also covering autonomous agents and their tool interactions.",
+      "tr": "İşte akademik makale başlığının ve özetinin istenen şekilde çevrilmiş hali:\n\n**Makale Başlığı:** Generative Application Firewall (GAF)'in Tanıtılması\n\n**Özet:**\nBu makale, LLM uygulamalarını güvence altına almak için yeni bir mimari katman olan Generative Application Firewall (GAF)'i tanıtmaktadır. Mevcut savunmalar — prompt filters, guardrails ve data-masking — parçalı kalmaktadır; GAF, bunları tek bir denetim noktası altında birleştirerek, tıpkı bir WAF'ın web trafiği için savunmaları koordine etmesi gibi, aynı zamanda otonom ajanları ve araç etkileşimlerini de kapsamaktadır."
+    }
+  },
+  {
+    "id": "2601.15754v1",
+    "title": "CAFE-GB: Scalable and Stable Feature Selection for Malware Detection via Chunk-wise Aggregated Gradient Boosting",
+    "authors": [
+      "Ajvad Haneef K",
+      "Karan Kuwar Singh",
+      "Madhu Kumar S D"
+    ],
+    "published_date": "2026-01-22",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.15754v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.15754v1",
+    "content": {
+      "en": "High-dimensional malware datasets often exhibit feature redundancy, instability, and scalability limitations, which hinder the effectiveness and interpretability of machine learning-based malware detection systems. Although feature selection is commonly employed to mitigate these issues, many existing approaches lack robustness when applied to large-scale and heterogeneous malware data. To address this gap, this paper proposes CAFE-GB (Chunk-wise Aggregated Feature Estimation using Gradient Boosting), a scalable feature selection framework designed to produce stable and globally consistent feature rankings for high-dimensional malware detection. CAFE-GB partitions training data into overlapping chunks, estimates local feature importance using gradient boosting models, and aggregates these estimates to derive a robust global ranking. Feature budget selection is performed separately through a systematic k-selection and stability analysis to balance detection performance and robustness. The proposed framework is evaluated on two large-scale malware datasets: BODMAS and CIC-AndMal2020, representing large and diverse malware feature spaces. Experimental results show that classifiers trained on CAFE-GB -selected features achieve performance parity with full-feature baselines across multiple metrics, including Accuracy, F1-score, MCC, ROC-AUC, and PR-AUC, while reducing feature dimensionality by more than 95\\%. Paired Wilcoxon signed-rank tests confirm that this reduction does not introduce statistically significant performance degradation. Additional analyses demonstrate low inter-feature redundancy and improved interpretability through SHAP-based explanations. Runtime and memory profiling further indicate reduced downstream classification overhead. Overall, CAFE-GB provides a stable, interpretable, and scalable feature selection strategy for large-scale malware detection.",
+      "tr": "Elbette, akademik makale başlığını ve özetini istediğiniz şekilde Türkçeye çevirdim. Teknik terimler İngilizce bırakılarak resmi ve akademik bir dil kullanılmıştır.\n\n**Makale Başlığı:** CAFE-GB: Kümeler Halinde Toplanan Gradient Boosting Aracılığıyla Kötü Amaçlı Yazılım Tespiti İçin Ölçeklenebilir ve Kararlı Özellik Seçimi\n\n**Özet:**\nYüksek boyutlu kötü amaçlı yazılım veri kümeleri sıklıkla özellik fazlalığı, kararsızlık ve ölçeklenebilirlik sınırlamaları sergiler; bu durum, makine öğrenmesi tabanlı kötü amaçlı yazılım tespit sistemlerinin etkinliğini ve yorumlanabilirliğini engellemektedir. Özellik seçimi bu sorunları azaltmak için yaygın olarak kullanılmakla birlikte, mevcut yaklaşımların çoğu büyük ölçekli ve heterojen kötü amaçlı yazılım verilerine uygulandığında sağlamlık eksikliği yaşamaktadır. Bu boşluğu gidermek amacıyla bu makale, yüksek boyutlu kötü amaçlı yazılım tespiti için kararlı ve küresel olarak tutarlı özellik sıralamaları üreten ölçeklenebilir bir özellik seçimi çerçevesi olan CAFE-GB (Chunk-wise Aggregated Feature Estimation using Gradient Boosting) önermektedir. CAFE-GB, eğitim verilerini örtüşen kümeler halinde böler, gradient boosting modelleri kullanarak yerel özellik önemini tahmin eder ve sağlam bir küresel sıralama türetmek için bu tahminleri toplar. Özellik bütçe seçimi, tespit performansı ile sağlamlık arasında denge kurmak için sistematik bir k-selection ve kararlılık analizi yoluyla ayrı olarak gerçekleştirilir. Önerilen çerçeve, büyük ve çeşitli kötü amaçlı yazılım özellik alanlarını temsil eden iki büyük ölçekli kötü amaçlı yazılım veri kümesi üzerinde değerlendirilmiştir: BODMAS ve CIC-AndMal2020. Deneysel sonuçlar, CAFE-GB ile seçilen özellikler üzerinde eğitilen sınıflandırıcıların, doğruluk (Accuracy), F1-skoru (F1-score), MCC, ROC-AUC ve PR-AUC dahil olmak üzere birden fazla metrikte tam özellikli taban çizgileriyle performans denkliği sağladığını, aynı zamanda özellik boyutluluğunu %95'in üzerinde azalttığını göstermektedir. Eşleştirilmiş Wilcoxon işaretli sıralama testleri, bu azalmanın istatistiksel olarak anlamlı bir performans düşüşüne neden olmadığını doğrulamaktadır. Ek analizler, SHAP tabanlı açıklamalar aracılığıyla düşük özellikler arası fazlalığı ve iyileştirilmiş yorumlanabilirliği ortaya koymaktadır. Çalışma zamanı ve bellek profillemesi de aşağı akış sınıflandırma ek yükünün azaldığını göstermektedir. Genel olarak, CAFE-GB, büyük ölçekli kötü amaçlı yazılım tespiti için kararlı, yorumlanabilir ve ölçeklenebilir bir özellik seçimi stratejisi sunmaktadır."
+    }
+  },
+  {
+    "id": "2601.15697v1",
+    "title": "Balancing Security and Privacy: The Pivotal Role of AI in Modern Healthcare Systems",
+    "authors": [
+      "Binu V P",
+      "Deepthy K Bhaskar",
+      "Minimol B"
+    ],
+    "published_date": "2026-01-22",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.15697v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.15697v1",
+    "content": {
+      "en": "As digital threats continue to grow, organizations must find ways to enhance security while protecting user privacy. This paper explores how artificial intelligence (AI) plays a crucial role in achieving this balance. AI technologies can improve security by detecting threats, monitoring systems, and automating responses. However, using AI also raises privacy concerns that need careful consideration.We examine real-world examples from the healthcare sector to illustrate how organizations can implement AI solutions that strengthen security without compromising patient privacy. Additionally, we discuss the importance of creating transparent AI systems and adhering to privacy regulations.Ultimately, this paper provides insights and recommendations for integrating AI into healthcare security practices, helping organizations navigate the challenges of modern management while keeping patient data safe.",
+      "tr": "İşte akademik makale başlığı ve özetinin çevirisi:\n\n**Makale Başlığı:** Dijital Tehditler Sürekli Artarken, Kuruluşların Güvenliği Artırmanın ve Kullanıcı Gizliliğini Korumanın Yollarını Bulması Gerekmektedir. Bu Makale, Yapay Zekanın (AI) Bu Dengenin Sağlanmasında Nasıl Kritik Bir Rol Oynadığını İncelemektedir. AI Teknolojileri, Tehditleri Tespit Ederek, Sistemleri İzleyerek ve Otomatik Yanıtlar Üreterek Güvenliği Artırabilir. Ancak, AI Kullanımı Aynı Zamanda Dikkatli Bir Şekilde Değerlendirilmesi Gereken Gizlilik Kaygılarını da Ortaya Çıkarmaktadır. Kuruluşların Hasta Gizliliğinden Ödün Vermeden Güvenliği Güçlendiren AI Çözümlerini Nasıl Uygulayabileceğini Göstermek İçin Sağlık Sektöründen Gerçek Dünya Örneklerini İnceliyoruz. Ek Olarak, Şeffaf AI Sistemleri Oluşturmanın ve Gizlilik Düzenlemelerine Uymanın Önemini Tartışıyoruz. Nihayetinde, Bu Makale, Kuruluşların Modern Yönetimin Zorluklarında Yol Almasına ve Hasta Verilerini Güvenli Tutmasına Yardımcı Olacak Şekilde, AI'nın Sağlık Güvenliği Uygulamalarına Entegrasyonu İçin İçgörüler ve Öneriler Sunmaktadır."
+    }
+  },
+  {
+    "id": "2601.15678v1",
+    "title": "Connect the Dots: Knowledge Graph-Guided Crawler Attack on Retrieval-Augmented Generation Systems",
+    "authors": [
+      "Mengyu Yao",
+      "Ziqi Zhang",
+      "Ning Luo",
+      "Shaofei Li",
+      "Yifeng Cai"
+    ],
+    "published_date": "2026-01-22",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.IR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.15678v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.15678v1",
+    "content": {
+      "en": "Retrieval-augmented generation (RAG) systems integrate document retrieval with large language models and have been widely adopted. However, in privacy-related scenarios, RAG introduces a new privacy risk: adversaries can issue carefully crafted queries to exfiltrate sensitive content from the underlying corpus gradually. Although recent studies have demonstrated multi-turn extraction attacks, they rely on heuristics and fail to perform long-term extraction planning. To address these limitations, we formulate the RAG extraction attack as an adaptive stochastic coverage problem (ASCP). In ASCP, each query is treated as a probabilistic action that aims to maximize conditional marginal gain (CMG), enabling principled long-term planning under uncertainty. However, integrating ASCP with practical RAG attack faces three key challenges: unobservable CMG, intractability in the action space, and feasibility constraints. To overcome these challenges, we maintain a global attacker-side state to guide the attack. Building on this idea, we introduce RAGCRAWLER, which builds a knowledge graph to represent revealed information, uses this global state to estimate CMG, and plans queries in semantic space that target unretrieved regions. In comprehensive experiments across diverse RAG architectures and datasets, our proposed method, RAGCRAWLER, consistently outperforms all baselines. It achieves up to 84.4% corpus coverage within a fixed query budget and deliver an average improvement of 20.7% over the top-performing baseline. It also maintains high semantic fidelity and strong content reconstruction accuracy with low attack cost. Crucially, RAGCRAWLER proves its robustness by maintaining effectiveness against advanced RAG systems employing query rewriting and multi-query retrieval strategies. Our work reveals significant security gaps and highlights the pressing need for stronger safeguards for RAG.",
+      "tr": "İşte makale başlığının ve özetinin Türkçe çevirisi:\n\n**Makale Başlığı:** Noktaları Birleştirin: Retrieval-Augmented Generation Sistemlerine Karşı Bilgi Grafiği Güdümlü Tarayıcı Saldırısı\n\n**Özet:**\nRetrieval-augmented generation (RAG) sistemleri, belge alımını büyük dil modelleriyle entegre eder ve yaygın olarak benimsenmiştir. Ancak, gizlilikle ilgili senaryolarda RAG yeni bir gizlilik riski oluşturur: saldırganlar, temel veri kümesinden hassas içeriği kademeli olarak dışarı çıkarmak için dikkatlice hazırlanmış sorgular düzenleyebilir. Son çalışmalar çok turlu çıkarım saldırılarını gösterse de, bu çalışmalar sezgilere dayanır ve uzun vadeli çıkarım planlaması yapamaz. Bu sınırlılıkları ele almak için RAG çıkarım saldırısını, adaptive stochastic coverage problem (ASCP) olarak formüle ediyoruz. ASCP'de, her sorgu, conditional marginal gain (CMG) maksimize etmeyi amaçlayan olasılıksal bir eylem olarak kabul edilir, bu da belirsizlik altında prensipli uzun vadeli planlamayı mümkün kılar. Ancak, ASCP'yi pratik RAG saldırısıyla entegre etmek üç temel zorlukla karşı karşıyadır: gözlemlenemeyen CMG, eylem alanındaki zorluk ve fizibilite kısıtlamaları. Bu zorlukların üstesinden gelmek için, saldırıyı yönlendirmek üzere global bir saldırgan tarafı durumu (global attacker-side state) sürdürüyoruz. Bu fikirden yola çıkarak, ortaya çıkan bilgileri temsil etmek üzere bir knowledge graph oluşturan, CMG'yi tahmin etmek için bu global durumu kullanan ve henüz alınmamış bölgeleri hedefleyen anlamsal uzayda (semantic space) sorguları planlayan RAGCRAWLER'ı sunuyoruz. Çeşitli RAG mimarileri ve veri kümeleri üzerindeki kapsamlı deneylerde, önerdiğimiz yöntem RAGCRAWLER, tüm taban çizgilerini tutarlı bir şekilde geride bırakmaktadır. Sabit bir sorgu bütçesi içinde %84,4'e kadar veri kümesi kapsama alanı elde etmekte ve en iyi performans gösteren taban çizgisine göre ortalama %20,7'lik bir iyileşme sağlamaktadır. Ayrıca, yüksek anlamsal sadakat (semantic fidelity) ve düşük saldırı maliyetiyle güçlü içerik yeniden yapılandırma doğruluğunu korur. En önemlisi, RAGCRAWLER, sorgu yeniden yazma (query rewriting) ve çoklu sorgu alma (multi-query retrieval) stratejileri uygulayan gelişmiş RAG sistemlerine karşı etkinliğini sürdürerek sağlamlığını kanıtlar. Çalışmamız, önemli güvenlik açıklarını ortaya koymakta ve RAG için daha güçlü korumalara olan acil ihtiyacı vurgulamaktadır."
+    }
+  },
+  {
+    "id": "2601.15663v1",
+    "title": "TempoNet: Learning Realistic Communication and Timing Patterns for Network Traffic Simulation",
+    "authors": [
+      "Kristen Moore",
+      "Diksha Goel",
+      "Cody James Christopher",
+      "Zhen Wang",
+      "Minjune Kim"
+    ],
+    "published_date": "2026-01-22",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.15663v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.15663v1",
+    "content": {
+      "en": "Realistic network traffic simulation is critical for evaluating intrusion detection systems, stress-testing network protocols, and constructing high-fidelity environments for cybersecurity training. While attack traffic can often be layered into training environments using red-teaming or replay methods, generating authentic benign background traffic remains a core challenge -- particularly in simulating the complex temporal and communication dynamics of real-world networks. This paper introduces TempoNet, a novel generative model that combines multi-task learning with multi-mark temporal point processes to jointly model inter-arrival times and all packet- and flow-header fields. TempoNet captures fine-grained timing patterns and higher-order correlations such as host-pair behavior and seasonal trends, addressing key limitations of GAN-, LLM-, and Bayesian-based methods that fail to reproduce structured temporal variation. TempoNet produces temporally consistent, high-fidelity traces, validated on real-world datasets. Furthermore, we show that intrusion detection models trained on TempoNet-generated background traffic perform comparably to those trained on real data, validating its utility for real-world security applications.",
+      "tr": "**Makale Başlığı:** TempoNet: Ağ Trafiği Simülasyonu İçin Gerçekçi İletişim ve Zamanlama Desenlerini Öğrenmek\n\n**Özet:**\nGerçekçi ağ trafiği simülasyonu, saldırı tespit sistemlerinin değerlendirilmesi, ağ protokollerinin stres testi ve siber güvenlik eğitimi için yüksek sadakatli ortamların oluşturulması açısından kritik öneme sahiptir. Saldırı trafiği genellikle red-teaming veya replay yöntemleri kullanılarak eğitim ortamlarına katmanlanabilirken, özgün zararsız arka plan trafiği üretmek, özellikle gerçek dünya ağlarının karmaşık zamansal ve iletişim dinamiklerini simüle etmede temel bir zorluk olmaya devam etmektedir. Bu makale, çoklu görev öğrenimini (multi-task learning) çok işaretli zamansal nokta süreçleri (multi-mark temporal point processes) ile birleştiren yeni bir üretici model olan TempoNet'i tanıtmaktadır. TempoNet, paket varış zamanlarını ve tüm paket ve akış başlığı alanlarını (packet- and flow-header fields) ortaklaşa modellemektedir. TempoNet, konak çifti davranışı (host-pair behavior) ve mevsimsel eğilimler gibi üst düzey korelasyonları ve hassas zamanlama desenlerini yakalamaktadır. Bu model, yapılandırılmış zamansal değişimi yeniden üretemeyen GAN-, LLM- ve Bayesian tabanlı yöntemlerin (GAN-, LLM-, and Bayesian-based methods) temel sınırlılıklarını ele almaktadır. TempoNet, gerçek dünya veri kümelerinde doğrulanmış, zamansal olarak tutarlı, yüksek sadakatli izler (high-fidelity traces) üretmektedir. Dahası, TempoNet tarafından üretilen arka plan trafiği üzerinde eğitilen saldırı tespit modellerinin, gerçek veriler üzerinde eğitilen modellere kıyasla benzer performans gösterdiğini ortaya koymaktayız. Bu durum, TempoNet'in gerçek dünya güvenlik uygulamaları için faydasını doğrulamaktadır."
+    }
+  },
+  {
+    "id": "2601.15652v1",
+    "title": "Predictive Coding and Information Bottleneck for Hallucination Detection in Large Language Models",
+    "authors": [
+      "Manish Bhatt"
+    ],
+    "published_date": "2026-01-22",
+    "tags": [
+      "cs.AI",
+      "cs.CR",
+      "cs.ET"
+    ],
+    "link": "http://arxiv.org/abs/2601.15652v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.15652v1",
+    "content": {
+      "en": "Hallucinations in Large Language Models (LLMs) -- generations that are plausible but factually unfaithful -- remain a critical barrier to high-stakes deployment. Current detection methods typically rely on computationally expensive external retrieval loops or opaque black-box LLM judges requiring 70B+ parameters. In this work, we introduce [Model Name], a hybrid detection framework that combines neuroscience-inspired signal design with supervised machine learning. We extract interpretable signals grounded in Predictive Coding (quantifying surprise against internal priors) and the Information Bottleneck (measuring signal retention under perturbation). Through systematic ablation, we demonstrate three key enhancements: Entity-Focused Uptake (concentrating on high-value tokens), Context Adherence (measuring grounding strength), and Falsifiability Score (detecting confident but contradictory claims).   Evaluating on HaluBench (n=200, perfectly balanced), our theory-guided baseline achieves 0.8017 AUROC. BASE supervised models reach 0.8274 AUROC, while IMPROVED features boost performance to 0.8669 AUROC (4.95% gain), demonstrating consistent improvements across architectures. This competitive performance is achieved while using 75x less training data than Lynx (200 vs 15,000 samples), 1000x faster inference (5ms vs 5s), and remaining fully interpretable. Crucially, we report a negative result: the Rationalization signal fails to distinguish hallucinations, suggesting that LLMs generate coherent reasoning for false premises (\"Sycophancy\").   This work demonstrates that domain knowledge encoded in signal architecture provides superior data efficiency compared to scaling LLM judges, achieving strong performance with lightweight (less than 1M parameter), explainable models suitable for production deployment.",
+      "tr": "Elbette, akademik makale başlığı ve özetinin istenen şekilde çevirisi aşağıdadır:\n\n**Makale Başlığı:** Large Language Models'ta Halüsinasyon Tespiti İçin Predictive Coding ve Information Bottleneck\n\n**Özet:**\n\nLarge Language Models'taki (LLM) halüsinasyonlar -- yani makul ancak olgusal olarak sadık olmayan çıktılar -- yüksek riskli dağıtımlar için kritik bir engel olmaya devam etmektedir. Mevcut tespit yöntemleri genellikle hesaplama açısından pahalı harici retrieval döngülerine veya 70B+ parametre gerektiren opak black-box LLM yargıçlarına dayanmaktadır. Bu çalışmada, nörobilimden esinlenen sinyal tasarımı ile supervised machine learning'i birleştiren hibrit bir tespit framework'ü olan [Model Adı]'nı tanıtıyoruz. Predictive Coding (iç önceliklere karşı sürprizin ölçülmesi) ve Information Bottleneck (pertürbasyon altındaki sinyal tutulmasının ölçülmesi) ilkelerine dayanan yorumlanabilir sinyaller çıkarıyoruz. Sistematik ablasyon çalışmalarıyla üç temel iyileştirmeyi gösteriyoruz: Entity-Focused Uptake (yüksek değerli token'lara odaklanma), Context Adherence (temellendirme gücünün ölçülmesi) ve Falsifiability Score (güvenli ancak çelişkili iddiaların tespiti). HaluBench üzerinde yapılan değerlendirmelerde (n=200, mükemmel dengeli), teori güdümlü taban çizgimiz 0.8017 AUROC elde etmektedir. BASE supervised modeller 0.8274 AUROC'a ulaşırken, IMPROVED özellikler performansı 0.8669 AUROC'a (4.95% kazanç) yükseltmektedir. Bu durum, mimariler boyunca tutarlı iyileşmeler göstermektedir. Bu rekabetçi performans, Lynx'e kıyasla 75 kat daha az eğitim verisi (200'e karşılık 15.000 örnek), 1000 kat daha hızlı inference (5ms'ye karşılık 5s) kullanılarak ve tamamen yorumlanabilir kalarak elde edilmiştir. Önemlisi, olumsuz bir sonuç rapor ediyoruz: Rationalization sinyalinin halüsinasyonları ayırt edemediği, LLM'lerin yanlış öncüller için tutarlı reasoning ürettiğini (\"Sycophancy\") düşündürmektedir. Bu çalışma, sinyal mimarisinde kodlanmış alan bilgisinin, LLM yargıçlarının ölçeklenmesine kıyasla üstün veri verimliliği sağladığını, üretim dağıtımına uygun hafif (1M parametrenin altında), açıklanabilir modellerle güçlü performans elde ettiğini göstermektedir."
+    }
+  },
+  {
+    "id": "2601.15595v1",
+    "title": "Data-Free Privacy-Preserving for LLMs via Model Inversion and Selective Unlearning",
+    "authors": [
+      "Xinjie Zhou",
+      "Zhihui Yang",
+      "Lechao Cheng",
+      "Sai Wu",
+      "Gang Chen"
+    ],
+    "published_date": "2026-01-22",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.15595v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.15595v1",
+    "content": {
+      "en": "Large language models (LLMs) exhibit powerful capabilities but risk memorizing sensitive personally identifiable information (PII) from their training data, posing significant privacy concerns. While machine unlearning techniques aim to remove such data, they predominantly depend on access to the training data. This requirement is often impractical, as training data in real-world deployments is commonly proprietary or inaccessible. To address this limitation, we propose Data-Free Selective Unlearning (DFSU), a novel privacy-preserving framework that removes sensitive PII from an LLM without requiring its training data. Our approach first synthesizes pseudo-PII through language model inversion, then constructs token-level privacy masks for these synthetic samples, and finally performs token-level selective unlearning via a contrastive mask loss within a low-rank adaptation (LoRA) subspace. Extensive experiments on the AI4Privacy PII-Masking dataset using Pythia models demonstrate that our method effectively removes target PII while maintaining model utility.",
+      "tr": "Makale Başlığı: LLM'ler İçin Model İnversiyonu ve Seçici Unlearning Yoluyla Veri Gerektirmeyen Gizlilik Koruma\n\nÖzet:\nBüyük dil modelleri (LLM'ler) güçlü yetenekler sergiler ancak eğitim verilerinden hassas kişisel tanımlayıcı bilgileri (PII) ezberleme riski taşır, bu da önemli gizlilik endişeleri doğurur. Makine unlearning teknikleri bu tür verileri kaldırmayı hedeflerken, büyük ölçüde eğitim verilerine erişime bağlıdır. Gerçek dünya dağıtımlarında eğitim verileri yaygın olarak tescilli veya erişilemez olduğundan bu gereklilik sıklıkla pratikte uygulanamazdır. Bu sınırlamanın üstesinden gelmek için, eğitim verisine ihtiyaç duymadan bir LLM'den hassas PII'yi kaldıran yeni bir gizlilik koruma çerçevesi olan Veri Gerektirmeyen Seçici Unlearning (DFSU) öneriyoruz. Yaklaşımımız ilk olarak language model inversion aracılığıyla sözde PII sentezler, ardından bu sentetik örnekler için token-level privacy masks oluşturur ve son olarak düşük rank adaptasyonu (LoRA) alt uzayında bir contrastive mask loss aracılığıyla token-level selective unlearning gerçekleştirir. Pythia modelleri kullanılarak AI4Privacy PII-Masking veri kümesi üzerinde yapılan kapsamlı deneyler, yöntemimizin model faydasını korurken hedef PII'yi etkili bir şekilde kaldırdığını göstermektedir."
+    }
+  },
+  {
+    "id": "2601.15474v1",
+    "title": "Multi-Targeted Graph Backdoor Attack",
+    "authors": [
+      "Md Nabi Newaz Khan",
+      "Abdullah Arafat Miah",
+      "Yu Bi"
+    ],
+    "published_date": "2026-01-21",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2601.15474v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.15474v1",
+    "content": {
+      "en": "Graph neural network (GNN) have demonstrated exceptional performance in solving critical problems across diverse domains yet remain susceptible to backdoor attacks. Existing studies on backdoor attack for graph classification are limited to single target attack using subgraph replacement based mechanism where the attacker implants only one trigger into the GNN model. In this paper, we introduce the first multi-targeted backdoor attack for graph classification task, where multiple triggers simultaneously redirect predictions to different target labels. Instead of subgraph replacement, we propose subgraph injection which preserves the structure of the original graphs while poisoning the clean graphs. Extensive experiments demonstrate the efficacy of our approach, where our attack achieves high attack success rates for all target labels with minimal impact on the clean accuracy. Experimental results on five dataset demonstrate the superior performance of our attack framework compared to the conventional subgraph replacement-based attack. Our analysis on four GNN models confirms the generalization capability of our attack which is effective regardless of the GNN model architectures and training parameters settings. We further investigate the impact of the attack design parameters including injection methods, number of connections, trigger sizes, trigger edge density and poisoning ratios. Additionally, our evaluation against state-of-the-art defenses (randomized smoothing and fine-pruning) demonstrates the robustness of our proposed multi-target attacks. This work highlights the GNN vulnerability against multi-targeted backdoor attack in graph classification task. Our source codes will be available at https://github.com/SiSL-URI/Multi-Targeted-Graph-Backdoor-Attack.",
+      "tr": "**Makale Başlığı: Multi-Targeted Graph Backdoor Attack**\n\n**Özet:**\n\nGraph neural network (GNN'ler), çeşitli alanlardaki kritik sorunları çözmede olağanüstü performans sergilemelerine rağmen, backdoor attack'lara karşı hassasiyetlerini korumaktadır. Graph classification için mevcut backdoor attack çalışmaları, yalnızca bir tetikleyiciyi GNN modeline yerleştiren subgraph replacement tabanlı mekanizma üzerinden tek hedefli saldırılarla sınırlıdır. Bu makalede, graph classification görevi için ilk kez multi-targeted backdoor attack'ı tanıtıyoruz; bu saldırıda birden fazla tetikleyici, tahminleri eşzamanlı olarak farklı hedef etiketlere yönlendirir. Subgraph replacement yerine, orijinal grafiğin yapısını korurken temiz grafikleri zehirleyen subgraph injection'ı öneriyoruz. Kapsamlı deneyler, yaklaşımımızın etkinliğini göstermektedir; saldırımız, temiz doğruluk üzerindeki minimum etkiyle tüm hedef etiketler için yüksek attack success rates elde etmektedir. Beş veri kümesi üzerinde yapılan deneysel sonuçlar, saldırı çerçevemizin geleneksel subgraph replacement tabanlı saldırıya kıyasla üstün performansını ortaya koymaktadır. Dört GNN modelini içeren analizimiz, GNN model mimarilerinden ve eğitim parametreleri ayarlarından bağımsız olarak etkili olan saldırımızın generalization capability'sini doğrulamaktadır. Ayrıca, injection methods, number of connections, trigger sizes, trigger edge density ve poisoning ratios gibi attack design parametrelerinin etkisini daha detaylı inceledik. Ek olarak, state-of-the-art savunmalara (randomized smoothing ve fine-pruning) karşı yapılan değerlendirmemiz, önerdiğimiz multi-target saldırıların robustness'ını göstermektedir. Bu çalışma, graph classification görevinde GNN'lerin multi-targeted backdoor attack'lara karşı savunmasızlığını vurgulamaktadır. Kaynak kodlarımız https://github.com/SiSL-URI/Multi-Targeted-Graph-Backdoor-Attack adresinde sunulacaktır."
+    }
+  },
+  {
     "id": "2601.15177v1",
     "title": "Dynamic Management of a Deep Learning-Based Anomaly Detection System for 5G Networks",
     "authors": [
@@ -18,192 +214,7 @@
     "pdf_link": "https://arxiv.org/pdf/2601.15177v1",
     "content": {
       "en": "Fog and mobile edge computing (MEC) will play a key role in the upcoming fifth generation (5G) mobile networks to support decentralized applications, data analytics and management into the network itself by using a highly distributed compute model. Furthermore, increasing attention is paid to providing user-centric cybersecurity solutions, which particularly require collecting, processing and analyzing significantly large amount of data traffic and huge number of network connections in 5G networks. In this regard, this paper proposes a MEC-oriented solution in 5G mobile networks to detect network anomalies in real-time and in autonomic way. Our proposal uses deep learning techniques to analyze network flows and to detect network anomalies. Moreover, it uses policies in order to provide an efficient and dynamic management system of the computing resources used in the anomaly detection process. The paper presents relevant aspects of the deployment of the proposal and experimental results to show its performance.",
-      "tr": "İşte istediğiniz çeviri:\n\n**Makale Başlığı:** 5G Ağları İçin Derin Öğrenme Tabanlı Anomali Tespit Sisteminin Dinamik Yönetimi\n\n**Özet:**\nFog ve mobil kenar bilişim (MEC), yüksek düzeyde dağıtık bir hesaplama modeli kullanarak ağın kendisine merkezi olmayan uygulamaları, veri analizi ve yönetimi desteklemek için yaklaşan beşinci nesil (5G) mobil ağlarda kilit bir rol oynayacaktır. Dahası, kullanıcı merkezli siber güvenlik çözümlerinin sunulmasına giderek daha fazla önem verilmektedir; bu çözümler özellikle 5G ağlarında önemli miktarda veri trafiğini ve çok sayıda ağ bağlantısını toplama, işleme ve analiz etmeyi gerektirir. Bu bağlamda, bu makale 5G mobil ağlarında ağ anormalliklerini gerçek zamanlı ve otonom bir şekilde tespit etmek için MEC odaklı bir çözüm önermektedir. Önerimiz, ağ akışlarını analiz etmek ve ağ anormalliklerini tespit etmek için deep learning tekniklerini kullanmaktadır. Ayrıca, anomali tespit sürecinde kullanılan hesaplama kaynaklarının verimli ve dinamik bir yönetim sistemini sağlamak amacıyla policy'leri kullanmaktadır. Makale, önerinin dağıtımıyla ilgili ilgili yönleri ve performansını göstermek için deneysel sonuçları sunmaktadır."
-    }
-  },
-  {
-    "id": "2601.15055v1",
-    "title": "SpooFL: Spoofing Federated Learning",
-    "authors": [
-      "Isaac Baglin",
-      "Xiatian Zhu",
-      "Simon Hadfield"
-    ],
-    "published_date": "2026-01-21",
-    "tags": [
-      "cs.CR",
-      "cs.CV",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2601.15055v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.15055v1",
-    "content": {
-      "en": "Traditional defenses against Deep Leakage (DL) attacks in Federated Learning (FL) primarily focus on obfuscation, introducing noise, transformations or encryption to degrade an attacker's ability to reconstruct private data. While effective to some extent, these methods often still leak high-level information such as class distributions or feature representations, and are frequently broken by increasingly powerful denoising attacks. We propose a fundamentally different perspective on FL defense: framing it as a spoofing problem.We introduce SpooFL (Figure 1), a spoofing-based defense that deceives attackers into believing they have recovered the true training data, while actually providing convincing but entirely synthetic samples from an unrelated task. Unlike prior synthetic-data defenses that share classes or distributions with the private data and thus still leak semantic information, SpooFL uses a state-of-the-art generative model trained on an external dataset with no class overlap. As a result, attackers are misled into recovering plausible yet completely irrelevant samples, preventing meaningful data leakage while preserving FL training integrity. We implement the first example of such a spoofing defense, and evaluate our method against state-of-the-art DL defenses and demonstrate that it successfully misdirects attackers without compromising model performance significantly.",
-      "tr": "İşte akademik makalenin başlık ve özetinin istenen şekilde çevirisi:\n\n**Makale Başlığı:** SpooFL: Spoofing Federated Learning\n\n**Özet:**\n\nFederated Learning (FL) içerisinde Deep Leakage (DL) saldırılarına karşı geleneksel savunmalar öncelikli olarak karmaşıklık üzerine odaklanarak, bir saldırganın özel verileri yeniden yapılandırma yeteneğini bozmak amacıyla gürültü, dönüşümler veya şifreleme eklemeyi hedefler. Bu yöntemler bir dereceye kadar etkili olsa da, genellikle sınıf dağılımları veya feature representations gibi üst düzey bilgileri sızdırmaya devam eder ve giderek daha güçlü hale gelen denoising saldırıları tarafından sıklıkla aşılır. FL savunmasına dair temelde farklı bir perspektif sunuyoruz: bunu bir spoofing problemi olarak çerçeveleyerek. SpooFL'i (Şekil 1), saldırganları gerçek eğitim verilerini kurtardıklarına inandıracak şekilde kandıran, ancak aslında alakasız bir görevden ikna edici ancak tamamen sentetik örnekler sağlayan bir spoofing tabanlı savunma olarak sunuyoruz. Sınıfları veya dağılımları özel verilerle paylaşarak semantik bilgi sızdırmaya devam eden önceki sentetik veri savunmalarından farklı olarak SpooFL, sınıf örtüşmesi olmayan harici bir veri kümesi üzerinde eğitilmiş, state-of-the-art bir generative model kullanır. Sonuç olarak, saldırganlar makul ancak tamamen alakasız örnekler kurtarmaya yönlendirilir, bu da FL training integrity'sini korurken anlamlı veri sızıntısını önler. Bu tür bir spoofing savunmasının ilk örneğini uyguluyoruz ve yöntemimizi state-of-the-art DL savunmalarına karşı değerlendiriyoruz ve model performansını önemli ölçüde tehlikeye atmadan saldırganları başarıyla yanlış yönlendirdiğini gösteriyoruz."
-    }
-  },
-  {
-    "id": "2601.14982v1",
-    "title": "Interoperable Architecture for Digital Identity Delegation for AI Agents with Blockchain Integration",
-    "authors": [
-      "David Ricardo Saavedra"
-    ],
-    "published_date": "2026-01-21",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CY"
-    ],
-    "link": "http://arxiv.org/abs/2601.14982v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.14982v1",
-    "content": {
-      "en": "Verifiable delegation in digital identity systems remains unresolved across centralized, federated, and self-sovereign identity (SSI) environments, particularly where both human users and autonomous AI agents must exercise and transfer authority without exposing primary credentials or private keys. We introduce a unified framework that enables bounded, auditable, and least-privilege delegation across heterogeneous identity ecosystems. The framework includes four key elements: Delegation Grants (DGs), first-class authorization artefacts that encode revocable transfers of authority with enforced scope reduction; a Canonical Verification Context (CVC) that normalizes verification requests into a single structured representation independent of protocols or credential formats; a layered reference architecture that separates trust anchoring, credential and proof validation, policy evaluation, and protocol mediation via a Trust Gateway; and an explicit treatment of blockchain anchoring as an optional integrity layer rather than a structural dependency. Together, these elements advance interoperable delegation and auditability and provide a foundation for future standardization, implementation, and integration of autonomous agents into trusted digital identity infrastructures.",
-      "tr": "**Makale Başlığı:** Dijital Kimlik Yetkilendirme için Yapay Zeka Ajanları ile Blok Zinciri Entegrasyonu için Birlikte Çalışabilir Mimari\n\n**Özet:**\n\nMerkezi, federasyon ve kendi egemen kimliği (SSI) ortamlarında doğrulanabilir yetkilendirme, dijital kimlik sistemlerinde çözülmemiş bir sorun olarak kalmaktadır; özellikle hem insan kullanıcıların hem de otonom yapay zeka ajanlarının birincil kimlik bilgilerini veya özel anahtarlarını maruz bırakmadan yetki kullanması ve transfer etmesi gerektiğinde. Heterojen kimlik ekosistemleri arasında sınırlı, denetlenebilir ve en az ayrıcalık prensibine dayalı yetkilendirmeyi sağlayan birleşik bir çerçeve sunuyoruz. Bu çerçeve dört temel unsuru içermektedir: Yetkilendirme Hibeleri (Delegation Grants - DGs), yetkinin geri alınabilir transferlerini kodlayan ve kapsam daraltmayı zorunlu kılan birinci sınıf yetkilendirme eserleri; protokollerden veya kimlik bilgisi formatlarından bağımsız olarak doğrulama isteklerini tek bir yapılandırılmış temsile normalleştiren bir Kanonik Doğrulama Bağlamı (Canonical Verification Context - CVC); güven çıpalama, kimlik bilgisi ve kanıt doğrulama, politika değerlendirme ve bir Güven Ağ Geçidi (Trust Gateway) aracılığıyla protokol aracılığını ayıran katmanlı bir referans mimarisi; ve blok zinciri çıpalama işleminin yapısal bir bağımlılıktan ziyade isteğe bağlı bir bütünlük katmanı olarak açık bir şekilde ele alınması. Bu unsurlar birlikte, birlikte çalışabilir yetkilendirme ve denetlenebilirliği ileriye taşımakta ve gelecekteki standartlaştırma, uygulama ve otonom ajanların güvenilir dijital kimlik altyapılarına entegrasyonu için bir temel sağlamaktadır."
-    }
-  },
-  {
-    "id": "2601.14687v1",
-    "title": "Beyond Denial-of-Service: The Puppeteer's Attack for Fine-Grained Control in Ranking-Based Federated Learning",
-    "authors": [
-      "Zhihao Chen",
-      "Zirui Gong",
-      "Jianting Ning",
-      "Yanjun Zhang",
-      "Leo Yu Zhang"
-    ],
-    "published_date": "2026-01-21",
-    "tags": [
-      "cs.LG",
-      "cs.CR",
-      "cs.DC"
-    ],
-    "link": "http://arxiv.org/abs/2601.14687v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.14687v1",
-    "content": {
-      "en": "Federated Rank Learning (FRL) is a promising Federated Learning (FL) paradigm designed to be resilient against model poisoning attacks due to its discrete, ranking-based update mechanism. Unlike traditional FL methods that rely on model updates, FRL leverages discrete rankings as a communication parameter between clients and the server. This approach significantly reduces communication costs and limits an adversary's ability to scale or optimize malicious updates in the continuous space, thereby enhancing its robustness. This makes FRL particularly appealing for applications where system security and data privacy are crucial, such as web-based auction and bidding platforms. While FRL substantially reduces the attack surface, we demonstrate that it remains vulnerable to a new class of local model poisoning attack, i.e., fine-grained control attacks. We introduce the Edge Control Attack (ECA), the first fine-grained control attack tailored to ranking-based FL frameworks. Unlike conventional denial-of-service (DoS) attacks that cause conspicuous disruptions, ECA enables an adversary to precisely degrade a competitor's accuracy to any target level while maintaining a normal-looking convergence trajectory, thereby avoiding detection. ECA operates in two stages: (i) identifying and manipulating Ascending and Descending Edges to align the global model with the target model, and (ii) widening the selection boundary gap to stabilize the global model at the target accuracy. Extensive experiments across seven benchmark datasets and nine Byzantine-robust aggregation rules (AGRs) show that ECA achieves fine-grained accuracy control with an average error of only 0.224%, outperforming the baseline by up to 17x. Our findings highlight the need for stronger defenses against advanced poisoning attacks. Our code is available at: https://github.com/Chenzh0205/ECA",
-      "tr": "**Makale Başlığı:** Denial-of-Service'in Ötesinde: Sıralama Tabanlı Federated Learning'de İnce Taneli Kontrol İçin Kuklacı Saldırısı\n\n**Özet:**\n\nFederated Rank Learning (FRL), model zehirlenmesi saldırılarına karşı dayanıklı olacak şekilde tasarlanmış umut verici bir Federated Learning (FL) paradigmasıdır; bunun sebebi ayrık, sıralama tabanlı güncelleme mekanizmasıdır. Model güncellemelerine dayanan geleneksel FL yöntemlerinin aksine, FRL istemciler ve sunucu arasındaki bir iletişim parametresi olarak ayrık sıralamaları kullanır. Bu yaklaşım, iletişim maliyetlerini önemli ölçüde azaltır ve bir rakibin sürekli alanda kötü niyetli güncellemeleri ölçeklendirme veya optimize etme yeteneğini sınırlar, böylece dayanıklılığını artırır. Bu durum, FRL'yi özellikle sistem güvenliği ve veri gizliliğinin kritik olduğu uygulamalar, örneğin web tabanlı açık artırma ve teklif platformları için cazip kılmaktadır. FRL saldırı yüzeyini önemli ölçüde azaltırken, bunun yeni bir yerel model zehirlenmesi saldırısı sınıfına, yani ince taneli kontrol saldırılarına karşı hala savunmasız olduğunu göstermekteyiz. Sıralama tabanlı FL çerçevelerine uyarlanmış ilk ince taneli kontrol saldırısı olan Edge Control Attack (ECA)'yı tanıtıyoruz. Göze çarpan kesintilere neden olan geleneksel denial-of-service (DoS) saldırılarının aksine, ECA bir rakibin algılanmaktan kaçınarak, normal görünümlü bir yakınsama yörüngesini korurken, bir rakibin doğruluğunu herhangi bir hedef seviyeye hassas bir şekilde düşürmesine olanak tanır. ECA iki aşamada çalışır: (i) global modeli hedef modelle hizalamak için Ascending ve Descending Edges'i belirleme ve manipüle etme ve (ii) global modeli hedef doğruluğunda stabilize etmek için seçim sınırı aralığını genişletme. Yedi kıyaslama veri kümesi ve dokuz Byzantine-robust aggregation rules (AGRs) üzerinde yapılan kapsamlı deneyler, ECA'nın ortalama yalnızca %0.224'lük bir hata ile ince taneli doğruluk kontrolü sağladığını ve tabana göre 17 kata kadar daha iyi performans gösterdiğini göstermektedir. Bulgularımız, gelişmiş zehirlenme saldırılarına karşı daha güçlü savunma ihtiyacını vurgulamaktadır. Kodumuz şu adreste mevcuttur: https://github.com/Chenzh0205/ECA"
-    }
-  },
-  {
-    "id": "2601.14660v1",
-    "title": "NeuroFilter: Privacy Guardrails for Conversational LLM Agents",
-    "authors": [
-      "Saswat Das",
-      "Ferdinando Fioretto"
-    ],
-    "published_date": "2026-01-21",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL"
-    ],
-    "link": "http://arxiv.org/abs/2601.14660v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.14660v1",
-    "content": {
-      "en": "This work addresses the computational challenge of enforcing privacy for agentic Large Language Models (LLMs), where privacy is governed by the contextual integrity framework. Indeed, existing defenses rely on LLM-mediated checking stages that add substantial latency and cost, and that can be undermined in multi-turn interactions through manipulation or benign-looking conversational scaffolding. Contrasting this background, this paper makes a key observation: internal representations associated with privacy-violating intent can be separated from benign requests using linear structure. Using this insight, the paper proposes NeuroFilter, a guardrail framework that operationalizes contextual integrity by mapping norm violations to simple directions in the model's activation space, enabling detection even when semantic filters are bypassed. The proposed filter is also extended to capture threats arising during long conversations using the concept of activation velocity, which measures cumulative drift in internal representations across turns. A comprehensive evaluation across over 150,000 interactions and covering models from 7B to 70B parameters, illustrates the strong performance of NeuroFilter in detecting privacy attacks while maintaining zero false positives on benign prompts, all while reducing the computational inference cost by several orders of magnitude when compared to LLM-based agentic privacy defenses.",
-      "tr": "Makale Başlığı: NeuroFilter: Konuşma Odaklı LLM Ajanları için Gizlilik Korumaları\n\nÖzet:\nBu çalışma, gizliliğin bağlamsal bütünlük çerçevesi tarafından yönetildiği ajan odaklı Büyük Dil Modelleri (LLM'ler) için gizliliğin zorunlu kılınmasına yönelik hesaplama zorluğunu ele almaktadır. Gerçekten de mevcut savunmalar, önemli gecikme ve maliyet ekleyen ve manipülasyon veya zararsız görünen konuşma yapıları aracılığıyla çok turlu etkileşimlerde zayıflatılabilen LLM aracılı kontrol aşamalarına dayanmaktadır. Bu arka plana karşı, bu makale önemli bir gözlem yapmaktadır: gizliliği ihlal eden niyetle ilişkili iç temsiller, doğrusal yapılar kullanılarak zararsız isteklerden ayrılabilir. Bu öngörüden yararlanarak, makale norm ihlallerini modelin aktivasyon alanındaki basit yönlere eşleyerek bağlamsal bütünlüğü operasyonel hale getiren bir koruma çerçevesi olan NeuroFilter'ı önermektedir; bu, semantik filtreler atlatıldığında bile tespit etmeyi sağlar. Önerilen filtre, ayrıca, turlar boyunca iç temsillerdeki kümülatif sürüklenmeyi ölçen aktivasyon hızı kavramını kullanarak uzun sohbetler sırasında ortaya çıkan tehditleri yakalamak için genişletilmiştir. 7B ila 70B parametrelik modelleri kapsayan 150.000'den fazla etkileşim üzerinde yapılan kapsamlı bir değerlendirme, NeuroFilter'ın gizlilik saldırılarını tespit etmedeki güçlü performansını, zararsız komutlarda sıfır yanlış pozitif tutarken, LLM tabanlı ajan gizlilik savunmalarına kıyasla hesaplama çıkarım maliyetini birkaç büyüklük mertebesi azaltırken göstermektedir."
-    }
-  },
-  {
-    "id": "2601.14597v1",
-    "title": "Optimality of Staircase Mechanisms for Vector Queries under Differential Privacy",
-    "authors": [
-      "James Melbourne",
-      "Mario Diaz",
-      "Shahab Asoodeh"
-    ],
-    "published_date": "2026-01-21",
-    "tags": [
-      "cs.IT",
-      "cs.AI",
-      "cs.CR",
-      "stat.ML"
-    ],
-    "link": "http://arxiv.org/abs/2601.14597v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.14597v1",
-    "content": {
-      "en": "We study the optimal design of additive mechanisms for vector-valued queries under $ε$-differential privacy (DP). Given only the sensitivity of a query and a norm-monotone cost function measuring utility loss, we ask which noise distribution minimizes expected cost among all additive $ε$-DP mechanisms. Using convex rearrangement theory, we show that this infinite-dimensional optimization problem admits a reduction to a one-dimensional compact and convex family of radially symmetric distributions whose extreme points are the staircase distributions. As a consequence, we prove that for any dimension, any norm, and any norm-monotone cost function, there exists an $ε$-DP staircase mechanism that is optimal among all additive mechanisms. This result resolves a conjecture of Geng, Kairouz, Oh, and Viswanath, and provides a geometric explanation for the emergence of staircase mechanisms as extremal solutions in differential privacy.",
-      "tr": "Kesinlikle, istediğiniz çeviriyi aşağıda bulabilirsiniz:\n\n**Makale Başlığı:** Diferansiyel Gizlilik Kapsamında Vektör Sorguları İçin Merdiven Mekanizmalarının Optimalitesi\n\n**Özet:**\n\nBu çalışmada, $ε$-diferansiyel gizlilik (DP) altında vektör değerli sorgular için toplamsal mekanizmaların optimal tasarımını incelemekteyiz. Yalnızca bir sorgunun hassasiyeti ve fayda kaybını ölçen norm-monoton bir maliyet fonksiyonu göz önüne alındığında, tüm toplamsal $ε$-DP mekanizmaları arasında beklenen maliyeti en aza indiren gürültü dağılımının hangisi olduğunu sormaktayız. Konveks yeniden düzenleme teorisi (convex rearrangement theory) kullanarak, bu sonsuz boyutlu optimizasyon probleminin, radyal olarak simetrik dağılımların tek boyutlu kompakt ve konveks bir ailesine indirgenebildiğini ve bu ailenin uç noktalarının staircase distributions olduğunu göstermekteyiz. Sonuç olarak, herhangi bir boyut, herhangi bir norm ve herhangi bir norm-monoton maliyet fonksiyonu için, tüm toplamsal mekanizmalar arasında optimal olan bir $ε$-DP staircase mechanism'ın var olduğunu kanıtlamaktayız. Bu sonuç, Geng, Kairouz, Oh ve Viswanath'ın bir tahminini çözmekte ve diferansiyel gizlilikte extremal çözümler olarak staircase mechanisms'ın ortaya çıkışı için geometrik bir açıklama sunmaktadır."
-    }
-  },
-  {
-    "id": "2601.14595v1",
-    "title": "IntelliSA: An Intelligent Static Analyzer for IaC Security Smell Detection Using Symbolic Rules and Neural Inference",
-    "authors": [
-      "Qiyue Mei",
-      "Michael Fu"
-    ],
-    "published_date": "2026-01-21",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.14595v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.14595v1",
-    "content": {
-      "en": "Infrastructure as Code (IaC) enables automated provisioning of large-scale cloud and on-premise environments, reducing the need for repetitive manual setup. However, this automation is a double-edged sword: a single misconfiguration in IaC scripts can propagate widely, leading to severe system downtime and security risks. Prior studies have shown that IaC scripts often contain security smells--bad coding patterns that may introduce vulnerabilities--and have proposed static analyzers based on symbolic rules to detect them. Yet, our preliminary analysis reveals that rule-based detection alone tends to over-approximate, producing excessive false positives and increasing the burden of manual inspection. In this paper, we present IntelliSA, an intelligent static analyzer for IaC security smell detection that integrates symbolic rules with neural inference. IntelliSA applies symbolic rules to over-approximate potential smells for broad coverage, then employs neural inference to filter false positives. While an LLM can effectively perform this filtering, reliance on LLM APIs introduces high cost and latency, raises data governance concerns, and limits reproducibility and offline deployment. To address the challenges, we adopt a knowledge distillation approach: an LLM teacher generates pseudo-labels to train a compact student model--over 500x smaller--that learns from the teacher's knowledge and efficiently classifies false positives. We evaluate IntelliSA against two static analyzers and three LLM baselines (Claude-4, Grok-4, and GPT-5) using a human-labeled dataset including 241 security smells across 11,814 lines of real-world IaC code. Experimental results show that IntelliSA achieves the highest F1 score (83%), outperforming baselines by 7-42%. Moreover, IntelliSA demonstrates the best cost-effectiveness, detecting 60% of security smells while inspecting less than 2% of the codebase.",
-      "tr": "**Makale Başlığı:** IntelliSA: Sembolik Kurallar ve Nöral Çıkarım Kullanarak IaC Güvenlik Kokusu Tespiti İçin Akıllı Bir Statik Analizci\n\n**Özet:**\n\nInfrastructure as Code (IaC), büyük ölçekli bulut ve şirket içi ortamların otomatik olarak sağlanmasına olanak tanıyarak tekrarlayan manuel kurulum ihtiyacını azaltır. Ancak bu otomasyon kılıç gibidir: IaC betiklerinde tek bir yanlış yapılandırma yaygınlaşarak ciddi sistem kesintilerine ve güvenlik risklerine yol açabilir. Önceki çalışmalar, IaC betiklerinin genellikle security smells -- açıkları ortaya çıkarabilecek kötü kodlama desenleri -- içerdiğini göstermiş ve bunları tespit etmek için symbolic rules tabanlı statik analizciler önermiştir. Ancak ön analizimiz, yalnızca rule-based detection'ın aşırı genelleme eğiliminde olduğunu, aşırı false positives ürettiğini ve manuel denetim yükünü artırdığını ortaya koymaktadır. Bu makalede, symbolic rules ile neural inference'ı entegre eden bir IaC security smell detection için akıllı bir statik analizci olan IntelliSA'yı sunuyoruz. IntelliSA, geniş kapsama alanı için potansiyel smells'ları over-approximate etmek üzere symbolic rules uygular, ardından false positives'leri filtrelemek için neural inference kullanır. Bir LLM bu filtrelemeyi etkili bir şekilde gerçekleştirebilse de, LLM API'lerine güvenmek yüksek maliyet ve gecikme getirir, veri yönetimi endişelerini artırır ve tekrarlanabilirlik ile offline deployment'ı sınırlar. Bu zorlukların üstesinden gelmek için knowledge distillation yaklaşımını benimsiyoruz: bir LLM öğretmen, öğretmenin knowledge'ından öğrenen ve false positives'leri verimli bir şekilde sınıflandıran kompakt bir öğrenci modeli -- 500x'ten fazla daha küçük -- eğitmek için pseudo-labels üretir. IntelliSA'yı, 11.814 satır gerçek dünya IaC kodunda 241 security smells içeren insan etiketli bir veri kümesi kullanarak iki statik analizci ve üç LLM baseline'ına (Claude-4, Grok-4 ve GPT-5) karşı değerlendiriyoruz. Deneysel sonuçlar, IntelliSA'nın en yüksek F1 skorunu (%83) elde ettiğini ve baseline'ları %7-42 oranında geride bıraktığını göstermektedir. Dahası, IntelliSA, kod tabanının %2'sinden azını incelerken security smells'ların %60'ını tespit ederek en iyi maliyet etkinliğini göstermektedir."
-    }
-  },
-  {
-    "id": "2601.14556v1",
-    "title": "Constructing Multi-label Hierarchical Classification Models for MITRE ATT&CK Text Tagging",
-    "authors": [
-      "Andrew Crossman",
-      "Jonah Dodd",
-      "Viralam Ramamurthy Chaithanya Kumar",
-      "Riyaz Mohammed",
-      "Andrew R. Plummer"
-    ],
-    "published_date": "2026-01-21",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2601.14556v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.14556v1",
-    "content": {
-      "en": "MITRE ATT&CK is a cybersecurity knowledge base that organizes threat actor and cyber-attack information into a set of tactics describing the reasons and goals threat actors have for carrying out attacks, with each tactic having a set of techniques that describe the potential methods used in these attacks. One major application of ATT&CK is the use of its tactic and technique hierarchy by security specialists as a framework for annotating cyber-threat intelligence reports, vulnerability descriptions, threat scenarios, inter alia, to facilitate downstream analyses. To date, the tagging process is still largely done manually. In this technical note, we provide a stratified \"task space\" characterization of the MITRE ATT&CK text tagging task for organizing previous efforts toward automation using AIML methods, while also clarifying pathways for constructing new methods. To illustrate one of the pathways, we use the task space strata to stage-wise construct our own multi-label hierarchical classification models for the text tagging task via experimentation over general cyber-threat intelligence text -- using shareable computational tools and publicly releasing the models to the security community (via https://github.com/jpmorganchase/MITRE_models). Our multi-label hierarchical approach yields accuracy scores of roughly 94% at the tactic level, as well as accuracy scores of roughly 82% at the technique level. The models also meet or surpass state-of-the-art performance while relying only on classical machine learning methods -- removing any dependence on LLMs, RAG, agents, or more complex hierarchical approaches. Moreover, we show that GPT-4o model performance at the tactic level is significantly lower (roughly 60% accuracy) than our own approach. We also extend our baseline model to a corpus of threat scenarios for financial applications produced by subject matter experts.",
-      "tr": "İşte akademik makalenin başlığının ve özetinin Türkçe çevirisi:\n\n**Makale Başlığı:** MITRE ATT&CK Metin Etiketlemesi İçin Çok Etiketli Hiyerarşik Sınıflandırma Modellerinin Oluşturulması\n\n**Özet:**\nMITRE ATT&CK, tehdit aktörlerinin saldırıları gerçekleştirme neden ve hedeflerini tanımlayan bir dizi taktik etrafında tehdit aktörü ve siber saldırı bilgilerini organize eden bir siber güvenlik knowledge base'dir. Her taktiğin, bu saldırılarda kullanılan potansiyel yöntemleri açıklayan bir dizi tekniği bulunmaktadır. ATT&CK'in önemli bir uygulaması, güvenlik uzmanlarının, aşağı akış analizlerini kolaylaştırmak amacıyla siber tehdit istihbarat raporlarını, zafiyet açıklamalarını, tehdit senaryolarını ve diğerlerini etiketlemek için bir çerçeve olarak taktik ve teknik hiyerarşisini kullanmasıdır. Bugüne kadar etiketleme süreci büyük ölçüde manuel olarak yapılmaktadır. Bu teknik notta, AIML yöntemleri kullanarak otomasyona yönelik önceki çabaları organize etmek ve aynı zamanda yeni yöntemler oluşturma yollarını netleştirmek için MITRE ATT&CK metin etiketleme görevine yönelik katmanlı bir \"task space\" karakterizasyonu sunmaktayız. Yollardan birini göstermek amacıyla, task space katmanlarını kullanarak, genel siber tehdit istihbarat metinleri üzerinde deneyler yoluyla metin etiketleme görevi için kendi çok etiketli hiyerarşik sınıflandırma modellerimizi aşama aşama oluşturduk. Bu modelleri, paylaşılabilir hesaplama araçları kullanarak ve güvenlik topluluğuna kamuya açık olarak yayımladık (https://github.com/jpmorganchase/MITRE_models). Çok etiketli hiyerarşik yaklaşımımız, taktik seviyesinde yaklaşık %94, teknik seviyesinde ise yaklaşık %82 doğruluk skorları sağlamaktadır. Modellerimiz ayrıca, LLM'ler, RAG, agents veya daha karmaşık hiyerarşik yaklaşımlara herhangi bir bağımlılığı ortadan kaldırarak, yalnızca klasik makine öğrenimi yöntemlerine dayanarak state-of-the-art performansı karşılamakta veya geride bırakmaktadır. Dahası, GPT-4o modelinin taktik seviyesindeki performansının kendi yaklaşımımıza göre (yaklaşık %60 doğruluk) önemli ölçüde daha düşük olduğunu göstermekteyiz. Ayrıca, temel modelimizi konu uzmanları tarafından üretilen finansal uygulamalara yönelik tehdit senaryolarından oluşan bir korpusa da genişlettik."
-    }
-  },
-  {
-    "id": "2601.14528v1",
-    "title": "LLM Security and Safety: Insights from Homotopy-Inspired Prompt Obfuscation",
-    "authors": [
-      "Luis Lazo",
-      "Hamed Jelodar",
-      "Roozbeh Razavi-Far"
-    ],
-    "published_date": "2026-01-20",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2601.14528v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.14528v1",
-    "content": {
-      "en": "In this study, we propose a homotopy-inspired prompt obfuscation framework to enhance understanding of security and safety vulnerabilities in Large Language Models (LLMs). By systematically applying carefully engineered prompts, we demonstrate how latent model behaviors can be influenced in unexpected ways. Our experiments encompassed 15,732 prompts, including 10,000 high-priority cases, across LLama, Deepseek, KIMI for code generation, and Claude to verify. The results reveal critical insights into current LLM safeguards, highlighting the need for more robust defense mechanisms, reliable detection strategies, and improved resilience. Importantly, this work provides a principled framework for analyzing and mitigating potential weaknesses, with the goal of advancing safe, responsible, and trustworthy AI technologies.",
-      "tr": "**Makale Başlığı:** LLM Güvenliği ve Emniyeti: Homotopy Esintili Prompt Karartma Yaklaşımından Elde Edilen Bulgular\n\n**Özet:**\n\nBu çalışmada, Büyük Dil Modellerinde (LLM) güvenlik ve emniyet zafiyetlerine dair anlayışı artırmak amacıyla, homotopy-inspired prompt obfuscation çatısı önerilmektedir. Dikkatlice tasarlanmış promptların sistematik olarak uygulanması yoluyla, latent model davranışlarının beklenmedik şekillerde nasıl etkilenebileceği gösterilmektedir. Deneylerimiz, kod üretimi için LLama, Deepseek, KIMI ve doğrulamak için Claude'u kapsayan 15.732 promptu, bunlardan 10.000'i yüksek öncelikli vaka olmak üzere, içermiştir. Elde edilen sonuçlar, mevcut LLM koruma mekanizmaları hakkında kritik bilgiler ortaya koymakta ve daha sağlam savunma mekanizmalarına, güvenilir tespit stratejilerine ve geliştirilmiş dayanıklılığa duyulan ihtiyacı vurgulamaktadır. Önemle belirtmek gerekir ki, bu çalışma, güvenli, sorumlu ve güvenilir yapay zeka teknolojilerini ilerletme hedefiyle, potansiyel zayıflıkları analiz etmek ve azaltmak için prensipli bir framework sunmaktadır."
-    }
-  },
-  {
-    "id": "2601.14505v1",
-    "title": "Uncovering and Understanding FPR Manipulation Attack in Industrial IoT Networks",
-    "authors": [
-      "Mohammad Shamim Ahsan",
-      "Peng Liu"
-    ],
-    "published_date": "2026-01-20",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2601.14505v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.14505v1",
-    "content": {
-      "en": "In the network security domain, due to practical issues -- including imbalanced data and heterogeneous legitimate network traffic -- adversarial attacks in machine learning-based NIDSs have been viewed as attack packets misclassified as benign. Due to this prevailing belief, the possibility of (maliciously) perturbed benign packets being misclassified as attack has been largely ignored. In this paper, we demonstrate that this is not only theoretically possible, but also a particular threat to NIDS. In particular, we uncover a practical cyberattack, FPR manipulation attack (FPA), especially targeting industrial IoT networks, where domain-specific knowledge of the widely used MQTT protocol is exploited and a systematic simple packet-level perturbation is performed to alter the labels of benign traffic samples without employing traditional gradient-based or non-gradient-based methods. The experimental evaluations demonstrate that this novel attack results in a success rate of 80.19% to 100%. In addition, while estimating impacts in the Security Operations Center, we observe that even a small fraction of false positive alerts, irrespective of different budget constraints and alert traffic intensities, can increase the delay of genuine alerts investigations up to 2 hr in a single day under normal operating conditions. Furthermore, a series of relevant statistical and XAI analyses is conducted to understand the key factors behind this remarkable success. Finally, we explore the effectiveness of the FPA packets to enhance models' robustness through adversarial training and investigate the changes in decision boundaries accordingly.",
-      "tr": "**Makale Başlığı:** Endüstriyel IoT Ağlarında FPR Manipülasyon Saldırısının Ortaya Çıkarılması ve Anlaşılması\n\n**Özet:**\n\nAğ güvenliği alanında, dengesiz veri ve heterojen meşru ağ trafiği gibi pratik sorunlar nedeniyle, makine öğrenmesi tabanlı NIDS'lerdeki adversarial saldırılar, saldırı paketlerinin zararsız olarak yanlış sınıflandırılması olarak görülmüştür. Bu yaygın inanış nedeniyle, (kötü niyetli olarak) bozulmuş zararsız paketlerin saldırı olarak yanlış sınıflandırılması olasılığı büyük ölçüde göz ardı edilmiştir. Bu makalede, bunun yalnızca teorik olarak mümkün olmakla kalmayıp, aynı zamanda NIDS için de özel bir tehdit olduğunu göstermekteyiz. Özellikle, endüstriyel IoT ağlarını hedef alan pratik bir siber saldırı olan FPR manipulation attack (FPA)'yı ortaya çıkarıyoruz. Bu saldırıda, yaygın olarak kullanılan MQTT protokolünün alan özel bilgisi kullanılarak ve geleneksel gradyan tabanlı veya gradyan tabanlı olmayan yöntemler kullanılmadan zararsız trafik örneklerinin etiketlerini değiştirmek için sistematik, basit bir paket düzeyinde perturbation gerçekleştirilir. Deneysel değerlendirmeler, bu yeni saldırının %80.19 ila %100 başarı oranına sahip olduğunu göstermektedir. Ayrıca, Security Operations Center'daki etkileri tahmin ederken, yanlış pozitif uyarıların yalnızca küçük bir kısmının bile, farklı bütçe kısıtlamaları ve uyarı trafiği yoğunluklarından bağımsız olarak, normal çalışma koşulları altında tek bir günde gerçek uyarı araştırmalarının gecikmesini 2 saate kadar artırabildiğini gözlemlemekteyiz. Son olarak, bu dikkate değer başarının arkasındaki temel faktörleri anlamak için bir dizi ilgili istatistiksel ve XAI analizleri yürütülmektedir. Nihayetinde, adversarial training yoluyla modellerin dayanıklılığını artırmak için FPA paketlerinin etkinliğini araştırıyoruz ve buna göre karar sınırlarında meydana gelen değişiklikleri inceliyoruz."
+      "tr": "**Makale Başlığı Çevirisi:** 5G Ağları İçin Derin Öğrenme Tabanlı Anomali Tespit Sisteminin Dinamik Yönetimi\n\n**Özet Çevirisi:**\n\nGelişmekte olan beşinci nesil (5G) mobil ağlarda, oldukça dağıtık bir hesaplama modeli kullanarak ağın kendisine merkezi olmayan uygulamaları, veri analitiğini ve yönetimi desteklemek için fog ve mobile edge computing (MEC) kritik bir rol oynayacaktır. Dahası, özellikle 5G ağlarındaki büyük miktardaki veri trafiğini ve çok sayıda ağ bağlantısını toplama, işleme ve analiz etme ihtiyacını ortaya çıkaran, kullanıcı odaklı siber güvenlik çözümleri sunulmasına giderek daha fazla önem verilmektedir. Bu doğrultuda, bu makale 5G mobil ağlarda ağ anormalliklerini gerçek zamanlı ve otonom bir şekilde tespit etmek için MEC odaklı bir çözüm sunmaktadır. Önerimiz, ağ akışlarını analiz etmek ve ağ anormalliklerini tespit etmek için derin öğrenme tekniklerini kullanmaktadır. Ayrıca, anomali tespit sürecinde kullanılan hesaplama kaynaklarının verimli ve dinamik bir yönetim sistemini sağlamak amacıyla politikalar kullanmaktadır. Makale, önerinin dağıtımına ilişkin ilgili yönleri ve performansını göstermek için deneysel sonuçları sunmaktadır."
     }
   }
 ]
