@@ -1,5 +1,138 @@
 [
   {
+    "id": "2601.21682v1",
+    "title": "FIT: Defying Catastrophic Forgetting in Continual LLM Unlearning",
+    "authors": [
+      "Xiaoyu Xu",
+      "Minxin Du",
+      "Kun Fang",
+      "Zi Liang",
+      "Yaxin Xiao"
+    ],
+    "published_date": "2026-01-29",
+    "tags": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.21682v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.21682v1",
+    "content": {
+      "en": "Large language models (LLMs) demonstrate impressive capabilities across diverse tasks but raise concerns about privacy, copyright, and harmful materials. Existing LLM unlearning methods rarely consider the continual and high-volume nature of real-world deletion requests, which can cause utility degradation and catastrophic forgetting as requests accumulate. To address this challenge, we introduce \\fit, a framework for continual unlearning that handles large numbers of deletion requests while maintaining robustness against both catastrophic forgetting and post-unlearning recovery. \\fit mitigates degradation through rigorous data \\underline{F}iltering, \\underline{I}mportance-aware updates, and \\underline{T}argeted layer attribution, enabling stable performance across long sequences of unlearning operations and achieving a favorable balance between forgetting effectiveness and utility retention. To support realistic evaluation, we present \\textbf{PCH}, a benchmark covering \\textbf{P}ersonal information, \\textbf{C}opyright, and \\textbf{H}armful content in sequential deletion scenarios, along with two symmetric metrics, Forget Degree (F.D.) and Retain Utility (R.U.), which jointly assess forgetting quality and utility preservation. Extensive experiments on four open-source LLMs with hundreds of deletion requests show that \\fit achieves the strongest trade-off between F.D. and R.U., surpasses existing methods on MMLU, CommonsenseQA, and GSM8K, and remains resistant against both relearning and quantization recovery attacks.",
+      "tr": "Makale Başlığı: FIT: Continual LLM Unlearning'de Katastrofik Unutmayı Engelleme\n\nÖzet:\nBüyük dil modelleri (LLM'ler), çeşitli görevlerde etkileyici yetenekler sergilemekle birlikte, gizlilik, telif hakkı ve zararlı materyallerle ilgili endişeleri de beraberinde getirmektedir. Mevcut LLM unlearning yöntemleri, gerçek dünyadaki silme isteklerinin sürekli ve yüksek hacimli doğasını nadiren dikkate almakta, bu durum istekler biriktikçe utility degradation ve catastrophic forgetting'e neden olabilmektedir. Bu zorluğun üstesinden gelmek için, büyük miktarda silme isteğini işlerken hem catastrophic forgetting hem de post-unlearning recovery'ye karşı sağlamlığı koruyan bir continual unlearning çerçevesi olan \\fit'i sunuyoruz. \\fit, \\underline{F}iltering, \\underline{I}mportance-aware updates ve \\underline{T}argeted layer attribution'ı titizlikle kullanarak degradation'ı azaltmakta, uzun unlearning işlemleri dizilerinde istikrarlı bir performans sağlamakta ve forgetting effectiveness ile utility retention arasında olumlu bir denge kurmaktadır. Gerçekçi değerlendirmeyi desteklemek için, ardışık silme senaryolarında \\textbf{P}ersonal bilgi, \\textbf{C}opyright ve \\textbf{H}armful içerikleri kapsayan bir benchmark olan \\textbf{PCH}'yi ve silme kalitesi ile utility preservation'ı ortaklaşa değerlendiren Forget Degree (F.D.) ve Retain Utility (R.U.) olmak üzere iki simetrik metriği sunuyoruz. Yüzlerce silme isteği ile dört açık kaynaklı LLM üzerinde yapılan kapsamlı deneyler, \\fit'in F.D. ve R.U. arasında en güçlü trade-off'u elde ettiğini, MMLU, CommonsenseQA ve GSM8K üzerinde mevcut yöntemleri aştığını ve hem relearning hem de quantization recovery attacks'lara karşı dirençli kaldığını göstermektedir."
+    }
+  },
+  {
+    "id": "2601.21636v1",
+    "title": "Sampling-Free Privacy Accounting for Matrix Mechanisms under Random Allocation",
+    "authors": [
+      "Jan Schuchardt",
+      "Nikita Kalinin"
+    ],
+    "published_date": "2026-01-29",
+    "tags": [
+      "cs.LG",
+      "cs.CR",
+      "stat.ML"
+    ],
+    "link": "http://arxiv.org/abs/2601.21636v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.21636v1",
+    "content": {
+      "en": "We study privacy amplification for differentially private model training with matrix factorization under random allocation (also known as the balls-in-bins model). Recent work by Choquette-Choo et al. (2025) proposes a sampling-based Monte Carlo approach to compute amplification parameters in this setting. However, their guarantees either only hold with some high probability or require random abstention by the mechanism. Furthermore, the required number of samples for ensuring $(ε,δ)$-DP is inversely proportional to $δ$. In contrast, we develop sampling-free bounds based on Rényi divergence and conditional composition. The former is facilitated by a dynamic programming formulation to efficiently compute the bounds. The latter complements it by offering stronger privacy guarantees for small $ε$, where Rényi divergence bounds inherently lead to an over-approximation. Our framework applies to arbitrary banded and non-banded matrices. Through numerical comparisons, we demonstrate the efficacy of our approach across a broad range of matrix mechanisms used in research and practice.",
+      "tr": "**Makale Başlığı:** Rastgele Atama Altında Matris Mekanizmaları İçin Örneklemesiz Gizlilik Muhasebesi\n\n**Özet:**\n\nBu çalışma, rastgele atama (diğer adıyla balls-in-bins modeli) altında matris ayrıştırması ile diferansiyel olarak özel model eğitimi için gizlilik amplifikasyonunu incelemektedir. Choquette-Choo ve arkadaşları (2025) tarafından yapılan son çalışma, bu ortamda amplifikasyon parametrelerini hesaplamak için örneklem tabanlı bir Monte Carlo yaklaşımı önermektedir. Ancak, onların sunduğu garantiler ya yalnızca yüksek olasılıkla geçerlidir ya da mekanizmanın rastgele abstensiyonunu gerektirmektedir. Dahası, $(ε,δ)$-DP'yi sağlamak için gereken örnek sayısı $δ$ ile ters orantılıdır. Buna karşılık, Rényi divergence ve conditional composition'a dayanan örneklemesiz sınırlar geliştiriyoruz. İlki, sınırları verimli bir şekilde hesaplamak için bir dynamic programming formülasyonu ile kolaylaştırılmaktadır. İkincisi, Rényi divergence sınırlarının doğal olarak bir over-approximation'a yol açtığı küçük $ε$ değerleri için daha güçlü gizlilik garantileri sunarak onu tamamlamaktadır. Çerçevemiz, rastgele bantlı (banded) ve bantlı olmayan (non-banded) matrislere uygulanabilir. Sayısal karşılaştırmalar aracılığıyla, araştırmada ve pratikte kullanılan geniş bir matris mekanizmaları yelpazesinde yaklaşımımızın etkinliğini göstermekteyiz."
+    }
+  },
+  {
+    "id": "2601.21628v1",
+    "title": "Noise as a Probe: Membership Inference Attacks on Diffusion Models Leveraging Initial Noise",
+    "authors": [
+      "Puwei Lian",
+      "Yujun Cai",
+      "Songze Li",
+      "Bingkun Bao"
+    ],
+    "published_date": "2026-01-29",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.21628v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.21628v1",
+    "content": {
+      "en": "Diffusion models have achieved remarkable progress in image generation, but their increasing deployment raises serious concerns about privacy. In particular, fine-tuned models are highly vulnerable, as they are often fine-tuned on small and private datasets. Membership inference attacks (MIAs) are used to assess privacy risks by determining whether a specific sample was part of a model's training data. Existing MIAs against diffusion models either assume obtaining the intermediate results or require auxiliary datasets for training the shadow model. In this work, we utilized a critical yet overlooked vulnerability: the widely used noise schedules fail to fully eliminate semantic information in the images, resulting in residual semantic signals even at the maximum noise step. We empirically demonstrate that the fine-tuned diffusion model captures hidden correlations between the residual semantics in initial noise and the original images. Building on this insight, we propose a simple yet effective membership inference attack, which injects semantic information into the initial noise and infers membership by analyzing the model's generation result. Extensive experiments demonstrate that the semantic initial noise can strongly reveal membership information, highlighting the vulnerability of diffusion models to MIAs.",
+      "tr": "Makale Başlığı: Gürültü Bir İnceleme Aracı Olarak: İlk Gürültüden Yararlanarak Difüzyon Modelleri Üzerinde Üyelik Çıkarım Saldırıları\n\nÖzet:\nDifüzyon modelleri görüntü üretiminde dikkate değer ilerlemeler kaydetmiş olsa da, artan kullanımları gizlilik konusunda ciddi endişelere yol açmaktadır. Özellikle ince ayarlanmış (fine-tuned) modeller, küçük ve özel veri kümeleri üzerinde ince ayarlanmaları nedeniyle yüksek derecede savunmasızdır. Üyelik çıkarım saldırıları (Membership Inference Attacks - MIAs), belirli bir örneğin bir modelin eğitim verilerinin bir parçası olup olmadığını belirleyerek gizlilik risklerini değerlendirmek için kullanılır. Difüzyon modellerine karşı mevcut MIAs, ya ara sonuçların elde edilmesini varsayar ya da gölge modelini (shadow model) eğitmek için yardımcı veri kümeleri gerektirir. Bu çalışmada, kritik ancak göz ardı edilmiş bir zafiyetten yararlandık: yaygın olarak kullanılan gürültü programları (noise schedules), görüntülerdeki anlamsal bilgileri tam olarak ortadan kaldırmakta başarısız olmakta, bu da maksimum gürültü adımında bile kalıntı anlamsal sinyallere yol açmaktadır. Ampirik olarak, ince ayarlanmış difüzyon modelinin, ilk gürültüdeki kalıntı anlamsal bilgiler ile orijinal görüntüler arasındaki gizli korelasyonları yakaladığını gösteriyoruz. Bu içgörüye dayanarak, ilk gürültüye anlamsal bilgiler enjekte eden ve modelin üretim sonucunu analiz ederek üyeliği çıkarsayan, basit ama etkili bir üyelik çıkarım saldırısı öneriyoruz. Kapsamlı deneyler, anlamsal ilk gürültünün üyelik bilgilerini güçlü bir şekilde ortaya çıkarabileceğini ve difüzyon modellerinin MIAs'a karşı savunmasızlığını vurgulamaktadır."
+    }
+  },
+  {
+    "id": "2601.21531v1",
+    "title": "On the Adversarial Robustness of Large Vision-Language Models under Visual Token Compression",
+    "authors": [
+      "Xinwei Zhang",
+      "Hangcheng Liu",
+      "Li Bai",
+      "Hao Wang",
+      "Qingqing Ye"
+    ],
+    "published_date": "2026-01-29",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "link": "http://arxiv.org/abs/2601.21531v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.21531v1",
+    "content": {
+      "en": "Visual token compression is widely used to accelerate large vision-language models (LVLMs) by pruning or merging visual tokens, yet its adversarial robustness remains unexplored. We show that existing encoder-based attacks can substantially overestimate the robustness of compressed LVLMs, due to an optimization-inference mismatch: perturbations are optimized on the full-token representation, while inference is performed through a token-compression bottleneck. To address this gap, we propose the Compression-AliGnEd attack (CAGE), which aligns perturbation optimization with compression inference without assuming access to the deployed compression mechanism or its token budget. CAGE combines (i) expected feature disruption, which concentrates distortion on tokens likely to survive across plausible budgets, and (ii) rank distortion alignment, which actively aligns token distortions with rank scores to promote the retention of highly distorted evidence. Across diverse representative plug-and-play compression mechanisms and datasets, our results show that CAGE consistently achieves lower robust accuracy than the baseline. This work highlights that robustness assessments ignoring compression can be overly optimistic, calling for compression-aware security evaluation and defenses for efficient LVLMs.",
+      "tr": "**Makale Başlığı:** Büyük Vizyon-Dil Modellerinin Görsel Token Sıkıştırması Altındaki Karşıt Saldırı Dayanıklılığı Üzerine\n\n**Özet:**\n\nBüyük vizyon-dil modellerinin (LVLMs) görsel tokenlarının budanması veya birleştirilmesi yoluyla hızlandırılması için görsel token sıkıştırma yaygın olarak kullanılmaktadır, ancak karşıt saldırı dayanıklılığı henüz keşfedilmemiştir. Mevcut encoder-based saldırıların, sıkıştırılmış LVLMs'lerin dayanıklılığını önemli ölçüde abartabileceğini gösteriyoruz. Bunun nedeni, bir optimizasyon-çıkarım uyumsuzluğudur: pertürbasyonlar tam token gösterimi üzerinde optimize edilirken, çıkarım bir token-sıkıştırma darboğazı aracılığıyla gerçekleştirilir. Bu boşluğu gidermek için, konuşlandırılmış sıkıştırma mekanizmasına veya token bütçesine erişim varsaymadan pertürbasyon optimizasyonunu sıkıştırma çıkarımıyla hizalayan Compression-AliGnEd attack (CAGE) öneriyoruz. CAGE, (i) olası bütçeler boyunca hayatta kalması muhtemel tokenlar üzerindeki bozulmayı yoğunlaştıran expected feature disruption'ı ve (ii) yüksek oranda bozulmuş kanıtların korunmasını teşvik etmek için token bozulmalarını rank score'larla aktif olarak hizalayan rank distortion alignment'ı birleştirir. Çeşitli temsili plug-and-play sıkıştırma mekanizmaları ve veri kümeleri üzerinde yapılan sonuçlarımız, CAGE'in tutarlı bir şekilde baseline'a göre daha düşük robust accuracy elde ettiğini göstermektedir. Bu çalışma, sıkıştırmayı göz ardı eden dayanıklılık değerlendirmelerinin aşırı iyimser olabileceğini vurgulamakta ve verimli LVLMs için sıkıştırma-farkındalığına sahip güvenlik değerlendirmesi ve savunmalarını gerektirmektedir."
+    }
+  },
+  {
+    "id": "2601.21189v1",
+    "title": "Adaptive and Robust Cost-Aware Proof of Quality for Decentralized LLM Inference Networks",
+    "authors": [
+      "Arther Tian",
+      "Alex Ding",
+      "Frank Chen",
+      "Simon Wu",
+      "Aaron Chan"
+    ],
+    "published_date": "2026-01-29",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.21189v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.21189v1",
+    "content": {
+      "en": "Decentralized large language model inference networks require lightweight mechanisms to reward high quality outputs under heterogeneous latency and cost. Proof of Quality provides scalable verification by sampling evaluator nodes that score candidate outputs, then aggregating their scores into a consensus signal that determines rewards. However, evaluator heterogeneity and malicious score manipulation can distort consensus and inflate payouts, which weakens incentive alignment in open participation settings.   This paper extends a cost-aware Proof of Quality mechanism by adding adversary-resilient consensus formation. We study robust aggregation rules, including median and trimmed mean, and an adaptive trust-weighted consensus that updates evaluator weights from deviation signals. Using question answering and summarization workloads with a ground truth proxy for offline analysis, we quantify evaluator reliability and show strong variance across evaluators, including task-dependent misalignment that can invert correlations. We then evaluate robustness under four adversarial strategies, including noise injection, boosting, sabotage, and intermittent manipulation, across a sweep of malicious ratios and evaluator sample sizes. Our results show that robust aggregation improves consensus alignment with the ground truth proxy and reduces sensitivity to noisy and strategic attacks compared with simple averaging. We further characterize the operational trade-off introduced by evaluator sampling, where larger evaluator sets reduce evaluator rewards and increase payoff variance while inference rewards remain relatively stable in our configuration. These findings motivate robust consensus as a default component for cost-aware Proof of Quality and provide practical guidance for selecting evaluator sampling parameters under adversarial risk and resource constraints.",
+      "tr": "Kesinlikle, istediğiniz çeviriyi aşağıda bulabilirsiniz:\n\n**Makale Başlığı:** Adaptive and Robust Cost-Aware Proof of Quality for Decentralized LLM Inference Networks\n\n**Özet:**\n\nDecentralized large language model inference networks, heterogeneous latency ve cost altında yüksek kaliteli çıktıları ödüllendirmek için hafif mekanizmalara ihtiyaç duyar. Proof of Quality, aday çıktıları puanlayan evaluator node'ları örnekleyerek ve ardından puanlarını ödülleri belirleyen bir consensus signal'e toplayarak ölçeklenebilir doğrulama sağlar. Ancak, evaluator heterogeneity ve malicious score manipulation, consensus'u bozabilir ve ödemeleri artırabilir, bu da açık katılım ortamlarında incentive alignment'ı zayıflatır. Bu makale, adversary-resilient consensus formation ekleyerek bir cost-aware Proof of Quality mekanizmasını genişletir. Median ve trimmed mean gibi robust aggregation rules'ları ve sapma sinyallerinden evaluator weight'lerini güncelleyen adaptive trust-weighted consensus'u inceliyoruz. Çevrimdışı analiz için bir ground truth proxy ile question answering ve summarization workload'larını kullanarak, evaluator reliability'yi ölçüyoruz ve task-dependent misalignment'ı da içeren güçlü bir varyans gösteriyoruz, bu da korelasyonları tersine çevirebilir. Daha sonra, kötü niyetli oranlar ve evaluator sample boyutları üzerinden yapılan bir incelemede, noise injection, boosting, sabotage ve intermittent manipulation dahil olmak üzere dört adversarial strateji altındaki robustness'ı değerlendiriyoruz. Sonuçlarımız, robust aggregation'ın ground truth proxy ile consensus alignment'ı iyileştirdiğini ve simple averaging'e kıyasla gürültülü ve stratejik saldırılara karşı hassasiyeti azalttığını göstermektedir. Ayrıca, evaluator sampling'in getirdiği operasyonel trade-off'u karakterize ediyoruz; burada daha büyük evaluator setleri, çıkarım ödülleri bizim yapılandırmamızda nispeten stabil kalırken, evaluator ödüllerini azaltır ve ödeme varyansını artırır. Bu bulgular, cost-aware Proof of Quality için varsayılan bir bileşen olarak robust consensus'u teşvik eder ve adversarial risk ve kaynak kısıtlamaları altında evaluator sampling parametrelerini seçmek için pratik rehberlik sağlar."
+    }
+  },
+  {
+    "id": "2601.21051v1",
+    "title": "Llama-3.1-FoundationAI-SecurityLLM-Reasoning-8B Technical Report",
+    "authors": [
+      "Zhuoran Yang",
+      "Ed Li",
+      "Jianliang He",
+      "Aman Priyanshu",
+      "Baturay Saglam"
+    ],
+    "published_date": "2026-01-28",
+    "tags": [
+      "cs.AI",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2601.21051v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.21051v1",
+    "content": {
+      "en": "We present Foundation-Sec-8B-Reasoning, the first open-source native reasoning model for cybersecurity. Built upon our previously released Foundation-Sec-8B base model (derived from Llama-3.1-8B-Base), the model is trained through a two-stage process combining supervised fine-tuning (SFT) and reinforcement learning from verifiable rewards (RLVR). Our training leverages proprietary reasoning data spanning cybersecurity analysis, instruction-following, and mathematical reasoning. Evaluation across 10 cybersecurity benchmarks and 10 general-purpose benchmarks demonstrates performance competitive with significantly larger models on cybersecurity tasks while maintaining strong general capabilities. The model shows effective generalization on multi-hop reasoning tasks and strong safety performance when deployed with appropriate system prompts and guardrails. This work demonstrates that domain-specialized reasoning models can achieve strong performance on specialized tasks while maintaining broad general capabilities. We release the model publicly at https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning.",
+      "tr": "Makale Başlığı: Llama-3.1-FoundationAI-SecurityLLM-Reasoning-8B Teknik Rapor\n\nÖzet:\nFoundation-Sec-8B-Reasoning'i sunuyoruz; bu model, siber güvenlik alanına özel, açık kaynaklı ilk native reasoning modelidir. Daha önce yayınladığımız Foundation-Sec-8B temel modeli (Llama-3.1-8B-Base'den türetilmiştir) üzerine inşa edilen bu model, supervised fine-tuning (SFT) ve doğrulanabilir ödüllerden pekiştirmeli öğrenme (RLVR) süreçlerini birleştiren iki aşamalı bir eğitim ile geliştirilmiştir. Eğitimimiz, siber güvenlik analizi, komut takibi ve matematiksel reasoning alanlarını kapsayan özel reasoning verilerini kullanmaktadır. 10 siber güvenlik ve 10 genel amaçlı benchmark üzerinde yapılan değerlendirmeler, genel yeteneklerini korurken siber güvenlik görevlerinde önemli ölçüde daha büyük modellerle rekabetçi bir performans sergilemiştir. Model, multi-hop reasoning görevlerinde etkili genelleme yeteneği ve uygun sistem komutları ve guardrails ile konuşlandırıldığında güçlü bir güvenlik performansı göstermiştir. Bu çalışma, alana özgü specialized reasoning modellerinin, geniş genel yetenekleri korurken, özel görevlerde güçlü performans elde edebileceğini göstermektedir. Modeli https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning adresinde kamuya açık olarak yayınlıyoruz."
+    }
+  },
+  {
     "id": "2601.20548v1",
     "title": "IoT Device Identification with Machine Learning: Common Pitfalls and Best Practices",
     "authors": [
@@ -16,7 +149,29 @@
     "pdf_link": "https://arxiv.org/pdf/2601.20548v1",
     "content": {
       "en": "This paper critically examines the device identification process using machine learning, addressing common pitfalls in existing literature. We analyze the trade-offs between identification methods (unique vs. class based), data heterogeneity, feature extraction challenges, and evaluation metrics. By highlighting specific errors, such as improper data augmentation and misleading session identifiers, we provide a robust guideline for researchers to enhance the reproducibility and generalizability of IoT security models.",
-      "tr": "Makale Başlığı: IoT Cihaz Kimlik Tespiti ve Makine Öğrenmesi: Yaygın Tuzaklar ve En İyi Uygulamalar\n\nÖzet:\nBu makale, mevcut literatürdeki yaygın tuzakları ele alarak, makine öğrenmesi kullanarak cihaz kimlik tespiti sürecini eleştirel bir şekilde incelemektedir. Kimlik tespiti yöntemleri (unique vs. class based) arasındaki ödünleşmeleri, veri heterojenliğini, feature extraction zorluklarını ve evaluation metrics'i analiz etmekteyiz. Improper data augmentation ve misleading session identifiers gibi spesifik hataları vurgulayarak, araştırmacıların IoT security models'in reproducibility ve generalizability'sini geliştirmeleri için sağlam bir rehber sunmaktayız."
+      "tr": "İşte makale başlığı ve özetinin çevirisi:\n\n**Makale Başlığı:** IoT Cihaz Tanımlama: Makine Öğrenimi ile Ortaya Çıkan Yaygın Hatalar ve En İyi Uygulamalar\n\n**Özet:**\nBu makale, mevcut literatürdeki yaygın hataları ele alarak, makine öğrenimi kullanılarak cihaz tanımlama sürecini eleştirel bir şekilde incelemektedir. Tanımlama yöntemleri (unique vs. class based) arasındaki trade-off'ları, veri heterojenliğini, feature extraction zorluklarını ve evaluation metrics konularını analiz ediyoruz. Improper data augmentation ve misleading session identifiers gibi spesifik hataları vurgulayarak, araştırmacıların IoT security modellerinin reproducibility ve generalizability'sini artırmaları için sağlam bir guideline sunuyoruz."
+    }
+  },
+  {
+    "id": "2601.20903v1",
+    "title": "ICON: Intent-Context Coupling for Efficient Multi-Turn Jailbreak Attack",
+    "authors": [
+      "Xingwei Lin",
+      "Wenhao Lin",
+      "Sicong Cao",
+      "Jiahao Yu",
+      "Renke Huang"
+    ],
+    "published_date": "2026-01-28",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2601.20903v1",
+    "pdf_link": "https://arxiv.org/pdf/2601.20903v1",
+    "content": {
+      "en": "Multi-turn jailbreak attacks have emerged as a critical threat to Large Language Models (LLMs), bypassing safety mechanisms by progressively constructing adversarial contexts from scratch and incrementally refining prompts. However, existing methods suffer from the inefficiency of incremental context construction that requires step-by-step LLM interaction, and often stagnate in suboptimal regions due to surface-level optimization. In this paper, we characterize the Intent-Context Coupling phenomenon, revealing that LLM safety constraints are significantly relaxed when a malicious intent is coupled with a semantically congruent context pattern. Driven by this insight, we propose ICON, an automated multi-turn jailbreak framework that efficiently constructs an authoritative-style context via prior-guided semantic routing. Specifically, ICON first routes the malicious intent to a congruent context pattern (e.g., Scientific Research) and instantiates it into an attack prompt sequence. This sequence progressively builds the authoritative-style context and ultimately elicits prohibited content. In addition, ICON incorporates a Hierarchical Optimization Strategy that combines local prompt refinement with global context switching, preventing the attack from stagnating in ineffective contexts. Experimental results across eight SOTA LLMs demonstrate the effectiveness of ICON, achieving a state-of-the-art average Attack Success Rate (ASR) of 97.1\\%. Code is available at https://github.com/xwlin-roy/ICON.",
+      "tr": "**Makale Başlığı:** ICON: Etkin Çoklu-Tur (Multi-Turn) Jailbreak Saldırıları İçin Niyet-Bağlam Eşleştirmesi (Intent-Context Coupling)\n\n**Özet:**\n\nÇoklu-tur (multi-turn) jailbreak saldırıları, Gelişmiş Dil Modelleri (LLMs) için kritik bir tehdit olarak ortaya çıkmış olup, sıfırdan aşamalı olarak düşmanca bağlamlar oluşturarak ve yönlendirmeleri (prompts) artımlı olarak rafine ederek güvenlik mekanizmalarını atlatmaktadır. Ancak mevcut yöntemler, adım adım LLM etkileşimi gerektiren artımlı bağlam oluşturmanın verimsizliğinden muzdariptir ve yüzeysel optimizasyon nedeniyle sıklıkla yetersiz bölgelerde takılı kalmaktadır. Bu makalede, 'Intent-Context Coupling' olgusunu karakterize ederek, kötü niyetli bir niyet anlamsal olarak uyumlu bir bağlam paterni (context pattern) ile eşleştirildiğinde LLM güvenlik kısıtlamalarının önemli ölçüde gevşediğini ortaya koymaktayız. Bu içgörüden hareketle, ICON'u öneriyoruz; bu, daha önceki bilgilerle yönlendirilen anlamsal yönlendirme (semantic routing) yoluyla yetkili bir stil bağlamı (authoritative-style context) verimli bir şekilde oluşturan otomatik bir çoklu-tur (multi-turn) jailbreak çerçevesidir. Spesifik olarak, ICON öncelikle kötü niyetli niyeti uyumlu bir bağlam paternine (örneğin, Scientific Research) yönlendirir ve bunu bir saldırı yönlendirmesi (attack prompt) dizisine örneklendirir. Bu dizi, yetkili bir stil bağlamı aşamalı olarak oluşturur ve nihayetinde yasaklanmış içeriği ortaya çıkarır. Ek olarak, ICON, yerel yönlendirme (prompt) rafinasyonunu küresel bağlam değiştirme (global context switching) ile birleştiren bir 'Hierarchical Optimization Strategy' (Hiyerarşik Optimizasyon Stratejisi) içermektedir; bu, saldırının etkisiz bağlamlarda durgunlaşmasını önler. Sekiz adet son teknoloji (SOTA) LLM üzerinde yapılan deneysel sonuçlar, ICON'un etkinliğini göstermekte olup, %97.1'lik bir devlet-sanat (state-of-the-art) ortalama Saldırı Başarı Oranı (Attack Success Rate - ASR) elde etmektedir. Kod şu adresten temin edilebilir: https://github.com/xwlin-roy/ICON."
     }
   },
   {
@@ -38,7 +193,7 @@
     "pdf_link": "https://arxiv.org/pdf/2601.20346v1",
     "content": {
       "en": "Ransomware has become one of the most serious cybersecurity threats causing major financial losses and operational disruptions worldwide.Traditional detection methods such as static analysis, heuristic scanning and behavioral analysis often fall short when used alone. To address these limitations, this paper presents multimodal multi agent ransomware analysis framework designed for ransomware classification. Proposed multimodal multiagent architecture combines information from static, dynamic and network sources. Each data type is handled by specialized agent that uses auto encoder based feature extraction. These representations are then integrated through a fusion agent. After that fused representation are used by transformer based classifier. It identifies the specific ransomware family. The agents interact through an interagent feedback mechanism that iteratively refines feature representations by suppressing low confidence information. The framework was evaluated on large scale datasets containing thousands of ransomware and benign samples. Multiple experiments were conducted on ransomware dataset. It outperforms single modality and nonadaptive fusion baseline achieving improvement of up to 0.936 in Macro-F1 for family classification and reducing calibration error. Over 100 epochs, the agentic feedback loop displays a stable monotonic convergence leading to over +0.75 absolute improvement in terms of agent quality and a final composite score of around 0.88 without fine tuning of the language models. Zeroday ransomware detection remains family dependent on polymorphism and modality disruptions. Confidence aware abstention enables reliable real world deployment by favoring conservativeand trustworthy decisions over forced classification. The findings indicate that proposed approach provides a practical andeffective path toward improving real world ransomware defense systems.",
-      "tr": "**Makale Başlığı: Multimodal Multi-Agent Ransomware Analysis Using AutoGen**\n\n**Özet:**\n\nRansomware, dünya çapında büyük finansal kayıplara ve operasyonel kesintilere neden olan en ciddi siber güvenlik tehditlerinden biri haline gelmiştir. Statik analiz, sezgisel tarama ve davranış analizi gibi geleneksel tespit yöntemleri, tek başlarına kullanıldığında genellikle yetersiz kalmaktadır. Bu sınırlılıkların üstesinden gelmek amacıyla, bu makale ransomware sınıflandırması için tasarlanmış multimodal multi-agent ransomware analysis frameworkünü sunmaktadır. Önerilen multimodal multi-agent mimarisi, statik, dinamik ve ağ kaynaklarından gelen bilgileri birleştirmektedir. Her veri türü, auto encoder tabanlı feature extraction kullanan uzman bir agent tarafından işlenir. Bu temsiller daha sonra bir fusion agent aracılığıyla entegre edilir. Ardından, bu fused representation transformer tabanlı bir classifier tarafından kullanılır. Bu classifier, belirli ransomware ailesini tanımlar. Agentlar, düşük güvenilirliğe sahip bilgileri baskılayarak feature representations'ı tekrarlayan bir şekilde iyileştiren bir inter-agent feedback mechanism aracılığıyla etkileşim kurar. Framework, binlerce ransomware ve zararsız örneği içeren büyük ölçekli veri kümelerinde değerlendirilmiştir. Ransomware veri kümesi üzerinde çok sayıda deney gerçekleştirilmiştir. Bu deneyler, tekil modalite ve adaptif olmayan fusion baseline'larına kıyasla daha iyi performans göstererek, family classification için Macro-F1'de 0.936'ya varan bir iyileşme sağlamış ve kalibrasyon hatasını azaltmıştır. 100'den fazla epoch boyunca, agentic feedback loop, agent kalitesi açısından +0.75'in üzerinde mutlak bir iyileşme ve language models'in fine-tuning'i olmaksızın yaklaşık 0.88'lik bir final composite score ile istikrarlı monoton bir yakınsama sergilemiştir. Zeroday ransomware tespiti, polimorfizm ve modality disruptions'a bağlı aile bağımlılığını sürdürmektedir. Confidence aware abstention, zorunlu sınıflandırma yerine muhafazakar ve güvenilir kararları tercih ederek güvenilir gerçek dünya uygulamalarına olanak tanır. Bulgular, önerilen yaklaşımın, gerçek dünya ransomware savunma sistemlerini iyileştirmeye yönelik pratik ve etkili bir yol sunduğunu göstermektedir."
+      "tr": "**Makale Başlığı:** Multimodal Multi-Agent Ransomware Analysis Using AutoGen\n\n**Özet:**\n\nRansomware, dünya genelinde büyük finansal kayıplara ve operasyonel kesintilere yol açan en ciddi siber güvenlik tehditlerinden biri haline gelmiştir. Statik analiz, sezgisel tarama ve davranışsal analiz gibi geleneksel tespit yöntemleri, tek başlarına kullanıldığında sıklıkla yetersiz kalmaktadır. Bu sınırlılıkları gidermek amacıyla, bu makale ransomware sınıflandırması için tasarlanmış multimodal multi-agent ransomware analysis framework'ünü sunmaktadır. Önerilen multimodal multiagent architecture'ı, statik, dinamik ve ağ kaynaklarından gelen bilgileri birleştirmektedir. Her veri tipi, auto encoder based feature extraction kullanan özel bir agent tarafından işlenir. Bu representation'lar daha sonra bir fusion agent aracılığıyla entegre edilir. Ardından, fused representation'lar transformer based classifier tarafından kullanılır. Bu, spesifik ransomware ailesini tanımlar. Agent'lar, düşük confidence'lı bilgileri bastırarak feature representation'ları iteratif olarak iyileştiren bir interagent feedback mechanism aracılığıyla etkileşim kurar. Framework, binlerce ransomware ve zararsız örneği içeren büyük ölçekli veri kümeleri üzerinde değerlendirilmiştir. Ransomware veri kümesi üzerinde birden fazla deney yapılmıştır. Tekli modalite ve adaptif olmayan fusion baseline'larından daha iyi performans göstererek, aile sınıflandırması için Macro-F1'da 0.936'ya kadar iyileşme sağlamış ve calibration error'ünü azaltmıştır. 100 epoch boyunca, agentic feedback loop, agent kalitesi açısından +0.75'in üzerinde mutlak bir iyileşme ve language models'in fine-tuning'i olmaksızın yaklaşık 0.88'lik bir nihai composite score ile istikrarlı bir monoton yakınsama sergilemiştir. Zeroday ransomware detection, polimorfizm ve modality disruptions'a bağlı olarak aile bağımlı kalmaktadır. Confidence aware abstention, zorunlu sınıflandırma yerine muhafazakar ve güvenilir kararları tercih ederek güvenilir gerçek dünya dağıtımını mümkün kılar. Bulgular, önerilen yaklaşımın gerçek dünya ransomware savunma sistemlerini iyileştirmeye yönelik pratik ve etkili bir yol sağladığını göstermektedir."
     }
   },
   {
@@ -61,159 +216,7 @@
     "pdf_link": "https://arxiv.org/pdf/2601.20310v1",
     "content": {
       "en": "Latent-based watermarks, integrated into the generation process of latent diffusion models (LDMs), simplify detection and attribution of generated images. However, recent black-box forgery attacks, where an attacker needs at least one watermarked image and black-box access to the provider's model, can embed the provider's watermark into images not produced by the provider, posing outsized risk to provenance and trust. We propose SemBind, the first defense framework for latent-based watermarks that resists black-box forgery by binding latent signals to image semantics via a learned semantic masker. Trained with contrastive learning, the masker yields near-invariant codes for the same prompt and near-orthogonal codes across prompts; these codes are reshaped and permuted to modulate the target latent before any standard latent-based watermark. SemBind is generally compatible with existing latent-based watermarking schemes and keeps image quality essentially unchanged, while a simple mask-ratio parameter offers a tunable trade-off between anti-forgery strength and robustness. Across four mainstream latent-based watermark methods, our SemBind-enabled anti-forgery variants markedly reduce false acceptance under black-box forgery while providing a controllable robustness-security balance.",
-      "tr": "İşte istenen çeviri:\n\n**Makale Başlığı:** SemBind: Siyah Kutu Sahtecilik Saldırılarına Karşı Semantiklere Bağlanmış Difüzyon Filigranları\n\n**Özet:**\nLatent diffusion modellerinin (LDMs) üretim sürecine entegre edilmiş latent tabanlı filigranlar, üretilen görüntülerin tespitini ve kaynak gösterilmesini kolaylaştırır. Bununla birlikte, bir saldırganın en az bir filigranlı görüntüye ve sağlayıcının modeline black-box erişimine ihtiyaç duyduğu son zamanlardaki black-box forgery attacks, sağlayıcı tarafından üretilmeyen görüntülere sağlayıcının filigranını gömebilir ve bu da köken ve güven için orantısız bir risk oluşturur. Biz, learned semantic masker aracılığıyla latent sinyallerini görüntü semantiğine bağlayarak black-box forgery'ye direnen ilk latent tabanlı filigranlar için savunma çerçevesi olan SemBind'i öneriyoruz. Contrastive learning ile eğitilen masker, aynı prompt için neredeyse değişmeyen kodlar ve prompt'lar arasında neredeyse ortogonal kodlar üretir; bu kodlar, herhangi bir standart latent tabanlı filigrandan önce hedef latent'i modüle etmek için yeniden şekillendirilir ve permüte edilir. SemBind, mevcut latent tabanlı watermark scheme'leriyle genel olarak uyumludur ve görüntü kalitesini esasen değişmeden tutar, aynı zamanda basit bir mask-ratio parametresi anti-forgery gücü ve robustness arasında ayarlanabilir bir denge sunar. Dört ana akım latent tabanlı watermark yöntemi boyunca, SemBind etkinleştirilmiş anti-forgery varyantlarımız, black-box forgery altında yanlış kabulü belirgin şekilde azaltırken kontrol edilebilir bir robustness-security dengesi sağlar."
-    }
-  },
-  {
-    "id": "2601.20270v1",
-    "title": "Eliciting Least-to-Most Reasoning for Phishing URL Detection",
-    "authors": [
-      "Holly Trikilis",
-      "Pasindu Marasinghe",
-      "Fariza Rashid",
-      "Suranga Seneviratne"
-    ],
-    "published_date": "2026-01-28",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.20270v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.20270v1",
-    "content": {
-      "en": "Phishing continues to be one of the most prevalent attack vectors, making accurate classification of phishing URLs essential. Recently, large language models (LLMs) have demonstrated promising results in phishing URL detection. However, their reasoning capabilities that enabled such performance remain underexplored. To this end, in this paper, we propose a Least-to-Most prompting framework for phishing URL detection. In particular, we introduce an \"answer sensitivity\" mechanism that guides Least-to-Most's iterative approach to enhance reasoning and yield higher prediction accuracy. We evaluate our framework using three URL datasets and four state-of-the-art LLMs, comparing against a one-shot approach and a supervised model. We demonstrate that our framework outperforms the one-shot baseline while achieving performance comparable to that of the supervised model, despite requiring significantly less training data. Furthermore, our in-depth analysis highlights how the iterative reasoning enabled by Least-to-Most, and reinforced by our answer sensitivity mechanism, drives these performance gains. Overall, we show that this simple yet powerful prompting strategy consistently outperforms both one-shot and supervised approaches, despite requiring minimal training or few-shot guidance. Our experimental setup can be found in our Github repository github.sydney.edu.au/htri0928/least-to-most-phishing-detection.",
-      "tr": "İşte akademik makale başlığının ve özetinin istenen çevirisi:\n\n**Makale Başlığı:** Eliciting Least-to-Most Reasoning for Phishing URL Detection\n\n**Özet:**\nPhishing, en yaygın saldırı vektörlerinden biri olmaya devam etmekte, bu da phishing URL'lerinin doğru sınıflandırılmasını zorunlu kılmaktadır. Son zamanlarda, large language models (LLMs), phishing URL tespiti alanında umut verici sonuçlar sergilemiştir. Ancak, bu performansa olanak tanıyan reasoning yetenekleri yeterince araştırılmamıştır. Bu amaçla, bu makalede, phishing URL tespiti için bir Least-to-Most prompting framework'ü sunmaktayız. Özellikle, reasoning'i geliştirmek ve daha yüksek tahmin doğruluğu elde etmek için Least-to-Most'un iteratif yaklaşımını yönlendiren bir \"answer sensitivity\" mekanizması tanıtıyoruz. Framework'ümüzü, üç URL veri kümesi ve dört state-of-the-art LLM kullanarak değerlendirmekteyiz; bunları bir one-shot yaklaşımı ve bir supervised model ile karşılaştırıyoruz. Framework'ümüzün, one-shot baseline'ından daha iyi performans gösterdiğini, buna rağmen önemli ölçüde daha az training data gerektirerek supervised model ile karşılaştırılabilir bir performans elde ettiğini göstermekteyiz. Dahası, derinlemesine analizimiz, Least-to-Most'un sağladığı ve answer sensitivity mekanizmamız tarafından güçlendirilen iteratif reasoning'in bu performans artışlarını nasıl sağladığını vurgulamaktadır. Genel olarak, bu basit ancak güçlü prompting stratejisinin, minimal training veya few-shot guidance gerektirmesine rağmen, hem one-shot hem de supervised yaklaşımlarından tutarlı bir şekilde daha iyi performans gösterdiğini göstermekteyiz. Deneysel kurulumumuza github.sydney.edu.au/htri0928/least-to-most-phishing-detection adresindeki Github reposunda ulaşılabilir."
-    }
-  },
-  {
-    "id": "2601.19970v1",
-    "title": "Benchmarking LLAMA Model Security Against OWASP Top 10 For LLM Applications",
-    "authors": [
-      "Nourin Shahin",
-      "Izzat Alsmadi"
-    ],
-    "published_date": "2026-01-27",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2601.19970v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.19970v1",
-    "content": {
-      "en": "As large language models (LLMs) move from research prototypes to enterprise systems, their security vulnerabilities pose serious risks to data privacy and system integrity. This study benchmarks various Llama model variants against the OWASP Top 10 for LLM Applications framework, evaluating threat detection accuracy, response safety, and computational overhead. Using the FABRIC testbed with NVIDIA A30 GPUs, we tested five standard Llama models and five Llama Guard variants on 100 adversarial prompts covering ten vulnerability categories. Our results reveal significant differences in security performance: the compact Llama-Guard-3-1B model achieved the highest detection rate of 76% with minimal latency (0.165s per test), whereas base models such as Llama-3.1-8B failed to detect threats (0% accuracy) despite longer inference times (0.754s). We observe an inverse relationship between model size and security effectiveness, suggesting that smaller, specialized models often outperform larger general-purpose ones in security tasks. Additionally, we provide an open-source benchmark dataset including adversarial prompts, threat labels, and attack metadata to support reproducible research in AI security, [1].",
-      "tr": "**Makale Başlığı:** LLAMA Modelinin OWASP Top 10 LLM Uygulamaları Kapsamında Güvenliğinin Karşılaştırılması\n\n**Özet:**\nBüyük dil modelleri (LLM'ler) araştırma prototiplerinden kurumsal sistemlere doğru ilerlerken, güvenlik açıkları veri gizliliği ve sistem bütünlüğü için ciddi riskler oluşturmaktadır. Bu çalışma, çeşitli Llama model varyantlarını OWASP Top 10 for LLM Applications çerçevesi ile karşılaştırmalı olarak inceleyerek tehdit algılama doğruluğunu, yanıt güvenliğini ve hesaplama yükünü değerlendirmektedir. NVIDIA A30 GPU'lar ile FABRIC testbed'ini kullanarak, on bir güvenlik açığı kategorisini kapsayan 100 düşmanca (adversarial) komut dizisi üzerinde beş standart Llama modeli ve beş Llama Guard varyantını test ettik. Sonuçlarımız, güvenlik performansında önemli farklılıklar ortaya koymaktadır: Kompakt Llama-Guard-3-1B modeli, minimal gecikme (test başına 0.165s) ile %76 en yüksek algılama oranını elde ederken, Llama-3.1-8B gibi temel modeller, daha uzun çıkarım sürelerine (0.754s) rağmen tehditleri algılamada başarısız olmuştur (%0 doğruluk). Model boyutu ile güvenlik etkinliği arasında ters bir ilişki gözlemlemekteyiz; bu da daha küçük, özelleşmiş modellerin güvenlik görevlerinde genellikle daha büyük genel amaçlı modellere göre daha iyi performans gösterdiğini düşündürmektedir. Ek olarak, yapay zeka güvenliği alanında tekrarlanabilir araştırmaları desteklemek amacıyla düşmanca (adversarial) komut dizileri, tehdit etiketleri ve saldırı meta verilerini içeren açık kaynaklı bir kıyaslama veri kümesi sunuyoruz [1]."
-    }
-  },
-  {
-    "id": "2601.19768v1",
-    "title": "GAVEL: Towards rule-based safety through activation monitoring",
-    "authors": [
-      "Shir Rozenfeld",
-      "Rahul Pankajakshan",
-      "Itay Zloczower",
-      "Eyal Lenga",
-      "Gilad Gressel"
-    ],
-    "published_date": "2026-01-27",
-    "tags": [
-      "cs.AI",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2601.19768v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.19768v1",
-    "content": {
-      "en": "Large language models (LLMs) are increasingly paired with activation-based monitoring to detect and prevent harmful behaviors that may not be apparent at the surface-text level. However, existing activation safety approaches, trained on broad misuse datasets, struggle with poor precision, limited flexibility, and lack of interpretability. This paper introduces a new paradigm: rule-based activation safety, inspired by rule-sharing practices in cybersecurity. We propose modeling activations as cognitive elements (CEs), fine-grained, interpretable factors such as ''making a threat'' and ''payment processing'', that can be composed to capture nuanced, domain-specific behaviors with higher precision. Building on this representation, we present a practical framework that defines predicate rules over CEs and detects violations in real time. This enables practitioners to configure and update safeguards without retraining models or detectors, while supporting transparency and auditability. Our results show that compositional rule-based activation safety improves precision, supports domain customization, and lays the groundwork for scalable, interpretable, and auditable AI governance. We will release GAVEL as an open-source framework and provide an accompanying automated rule creation tool.",
-      "tr": "**Makale Başlığı:** GAVEL: Aktivasyon İzleme Yoluyla Kural Tabanlı Güvenliğe Doğru\n\n**Özet:**\n\nBüyük dil modelleri (LLM'ler), yüzey metni seviyesinde belirgin olmayabilecek zararlı davranışları tespit etmek ve önlemek için giderek artan bir şekilde aktivasyon tabanlı izleme ile eşleştirilmektedir. Ancak, geniş kötüye kullanım veri kümeleri üzerinde eğitilmiş mevcut aktivasyon güvenliği yaklaşımları, düşük hassasiyet, sınırlı esneklik ve yorumlanabilirlik eksikliği ile mücadele etmektedir. Bu makale, siber güvenlik alanındaki kural paylaşım uygulamalarından ilham alan yeni bir paradigma sunmaktadır: kural tabanlı aktivasyon güvenliği. Aktivasyonları, \"tehdit oluşturma\" ve \"ödeme işleme\" gibi ince taneli, yorumlanabilir faktörler olan bilişsel öğeler (CE'ler) olarak modellemeyi öneriyoruz; bunlar, daha yüksek hassasiyetle nüanslı, alana özgü davranışları yakalamak için birleştirilebilir. Bu temsile dayanarak, CE'ler üzerinde yüklem kuralları tanımlayan ve ihlalleri gerçek zamanlı olarak tespit eden pratik bir çerçeve sunuyoruz. Bu, uygulayıcıların modelleri veya dedektörleri yeniden eğitmeden güvenlik önlemlerini yapılandırmasına ve güncellemesine olanak tanırken, şeffaflığı ve denetlenebilirliği de desteklemektedir. Sonuçlarımız, bileşimsel kural tabanlı aktivasyon güvenliğinin hassasiyeti iyileştirdiğini, alan özelleştirmesini desteklediğini ve ölçeklenebilir, yorumlanabilir ve denetlenebilir Yapay Zeka yönetişimi için zemin hazırladığını göstermektedir. GAVEL'i açık kaynaklı bir çerçeve olarak yayınlayacak ve eşlik eden otomatik kural oluşturma aracı sağlayacağız."
-    }
-  },
-  {
-    "id": "2601.19726v1",
-    "title": "RvB: Automating AI System Hardening via Iterative Red-Blue Games",
-    "authors": [
-      "Lige Huang",
-      "Zicheng Liu",
-      "Jie Zhang",
-      "Lewen Yan",
-      "Dongrui Liu"
-    ],
-    "published_date": "2026-01-27",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL"
-    ],
-    "link": "http://arxiv.org/abs/2601.19726v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.19726v1",
-    "content": {
-      "en": "The dual offensive and defensive utility of Large Language Models (LLMs) highlights a critical gap in AI security: the lack of unified frameworks for dynamic, iterative adversarial adaptation hardening. To bridge this gap, we propose the Red Team vs. Blue Team (RvB) framework, formulated as a training-free, sequential, imperfect-information game. In this process, the Red Team exposes vulnerabilities, driving the Blue Team to learning effective solutions without parameter updates. We validate our framework across two challenging domains: dynamic code hardening against CVEs and guardrail optimization against jailbreaks. Our empirical results show that this interaction compels the Blue Team to learn fundamental defensive principles, leading to robust remediations that are not merely overfitted to specific exploits. RvB achieves Defense Success Rates of 90\\% and 45\\% across the respective tasks while maintaining near 0\\% False Positive Rates, significantly surpassing baselines. This work establishes the iterative adversarial interaction framework as a practical paradigm that automates the continuous hardening of AI systems.",
-      "tr": "Makale Başlığı: RvB: Yinelemeli Kırmızı-Mavi Oyunlar Aracılığıyla Yapay Zeka Sistemi Sertleştirmeyi Otomatikleştirme\n\nÖzet:\nBüyük Dil Modellerinin (LLMs) hem saldırı hem de savunma amaçlı çift yönlü kullanımları, yapay zeka güvenliğinde kritik bir boşluğa işaret etmektedir: dinamik, yinelemeli düşmanca adaptasyon sertleştirmesi için birleşik çerçevelerin yokluğu. Bu boşluğu doldurmak amacıyla, eğitim gerektirmeyen, sıralı, kusurlu bilgi oyunu olarak formüle edilen Kırmızı Takım - Mavi Takım (RvB) çerçevesini sunuyoruz. Bu süreçte Kırmızı Takım, parametre güncellemeleri olmadan Mavi Takım'ı etkili çözümler öğrenmeye zorlayarak güvenlik açıklarını ortaya çıkarır. Çerçevemizi iki zorlu alanda doğruluyoruz: CVE'lere karşı dinamik kod sertleştirmesi ve jailbreak'lere karşı guardrail optimizasyonu. Ampirik sonuçlarımız, bu etkileşimin Mavi Takım'ı temel savunma prensiplerini öğrenmeye zorladığını ve yalnızca belirli istismarlara aşırı uyum sağlanmış olmayan sağlam iyileştirmelere yol açtığını göstermektedir. RvB, ilgili görevlerde sırasıyla %90 ve %45 Savunma Başarı Oranları elde ederken, %0'a yakın Yanlış Pozitif Oranlarını koruyarak karşılaştırmalı analizleri önemli ölçüde geride bırakmaktadır. Bu çalışma, yinelemeli düşmanca etkileşim çerçevesini, yapay zeka sistemlerinin sürekli sertleştirmesini otomatikleştiren pratik bir paradigma olarak tesis etmektedir."
-    }
-  },
-  {
-    "id": "2601.19448v1",
-    "title": "From Internal Diagnosis to External Auditing: A VLM-Driven Paradigm for Online Test-Time Backdoor Defense",
-    "authors": [
-      "Binyan Xu",
-      "Fan Yang",
-      "Xilin Dai",
-      "Di Tang",
-      "Kehuan Zhang"
-    ],
-    "published_date": "2026-01-27",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2601.19448v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.19448v1",
-    "content": {
-      "en": "Deep Neural Networks remain inherently vulnerable to backdoor attacks. Traditional test-time defenses largely operate under the paradigm of internal diagnosis methods like model repairing or input robustness, yet these approaches are often fragile under advanced attacks as they remain entangled with the victim model's corrupted parameters. We propose a paradigm shift from Internal Diagnosis to External Semantic Auditing, arguing that effective defense requires decoupling safety from the victim model via an independent, semantically grounded auditor. To this end, we present a framework harnessing Universal Vision-Language Models (VLMs) as evolving semantic gatekeepers. We introduce PRISM (Prototype Refinement & Inspection via Statistical Monitoring), which overcomes the domain gap of general VLMs through two key mechanisms: a Hybrid VLM Teacher that dynamically refines visual prototypes online, and an Adaptive Router powered by statistical margin monitoring to calibrate gating thresholds in real-time. Extensive evaluation across 17 datasets and 11 attack types demonstrates that PRISM achieves state-of-the-art performance, suppressing Attack Success Rate to <1% on CIFAR-10 while improving clean accuracy, establishing a new standard for model-agnostic, externalized security.",
-      "tr": "Makale Başlığı: İç Teşhisten Harici Denetime: Çevrimiçi Test Zamanlı Arka Kapı Savunması İçin VLM Güdümlü Bir Paradigma\n\nÖzet:\nDerin Sinir Ağları, arka kapı saldırılarına karşı doğası gereği savunmasız kalmaktadır. Geleneksel test zamanlı savunmalar büyük ölçüde model onarımı veya girdi sağlamlığı gibi internal diagnosis yöntemlerinin paradigması altında işlemektedir, ancak bu yaklaşımlar genellikle gelişmiş saldırılar altında kırılgan olup, kurban modelin bozulmuş parametreleriyle iç içe geçmişlerdir. Biz, etkili savunmanın güvenliği, bağımsız, semantik olarak temellendirilmiş bir denetleyici aracılığıyla kurban modelden ayrıştırmayı gerektirdiği argümanıyla, Internal Diagnosis'tan External Semantic Auditing'e bir paradigma kayması öneriyoruz. Bu amaçla, evrimleşen semantik kapı bekçileri olarak Universal Vision-Language Models (VLMs)'ı kullanan bir çerçeve sunuyoruz. Genel VLMs'ın domain gap'ini iki anahtar mekanizma aracılığıyla aşan PRISM'i (Prototype Refinement & Inspection via Statistical Monitoring) tanıtıyoruz: görsel prototipleri dinamik olarak çevrimiçi iyileştiren bir Hybrid VLM Teacher ve gating eşiklerini gerçek zamanlı olarak kalibre etmek için statistical margin monitoring ile güçlendirilmiş bir Adaptive Router. 17 veri seti ve 11 saldırı türü boyunca yapılan kapsamlı değerlendirmeler, PRISM'in state-of-the-art performans gösterdiğini, CIFAR-10'da Attack Success Rate'i <%1'e düşürdüğünü ve clean accuracy'yi iyileştirdiğini göstermekte, böylece model-agnostic, externalized security için yeni bir standart belirlemektedir."
-    }
-  },
-  {
-    "id": "2601.19367v1",
-    "title": "CHEHAB RL: Learning to Optimize Fully Homomorphic Encryption Computations",
-    "authors": [
-      "Bilel Sefsaf",
-      "Abderraouf Dandani",
-      "Abdessamed Seddiki",
-      "Arab Mohammed",
-      "Eduardo Chielle"
-    ],
-    "published_date": "2026-01-27",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2601.19367v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.19367v1",
-    "content": {
-      "en": "Fully Homomorphic Encryption (FHE) enables computations directly on encrypted data, but its high computational cost remains a significant barrier. Writing efficient FHE code is a complex task requiring cryptographic expertise, and finding the optimal sequence of program transformations is often intractable. In this paper, we propose CHEHAB RL, a novel framework that leverages deep reinforcement learning (RL) to automate FHE code optimization. Instead of relying on predefined heuristics or combinatorial search, our method trains an RL agent to learn an effective policy for applying a sequence of rewriting rules to automatically vectorize scalar FHE code while reducing instruction latency and noise growth. The proposed approach supports the optimization of both structured and unstructured code. To train the agent, we synthesize a diverse dataset of computations using a large language model (LLM). We integrate our proposed approach into the CHEHAB FHE compiler and evaluate it on a suite of benchmarks, comparing its performance against Coyote, a state-of-the-art vectorizing FHE compiler. The results show that our approach generates code that is $5.3\\times$ faster in execution, accumulates $2.54\\times$ less noise, while the compilation process itself is $27.9\\times$ faster than Coyote (geometric means).",
-      "tr": "Makale Başlığı: CHEHAB RL: Tam Homomorfik Şifreleme Hesaplamalarını Optimize Etmeyi Öğrenme\n\nÖzet:\nFully Homomorphic Encryption (FHE), şifrelenmiş veriler üzerinde doğrudan hesaplamalar yapılmasına olanak tanır, ancak yüksek hesaplama maliyeti önemli bir engel olmaya devam etmektedir. Verimli FHE kodu yazmak, kriptografik uzmanlık gerektiren karmaşık bir görevdir ve program dönüşümlerinin optimal dizisini bulmak genellikle çözülemezdir. Bu makalede, FHE kod optimizasyonunu otomatikleştirmek için derin pekiştirmeli öğrenme (RL) kullanan yeni bir çerçeve olan CHEHAB RL'yi öneriyoruz. Önceden tanımlanmış sezgisel yöntemlere veya kombinatoryal aramaya güvenmek yerine, yöntemimiz bir RL ajanını, skaler FHE kodunu otomatik olarak vektörleştirmek için bir dizi yeniden yazma kuralını uygulama ve böylece komut gecikmesini ve gürültü artışını azaltma konusunda etkili bir politika öğrenmesi için eğitir. Önerilen yaklaşım, hem yapılandırılmış hem de yapılandırılmamış kodun optimizasyonunu desteklemektedir. Ajanı eğitmek için, büyük bir dil modeli (LLM) kullanarak çeşitli hesaplamalar veri kümesi sentezliyoruz. Önerilen yaklaşımımızı CHEHAB FHE derleyicimize entegre ediyoruz ve bir dizi benchmark üzerinde değerlendirerek performansını, son teknoloji bir vektörleştiren FHE derleyicisi olan Coyote ile karşılaştırıyoruz. Sonuçlar, yaklaşımımızın yürütmede $5.3\\times$ daha hızlı, $2.54\\times$ daha az gürültü biriktiren kod ürettiğini, derleme sürecinin kendisinin ise Coyote'ye kıyasla $27.9\\times$ daha hızlı olduğunu göstermektedir (geometrik ortalamalar)."
-    }
-  },
-  {
-    "id": "2601.19174v1",
-    "title": "SHIELD: An Auto-Healing Agentic Defense Framework for LLM Resource Exhaustion Attacks",
-    "authors": [
-      "Nirhoshan Sivaroopan",
-      "Kanchana Thilakarathna",
-      "Albert Zomaya",
-      "Manu",
-      "Yi Guo"
-    ],
-    "published_date": "2026-01-27",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2601.19174v1",
-    "pdf_link": "https://arxiv.org/pdf/2601.19174v1",
-    "content": {
-      "en": "Sponge attacks increasingly threaten LLM systems by inducing excessive computation and DoS. Existing defenses either rely on statistical filters that fail on semantically meaningful attacks or use static LLM-based detectors that struggle to adapt as attack strategies evolve. We introduce SHIELD, a multi-agent, auto-healing defense framework centered on a three-stage Defense Agent that integrates semantic similarity retrieval, pattern matching, and LLM-based reasoning. Two auxiliary agents, a Knowledge Updating Agent and a Prompt Optimization Agent, form a closed self-healing loop, when an attack bypasses detection, the system updates an evolving knowledgebase, and refines defense instructions. Extensive experiments show that SHIELD consistently outperforms perplexity-based and standalone LLM defenses, achieving high F1 scores across both non-semantic and semantic sponge attacks, demonstrating the effectiveness of agentic self-healing against evolving resource-exhaustion threats.",
-      "tr": "**Makale Başlığı:** SHIELD: LLM Kaynak Tükenmesi Saldırılarına Karşı Otomatik İyileşen Etkin Savunma Çerçevesi\n\n**Özet:**\nSponge attacks, LLM sistemlerini aşırı hesaplama ve DoS (Denial of Service) tetikleyerek giderek daha fazla tehdit etmektedir. Mevcut savunmalar, anlamsal olarak anlamlı saldırılarda başarısız olan istatistiksel filtrelemeye dayanmakta veya saldırı stratejileri geliştikçe uyum sağlamakta zorlanan statik LLM tabanlı dedektörler kullanmaktadır. Biz, anlamsal benzerlik retrieval, pattern matching ve LLM tabanlı reasoning'i entegre eden üç aşamalı bir Savunma Ajanı etrafında odaklanan çoklu-ajanlı, otomatik iyileşen bir savunma çerçevesi olan SHIELD'ı sunuyoruz. Bir Bilgi Güncelleme Ajanı ve bir Prompt Optimizasyon Ajanı olmak üzere iki yardımcı ajan, kapalı bir kendi kendini iyileştirme döngüsü oluşturmaktadır; bir saldırı tespitten kaçtığında, sistem gelişen bir knowledgebase'i günceller ve savunma talimatlarını iyileştirir. Kapsamlı deneyler, SHIELD'ın perplexity-tabanlı ve bağımsız LLM savunmalarını tutarlı bir şekilde geride bıraktığını, hem anlamsal olmayan hem de anlamsal sponge saldırılarında yüksek F1 skorları elde ettiğini ve gelişen kaynak-tükenmesi tehditlerine karşı agentic self-healing'in etkinliğini gösterdiğini ortaya koymaktadır."
+      "tr": "Makale Başlığı: SemBind: Kara Kutu Sahtecilik Saldırılarına Karşı Semantiklere Bağlı Difüzyon Filigranları\n\nÖzet:\nLatent diffusion model'lerinin (LDM'ler) üretim sürecine entegre edilmiş latent tabanlı filigranlar, üretilen görsellerin tespitini ve atfedilmesini basitleştirir. Bununla birlikte, saldırganın en az bir filigranlı görsele ve sağlayıcının modeline black-box erişimine ihtiyaç duyduğu son zamanlardaki black-box forgery saldırıları, sağlayıcı tarafından üretilmeyen görsellere sağlayıcının filigranını gömebilir ve bu da köken ve güvenilirlik açısından orantısız bir risk oluşturur. SemBind'ı öneriyoruz; bu, latent tabanlı filigranlar için black-box sahteciliğe direnen ilk savunma çerçevesidir. Bu çerçeve, öğrenilmiş bir semantic masker aracılığıyla latent sinyalleri image semantics'lerine bağlar. Contrastive learning ile eğitilen masker, aynı prompt için neredeyse değişmez kodlar ve farklı prompt'lar arasında neredeyse dik açılı kodlar üretir; bu kodlar, herhangi bir standart latent tabanlı filigrandan önce hedef latent'i modüle etmek için yeniden şekillendirilir ve permüte edilir. SemBind, mevcut latent tabanlı watermarking scheme'leriyle genel olarak uyumludur ve image quality'sini önemli ölçüde değiştirmezken, basit bir mask-ratio parametresi anti-forgery gücü ve robustness arasında ayarlanabilir bir denge sunar. Dört ana akım latent tabanlı watermark yöntemi üzerinde yaptığımız testlerde, SemBind destekli anti-forgery varyantlarımız, black-box sahtecilik altında false acceptance'ı belirgin şekilde azaltırken, kontrol edilebilir bir robustness-security dengesi sağlar."
     }
   }
 ]
