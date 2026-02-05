@@ -1,224 +1,223 @@
 [
   {
-    "id": "2602.03085v1",
-    "title": "The Trigger in the Haystack: Extracting and Reconstructing LLM Backdoor Triggers",
+    "id": "2602.04653v1",
+    "title": "Inference-Time Backdoors via Hidden Instructions in LLM Chat Templates",
     "authors": [
-      "Blake Bullwinkel",
-      "Giorgio Severi",
-      "Keegan Hines",
-      "Amanda Minnich",
-      "Ram Shankar Siva Kumar"
+      "Ariel Fogel",
+      "Omer Hofman",
+      "Eilon Cohen",
+      "Roman Vainshtein"
     ],
-    "published_date": "2026-02-03",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2602.03085v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.03085v1",
-    "content": {
-      "en": "Detecting whether a model has been poisoned is a longstanding problem in AI security. In this work, we present a practical scanner for identifying sleeper agent-style backdoors in causal language models. Our approach relies on two key findings: first, sleeper agents tend to memorize poisoning data, making it possible to leak backdoor examples using memory extraction techniques. Second, poisoned LLMs exhibit distinctive patterns in their output distributions and attention heads when backdoor triggers are present in the input. Guided by these observations, we develop a scalable backdoor scanning methodology that assumes no prior knowledge of the trigger or target behavior and requires only inference operations. Our scanner integrates naturally into broader defensive strategies and does not alter model performance. We show that our method recovers working triggers across multiple backdoor scenarios and a broad range of models and fine-tuning methods.",
-      "tr": "**Makale Başlığı:** The Trigger in the Haystack: LLM Geri Kapı Tetikleyicilerinin Çıkarılması ve Yeniden Yapılandırılması\n\n**Özet:**\nBir modelin zehirlenip zehirlenmediğini tespit etmek, AI security alanında uzun süredir devam eden bir sorundur. Bu çalışmada, nedensel dil modellerinde sleeper agent tarzı geri kapıları belirlemek için pratik bir tarayıcı sunuyoruz. Yaklaşımımız iki temel bulguya dayanmaktadır: ilk olarak, sleeper agent'lar zehirlenme verilerini ezberleme eğilimindedir, bu da memory extraction techniques kullanılarak backdoor örneklerinin sızdırılmasını mümkün kılar. İkinci olarak, zehirlenmiş LLM'ler, girdi içinde backdoor tetikleyicileri bulunduğunda, çıktı dağılımları ve attention heads'larında belirgin desenler sergilerler. Bu gözlemlerden yola çıkarak, tetikleyici veya hedef davranış hakkında önceden bilgi sahibi olmayı varsaymayan ve yalnızca inference operations gerektiren ölçeklenebilir bir backdoor tarama metodolojisi geliştiriyoruz. Tarayıcımız, daha geniş savunma stratejilerine doğal olarak entegre olur ve model performansını değiştirmez. Yöntemimizin, birden fazla backdoor senaryosunda ve geniş bir model ve fine-tuning yöntemleri yelpazesinde çalışan tetikleyicileri kurtardığını gösteriyoruz."
-    }
-  },
-  {
-    "id": "2602.03035v1",
-    "title": "Generalizable and Interpretable RF Fingerprinting with Shapelet-Enhanced Large Language Models",
-    "authors": [
-      "Tianya Zhao",
-      "Junqing Zhang",
-      "Haowen Xu",
-      "Xiaoyan Sun",
-      "Jun Dai"
-    ],
-    "published_date": "2026-02-03",
+    "published_date": "2026-02-04",
     "tags": [
       "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2602.03035v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.03035v1",
+    "link": "http://arxiv.org/abs/2602.04653v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.04653v1",
     "content": {
-      "en": "Deep neural networks (DNNs) have achieved remarkable success in radio frequency (RF) fingerprinting for wireless device authentication. However, their practical deployment faces two major limitations: domain shift, where models trained in one environment struggle to generalize to others, and the black-box nature of DNNs, which limits interpretability. To address these issues, we propose a novel framework that integrates a group of variable-length two-dimensional (2D) shapelets with a pre-trained large language model (LLM) to achieve efficient, interpretable, and generalizable RF fingerprinting. The 2D shapelets explicitly capture diverse local temporal patterns across the in-phase and quadrature (I/Q) components, providing compact and interpretable representations. Complementarily, the pre-trained LLM captures more long-range dependencies and global contextual information, enabling strong generalization with minimal training overhead. Moreover, our framework also supports prototype generation for few-shot inference, enhancing cross-domain performance without additional retraining. To evaluate the effectiveness of our proposed method, we conduct extensive experiments on six datasets across various protocols and domains. The results show that our method achieves superior standard and few-shot performance across both source and unseen domains.",
-      "tr": "Elbette, makale başlığı ve özetinin çevirisi aşağıdadır:\n\n**Makale Başlığı:** Generalizable and Interpretable RF Fingerprinting with Shapelet-Enhanced Large Language Models\n\n**Özet:**\nDerin öğrenme ağları (DNNs), kablosuz cihaz kimlik doğrulaması için radyo frekansı (RF) parmak izi alma alanında dikkate değer başarılar elde etmiştir. Ancak, pratik uygulamaları iki önemli sınırlamayla karşı karşıyadır: alan kayması (domain shift), yani bir ortamda eğitilen modellerin diğerlerine genelleştirilmesinde zorlanması ve DNN'lerin yorumlanabilirliği (interpretability) sınırlayan kara kutu (black-box) doğası. Bu sorunları ele almak amacıyla, verimli, yorumlanabilir ve genellenebilir RF parmak izi alma özelliğini elde etmek için bir grup değişken uzunlukta iki boyutlu (2D) shapelet'i önceden eğitilmiş büyük dil modeli (LLM) ile entegre eden yeni bir framework öneriyoruz. 2D shapelet'ler, faz içi (in-phase) ve faz dışı (quadrature) (I/Q) bileşenler boyunca çeşitli yerel zamansal desenleri açıkça yakalayarak kompakt ve yorumlanabilir temsiller sunar. Tamamlayıcı olarak, önceden eğitilmiş LLM daha uzun menzilli bağımlılıkları ve küresel bağlamsal bilgileri yakalar, bu da minimum eğitim maliyetiyle güçlü genelleme (generalization) sağlar. Dahası, framework'ümüz ek yeniden eğitim gerektirmeden alanlar arası performansı artıran az sayıda örnekle çıkarım (few-shot inference) için prototip üretimini de desteklemektedir. Önerilen yöntemimizin etkinliğini değerlendirmek için, çeşitli protokoller ve alanları kapsayan altı veri seti üzerinde kapsamlı deneyler gerçekleştiriyoruz. Sonuçlar, yöntemimizin hem kaynak hem de görülmemiş alanlarda üstün standart ve az sayıda örnekle çıkarım performansına ulaştığını göstermektedir."
+      "en": "Open-weight language models are increasingly used in production settings, raising new security challenges. One prominent threat in this context is backdoor attacks, in which adversaries embed hidden behaviors in language models that activate under specific conditions. Previous work has assumed that adversaries have access to training pipelines or deployment infrastructure. We propose a novel attack surface requiring neither, which utilizes the chat template. Chat templates are executable Jinja2 programs invoked at every inference call, occupying a privileged position between user input and model processing. We show that an adversary who distributes a model with a maliciously modified template can implant an inference-time backdoor without modifying model weights, poisoning training data, or controlling runtime infrastructure. We evaluated this attack vector by constructing template backdoors targeting two objectives: degrading factual accuracy and inducing emission of attacker-controlled URLs, and applied them across eighteen models spanning seven families and four inference engines. Under triggered conditions, factual accuracy drops from 90% to 15% on average while attacker-controlled URLs are emitted with success rates exceeding 80%; benign inputs show no measurable degradation. Backdoors generalize across inference runtimes and evade all automated security scans applied by the largest open-weight distribution platform. These results establish chat templates as a reliable and currently undefended attack surface in the LLM supply chain.",
+      "tr": "**Makale Başlığı:** LLM Chat Templates İçerisindeki Gizli Talimatlar Aracılığıyla Çıkarım Zamanlı Arka Kapılar\n\n**Özet:**\n\nAçık ağırlıklı dil modelleri üretim ortamlarında giderek daha fazla kullanılmakta, bu da yeni güvenlik zorlukları ortaya çıkarmaktadır. Bu bağlamdaki belirgin tehditlerden biri, saldırganların dil modellerine belirli koşullar altında aktifleşen gizli davranışlar yerleştirdiği arka kapı saldırılarıdır. Önceki çalışmalar, saldırganların eğitim ardışık düzenlerine veya dağıtım altyapısına erişiminin olduğunu varsaymıştır. Biz, bunlardan hiçbirine ihtiyaç duymayan, ancak sohbet şablonunu (chat template) kullanan yeni bir saldırı yüzeyi öneriyoruz. Sohbet şablonları, her çıkarım çağrısında (inference call) çağrılan, kullanıcı girdisi ile model işleme arasındaki ayrıcalıklı bir konumu işgal eden yürütülebilir Jinja2 programlarıdır. Zararlı bir şekilde değiştirilmiş bir şablona sahip bir model dağıtan bir saldırganın, model ağırlıklarını değiştirmeden, eğitim verilerini zehirlemeden veya çalışma zamanı altyapısını kontrol etmeden bir çıkarım zamanlı arka kapı (inference-time backdoor) yerleştirebileceğini gösteriyoruz. Bu saldırı vektörünü, iki hedefi amaçlayan şablon arka kapıları inşa ederek değerlendirdik: olgusal doğruluğu (factual accuracy) düşürmek ve saldırgan kontrolündeki URL'lerin emisyonunu sağlamak. Bu saldırıları, yedi aile ve dört çıkarım motorunu (inference engines) kapsayan on sekiz model üzerinde uyguladık. Tetiklenen koşullar altında, olgusal doğruluk ortalama olarak %90'dan %15'e düşerken, saldırgan kontrolündeki URL'ler %80'in üzerinde başarı oranlarıyla yayılmaktadır; zararsız girdilerde ise ölçülebilir bir bozulma gözlenmemiştir. Arka kapılar, çıkarım çalışma zamanları boyunca genelleme yapmakta ve en büyük açık ağırlıklı dağıtım platformu tarafından uygulanan tüm otomatik güvenlik taramalarından kaçınmaktadır. Bu sonuçlar, sohbet şablonlarını LLM tedarik zincirinde güvenilir ve şu anda savunmasız bir saldırı yüzeyi olarak belirlemektedir."
     }
   },
   {
-    "id": "2602.03012v1",
-    "title": "CVE-Factory: Scaling Expert-Level Agentic Tasks for Code Security Vulnerability",
+    "id": "2602.04616v1",
+    "title": "A Human-Centered Privacy Approach (HCP) to AI",
     "authors": [
-      "Xianzhen Luo",
-      "Jingyuan Zhang",
-      "Shiqi Zhou",
-      "Rain Huang",
-      "Chuan Xiao"
+      "Luyi Sun",
+      "Wei Xu",
+      "Zaifeng Gao"
     ],
-    "published_date": "2026-02-03",
+    "published_date": "2026-02-04",
+    "tags": [
+      "cs.HC",
+      "cs.AI",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2602.04616v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.04616v1",
+    "content": {
+      "en": "As the paradigm of Human-Centered AI (HCAI) gains prominence, its benefits to society are accompanied by significant ethical concerns, one of which is the protection of individual privacy. This chapter provides a comprehensive overview of privacy within HCAI, proposing a human-centered privacy (HCP) framework, providing integrated solution from technology, ethics, and human factors perspectives. The chapter begins by mapping privacy risks across each stage of AI development lifecycle, from data collection to deployment and reuse, highlighting the impact of privacy risks on the entire system. The chapter then introduces privacy-preserving techniques such as federated learning and dif erential privacy. Subsequent chapters integrate the crucial user perspective by examining mental models, alongside the evolving regulatory and ethical landscapes as well as privacy governance. Next, advice on design guidelines is provided based on the human-centered privacy framework. After that, we introduce practical case studies across diverse fields. Finally, the chapter discusses persistent open challenges and future research directions, concluding that a multidisciplinary approach, merging technical, design, policy, and ethical expertise, is essential to successfully embed privacy into the core of HCAI, thereby ensuring these technologies advance in a manner that respects and ensures human autonomy, trust and dignity.",
+      "tr": "**Makale Başlığı:** Yapay Zeka İçin İnsan Odaklı Bir Gizlilik Yaklaşımı (HCP)\n\n**Özet:**\n\nİnsan Odaklı Yapay Zeka (HCAI) paradigması öne çıkarken, toplum için getirdiği faydalar bireysel gizliliğin korunması gibi önemli etik kaygıları da beraberinde getirmektedir. Bu bölüm, HCAI'deki gizliliğe kapsamlı bir genel bakış sunmakta ve teknoloji, etik ve insan faktörleri perspektiflerinden entegre bir çözüm sağlayan bir insan odaklı gizlilik (HCP) çerçevesi önermektedir. Bölüm, veri toplama aşamasından dağıtım ve yeniden kullanıma kadar yapay zeka geliştirme yaşam döngüsünün her aşamasındaki gizlilik risklerini haritalandırarak başlamakta ve gizlilik risklerinin tüm sistem üzerindeki etkisini vurgulamaktadır. Ardından, federated learning ve differential privacy gibi gizlilik koruma tekniklerini tanıtmaktadır. Müteakip bölümler, değişen düzenleyici ve etik manzaraların yanı sıra mental models, ve privacy governance'ı inceleyerek kritik kullanıcı perspektifini entegre etmektedir. Sonrasında, insan odaklı gizlilik çerçevesine dayalı tasarım yönergeleri konusunda tavsiyeler sunulmaktadır. Takip eden bölümlerde, farklı alanlarda pratik case studies sunulmaktadır. Son olarak, bölüm devam eden açık zorlukları ve gelecekteki araştırma yönlerini tartışmakta, yapay zeka geliştirme yaşam döngüsünün her aşamasındaki gizlilik risklerini haritalandırarak, bu teknolojilerin insan özerkliğini, güvenini ve onurunu gözeten ve güvence altına alan bir şekilde ilerlemesini sağlamak için teknik, tasarım, politika ve etik uzmanlığını birleştiren disiplinlerarası bir yaklaşımın başarının temel taşı olduğunu sonucuna varmaktadır."
+    }
+  },
+  {
+    "id": "2602.04448v1",
+    "title": "RASA: Routing-Aware Safety Alignment for Mixture-of-Experts Models",
+    "authors": [
+      "Jiacheng Liang",
+      "Yuhui Wang",
+      "Tanqiu Jiang",
+      "Ting Wang"
+    ],
+    "published_date": "2026-02-04",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2602.04448v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.04448v1",
+    "content": {
+      "en": "Mixture-of-Experts (MoE) language models introduce unique challenges for safety alignment due to their sparse routing mechanisms, which can enable degenerate optimization behaviors under standard full-parameter fine-tuning. In our preliminary experiments, we observe that naively applying full-parameter safety fine-tuning to MoE models can reduce attack success rates through routing or expert dominance effects, rather than by directly repairing Safety-Critical Experts. To address this challenge, we propose RASA, a routing-aware expert-level alignment framework that explicitly repairs Safety-Critical Experts while preventing routing-based bypasses. RASA identifies experts disproportionately activated by successful jailbreaks, selectively fine-tunes only these experts under fixed routing, and subsequently enforces routing consistency with safety-aligned contexts. Across two representative MoE architectures and a diverse set of jailbreak attacks, RASA achieves near-perfect robustness, strong cross-attack generalization, and substantially reduced over-refusal, while preserving general capabilities on benchmarks such as MMLU, GSM8K, and TruthfulQA. Our results suggest that robust MoE safety alignment benefits from targeted expert repair rather than global parameter updates, offering a practical and architecture-preserving alternative to prior approaches.",
+      "tr": "**Makale Başlığı:** RASA: Mixture-of-Experts Modelleri İçin Yönlendirmeye Duyarlı Güvenlik Hizalaması\n\n**Özet:**\n\nMixture-of-Experts (MoE) dil modelleri, standart tam-parametre ince ayarı (full-parameter fine-tuning) altında bozulmuş optimizasyon davranışlarına yol açabilen seyrek yönlendirme (sparse routing) mekanizmaları nedeniyle güvenlik hizalaması (safety alignment) açısından benzersiz zorluklar sunmaktadır. Ön deneylerimizde, MoE modellerine naif bir şekilde tam-parametre güvenlik ince ayarı uygulamanın, Güvenlik-Kritik Uzmanları (Safety-Critical Experts) doğrudan onarmak yerine, yönlendirme (routing) veya uzman hakimiyeti (expert dominance) etkileri yoluyla saldırı başarı oranlarını düşürebildiğini gözlemledik. Bu zorluğun üstesinden gelmek için, Güvenlik-Kritik Uzmanları açıkça onaran ve yönlendirme tabanlı atlatmaları engelleyen yönlendirmeye duyarlı uzman-seviyesi bir hizalama (expert-level alignment) çerçevesi olan RASA'yı öneriyoruz. RASA, başarılı jailbreak'ler tarafından orantısız bir şekilde aktive edilen uzmanları belirler, yalnızca bu uzmanları sabit yönlendirme altında seçici olarak ince ayar yapar ve ardından güvenlik hizalı bağlamlarla yönlendirme tutarlılığını (routing consistency) zorlar. İki temsili MoE mimarisi ve çeşitli jailbreak saldırıları genelinde, RASA neredeyse mükemmel bir sağlamlık (robustness), güçlü çapraz-saldırı genellemesi (cross-attack generalization) ve önemli ölçüde azalmış aşırı reddetme (over-refusal) oranları elde ederken, MMLU, GSM8K ve TruthfulQA gibi benchmark'larda genel yetenekleri korur. Sonuçlarımız, sağlam MoE güvenlik hizalamasının, küresel parametre güncellemeleri yerine hedeflenmiş uzman onarımından (targeted expert repair) fayda sağladığını ve önceki yaklaşımlara pratik ve mimariyi koruyan bir alternatif sunduğunu göstermektedir."
+    }
+  },
+  {
+    "id": "2602.04384v1",
+    "title": "Blockchain Federated Learning for Sustainable Retail: Reducing Waste through Collaborative Demand Forecasting",
+    "authors": [
+      "Fabio Turazza",
+      "Alessandro Neri",
+      "Marcello Pietri",
+      "Maria Angela Butturi",
+      "Marco Picone"
+    ],
+    "published_date": "2026-02-04",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2602.04384v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.04384v1",
+    "content": {
+      "en": "Effective demand forecasting is crucial for reducing food waste. However, data privacy concerns often hinder collaboration among retailers, limiting the potential for improved predictive accuracy. In this study, we explore the application of Federated Learning (FL) in Sustainable Supply Chain Management (SSCM), with a focus on the grocery retail sector dealing with perishable goods. We develop a baseline predictive model for demand forecasting and waste assessment in an isolated retailer scenario. Subsequently, we introduce a Blockchain-based FL model, trained collaboratively across multiple retailers without direct data sharing. Our preliminary results show that FL models have performance almost equivalent to the ideal setting in which parties share data with each other, and are notably superior to models built by individual parties without sharing data, cutting waste and boosting efficiency.",
+      "tr": "Makale Başlığı: Sürdürülebilir Perakendecilik İçin Blockchain Federasyonel Öğrenme: İşbirlikçi Talep Tahmini Yoluyla Atığı Azaltma\n\nÖzet:\nEtkili talep tahmini, gıda atıklarını azaltmak için kritik öneme sahiptir. Bununla birlikte, veri gizliliği endişeleri perakendeciler arasındaki işbirliğini sıklıkla engellemekte ve tahmine dayalı doğruluğun iyileştirilme potansiyelini sınırlamaktadır. Bu çalışmada, özellikle bozulabilir ürünlerle ilgilenen bakkaliye perakendecilik sektörüne odaklanarak, Sürdürülebilir Tedarik Zinciri Yönetimi (SSCM) alanında Federated Learning (FL) uygulamasını araştırmaktayız. İzole bir perakendeci senaryosunda talep tahmini ve atık değerlendirmesi için bir temel tahmine dayalı model geliştiriyoruz. Ardından, doğrudan veri paylaşımı olmaksızın birden fazla perakendeci arasında işbirlikçi olarak eğitilen Blockchain tabanlı bir FL modeli sunuyoruz. İlk sonuçlarımız, FL modellerinin, tarafların birbirleriyle veri paylaştığı ideal ayarlara neredeyse eşdeğer performansa sahip olduğunu ve veri paylaşımı olmadan bireysel taraflarca oluşturulan modellere göre belirgin şekilde üstün olduğunu, atığı azalttığını ve verimliliği artırdığını göstermektedir."
+    }
+  },
+  {
+    "id": "2602.04294v1",
+    "title": "How Few-shot Demonstrations Affect Prompt-based Defenses Against LLM Jailbreak Attacks",
+    "authors": [
+      "Yanshu Wang",
+      "Shuaishuai Yang",
+      "Jingjing He",
+      "Tong Yang"
+    ],
+    "published_date": "2026-02-04",
+    "tags": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2602.04294v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.04294v1",
+    "content": {
+      "en": "Large Language Models (LLMs) face increasing threats from jailbreak attacks that bypass safety alignment. While prompt-based defenses such as Role-Oriented Prompts (RoP) and Task-Oriented Prompts (ToP) have shown effectiveness, the role of few-shot demonstrations in these defense strategies remains unclear. Prior work suggests that few-shot examples may compromise safety, but lacks investigation into how few-shot interacts with different system prompt strategies. In this paper, we conduct a comprehensive evaluation on multiple mainstream LLMs across four safety benchmarks (AdvBench, HarmBench, SG-Bench, XSTest) using six jailbreak attack methods. Our key finding reveals that few-shot demonstrations produce opposite effects on RoP and ToP: few-shot enhances RoP's safety rate by up to 4.5% through reinforcing role identity, while it degrades ToP's effectiveness by up to 21.2% through distracting attention from task instructions. Based on these findings, we provide practical recommendations for deploying prompt-based defenses in real-world LLM applications.",
+      "tr": "İşte akademik makalenin başlık ve özetinin Türkçe çevirisi:\n\n**Makale Başlığı:** How Few-shot Demonstrations Affect Prompt-based Defenses Against LLM Jailbreak Attacks\n\n**Özet:**\n\nBüyük Dil Modelleri (LLM'ler), güvenlik uyumluluğunu aşan jailbreak saldırılarının artan tehditleriyle karşı karşıyadır. Rol Odaklı Prompt'lar (RoP) ve Görev Odaklı Prompt'lar (ToP) gibi prompt tabanlı savunma yöntemleri etkili olduğunu gösterse de, bu savunma stratejilerinde few-shot demonstrations'ın rolü belirsizliğini korumaktadır. Önceki çalışmalar, few-shot örneklerinin güvenliği tehlikeye atabileceğini öne sürmüş, ancak few-shot'un farklı sistem prompt stratejileriyle nasıl etkileşime girdiğini araştırmamıştır. Bu çalışmada, altı jailbreak saldırı yöntemi kullanarak dört güvenlik benchmark'ı (AdvBench, HarmBench, SG-Bench, XSTest) üzerinde birden fazla ana akım LLM üzerinde kapsamlı bir değerlendirme yapılmıştır. Ana bulgumuz, few-shot demonstrations'ın RoP ve ToP üzerinde zıt etkiler ürettiğini ortaya koymaktadır: few-shot, rol kimliğini pekiştirerek RoP'nin güvenlik oranını %4.5'e kadar artırırken, görev talimatlarından dikkati dağıtarak ToP'nin etkinliğini %21.2'ye kadar düşürmektedir. Bu bulgulara dayanarak, gerçek dünya LLM uygulamalarında prompt tabanlı savunmaların konuşlandırılması için pratik öneriler sunmaktayız."
+    }
+  },
+  {
+    "id": "2602.04224v1",
+    "title": "RAPO: Risk-Aware Preference Optimization for Generalizable Safe Reasoning",
+    "authors": [
+      "Zeming Wei",
+      "Qiaosheng Zhang",
+      "Xia Hu",
+      "Xingcheng Xu"
+    ],
+    "published_date": "2026-02-04",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.CR",
+      "math.OC"
+    ],
+    "link": "http://arxiv.org/abs/2602.04224v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.04224v1",
+    "content": {
+      "en": "Large Reasoning Models (LRMs) have achieved tremendous success with their chain-of-thought (CoT) reasoning, yet also face safety issues similar to those of basic language models. In particular, while algorithms are designed to guide them to deliberately refuse harmful prompts with safe reasoning, this process often fails to generalize against diverse and complex jailbreak attacks. In this work, we attribute these failures to the generalization of the safe reasoning process, particularly their insufficiency against complex attack prompts. We provide both theoretical and empirical evidence to show the necessity of a more sufficient safe reasoning process to defend against advanced attack prompts. Building on this insight, we propose a Risk-Aware Preference Optimization (RAPO) framework that enables LRM to adaptively identify and address the safety risks with appropriate granularity in its thinking content. Extensive experiments demonstrate that RAPO successfully generalizes multiple LRMs' safe reasoning adaptively across diverse attack prompts whilst preserving general utility, contributing a robust alignment technique for LRM safety. Our code is available at https://github.com/weizeming/RAPO.",
+      "tr": "Elbette, makale başlığını ve özetini istediğiniz şekilde Türkçeye çevirdim:\n\n**Makale Başlığı:** RAPO: Genelleştirilebilir Güvenli Reasoning için Risk-Bilinçli Tercih Optimizasyonu\n\n**Özet:**\nLarge Reasoning Models (LRMs), chain-of-thought (CoT) reasoning yetenekleri ile muazzam başarılar elde etmişlerdir; ancak, temel dil modellerine benzer şekilde güvenlik sorunlarıyla da karşılaşmaktadırlar. Özellikle, algoritmalar bu modelleri güvenli reasoning yoluyla kasıtlı olarak zararlı yönlendirmeleri reddetmeye yönlendirecek şekilde tasarlanmış olsa da, bu süreç genellikle çeşitli ve karmaşık jailbreak saldırılarına karşı genelleştirilememektedir. Bu çalışmada, bu başarısızlıkları güvenli reasoning sürecinin genelleştirilebilirliği, özellikle de karmaşık saldırı yönlendirmelerine karşı yetersizlikleri ile ilişkilendiriyoruz. Gelişmiş saldırı yönlendirmelerine karşı savunma için daha yeterli bir güvenli reasoning sürecinin gerekliliğini hem teorik hem de ampirik kanıtlarla göstermekteyiz. Bu içgörüye dayanarak, LRMs'in düşünce içeriğindeki uygun detay seviyesi ile güvenlik risklerini uyarlanabilir bir şekilde tanımlamasını ve ele almasını sağlayan bir Risk-Aware Preference Optimization (RAPO) çerçevesi öneriyoruz. Kapsamlı deneyler, RAPO'nun genel faydayı korurken, çeşitli saldırı yönlendirmeleri boyunca birden fazla LRM'nin güvenli reasoning yeteneğini uyarlanabilir bir şekilde başarıyla genelleştirdiğini göstermektedir. Bu, LRM güvenliği için sağlam bir alignment tekniği sunmaktadır. Kodumuz https://github.com/weizeming/RAPO adresinde mevcuttur."
+    }
+  },
+  {
+    "id": "2602.04113v1",
+    "title": "ZKBoost: Zero-Knowledge Verifiable Training for XGBoost",
+    "authors": [
+      "Nikolas Melissaris",
+      "Jiayi Xu",
+      "Antigoni Polychroniadou",
+      "Akira Takahashi",
+      "Chenkai Weng"
+    ],
+    "published_date": "2026-02-04",
     "tags": [
       "cs.CR",
-      "cs.AI"
+      "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2602.03012v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.03012v1",
+    "link": "http://arxiv.org/abs/2602.04113v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.04113v1",
     "content": {
-      "en": "Evaluating and improving the security capabilities of code agents requires high-quality, executable vulnerability tasks. However, existing works rely on costly, unscalable manual reproduction and suffer from outdated data distributions. To address these, we present CVE-Factory, the first multi-agent framework to achieve expert-level quality in automatically transforming sparse CVE metadata into fully executable agentic tasks. Cross-validation against human expert reproductions shows that CVE-Factory achieves 95\\% solution correctness and 96\\% environment fidelity, confirming its expert-level quality. It is also evaluated on the latest realistic vulnerabilities and achieves a 66.2\\% verified success. This automation enables two downstream contributions. First, we construct LiveCVEBench, a continuously updated benchmark of 190 tasks spanning 14 languages and 153 repositories that captures emerging threats including AI-tooling vulnerabilities. Second, we synthesize over 1,000 executable training environments, the first large-scale scaling of agentic tasks in code security. Fine-tuned Qwen3-32B improves from 5.3\\% to 35.8\\% on LiveCVEBench, surpassing Claude 4.5 Sonnet, with gains generalizing to Terminal Bench (12.5\\% to 31.3\\%). We open-source CVE-Factory, LiveCVEBench, Abacus-cve (fine-tuned model), training dataset, and leaderboard. All resources are available at https://github.com/livecvebench/CVE-Factory .",
-      "tr": "İşte akademik makale başlığı ve özetinin istenen şekilde çevirisi:\n\n**Makale Başlığı:** CVE-Factory: Kod Güvenliği Açıkları İçin Uzman Seviyesinde Agentic Görevlerin Ölçeklendirilmesi\n\n**Özet:**\nKod ajanlarının güvenlik yeteneklerini değerlendirmek ve geliştirmek, yüksek kaliteli, yürütülebilir zafiyet görevleri gerektirir. Ancak mevcut çalışmalar, maliyetli, ölçeklenemeyen manuel yeniden üretimlere dayanmakta ve güncelliğini yitirmiş veri dağılımlarından muzdariptir. Bunları ele almak için, seyrek CVE metadata'sını otomatik olarak tam yürütülebilir agentic görevlere dönüştürmede uzman seviyesinde kaliteye ulaşan ilk çoklu-ajan (multi-agent) framework'ümüz CVE-Factory'yi sunuyoruz. İnsan uzman yeniden üretimlerine karşı çapraz doğrulama, CVE-Factory'nin %95 çözüm doğruluğu ve %96 environment fidelity'ye ulaştığını göstermekte, bu da onun uzman seviyesindeki kalitesini doğrulamaktadır. Ayrıca, en son gerçekçi zafiyetler üzerinde değerlendirilmiş ve %66.2 doğrulanmış başarı elde etmiştir. Bu otomasyon, iki ikincil katkı sağlamaktadır. İlk olarak, AI-tooling zafiyetleri dahil olmak üzere ortaya çıkan tehditleri kapsayan, 14 dil ve 153 depoyu kapsayan 190 görevden oluşan sürekli güncellenen bir benchmark olan LiveCVEBench'i inşa ediyoruz. İkinci olarak, kod güvenliğinde agentic görevlerin ilk büyük ölçekli ölçeklenmesi olan 1.000'den fazla yürütülebilir eğitim ortamı sentezliyoruz. İnce ayarlanmış (fine-tuned) Qwen3-32B, LiveCVEBench üzerinde %5.3'ten %35.8'e yükselerek Claude 4.5 Sonnet'i geride bırakmakta ve elde edilen kazançlar Terminal Bench'e (önce %12.5, sonra %31.3) genellemektedir. CVE-Factory, LiveCVEBench, Abacus-cve (fine-tuned model), eğitim veri seti ve leaderboard'u açık kaynak olarak sunuyoruz. Tüm kaynaklar https://github.com/livecvebench/CVE-Factory adresinden temin edilebilir."
+      "en": "Gradient boosted decision trees, particularly XGBoost, are among the most effective methods for tabular data. As deployment in sensitive settings increases, cryptographic guarantees of model integrity become essential. We present ZKBoost, the first zero-knowledge proof of training (zkPoT) protocol for XGBoost, enabling model owners to prove correct training on a committed dataset without revealing data or parameters. We make three key contributions: (1) a fixed-point XGBoost implementation compatible with arithmetic circuits, enabling instantiation of efficient zkPoT, (2) a generic template of zkPoT for XGBoost, which can be instantiated with any general-purpose ZKP backend, and (3) vector oblivious linear evaluation (VOLE)-based instantiation resolving challenges in proving nonlinear fixed-point operations. Our fixed-point implementation matches standard XGBoost accuracy within 1\\% while enabling practical zkPoT on real-world datasets.",
+      "tr": "İşte akademik makalenin başlığı ve özetinin Türkçeye çevirisi:\n\n**Makale Başlığı:** ZKBoost: XGBoost için Sıfır Bilgi Doğrulanabilir Eğitim\n\n**Özet:**\n\nEğim artırımlı karar ağaçları, özellikle XGBoost, tablo verileri için en etkili yöntemler arasındadır. Hassas ortamlarda kullanımı arttıkça, model bütünlüğünün kriptografik garantileri vazgeçilmez hale gelmektedir. Biz, XGBoost için ilk sıfır-bilgi kanıtı (zero-knowledge proof of training - zkPoT) protokolü olan ZKBoost'u sunuyoruz. Bu protokol, model sahiplerinin veri veya parametreleri açıklamadan, kayıtlı bir veri kümesi üzerinde doğru eğitimi kanıtlamalarına olanak tanır. Üç temel katkımız bulunmaktadır: (1) verimli zkPoT'un oluşturulmasını sağlayan, aritmetik devrelerle uyumlu bir sabit nokta (fixed-point) XGBoost uygulaması; (2) herhangi bir genel amaçlı ZKP arka ucu ile oluşturulabilen, XGBoost için jenerik bir zkPoT şablonu; ve (3) doğrusal olmayan sabit nokta (nonlinear fixed-point) işlemlerinin kanıtlanmasındaki zorlukları çözen, vektör kör doğrusal değerlendirme (vector oblivious linear evaluation - VOLE) tabanlı bir oluşturma. Sabit nokta uygulamamız, standart XGBoost doğruluğunu %1'in içinde eşleştirmekte ve gerçek dünya veri kümeleri üzerinde pratik zkPoT'u mümkün kılmaktadır."
     }
   },
   {
-    "id": "2602.02962v1",
-    "title": "Q-ShiftDP: A Differentially Private Parameter-Shift Rule for Quantum Machine Learning",
+    "id": "2602.04027v1",
+    "title": "A Consensus-Bayesian Framework for Detecting Malicious Activity in Enterprise Directory Access Graphs",
     "authors": [
-      "Hoang M. Ngo",
-      "Nhat Hoang-Xuan",
-      "Quan Nguyen",
-      "Nguyen Do",
-      "Incheol Shin"
+      "Pratyush Uppuluri",
+      "Shilpa Noushad",
+      "Sajan Kumar"
     ],
     "published_date": "2026-02-03",
     "tags": [
       "cs.LG",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2602.02962v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.02962v1",
+    "link": "http://arxiv.org/abs/2602.04027v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.04027v1",
     "content": {
-      "en": "Quantum Machine Learning (QML) promises significant computational advantages, but preserving training data privacy remains challenging. Classical approaches like differentially private stochastic gradient descent (DP-SGD) add noise to gradients but fail to exploit the unique properties of quantum gradient estimation. In this work, we introduce the Differentially Private Parameter-Shift Rule (Q-ShiftDP), the first privacy mechanism tailored to QML. By leveraging the inherent boundedness and stochasticity of quantum gradients computed via the parameter-shift rule, Q-ShiftDP enables tighter sensitivity analysis and reduces noise requirements. We combine carefully calibrated Gaussian noise with intrinsic quantum noise to provide formal privacy and utility guarantees, and show that harnessing quantum noise further improves the privacy-utility trade-off. Experiments on benchmark datasets demonstrate that Q-ShiftDP consistently outperforms classical DP methods in QML.",
-      "tr": "Makale Başlığı: Q-ShiftDP: Kuantum Makine Öğrenmesi için Diferansiyel Olarak Gizli Parametre Kaydırma Kuralı\n\nÖzet:\nKuantum Makine Öğrenmesi (QML), önemli hesaplama avantajları vaat etmektedir, ancak eğitim verilerinin gizliliğini korumak zorluğunu sürdürmektedir. Diferansiyel olarak gizli stokastik gradyan inişi (DP-SGD) gibi klasik yaklaşımlar gradyanlara gürültü ekler, ancak kuantum gradyan tahmininin benzersiz özelliklerinden yararlanamaz. Bu çalışmada, QML'ye özel ilk gizlilik mekanizması olan Diferansiyel Olarak Gizli Parametre Kaydırma Kuralı'nı (Q-ShiftDP) sunmaktayız. Parametre kaydırma kuralı aracılığıyla hesaplanan kuantum gradyanlarının içsel sınırlılığı ve stokastik doğasından yararlanarak Q-ShiftDP, daha sıkı bir hassasiyet analizi sağlar ve gürültü gereksinimlerini azaltır. Resmi gizlilik ve fayda garantileri sağlamak için dikkatlice kalibre edilmiş Gaussian gürültüyü içsel kuantum gürültüsü ile birleştiriyoruz ve kuantum gürültüsünden yararlanmanın gizlilik-fayda takasını daha da iyileştirdiğini gösteriyoruz. Karşılaştırmalı veri kümeleri üzerindeki deneyler, Q-ShiftDP'nin QML'de klasik DP yöntemlerinden tutarlı bir şekilde daha iyi performans gösterdiğini ortaya koymaktadır."
+      "en": "This work presents a consensus-based Bayesian framework to detect malicious user behavior in enterprise directory access graphs. By modeling directories as topics and users as agents within a multi-level interaction graph, we simulate access evolution using influence-weighted opinion dynamics. Logical dependencies between users are encoded in dynamic matrices Ci, and directory similarity is captured via a shared influence matrix W. Malicious behavior is injected as cross-component logical perturbations that violate structural norms of strongly connected components(SCCs). We apply theoretical guarantees from opinion dynamics literature to determine topic convergence and detect anomaly via scaled opinion variance. To quantify uncertainty, we introduce a Bayesian anomaly scoring mechanism that evolves over time, using both static and online priors. Simulations over synthetic access graphs validate our method, demonstrating its sensitivity to logical inconsistencies and robustness under dynamic perturbation.",
+      "tr": "İşte akademik makale başlığı ve özetinin çevirisi:\n\n**Makale Başlığı: Kurumsal Dizin Erişim Grafiklerindeki Zararlı Faaliyetlerin Tespiti İçin Bir Consensus-Bayesian Çerçeve**\n\n**Özet:**\nBu çalışma, kurumsal dizin erişim grafiklerindeki zararlı kullanıcı davranışlarını tespit etmek için bir consensus-based Bayesian çerçeve sunmaktadır. Dizinleri konular (topics) ve kullanıcıları çok katmanlı bir etkileşim grafiği içindeki ajanlar (agents) olarak modelleyerek, etki ağırlıklı (influence-weighted) görüş dinamikleri (opinion dynamics) aracılığıyla erişim evrimini simüle ediyoruz. Kullanıcılar arasındaki mantıksal bağımlılıklar dinamik matrisler Ci'ye kodlanmakta ve dizin benzerliği paylaşılan bir etki matrisi (shared influence matrix) W aracılığıyla yakalanmaktadır. Zararlı davranışlar, strongly connected components (SCCs) yapısının normlarını ihlal eden çapraz bileşen mantıksal pertürbasyonlar (cross-component logical perturbations) olarak enjekte edilmektedir. Konu yakınsaması (topic convergence) belirlemek ve scaled opinion variance yoluyla anomalileri tespit etmek için görüş dinamikleri literatüründen teorik güvenceler (theoretical guarantees) uyguluyoruz. Belirsizliği nicelleştirmek için, hem statik hem de online önsel bilgiler (online priors) kullanarak zamanla evrilen bir Bayesian anomali skorlama mekanizması (Bayesian anomaly scoring mechanism) tanıtıyoruz. Sentetik erişim grafikleri üzerinde yapılan simülasyonlar, mantıksal tutarsızlıklara karşı hassasiyetini ve dinamik pertürbasyon altında sağlamlığını (robustness) göstererek yöntemimizi doğrulamaktadır."
     }
   },
   {
-    "id": "2602.02929v1",
-    "title": "RPG-AE: Neuro-Symbolic Graph Autoencoders with Rare Pattern Mining for Provenance-Based Anomaly Detection",
+    "id": "2602.03948v1",
+    "title": "Privacy utility trade offs for parameter estimation in degree heterogeneous higher order networks",
     "authors": [
-      "Asif Tauhid",
-      "Sidahmed Benabderrahmane",
-      "Mohamad Altrabulsi",
-      "Ahamed Foisal",
-      "Talal Rahwan"
+      "Bibhabasu Mandal",
+      "Sagnik Nandy"
     ],
     "published_date": "2026-02-03",
     "tags": [
+      "stat.ML",
+      "cs.CR",
       "cs.LG",
-      "cs.AI",
-      "cs.CR",
-      "cs.NE"
+      "cs.SI",
+      "math.ST"
     ],
-    "link": "http://arxiv.org/abs/2602.02929v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.02929v1",
+    "link": "http://arxiv.org/abs/2602.03948v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.03948v1",
     "content": {
-      "en": "Advanced Persistent Threats (APTs) are sophisticated, long-term cyberattacks that are difficult to detect because they operate stealthily and often blend into normal system behavior. This paper presents a neuro-symbolic anomaly detection framework that combines a Graph Autoencoder (GAE) with rare pattern mining to identify APT-like activities in system-level provenance data. Our approach first constructs a process behavioral graph using k-Nearest Neighbors based on feature similarity, then learns normal relational structure using a Graph Autoencoder. Anomaly candidates are identified through deviations between observed and reconstructed graph structure. To further improve detection, we integrate an rare pattern mining module that discovers infrequent behavioral co-occurrences and uses them to boost anomaly scores for processes exhibiting rare signatures. We evaluate the proposed method on the DARPA Transparent Computing datasets and show that rare-pattern boosting yields substantial gains in anomaly ranking quality over the baseline GAE. Compared with existing unsupervised approaches on the same benchmark, our single unified model consistently outperforms individual context-based detectors and achieves performance competitive with ensemble aggregation methods that require multiple separate detectors. These results highlight the value of coupling graph-based representation learning with classical pattern mining to improve both effectiveness and interpretability in provenance-based security anomaly detection.",
-      "tr": "**Makale Başlığı:** RPG-AE: Provenance Tabanlı Anomali Tespiti için Nadir Desen Madenciliği ile Nöro-Sembolik Grafik Otomatik Kodlayıcıları\n\n**Özet:**\nAdvanced Persistent Threats (APTs), gizlice hareket etmeleri ve genellikle normal sistem davranışlarına karışmaları nedeniyle tespiti zor olan sofistike, uzun süreli siber saldırılardır. Bu makale, sistem düzeyindeki provenance verilerinde APT benzeri faaliyetleri belirlemek için Nadir Desen Madenciliği ile bir Graph Autoencoder (GAE)'ı birleştiren bir nöro-sembolik anomali tespit çerçevesi sunmaktadır. Yaklaşımımız öncelikle özellik benzerliğine dayalı k-Nearest Neighbors kullanarak bir süreç davranış grafiği oluşturur, ardından bir Graph Autoencoder kullanarak normal ilişkisel yapıyı öğrenir. Anomali adayları, gözlemlenen ve yeniden yapılandırılan grafik yapısı arasındaki sapmalar yoluyla belirlenir. Tespiti daha da iyileştirmek için, nadir davranışsal eşzamanlılıkları keşfeden ve nadir imzalar sergileyen süreçler için anomali puanlarını artırmak amacıyla bunları kullanan bir rare pattern mining modülü entegre ediyoruz. Önerilen yöntemi DARPA Transparent Computing veri kümeleri üzerinde değerlendiriyoruz ve rare-pattern boosting'in temel GAE'ye göre anomali sıralama kalitesinde önemli kazanımlar sağladığını gösteriyoruz. Aynı benchmark üzerinde mevcut denetimsiz yaklaşımlarla karşılaştırıldığında, tekil birleşik modelimiz bireysel bağlam tabanlı dedektörlerden tutarlı bir şekilde daha iyi performans gösterir ve birden fazla ayrı dedektör gerektiren ensemble aggregation yöntemleriyle rekabetçi performans elde eder. Bu sonuçlar, provenance tabanlı güvenlik anomali tespitinde hem etkinliği hem de yorumlanabilirliği artırmak için grafik tabanlı temsil öğrenmesini klasik pattern mining ile eşleştirmenin değerini vurgulamaktadır."
+      "en": "In sensitive applications involving relational datasets, protecting information about individual links from adversarial queries is of paramount importance. In many such settings, the available data are summarized solely through the degrees of the nodes in the network. We adopt the $β$ model, which is the prototypical statistical model adopted for this form of aggregated relational information, and study the problem of minimax-optimal parameter estimation under both local and central differential privacy constraints. We establish finite sample minimax lower bounds that characterize the precise dependence of the estimation risk on the network size and the privacy parameters, and we propose simple estimators that achieve these bounds up to constants and logarithmic factors under both local and central differential privacy frameworks. Our results provide the first comprehensive finite sample characterization of privacy utility trade offs for parameter estimation in $β$ models, addressing the classical graph case and extending the analysis to higher order hypergraph models. We further demonstrate the effectiveness of our methods through experiments on synthetic data and a real world communication network.",
+      "tr": "Elbette, istediğiniz çeviriyi aşağıda bulabilirsiniz:\n\n**Makale Başlığı:** Derece Heterojenliği Gösteren Yüksek Dereceli Ağlarda Parametre Tahmini İçin Gizlilik Fayda Ödünleşmeleri\n\n**Özet:**\n\nİlişkisel veri kümelerini içeren hassas uygulamalarda, bireysel bağlantılar hakkındaki bilgilerin kötü niyetli sorgulardan korunması büyük önem taşımaktadır. Bu tür birçok ortamda, mevcut veriler yalnızca ağdaki düğümlerin dereceleri aracılığıyla özetlenir. Bu tür toplu ilişkisel bilgi için prototipik istatistiksel model olan $β$ modelini benimsiyor ve hem yerel hem de merkezi differential privacy kısıtlamaları altında minimax-optimal parametre tahmini problemini inceliyoruz. Tahmin riskinin ağ boyutu ve gizlilik parametreleri üzerindeki kesin bağımlılığını karakterize eden sonlu örneklem minimax alt sınırlarını belirliyor ve hem yerel hem de merkezi differential privacy çerçeveleri altında bu sınırları sabitler ve logaritmik faktörlere kadar elde eden basit tahminciler öneriyoruz. Sonuçlarımız, $β$ modellerinde parametre tahmini için gizlilik fayda ödünleşmelerinin ilk kapsamlı sonlu örneklem karakterizasyonunu sunarak, klasik graf durumunu ele almakta ve analizi yüksek dereceli hipergraf modellerine genişletmektedir. Ayrıca, yöntemlerimizin etkinliğini sentetik veriler ve gerçek dünya bir iletişim ağı üzerindeki deneylerle gösteriyoruz."
     }
   },
   {
-    "id": "2602.02925v1",
-    "title": "Refining Decision Boundaries In Anomaly Detection Using Similarity Search Within the Feature Space",
+    "id": "2602.03792v1",
+    "title": "WebSentinel: Detecting and Localizing Prompt Injection Attacks for Web Agents",
     "authors": [
-      "Sidahmed Benabderrahmane",
-      "Petko Valtchev",
-      "James Cheney",
-      "Talal Rahwan"
+      "Xilong Wang",
+      "Yinuo Liu",
+      "Zhun Wang",
+      "Dawn Song",
+      "Neil Gong"
     ],
-    "published_date": "2026-02-02",
-    "tags": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CR",
-      "cs.NE"
-    ],
-    "link": "http://arxiv.org/abs/2602.02925v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.02925v1",
-    "content": {
-      "en": "Detecting rare and diverse anomalies in highly imbalanced datasets-such as Advanced Persistent Threats (APTs) in cybersecurity-remains a fundamental challenge for machine learning systems. Active learning offers a promising direction by strategically querying an oracle to minimize labeling effort, yet conventional approaches often fail to exploit the intrinsic geometric structure of the feature space for model refinement. In this paper, we introduce SDA2E, a Sparse Dual Adversarial Attention-based AutoEncoder designed to learn compact and discriminative latent representations from imbalanced, high-dimensional data. We further propose a similarity-guided active learning framework that integrates three novel strategies to refine decision boundaries efficiently: mormal-like expansion, which enriches the training set with points similar to labeled normals to improve reconstruction fidelity; anomaly-like prioritization, which boosts ranking accuracy by focusing on points resembling known anomalies; and a hybrid strategy that combines both for balanced model refinement and ranking. A key component of our framework is a new similarity measure, Normalized Matching 1s (SIM_NM1), tailored for sparse binary embeddings. We evaluate SDA2E extensively across 52 imbalanced datasets, including multiple DARPA Transparent Computing scenarios, and benchmark it against 15 state-of-the-art anomaly detection methods. Results demonstrate that SDA2E consistently achieves superior ranking performance (nDCG up to 1.0 in several cases) while reducing the required labeled data by up to 80% compared to passive training. Statistical tests confirm the significance of these improvements. Our work establishes a robust, efficient, and statistically validated framework for anomaly detection that is particularly suited to cybersecurity applications such as APT detection.",
-      "tr": "**Makale Başlığı:** Özellik Uzayında Benzerlik Araması Kullanarak Anomali Tespitinde Karar Sınırlarını İyileştirme\n\n**Özet:**\n\nSiber güvenlikteki Advanced Persistent Threats (APTs) gibi yüksek derecede dengesiz veri kümelerindeki nadir ve çeşitli anomalilerin tespiti, makine öğrenimi sistemleri için temel bir zorluk olmaya devam etmektedir. Active learning, etiketleme çabasını en aza indirmek için stratejik olarak bir oracle'a sorgu yaparak umut verici bir yön sunar; ancak geleneksel yaklaşımlar, model iyileştirmesi için özellik uzayının içsel geometrik yapısından yararlanmakta sıklıkla yetersiz kalmaktadır. Bu makalede, dengesiz, yüksek boyutlu verilerden kompakt ve ayırt edici latent temsiller öğrenmek üzere tasarlanmış bir Sparse Dual Adversarial Attention-based AutoEncoder olan SDA2E'yi tanıtıyoruz. Ayrıca, karar sınırlarını verimli bir şekilde iyileştirmek için üç yeni stratejiyi entegre eden benzerlik güdümlü bir active learning framework'ü öneriyoruz: ricostruction fidelity'yi geliştirmek için etiketlenmiş normal noktalara benzeyen noktalarla eğitim setini zenginleştiren mormal-like expansion; bilinen anomalilere benzeyen noktalara odaklanarak ranking accuracy'yi artıran anomaly-like prioritization; ve dengeli model iyileştirmesi ile ranking'i birleştiren hibrit bir strateji. Framework'ümüzün temel bir bileşeni, sparse binary embeddings için özel olarak tasarlanmış yeni bir benzerlik ölçüsü olan Normalized Matching 1s (SIM_NM1)'dir. SDA2E'yi, DARPA Transparent Computing senaryoları dahil olmak üzere 52 dengesiz veri kümesinde kapsamlı bir şekilde değerlendiriyor ve 15 state-of-the-art anomali tespit yöntemiyle karşılaştırıyoruz. Sonuçlar, SDA2E'nin pasif eğitime kıyasla gerekli etiketli veriyi %80'e kadar azaltırken, tutarlı bir şekilde üstün ranking performansı (bazı durumlarda 1.0'a kadar nDCG) elde ettiğini göstermektedir. İstatistiksel testler bu iyileştirmelerin anlamlılığını doğrulamaktadır. Çalışmamız, özellikle APT tespiti gibi siber güvenlik uygulamalarına uygun, sağlam, verimli ve istatistiksel olarak doğrulanmış bir anomali tespit framework'ü oluşturmaktadır."
-    }
-  },
-  {
-    "id": "2602.02781v1",
-    "title": "Evaluating False Alarm and Missing Attacks in CAN IDS",
-    "authors": [
-      "Nirab Hossain",
-      "Pablo Moriano"
-    ],
-    "published_date": "2026-02-02",
+    "published_date": "2026-02-03",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.LG"
+      "cs.CL"
     ],
-    "link": "http://arxiv.org/abs/2602.02781v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.02781v1",
+    "link": "http://arxiv.org/abs/2602.03792v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.03792v1",
     "content": {
-      "en": "Modern vehicles rely on electronic control units (ECUs) interconnected through the Controller Area Network (CAN), making in-vehicle communication a critical security concern. Machine learning (ML)-based intrusion detection systems (IDS) are increasingly deployed to protect CAN traffic, yet their robustness against adversarial manipulation remains largely unexplored. We present a systematic adversarial evaluation of CAN IDS using the ROAD dataset, comparing four shallow learning models with a deep neural network-based detector. Using protocol-compliant, payload-level perturbations generated via FGSM, BIM and PGD, we evaluate adversarial effects on both benign and malicious CAN frames. While all models achieve strong baseline performance under benign conditions, adversarial perturbations reveal substantial vulnerabilities. Although shallow and deep models are robust to false-alarm induction, with the deep neural network (DNN) performing best on benign traffic, all architectures suffer significant increases in missed attacks. Notably, under gradient-based attacks, the shallow model extra trees (ET) demonstrates improved robustness to missed-attack induction compared to the other models. Our results demonstrate that adversarial manipulation can simultaneously trigger false alarms and evade detection, underscoring the need for adversarial robustness evaluation in safety-critical automotive IDS.",
-      "tr": "**Makale Başlığı:** CAN IDS'de Yanlış Alarm ve Saldırı Gözden Kaçırma Değerlendirmesi\n\n**Özet:**\n\nModern araçlar, Controller Area Network (CAN) üzerinden birbirine bağlı elektronik kontrol ünitelerine (ECU'lar) dayanır ve araç içi iletişimi kritik bir güvenlik endişesi haline getirir. Makine öğrenmesi (ML) tabanlı saldırı tespit sistemleri (IDS), CAN trafiğini korumak için giderek daha fazla kullanılmaktadır, ancak gelişigüzel manipülasyona karşı dayanıklılıkları büyük ölçüde keşfedilmemiş durumdadır. Bu çalışmada, ROAD veri kümesi kullanılarak CAN IDS'nin sistematik bir gelişigüzel değerlendirmesi sunulmakta ve dört sığ öğrenme modeli, derin bir sinir ağı tabanlı dedektör ile karşılaştırılmaktadır. FGSM, BIM ve PGD aracılığıyla üretilen protokole uygun, payload seviyesindeki pertürbasyonlar kullanılarak, hem zararsız hem de kötü niyetli CAN çerçeveleri üzerindeki gelişigüzel etkiler değerlendirilmektedir. Tüm modeller zararsız koşullar altında güçlü bir temel performans sergilerken, gelişigüzel pertürbasyonlar önemli zafiyetleri ortaya çıkarmaktadır. Sığ ve derin modeller yanlış alarmların tetiklenmesine karşı dayanıklı olsa da (derin sinir ağı (DNN) zararsız trafikte en iyi performansı göstermektedir), tüm mimarilerde gözden kaçan saldırılarda önemli artışlar görülmektedir. Özellikle, gradyan tabanlı saldırılar altında, sığ model extra trees (ET), diğer modellere kıyasla gözden kaçan saldırıların tetiklenmesine karşı daha iyi bir dayanıklılık sergilemektedir. Sonuçlarımız, gelişigüzel manipülasyonun aynı anda yanlış alarmları tetikleyebildiğini ve tespit edilmekten kaçabildiğini göstermekte ve güvenlik açısından kritik otomotiv IDS'lerinde gelişigüzel dayanıklılık değerlendirmesinin gerekliliğini vurgulamaktadır."
-    }
-  },
-  {
-    "id": "2602.02766v1",
-    "title": "Privately Fine-Tuned LLMs Preserve Temporal Dynamics in Tabular Data",
-    "authors": [
-      "Lucas Rosenblatt",
-      "Peihan Liu",
-      "Ryan McKenna",
-      "Natalia Ponomareva"
-    ],
-    "published_date": "2026-02-02",
-    "tags": [
-      "cs.LG",
-      "cs.CL",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2602.02766v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.02766v1",
-    "content": {
-      "en": "Research on differentially private synthetic tabular data has largely focused on independent and identically distributed rows where each record corresponds to a unique individual. This perspective neglects the temporal complexity in longitudinal datasets, such as electronic health records, where a user contributes an entire (sub) table of sequential events. While practitioners might attempt to model such data by flattening user histories into high-dimensional vectors for use with standard marginal-based mechanisms, we demonstrate that this strategy is insufficient. Flattening fails to preserve temporal coherence even when it maintains valid marginal distributions. We introduce PATH, a novel generative framework that treats the full table as the unit of synthesis and leverages the autoregressive capabilities of privately fine-tuned large language models. Extensive evaluations show that PATH effectively captures long-range dependencies that traditional methods miss. Empirically, our method reduces the distributional distance to real trajectories by over 60% and reduces state transition errors by nearly 50% compared to leading marginal mechanisms while achieving similar marginal fidelity.",
-      "tr": "**Makale Başlığı:** Privately Fine-Tuned LLMs Temporal Dynamics in Tabular Data'da Korur\n\n**Özet:**\n\nDifferentially private sentetik tablo verileri üzerine yapılan araştırmalar büyük ölçüde bağımsız ve aynı şekilde dağılmış satırlara odaklanmıştır; burada her kayıt benzersiz bir bireye karşılık gelir. Bu bakış açısı, elektronik sağlık kayıtları gibi boylamsal veri kümelerindeki zamansal karmaşıklığı göz ardı eder; burada bir kullanıcı sıralı olaylardan oluşan bir (alt) tablonun tamamını sağlar. Uygulayıcılar, bu tür verileri standart marjinal tabanlı mekanizmalarla kullanmak üzere kullanıcı geçmişlerini yüksek boyutlu vektörlere düzleştirerek modellemeye çalışsalar da, bu stratejinin yetersiz olduğunu gösteriyoruz. Düzleştirme, geçerli marjinal dağılımları korusa bile zamansal tutarlılığı korumada başarısız olur. Biz, tüm tabloyu sentez birimi olarak ele alan ve privately fine-tuned large language models'ın otoregresif yeteneklerinden yararlanan yeni bir üretken çerçeve olan PATH'ı sunuyoruz. Kapsamlı değerlendirmeler, PATH'ın geleneksel yöntemlerin gözden kaçırdığı uzun menzilli bağımlılıkları etkili bir şekilde yakaladığını göstermektedir. Ampirik olarak, yöntemimiz gerçek yörüngelere olan dağılımsal mesafeyi %60'tan fazla azaltır ve benzer marjinal doğruluk sağlarken önde gelen marjinal mekanizmalara kıyasla durum geçiş hatalarını neredeyse %50 azaltır."
-    }
-  },
-  {
-    "id": "2602.02689v1",
-    "title": "Eidolon: A Practical Post-Quantum Signature Scheme Based on k-Colorability in the Age of Graph Neural Networks",
-    "authors": [
-      "Asmaa Cherkaoui",
-      "Ramon Flores",
-      "Delaram Kahrobaei",
-      "Richard Wilson"
-    ],
-    "published_date": "2026-02-02",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.02689v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.02689v1",
-    "content": {
-      "en": "We propose Eidolon, a practical post-quantum signature scheme based on the NP-complete k-colorability problem. Our construction generalizes the Goldreich-Micali-Wigderson zero-knowledge protocol to arbitrary k >= 3, applies the Fiat-Shamir transform, and uses Merkle-tree commitments to compress signatures from O(tn) to O(t log n). Crucially, we generate hard instances via planted \"quiet\" colorings that preserve the statistical profile of random graphs. We present the first empirical security analysis of such a scheme against both classical solvers (ILP, DSatur) and a custom graph neural network (GNN) attacker. Experiments show that for n >= 60, neither approach recovers the secret coloring, demonstrating that well-engineered k-coloring instances can resist modern cryptanalysis, including machine learning. This revives combinatorial hardness as a credible foundation for post-quantum signatures.",
-      "tr": "**Makale Başlığı:** Eidolon: Yapay Sinir Ağları Çağında k-Colorability Temelli Pratik Kuantum Sonrası İmza Şeması\n\n**Özet:**\n\nBu çalışmada, NP-tam k-colorability problemine dayanan pratik bir post-quantum imza şeması olan Eidolon'u sunuyoruz. İnşaatımız, Goldreich-Micali-Wigderson sıfır-bilgi protokolünü keyfi k >= 3'e genellemekte, Fiat-Shamir transformunu uygulamakta ve Merkle-tree commitments kullanarak imzaları O(tn)'den O(t log n)'e sıkıştırmaktadır. Kritik olarak, rastgele grafiklerin istatistiksel profilini koruyan ekilmiş \"sakin\" renklendirmeler aracılığıyla zor örnekler üretiyoruz. Bu tür bir şemanın hem klasik çözücülere (ILP, DSatur) hem de özel bir graph neural network (GNN) saldırganına karşı ilk ampirik güvenlik analizini sunuyoruz. Deneyler, n >= 60 için, hiçbir yaklaşımın gizli renklendirmeyi geri kazanamadığını göstermektedir, bu da iyi tasarlanmış k-coloring örneklerinin makine öğrenmesi dahil olmak üzere modern kriptanalize direnebileceğini ortaya koymaktadır. Bu bulgu, post-quantum imzalar için inanılır bir temel olarak kombinatoryal zorluğu yeniden canlandırmaktadır."
-    }
-  },
-  {
-    "id": "2602.02686v1",
-    "title": "Monotonicity as an Architectural Bias for Robust Language Models",
-    "authors": [
-      "Patrick Cooper",
-      "Alireza Nadali",
-      "Ashutosh Trivedi",
-      "Alvaro Velasquez"
-    ],
-    "published_date": "2026-02-02",
-    "tags": [
-      "cs.CL",
-      "cs.AI",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.02686v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.02686v1",
-    "content": {
-      "en": "Large language models (LLMs) are known to exhibit brittle behavior under adversarial prompts and jailbreak attacks, even after extensive alignment and fine-tuning. This fragility reflects a broader challenge of modern neural language models: small, carefully structured perturbations in high-dimensional input spaces can induce large and unpredictable changes in internal semantic representations and output.   We investigate monotonicity as an architectural inductive bias for improving the robustness of Transformer-based language models. Monotonicity constrains semantic transformations so that strengthening information, evidence, or constraints cannot lead to regressions in the corresponding internal representations. Such order-preserving behavior has long been exploited in control and safety-critical systems to simplify reasoning and improve robustness, but has traditionally been viewed as incompatible with the expressivity required by neural language models.   We show that this trade-off is not inherent. By enforcing monotonicity selectively in the feed-forward sublayers of sequence-to-sequence Transformers -- while leaving attention mechanisms unconstrained -- we obtain monotone language models that preserve the performance of their pretrained counterparts. This architectural separation allows negation, contradiction, and contextual interactions to be introduced explicitly through attention, while ensuring that subsequent semantic refinement is order-preserving. Empirically, monotonicity substantially improves robustness: adversarial attack success rates drop from approximately 69% to 19%, while standard summarization performance degrades only marginally.",
-      "tr": "**Makale Başlığı:** Monotonicity as an Architectural Bias for Robust Language Models\n\n**Özet:**\n\nBüyük dil modelleri (LLMs), kapsamlı hizalama (alignment) ve ince ayar (fine-tuning) işlemlerine rağmen, kötü niyetli istemler (adversarial prompts) ve jailbreak saldırıları karşısında kırılgan (brittle) davranışlar sergilemesiyle bilinmektedir. Bu kırılganlık, modern yapay sinir ağları tabanlı dil modellerinin daha geniş bir sorununu yansıtmaktadır: yüksek boyutlu girdi uzaylarındaki küçük, dikkatlice yapılandırılmış pertürbasyonlar, iç anlamsal temsillerde ve çıktıda büyük ve öngörülemeyen değişikliklere neden olabilir. Transformer tabanlı dil modellerinin sağlamlığını (robustness) artırmak için bir mimari endüktif yanlılık (architectural inductive bias) olarak monotonluğu (monotonicity) araştırıyoruz. Monotonluk, bilgi, kanıt veya kısıtlamaların güçlendirilmesinin ilgili iç temsillerde gerilemelere yol açamayacağı şekilde anlamsal dönüşümleri sınırlar. Bu tür sıra koruyucu (order-preserving) davranış, akıl yürütmeyi (reasoning) basitleştirmek ve sağlamlığı iyileştirmek için kontrol ve güvenlik açısından kritik sistemlerde uzun süredir kullanılmaktadır, ancak geleneksel olarak yapay sinir ağları dil modelleri için gereken ifade edici güce (expressivity) uyumsuz olarak görülmüştür. Bu ödünleşimin (trade-off) doğasında olmadığını gösteriyoruz. Sıralı-dizilişli (sequence-to-sequence) Transformer'ların ileri beslemeli alt katmanlarında (feed-forward sublayers) monotonluğu seçici olarak zorlayarak – dikkat mekanizmalarını (attention mechanisms) kısıtlı bırakarak – önceden eğitilmiş muadillerinin performansını koruyan monoton dil modelleri elde ediyoruz. Bu mimari ayrım, olumsuzlama (negation), çelişki (contradiction) ve bağlamsal etkileşimlerin (contextual interactions) dikkat aracılığıyla açıkça tanıtılmasına izin verirken, sonraki anlamsal iyileştirmenin sıra koruyucu olmasını sağlamaktadır. Ampirik olarak, monotonluk sağlamlığı önemli ölçüde artırmaktadır: kötü niyetli saldırı başarı oranları yaklaşık %69'dan %19'a düşerken, standart özetleme (summarization) performansı yalnızca marjinal olarak düşmektedir."
+      "en": "Prompt injection attacks manipulate webpage content to cause web agents to execute attacker-specified tasks instead of the user's intended ones. Existing methods for detecting and localizing such attacks achieve limited effectiveness, as their underlying assumptions often do not hold in the web-agent setting. In this work, we propose WebSentinel, a two-step approach for detecting and localizing prompt injection attacks in webpages. Given a webpage, Step I extracts \\emph{segments of interest} that may be contaminated, and Step II evaluates each segment by checking its consistency with the webpage content as context. We show that WebSentinel is highly effective, substantially outperforming baseline methods across multiple datasets of both contaminated and clean webpages that we collected. Our code is available at: https://github.com/wxl-lxw/WebSentinel.",
+      "tr": "Makale Başlığı: WebSentinel: Web Ajanları İçin Prompt Injection Saldırılarını Tespit Etme ve Konumlandırma\n\nÖzet:\nPrompt injection saldırıları, web ajanslarının kullanıcının amaçladığı görevler yerine saldırgan tarafından belirtilen görevleri yürütmesine neden olmak için web sayfası içeriğini manipüle eder. Bu tür saldırıları tespit etme ve konumlandırma için mevcut yöntemler, web-ajanı ortamında geçerli olmayan temel varsayımları nedeniyle sınırlı bir etkililik sergilemektedir. Bu çalışmada, web sayfalarındaki prompt injection saldırılarını tespit etmek ve konumlandırmak için iki aşamalı bir yaklaşım olan WebSentinel'ı öneriyoruz. Bir web sayfası verildiğinde, Adım I potansiyel olarak kirletilmiş olan \\emph{ilgi alanlarını} (segments of interest) çıkarır ve Adım II, her bir segmenti web sayfası içeriği ile olan tutarlılığını bağlam olarak kontrol ederek değerlendirir. WebSentinel'ın yüksek derecede etkili olduğunu, topladığımız hem kirletilmiş hem de temiz web sayfalarından oluşan birden çok veri kümesinde temel (baseline) yöntemlerden önemli ölçüde daha iyi performans gösterdiğini gösteriyoruz. Kodumuz şu adreste mevcuttur: https://github.com/wxl-lxw/WebSentinel."
     }
   }
 ]
