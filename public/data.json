@@ -1,218 +1,218 @@
 [
   {
-    "id": "2602.06911v1",
-    "title": "TamperBench: Systematically Stress-Testing LLM Safety Under Fine-Tuning and Tampering",
+    "id": "2602.07878v1",
+    "title": "Rethinking Latency Denial-of-Service: Attacking the LLM Serving Framework, Not the Model",
     "authors": [
-      "Saad Hossain",
-      "Tom Tseng",
-      "Punya Syon Pandey",
-      "Samanvay Vajpayee",
-      "Matthew Kowal"
+      "Tianyi Wang",
+      "Huawei Fan",
+      "Yuanchao Shu",
+      "Peng Cheng",
+      "Cong Wang"
     ],
-    "published_date": "2026-02-06",
+    "published_date": "2026-02-08",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2602.06911v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.06911v1",
+    "link": "http://arxiv.org/abs/2602.07878v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.07878v1",
     "content": {
-      "en": "As increasingly capable open-weight large language models (LLMs) are deployed, improving their tamper resistance against unsafe modifications, whether accidental or intentional, becomes critical to minimize risks. However, there is no standard approach to evaluate tamper resistance. Varied data sets, metrics, and tampering configurations make it difficult to compare safety, utility, and robustness across different models and defenses. To this end, we introduce TamperBench, the first unified framework to systematically evaluate the tamper resistance of LLMs. TamperBench (i) curates a repository of state-of-the-art weight-space fine-tuning attacks and latent-space representation attacks; (ii) enables realistic adversarial evaluation through systematic hyperparameter sweeps per attack-model pair; and (iii) provides both safety and utility evaluations. TamperBench requires minimal additional code to specify any fine-tuning configuration, alignment-stage defense method, and metric suite while ensuring end-to-end reproducibility. We use TamperBench to evaluate 21 open-weight LLMs, including defense-augmented variants, across nine tampering threats using standardized safety and capability metrics with hyperparameter sweeps per model-attack pair. This yields novel insights, including effects of post-training on tamper resistance, that jailbreak-tuning is typically the most severe attack, and that Triplet emerges as a leading alignment-stage defense. Code is available at: https://github.com/criticalml-uw/TamperBench",
-      "tr": "**Makale Başlığı:** TamperBench: Tam İnce Ayar ve Kurcalama Altında LLM Güvenliğini Sistematik Olarak Zorluğa Maruz Bırakma\n\n**Özet:**\n\nArtık daha yetenekli hale gelen open-weight büyük dil modelleri (LLM'ler) konuşlandırıldıkça, riskleri en aza indirmek için istenmeyen veya kasıtlı olarak yapılan güvensiz değişikliklere karşı tamper resistance'larının iyileştirilmesi kritik önem taşımaktadır. Ancak, tamper resistance'ı değerlendirmek için standart bir yaklaşım bulunmamaktadır. Değişken veri setleri, metrikler ve tampering konfigürasyonları, farklı modeller ve savunmalar arasındaki güvenliği, utility'yi ve robustness'ı karşılaştırmayı zorlaştırmaktadır. Bu amaçla, LLM'lerin tamper resistance'ını sistematik olarak değerlendiren ilk birleşik framework olan TamperBench'i sunuyoruz. TamperBench (i) en yeni weight-space fine-tuning saldırıları ve latent-space representation saldırıları içeren bir depo oluşturur; (ii) saldırı-model çifti başına sistematik hyperparameter sweeps aracılığıyla gerçekçi adversarial evaluation sağlar; ve (iii) hem safety hem de utility evaluations'ı sunar. TamperBench, uçtan uca tekrarlanabilirliği sağlarken, herhangi bir fine-tuning konfigürasyonunu, alignment-stage defense method'unu ve metric suite'ini belirtmek için minimum ek kod gerektirir. TamperBench'i, standardize edilmiş safety ve capability metrikleri ile model-attack çifti başına hyperparameter sweeps kullanarak dokuz tampering tehdidi üzerinden, savunma artırılmış varyantlar da dahil olmak üzere 21 open-weight LLM'yi değerlendirmek için kullanıyoruz. Bu çalışma, post-training'in tamper resistance üzerindeki etkileri, jailbreak-tuning'in genellikle en şiddetli saldırı olduğu ve Triplet'in önde gelen bir alignment-stage defense olarak ortaya çıktığı gibi yeni içgörüler sunmaktadır. Kod şu adresten mevcuttur: https://github.com/criticalml-uw/TamperBench"
+      "en": "Large Language Models face an emerging and critical threat known as latency attacks. Because LLM inference is inherently expensive, even modest slowdowns can translate into substantial operating costs and severe availability risks. Recently, a growing body of research has focused on algorithmic complexity attacks by crafting inputs to trigger worst-case output lengths. However, we report a counter-intuitive finding that these algorithmic latency attacks are largely ineffective against modern LLM serving systems. We reveal that system-level optimization such as continuous batching provides a logical isolation to mitigate contagious latency impact on co-located users. To this end, in this paper, we shift the focus from the algorithm to the system layer, and introduce a new Fill and Squeeze attack strategy targeting the state transition of the scheduler. \"Fill\" first exhausts the global KV cache to induce Head-of-Line blocking, while \"Squeeze\" forces the system into repetitive preemption. By manipulating output lengths using methods from simple plain-text prompts to more complex prompt engineering, and leveraging side-channel probing of memory status, we demonstrate that the attack can be orchestrated in a black-box setting with much less cost. Extensive evaluations indicate by up to 20-280x average slowdown on Time to First Token and 1.5-4x average slowdown on Time Per Output Token compared to existing attacks with 30-40% lower attack cost.",
+      "tr": "Makale Başlığı: Gecikme Reddi Hizmeti (Denial-of-Service) Kavramını Yeniden Düşünmek: Modele Değil, LLM Serving Framework'üne Saldırı\n\nÖzet:\nBüyük Dil Modelleri (LLM), \"latency attacks\" olarak bilinen ortaya çıkan ve kritik bir tehdit ile karşı karşıyadır. LLM çıkarımı doğası gereği maliyetli olduğundan, mütevazı yavaşlamalar bile önemli işletme maliyetlerine ve ciddi kullanılabilirlik risklerine dönüşebilir. Son zamanlarda, araştırmaların önemli bir kısmı, en kötü durum çıktı uzunluklarını tetiklemek için girdi hazırlayarak algoritmik karmaşıklık saldırılarına odaklanmıştır. Ancak, bu algoritmik latency saldırılarının modern LLM serving sistemlerine karşı büyük ölçüde etkisiz olduğu yönünde sezgiye aykırı bir bulguyu rapor ediyoruz. Sürekli batching gibi sistem düzeyindeki optimizasyonun, birlikte konumlandırılmış kullanıcılara bulaşıcı gecikme etkisini azaltmak için mantıksal bir izolasyon sağladığını ortaya koyuyoruz. Bu amaçla, bu makalede odağımızı algoritmadan sistem katmanına kaydırıyor ve scheduler'ın state transition'ını hedefleyen yeni bir Fill and Squeeze saldırı stratejisi sunuyoruz. \"Fill\" önce global KV cache'i tüketerek Head-of-Line blocking'e neden olurken, \"Squeeze\" sistemi tekrarlayan preemption'a zorlar. Basit düz metin istemlerinden daha karmaşık prompt engineering yöntemlerine kadar çıktı uzunluklarını manipüle ederek ve bellek durumunun side-channel probing'inden yararlanarak, saldırının black-box bir ortamda çok daha düşük maliyetle organize edilebileceğini gösteriyoruz. Kapsamlı değerlendirmeler, mevcut saldırılara kıyasla Time to First Token'da 20-280 kat ortalama yavaşlama ve Time Per Output Token'da 1.5-4 kat ortalama yavaşlama ile %30-40 daha düşük saldırı maliyeti göstermektedir."
     }
   },
   {
-    "id": "2602.06777v1",
-    "title": "Next-generation cyberattack detection with large language models: anomaly analysis across heterogeneous logs",
+    "id": "2602.07666v1",
+    "title": "SoK: DARPA's AI Cyber Challenge (AIxCC): Competition Design, Architectures, and Lessons Learned",
     "authors": [
-      "Yassine Chagna",
-      "Antal Goldschmidt"
+      "Cen Zhang",
+      "Younggi Park",
+      "Fabian Fleischer",
+      "Yu-Fu Fu",
+      "Jiho Kim"
     ],
-    "published_date": "2026-02-06",
+    "published_date": "2026-02-07",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2602.06777v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.06777v1",
+    "link": "http://arxiv.org/abs/2602.07666v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.07666v1",
     "content": {
-      "en": "This project explores large language models (LLMs) for anomaly detection across heterogeneous log sources. Traditional intrusion detection systems suffer from high false positive rates, semantic blindness, and data scarcity, as logs are inherently sensitive, making clean datasets rare. We address these challenges through three contributions: (1) LogAtlas-Foundation-Sessions and LogAtlas-Defense-Set, balanced and heterogeneous log datasets with explicit attack annotations and privacy preservation; (2) empirical benchmarking revealing why standard metrics such as F1 and accuracy are misleading for security applications; and (3) a two phase training framework combining log understanding (Base-AMAN, 3B parameters) with real time detection (AMAN, 0.5B parameters via knowledge distillation). Results demonstrate practical feasibility, with inference times of 0.3-0.5 seconds per session and operational costs below 50 USD per day.",
-      "tr": "**Makale Başlığı:** Büyük Dil Modelleri ile Yeni Nesil Siber Saldırı Tespiti: Heterojen Loglar Arasında Anomali Analizi\n\n**Özet:**\n\nBu proje, heterojen log kaynakları arasında anomali tespiti için büyük dil modellerini (LLMs) araştırmaktadır. Geleneksel saldırı tespit sistemleri, logların doğası gereği hassas olması ve temiz veri setlerinin nadir bulunması nedeniyle yüksek yanlış pozitif oranları, anlamsal körlük ve veri kıtlığı sorunlarından muzdariptir. Bu zorlukları üç katkı ile ele almaktayız: (1) açık saldırı ek açıklamaları ve gizlilik koruması ile dengeli ve heterojen log veri setleri olan LogAtlas-Foundation-Sessions ve LogAtlas-Defense-Set; (2) standart metriklerin güvenlik uygulamaları için neden yanıltıcı olduğunu ortaya koyan ampirik kıyaslama; ve (3) log anlama (Base-AMAN, 3B parametreleri) ile gerçek zamanlı tespiti (knowledge distillation aracılığıyla AMAN, 0.5B parametreleri) birleştiren iki aşamalı bir eğitim çerçevesi. Sonuçlar, oturum başına 0.3-0.5 saniyelik çıkarım süreleri ve günlük 50 ABD dolarının altındaki operasyonel maliyetlerle pratik fizibiliteyi göstermektedir."
+      "en": "DARPA's AI Cyber Challenge (AIxCC, 2023--2025) is the largest competition to date for building fully autonomous cyber reasoning systems (CRSs) that leverage recent advances in AI -- particularly large language models (LLMs) -- to discover and remediate vulnerabilities in real-world open-source software. This paper presents the first systematic analysis of AIxCC. Drawing on design documents, source code, execution traces, and discussions with organizers and competing teams, we examine the competition's structure and key design decisions, characterize the architectural approaches of finalist CRSs, and analyze competition results beyond the final scoreboard. Our analysis reveals the factors that truly drove CRS performance, identifies genuine technical advances achieved by teams, and exposes limitations that remain open for future research. We conclude with lessons for organizing future competitions and broader insights toward deploying autonomous CRSs in practice.",
+      "tr": "İşte makale başlığı ve özetinin akademik ve resmi bir dille, teknik terimler İngilizce bırakılarak yapılmış çevirisi:\n\n**Makale Başlığı:** SoK: DARPA'nın Yapay Zeka Siber Yarışması (AIxCC): Yarışma Tasarımı, Mimari Yaklaşımları ve Edinilen Dersler\n\n**Özet:**\n\nDARPA'nın Yapay Zeka Siber Yarışması (AIxCC, 2023-2025), yapay zekadaki (özellikle large language models - LLMs) son gelişmeleri kullanarak, gerçek dünya açık kaynaklı yazılımlardaki zafiyetleri keşfeden ve düzelten tamamen otonom siber reasoning systems (CRSs) inşa etmeye yönelik bugüne kadarki en büyük yarışmadır. Bu makale, AIxCC'nin ilk sistematik analizini sunmaktadır. Tasarım belgeleri, kaynak kodu, yürütme izleri ve organizatörler ile yarışmacı ekiplerle yapılan görüşmelerden yararlanarak, yarışmanın yapısını ve temel tasarım kararlarını incelemekte, finalist CRSs'lerin mimari yaklaşımlarını karakterize etmekte ve nihai skor tablosunun ötesindeki yarışma sonuçlarını analiz etmekteyiz. Analizimiz, CRS performansını gerçek anlamda yönlendiren faktörleri ortaya çıkarmakta, ekiplerin elde ettiği gerçek teknik ilerlemeleri belirlemekte ve gelecekteki araştırmalar için açık kalan sınırlılıkları gözler önüne sermektedir. Sonuç olarak, gelecekteki yarışmaların düzenlenmesi için dersler ve otonom CRSs'lerin pratikte konuşlandırılmasına yönelik daha geniş içgörüler sunuyoruz."
     }
   },
   {
-    "id": "2602.06771v1",
-    "title": "AEGIS: Adversarial Target-Guided Retention-Data-Free Robust Concept Erasure from Diffusion Models",
+    "id": "2602.07652v1",
+    "title": "Agent-Fence: Mapping Security Vulnerabilities Across Deep Research Agents",
     "authors": [
-      "Fengpeng Li",
-      "Kemou Li",
-      "Qizhou Wang",
-      "Bo Han",
-      "Jiantao Zhou"
+      "Sai Puppala",
+      "Ismail Hossain",
+      "Md Jahangir Alam",
+      "Yoonpyo Lee",
+      "Jay Yoo"
     ],
-    "published_date": "2026-02-06",
-    "tags": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2602.06771v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.06771v1",
-    "content": {
-      "en": "Concept erasure helps stop diffusion models (DMs) from generating harmful content; but current methods face robustness retention trade off. Robustness means the model fine-tuned by concept erasure methods resists reactivation of erased concepts, even under semantically related prompts. Retention means unrelated concepts are preserved so the model's overall utility stays intact. Both are critical for concept erasure in practice, yet addressing them simultaneously is challenging, as existing works typically improve one factor while sacrificing the other. Prior work typically strengthens one while degrading the other, e.g., mapping a single erased prompt to a fixed safe target leaves class level remnants exploitable by prompt attacks, whereas retention-oriented schemes underperform against adaptive adversaries. This paper introduces Adversarial Erasure with Gradient Informed Synergy (AEGIS), a retention-data-free framework that advances both robustness and retention.",
-      "tr": "**Makale Başlığı:** AEGIS: Diffusion Modellerinden Yapay Zeka Tabanlı Hedef Yönlendirmeli, Verisiz ve Sağlam Kavram Silme\n\n**Özet:**\n\nDiffusion modellerin (DM'ler) zararlı içerik üretmesini engellemek amacıyla kavram silme (concept erasure) yöntemleri kullanılmaktadır; ancak mevcut yöntemler, sağlamlık (robustness) ve tutarlılık (retention) arasında bir ödünleşme ile karşı karşıyadır. Sağlamlık, kavram silme yöntemleriyle ince ayarlanmış modelin, anlamsal olarak ilişkili komutlar (prompts) altında dahi silinen kavramların yeniden etkinleştirilmesine karşı dirençli olmasını ifade eder. Tutarlılık ise, modelin genel faydasını koruyacak şekilde ilgisiz kavramların muhafaza edilmesini sağlar. Her ikisi de pratikte kavram silme için kritik öneme sahiptir, ancak bu iki unsuru aynı anda ele almak zordur, zira mevcut çalışmalar genellikle bir faktörü iyileştirirken diğerini feda eder. Önceki çalışmalar tipik olarak birini güçlendirirken diğerini zayıflatır; örneğin, tek bir silinen komutun sabit bir güvenli hedef ile eşleştirilmesi, sınıf seviyesinde Prompt Attacks ile sömürülebilecek kalıntılar bırakırken, tutarlılık odaklı şemalar uyarlanabilir (adaptive) düşmanlara (adversaries) karşı yetersiz kalmaktadır. Bu makale, hem sağlamlığı hem de tutarlılığı geliştiren, verisiz (data-free) bir framework olan Adversarial Erasure with Gradient Informed Synergy (AEGIS)'i tanıtmaktadır."
-    }
-  },
-  {
-    "id": "2602.06754v1",
-    "title": "A Unified Framework for LLM Watermarks",
-    "authors": [
-      "Thibaud Gloaguen",
-      "Robin Staab",
-      "Nikola Jovanović",
-      "Martin Vechev"
-    ],
-    "published_date": "2026-02-06",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.06754v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.06754v1",
-    "content": {
-      "en": "LLM watermarks allow tracing AI-generated texts by inserting a detectable signal into their generated content. Recent works have proposed a wide range of watermarking algorithms, each with distinct designs, usually built using a bottom-up approach. Crucially, there is no general and principled formulation for LLM watermarking.   In this work, we show that most existing and widely used watermarking schemes can in fact be derived from a principled constrained optimization problem. Our formulation unifies existing watermarking methods and explicitly reveals the constraints that each method optimizes. In particular, it highlights an understudied quality-diversity-power trade-off. At the same time, our framework also provides a principled approach for designing novel watermarking schemes tailored to specific requirements. For instance, it allows us to directly use perplexity as a proxy for quality, and derive new schemes that are optimal with respect to this constraint. Our experimental evaluation validates our framework: watermarking schemes derived from a given constraint consistently maximize detection power with respect to that constraint.",
-      "tr": "Makale Başlığı: LLM Watermarks İçin Birleştirilmiş Bir Çerçeve\n\nÖzet:\nLLM watermarks, üretilen içeriklere tespit edilebilir bir sinyal ekleyerek AI tarafından üretilen metinlerin izini sürmeyi sağlar. Yakın zamanda yapılan çalışmalar, her biri farklı tasarımlara sahip, genellikle bir bottom-up yaklaşımla inşa edilmiş çok çeşitli watermarking algoritmaları önermiştir. Önemli bir şekilde, LLM watermarking için genel ve prensipli bir formülasyon mevcut değildir. Bu çalışmamızda, mevcut ve yaygın olarak kullanılan watermarking şemalarının çoğunun aslında prensipli bir constrained optimization probleminden türetilebileceğini gösteriyoruz. Formülasyonumuz, mevcut watermarking yöntemlerini birleştirir ve her yöntemin optimize ettiği constraints'leri açıkça ortaya koyar. Özellikle, az incelenmiş bir quality-diversity-power trade-off'unu vurgular. Aynı zamanda, çerçevemiz belirli gereksinimlere göre uyarlanmış yeni watermarking şemaları tasarlamak için prensipli bir yaklaşım da sunmaktadır. Örneğin, perplexity'yi doğrudan quality için bir proxy olarak kullanmamıza ve bu constraint'e göre optimal olan yeni şemalar türetmemize olanak tanır. Deneysel değerlendirmemiz çerçevemizi doğrulamaktadır: verilen bir constraint'ten türetilen watermarking şemaları, bu constraint'e göre tutarlı bir şekilde detection power'ı maksimize eder."
-    }
-  },
-  {
-    "id": "2602.06718v1",
-    "title": "GhostCite: A Large-Scale Analysis of Citation Validity in the Age of Large Language Models",
-    "authors": [
-      "Zuyao Xu",
-      "Yuqi Qiu",
-      "Lu Sun",
-      "FaSheng Miao",
-      "Fubin Wu"
-    ],
-    "published_date": "2026-02-06",
+    "published_date": "2026-02-07",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2602.06718v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.06718v1",
+    "link": "http://arxiv.org/abs/2602.07652v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.07652v1",
     "content": {
-      "en": "Citations provide the basis for trusting scientific claims; when they are invalid or fabricated, this trust collapses. With the advent of Large Language Models (LLMs), this risk has intensified: LLMs are increasingly used for academic writing, yet their tendency to fabricate citations (``ghost citations'') poses a systemic threat to citation validity.   To quantify this threat and inform mitigation, we develop CiteVerifier, an open-source framework for large-scale citation verification, and conduct the first comprehensive study of citation validity in the LLM era through three experiments built on it. We benchmark 13 state-of-the-art LLMs on citation generation across 40 research domains, finding that all models hallucinate citations at rates from 14.23\\% to 94.93\\%, with significant variation across research domains. Moreover, we analyze 2.2 million citations from 56,381 papers published at top-tier AI/ML and Security venues (2020--2025), confirming that 1.07\\% of papers contain invalid or fabricated citations (604 papers), with an 80.9\\% increase in 2025 alone. Furthermore, we survey 97 researchers and analyze 94 valid responses after removing 3 conflicting samples, revealing a critical ``verification gap'': 41.5\\% of researchers copy-paste BibTeX without checking and 44.4\\% choose no-action responses when encountering suspicious references; meanwhile, 76.7\\% of reviewers do not thoroughly check references and 80.0\\% never suspect fake citations. Our findings reveal an accelerating crisis where unreliable AI tools, combined with inadequate human verification by researchers and insufficient peer review scrutiny, enable fabricated citations to contaminate the scientific record. We propose interventions for researchers, venues, and tool developers to protect citation integrity.",
-      "tr": "Makale Başlığı: GhostCite: Büyük Dil Modelleri Çağında Atıf Geçerliliğinin Büyük Ölçekli Analizi\n\nÖzet:\nAtıflar, bilimsel iddialara duyulan güvenin temelini oluşturur; geçersiz veya uydurma olduklarında bu güven çöker. Büyük Dil Modellerinin (LLMs) ortaya çıkışıyla bu risk artmıştır: LLM'ler giderek artan bir şekilde akademik yazımda kullanılmaktadır, ancak atıfları uydurma eğilimleri (\"ghost citations\") atıf geçerliliği için sistemik bir tehdit oluşturmaktadır. Bu tehdidi ölçmek ve azaltmaya yönelik bilgi sağlamak amacıyla, büyük ölçekli atıf doğrulama için açık kaynaklı bir framework olan CiteVerifier'ı geliştiriyoruz ve LLM dönemi atıf geçerliliğinin ilk kapsamlı çalışmasını üzerine inşa ettiğimiz üç deneyle gerçekleştiriyoruz. 13 adet state-of-the-art LLM'i 40 araştırma alanı boyunca atıf üretimi konusunda benchmark ediyoruz ve tüm modellerin %14,23 ile %94,93 arasında değişen oranlarda atıf hallucinate ettiğini ve araştırma alanları arasında önemli farklılıklar bulunduğunu tespit ediyoruz. Dahası, önde gelen yapay zeka/makine öğrenmesi ve güvenlik platformlarında (2020-2025) yayımlanmış 56.381 makaleden 2,2 milyon atıfı analiz ederek, makalelerin %1,07'sinin geçersiz veya uydurma atıflar içerdiğini (604 makale) ve sadece 2025 yılında %80,9'luk bir artış olduğunu doğruluyoruz. Ayrıca, 97 araştırmacı ile bir anket yapıp 3 çelişkili örneği çıkardıktan sonra 94 geçerli yanıtı analiz ederek, kritik bir \"verification gap\" ortaya koyuyoruz: araştırmacıların %41,5'i BibTeX'i kontrol etmeden kopyalayıp yapıştırıyor ve şüpheli referanslarla karşılaştıklarında %44,4'ü eylemsizlik yanıtını seçiyor; bu sırada hakemlerin %76,7'si referansları kapsamlı bir şekilde kontrol etmiyor ve %80,0'ı hiçbir zaman sahte atıflardan şüphelenmiyor. Bulgularımız, güvenilmez yapay zeka araçlarının, araştırmacılar tarafından yetersiz insan doğrulaması ve yetersiz akran denetimi ile birleşerek, uydurma atıfların bilimsel kaydı kirletmesine olanak tanıyan hızlanan bir krizi ortaya koymaktadır. Atıf bütünlüğünü korumak için araştırmacılar, platformlar ve araç geliştiricileri için müdahaleler öneriyoruz."
+      "en": "Large language models are increasingly deployed as *deep agents* that plan, maintain persistent state, and invoke external tools, shifting safety failures from unsafe text to unsafe *trajectories*. We introduce **AgentFence**, an architecture-centric security evaluation that defines 14 trust-boundary attack classes spanning planning, memory, retrieval, tool use, and delegation, and detects failures via *trace-auditable conversation breaks* (unauthorized or unsafe tool use, wrong-principal actions, state/objective integrity violations, and attack-linked deviations). Holding the base model fixed, we evaluate eight agent archetypes under persistent multi-turn interaction and observe substantial architectural variation in mean security break rate (MSBR), ranging from $0.29 \\pm 0.04$ (LangGraph) to $0.51 \\pm 0.07$ (AutoGPT). The highest-risk classes are operational: Denial-of-Wallet ($0.62 \\pm 0.08$), Authorization Confusion ($0.54 \\pm 0.10$), Retrieval Poisoning ($0.47 \\pm 0.09$), and Planning Manipulation ($0.44 \\pm 0.11$), while prompt-centric classes remain below $0.20$ under standard settings. Breaks are dominated by boundary violations (SIV 31%, WPA 27%, UTI+UTA 24%, ATD 18%), and authorization confusion correlates with objective and tool hijacking ($ρ\\approx 0.63$ and $ρ\\approx 0.58$). AgentFence reframes agent security around what matters operationally: whether an agent stays within its goal and authority envelope over time.",
+      "tr": "İşte akademik makalenin başlığı ve özetinin istenen şekilde Türkçeye çevrilmiş hali:\n\n**Makale Başlığı:** Agent-Fence: Derin Araştırma Ajanları Boyunca Güvenlik Açıklarının Haritalandırılması\n\n**Özet:**\nBüyük dil modelleri, planlama yapan, kalıcı durum sürdüren ve harici araçları çağıran *deep agents* olarak giderek daha fazla konuşlandırılmakta, bu da güvenlik başarısızlıklarını güvensiz metinden güvensiz *trajectories*'e kaydırmaktadır. Biz, planlama, memory, retrieval, tool use ve delegation'ı kapsayan 14 adet trust-boundary attack class'ı tanımlayan ve *trace-auditable conversation breaks* (yetkisiz veya güvensiz araç kullanımı, wrong-principal actions, state/objective integrity violations ve attack-linked deviations) yoluyla başarısızlıkları tespit eden bir mimari merkezli güvenlik değerlendirmesi olan **AgentFence**'i sunuyoruz. Temel modeli sabit tutarak, sekiz ajan arketipini persistent multi-turn interaction altında değerlendiriyoruz ve ortalama güvenlik kesinti oranında (mean security break rate - MSBR) kayda değer mimari varyasyonlar gözlemliyoruz; bu oran $0.29 \\pm 0.04$ (LangGraph) ile $0.51 \\pm 0.07$ (AutoGPT) arasında değişmektedir. En yüksek riskli sınıflar operasyonel olanlardır: Denial-of-Wallet ($0.62 \\pm 0.08$), Authorization Confusion ($0.54 \\pm 0.10$), Retrieval Poisoning ($0.47 \\pm 0.09$) ve Planning Manipulation ($0.44 \\pm 0.11$), standart ayarlarda prompt-centric sınıflar ise $0.20$'nin altında kalmaktadır. Kesintiler büyük ölçüde boundary violations (SIV %31, WPA %27, UTI+UTA %24, ATD %18) tarafından domine edilmektedir ve authorization confusion, objective ve tool hijacking ile ilişkilidir ($ρ\\approx 0.63$ ve $ρ\\approx 0.58$). AgentFence, ajan güvenliğini operasyonel olarak önemli olan bir şeye yeniden çerçevelemektedir: bir ajanın zaman içinde hedefi ve yetki zarfı içinde kalıp kalmadığı."
     }
   },
   {
-    "id": "2602.06700v1",
-    "title": "Taipan: A Query-free Transfer-based Multiple Sensitive Attribute Inference Attack Solely from Publicly Released Graphs",
+    "id": "2602.07517v1",
+    "title": "MemPot: Defending Against Memory Extraction Attack with Optimized Honeypots",
     "authors": [
-      "Ying Song",
-      "Balaji Palanisamy"
+      "Yuhao Wang",
+      "Shengfang Zhai",
+      "Guanghao Jin",
+      "Yinpeng Dong",
+      "Linyi Yang"
     ],
-    "published_date": "2026-02-06",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.06700v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.06700v1",
-    "content": {
-      "en": "Graph-structured data underpin a wide spectrum of modern applications. However, complex graph topologies and homophilic patterns can facilitate attribute inference attacks (AIAs) by enabling sensitive information leakage to propagate across local neighborhoods. Existing AIAs predominantly assume that adversaries can probe sensitive attributes through repeated model queries. Such assumptions are often impractical in real-world settings due to stringent data protection regulations, prohibitive query budgets, and heightened detection risks, especially when inferring multiple sensitive attributes. More critically, this model-centric perspective obscures a pervasive blind spot: \\textbf{intrinsic multiple sensitive information leakage arising solely from publicly released graphs.} To exploit this unexplored vulnerability, we introduce a new attack paradigm and propose \\textbf{Taipan, the first query-free transfer-based attack framework for multiple sensitive attribute inference attacks on graphs (G-MSAIAs).} Taipan integrates \\emph{Hierarchical Attack Knowledge Routing} to capture intricate inter-attribute correlations, and \\emph{Prompt-guided Attack Prototype Refinement} to mitigate negative transfer and performance degradation. We further present a systematic evaluation framework tailored to G-MSAIAs. Extensive experiments on diverse real-world graph datasets demonstrate that Taipan consistently achieves strong attack performance across same-distribution settings and heterogeneous similar- and out-of-distribution settings with mismatched feature dimensionalities, and remains effective even under rigorous differential privacy guarantees. Our findings underscore the urgent need for more robust multi-attribute privacy-preserving graph publishing methods and data-sharing practices.",
-      "tr": "Makale Başlığı: Taipan: Yalnızca Kamuoyuna Açıklanmış Grafiklerden Sorgusuz, Aktarım Tabanlı Çoklu Hassas Nitelik Çıkarım Saldırısı\n\nÖzet:\nGraf-yapılı veri, modern uygulamaların geniş bir yelpazesinin temelini oluşturmaktadır. Ancak, karmaşık grafik topolojileri ve homofilik desenler, hassas bilgilerin yerel komşuluklar boyunca yayılmasına izin vererek nitelik çıkarım saldırılarını (AIAs) kolaylaştırabilir. Mevcut AIAs, öncelikli olarak rakip firmaların tekrarlanan model sorguları aracılığıyla hassas nitelikleri sorgulayabileceğini varsaymaktadır. Özellikle birden fazla hassas niteliğin çıkarılması söz konusu olduğunda, bu tür varsayımlar katı veri koruma düzenlemeleri, caydırıcı sorgu bütçeleri ve artan tespit riskleri nedeniyle gerçek dünya ortamlarında genellikle pratikte uygulanamamaktadır. Daha da önemlisi, bu model-merkezli bakış açısı yaygın bir kör noktayı gizlemektedir: \\textbf{yalnızca kamuoyuna açıklanmış grafiklerden kaynaklanan içsel çoklu hassas bilgi sızıntısı.} Bu keşfedilmemiş zafiyeti kullanmak için yeni bir saldırı paradigması sunuyoruz ve \\textbf{Taipan'ı, grafikler üzerindeki çoklu hassas nitelik çıkarım saldırıları (G-MSAIAs) için ilk sorgusuz, aktarım tabanlı saldırı çerçevesini} öneriyoruz. Taipan, karmaşık nitelikler arası korelasyonları yakalamak için \\emph{Hierarchical Attack Knowledge Routing}'i ve olumsuz aktarımı ve performans düşüşünü azaltmak için \\emph{Prompt-guided Attack Prototype Refinement}'ı entegre eder. Ayrıca G-MSAIAs'a özel sistematik bir değerlendirme çerçevesi sunuyoruz. Çeşitli gerçek dünya graf veri kümeleri üzerindeki kapsamlı deneyler, Taipan'ın aynı-dağılım ayarlarında ve özellik boyutlarının uyumsuz olduğu heterojen benzer ve dağılım dışı ayarlar boyunca tutarlı bir şekilde güçlü saldırı performansı gösterdiğini ve hatta titiz differential privacy garantileri altında bile etkili kaldığını ortaya koymaktadır. Bulgularımız, daha sağlam çok nitelikli gizlilik korumalı grafik yayınlama yöntemleri ve veri paylaşım uygulamaları için acil bir ihtiyaç olduğunu vurgulamaktadır."
-    }
-  },
-  {
-    "id": "2602.06616v1",
-    "title": "Confundo: Learning to Generate Robust Poison for Practical RAG Systems",
-    "authors": [
-      "Haoyang Hu",
-      "Zhejun Jiang",
-      "Yueming Lyu",
-      "Junyuan Zhang",
-      "Yi Liu"
-    ],
-    "published_date": "2026-02-06",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.06616v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.06616v1",
-    "content": {
-      "en": "Retrieval-augmented generation (RAG) is increasingly deployed in real-world applications, where its reference-grounded design makes outputs appear trustworthy. This trust has spurred research on poisoning attacks that craft malicious content, inject it into knowledge sources, and manipulate RAG responses. However, when evaluated in practical RAG systems, existing attacks suffer from severely degraded effectiveness. This gap stems from two overlooked realities: (i) content is often processed before use, which can fragment the poison and weaken its effect, and (ii) users often do not issue the exact queries anticipated during attack design. These factors can lead practitioners to underestimate risks and develop a false sense of security. To better characterize the threat to practical systems, we present Confundo, a learning-to-poison framework that fine-tunes a large language model as a poison generator to achieve high effectiveness, robustness, and stealthiness. Confundo provides a unified framework supporting multiple attack objectives, demonstrated by manipulating factual correctness, inducing biased opinions, and triggering hallucinations. By addressing these overlooked challenges, Confundo consistently outperforms a wide range of purpose-built attacks across datasets and RAG configurations by large margins, even in the presence of defenses. Beyond exposing vulnerabilities, we also present a defensive use case that protects web content from unauthorized incorporation into RAG systems via scraping, with no impact on user experience.",
-      "tr": "**Makale Başlığı:** Confundo: Pratik RAG Sistemleri İçin Dayanıklı Poison Öğrenmek\n\n**Özet:**\n\nRetrieval-augmented generation (RAG), gerçek dünya uygulamalarında giderek daha fazla kullanılmaktadır. Referans temelli tasarımı sayesinde çıktıları güvenilir görünmektedir. Bu güven, zararlı içerikler hazırlayan, bilgi kaynaklarına enjekte eden ve RAG yanıtlarını manipüle eden poisoning saldırıları üzerine araştırmaları teşvik etmiştir. Ancak, pratik RAG sistemlerinde değerlendirildiğinde, mevcut saldırılar etkinliklerinde ciddi bir düşüş yaşamaktadır. Bu boşluk, göz ardı edilen iki gerçeğin sonucudur: (i) içerik, kullanımdan önce genellikle işlenir, bu da poison'u parçalayabilir ve etkisini zayıflatabilir; (ii) kullanıcılar genellikle saldırı tasarımı sırasında beklenen exact queries'leri yayınlamazlar. Bu faktörler, uygulayıcıların riskleri hafife almasına ve yanlış bir güvenlik hissine kapılmasına neden olabilir. Pratik sistemlere yönelik tehdidi daha iyi karakterize etmek için, yüksek etkililik, robustness ve stealthiness elde etmek amacıyla büyük bir language model'i poison generator olarak fine-tune eden bir learning-to-poison framework'ü olan Confundo'yu sunuyoruz. Confundo, factual correctness'i manipüle ederek, biased opinions'ler oluşturarak ve hallucinations'lar tetikleyerek gösterilen birden fazla saldırı hedefi için destek sağlayan bir unified framework sunar. Bu göz ardı edilen zorlukları ele alarak, Confundo, savunmaların varlığında bile, veri kümeleri ve RAG konfigürasyonları genelinde amaçlı olarak tasarlanmış çok çeşitli saldırılardan önemli ölçüde daha iyi performans gösterir. Güvenlik açıklarını ortaya çıkarmanın yanı sıra, web içeriğini scraping yoluyla RAG sistemlerine yetkisiz entegrasyondan koruyan, kullanıcı deneyimini etkilemeyen bir defensive use case de sunuyoruz."
-    }
-  },
-  {
-    "id": "2602.06547v1",
-    "title": "Malicious Agent Skills in the Wild: A Large-Scale Security Empirical Study",
-    "authors": [
-      "Yi Liu",
-      "Zhihao Chen",
-      "Yanjun Zhang",
-      "Gelei Deng",
-      "Yuekang Li"
-    ],
-    "published_date": "2026-02-06",
+    "published_date": "2026-02-07",
     "tags": [
       "cs.CR",
       "cs.AI",
       "cs.CL",
-      "cs.ET"
+      "cs.DB"
     ],
-    "link": "http://arxiv.org/abs/2602.06547v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.06547v1",
+    "link": "http://arxiv.org/abs/2602.07517v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.07517v1",
     "content": {
-      "en": "Third-party agent skills extend LLM-based agents with instruction files and executable code that run on users' machines. Skills execute with user privileges and are distributed through community registries with minimal vetting, but no ground-truth dataset exists to characterize the resulting threats. We construct the first labeled dataset of malicious agent skills by behaviorally verifying 98,380 skills from two community registries, confirming 157 malicious skills with 632 vulnerabilities. These attacks are not incidental. Malicious skills average 4.03 vulnerabilities across a median of three kill chain phases, and the ecosystem has split into two archetypes: Data Thieves that exfiltrate credentials through supply chain techniques, and Agent Hijackers that subvert agent decision-making through instruction manipulation. A single actor accounts for 54.1\\% of confirmed cases through templated brand impersonation. Shadow features, capabilities absent from public documentation, appear in 0\\% of basic attacks but 100\\% of advanced ones; several skills go further by exploiting the AI platform's own hook system and permission flags. Responsible disclosure led to 93.6\\% removal within 30 days. We release the dataset and analysis pipeline to support future work on agent skill security.",
-      "tr": "Makale Başlığı: Vahşi Ortamdaki Kötü Amaçlı Vekil Yetenekleri: Büyük Ölçekli Bir Güvenlik Ampirik Çalışması\n\nÖzet:\nThird-party agent skills, LLM tabanlı vekil yeteneklerini, kullanıcıların makinelerinde çalışan talimat dosyaları ve yürütülebilir kod ile genişletir. Yetenekler kullanıcı yetkileriyle yürütülür ve topluluk kayıt defterleri aracılığıyla minimum denetimle dağıtılır, ancak ortaya çıkan tehditleri karakterize etmek için bir ground-truth dataseti mevcut değildir. Davranışsal olarak iki topluluk kayıt defterinden 98.380 yeteneği doğrulayarak ve 632 güvenlik açığına sahip 157 kötü amaçlı yeteneği onaylayarak ilk etiketlenmiş malicious agent skills datasetini oluşturuyoruz. Bu saldırılar tesadüfi değildir. Kötü amaçlı yetenekler, median olarak üç kill chain phase'inde ortalama 4.03 güvenlik açığına sahiptir ve ekosistem iki arketipe ayrılmıştır: supply chain techniques aracılığıyla kimlik bilgilerini dışarı çeken Data Thieves ve instruction manipulation aracılığıyla agent decision-making'ini altüst eden Agent Hijackers. Tek bir aktör, şablonlu marka taklidi yoluyla teyit edilmiş vakaların %54.1'ini oluşturmaktadır. Gölge özellikler (shadow features), kamuya açık belgelerde yer almayan yetenekler, temel saldırıların %0'ında ancak gelişmiş olanların %100'ünde görülmektedir; birkaç yetenek, AI platformunun kendi hook system'ini ve permission flag'lerini istismar ederek daha da ileri gitmektedir. Sorumlu ifşa, 30 gün içinde %93.6'lık bir kaldırma ile sonuçlanmıştır. Vekil yetenek güvenliği üzerine gelecekteki çalışmaları desteklemek için dataseti ve analysis pipeline'ını yayınlıyoruz."
+      "en": "Large Language Model (LLM)-based agents employ external and internal memory systems to handle complex, goal-oriented tasks, yet this exposes them to severe extraction attacks, and effective defenses remain lacking. In this paper, we propose MemPot, the first theoretically verified defense framework against memory extraction attacks by injecting optimized honeypots into the memory. Through a two-stage optimization process, MemPot generates trap documents that maximize the retrieval probability for attackers while remaining inconspicuous to benign users. We model the detection process as Wald's Sequential Probability Ratio Test (SPRT) and theoretically prove that MemPot achieves a lower average number of sampling rounds compared to optimal static detectors. Empirically, MemPot significantly outperforms state-of-the-art baselines, achieving a 50% improvement in detection AUROC and an 80% increase in True Positive Rate under low False Positive Rate constraints. Furthermore, our experiments confirm that MemPot incurs zero additional online inference latency and preserves the agent's utility on standard tasks, verifying its superiority in safety, harmlessness, and efficiency.",
+      "tr": "**Makale Başlığı:** MemPot: Optimized Honeypots ile Bellek Çıkarma Saldırılarına Karşı Savunma\n\n**Özet:**\n\nBüyük Dil Modeli (LLM) tabanlı ajanlar, karmaşık ve hedef odaklı görevleri yerine getirmek için harici ve dahili bellek sistemlerini kullanırlar. Ancak bu durum, onları ciddi bellek çıkarma saldırılarına maruz bırakmakta ve etkili savunma mekanizmaları henüz yetersiz kalmaktadır. Bu çalışmada, belleğe optimize edilmiş honeypot'lar enjekte ederek bellek çıkarma saldırılarına karşı ilk teorik olarak doğrulanmış savunma çerçevesi olan MemPot'u sunuyoruz. İki aşamalı bir optimizasyon süreci aracılığıyla MemPot, saldırganlar için bellek erişim (retrieval) olasılığını en üst düzeye çıkarırken zararsız kullanıcılar için fark edilmeyecek şekilde tuzak belgeler üretir. Algılama sürecini Wald'un Sequential Probability Ratio Test (SPRT) olarak modeller ve MemPot'un optimal statik dedektörlere kıyasla daha düşük ortalama örnekleme turu (sampling rounds) elde ettiğini teorik olarak kanıtlarız. Ampirik olarak, MemPot en son teknolojiye sahip temel sistemlerden önemli ölçüde daha iyi performans göstererek, düşük Yanlış Pozitif Oranı (False Positive Rate) kısıtlamaları altında algılamada %50 iyileşme ile AUROC ve %80 artışla Doğru Pozitif Oranı (True Positive Rate) sağlar. Ayrıca, deneylerimiz MemPot'un sıfır ek çevrimiçi çıkarım (online inference) gecikmesi getirdiğini ve standart görevlerde ajanların kullanılabilirliğini koruduğunu doğrulamakta, böylece güvenlik, zararsızlık ve verimlilik açısından üstünlüğünü teyit etmektedir."
     }
   },
   {
-    "id": "2602.06534v1",
-    "title": "AlertBERT: A noise-robust alert grouping framework for simultaneous cyber attacks",
+    "id": "2602.07422v1",
+    "title": "Secure Code Generation via Online Reinforcement Learning with Vulnerability Reward Model",
     "authors": [
-      "Lukas Karner",
-      "Max Landauer",
-      "Markus Wurzenberger",
-      "Florian Skopik"
+      "Tianyi Wu",
+      "Mingzhe Du",
+      "Yue Liu",
+      "Chengran Yang",
+      "Terry Yue Zhuo"
+    ],
+    "published_date": "2026-02-07",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "link": "http://arxiv.org/abs/2602.07422v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.07422v1",
+    "content": {
+      "en": "Large language models (LLMs) are increasingly used in software development, yet their tendency to generate insecure code remains a major barrier to real-world deployment. Existing secure code alignment methods often suffer from a functionality--security paradox, improving security at the cost of substantial utility degradation. We propose SecCoderX, an online reinforcement learning framework for functionality-preserving secure code generation. SecCoderX first bridges vulnerability detection and secure code generation by repurposing mature detection resources in two ways: (i) synthesizing diverse, reality-grounded vulnerability-inducing coding tasks for online RL rollouts, and (ii) training a reasoning-based vulnerability reward model that provides scalable and reliable security supervision. Together, these components are unified in an online RL loop to align code LLMs to generate secure and functional code. Extensive experiments demonstrate that SecCoderX achieves state-of-the-art performance, improving Effective Safety Rate (ESR) by approximately 10% over unaligned models, whereas prior methods often degrade ESR by 14-54%. We release our code, dataset and model checkpoints at https://github.com/AndrewWTY/SecCoderX.",
+      "tr": "İşte makale başlığı ve özetinin istenen şekilde çevrilmiş hali:\n\n**Makale Başlığı:** Güvenlik Açığı Ödül Modeli ile Çevrimiçi Pekiştirmeli Öğrenme Yoluyla Güvenli Kod Üretimi\n\n**Özet:**\nBüyük dil modelleri (LLM'ler) yazılım geliştirmede giderek daha fazla kullanılmaktadır, ancak güvensiz kod üretme eğilimleri gerçek dünya dağıtımında önemli bir engel olmaya devam etmektedir. Mevcut güvenli kod hizalama yöntemleri sıklıkla işlevsellik-güvenlik paradoksu ile karşı karşıya kalır; yani güvenlik iyileştirilirken önemli ölçüde fayda kaybı yaşanır. Biz, işlevselliği koruyarak güvenli kod üretimi için çevrimiçi pekiştirmeli öğrenme çerçevesi olan SecCoderX'i öneriyoruz. SecCoderX, öncelikle olgun tespit kaynaklarını iki şekilde yeniden tasarlayarak güvenlik açığı tespiti ile güvenli kod üretimini birleştirir: (i) çevrimiçi RL rollouts için çeşitli, gerçekliğe dayalı güvenlik açığı oluşturan kodlama görevlerini sentezlemek ve (ii) ölçeklenebilir ve güvenilir güvenlik denetimi sağlayan, reasoning-based bir güvenlik açığı ödül modeli eğitmek. Bu bileşenler birlikte, kod LLM'lerini güvenli ve işlevsel kod üretmeye hizalamak için çevrimiçi bir RL döngüsünde birleştirilir. Kapsamlı deneyler, SecCoderX'in, hizalanmamış modellerden yaklaşık %10 oranında Etkin Güvenlik Oranını (ESR) iyileştirerek en gelişmiş performansı gösterdiğini ve önceki yöntemlerin ESR'yi %14-54 oranında düşürmesine karşılık geldiğini göstermektedir. Kodumuzu, veri setimizi ve model kontrol noktalarımızı https://github.com/AndrewWTY/SecCoderX adresinde yayımlıyoruz."
+    }
+  },
+  {
+    "id": "2602.07398v1",
+    "title": "AgentSys: Secure and Dynamic LLM Agents Through Explicit Hierarchical Memory Management",
+    "authors": [
+      "Ruoyao Wen",
+      "Hao Li",
+      "Chaowei Xiao",
+      "Ning Zhang"
+    ],
+    "published_date": "2026-02-07",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2602.07398v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.07398v1",
+    "content": {
+      "en": "Indirect prompt injection threatens LLM agents by embedding malicious instructions in external content, enabling unauthorized actions and data theft. LLM agents maintain working memory through their context window, which stores interaction history for decision-making. Conventional agents indiscriminately accumulate all tool outputs and reasoning traces in this memory, creating two critical vulnerabilities: (1) injected instructions persist throughout the workflow, granting attackers multiple opportunities to manipulate behavior, and (2) verbose, non-essential content degrades decision-making capabilities. Existing defenses treat bloated memory as given and focus on remaining resilient, rather than reducing unnecessary accumulation to prevent the attack.   We present AgentSys, a framework that defends against indirect prompt injection through explicit memory management. Inspired by process memory isolation in operating systems, AgentSys organizes agents hierarchically: a main agent spawns worker agents for tool calls, each running in an isolated context and able to spawn nested workers for subtasks. External data and subtask traces never enter the main agent's memory; only schema-validated return values can cross boundaries through deterministic JSON parsing. Ablations show isolation alone cuts attack success to 2.19%, and adding a validator/sanitizer further improves defense with event-triggered checks whose overhead scales with operations rather than context length.   On AgentDojo and ASB, AgentSys achieves 0.78% and 4.25% attack success while slightly improving benign utility over undefended baselines. It remains robust to adaptive attackers and across multiple foundation models, showing that explicit memory management enables secure, dynamic LLM agent architectures. Our code is available at: https://github.com/ruoyaow/agentsys-memory.",
+      "tr": "Elbette, istediğiniz şekilde akademik makale başlığını ve özetini Türkçeye çevirdim:\n\n**Makale Başlığı:** AgentSys: Açık Hiyerarşik Bellek Yönetimiyle Güvenli ve Dinamik LLM Ajanları\n\n**Özet:**\nDolaylı prompt injection, harici içeriklere kötü niyetli talimatlar gömerek LLM ajanlarını tehdit eder, yetkisiz eylemlere ve veri hırsızlığına olanak tanır. LLM ajanları, karar verme süreçleri için etkileşim geçmişini depolayan context window aracılığıyla working memory'lerini sürdürür. Geleneksel ajanlar, tüm tool çıktılarını ve reasoning traces'lerini bu bellekte ayrım gözetmeksizin biriktirir, bu da iki kritik güvenlik açığı yaratır: (1) enjekte edilen talimatlar iş akışı boyunca kalır ve saldırganlara davranışı manipüle etmek için birden çok fırsat tanır ve (2) ayrıntılı, gereksiz içerik karar verme yeteneklerini bozar. Mevcut savunmalar, şişmiş belleği olduğu gibi kabul eder ve saldırıyı önlemek için gereksiz birikimi azaltmak yerine direncini korumaya odaklanır. AgentSys'i, açık bellek yönetimi aracılığıyla dolaylı prompt injection'a karşı savunan bir framework olarak sunuyoruz. İşletim sistemlerindeki process memory isolation'dan esinlenen AgentSys, ajanları hiyerarşik olarak düzenler: ana bir ajan, her biri izole bir context'te çalışan ve alt görevler için iç içe worker'lar başlatabilen tool çağrıları için worker ajanları başlatır. Harici veriler ve alt görev traces'leri asla ana ajanın belleğine girmez; yalnızca schema-validated return values, deterministik JSON parsing aracılığıyla sınırlar boyunca geçebilir. Ablasyonlar, izolasyonun tek başına saldırı başarısını %2,19'a kestiğini ve bir validator/sanitizer eklemenin, maliyeti context uzunluğuna değil işlemlere göre ölçeklenen olay tetiklemeli kontrollerle savunmayı daha da iyileştirdiğini göstermektedir. AgentDojo ve ASB üzerinde AgentSys, savunmasız temel modellerin benign utility'sini hafifçe iyileştirirken %0,78 ve %4,25 saldırı başarısı elde eder. Adaptif saldırganlara ve birden çok foundation modeline karşı sağlamlığını korur, bu da açık bellek yönetiminin güvenli, dinamik LLM ajan mimarilerine olanak tanıdığını göstermektedir. Kodumuz şu adreste mevcuttur: https://github.com/ruoyaow/agentsys-memory."
+    }
+  },
+  {
+    "id": "2602.07370v1",
+    "title": "Privately Learning Decision Lists and a Differentially Private Winnow",
+    "authors": [
+      "Mark Bun",
+      "William Fang"
+    ],
+    "published_date": "2026-02-07",
+    "tags": [
+      "cs.LG",
+      "cs.CR",
+      "stat.ML"
+    ],
+    "link": "http://arxiv.org/abs/2602.07370v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.07370v1",
+    "content": {
+      "en": "We give new differentially private algorithms for the classic problems of learning decision lists and large-margin halfspaces in the PAC and online models. In the PAC model, we give a computationally efficient algorithm for learning decision lists with minimal sample overhead over the best non-private algorithms. In the online model, we give a private analog of the influential Winnow algorithm for learning halfspaces with mistake bound polylogarithmic in the dimension and inverse polynomial in the margin. As an application, we describe how to privately learn decision lists in the online model, qualitatively matching state-of-the art non-private guarantees.",
+      "tr": "**Makale Başlığı:** Karar Listelerinin Gizlice Öğrenilmesi ve Farklılıksal Olarak Gizli bir Winnow Algoritması\n\n**Özet:**\n\nKlasik karar listeleri ve PAC (Probably Approximately Correct) ile çevrimiçi modellerdeki büyük-marjlı yarım uzaylar öğrenme problemlerine yönelik yeni farklılıksal olarak gizli algoritmalar sunuyoruz. PAC modelinde, en iyi özel olmayan algoritmalara kıyasla minimum örnek yükü ile karar listelerini öğrenmek için hesaplama açısından verimli bir algoritma sağlıyoruz. Çevrimiçi modelde, boyutun logaritmik katı ve marjın ters polinomu şeklinde hata sınırına sahip yarım uzayları öğrenmek için etkili Winnow algoritmasının özel bir analoğunu sunuyoruz. Bir uygulama olarak, çevrimiçi modelde karar listelerini gizlice nasıl öğrenebileceğimizi ve durum-sanatı özel olmayan garantilerle niteliksel olarak eşleştiğini açıklıyoruz."
+    }
+  },
+  {
+    "id": "2602.07249v1",
+    "title": "Beyond Crash: Hijacking Your Autonomous Vehicle for Fun and Profit",
+    "authors": [
+      "Qi Sun",
+      "Ahmed Abdo",
+      "Luis Burbano",
+      "Ziyang Li",
+      "Yaxing Yao"
     ],
     "published_date": "2026-02-06",
     "tags": [
       "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2602.06534v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.06534v1",
+    "link": "http://arxiv.org/abs/2602.07249v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.07249v1",
     "content": {
-      "en": "Automated detection of cyber attacks is a critical capability to counteract the growing volume and sophistication of cyber attacks. However, the high numbers of security alerts issued by intrusion detection systems lead to alert fatigue among analysts working in security operations centres (SOC), which in turn causes slow reaction time and incorrect decision making. Alert grouping, which refers to clustering of security alerts according to their underlying causes, can significantly reduce the number of distinct items analysts have to consider. Unfortunately, conventional time-based alert grouping solutions are unsuitable for large scale computer networks characterised by high levels of false positive alerts and simultaneously occurring attacks. To address these limitations, we propose AlertBERT, a self-supervised framework designed to group alerts from isolated or concurrent attacks in noisy environments. Thereby, our open-source implementation of AlertBERT leverages masked-language-models and density-based clustering to support both real-time or forensic operation. To evaluate our framework, we further introduce a novel data augmentation method that enables flexible control over noise levels and simulates concurrent attack occurrences. Based on the data sets generated through this method, we demonstrate that AlertBERT consistently outperforms conventional time-based grouping techniques, achieving superior accuracy in identifying correct alert groups.",
-      "tr": "Kesinlikle, akademik makalenizin başlığını ve özetini istediğiniz şekilde Türkçeye çevirdim:\n\n**Makale Başlığı:** AlertBERT: Eşzamanlı Siber Saldırılar İçin Gürültüye Dayanıklı Bir Uyarı Gruplama Çerçevesi\n\n**Özet:**\nSiber saldırıların otomatik tespiti, artan hacim ve karmaşıklıklarına karşı koymak için kritik bir yetenektir. Ancak, saldırı tespit sistemleri tarafından verilen yüksek sayıda güvenlik uyarısı, güvenlik operasyon merkezlerinde (SOC) çalışan analistler arasında uyarı yorgunluğuna yol açmakta, bu da reaksiyon süresini yavaşlatmakta ve yanlış karar almaya neden olmaktadır. Uyarı gruplama, yani güvenlik uyarılarının altında yatan nedenlere göre kümelenmesi, analistlerin dikkate alması gereken farklı öğelerin sayısını önemli ölçüde azaltabilir. Ne yazık ki, geleneksel zamana dayalı uyarı gruplama çözümleri, yüksek düzeyde yanlış pozitif uyarılar ve eşzamanlı meydana gelen saldırılarla karakterize edilen büyük ölçekli bilgisayar ağları için uygun değildir. Bu sınırlamaların üstesinden gelmek için, gürültülü ortamlarda izole veya eşzamanlı saldırılardan gelen uyarıları gruplamak üzere tasarlanmış öz-denetimli bir çerçeve olan AlertBERT'i öneriyoruz. Böylece, AlertBERT'in açık kaynaklı uygulaması, hem gerçek zamanlı hem de adli inceleme operasyonlarını desteklemek için masked-language-models ve density-based clustering'den yararlanmaktadır. Çerçevemizi değerlendirmek için, gürültü seviyeleri üzerinde esnek kontrol sağlayan ve eşzamanlı saldırı oluşumlarını simüle eden yeni bir veri artırma yöntemi sunuyoruz. Bu yöntemle oluşturulan veri kümelerine dayanarak, AlertBERT'in geleneksel zamana dayalı gruplama tekniklerinden tutarlı bir şekilde daha iyi performans gösterdiğini ve doğru uyarı gruplarını tanımlamada üstün doğruluk elde ettiğini gösteriyoruz."
+      "en": "Autonomous Vehicles (AVs), especially vision-based AVs, are rapidly being deployed without human operators. As AVs operate in safety-critical environments, understanding their robustness in an adversarial environment is an important research problem. Prior physical adversarial attacks on vision-based autonomous vehicles predominantly target immediate safety failures (e.g., a crash, a traffic-rule violation, or a transient lane departure) by inducing a short-lived perception or control error. This paper shows a qualitatively different risk: a long-horizon route integrity compromise, where an attacker gradually steers a victim AV away from its intended route and into an attacker-chosen destination while the victim continues to drive \"normally.\" This will not pose a danger to the victim vehicle itself, but also to potential passengers sitting inside the vehicle.   In this paper, we design and implement the first adversarial framework, called JackZebra, that performs route-level hijacking of a vision-based end-to-end driving stack using a physically plausible attacker vehicle with a reconfigurable display mounted on the rear. The central challenge is temporal persistence: adversarial influence must remain effective in changing viewpoints, lighting, weather, traffic, and the victim's continual replanning -- without triggering conspicuous failures. Our key insight is to treat route hijacking as a closed-loop control problem and to convert adversarial patches into steering primitives that can be selected online via an interactive adjustment loop. Our adversarial patches are also carefully designed against worst-case background and sensor variations so that the adversarial impacts on the victim. Our evaluation shows that JackZebra can successfully hijack victim vehicles to deviate from original routes and stop at adversarial destinations with a high success rate.",
+      "tr": "Elbette, akademik makale başlığını ve özetini istediğiniz gibi Türkçeye çevirdim:\n\n**Makale Başlığı:** Çöküşün Ötesinde: Eğlence ve Kazanç İçin Otonom Aracınızı Kaçırma\n\n**Özet:**\nOtonom Araçlar (AV'ler), özellikle görüş tabanlı AV'ler, insan operatörler olmadan hızla konuşlandırılmaktadır. AV'ler güvenlik açısından kritik ortamlarda çalıştığından, düşmanca bir ortamdaki dayanıklılıklarını anlamak önemli bir araştırma problemidir. Görüş tabanlı otonom araçlara yönelik önceki fiziksel düşmanca saldırılar, kısa ömürlü bir algılama veya kontrol hatası oluşturarak baskın olarak acil güvenlik arızalarını (örneğin, bir çarpışma, trafik kuralı ihlali veya geçici bir şeritten ayrılma) hedef almıştır. Bu makale niteliksel olarak farklı bir risk ortaya koymaktadır: saldırganın kurban AV'yi kasıtlı olarak belirlenmiş bir rotadan uzaklaştırarak saldırgan tarafından seçilen bir varış noktasına yönlendirdiği, kurbanın ise \"normal\" bir şekilde ilerlemeye devam ettiği uzun vadeli bir rota bütünlüğü tehlikesi. Bu durum, yalnızca kurban araca değil, aynı zamanda araç içinde oturan potansiyel yolculara da tehlike arz edecektir. Bu makalede, arkasına monte edilmiş yeniden yapılandırılabilir bir ekranı olan fiziksel olarak makul bir saldırgan araç kullanarak, görüş tabanlı uçtan uca bir sürüş yığınının rota düzeyinde kaçırılmasını gerçekleştiren JackZebra adlı ilk düşmanca çerçeveyi tasarlayıp uyguluyoruz. Temel zorluk zamansal devamlılıktır: düşmanca etki, belirgin başarısızlıkları tetiklemeksizin, bakış açılarını, aydınlatmayı, hava durumunu, trafiği ve kurbanın sürekli yeniden planlamasını değiştirmede etkili olmalıdır. Anahtar içgörümüz, rota kaçırmayı kapalı döngü bir kontrol problemi olarak ele almak ve düşmanca yamaları, etkileşimli bir ayarlama döngüsü aracılığıyla çevrimiçi olarak seçilebilen direksiyon ilkelere dönüştürmektir. Düşmanca yamalarımız ayrıca, düşmanca etkilerin kurban üzerindeki etkisini en üst düzeye çıkarmak için en kötü durum arka plan ve sensör değişimlerine karşı dikkatlice tasarlanmıştır. Değerlendirmemiz, JackZebra'nın kurban araçları başarıyla kaçırarak orijinal rotalarından sapmalarını ve yüksek başarı oranıyla düşmanca varış noktalarında durmalarını sağlayabildiğini göstermektedir."
     }
   },
   {
-    "id": "2602.06443v1",
-    "title": "TrajAD: Trajectory Anomaly Detection for Trustworthy LLM Agents",
+    "id": "2602.07200v1",
+    "title": "BadSNN: Backdoor Attacks on Spiking Neural Networks via Adversarial Spiking Neuron",
     "authors": [
-      "Yibing Liu",
-      "Chong Zhang",
-      "Zhongyi Han",
-      "Hansong Liu",
-      "Yong Wang"
+      "Abdullah Arafat Miah",
+      "Kevin Vu",
+      "Yu Bi"
     ],
     "published_date": "2026-02-06",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2602.06443v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.06443v1",
+    "link": "http://arxiv.org/abs/2602.07200v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.07200v1",
     "content": {
-      "en": "We address the problem of runtime trajectory anomaly detection, a critical capability for enabling trustworthy LLM agents. Current safety measures predominantly focus on static input/output filtering. However, we argue that ensuring LLM agents reliability requires auditing the intermediate execution process. In this work, we formulate the task of Trajectory Anomaly Detection. The goal is not merely detection, but precise error localization. This capability is essential for enabling efficient rollback-and-retry. To achieve this, we construct TrajBench, a dataset synthesized via a perturb-and-complete strategy to cover diverse procedural anomalies. Using this benchmark, we investigate the capability of models in process supervision. We observe that general-purpose LLMs, even with zero-shot prompting, struggle to identify and localize these anomalies. This reveals that generalized capabilities do not automatically translate to process reliability. To address this, we propose TrajAD, a specialized verifier trained with fine-grained process supervision. Our approach outperforms baselines, demonstrating that specialized supervision is essential for building trustworthy agents.",
-      "tr": "İşte istenen çeviri:\n\nMakale Başlığı: TrajAD: Güvenilir LLM Ajanları İçin Yörünge Anomali Tespiti\n\nÖzet:\nGüvenilir LLM ajanlarının etkinleştirilmesi için kritik bir yetenek olan çalışma zamanı yörünge anomali tespiti sorununu ele alıyoruz. Mevcut güvenlik önlemleri büyük ölçüde statik girdi/çıktı filtrelemeye odaklanmaktadır. Ancak, LLM ajanlarının güvenilirliğini sağlamanın, ara yürütme sürecini denetlemeyi gerektirdiğini savunuyoruz. Bu çalışmada, Yörünge Anomali Tespiti görevini formüle ediyoruz. Amaç sadece tespit etmek değil, aynı zamanda hassas hata lokalizasyonudur. Bu yetenek, verimli geri alma ve yeniden deneme işlemlerini etkinleştirmek için esastır. Bunu başarmak için, çeşitli prosedürel anomalileri kapsamak üzere perturb-and-complete stratejisi aracılığıyla sentezlenmiş bir veri kümesi olan TrajBench'i oluşturuyoruz. Bu karşılaştırma ölçütü kullanılarak, modellerin süreç denetimi yeteneklerini araştırıyoruz. Genel amaçlı LLM'lerin, sıfır atışlı (zero-shot) yönlendirme ile bile, bu anomalileri tanımlama ve lokalize etmede zorlandığını gözlemliyoruz. Bu, genelleştirilmiş yeteneklerin otomatik olarak süreç güvenilirliğine dönüşmediğini ortaya koymaktadır. Bunu ele almak için, ince taneli süreç denetimi ile eğitilmiş özel bir doğrulayıcı olan TrajAD'ı öneriyoruz. Yaklaşımımız, temel yöntemlerin performansını aşarak, güvenilir ajanlar inşa etmek için özel denetimin elzem olduğunu göstermektedir."
+      "en": "Spiking Neural Networks (SNNs) are energy-efficient counterparts of Deep Neural Networks (DNNs) with high biological plausibility, as information is transmitted through temporal spiking patterns. The core element of an SNN is the spiking neuron, which converts input data into spikes following the Leaky Integrate-and-Fire (LIF) neuron model. This model includes several important hyperparameters, such as the membrane potential threshold and membrane time constant. Both the DNNs and SNNs have proven to be exploitable by backdoor attacks, where an adversary can poison the training dataset with malicious triggers and force the model to behave in an attacker-defined manner. Yet, how an adversary can exploit the unique characteristics of SNNs for backdoor attacks remains underexplored. In this paper, we propose \\textit{BadSNN}, a novel backdoor attack on spiking neural networks that exploits hyperparameter variations of spiking neurons to inject backdoor behavior into the model. We further propose a trigger optimization process to achieve better attack performance while making trigger patterns less perceptible. \\textit{BadSNN} demonstrates superior attack performance on various datasets and architectures, as well as compared with state-of-the-art data poisoning-based backdoor attacks and robustness against common backdoor mitigation techniques. Codes can be found at https://github.com/SiSL-URI/BadSNN.",
+      "tr": "İşte makale başlığının ve özetinin çevirisi:\n\n**Makale Başlığı:** BadSNN: Adversarial Spiking Neuron Aracılığıyla Spiking Neural Networks'e Arka Kapı Saldırıları\n\n**Özet:**\nSpiking Neural Networks (SNNs), bilginin zamansal spiking paternleri aracılığıyla iletildiği, yüksek biyolojik doğruluğa sahip, enerji verimli Deep Neural Networks (DNNs) muadilleridir. Bir SNN'nin temel öğesi, Leaky Integrate-and-Fire (LIF) neuron modelini takip ederek girdi verilerini spike'lara dönüştüren spiking neuron'dur. Bu model, membrane potential threshold ve membrane time constant gibi birkaç önemli hyperparameter içerir. Hem DNN'ler hem de SNN'ler, bir saldırganın eğitim veri kümesini kötü niyetli tetikleyicilerle zehirleyerek modeli saldırgan tarafından tanımlanan bir şekilde davranmaya zorlayabileceği backdoor attacks'ler tarafından istismar edilebilir hale gelmiştir. Bununla birlikte, bir saldırganın SNN'lerin benzersiz özelliklerini backdoor attacks'ler için nasıl istismar edebileceği hala yeterince araştırılmamıştır. Bu makalede, spiking neuronların hyperparameter varyasyonlarını kullanarak modele backdoor behavior enjekte eden, spiking neural networks'e yönelik yeni bir backdoor attack olan \\textit{BadSNN}'i öneriyoruz. Ayrıca, trigger pattern'leri daha az algılanabilir hale getirirken daha iyi attack performance elde etmek için bir trigger optimization process öneriyoruz. \\textit{BadSNN}, çeşitli veri kümeleri ve mimariler üzerinde üstün attack performance gösterir, ayrıca state-of-the-art data poisoning-based backdoor attacks'lerle karşılaştırıldığında ve yaygın backdoor mitigation techniques'lere karşı dayanıklılık sergiler. Kodlar https://github.com/SiSL-URI/BadSNN adresinde bulunabilir."
+    }
+  },
+  {
+    "id": "2602.07107v1",
+    "title": "ShallowJail: Steering Jailbreaks against Large Language Models",
+    "authors": [
+      "Shang Liu",
+      "Hanyu Pei",
+      "Zeyan Liu"
+    ],
+    "published_date": "2026-02-06",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2602.07107v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.07107v1",
+    "content": {
+      "en": "Large Language Models(LLMs) have been successful in numerous fields. Alignment has usually been applied to prevent them from harmful purposes. However, aligned LLMs remain vulnerable to jailbreak attacks that deliberately mislead them into producing harmful outputs. Existing jailbreaks are either black-box, using carefully crafted, unstealthy prompts, or white-box, requiring resource-intensive computation. In light of these challenges, we introduce ShallowJail, a novel attack that exploits shallow alignment in LLMs. ShallowJail can misguide LLMs' responses by manipulating the initial tokens during inference. Through extensive experiments, we demonstrate the effectiveness of~\\shallow, which substantially degrades the safety of state-of-the-art LLM responses.",
+      "tr": "İşte makale başlığı ve özetinin çevirisi:\n\n**Makale Başlığı:** ShallowJail: Büyük Dil Modellerine Karşı Jailbreak Saldırılarını Yönlendirme\n\n**Özet:**\nBüyük Dil Modelleri (LLMs) pek çok alanda başarılı olmuştur. Zararlı amaçları önlemek için genellikle hizalama (alignment) uygulanmaktadır. Ancak, hizalanmış LLM'ler, onları kasıtlı olarak zararlı çıktılar üretmeye yönlendiren jailbreak saldırılarına karşı hala savunmasızdır. Mevcut jailbreak yöntemleri ya dikkatlice hazırlanmış, gizli olmayan prompt'lar kullanan black-box yöntemlerdir ya da kaynak-yoğun hesaplama gerektiren white-box yöntemlerdir. Bu zorluklar ışığında, LLM'lerdeki shallow alignment'ı (sığ hizalama) kullanan yenilikçi bir saldırı yöntemi olan ShallowJail'i sunuyoruz. ShallowJail, çıkarım (inference) sırasında ilk token'ları manipüle ederek LLM'lerin yanıtlarını yanlış yönlendirebilir. Kapsamlı deneyler yoluyla, state-of-the-art LLM yanıtlarının güvenliğini önemli ölçüde bozan ShallowJail'in etkinliğini göstermekteyiz."
     }
   }
 ]
