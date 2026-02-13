@@ -1,218 +1,221 @@
 [
   {
-    "id": "2602.11015v1",
-    "title": "CVPL: A Geometric Framework for Post-Hoc Linkage Risk Assessment in Protected Tabular Data",
+    "id": "2602.12092v1",
+    "title": "DeepSight: An All-in-One LM Safety Toolkit",
     "authors": [
-      "Valery Khvatov",
-      "Alexey Neyman"
+      "Bo Zhang",
+      "Jiaxuan Guo",
+      "Lijun Li",
+      "Dongrui Liu",
+      "Sujin Chen"
     ],
-    "published_date": "2026-02-11",
+    "published_date": "2026-02-12",
     "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2602.11015v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.11015v1",
-    "content": {
-      "en": "Formal privacy metrics provide compliance-oriented guarantees but often fail to quantify actual linkability in released datasets. We introduce CVPL (Cluster-Vector-Projection Linkage), a geometric framework for post-hoc assessment of linkage risk between original and protected tabular data. CVPL represents linkage analysis as an operator pipeline comprising blocking, vectorization, latent projection, and similarity evaluation, yielding continuous, scenario-dependent risk estimates rather than binary compliance verdicts. We formally define CVPL under an explicit threat model and introduce threshold-aware risk surfaces, R(lambda, tau), that capture the joint effects of protection strength and attacker strictness. We establish a progressive blocking strategy with monotonicity guarantees, enabling anytime risk estimation with valid lower bounds. We demonstrate that the classical Fellegi-Sunter linkage emerges as a special case of CVPL under restrictive assumptions, and that violations of these assumptions can lead to systematic over-linking bias. Empirical validation on 10,000 records across 19 protection configurations demonstrates that formal k-anonymity compliance may coexist with substantial empirical linkability, with a significant portion arising from non-quasi-identifier behavioral patterns. CVPL provides interpretable diagnostics identifying which features drive linkage feasibility, supporting privacy impact assessment, protection mechanism comparison, and utility-risk trade-off analysis.",
-      "tr": "**Makale Başlığı:** CVPL: Korunmuş Tablosal Verilerde Post-Hoc Bağlantı Riski Değerlendirmesi İçin Geometrik Bir Çerçeve\n\n**Özet:**\n\nFormal privacy metrics, uyumluluk odaklı güvenceler sağlasa da, yayınlanan veri kümelerindeki fiili linkability'yi nicelendirmede sıklıkla yetersiz kalmaktadır. Orijinal ve korunmuş tablosal veriler arasındaki linkage riskinin post-hoc değerlendirmesi için geometrik bir çerçeve olan CVPL'yi (Cluster-Vector-Projection Linkage) sunuyoruz. CVPL, linkage analysis'i blocking, vectorization, latent projection ve similarity evaluation aşamalarından oluşan bir operatör pipeline'ı olarak temsil eder, bu da ikili uyumluluk kararları yerine sürekli, senaryo-bağımlı risk tahminleri üretir. CVPL'yi açık bir threat model altında resmi olarak tanımlıyoruz ve koruma gücü ile attacker strictness'ın ortak etkilerini yakalayan threshold-aware risk surfaces, R(lambda, tau) tanıtıyoruz. Monotonicity guarantees içeren ilerleyici bir blocking stratejisi oluşturarak, geçerli alt sınırlara sahip anytime risk estimation'ı mümkün kılıyoruz. Klasik Fellegi-Sunter linkage'in kısıtlayıcı varsayımlar altında CVPL'nin özel bir durumu olarak ortaya çıktığını ve bu varsayımların ihlallerinin sistematik over-linking bias'ına yol açabileceğini gösteriyoruz. 19 koruma konfigürasyonu üzerinden 10.000 kayda uygulanan ampirik doğrulama, formal k-anonymity uyumluluğunun, önemli bir kısmının quasi-identifier olmayan davranışsal örüntülerden kaynaklanan önemli ampirik linkability ile bir arada bulunabileceğini göstermektedir. CVPL, linkage feasibility'yi yönlendiren özellikleri tanımlayan, privacy impact assessment, protection mechanism comparison ve utility-risk trade-off analysis'i destekleyen yorumlanabilir tanılamalar sağlar."
-    }
-  },
-  {
-    "id": "2602.10915v1",
-    "title": "Blind Gods and Broken Screens: Architecting a Secure, Intent-Centric Mobile Agent Operating System",
-    "authors": [
-      "Zhenhua Zou",
-      "Sheng Guo",
-      "Qiuyang Zhan",
-      "Lepeng Zhao",
-      "Shuo Li"
-    ],
-    "published_date": "2026-02-11",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2602.10915v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.10915v1",
-    "content": {
-      "en": "The evolution of Large Language Models (LLMs) has shifted mobile computing from App-centric interactions to system-level autonomous agents. Current implementations predominantly rely on a \"Screen-as-Interface\" paradigm, which inherits structural vulnerabilities and conflicts with the mobile ecosystem's economic foundations. In this paper, we conduct a systematic security analysis of state-of-the-art mobile agents using Doubao Mobile Assistant as a representative case. We decompose the threat landscape into four dimensions - Agent Identity, External Interface, Internal Reasoning, and Action Execution - revealing critical flaws such as fake App identity, visual spoofing, indirect prompt injection, and unauthorized privilege escalation stemming from a reliance on unstructured visual data.   To address these challenges, we propose Aura, an Agent Universal Runtime Architecture for a clean-slate secure agent OS. Aura replaces brittle GUI scraping with a structured, agent-native interaction model. It adopts a Hub-and-Spoke topology where a privileged System Agent orchestrates intent, sandboxed App Agents execute domain-specific tasks, and the Agent Kernel mediates all communication. The Agent Kernel enforces four defense pillars: (i) cryptographic identity binding via a Global Agent Registry; (ii) semantic input sanitization through a multilayer Semantic Firewall; (iii) cognitive integrity via taint-aware memory and plan-trajectory alignment; and (iv) granular access control with non-deniable auditing. Evaluation on MobileSafetyBench shows that, compared to Doubao, Aura improves low-risk Task Success Rate from roughly 75% to 94.3%, reduces high-risk Attack Success Rate from roughly 40% to 4.4%, and achieves near-order-of-magnitude latency gains. These results demonstrate Aura as a viable, secure alternative to the \"Screen-as-Interface\" paradigm.",
-      "tr": "**Makale Başlığı:** Kör Tanrılar ve Bozuk Ekranlar: Güvenli, Amaç Odaklı Bir Mobil Ajan İşletim Sistemi Mimarisi\n\n**Özet:**\n\nLarge Language Models (LLMs) alanındaki evrim, mobil bilişimi App-centric etkileşimlerden sistem düzeyinde otonom ajanlara doğru kaydırmıştır. Mevcut uygulamalar, yapısal güvenlik açıklarını miras alan ve mobil ekosistemin ekonomik temelleriyle çelişen bir \"Screen-as-Interface\" paradigmasına büyük ölçüde dayanmaktadır. Bu makalede, Doubao Mobile Assistant'ı temsili bir vaka olarak kullanarak, son teknoloji mobil ajanların sistematik bir güvenlik analizini gerçekleştiriyoruz. Tehdit ortamını dört boyuta ayırıyoruz: Agent Identity, External Interface, Internal Reasoning ve Action Execution. Bu ayrıştırma, yapılandırılmamış görsel verilere dayanmaktan kaynaklanan sahte Uygulama kimliği, görsel sahtecilik, dolaylı prompt injection ve yetkisiz ayrıcalık yükseltme gibi kritik kusurları ortaya koymaktadır.\n\nBu zorlukları ele almak için, temiz bir başlangıçla güvenli bir ajan işletim sistemi için bir Agent Universal Runtime Architecture olan Aura'yı öneriyoruz. Aura, kırılgan GUI scraping'in yerini yapılandırılmış, ajan-native bir etkileşim modeliyle değiştirir. Aura, ayrıcalıklı bir System Agent'ın niyeti (intent) orkestre ettiği, sandboxed App Agent'ların alan-spesifik görevleri yürüttüğü ve Agent Kernel'ın tüm iletişimi aracılık ettiği bir Hub-and-Spoke topolojisi benimser. Agent Kernel, dört savunma filtresini zorlar: (i) Global Agent Registry aracılığıyla kriptografik kimlik bağlama (cryptographic identity binding); (ii) çok katmanlı bir Semantic Firewall aracılığıyla anlamsal girdi temizleme (semantic input sanitization); (iii) taint-aware memory ve plan-trajectory alignment yoluyla bilişsel bütünlük (cognitive integrity); ve (iv) reddedilemez denetim (non-deniable auditing) ile granüler erişim kontrolü (granular access control). MobileSafetyBench üzerindeki değerlendirmeler, Aura'nın Doubao'ya kıyasla düşük riskli Task Success Rate'i kabaca %75'ten %94,3'e, yüksek riskli Attack Success Rate'i kabaca %40'tan %4,4'e iyileştirdiğini ve neredeyse büyüklük sırası gecikme (latency) kazançları elde ettiğini göstermektedir. Bu sonuçlar, Aura'yı \"Screen-as-Interface\" paradigmasına uygulanabilir, güvenli bir alternatif olarak kanıtlamaktadır."
-    }
-  },
-  {
-    "id": "2602.10787v1",
-    "title": "VulReaD: Knowledge-Graph-guided Software Vulnerability Reasoning and Detection",
-    "authors": [
-      "Samal Mukhtar",
-      "Yinghua Yao",
-      "Zhu Sun",
-      "Mustafa Mustafa",
-      "Yew Soon Ong"
-    ],
-    "published_date": "2026-02-11",
-    "tags": [
-      "cs.SE",
-      "cs.AI",
-      "cs.CR",
-      "cs.IR"
-    ],
-    "link": "http://arxiv.org/abs/2602.10787v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.10787v1",
-    "content": {
-      "en": "Software vulnerability detection (SVD) is a critical challenge in modern systems. Large language models (LLMs) offer natural-language explanations alongside predictions, but most work focuses on binary evaluation, and explanations often lack semantic consistency with Common Weakness Enumeration (CWE) categories. We propose VulReaD, a knowledge-graph-guided approach for vulnerability reasoning and detection that moves beyond binary classification toward CWE-level reasoning. VulReaD leverages a security knowledge graph (KG) as a semantic backbone and uses a strong teacher LLM to generate CWE-consistent contrastive reasoning supervision, enabling student model training without manual annotations. Students are fine-tuned with Odds Ratio Preference Optimization (ORPO) to encourage taxonomy-aligned reasoning while suppressing unsupported explanations. Across three real-world datasets, VulReaD improves binary F1 by 8-10% and multi-class classification by 30% Macro-F1 and 18% Micro-F1 compared to state-of-the-art baselines. Results show that LLMs outperform deep learning baselines in binary detection and that KG-guided reasoning enhances CWE coverage and interpretability.",
-      "tr": "Makale Başlığı: VulReaD: knowledge-graph-guided Yazılım Açığı reasoning ve Tespiti\n\nÖzet:\nYazılım açığı tespiti (Software vulnerability detection - SVD), modern sistemlerde kritik bir zorluktur. Large language models (LLMs), tahminlerin yanı sıra doğal dil açıklamaları sunar, ancak çoğu çalışma ikili değerlendirmeye odaklanır ve açıklamalar genellikle Common Weakness Enumeration (CWE) kategorileriyle anlamsal tutarlılıktan yoksundur. CWE seviyesi reasoning'e yönelik ikili sınıflandırmanın ötesine geçen, açığı reasoning ve tespiti için a knowledge-graph-guided yaklaşım olan VulReaD'ı öneriyoruz. VulReaD, bir güvenlik knowledge graph (KG) ile anlamsal bir omurga olarak yararlanır ve manuel annotasyonlar olmadan öğrenci model eğitimi sağlayan CWE-tutarlı kontrastif reasoning supervision üretmek için güçlü bir teacher LLM kullanır. Öğrenciler, taksonomiye uyumlu reasoning'i teşvik ederken desteklenmeyen açıklamaları bastırmak için Odds Ratio Preference Optimization (ORPO) ile fine-tune edilir. Üç gerçek dünya veri kümesi genelinde, VulReaD, ikili F1 skorunu %8-10 ve çok sınıflı sınıflandırmayı %30 Macro-F1 ve %18 Micro-F1 oranında state-of-the-art temellere kıyasla iyileştirir. Sonuçlar, LLM'lerin ikili tespitinde derin öğrenme temellerinden daha iyi performans gösterdiğini ve KG-guided reasoning'in CWE kapsamını ve yorumlanabilirliğini artırdığını göstermektedir."
-    }
-  },
-  {
-    "id": "2602.10780v1",
-    "title": "Kill it with FIRE: On Leveraging Latent Space Directions for Runtime Backdoor Mitigation in Deep Neural Networks",
-    "authors": [
-      "Enrico Ahlers",
-      "Daniel Passon",
-      "Yannic Noller",
-      "Lars Grunske"
-    ],
-    "published_date": "2026-02-11",
-    "tags": [
-      "cs.LG",
+      "cs.CL",
       "cs.AI",
       "cs.CR",
       "cs.CV"
     ],
-    "link": "http://arxiv.org/abs/2602.10780v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.10780v1",
+    "link": "http://arxiv.org/abs/2602.12092v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.12092v1",
     "content": {
-      "en": "Machine learning models are increasingly present in our everyday lives; as a result, they become targets of adversarial attackers seeking to manipulate the systems we interact with. A well-known vulnerability is a backdoor introduced into a neural network by poisoned training data or a malicious training process. Backdoors can be used to induce unwanted behavior by including a certain trigger in the input. Existing mitigations filter training data, modify the model, or perform expensive input modifications on samples. If a vulnerable model has already been deployed, however, those strategies are either ineffective or inefficient. To address this gap, we propose our inference-time backdoor mitigation approach called FIRE (Feature-space Inference-time REpair). We hypothesize that a trigger induces structured and repeatable changes in the model's internal representation. We view the trigger as directions in the latent spaces between layers that can be applied in reverse to correct the inference mechanism. Therefore, we turn the backdoored model against itself by manipulating its latent representations and moving a poisoned sample's features along the backdoor directions to neutralize the trigger. Our evaluation shows that FIRE has low computational overhead and outperforms current runtime mitigations on image benchmarks across various attacks, datasets, and network architectures.",
-      "tr": "**Makale Başlığı: Kill it with FIRE: On Leveraging Latent Space Directions for Runtime Backdoor Mitigation in Deep Neural Networks**\n\n**Özet:**\n\nMakine öğrenmesi modelleri günlük hayatımızda giderek daha fazla yer almakta ve bu durum, etkileşimde bulunduğumuz sistemleri manipüle etmeye çalışan düşmanca saldırganlar için hedef haline gelmelerine neden olmaktadır. İyi bilinen bir güvenlik açığı, zehirlenmiş eğitim verileri veya kötü niyetli bir eğitim süreciyle bir yapay sinir ağına yerleştirilen bir backdoor'dur. Backdoor'lar, girişe belirli bir trigger eklenerek istenmeyen davranışlara yol açmak için kullanılabilir. Mevcut mitigasyon yöntemleri eğitim verilerini filtrelemekte, modeli değiştirmekte veya örnekler üzerinde pahalı giriş modifikasyonları gerçekleştirmektedir. Ancak, savunmasız bir model zaten konuşlandırılmışsa, bu stratejiler ya etkisiz ya da verimsizdir. Bu boşluğu gidermek için, inference-time backdoor mitigation yaklaşımımız olan FIRE (Feature-space Inference-time REpair) öneriyoruz. Bir trigger'ın modelin içsel temsilinde yapısal ve tekrarlanabilir değişikliklere neden olduğu varsayımına dayanıyoruz. Trigger'ı, inference mekanizmasını düzeltmek için tersine uygulanabilen katmanlar arasındaki latent spaces'deki yönler olarak görüyoruz. Dolayısıyla, gizli temsillerini manipüle ederek ve zehirlenmiş bir örneğin özelliklerini backdoor yönleri boyunca hareket ettirerek trigger'ı etkisiz hale getirerek, backdoor'lu modeli kendisine karşı kullanıyoruz. Değerlendirmemiz, FIRE'ın düşük hesaplama yüküne sahip olduğunu ve çeşitli saldırılar, veri kümeleri ve ağ mimarileri genelinde görüntü benchmark'larında mevcut runtime mitigasyonlarından daha iyi performans gösterdiğini göstermektedir."
+      "en": "As the development of Large Models (LMs) progresses rapidly, their safety is also a priority. In current Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs) safety workflow, evaluation, diagnosis, and alignment are often handled by separate tools. Specifically, safety evaluation can only locate external behavioral risks but cannot figure out internal root causes. Meanwhile, safety diagnosis often drifts from concrete risk scenarios and remains at the explainable level. In this way, safety alignment lack dedicated explanations of changes in internal mechanisms, potentially degrading general capabilities. To systematically address these issues, we propose an open-source project, namely DeepSight, to practice a new safety evaluation-diagnosis integrated paradigm. DeepSight is low-cost, reproducible, efficient, and highly scalable large-scale model safety evaluation project consisting of a evaluation toolkit DeepSafe and a diagnosis toolkit DeepScan. By unifying task and data protocols, we build a connection between the two stages and transform safety evaluation from black-box to white-box insight. Besides, DeepSight is the first open source toolkit that support the frontier AI risk evaluation and joint safety evaluation and diagnosis.",
+      "tr": "**Makale Başlığı:** DeepSight: Kapsamlı Bir LM Güvenlik Araç Seti\n\n**Özet:**\n\nBüyük Modellerin (LMs) gelişimi hızla ilerlerken, güvenlikleri de öncelik taşımaktadır. Mevcut Büyük Dil Modelleri (LLMs) ve Çok Modlu Büyük Dil Modelleri (MLLMs) güvenlik iş akışında, değerlendirme, teşhis ve hizalama genellikle ayrı araçlarla ele alınmaktadır. Özellikle, güvenlik değerlendirmesi yalnızca harici davranışsal riskleri belirleyebilmekte ancak içsel kök nedenleri ortaya çıkaramamaktadır. Bu esnada, güvenlik teşhisi sıklıkla somut risk senaryolarından sapmakta ve açıklanabilir düzeyde kalmaktadır. Bu şekilde, güvenlik hizalaması, içsel mekanizmalardaki değişikliklere dair özel açıklamalar eksikliğinden dolayı, genel yetenekleri potansiyel olarak degrade edebilir. Bu sorunları sistematik olarak ele almak için, yeni bir güvenlik değerlendirme-teşhis entegre paradigmasını uygulamak üzere açık kaynaklı bir proje olan DeepSight'ı öneriyoruz. DeepSight, değerlendirme araç seti DeepSafe ve teşhis araç seti DeepScan'den oluşan, düşük maliyetli, tekrarlanabilir, verimli ve son derece ölçeklenebilir büyük ölçekli model güvenlik değerlendirme projesidir. Görev ve veri protokollerini birleştirerek, iki aşama arasında bir bağlantı kuruyor ve güvenlik değerlendirmesini black-box'tan white-box içgörüye dönüştürüyoruz. Ayrıca DeepSight, öncü AI risk değerlendirmesini ve ortak güvenlik değerlendirme ve teşhisi destekleyen ilk açık kaynaklı araç setidir."
     }
   },
   {
-    "id": "2602.10750v1",
-    "title": "SecureScan: An AI-Driven Multi-Layer Framework for Malware and Phishing Detection Using Logistic Regression and Threat Intelligence Integration",
+    "id": "2602.11897v1",
+    "title": "Agentic AI for Cybersecurity: A Meta-Cognitive Architecture for Governable Autonomy",
     "authors": [
-      "Rumman Firdos",
-      "Aman Dangi"
+      "Andrei Kojukhov",
+      "Arkady Bovshover"
     ],
-    "published_date": "2026-02-11",
+    "published_date": "2026-02-12",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2602.11897v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.11897v1",
+    "content": {
+      "en": "Contemporary AI-driven cybersecurity systems are predominantly architected as model-centric detection and automation pipelines optimized for task-level performance metrics such as accuracy and response latency. While effective for bounded classification tasks, these architectures struggle to support accountable decision-making under adversarial uncertainty, where actions must be justified, governed, and aligned with organizational and regulatory constraints. This paper argues that cybersecurity orchestration should be reconceptualized as an agentic, multi-agent cognitive system, rather than a linear sequence of detection and response components. We introduce a conceptual architectural framework in which heterogeneous AI agents responsible for detection, hypothesis formation, contextual interpretation, explanation, and governance are coordinated through an explicit meta-cognitive judgement function. This function governs decision readiness and dynamically calibrates system autonomy when evidence is incomplete, conflicting, or operationally risky. By synthesizing distributed cognition theory, multi-agent systems research, and responsible AI governance frameworks, we demonstrate that modern security operations already function as distributed cognitive systems, albeit without an explicit organizing principle. Our contribution is to make this cognitive structure architecturally explicit and governable by embedding meta-cognitive judgement as a first-class system function. We discuss implications for security operations centers, accountable autonomy, and the design of next-generation AI-enabled cyber defence architectures. The proposed framework shifts the focus of AI in cybersecurity from optimizing isolated predictions to governing autonomy under uncertainty.",
+      "tr": "**Makale Başlığı: Siber Güvenlik için Agentic AI: Yönetilebilir Özerklik için Meta-Bilişsel Bir Mimari**\n\n**Özet:**\n\nGünümüz AI destekli siber güvenlik sistemleri, ağırlıklı olarak doğruluk ve yanıt gecikmesi gibi görev düzeyinde performans metrikleri için optimize edilmiş model merkezli tespit ve otomasyon hatları şeklinde tasarlanmaktadır. Sınırlı sınıflandırma görevleri için etkili olmalarına rağmen, bu mimariler, eylemlerin gerekçelendirilmesi, yönetilmesi ve kurumsal ile düzenleyici kısıtlamalarla uyumlu olması gereken düşmanca belirsizlik altında hesap verebilir karar verme mekanizmalarını desteklemekte zorlanmaktadır. Bu makale, siber güvenlik orkestrasyonunun, doğrusal bir tespit ve yanıt bileşenleri dizisi yerine, bir agentic, multi-agent bilişsel sistem olarak yeniden kavramsallaştırılması gerektiğini savunmaktadır. Tespit, hipotez oluşturma, bağlamsal yorumlama, açıklama ve yönetişimden sorumlu heterojen AI ajanlarının açık bir meta-bilişsel yargı fonksiyonu aracılığıyla koordine edildiği kavramsal bir mimari çerçeve sunuyoruz. Bu fonksiyon, karar hazırlığını yönetir ve kanıtların eksik, çelişkili veya operasyonel olarak riskli olduğu durumlarda sistem özerkliğini dinamik olarak kalibre eder. Dağıtılmış biliş teorisini, multi-agent sistemler araştırmasını ve sorumlu AI yönetişim çerçevelerini sentezleyerek, modern güvenlik operasyonlarının, açık bir organize edici ilke olmasa da, zaten dağıtılmış bilişsel sistemler olarak işlev gördüğünü gösteriyoruz. Katkımız, meta-bilişsel yargıyı birinci sınıf bir sistem fonksiyonu olarak gömerek bu bilişsel yapıyı mimari olarak açık ve yönetilebilir hale getirmektir. Güvenlik operasyon merkezleri, hesap verebilir özerklik ve yeni nesil AI destekli siber savunma mimarilerinin tasarımı üzerindeki etkileri tartışılmaktadır. Önerilen çerçeve, siber güvenlikte AI'nın odağını izole edilmiş tahminleri optimize etmekten, belirsizlik altında özerkliği yönetmeye kaydırmaktadır."
+    }
+  },
+  {
+    "id": "2602.11851v1",
+    "title": "Resource-Aware Deployment Optimization for Collaborative Intrusion Detection in Layered Networks",
+    "authors": [
+      "André García Gómez",
+      "Ines Rieger",
+      "Wolfgang Hotwagner",
+      "Max Landauer",
+      "Markus Wurzenberger"
+    ],
+    "published_date": "2026-02-12",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2602.11851v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.11851v1",
+    "content": {
+      "en": "Collaborative Intrusion Detection Systems (CIDS) are increasingly adopted to counter cyberattacks, as their collaborative nature enables them to adapt to diverse scenarios across heterogeneous environments. As distributed critical infrastructure operates in rapidly evolving environments, such as drones in both civil and military domains, there is a growing need for CIDS architectures that can flexibly accommodate these dynamic changes. In this study, we propose a novel CIDS framework designed for easy deployment across diverse distributed environments. The framework dynamically optimizes detector allocation per node based on available resources and data types, enabling rapid adaptation to new operational scenarios with minimal computational overhead. We first conducted a comprehensive literature review to identify key characteristics of existing CIDS architectures. Based on these insights and real-world use cases, we developed our CIDS framework, which we evaluated using several distributed datasets that feature different attack chains and network topologies. Notably, we introduce a public dataset based on a realistic cyberattack targeting a ground drone aimed at sabotaging critical infrastructure. Experimental results demonstrate that the proposed CIDS framework can achieve adaptive, efficient intrusion detection in distributed settings, automatically reconfiguring detectors to maintain an optimal configuration, without requiring heavy computation, since all experiments were conducted on edge devices.",
+      "tr": "Makale Başlığı: Katmanlı Ağlarda İşbirlikçi Saldırı Tespit Sistemleri İçin Kaynak-Farkındalıklı Konuşlandırma Optimizasyonu\n\nÖzet:\nİşbirlikçi Saldırı Tespit Sistemleri (CIDS), siber saldırılara karşı koymak amacıyla giderek daha fazla benimsenmektedir, zira işbirlikçi doğaları heterojen ortamlarda çeşitli senaryolara uyum sağlamalarını mümkün kılmaktadır. Dağıtık kritik altyapı, hem sivil hem de askeri alanlardaki drone'lar gibi hızla gelişen ortamlarda faaliyet gösterdiğinden, bu dinamik değişiklikleri esnek bir şekilde karşılayabilen CIDS mimarilerine olan ihtiyaç artmaktadır. Bu çalışmada, çeşitli dağıtık ortamlara kolay konuşlandırma için tasarlanmış yeni bir CIDS çerçevesi öneriyoruz. Çerçeve, mevcut kaynaklara ve veri türlerine dayalı olarak düğüm başına dedektör tahsisini dinamik olarak optimize ederek, minimum hesaplama yükü ile yeni operasyonel senaryolara hızlı adaptasyonu sağlar. İlk olarak, mevcut CIDS mimarilerinin temel özelliklerini belirlemek için kapsamlı bir literatür taraması gerçekleştirdik. Bu içgörülere ve gerçek dünya kullanım örneklerine dayanarak, CIDS çerçevemizi geliştirdik ve farklı saldırı zincirleri ile ağ topolojilerini içeren birkaç dağıtık veri kümesi kullanarak değerlendirdik. Özellikle, kritik altyapıyı sabote etmeyi amaçlayan ve bir yer drone'unu hedef alan gerçekçi bir siber saldırıya dayanan kamuya açık bir veri kümesi sunuyoruz. Deneysel sonuçlar, önerilen CIDS çerçevesinin dağıtık ortamlarda uyarlanabilir, verimli saldırı tespiti sağlayabildiğini ve tüm deneyler edge devices üzerinde gerçekleştirildiğinden, ağır hesaplama gerektirmeden, dedektörleri otomatik olarak yeniden yapılandırarak optimal bir konfigürasyonu sürdürebildiğini göstermektedir."
+    }
+  },
+  {
+    "id": "2602.11655v1",
+    "title": "LoRA-based Parameter-Efficient LLMs for Continuous Learning in Edge-based Malware Detection",
+    "authors": [
+      "Christian Rondanini",
+      "Barbara Carminati",
+      "Elena Ferrari",
+      "Niccolò Lardo",
+      "Ashish Kundu"
+    ],
+    "published_date": "2026-02-12",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.CV",
-      "cs.LG"
+      "cs.DC"
     ],
-    "link": "http://arxiv.org/abs/2602.10750v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.10750v1",
+    "link": "http://arxiv.org/abs/2602.11655v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.11655v1",
     "content": {
-      "en": "The growing sophistication of modern malware and phishing campaigns has diminished the effectiveness of traditional signature-based intrusion detection systems. This work presents SecureScan, an AI-driven, triple-layer detection framework that integrates logistic regression-based classification, heuristic analysis, and external threat intelligence via the VirusTotal API for comprehensive triage of URLs, file hashes, and binaries. The proposed architecture prioritizes efficiency by filtering known threats through heuristics, classifying uncertain samples using machine learning, and validating borderline cases with third-party intelligence. On benchmark datasets, SecureScan achieves 93.1 percent accuracy with balanced precision (0.87) and recall (0.92), demonstrating strong generalization and reduced overfitting through threshold-based decision calibration. A calibrated threshold and gray-zone logic (0.45-0.55) were introduced to minimize false positives and enhance real-world stability. Experimental results indicate that a lightweight statistical model, when augmented with calibrated verification and external intelligence, can achieve reliability and performance comparable to more complex deep learning systems.",
-      "tr": "Elbette, akademik makalenin başlığını ve özetini istenen şekilde Türkçeye çevirdim:\n\n**Makale Başlığı:** SecureScan: Logistic Regression ve Threat Intelligence Entegrasyonu Kullanarak Kötü Amaçlı Yazılım ve Kimlik Avı Tespiti İçin Yapay Zeka Güdümlü Çok Katmanlı Bir Çerçeve\n\n**Özet:**\nModern kötü amaçlı yazılım ve kimlik avı kampanyalarının artan sofistikeliği, geleneksel imza tabanlı saldırı tespit sistemlerinin etkinliğini azaltmıştır. Bu çalışma, URL'ler, dosya hash'leri ve çalıştırılabilir dosyaların kapsamlı bir şekilde sınıflandırılması için VirusTotal API aracılığıyla lojistik regresyon tabanlı sınıflandırmayı, sezgisel analizi ve harici threat intelligence'ı entegre eden yapay zeka güdümlü, üç katmanlı bir tespit çerçevesi olan SecureScan'ı sunmaktadır. Önerilen mimari, bilinen tehditleri sezgisel yöntemlerle filtreleyerek, belirsiz örnekleri machine learning kullanarak sınıflandırarak ve sınırda kalan durumları üçüncü taraf zeka ile doğrulayarak verimliliği önceliklendirir. Benchmark veri kümelerinde, SecureScan, dengeli precision (0.87) ve recall (0.92) ile yüzde 93,1 doğruluk elde ederek, eşik tabanlı karar kalibrasyonu yoluyla güçlü genelleme ve azaltılmış overfitting sergilemiştir. False positive'leri en aza indirmek ve gerçek dünya kararlılığını artırmak için kalibre edilmiş bir eşik ve gray-zone logic (0.45-0.55) tanıtılmıştır. Deneysel sonuçlar, kalibre edilmiş doğrulama ve harici zeka ile desteklenen hafif bir istatistiksel modelin, daha karmaşık deep learning sistemlerine kıyasla karşılaştırılabilir güvenilirlik ve performans elde edebileceğini göstermektedir."
+      "en": "The proliferation of edge devices has created an urgent need for security solutions capable of detecting malware in real time while operating under strict computational and memory constraints. Recently, Large Language Models (LLMs) have demonstrated remarkable capabilities in recognizing complex patterns, yet their deployment on edge devices remains impractical due to their resource demands. However, in edge malware detection, static or centrally retrained models degrade under evolving threats and heterogeneous traffic; locally trained models become siloed and fail to transfer across domains. To overcome these limitations, in this paper, we present a continuous learning architecture for edge-based malware detection that combines local adaptation on each device with global knowledge sharing through parameter-efficient LoRA adapters. Lightweight transformer models (DistilBERT, DistilGPT-2, TinyT5) run on edge nodes and are incrementally fine-tuned on device-specific traffic; only the resulting LoRA modules are aggregated by a lightweight coordinator and redistributed, enabling cross-device generalization without exchanging raw data. We evaluate on two public IoT security datasets, Edge-IIoTset and TON-IoT, under multi-round learning to simulate evolving threats. Compared to isolated fine-tuning, the LoRA-based exchange yields up to 20-25% accuracy gains when models encounter previously unseen attacks from another domain, while maintaining stable loss and F1 across rounds. LoRA adds less than 1% to model size (~0.6-1.8 MB), making updates practical for constrained edge hardware.",
+      "tr": "Elbette, istenen şekilde çeviriyi aşağıda bulabilirsiniz:\n\n**Makale Başlığı:** Kenar Tabanlı Kötü Amaçlı Yazılım Tespitinde Sürekli Öğrenme İçin LoRA Tabanlı Parametre Verimli LLM'ler\n\n**Özet:**\n\nKenar cihazlarının yaygınlaşması, katı hesaplama ve bellek kısıtlamaları altında gerçek zamanlı kötü amaçlı yazılım tespit edebilen güvenlik çözümlerine acil bir ihtiyaç yaratmıştır. Son zamanlarda, Large Language Models (LLM'ler) karmaşık örüntüleri tanımada dikkate değer yetenekler sergilemişlerdir; ancak kaynak gereksinimleri nedeniyle kenar cihazlarına dağıtımları pratik olmaktan uzaktır. Bununla birlikte, kenar kötü amaçlı yazılım tespitinde statik veya merkezi olarak yeniden eğitilmiş modeller gelişen tehditler ve heterojen trafik altında bozulur; yerel olarak eğitilmiş modeller silolaşır ve etki alanları arasında aktarımda başarısız olur. Bu sınırlamaların üstesinden gelmek için bu makalede, her cihazdaki yerel adaptasyonu parametre verimli LoRA adaptörleri aracılığıyla küresel bilgi paylaşımıyla birleştiren kenar tabanlı kötü amaçlı yazılım tespiti için bir sürekli öğrenme mimarisi sunuyoruz. Hafif transformer modelleri (DistilBERT, DistilGPT-2, TinyT5) kenar düğümlerinde çalışır ve cihazlara özgü trafik üzerinde artımlı olarak ince ayarlanır; yalnızca sonuçta ortaya çıkan LoRA modülleri hafif bir koordinatör tarafından toplanır ve yeniden dağıtılır, bu da ham veri alışverişi yapmadan cihazlar arası genelleme sağlar. İki genel IoT güvenlik veri kümesi olan Edge-IIoTset ve TON-IoT üzerinde, gelişen tehditleri simüle etmek için çok turlu öğrenme altında değerlendirme yapıyoruz. İzole ince ayara kıvıldığında, LoRA tabanlı değişim, modeller daha önce görülmemiş saldırılarla başka bir etki alanından karşılaştığında, turlar boyunca kararlı kayıp ve F1'i korurken %20-25'e kadar doğruluk kazançları sağlamaktadır. LoRA, model boyutuna %1'den az ekleme yapar (~0.6-1.8 MB), bu da güncellemeleri kısıtlı kenar donanımları için pratik hale getirir."
     }
   },
   {
-    "id": "2602.10510v1",
-    "title": "Privacy-Utility Tradeoffs in Quantum Information Processing",
+    "id": "2602.11651v1",
+    "title": "DMind-3: A Sovereign Edge--Local--Cloud AI System with Controlled Deliberation and Correction-Based Tuning for Safe, Low-Latency Transaction Execution",
     "authors": [
-      "Theshani Nuradha",
-      "Sujeet Bhalerao",
-      "Felix Leditzky"
+      "Enhao Huang",
+      "Frank Li",
+      "Tony Lin",
+      "Lowes Yang"
     ],
-    "published_date": "2026-02-11",
-    "tags": [
-      "quant-ph",
-      "cs.CR",
-      "cs.IT",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.10510v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.10510v1",
-    "content": {
-      "en": "When sensitive information is encoded in data, it is important to ensure the privacy of information when attempting to learn useful information from the data. There is a natural tradeoff whereby increasing privacy requirements may decrease the utility of a learning protocol. In the quantum setting of differential privacy, such tradeoffs between privacy and utility have so far remained largely unexplored. In this work, we study optimal privacy-utility tradeoffs for both generic and application-specific utility metrics when privacy is quantified by $(\\varepsilon,δ)$-quantum local differential privacy. In the generic setting, we focus on optimizing fidelity and trace distance between the original state and the privatized state. We show that the depolarizing mechanism achieves the optimal utility for given privacy requirements. We then study the specific application of learning the expectation of an observable with respect to an input state when only given access to privatized states. We derive a lower bound on the number of samples of privatized data required to achieve a fixed accuracy guarantee with high probability. To prove this result, we employ existing lower bounds on private quantum hypothesis testing, thus showcasing the first operational use of them. We also devise private mechanisms that achieve optimal sample complexity with respect to the privacy parameters and accuracy parameters, demonstrating that utility can be significantly improved for specific tasks in contrast to the generic setting. In addition, we show that the number of samples required to privately learn observable expectation values scales as $Θ((\\varepsilon β)^{-2})$, where $\\varepsilon \\in (0,1)$ is the privacy parameter and $β$ is the accuracy tolerance. We conclude by initiating the study of private classical shadows, which promise useful applications for private learning tasks.",
-      "tr": "**Makale Başlığı:** Kuantum Bilgi İşlemede Gizlilik-Fayda Dengeleri\n\n**Özet:**\n\nVeri içinde hassas bilgiler kodlandığında, veriden faydalı bilgiler öğrenmeye çalışırken bilginin gizliliğini sağlamak önemlidir. Gizlilik gereksinimlerindeki artışın bir öğrenme protokolünün faydasını azaltabileceği doğal bir denge mevcuttur. Diferansiyel gizliliğin kuantum ortamında, gizlilik ve fayda arasındaki bu tür dengeler bugüne kadar büyük ölçüde keşfedilmemiş kalmıştır. Bu çalışmada, gizliliğin $(\\varepsilon,δ)$-quantum local differential privacy ile ölçüldüğü durumlarda hem genel hem de uygulamaya özel fayda metrikleri için optimal gizlilik-fayda dengelerini inceliyoruz. Genel ayarda, orijinal durum ve özelleştirilmiş durum arasındaki fidelity ve trace distance optimizasyonuna odaklanıyoruz. Depolarizing mechanism'in verilen gizlilik gereksinimleri için optimal faydayı sağladığını gösteriyoruz. Daha sonra, yalnızca özelleştirilmiş durumlara erişimimiz olduğunda bir girdi durumuna göre bir observable'ın beklentisini öğrenme spesifik uygulamayı inceliyoruz. Yüksek olasılıkla sabit bir doğruluk garantisi elde etmek için gereken özelleştirilmiş veri örneklerinin sayısına ilişkin bir alt sınır türetiyoruz. Bu sonucu kanıtlamak için, private quantum hypothesis testing üzerindeki mevcut alt sınırları kullanıyoruz, böylece onların ilk operasyonel kullanımını gösteriyoruz. Ayrıca, gizlilik parametreleri ve doğruluk parametrelerine göre optimal sample complexity'yi elde eden private mechanisms tasarlıyoruz, böylece genel ayara kıyasla spesifik görevler için faydanın önemli ölçüde iyileştirilebileceğini gösteriyoruz. Ek olarak, observable beklenti değerlerini gizlice öğrenmek için gereken örnek sayısının $Θ((\\varepsilon β)^{-2})$ olarak ölçeklendiğini gösteriyoruz, burada $\\varepsilon \\in (0,1)$ gizlilik parametresi ve $β$ doğruluk toleransıdır. Private classical shadows'un incelenmesini başlatarak sonuçlandırıyoruz, bu da private learning görevleri için faydalı uygulamalar vaat etmektedir."
-    }
-  },
-  {
-    "id": "2602.10481v1",
-    "title": "Protecting Context and Prompts: Deterministic Security for Non-Deterministic AI",
-    "authors": [
-      "Mohan Rajagopalan",
-      "Vinay Rao"
-    ],
-    "published_date": "2026-02-11",
+    "published_date": "2026-02-12",
     "tags": [
       "cs.CR",
-      "cs.AI",
-      "cs.MA"
+      "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2602.10481v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.10481v1",
+    "link": "http://arxiv.org/abs/2602.11651v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.11651v1",
     "content": {
-      "en": "Large Language Model (LLM) applications are vulnerable to prompt injection and context manipulation attacks that traditional security models cannot prevent. We introduce two novel primitives--authenticated prompts and authenticated context--that provide cryptographically verifiable provenance across LLM workflows. Authenticated prompts enable self-contained lineage verification, while authenticated context uses tamper-evident hash chains to ensure integrity of dynamic inputs. Building on these primitives, we formalize a policy algebra with four proven theorems providing protocol-level Byzantine resistance--even adversarial agents cannot violate organizational policies. Five complementary defenses--from lightweight resource controls to LLM-based semantic validation--deliver layered, preventative security with formal guarantees. Evaluation against representative attacks spanning 6 exhaustive categories achieves 100% detection with zero false positives and nominal overhead. We demonstrate the first approach combining cryptographically enforced prompt lineage, tamper-evident context, and provable policy reasoning--shifting LLM security from reactive detection to preventative guarantees.",
-      "tr": "İşte akademik makalenin başlığı ve özetinin Türkçeye çevirisi:\n\n**Makale Başlığı:** Bağlam ve İstemlerin Korunması: Belirlenimsiz Yapay Zeka İçin Deterministik Güvenlik\n\n**Özet:**\nBüyük Dil Modeli (LLM) uygulamaları, geleneksel güvenlik modellerinin engelleyemediği prompt injection ve bağlam manipülasyonu saldırılarına karşı savunmasızdır. LLM iş akışları boyunca kriptografik olarak doğrulanabilir bir köken sağlayan iki yeni ilkel - authenticated prompts ve authenticated context - sunuyoruz. Authenticated prompts, kendi içinde tutarlı bir soy (lineage) doğrulaması sağlarken, authenticated context dinamik girdilerin bütünlüğünü sağlamak için kurcalamaya dayanıklı hash zincirlerini kullanır. Bu ilkeler üzerine inşa ederek, protokol düzeyinde Byzantine resistance sağlayan ve dört kanıtlanmış teoremi içeren bir policy algebra formalize ediyoruz -- hatta düşmanca ajanlar dahi kurumsal politikaları ihlal edemez. Hafif kaynak kontrollerinden LLM tabanlı anlamsal doğrulamaya kadar beş tamamlayıcı savunma, biçimsel garantilerle katmanlı, önleyici güvenlik sunar. 6 kapsamlı kategoriye yayılan temsili saldırılara karşı yapılan değerlendirme, sıfır yanlış pozitif ve nominal ek yük ile %100 tespit sağlamıştır. Kriptografik olarak zorlanmış prompt lineage, kurcalamaya dayanıklı bağlam ve kanıtlanabilir policy reasoning'i birleştiren ilk yaklaşımı gösteriyoruz -- LLM güvenliğini reaktif tespitten önleyici garantilere taşıyoruz."
+      "en": "This paper introduces DMind-3, a sovereign Edge-Local-Cloud intelligence stack designed to secure irreversible financial execution in Web3 environments against adversarial risks and strict latency constraints. While existing cloud-centric assistants compromise privacy and fail under network congestion, and purely local solutions lack global ecosystem context, DMind-3 resolves these tensions by decomposing capability into three cooperating layers: a deterministic signing-time intent firewall at the edge, a private high-fidelity reasoning engine on user hardware, and a policy-governed global context synthesizer in the cloud. We propose policy-driven selective offloading to route computation based on privacy sensitivity and uncertainty, supported by two novel training objectives: Hierarchical Predictive Synthesis (HPS) for fusing time-varying macro signals, and Contrastive Chain-of-Correction Supervised Fine-Tuning (C$^3$-SFT) to enhance local verification reliability. Extensive evaluations demonstrate that DMind-3 achieves a 93.7% multi-turn success rate in protocol-constrained tasks and superior domain reasoning compared to general-purpose baselines, providing a scalable framework where safety is bound to the edge execution primitive while maintaining sovereignty over sensitive user intent.",
+      "tr": "**Makale Başlığı:** DMind-3: Güvenli, Düşük Gecikmeli İşlem Yürütme için Kontrollü Deliberation ve Correction-Based Tuning ile Egemen Edge--Local--Cloud Yapay Zeka Sistemi\n\n**Özet:**\n\nBu makale, DMind-3'ü tanıtmaktadır. DMind-3, Web3 ortamlarında geri döndürülemez finansal işlemlerin, saldırgan risklere ve katı gecikme kısıtlamalarına karşı güvenliğini sağlamak üzere tasarlanmış egemen bir Edge-Local-Cloud zeka yığınıdır. Mevcut bulut merkezli yardımcılar gizliliği tehlikeye atarken ve ağ tıkanıklığında başarısız olurken, tamamen yerel çözümler küresel ekosistem bağlamından yoksundur. DMind-3, bu gerilimleri yeteneği üç işbirliği yapan katmana ayırarak çözer: kenarda deterministik bir signing-time intent firewall, kullanıcı donanımında özel bir high-fidelity reasoning engine ve bulutta politika güdümlü bir global context synthesizer. Gizlilik hassasiyetine ve belirsizliğe göre hesaplamayı yönlendirmek için politika güdümlü seçici offloading öneriyoruz. Bu, iki yeni eğitim hedefi ile desteklenmektedir: zamanla değişen makro sinyalleri birleştirmek için Hierarchical Predictive Synthesis (HPS) ve yerel doğrulama güvenilirliğini artırmak için Contrastive Chain-of-Correction Supervised Fine-Tuning (C$^3$-SFT). Kapsamlı değerlendirmeler, DMind-3'ün protokol kısıtlamalı görevlerde %93,7 çoklu tur başarı oranı ve genel amaçlı temel sistemlere kıyasla üstün alan reasoning yeteneği elde ettiğini göstermektedir. Bu sistem, güvenliğin kenar yürütme ilkelere bağlı kaldığı, hassas kullanıcı niyeti üzerinde egemenliği koruyarak ölçeklenebilir bir çerçeve sunmaktadır."
     }
   },
   {
-    "id": "2602.10478v1",
-    "title": "GPU-Fuzz: Finding Memory Errors in Deep Learning Frameworks",
+    "id": "2602.11528v1",
+    "title": "Stop Tracking Me! Proactive Defense Against Attribute Inference Attack in LLMs",
     "authors": [
-      "Zihao Li",
-      "Hongyi Lu",
-      "Yanan Guo",
-      "Zhenkai Zhang",
-      "Shuai Wang"
+      "Dong Yan",
+      "Jian Liang",
+      "Ran He",
+      "Tieniu Tan"
     ],
-    "published_date": "2026-02-11",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.10478v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.10478v1",
-    "content": {
-      "en": "GPU memory errors are a critical threat to deep learning (DL) frameworks, leading to crashes or even security issues. We introduce GPU-Fuzz, a fuzzer locating these issues efficiently by modeling operator parameters as formal constraints. GPU-Fuzz utilizes a constraint solver to generate test cases that systematically probe error-prone boundary conditions in GPU kernels. Applied to PyTorch, TensorFlow, and PaddlePaddle, we uncovered 13 unknown bugs, demonstrating the effectiveness of GPU-Fuzz in finding memory errors.",
-      "tr": "**Makale Başlığı:** GPU-Fuzz: Derin Öğrenme Çerçevelerinde Bellek Hatalarını Bulma\n\n**Özet:**\n\nGPU bellek hataları, derin öğrenme (DL) çerçeveleri için kritik bir tehdit olup, çökemelere ve hatta güvenlik sorunlarına yol açmaktadır. Operatör parametrelerini formal kısıtlamalar olarak modelleyerek bu sorunları verimli bir şekilde tespit eden bir fuzzer olan GPU-Fuzz'ı sunuyoruz. GPU-Fuzz, GPU kernel'lerindeki hata eğilimli sınır koşulları sistematik olarak inceleyen test senaryoları üretmek için bir constraint solver kullanır. PyTorch, TensorFlow ve PaddlePaddle'a uygulanan GPU-Fuzz, 13 adet bilinmeyen hatayı ortaya çıkararak bellek hatalarını bulmadaki etkinliğini göstermiştir."
-    }
-  },
-  {
-    "id": "2602.10465v1",
-    "title": "Authenticated Workflows: A Systems Approach to Protecting Agentic AI",
-    "authors": [
-      "Mohan Rajagopalan",
-      "Vinay Rao"
-    ],
-    "published_date": "2026-02-11",
+    "published_date": "2026-02-12",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.DC",
-      "cs.MA"
+      "cs.CL"
     ],
-    "link": "http://arxiv.org/abs/2602.10465v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.10465v1",
+    "link": "http://arxiv.org/abs/2602.11528v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.11528v1",
     "content": {
-      "en": "Agentic AI systems automate enterprise workflows but existing defenses--guardrails, semantic filters--are probabilistic and routinely bypassed. We introduce authenticated workflows, the first complete trust layer for enterprise agentic AI. Security reduces to protecting four fundamental boundaries: prompts, tools, data, and context. We enforce intent (operations satisfy organizational policies) and integrity (operations are cryptographically authentic) at every boundary crossing, combining cryptographic elimination of attack classes with runtime policy enforcement. This delivers deterministic security--operations either carry valid cryptographic proof or are rejected. We introduce MAPL, an AI-native policy language that expresses agentic constraints dynamically as agents evolve and invocation context changes, scaling as O(log M + N) policies versus O(M x N) rules through hierarchical composition with cryptographic attestations for workflow dependencies. We prove practicality through a universal security runtime integrating nine leading frameworks (MCP, A2A, OpenAI, Claude, LangChain, CrewAI, AutoGen, LlamaIndex, Haystack) through thin adapters requiring zero protocol modifications. Formal proofs establish completeness and soundness. Empirical validation shows 100% recall with zero false positives across 174 test cases, protection against 9 of 10 OWASP Top 10 risks, and complete mitigation of two high impact production CVEs.",
-      "tr": "Kesinlikle, istenen şartlara uygun olarak makale başlığını ve özetini Türkçeye çevirdim:\n\n**Makale Başlığı:** Yetkilendirilmiş İş Akışları: Ajan Yapay Zekayı Koruma İçin Bir Sistem Yaklaşımı\n\n**Özet:**\n\nAjan yapay zeka sistemleri kurumsal iş akışlarını otomatikleştirir ancak mevcut savunmalar — guardrails, semantic filters — olasılıksaldır ve düzenli olarak atlatılmaktadır. Kurumsal ajan yapay zeka için ilk eksiksiz trust layer olan yetkilendirilmiş iş akışlarını sunuyoruz. Security, dört temel boundary'yi korumaya indirgenir: prompts, tools, data ve context. Her boundary crossing noktasında intent (operations, organizasyonel politikalara uygun olmalıdır) ve integrity (operations, cryptographically authentic olmalıdır) zorunlu kılarız. Bu, saldırı sınıflarının cryptographic elimination'ını runtime policy enforcement ile birleştirir. Bu, deterministic security sağlar — operations ya geçerli cryptographic proof taşır ya da reddedilir. Biz, MAPL'ı — bir AI-native policy language — tanıtıyoruz. Bu dil, ajanlar geliştikçe ve invocation context değiştikçe agentic constraints'leri dinamik olarak ifade eder. Hierarchical composition ve workflow dependencies için cryptographic attestations ile O(log M + N) policies ölçeklenir, O(M x N) rules'a kıyasla. Dokuz önde gelen framework (MCP, A2A, OpenAI, Claude, LangChain, CrewAI, AutoGen, LlamaIndex, Haystack) için ince adaptörler aracılığıyla ve sıfır protocol modification gerektirerek evrensel bir security runtime ile pratikliği kanıtlıyoruz. Formal proofs, completeness ve soundness'u kurar. Ampirik doğrulama, 174 test senaryosunda %100 recall ve sıfır false positives, OWASP Top 10 risklerinin 9'una karşı koruma ve iki yüksek etkiye sahip production CVE'nin tam olarak hafifletildiğini gösterir."
+      "en": "Recent studies have shown that large language models (LLMs) can infer private user attributes (e.g., age, location, gender) from user-generated text shared online, enabling rapid and large-scale privacy breaches. Existing anonymization-based defenses are coarse-grained, lacking word-level precision in anonymizing privacy-leaking elements. Moreover, they are inherently limited as altering user text to hide sensitive cues still allows attribute inference to occur through models' reasoning capabilities. To address these limitations, we propose a unified defense framework that combines fine-grained anonymization (TRACE) with inference-preventing optimization (RPS). TRACE leverages attention mechanisms and inference chain generation to identify and anonymize privacy-leaking textual elements, while RPS employs a lightweight two-stage optimization strategy to induce model rejection behaviors, thereby preventing attribute inference. Evaluations across diverse LLMs show that TRACE-RPS reduces attribute inference accuracy from around 50\\% to below 5\\% on open-source models. In addition, our approach offers strong cross-model generalization, prompt-variation robustness, and utility-privacy tradeoffs. Our code is available at https://github.com/Jasper-Yan/TRACE-RPS.",
+      "tr": "Kesinlikle, işte akademik makalenin başlığı ve özetinin talep ettiğiniz şekilde çevrilmiş hali:\n\n**Makale Başlığı:** Beni İzlemeyi Kes! LLM'lerde Öznitelik Çıkarım Saldırılarına Karşı Proaktif Savunma\n\n**Özet:**\nSon çalışmalar, büyük dil modellerinin (LLM'ler) çevrimiçi paylaşılan kullanıcı tarafından oluşturulan metinlerden özel kullanıcı özniteliklerini (örneğin, yaş, konum, cinsiyet) çıkarabildiğini ve bu durumun hızlı ve büyük ölçekli gizlilik ihlallerine yol açabildiğini göstermiştir. Mevcut anonimleştirme tabanlı savunmalar kaba tanelidir ve gizlilik sızdıran unsurların anonimleştirilmesinde kelime düzeyinde hassasiyetten yoksundur. Dahası, bu savunmalar doğası gereği sınırlıdır, çünkü hassas ipuçlarını gizlemek için kullanıcı metnini değiştirmek, modellerin **reasoning** yetenekleri aracılığıyla öznitelik çıkarımının gerçekleşmesine hala olanak tanır. Bu sınırlamaları gidermek için, ince taneli anonimleştirmeyi (TRACE) çıkarım önleyici optimizasyon (RPS) ile birleştiren birleşik bir savunma çerçevesi öneriyoruz. TRACE, gizlilik sızdıran metinsel unsurları belirlemek ve anonimleştirmek için dikkat mekanizmalarını ve **inference chain generation**'ı kullanırken, RPS öznitelik çıkarımını önlemek amacıyla model reddetme davranışları uyandırmak için hafif bir iki aşamalı optimizasyon stratejisi kullanır. Çeşitli LLM'ler üzerinde yapılan değerlendirmeler, TRACE-RPS'nin açık kaynaklı modellerde öznitelik çıkarım doğruluğunu yaklaşık %50'den %5'in altına düşürdüğünü göstermektedir. Ek olarak, yaklaşımımız güçlü bir modeller arası genelleme, prompt-varyasyon sağlamlığı ve fayda-gizlilik ödünleşmeleri sunmaktadır. Kodumuz şu adresten temin edilebilir: https://github.com/Jasper-Yan/TRACE-RPS."
     }
   },
   {
-    "id": "2602.10100v1",
-    "title": "Towards Explainable Federated Learning: Understanding the Impact of Differential Privacy",
+    "id": "2602.11513v1",
+    "title": "Differentially Private and Communication Efficient Large Language Model Split Inference via Stochastic Quantization and Soft Prompt",
     "authors": [
-      "Júlio Oliveira",
-      "Rodrigo Ferreira",
-      "André Riker",
-      "Glaucio H. S. Carvalho",
-      "Eirini Eleni Tsilopoulou"
+      "Yujie Gu",
+      "Richeng Jin",
+      "Xiaoyu Ji",
+      "Yier Jin",
+      "Wenyuan Xu"
     ],
-    "published_date": "2026-02-10",
+    "published_date": "2026-02-12",
     "tags": [
-      "cs.LG",
-      "cs.CR"
+      "cs.CR",
+      "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2602.10100v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.10100v1",
+    "link": "http://arxiv.org/abs/2602.11513v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.11513v1",
     "content": {
-      "en": "Data privacy and eXplainable Artificial Intelligence (XAI) are two important aspects for modern Machine Learning systems. To enhance data privacy, recent machine learning models have been designed as a Federated Learning (FL) system. On top of that, additional privacy layers can be added, via Differential Privacy (DP). On the other hand, to improve explainability, ML must consider more interpretable approaches with reduced number of features and less complex internal architecture. In this context, this paper aims to achieve a machine learning (ML) model that combines enhanced data privacy with explainability. So, we propose a FL solution, called Federated EXplainable Trees with Differential Privacy (FEXT-DP), that: (i) is based on Decision Trees, since they are lightweight and have superior explainability than neural networks-based FL systems; (ii) provides additional layer of data privacy protection applying Differential Privacy (DP) to the Tree-Based model. However, there is a side effect adding DP: it harms the explainability of the system. So, this paper also presents the impact of DP protection on the explainability of the ML model. The carried out performance assessment shows improvements of FEXT-DP in terms of a faster training, i.e., numbers of rounds, Mean Squared Error and explainability.",
-      "tr": "**Makale Başlığı:** Açıklanabilir Federe Öğrenmeye Doğru: Differential Privacy'nin Etkisini Anlamak\n\n**Özet:**\n\nVeri gizliliği ve eXplainable Artificial Intelligence (XAI), modern Makine Öğrenmesi sistemleri için iki önemli husustur. Veri gizliliğini artırmak amacıyla, son makine öğrenmesi modelleri bir Federated Learning (FL) sistemi olarak tasarlanmıştır. Bunun üzerine, Differential Privacy (DP) aracılığıyla ek gizlilik katmanları eklenebilir. Diğer yandan, açıklanabilirliği geliştirmek için ML, daha az sayıda özellik ve daha az karmaşık iç mimariye sahip, daha yorumlanabilir yaklaşımları göz önünde bulundurmalıdır. Bu bağlamda, bu makale, geliştirilmiş veri gizliliğini açıklanabilirlikle birleştiren bir makine öğrenmesi (ML) modeli elde etmeyi amaçlamaktadır. Bu nedenle, aşağıdaki özelliklere sahip, Federated EXplainable Trees with Differential Privacy (FEXT-DP) adında bir FL çözümü öneriyoruz: (i) hafif olmaları ve sinir ağları tabanlı FL sistemlerine kıyasla üstün açıklanabilirliğe sahip olmaları nedeniyle Decision Trees üzerine kurulmuştur; (ii) Tree-Based modele Differential Privacy (DP) uygulayarak ek bir veri gizliliği koruma katmanı sağlar. Ancak, DP eklemenin bir yan etkisi vardır: sistemin açıklanabilirliğine zarar verir. Bu nedenle, bu makale aynı zamanda DP korumasının ML modelinin açıklanabilirliği üzerindeki etkisini de sunmaktadır. Yapılan performans değerlendirmesi, FEXT-DP'nin daha hızlı eğitim (yani, tur sayısı), Mean Squared Error ve açıklanabilirlik açısından iyileşmelerini göstermektedir."
+      "en": "Large Language Models (LLMs) have achieved remarkable performance and received significant research interest. The enormous computational demands, however, hinder the local deployment on devices with limited resources. The current prevalent LLM inference paradigms require users to send queries to the service providers for processing, which raises critical privacy concerns. Existing approaches propose to allow the users to obfuscate the token embeddings before transmission and utilize local models for denoising. Nonetheless, transmitting the token embeddings and deploying local models may result in excessive communication and computation overhead, preventing practical implementation. In this work, we propose \\textbf{DEL}, a framework for \\textbf{D}ifferentially private and communication \\textbf{E}fficient \\textbf{L}LM split inference. More specifically, an embedding projection module and a differentially private stochastic quantization mechanism are proposed to reduce the communication overhead in a privacy-preserving manner. To eliminate the need for local models, we adapt soft prompt at the server side to compensate for the utility degradation caused by privacy. To the best of our knowledge, this is the first work that utilizes soft prompt to improve the trade-off between privacy and utility in LLM inference, and extensive experiments on text generation and natural language understanding benchmarks demonstrate the effectiveness of the proposed method.",
+      "tr": "Makale Başlığı: Diferansiyel Gizlilik ve İletişim Verimliliğine Sahip Büyük Dil Modeli Bölünmüş Çıkarımı için Stokastik Kuantizasyon ve Soft Prompt Kullanımı\n\nÖzet:\nLarge Language Models (LLMs), dikkate değer bir performans sergilemiş ve önemli araştırma ilgisi görmüştür. Ancak, muazzam hesaplama gereksinimleri, sınırlı kaynaklara sahip cihazlarda yerel dağıtımı engellemektedir. Mevcut yaygın LLM inference paradigmaları, kullanıcıların işleme için sorguları servis sağlayıcılara göndermesini gerektirir, bu da kritik gizlilik endişelerini gündeme getirir. Mevcut yaklaşımlar, kullanıcıların iletimden önce token embeddings'ini karartmasına ve gürültüyü gidermek için yerel modeller kullanmasına olanak tanımayı önermektedir. Bununla birlikte, token embeddings'inin iletilmesi ve yerel modellerin konuşlandırılması aşırı iletişim ve hesaplama yüküne neden olabilir ve pratik uygulamayı engelleyebilir. Bu çalışmada, Differentially private ve communication Efficient LLM split inference için bir framework olan **DEL**'i (Differentially private and communication Efficient LLM split inference) öneriyoruz. Daha spesifik olarak, iletişim yükünü gizlilik koruyucu bir şekilde azaltmak için bir embedding projection modülü ve differentially private stochastic quantization mekanizması önerilmektedir. Yerel modellere olan ihtiyacı ortadan kaldırmak için, gizlilikten kaynaklanan utility degradation'ı telafi etmek üzere sunucu tarafında soft prompt'u adapte ediyoruz. Bilgimiz dahilinde, LLM inference'ında privacy ve utility arasındaki ödünleşmeyi iyileştirmek için soft prompt kullanan ilk çalışma budur ve metin üretimi ile natural language understanding benchmark'ları üzerindeki kapsamlı deneyler, önerilen yöntemin etkinliğini göstermektedir."
+    }
+  },
+  {
+    "id": "2602.11416v1",
+    "title": "Optimizing Agent Planning for Security and Autonomy",
+    "authors": [
+      "Aashish Kolluri",
+      "Rishi Sharma",
+      "Manuel Costa",
+      "Boris Köpf",
+      "Tobias Nießen"
+    ],
+    "published_date": "2026-02-11",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2602.11416v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.11416v1",
+    "content": {
+      "en": "Indirect prompt injection attacks threaten AI agents that execute consequential actions, motivating deterministic system-level defenses. Such defenses can provably block unsafe actions by enforcing confidentiality and integrity policies, but currently appear costly: they reduce task completion rates and increase token usage compared to probabilistic defenses. We argue that existing evaluations miss a key benefit of system-level defenses: reduced reliance on human oversight. We introduce autonomy metrics to quantify this benefit: the fraction of consequential actions an agent can execute without human-in-the-loop (HITL) approval while preserving security. To increase autonomy, we design a security-aware agent that (i) introduces richer HITL interactions, and (ii) explicitly plans for both task progress and policy compliance. We implement this agent design atop an existing information-flow control defense against prompt injection and evaluate it on the AgentDojo and WASP benchmarks. Experiments show that this approach yields higher autonomy without sacrificing utility.",
+      "tr": "Makale Başlığı: Güvenlik ve Otonomi için Ajan Planlamasının Optimizasyonu\n\nÖzet:\nDolaylı prompt injection saldırıları, sonuç doğuran eylemleri gerçekleştiren yapay zeka ajanları için tehdit oluşturmakta ve deterministik sistem düzeyinde savunmaları gerektirmektedir. Bu tür savunmalar, gizlilik ve bütünlük politikalarını uygulayarak güvenli olmayan eylemleri kanıtlanabilir şekilde engelleyebilir, ancak şu anda maliyetli görünmektedir: olasılıksal savunmalara kıyasla görev tamamlama oranlarını düşürmekte ve token kullanımını artırmaktadır. Sistem düzeyinde savunmaların önemli bir faydasının, insan denetimine olan bağımlılığın azalması olduğunu mevcut değerlendirmelerin gözden kaçırdığını savunuyoruz. Bu faydayı nicelleştirmek için otonomi metriklerini tanıtıyoruz: güvenliği korurken bir ajanın insan-döngüde (HITL) onayına ihtiyaç duymadan gerçekleştirebileceği sonuç doğuran eylemlerin oranı. Otonomiyi artırmak için, (i) daha zengin HITL etkileşimleri sunan ve (ii) hem görev ilerlemesini hem de politika uyumluluğunu açıkça planlayan güvenlik-farkındalığına sahip bir ajan tasarlıyoruz. Bu ajan tasarımını, prompt injection'a karşı mevcut bir information-flow control defense üzerine inşa ediyor ve AgentDojo ile WASP benchmark'larında değerlendiriyoruz. Deneyler, bu yaklaşımın fayda kaybı olmaksızın daha yüksek otonomi sağladığını göstermektedir."
+    }
+  },
+  {
+    "id": "2602.11327v1",
+    "title": "Security Threat Modeling for Emerging AI-Agent Protocols: A Comparative Analysis of MCP, A2A, Agora, and ANP",
+    "authors": [
+      "Zeynab Anbiaee",
+      "Mahdi Rabbani",
+      "Mansur Mirani",
+      "Gunjan Piya",
+      "Igor Opushnyev"
+    ],
+    "published_date": "2026-02-11",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2602.11327v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.11327v1",
+    "content": {
+      "en": "The rapid development of the AI agent communication protocols, including the Model Context Protocol (MCP), Agent2Agent (A2A), Agora, and Agent Network Protocol (ANP), is reshaping how AI agents communicate with tools, services, and each other. While these protocols support scalable multi-agent interaction and cross-organizational interoperability, their security principles remain understudied, and standardized threat modeling is limited; no protocol-centric risk assessment framework has been established yet. This paper presents a systematic security analysis of four emerging AI agent communication protocols. First, we develop a structured threat modeling analysis that examines protocol architectures, trust assumptions, interaction patterns, and lifecycle behaviors to identify protocol-specific and cross-protocol risk surfaces. Second, we introduce a qualitative risk assessment framework that identifies twelve protocol-level risks and evaluates security posture across the creation, operation, and update phases through systematic assessment of likelihood, impact, and overall protocol risk, with implications for secure deployment and future standardization. Third, we provide a measurement-driven case study on MCP that formalizes the risk of missing mandatory validation/attestation for executable components as a falsifiable security claim by quantifying wrong-provider tool execution under multi-server composition across representative resolver policies. Collectively, our results highlight key design-induced risk surfaces and provide actionable guidance for secure deployment and future standardization of agent communication ecosystems.",
+      "tr": "The rapid development of the AI agent communication protocols, including the Model Context Protocol (MCP), Agent2Agent (A2A), Agora, and Agent Network Protocol (ANP), is reshaping how AI agents communicate with tools, services, and each other. While these protocols support scalable multi-agent interaction and cross-organizational interoperability, their security principles remain understudied, and standardized threat modeling is limited; no protocol-centric risk assessment framework has been established yet. This paper presents a systematic security analysis of four emerging AI agent communication protocols. First, we develop a structured threat modeling analysis that examines protocol architectures, trust assumptions, interaction patterns, and lifecycle behaviors to identify protocol-specific and cross-protocol risk surfaces. Second, we introduce a qualitative risk assessment framework that identifies twelve protocol-level risks and evaluates security posture across the creation, operation, and update phases through systematic assessment of likelihood, impact, and overall protocol risk, with implications for secure deployment and future standardization. Third, we provide a measurement-driven case study on MCP that formalizes the risk of missing mandatory validation/attestation for executable components as a falsifiable security claim by quantifying wrong-provider tool execution under multi-server composition across representative resolver policies. Collectively, our results highlight key design-induced risk surfaces and provide actionable guidance for secure deployment and future standardization of agent communication ecosystems."
+    }
+  },
+  {
+    "id": "2602.11304v1",
+    "title": "CryptoAnalystBench: Failures in Multi-Tool Long-Form LLM Analysis",
+    "authors": [
+      "Anushri Eswaran",
+      "Oleg Golev",
+      "Darshan Tank",
+      "Sidhant Rahi",
+      "Himanshu Tyagi"
+    ],
+    "published_date": "2026-02-11",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2602.11304v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.11304v1",
+    "content": {
+      "en": "Modern analyst agents must reason over complex, high token inputs, including dozens of retrieved documents, tool outputs, and time sensitive data. While prior work has produced tool calling benchmarks and examined factuality in knowledge augmented systems, relatively little work studies their intersection: settings where LLMs must integrate large volumes of dynamic, structured and unstructured multi tool outputs. We investigate LLM failure modes in this regime using crypto as a representative high data density domain. We introduce (1) CryptoAnalystBench, an analyst aligned benchmark of 198 production crypto and DeFi queries spanning 11 categories; (2) an agentic harness equipped with relevant crypto and DeFi tools to generate responses across multiple frontier LLMs; and (3) an evaluation pipeline with citation verification and an LLM as a judge rubric spanning four user defined success dimensions: relevance, temporal relevance, depth, and data consistency. Using human annotation, we develop a taxonomy of seven higher order error types that are not reliably captured by factuality checks or LLM based quality scoring. We find that these failures persist even in state of the art systems and can compromise high stakes decisions. Based on this taxonomy, we refine the judge rubric to better capture these errors. While the judge does not align with human annotators on precise scoring across rubric iterations, it reliably identifies critical failure modes, enabling scalable feedback for developers and researchers studying analyst style agents. We release CryptoAnalystBench with annotated queries, the evaluation pipeline, judge rubrics, and the error taxonomy, and outline mitigation strategies and open challenges in evaluating long form, multi tool augmented systems.",
+      "tr": "Modern analyst agents must reason over complex, high token inputs, including dozens of retrieved documents, tool outputs, and time sensitive data. While prior work has produced tool calling benchmarks and examined factuality in knowledge augmented systems, relatively little work studies their intersection: settings where LLMs must integrate large volumes of dynamic, structured and unstructured multi tool outputs. We investigate LLM failure modes in this regime using crypto as a representative high data density domain. We introduce (1) CryptoAnalystBench, an analyst aligned benchmark of 198 production crypto and DeFi queries spanning 11 categories; (2) an agentic harness equipped with relevant crypto and DeFi tools to generate responses across multiple frontier LLMs; and (3) an evaluation pipeline with citation verification and an LLM as a judge rubric spanning four user defined success dimensions: relevance, temporal relevance, depth, and data consistency. Using human annotation, we develop a taxonomy of seven higher order error types that are not reliably captured by factuality checks or LLM based quality scoring. We find that these failures persist even in state of the art systems and can compromise high stakes decisions. Based on this taxonomy, we refine the judge rubric to better capture these errors. While the judge does not align with human annotators on precise scoring across rubric iterations, it reliably identifies critical failure modes, enabling scalable feedback for developers and researchers studying analyst style agents. We release CryptoAnalystBench with annotated queries, the evaluation pipeline, judge rubrics, and the error taxonomy, and outline mitigation strategies and open challenges in evaluating long form, multi tool augmented systems."
     }
   }
 ]
