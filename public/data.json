@@ -1,5 +1,192 @@
 [
   {
+    "id": "2602.16708v1",
+    "title": "Policy Compiler for Secure Agentic Systems",
+    "authors": [
+      "Nils Palumbo",
+      "Sarthak Choudhary",
+      "Jihye Choi",
+      "Prasad Chalasani",
+      "Mihai Christodorescu"
+    ],
+    "published_date": "2026-02-18",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "link": "http://arxiv.org/abs/2602.16708v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.16708v1",
+    "content": {
+      "en": "LLM-based agents are increasingly being deployed in contexts requiring complex authorization policies: customer service protocols, approval workflows, data access restrictions, and regulatory compliance. Embedding these policies in prompts provides no enforcement guarantees. We present PCAS, a Policy Compiler for Agentic Systems that provides deterministic policy enforcement.   Enforcing such policies requires tracking information flow across agents, which linear message histories cannot capture. Instead, PCAS models the agentic system state as a dependency graph capturing causal relationships among events such as tool calls, tool results, and messages. Policies are expressed in a Datalog-derived language, as declarative rules that account for transitive information flow and cross-agent provenance. A reference monitor intercepts all actions and blocks violations before execution, providing deterministic enforcement independent of model reasoning.   PCAS takes an existing agent implementation and a policy specification, and compiles them into an instrumented system that is policy-compliant by construction, with no security-specific restructuring required. We evaluate PCAS on three case studies: information flow policies for prompt injection defense, approval workflows in a multi-agent pharmacovigilance system, and organizational policies for customer service. On customer service tasks, PCAS improves policy compliance from 48% to 93% across frontier models, with zero policy violations in instrumented runs.",
+      "tr": "Makale Başlığı: Secure Agentic Systems için Politika Derleyicisi\n\nÖzet:\nLLM-temelli agent'lar, giderek artan bir şekilde karmaşık yetkilendirme politikaları gerektiren bağlamlarda konuşlandırılmaktadır: müşteri hizmetleri protokolleri, onay iş akışları, veri erişim kısıtlamaları ve mevzuata uyumluluk. Bu politikaları prompt'lara gömmek, herhangi bir zorlama garantisi sağlamaz. PCAS'ı sunuyoruz, Agentic Systems için Politika Derleyicisi, deterministik politika zorlaması sağlar. Bu tür politikaları zorlamak, agent'lar arasındaki bilgi akışını izlemeyi gerektirir; doğrusal mesaj geçmişleri bunu yakalayamaz. Bunun yerine, PCAS, agentic sistem durumunu olaylar arasındaki nedensel ilişkileri yakalayan bir dependency graph olarak modeller; örneğin tool calls, tool results ve messages gibi. Politikalar, Datalog'dan türetilmiş bir dilde, geçişli bilgi akışını ve cross-agent provenance'ı dikkate alan deklaratif kurallar olarak ifade edilir. Bir reference monitor tüm eylemleri engeller ve yürütmeden önce ihlalleri engeller, model reasoning'den bağımsız deterministik zorlama sağlar. PCAS, mevcut bir agent implementasyonunu ve bir politika spesifikasyonunu alır ve bunları politika uyumlu olacak şekilde yapılandırılmış bir sisteme derler; bu yapılandırma sırasında herhangi bir güvenlik odaklı yeniden yapılandırma gerektirmez. PCAS'ı üç vaka incelemesi üzerinde değerlendiriyoruz: prompt injection defense için bilgi akış politikaları, multi-agent pharmacovigilance sisteminde onay iş akışları ve müşteri hizmetleri için organizasyonel politikalar. Müşteri hizmetleri görevlerinde, PCAS politika uyumluluğunu frontier modellerde %48'den %93'e iyileştirir ve yapılandırılmış çalışmalarda sıfır politika ihlali ile sonuçlanır."
+    }
+  },
+  {
+    "id": "2602.16596v1",
+    "title": "Sequential Membership Inference Attacks",
+    "authors": [
+      "Thomas Michel",
+      "Debabrota Basu",
+      "Emilie Kaufmann"
+    ],
+    "published_date": "2026-02-18",
+    "tags": [
+      "cs.LG",
+      "cs.CR",
+      "math.ST",
+      "stat.ML"
+    ],
+    "link": "http://arxiv.org/abs/2602.16596v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.16596v1",
+    "content": {
+      "en": "Modern AI models are not static. They go through multiple updates in their lifecycles. Thus, exploiting the model dynamics to create stronger Membership Inference (MI) attacks and tighter privacy audits are timely questions. Though the literature empirically shows that using a sequence of model updates can increase the power of MI attacks, rigorous analysis of the `optimal' MI attacks is limited to static models with infinite samples. Hence, we develop an `optimal' MI attack, SeMI*, that uses the sequence of model updates to identify the presence of a target inserted at a certain update step. For the empirical mean computation, we derive the optimal power of SeMI*, while accessing a finite number of samples with or without privacy. Our results retrieve the existing asymptotic analysis. We observe that having access to the model sequence avoids the dilution of MI signals unlike the existing attacks on the final model, where the MI signal vanishes as training data accumulates. Furthermore, an adversary can use SeMI* to tune both the insertion time and the canary to yield tighter privacy audits. Finally, we conduct experiments across data distributions and models trained or fine-tuned with DP-SGD demonstrating that practical variants of SeMI* lead to tighter privacy audits than the baselines.",
+      "tr": "Makale Başlığı: Ardışık Üyelik Çıkarım Saldırıları\n\nÖzet:\nModern yapay zeka modelleri statik değildir. Yaşam döngüleri boyunca çoklu güncelleme aşamalarından geçerler. Bu nedenle, daha güçlü Üyelik Çıkarım (MI) saldırıları oluşturmak ve daha sıkı gizlilik denetimleri gerçekleştirmek için model dinamiklerinden yararlanmak zamanında sorulardır. Literatürde, bir dizi model güncellemesinin kullanılmasının MI saldırılarının gücünü artırabileceği ampirik olarak gösterilmesine rağmen, `optimal' MI saldırılarının titiz analizi, sonsuz örneğe sahip statik modellerle sınırlıdır. Bu nedenle, belirli bir güncelleme adımında yerleştirilen bir hedefin varlığını tespit etmek için model güncelleme dizisini kullanan `optimal' bir MI saldırısı olan SeMI*'ı geliştiriyoruz. Ampirik ortalama hesaplaması için, gizlilikli veya gizliliksiz sınırlı sayıda örneğe erişimle SeMI*'ın optimal gücünü türetiyoruz. Sonuçlarımız mevcut asimptotik analizi yeniden elde eder. Model dizisine erişimin, MI sinyalinin kaybolduğu son model üzerindeki mevcut saldırıların aksine, MI sinyalinin seyreltilmesini önlediğini gözlemliyoruz, zira eğitim verileri biriktikçe MI sinyali ortadan kalkmaktadır. Dahası, bir saldırgan, hem yerleştirme zamanını hem de kanaryayı ayarlamak için SeMI*'ı kullanarak daha sıkı gizlilik denetimleri elde edebilir. Son olarak, DP-SGD ile eğitilmiş veya ince ayarlanmış veri dağılımları ve modeller genelinde deneyler yürüterek, SeMI*'ın pratik varyantlarının taban çizgilerine göre daha sıkı gizlilik denetimleri sağladığını gösteriyoruz."
+    }
+  },
+  {
+    "id": "2602.16564v1",
+    "title": "A Scalable Approach to Solving Simulation-Based Network Security Games",
+    "authors": [
+      "Michael Lanier",
+      "Yevgeniy Vorobeychik"
+    ],
+    "published_date": "2026-02-18",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2602.16564v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.16564v1",
+    "content": {
+      "en": "We introduce MetaDOAR, a lightweight meta-controller that augments the Double Oracle / PSRO paradigm with a learned, partition-aware filtering layer and Q-value caching to enable scalable multi-agent reinforcement learning on very large cyber-network environments. MetaDOAR learns a compact state projection from per node structural embeddings to rapidly score and select a small subset of devices (a top-k partition) on which a conventional low-level actor performs focused beam search utilizing a critic agent. Selected candidate actions are evaluated with batched critic forwards and stored in an LRU cache keyed by a quantized state projection and local action identifiers, dramatically reducing redundant critic computation while preserving decision quality via conservative k-hop cache invalidation. Empirically, MetaDOAR attains higher player payoffs than SOTA baselines on large network topologies, without significant scaling issues in terms of memory usage or training time. This contribution provide a practical, theoretically motivated path to efficient hierarchical policy learning for large-scale networked decision problems.",
+      "tr": "Makale Başlığı: **Ölçeklenebilir Bir Yaklaşım ile Simülasyon Tabanlı Ağ Güvenliği Oyunlarının Çözümü**\n\nÖzet:\nÇok büyük siber-ağ ortamlarında ölçeklenebilir çoklu-ajan pekiştirmeli öğrenmeyi (multi-agent reinforcement learning) sağlamak amacıyla, öğrenilmiş, bölüm-farkındalığı olan (partition-aware) bir filtreleme katmanı ve Q-değeri önbelleği (Q-value caching) ile Double Oracle / PSRO paradigmasını güçlendiren hafif bir meta-denetleyici olan MetaDOAR'ı tanıtıyoruz. MetaDOAR, her düğümdeki yapısal gömmelerden (structural embeddings) kompakt bir durum projeksiyonu (state projection) öğrenerek, geleneksel düşük seviyeli bir aktörün odaklanmış ışın araması (focused beam search) yaptığı küçük bir cihaz alt kümesini (bir top-k bölümü) hızla puanlar ve seçer, bu işlemde bir eleştirmen ajan (critic agent) kullanılır. Seçilen aday eylemler, yığıtlı eleştirmen ilerlemeleri (batched critic forwards) ile değerlendirilir ve nicelenmiş bir durum projeksiyonu ve yerel eylem tanımlayıcıları ile anahtarlanmış bir LRU önbelleğinde saklanır. Bu, karar kalitesini muhafazakar k-hop önbellek geçersizliği (conservative k-hop cache invalidation) yoluyla koruyarak, gereksiz eleştirmen hesaplamalarını dramatik bir şekilde azaltır. Ampirik olarak, MetaDOAR büyük ağ topolojilerinde bellekte yer kullanımı veya eğitim süresi açısından önemli ölçeklenme sorunları olmaksızın, en gelişmiş (SOTA) temel çizgilere göre daha yüksek oyuncu getirileri elde eder. Bu katkı, büyük ölçekli ağ tabanlı karar problemleri için verimli hiyerarşik politika öğrenimine (hierarchical policy learning) pratik, teorik olarak motive edilmiş bir yol sunar."
+    }
+  },
+  {
+    "id": "2602.16520v1",
+    "title": "Recursive language models for jailbreak detection: a procedural defense for tool-augmented agents",
+    "authors": [
+      "Doron Shavit"
+    ],
+    "published_date": "2026-02-18",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2602.16520v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.16520v1",
+    "content": {
+      "en": "Jailbreak prompts are a practical and evolving threat to large language models (LLMs), particularly in agentic systems that execute tools over untrusted content. Many attacks exploit long-context hiding, semantic camouflage, and lightweight obfuscations that can evade single-pass guardrails. We present RLM-JB, an end-to-end jailbreak detection framework built on Recursive Language Models (RLMs), in which a root model orchestrates a bounded analysis program that transforms the input, queries worker models over covered segments, and aggregates evidence into an auditable decision. RLM-JB treats detection as a procedure rather than a one-shot classification: it normalizes and de-obfuscates suspicious inputs, chunks text to reduce context dilution and guarantee coverage, performs parallel chunk screening, and composes cross-chunk signals to recover split-payload attacks. On AutoDAN-style adversarial inputs, RLM-JB achieves high detection effectiveness across three LLM backends (ASR/Recall 92.5-98.0%) while maintaining very high precision (98.99-100%) and low false positive rates (0.0-2.0%), highlighting a practical sensitivity-specificity trade-off as the screening backend changes.",
+      "tr": "Elbette, istenen çeviri aşağıdadır:\n\n**Makale Başlığı:** Recursive language models for jailbreak detection: a procedural defense for tool-augmented agents\n\n**Özet:**\n\nLarge language models (LLMs) için jailbreak prompt'ları, özellikle araçları güvenilmeyen içerikler üzerinde çalıştıran agentic sistemlerde pratik ve gelişen bir tehdittir. Birçok saldırı, tek geçişli guardrail'ları atlatabilen long-context hiding, semantic camouflage ve hafif karmaşıklaştırmalardan faydalanır. Biz, Recursive Language Models (RLMs) üzerine kurulu uçtan uca bir jailbreak detection framework olan RLM-JB'yi sunuyoruz. Bu framework'te, bir root model, girdiyi dönüştüren, kapsanan segmentler üzerinde worker models'a sorgular yapan ve bulguları denetlenebilir bir karara dönüştüren sınırlı bir analysis programını yönetir. RLM-JB, detection'ı tek seferlik bir sınıflandırma yerine bir prosedür olarak ele alır: şüpheli girdileri normalize eder ve de-obfuscate eder, context dilution'ı azaltmak ve kapsama alanını garanti etmek için metni parçalara ayırır, paralel chunk screening gerçekleştirir ve split-payload saldırılarını kurtarmak için cross-chunk sinyallerini birleştirir. AutoDAN tarzı adversarial girdiler üzerinde, RLM-JB üç LLM backend'inde yüksek detection etkinliği (ASR/Recall 92.5-98.0%) elde ederken aynı zamanda çok yüksek precision (%98.99-100) ve düşük false positive oranları (%0.0-2.0) korur. Bu durum, screening backend'i değiştikçe pratik bir sensitivity-specificity trade-off'unu vurgular."
+    }
+  },
+  {
+    "id": "2602.16436v1",
+    "title": "Learning with Locally Private Examples by Inverse Weierstrass Private Stochastic Gradient Descent",
+    "authors": [
+      "Jean Dufraiche",
+      "Paul Mangold",
+      "Michaël Perrot",
+      "Marc Tommasi"
+    ],
+    "published_date": "2026-02-18",
+    "tags": [
+      "cs.LG",
+      "cs.CR",
+      "stat.ML"
+    ],
+    "link": "http://arxiv.org/abs/2602.16436v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.16436v1",
+    "content": {
+      "en": "Releasing data once and for all under noninteractive Local Differential Privacy (LDP) enables complete data reusability, but the resulting noise may create bias in subsequent analyses. In this work, we leverage the Weierstrass transform to characterize this bias in binary classification. We prove that inverting this transform leads to a bias-correction method to compute unbiased estimates of nonlinear functions on examples released under LDP. We then build a novel stochastic gradient descent algorithm called Inverse Weierstrass Private SGD (IWP-SGD). It converges to the true population risk minimizer at a rate of $\\mathcal{O}(1/n)$, with $n$ the number of examples. We empirically validate IWP-SGD on binary classification tasks using synthetic and real-world datasets.",
+      "tr": "**Makale Başlığı:** Learning with Locally Private Examples by Inverse Weierstrass Private Stochastic Gradient Descent\n\n**Özet:**\n\nNon-interactive Local Differential Privacy (LDP) altında verinin tek seferde serbest bırakılması, verinin tam yeniden kullanılabilirliğini sağlamaktadır, ancak ortaya çıkan gürültü sonraki analizlerde yanlılığa neden olabilir. Bu çalışmada, ikili sınıflandırmada bu yanlılığı karakterize etmek için Weierstrass transformundan yararlanmaktayız. Bu transformun tersini almak, LDP altında serbest bırakılan örnekler üzerindeki doğrusal olmayan fonksiyonların yanlısız tahminlerini hesaplamak için bir yanlılık düzeltme yöntemi sağladığını ispat etmekteyiz. Ardından, Inverse Weierstrass Private SGD (IWP-SGD) adını verdiğimiz yeni bir stochastic gradient descent algoritması geliştirmekteyiz. Bu algoritma, $n$ örneğin sayısına bağlı olarak $\\mathcal{O}(1/n)$ oranında, gerçek popülasyon risk minimizer'ına yakınsamaktadır. IWP-SGD'yi sentetik ve gerçek dünya veri setlerini kullanarak ikili sınıflandırma görevlerinde ampirik olarak doğrulamaktayız."
+    }
+  },
+  {
+    "id": "2602.16309v1",
+    "title": "The Weight of a Bit: EMFI Sensitivity Analysis of Embedded Deep Learning Models",
+    "authors": [
+      "Jakub Breier",
+      "Štefan Kučerák",
+      "Xiaolu Hou"
+    ],
+    "published_date": "2026-02-18",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2602.16309v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.16309v1",
+    "content": {
+      "en": "Fault injection attacks on embedded neural network models have been shown as a potent threat. Numerous works studied resilience of models from various points of view. As of now, there is no comprehensive study that would evaluate the influence of number representations used for model parameters against electromagnetic fault injection (EMFI) attacks.   In this paper, we investigate how four different number representations influence the success of an EMFI attack on embedded neural network models. We chose two common floating-point representations (32-bit, and 16-bit), and two integer representations (8-bit, and 4-bit). We deployed four common image classifiers, ResNet-18, ResNet-34, ResNet-50, and VGG-11, on an embedded memory chip, and utilized a low-cost EMFI platform to trigger faults. Our results show that while floating-point representations exhibit almost a complete degradation in accuracy (Top-1 and Top-5) after a single fault injection, integer representations offer better resistance overall. Especially, when considering the the 8-bit representation on a relatively large network (VGG-11), the Top-1 accuracies stay at around 70% and the Top-5 at around 90%.",
+      "tr": "Aşağıda akademik makale başlığı ve özetinin istenen şekilde Türkçeye çevrilmiş halini bulabilirsiniz:\n\n**Makale Başlığı:** The Weight of a Bit: EMFI Sensitivity Analysis of Embedded Deep Learning Models\n\n**Özet:**\n\nGömülü sinir ağı modellerine yönelik fault injection saldırıları, güçlü bir tehdit olarak kabul edilmektedir. Mevcut çalışmalar, modellerin dayanıklılığını çeşitli açılardan incelemiştir. Şu ana kadar, model parametreleri için kullanılan sayı temsillerinin elektromanyetik fault injection (EMFI) saldırılarına karşı etkisini değerlendiren kapsamlı bir çalışma bulunmamaktadır. Bu çalışmada, dört farklı sayı temsilinin gömülü sinir ağı modelleri üzerindeki bir EMFI saldırısının başarısını nasıl etkilediğini araştırmaktayız. İki yaygın kayan nokta temsilini (32-bit ve 16-bit) ve iki tam sayı temsilini (8-bit ve 4-bit) seçtik. Dört yaygın görüntü sınıflandırıcısını (ResNet-18, ResNet-34, ResNet-50 ve VGG-11) bir gömülü bellek çipine yerleştirdik ve arızaları tetiklemek için düşük maliyetli bir EMFI platformu kullandık. Sonuçlarımız, kayan nokta temsillerinin tek bir fault injection sonrasında doğrulukta (Top-1 ve Top-5) neredeyse tam bir düşüş sergilerken, tam sayı temsillerinin genel olarak daha iyi bir direnç sunduğunu göstermektedir. Özellikle, nispeten büyük bir ağda (VGG-11) 8-bit temsil ele alındığında, Top-1 doğruluğu yaklaşık %70 civarında, Top-5 doğruluğu ise yaklaşık %90 civarında kalmaktadır."
+    }
+  },
+  {
+    "id": "2602.16109v1",
+    "title": "Federated Graph AGI for Cross-Border Insider Threat Intelligence in Government Financial Schemes",
+    "authors": [
+      "Srikumar Nayak",
+      "James Walmesley"
+    ],
+    "published_date": "2026-02-18",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CE"
+    ],
+    "link": "http://arxiv.org/abs/2602.16109v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.16109v1",
+    "content": {
+      "en": "Cross-border insider threats pose a critical challenge to government financial schemes, particularly when dealing with distributed, privacy-sensitive data across multiple jurisdictions. Existing approaches face fundamental limitations: they cannot effectively share intelligence across borders due to privacy constraints, lack reasoning capabilities to understand complex multi-step attack patterns, and fail to capture intricate graph-structured relationships in financial networks. We introduce FedGraph-AGI, a novel federated learning framework integrating Artificial General Intelligence (AGI) reasoning with graph neural networks for privacy-preserving cross-border insider threat detection. Our approach combines: (1) federated graph neural networks preserving data sovereignty; (2) Mixture-of-Experts (MoE) aggregation for heterogeneous jurisdictions; and (3) AGI-powered reasoning via Large Action Models (LAM) performing causal inference over graph data. Through experiments on a 50,000-transaction dataset across 10 jurisdictions, FedGraph-AGI achieves 92.3% accuracy, significantly outperforming federated baselines (86.1%) and centralized approaches (84.7%). Our ablation studies reveal AGI reasoning contributes 6.8% improvement, while MoE adds 4.4%. The system maintains epsilon = 1.0 differential privacy while achieving near-optimal performance and scales efficiently to 50+ clients. This represents the first integration of AGI reasoning with federated graph learning for insider threat detection, opening new directions for privacy-preserving cross-border intelligence sharing.",
+      "tr": "**Makale Başlığı:** Sınır Ötesi İç Tehdit İstihbaratı İçin Federated Graph AGI'nin Devlet Finansal Planlarında Kullanımı\n\n**Özet:**\n\nSınır ötesi iç tehditler, özellikle birden fazla yetki alanında dağıtılmış ve gizliliğe duyarlı verilerle uğraşılırken, devlet finansal planları için kritik bir zorluk teşkil etmektedir. Mevcut yaklaşımlar temel sınırlamalara sahiptir: gizlilik kısıtlamaları nedeniyle istihbaratı sınırlar ötesine etkili bir şekilde paylaşamazlar, karmaşık çok adımlı saldırı modellerini anlamak için reasoning yeteneklerinden yoksundurlar ve finansal ağlardaki karmaşık graph-structured ilişkileri yakalamada başarısız olurlar. Gizlilik korumalı sınır ötesi iç tehdit tespiti için Artificial General Intelligence (AGI) reasoning'i graph neural networks ile entegre eden yeni bir federated learning framework'ü olan FedGraph-AGI'yi sunuyoruz. Yaklaşımımız şunları birleştirir: (1) veri egemenliğini koruyan federated graph neural networks; (2) heterojen yetki alanları için Mixture-of-Experts (MoE) aggregation'ı; ve (3) graph verileri üzerinde causal inference gerçekleştiren Large Action Models (LAM) aracılığıyla AGI-powered reasoning. 10 yetki alanı üzerinden 50.000 işlemlik bir veri kümesinde yapılan deneyler aracılığıyla FedGraph-AGI, %92,3 doğruluk oranı elde ederek federated baseline'ları (%86,1) ve centralized yaklaşımları (%84,7) önemli ölçüde geride bırakmaktadır. Ablasyon çalışmalarımız, AGI reasoning'in %6,8 iyileştirme sağladığını, MoE'nin ise %4,4 eklediğini ortaya koymaktadır. Sistem, epsilon = 1.0 differential privacy'yi korurken neredeyse optimal bir performans elde etmekte ve 50'den fazla client'a verimli bir şekilde ölçeklenmektedir. Bu, iç tehdit tespiti için AGI reasoning'in federated graph learning ile ilk entegrasyonunu temsil etmekte ve gizlilik korumalı sınır ötesi istihbarat paylaşımı için yeni yönler açmaktadır."
+    }
+  },
+  {
+    "id": "2602.16098v1",
+    "title": "Collaborative Zone-Adaptive Zero-Day Intrusion Detection for IoBT",
+    "authors": [
+      "Amirmohammad Pasdar",
+      "Shabnam Kasra Kermanshahi",
+      "Nour Moustafa",
+      "Van-Thuan Pham"
+    ],
+    "published_date": "2026-02-18",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2602.16098v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.16098v1",
+    "content": {
+      "en": "The Internet of Battlefield Things (IoBT) relies on heterogeneous, bandwidth-constrained, and intermittently connected tactical networks that face rapidly evolving cyber threats. In this setting, intrusion detection cannot depend on continuous central collection of raw traffic due to disrupted links, latency, operational security limits, and non-IID traffic across zones. We present Zone-Adaptive Intrusion Detection (ZAID), a collaborative detection and model-improvement framework for unseen attack types, where \"zero-day\" refers to previously unobserved attack families and behaviours (not vulnerability disclosure timing). ZAID combines a universal convolutional model for generalisable traffic representations, an autoencoder-based reconstruction signal as an auxiliary anomaly score, and lightweight adapter modules for parameter-efficient zone adaptation. To support cross-zone generalisation under constrained connectivity, ZAID uses federated aggregation and pseudo-labelling to leverage locally observed, weakly labelled behaviours. We evaluate ZAID on ToN_IoT using a zero-day protocol that excludes MITM, DDoS, and DoS from supervised training and introduces them during zone-level deployment and adaptation. ZAID achieves up to 83.16% accuracy on unseen attack traffic and transfers to UNSW-NB15 under the same procedure, with a best accuracy of 71.64%. These results indicate that parameter-efficient, zone-personalised collaboration can improve the detection of previously unseen attacks in contested IoBT environments.",
+      "tr": "Kesinlikle, istediğiniz çeviriyi aşağıda bulabilirsiniz:\n\n**Makale Başlığı:** IoBT için İşbirlikçi Bölge-Adaptif Sıfır-Gün Saldırı Tespiti\n\n**Özet:**\nThe Internet of Battlefield Things (IoBT), heterogeneous, bandwidth-constrained, and intermittently connected tactical networks' üzerine kuruludur ve hızla gelişen siber tehditlerle karşı karşıyadır. Bu ortamda, kesintili bağlantılar, gecikme, operasyonel güvenlik sınırlamaları ve bölgeler arası non-IID traffic nedeniyle, saldırı tespiti ham trafiğin sürekli merkezi toplanmasına güvenemez. Biz, daha önce gözlemlenmemiş saldırı aileleri ve davranışları için \"sıfır-gün\" anlamına gelen, görünmeyen saldırı türleri için işbirlikçi bir tespit ve model iyileştirme çerçevesi olan Zone-Adaptive Intrusion Detection (ZAID)'i sunuyoruz. ZAID, genelleştirilebilir traffic temsilleri için evrensel bir convolutional model, yardımcı bir anomali skoru olarak autoencoder tabanlı bir reconstruction signal ve parametre-etkin bölge adaptasyonu için hafif adapter modüllerini birleştirir. Kısıtlı bağlantı altında bölge üstü genelleştirmeyi desteklemek için ZAID, yerel olarak gözlemlenen, zayıf etiketlenmiş davranışlardan yararlanmak üzere federated aggregation ve pseudo-labelling kullanır. Biz ZAID'i, supervised training'den MITM, DDoS ve DoS'u hariç tutan ve bunları bölge düzeyinde dağıtım ve adaptasyon sırasında tanıtan bir sıfır-gün protokolü kullanarak ToN_IoT üzerinde değerlendiriyoruz. ZAID, daha önce görülmemiş saldırı trafiğinde %83,16'ya kadar doğruluk elde eder ve aynı prosedür altında UNSW-NB15'e %71,64'lük en iyi doğruluk ile aktarılır. Bu sonuçlar, parametre-etkin, bölgeye özel kişiselleştirilmiş işbirliğinin, tartışmalı IoBT ortamlarında daha önce görülmemiş saldırıların tespitini iyileştirebileceğini göstermektedir."
+    }
+  },
+  {
+    "id": "2602.15945v1",
+    "title": "From Tool Orchestration to Code Execution: A Study of MCP Design Choices",
+    "authors": [
+      "Yuval Felendler",
+      "Parth A. Gandhi",
+      "Idan Habler",
+      "Yuval Elovici",
+      "Asaf Shabtai"
+    ],
+    "published_date": "2026-02-17",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2602.15945v1",
+    "pdf_link": "https://arxiv.org/pdf/2602.15945v1",
+    "content": {
+      "en": "Model Context Protocols (MCPs) provide a unified platform for agent systems to discover, select, and orchestrate tools across heterogeneous execution environments. As MCP-based systems scale to incorporate larger tool catalogs and multiple concurrently connected MCP servers, traditional tool-by-tool invocation increases coordination overhead, fragments state management, and limits support for wide-context operations. To address these scalability challenges, recent MCP designs have incorporated code execution as a first-class capability, an approach called Code Execution MCP (CE-MCP). This enables agents to consolidate complex workflows, such as SQL querying, file analysis, and multi-step data transformations, into a single program that executes within an isolated runtime environment. In this work, we formalize the architectural distinction between context-coupled (traditional) and context-decoupled (CE-MCP) models, analyzing their fundamental scalability trade-offs. Using the MCP-Bench framework across 10 representative servers, we empirically evaluate task behavior, tool utilization patterns, execution latency, and protocol efficiency as the scale of connected MCP servers and available tools increases, demonstrating that while CE-MCP significantly reduces token usage and execution latency, it introduces a vastly expanded attack surface. We address this security gap by applying the MAESTRO framework, identifying sixteen attack classes across five execution phases-including specific code execution threats such as exception-mediated code injection and unsafe capability synthesis. We validate these vulnerabilities through adversarial scenarios across multiple LLMs and propose a layered defense architecture comprising containerized sandboxing and semantic gating. Our findings provide a rigorous roadmap for balancing scalability and security in production-ready executable agent workflows.",
+      "tr": "**Makale Başlığı:** Araç Orkestrasyonundan Kod Yürütmeye: MCP Tasarım Seçimleri Üzerine Bir Çalışma\n\n**Özet:**\n\nModel Context Protocols (MCPs), aracıl sistemlerin heterojen yürütme ortamları genelinde araçları keşfetmesi, seçmesi ve orkestre etmesi için birleşik bir platform sunmaktadır. MCP tabanlı sistemler, daha büyük araç kataloglarını ve eşzamanlı olarak bağlı birden fazla MCP sunucusunu içerecek şekilde ölçeklendikçe, geleneksel araçtan araca çağırma, koordinasyon yükünü artırır, durum yönetimini parçalar ve geniş bağlam operasyonları için desteği sınırlar. Bu ölçeklenebilirlik zorluklarını ele almak için, yakın zamandaki MCP tasarımları, Kod Yürütme MCP (CE-MCP) olarak adlandırılan bir yaklaşım olan birinci sınıf bir yetenek olarak kod yürütmeyi içermiştir. Bu, aracılar tarafından SQL sorgulama, dosya analizi ve çok adımlı veri dönüşümleri gibi karmaşık iş akışlarının, izole bir runtime ortamında yürütülen tek bir programa konsolide edilmesini sağlar. Bu çalışmada, bağlam-bağlı (geleneksel) ve bağlam-bağımsız (CE-MCP) modeller arasındaki mimari ayrımı resmi olarak belirlemekte ve bunların temel ölçeklenebilirlik ödünleşimlerini analiz etmekteyiz. MCP-Bench framework'ünü 10 temsili sunucu üzerinde kullanarak, bağlı MCP sunucularının ve mevcut araçların ölçeği arttıkça görev davranışını, araç kullanım modellerini, yürütme gecikmesini ve protokol verimliliğini ampirik olarak değerlendirmekteyiz. CE-MCP'nin belirgin şekilde token kullanımını ve yürütme gecikmesini azaltırken, çok daha geniş bir saldırı yüzeyi sunduğunu göstermekteyiz. Bu güvenlik açığını, MAESTRO framework'ünü uygulayarak ele almakta, istisna aracılı kod enjeksiyonu ve güvensiz yetenek sentezi gibi belirli kod yürütme tehditleri de dahil olmak üzere beş yürütme aşaması boyunca on altı saldırı sınıfını belirlemekteyiz. Bu zafiyetleri, birden fazla LLM üzerinde düşmanca senaryolarla doğrulamakta ve konteynerize sandboxing ve semantic gating'den oluşan katmanlı bir savunma mimarisi önermekteyiz. Bulgularımız, üretim ortamına hazır yürütülebilir aracıl iş akışlarında ölçeklenebilirlik ve güvenliği dengelemek için titiz bir yol haritası sunmaktadır."
+    }
+  },
+  {
     "id": "2602.15756v1",
     "title": "A Note on Non-Composability of Layerwise Approximate Verification for Neural Inference",
     "authors": [
@@ -14,206 +201,7 @@
     "pdf_link": "https://arxiv.org/pdf/2602.15756v1",
     "content": {
       "en": "A natural and informal approach to verifiable (or zero-knowledge) ML inference over floating-point data is: ``prove that each layer was computed correctly up to tolerance $δ$; therefore the final output is a reasonable inference result''. This short note gives a simple counterexample showing that this inference is false in general: for any neural network, we can construct a functionally equivalent network for which adversarially chosen approximation-magnitude errors in individual layer computations suffice to steer the final output arbitrarily (within a prescribed bounded range).",
-      "tr": "Aşağıda akademik makale başlığı ve özetinin Türkçe çevirisi bulunmaktadır:\n\n**Makale Başlığı:** Bir Sinirsel Çıkarım İçin Katman Bazlı Yaklaşık Doğrulamanın Bileşememezliği Üzerine Bir Not\n\n**Özet:**\nFloating-point veriler üzerinde doğrulanabilir (veya zero-knowledge) ML çıkarımı için doğal ve gayri resmi bir yaklaşım şudur: ``tolerans $\\delta$'ya kadar her katmanın doğru hesaplandığını kanıtla; dolayısıyla nihai çıktı makul bir çıkarım sonucudur.'' Bu kısa not, bu çıkarımın genel olarak yanlış olduğunu gösteren basit bir karşı örnek sunmaktadır: herhangi bir sinirsel ağ için, bireysel katman hesaplamalarındaki düşmanca seçilmiş yaklaştırma-büyüklük hatalarının, nihai çıktıyı keyfi olarak (belirlenmiş sınırlı bir aralık içinde) yönlendirmeye yetecek şekilde işlevsel olarak eşdeğer bir ağ oluşturabiliriz."
-    }
-  },
-  {
-    "id": "2602.15689v1",
-    "title": "A Content-Based Framework for Cybersecurity Refusal Decisions in Large Language Models",
-    "authors": [
-      "Meirav Segal",
-      "Noa Linder",
-      "Omer Antverg",
-      "Gil Gekker",
-      "Tomer Fichman"
-    ],
-    "published_date": "2026-02-17",
-    "tags": [
-      "cs.CL",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2602.15689v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.15689v1",
-    "content": {
-      "en": "Large language models and LLM-based agents are increasingly used for cybersecurity tasks that are inherently dual-use. Existing approaches to refusal, spanning academic policy frameworks and commercially deployed systems, often rely on broad topic-based bans or offensive-focused taxonomies. As a result, they can yield inconsistent decisions, over-restrict legitimate defenders, and behave brittlely under obfuscation or request segmentation. We argue that effective refusal requires explicitly modeling the trade-off between offensive risk and defensive benefit, rather than relying solely on intent or offensive classification. In this paper, we introduce a content-based framework for designing and auditing cyber refusal policies that makes offense-defense tradeoffs explicit. The framework characterizes requests along five dimensions: Offensive Action Contribution, Offensive Risk, Technical Complexity, Defensive Benefit, and Expected Frequency for Legitimate Users, grounded in the technical substance of the request rather than stated intent. We demonstrate that this content-grounded approach resolves inconsistencies in current frontier model behavior and allows organizations to construct tunable, risk-aware refusal policies.",
-      "tr": "İşte akademik makale başlığının ve özetinin Türkçeye çevrilmiş hali:\n\n**Makale Başlığı:** Large Language Modellerinde Siber Güvenlik Red Kararları İçin İçerik Tabanlı Bir Çerçeve\n\n**Özet:**\nLarge language modeller ve LLM-tabanlı ajanlar, giderek artan bir şekilde doğası gereği çift kullanımlı olan siber güvenlik görevlerinde kullanılmaktadır. Mevcut red yaklaşımları, akademik politika çerçevelerinden ticari olarak dağıtılmış sistemlere kadar geniş bir yelpazede yer almakta olup, genellikle geniş konu tabanlı yasaklamalara veya saldırı odaklı taksonomilere dayanmaktadır. Sonuç olarak, tutarsız kararlar üretebilir, meşru savunmacıları aşırı derecede kısıtlayabilir ve gizleme veya istek segmentasyonu altında kırılgan davranabilirler. Etkili bir red kararının, yalnızca niyete veya saldırı sınıflandırmasına güvenmek yerine, saldırı riski ile savunma faydası arasındaki dengeyi açıkça modellemeyi gerektirdiğini savunuyoruz. Bu makalede, saldırı-savunma dengelerini açıkça ortaya koyan siber red politikalarının tasarlanması ve denetlenmesi için içerik tabanlı bir çerçeve sunuyoruz. Çerçeve, istekleri beş boyut boyunca karakterize eder: Saldırı Eylemi Katkısı, Saldırı Riski, Teknik Karmaşıklık, Savunma Faydası ve Meşru Kullanıcılar İçin Beklenen Sıklık. Bu boyutlar, beyan edilen niyetten ziyade isteğin teknik özüne dayanmaktadır. Bu içerik temelli yaklaşımın, mevcut öncü model davranışındaki tutarsızlıkları giderdiğini ve kuruluşların ayarlanabilir, riske duyarlı red politikaları oluşturmalarına olanak tanıdığını gösteriyoruz."
-    }
-  },
-  {
-    "id": "2602.15654v1",
-    "title": "Zombie Agents: Persistent Control of Self-Evolving LLM Agents via Self-Reinforcing Injections",
-    "authors": [
-      "Xianglin Yang",
-      "Yufei He",
-      "Shuo Ji",
-      "Bryan Hooi",
-      "Jin Song Dong"
-    ],
-    "published_date": "2026-02-17",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2602.15654v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.15654v1",
-    "content": {
-      "en": "Self-evolving LLM agents update their internal state across sessions, often by writing and reusing long-term memory. This design improves performance on long-horizon tasks but creates a security risk: untrusted external content observed during a benign session can be stored as memory and later treated as instruction. We study this risk and formalize a persistent attack we call a Zombie Agent, where an attacker covertly implants a payload that survives across sessions, effectively turning the agent into a puppet of the attacker.   We present a black-box attack framework that uses only indirect exposure through attacker-controlled web content. The attack has two phases. During infection, the agent reads a poisoned source while completing a benign task and writes the payload into long-term memory through its normal update process. During trigger, the payload is retrieved or carried forward and causes unauthorized tool behavior. We design mechanism-specific persistence strategies for common memory implementations, including sliding-window and retrieval-augmented memory, to resist truncation and relevance filtering. We evaluate the attack on representative agent setups and tasks, measuring both persistence over time and the ability to induce unauthorized actions while preserving benign task quality. Our results show that memory evolution can convert one-time indirect injection into persistent compromise, which suggests that defenses focused only on per-session prompt filtering are not sufficient for self-evolving agents.",
-      "tr": "İşte akademik makalenin başlığı ve özetinin istenen şekilde Türkçeye çevirisi:\n\n**Makale Başlığı:** Zombie Agents: Persistent Control of Self-Evolving LLM Agents via Self-Reinforcing Injections\n\n**Özet:**\n\nSelf-evolving LLM agents, oturumlar boyunca iç durumlarını günceller, genellikle uzun süreli belleği yazarak ve yeniden kullanarak. Bu tasarım, uzun ufuklu görevlerde performansı artırır ancak bir güvenlik riski oluşturur: iyi niyetli bir oturum sırasında gözlemlenen güvenilmeyen harici içerik bellek olarak saklanabilir ve daha sonra talimat olarak değerlendirilebilir. Bu riski inceliyoruz ve Zombie Agent adını verdiğimiz ve bir saldırganın gizlice bir payload yerleştirdiği, bu payload'un oturumlar boyunca hayatta kaldığı ve etkili bir şekilde ajanı saldırganın kuklasına dönüştürdüğü kalıcı bir saldırıyı resmileştiriyoruz. Sadece saldırgan kontrollü web içeriği aracılığıyla dolaylı maruz kalmayı kullanan bir black-box saldırı framework'ü sunuyoruz. Saldırı iki aşamadan oluşur. Enfeksiyon sırasında, ajan iyi niyetli bir görevi tamamlarken zehirlenmiş bir kaynağı okur ve normal güncelleme süreci aracılığıyla payload'u uzun süreli belleğe yazar. Tetikleme sırasında, payload geri alınır veya ileri taşınır ve yetkisiz araç davranışına neden olur. Kesme ve relevance filtering'e karşı koymak için sliding-window ve retrieval-augmented memory dahil olmak üzere yaygın bellek uygulamaları için mekanizma-spesifik persistence strategies tasarlıyoruz. Saldırıyı temsilci ajan kurulumları ve görevleri üzerinde, hem zaman içindeki persistence'ı hem de iyi niyetli görev kalitesini korurken yetkisiz eylemleri tetikleme yeteneğini ölçerek değerlendiriyoruz. Sonuçlarımız, bellek evriminin tek seferlik dolaylı enjeksiyonu kalıcı bir tehlikeye dönüştürebileceğini göstermektedir, bu da sadece oturum başına prompt filtering'e odaklanan savunmaların self-evolving agents için yeterli olmadığını düşündürmektedir."
-    }
-  },
-  {
-    "id": "2602.15485v1",
-    "title": "SecCodeBench-V2 Technical Report",
-    "authors": [
-      "Longfei Chen",
-      "Ji Zhao",
-      "Lanxiao Cui",
-      "Tong Su",
-      "Xingbo Pan"
-    ],
-    "published_date": "2026-02-17",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.SE"
-    ],
-    "link": "http://arxiv.org/abs/2602.15485v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.15485v1",
-    "content": {
-      "en": "We introduce SecCodeBench-V2, a publicly released benchmark for evaluating Large Language Model (LLM) copilots' capabilities of generating secure code. SecCodeBench-V2 comprises 98 generation and fix scenarios derived from Alibaba Group's industrial productions, where the underlying security issues span 22 common CWE (Common Weakness Enumeration) categories across five programming languages: Java, C, Python, Go, and Node.js. SecCodeBench-V2 adopts a function-level task formulation: each scenario provides a complete project scaffold and requires the model to implement or patch a designated target function under fixed interfaces and dependencies. For each scenario, SecCodeBench-V2 provides executable proof-of-concept (PoC) test cases for both functional validation and security verification. All test cases are authored and double-reviewed by security experts, ensuring high fidelity, broad coverage, and reliable ground truth. Beyond the benchmark itself, we build a unified evaluation pipeline that assesses models primarily via dynamic execution. For most scenarios, we compile and run model-generated artifacts in isolated environments and execute PoC test cases to validate both functional correctness and security properties. For scenarios where security issues cannot be adjudicated with deterministic test cases, we additionally employ an LLM-as-a-judge oracle. To summarize performance across heterogeneous scenarios and difficulty levels, we design a Pass@K-based scoring protocol with principled aggregation over scenarios and severity, enabling holistic and comparable evaluation across models. Overall, SecCodeBench-V2 provides a rigorous and reproducible foundation for assessing the security posture of AI coding assistants, with results and artifacts released at https://alibaba.github.io/sec-code-bench. The benchmark is publicly available at https://github.com/alibaba/sec-code-bench.",
-      "tr": "**Makale Başlığı:** SecCodeBench-V2 Teknik Raporu\n\n**Özet:**\n\nBu çalışmada, Büyük Dil Modeli (LLM) kod yardımcısı araçlarının güvenli kod üretme yeteneklerini değerlendirmek için kamuya açık olarak yayınlanan bir benchmark olan SecCodeBench-V2'yi tanıtıyoruz. SecCodeBench-V2, Alibaba Group'un endüstriyel üretimlerinden türetilmiş 98 adet üretme ve düzeltme senaryosunu içermektedir. Bu senaryolarda yer alan temel güvenlik sorunları, beş programlama dilinde (Java, C, Python, Go ve Node.js) 22 yaygın CWE (Common Weakness Enumeration) kategorisini kapsamaktadır. SecCodeBench-V2, fonksiyon düzeyinde bir görev formülasyonunu benimsemektedir: her senaryo eksiksiz bir proje iskeleti sunmakta ve modelden sabit arayüzler ve bağımlılıklar altında belirlenmiş hedef bir fonksiyonu uygulaması veya yamalaması beklenmektedir. Her senaryo için SecCodeBench-V2, hem fonksiyonel doğrulama hem de güvenlik doğrulama amacıyla çalıştırılabilir kavram ispatı (PoC) test senaryoları sağlamaktadır. Tüm test senaryoları, güvenlik uzmanları tarafından hazırlanmış ve çift gözden geçirilmiş olup, yüksek doğruluk, geniş kapsama alanı ve güvenilir zemin gerçeği sağlamaktadır. Benchmark'ın ötesinde, modelleri öncelikli olarak dinamik yürütme yoluyla değerlendiren bir birleşik değerlendirme hattı oluşturduk. Senaryoların çoğu için, model tarafından üretilen çıktıları izole ortamlarda derleyip çalıştırıyor ve hem fonksiyonel doğruluğu hem de güvenlik özelliklerini doğrulamak için PoC test senaryolarını yürütüyoruz. Güvenlik sorunlarının deterministik test senaryoları ile kararlaştırılamadığı senaryolarda, ek olarak LLM-as-a-judge oracle kullanıyoruz. Heterojen senaryolar ve zorluk seviyeleri boyunca performansı özetlemek amacıyla, senaryolar ve şiddet üzerinde prensipli toplama ile Pass@K tabanlı bir puanlama protokolü tasarlıyoruz. Bu protokol, modeller arasında bütünsel ve karşılaştırılabilir bir değerlendirme imkanı sunmaktadır. Genel olarak SecCodeBench-V2, yapay zeka kodlama yardımcılarının güvenlik duruşunu değerlendirmek için titiz ve tekrarlanabilir bir temel sağlamaktadır. Sonuçlar ve ilgili yapılar https://alibaba.github.io/sec-code-bench adresinde yayınlanmıştır. Benchmark, https://github.com/alibaba/sec-code-bench adresinde kamuya açıktır."
-    }
-  },
-  {
-    "id": "2602.15376v1",
-    "title": "A Unified Evaluation of Learning-Based Similarity Techniques for Malware Detection",
-    "authors": [
-      "Udbhav Prasad",
-      "Aniesh Chawla"
-    ],
-    "published_date": "2026-02-17",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2602.15376v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.15376v1",
-    "content": {
-      "en": "Cryptographic digests (e.g., MD5, SHA-256) are designed to provide exact identity. Any single-bit change in the input produces a completely different hash, which is ideal for integrity verification but limits their usefulness in many real-world tasks like threat hunting, malware analysis and digital forensics, where adversaries routinely introduce minor transformations. Similarity-based techniques address this limitation by enabling approximate matching, allowing related byte sequences to produce measurably similar fingerprints. Modern enterprises manage tens of thousands of endpoints with billions of files, making the effectiveness and scalability of the proposed techniques more important than ever in security applications. Security researchers have proposed a range of approaches, including similarity digests and locality-sensitive hashes (e.g., ssdeep, sdhash, TLSH), as well as more recent machine-learning-based methods that generate embeddings from file features. However, these techniques have largely been evaluated in isolation, using disparate datasets and evaluation criteria. This paper presents a systematic comparison of learning-based classification and similarity methods using large, publicly available datasets. We evaluate each method under a unified experimental framework with industry-accepted metrics. To our knowledge, this is the first reproducible study to benchmark these diverse learning-based similarity techniques side by side for real-world security workloads. Our results show that no single approach performs well across all dimensions; instead, each exhibits distinct trade-offs, indicating that effective malware analysis and threat-hunting platforms must combine complementary classification and similarity techniques rather than rely on a single method.",
-      "tr": "Makale Başlığı: **Zararlı Yazılım Tespiti için Öğrenme Tabanlı Benzerlik Tekniklerinin Birleşik Bir Değerlendirmesi**\n\nÖzet:\nKriptografik özetler (örneğin: MD5, SHA-256), tam kimlik sağlamak üzere tasarlanmıştır. Girişteki tek bir bitlik değişiklik bile tamamen farklı bir hash üretir; bu, bütünlük doğrulama için idealdir ancak tehdit avcılığı, malware analysis ve digital forensics gibi, saldırganların rutin olarak küçük dönüşümler uyguladığı birçok gerçek dünya görevinde kullanışlılığını sınırlar. Benzerlik tabanlı teknikler, yaklaşık eşleştirmeyi mümkün kılarak ve ilişkili bayt dizilerinin ölçülebilir şekilde benzer parmak izleri üretmesine izin vererek bu sınırlamayı ele alır. Modern işletmeler, milyarlarca dosyaya sahip on binlerce uç noktayı yönetmektedir; bu durum, önerilen tekniklerin etkinliği ve ölçeklenebilirliğinin security applications alanında her zamankinden daha önemli hale gelmesini sağlamaktadır. Güvenlik araştırmacıları, benzerlik özetleri ve locality-sensitive hashes (örneğin: ssdeep, sdhash, TLSH) gibi çeşitli yaklaşımların yanı sıra, dosya özelliklerinden embeddings üreten daha yeni machine-learning-based yöntemler önermişlerdir. Ancak, bu teknikler büyük ölçüde izole edilmiş şekilde, farklı veri kümeleri ve değerlendirme kriterleri kullanılarak değerlendirilmiştir. Bu makale, büyük, kamuya açık veri kümeleri kullanılarak öğrenme tabanlı sınıflandırma ve benzerlik yöntemlerinin sistematik bir karşılaştırmasını sunmaktadır. Her yöntemi, endüstri tarafından kabul edilen metriklerle birleşik bir deneysel çerçeve altında değerlendiriyoruz. Bildiğimiz kadarıyla bu, gerçek dünya security workloads için bu çeşitli öğrenme tabanlı benzerlik tekniklerini yan yana kıyaslayan ilk tekrarlanabilir çalışmadır. Sonuçlarımız, hiçbir tek yaklaşımın tüm boyutlarda iyi performans göstermediğini; bunun yerine, her birinin belirgin ödünleşimler sergilediğini göstermektedir; bu da etkili malware analysis ve threat-hunting platformlarının, tek bir yönteme güvenmek yerine tamamlayıcı sınıflandırma ve benzerlik tekniklerini birleştirmesi gerektiğini göstermektedir."
-    }
-  },
-  {
-    "id": "2602.15323v1",
-    "title": "Unforgeable Watermarks for Language Models via Robust Signatures",
-    "authors": [
-      "Huijia Lin",
-      "Kameron Shahabi",
-      "Min Jae Song"
-    ],
-    "published_date": "2026-02-17",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.15323v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.15323v1",
-    "content": {
-      "en": "Language models now routinely produce text that is difficult to distinguish from human writing, raising the need for robust tools to verify content provenance. Watermarking has emerged as a promising countermeasure, with existing work largely focused on model quality preservation and robust detection. However, current schemes provide limited protection against false attribution. We strengthen the notion of soundness by introducing two novel guarantees: unforgeability and recoverability. Unforgeability prevents adversaries from crafting false positives, texts that are far from any output from the watermarked model but are nonetheless flagged as watermarked. Recoverability provides an additional layer of protection: whenever a watermark is detected, the detector identifies the source text from which the flagged content was derived. Together, these properties strengthen content ownership by linking content exclusively to its generating model, enabling secure attribution and fine-grained traceability. We construct the first undetectable watermarking scheme that is robust, unforgeable, and recoverable with respect to substitutions (i.e., perturbations in Hamming metric). The key technical ingredient is a new cryptographic primitive called robust (or recoverable) digital signatures, which allow verification of messages that are close to signed ones, while preventing forgery of messages that are far from all previously signed messages. We show that any standard digital signature scheme can be boosted to a robust one using property-preserving hash functions (Boyle, LaVigne, and Vaikuntanathan, ITCS 2019).",
-      "tr": "Elbette, makale başlığını ve özetini istediğiniz şekilde Türkçeye çevirdim:\n\n**Makale Başlığı:** Robust Signatures Aracılığıyla Dil Modelleri İçin Sahtesi Yapılamayan Filigranlar\n\n**Özet:**\nDil modelleri artık insanlar tarafından yazılmış metinlerden ayırt edilmesi zor metinler üretiyor ve bu durum içerik köken doğrulaması için sağlam araçlara olan ihtiyacı artırıyor. Filigranlama umut verici bir önlem olarak öne çıkıyor ve mevcut çalışmalar büyük ölçüde model kalitesi korunumu ve sağlam tespit üzerine odaklanmıştır. Ancak, mevcut şemalar yanlış atıflara karşı sınırlı koruma sağlıyor. Biz, iki yeni garanti sunarak soundness (sağlamlık) kavramını güçlendiriyoruz: unforgeability (sahtesi yapılamama) ve recoverability (geri kazanılabilirlik). Unforgeability, rakip adversarilerin, filigranlanmış modelin herhangi bir çıktısından uzak olmasına rağmen yine de filigranlı olarak işaretlenen false positive’ler (yanlış pozitifler) oluşturmasını engeller. Recoverability, ek bir koruma katmanı sağlar: bir filigran tespit edildiğinde, tespitçi işaretlenen içeriğin türetildiği kaynak metni belirler. Bu özellikler birlikte, içeriği yalnızca üreten modeline bağlayarak içerik sahipliğini güçlendirir, güvenli atıf ve fine-grained traceability (ince taneli izlenebilirlik) olanağı sunar. Robust (sağlam), unforgeable (sahtesi yapılamaz) ve substitutions (Hamming metriğinde bozulmalar) ile ilişkili olarak recoverable (geri kazanılabilir) olan ilk tespit edilemeyen filigran şemasını inşa ediyoruz. Temel teknik bileşen, yeni bir kriptografik primitive olan robust (veya recoverable) digital signatures'dır (dijital imzalar), bu primitive imzalanmış mesajlara yakın mesajların doğrulanmasına izin verirken, daha önce imzalanmış tüm mesajlardan uzak mesajların forgery'sini (sahtesini yapmayı) önler. Boyle, LaVigne ve Vaikuntanathan (ITCS 2019) tarafından sunulan property-preserving hash functions (özellik koruyucu hash fonksiyonları) kullanılarak herhangi bir standart digital signature scheme'in robust bir scheme'e yükseltilebileceğini gösteriyoruz."
-    }
-  },
-  {
-    "id": "2602.15238v1",
-    "title": "Closing the Distribution Gap in Adversarial Training for LLMs",
-    "authors": [
-      "Chengzhi Hu",
-      "Jonas Dornbusch",
-      "David Lüdke",
-      "Stephan Günnemann",
-      "Leo Schwinn"
-    ],
-    "published_date": "2026-02-16",
-    "tags": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2602.15238v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.15238v1",
-    "content": {
-      "en": "Adversarial training for LLMs is one of the most promising methods to reliably improve robustness against adversaries. However, despite significant progress, models remain vulnerable to simple in-distribution exploits, such as rewriting prompts in the past tense or translating them into other languages. We argue that this persistent fragility stems from a fundamental limitation in current adversarial training algorithms: they minimize adversarial loss on their training set but inadequately cover the data distribution, resulting in vulnerability to seemingly simple attacks. To bridge this gap, we propose Distributional Adversarial Training, DAT. We leverage Diffusion LLMs to approximate the true joint distribution of prompts and responses, enabling generation of diverse, high-likelihood samples that address generalization failures. By combining optimization over the data distribution provided by the diffusion model with continuous adversarial training, DAT achieves substantially higher adversarial robustness than previous methods.",
-      "tr": "Makale Başlığı: LLM'ler için Adversarial Training'de Dağılım Boşluğunu Kapatmak\n\nÖzet:\nLLM'ler için adversarial training, adversayilere karşı dayanıklılığı güvenilir bir şekilde artırmak için en umut verici yöntemlerden biridir. Bununla birlikte, önemli ilerlemelere rağmen, modeller geçmiş zaman kipiyle prompt'ları yeniden yazmak veya başka dillere çevirmek gibi basit in-distribution exploit'lere karşı savunmasız kalmaktadır. Bu kalıcı kırılganlığın, mevcut adversarial training algoritmalarındaki temel bir sınırlamadan kaynaklandığını savunuyoruz: bu algoritmalar, eğitim veri setleri üzerindeki adversarial loss'u minimize eder ancak veri dağılımını yetersiz bir şekilde kapsar, bu da görünüşte basit saldırılara karşı savunmasızlığa yol açar. Bu boşluğu kapatmak için Distributional Adversarial Training, DAT'ı öneriyoruz. Prompt'lar ve yanıtların gerçek ortak dağılımını yaklaştırmak için Diffusion LLM'leri kullanıyoruz, böylece genelleme başarısızlıklarını ele alan çeşitli, yüksek olasılıklı örneklerin üretilmesini sağlıyoruz. Diffusion modelinin sağladığı veri dağılımı üzerinden optimizasyonu sürekli adversarial training ile birleştirerek DAT, önceki yöntemlere göre önemli ölçüde daha yüksek adversarial robustness elde etmektedir."
-    }
-  },
-  {
-    "id": "2602.15195v1",
-    "title": "Weight space Detection of Backdoors in LoRA Adapters",
-    "authors": [
-      "David Puertolas Merenciano",
-      "Ekaterina Vasyagina",
-      "Raghav Dixit",
-      "Kevin Zhu",
-      "Ruizhe Li"
-    ],
-    "published_date": "2026-02-16",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.15195v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.15195v1",
-    "content": {
-      "en": "LoRA adapters let users fine-tune large language models (LLMs) efficiently. However, LoRA adapters are shared through open repositories like Hugging Face Hub \\citep{huggingface_hub_docs}, making them vulnerable to backdoor attacks. Current detection methods require running the model with test input data -- making them impractical for screening thousands of adapters where the trigger for backdoor behavior is unknown. We detect poisoned adapters by analyzing their weight matrices directly, without running the model -- making our method data-agnostic. Our method extracts simple statistics -- how concentrated the singular values are, their entropy, and the distribution shape -- and flags adapters that deviate from normal patterns. We evaluate the method on 500 LoRA adapters -- 400 clean, and 100 poisoned for Llama-3.2-3B on instruction and reasoning datasets: Alpaca, Dolly, GSM8K, ARC-Challenge, SQuADv2, NaturalQuestions, HumanEval, and GLUE dataset. We achieve 97\\% detection accuracy with less than 2\\% false positives.",
-      "tr": "**Makale Başlığı:** LoRA Adaptörlerindeki Backdoor'ların Ağırlık Alanı Tespiti\n\n**Özet:**\n\nLoRA adaptörleri, kullanıcılara büyük dil modellerini (LLM'ler) verimli bir şekilde ince ayar yapma imkanı sunmaktadır. Ancak, LoRA adaptörleri Hugging Face Hub \\citep{huggingface_hub_docs} gibi açık repozitörler aracılığıyla paylaşılmakta, bu da onları backdoor saldırılarına karşı savunmasız hale getirmektedir. Mevcut tespit yöntemleri, modeli test girdi verileriyle çalıştırmayı gerektirmekte, bu da tetikleyicisi bilinmeyen backdoor davranışları için binlerce adaptörü tarama konusunda pratik olmamaktadır. Biz, modeli çalıştırmadan, yalnızca ağırlık matrislerini analiz ederek zehirlenmiş adaptörleri tespit etmekteyiz; bu da yöntemimizi data-agnostic yapmaktadır. Yöntemimiz, singular değerlerin ne kadar yoğunlaştığı, entropileri ve dağılım şekli gibi basit istatistikleri çıkararak normal desenlerden sapan adaptörleri işaretlemektedir. Llama-3.2-3B modelinde, Alpaca, Dolly, GSM8K, ARC-Challenge, SQuADv2, NaturalQuestions, HumanEval ve GLUE veri setleri üzerinde talimat ve reasoning veri kümeleri için 400 temiz ve 100 zehirlenmiş olmak üzere 500 LoRA adaptörü üzerinde yöntemi değerlendirdik. Yüzde 2'den az yanlış pozitif oranıyla %97 tespit doğruluğu elde ettik."
-    }
-  },
-  {
-    "id": "2602.15161v1",
-    "title": "Exploiting Layer-Specific Vulnerabilities to Backdoor Attack in Federated Learning",
-    "authors": [
-      "Mohammad Hadi Foroughi",
-      "Seyed Hamed Rastegar",
-      "Mohammad Sabokrou",
-      "Ahmad Khonsari"
-    ],
-    "published_date": "2026-02-16",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.15161v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.15161v1",
-    "content": {
-      "en": "Federated learning (FL) enables distributed model training across edge devices while preserving data locality. This decentralized approach has emerged as a promising solution for collaborative learning on sensitive user data, effectively addressing the longstanding privacy concerns inherent in centralized systems. However, the decentralized nature of FL exposes new security vulnerabilities, especially backdoor attacks that threaten model integrity. To investigate this critical concern, this paper presents the Layer Smoothing Attack (LSA), a novel backdoor attack that exploits layer-specific vulnerabilities in neural networks. First, a Layer Substitution Analysis methodology systematically identifies backdoor-critical (BC) layers that contribute most significantly to backdoor success. Subsequently, LSA strategically manipulates these BC layers to inject persistent backdoors while remaining undetected by state-of-the-art defense mechanisms. Extensive experiments across diverse model architectures and datasets demonstrate that LSA achieves a remarkably backdoor success rate of up to 97% while maintaining high model accuracy on the primary task, consistently bypassing modern FL defenses. These findings uncover fundamental vulnerabilities in current FL security frameworks, demonstrating that future defenses must incorporate layer-aware detection and mitigation strategies.",
-      "tr": "Makale Başlığı: Federated Learning'de Katmana Özgü Güvenlik Açıklarını Kötüye Kullanarak Backdoor Saldırısı\n\nÖzet:\nFederated learning (FL), veri yerelliğini koruyarak uç cihazlarda dağıtılmış model eğitimi sağlar. Bu merkezi olmayan yaklaşım, hassas kullanıcı verileri üzerinde işbirlikçi öğrenme için umut verici bir çözüm olarak ortaya çıkmış ve merkezi sistemlerde doğasında bulunan uzun süredir devam eden gizlilik endişelerini etkili bir şekilde ele almaktadır. Ancak, FL'nin merkezi olmayan doğası, özellikle model bütünlüğünü tehdit eden backdoor saldırıları gibi yeni güvenlik açıklarını ortaya çıkarmaktadır. Bu kritik endişeyi araştırmak için bu makale, sinir ağlarındaki katmana özgü güvenlik açıklarını istismar eden yeni bir backdoor saldırısı olan Layer Smoothing Attack'ı (LSA) sunmaktadır. İlk olarak, bir Layer Substitution Analysis metodolojisi, backdoor başarısına en önemli katkıda bulunan backdoor-critical (BC) katmanları sistematik olarak belirler. Ardından LSA, bu BC katmanlarını stratejik olarak manipüle ederek, en gelişmiş savunma mekanizmaları tarafından tespit edilmeden kalırken kalıcı backdoors enjekte eder. Çeşitli model mimarileri ve veri kümeleri üzerinde yapılan kapsamlı deneyler, LSA'nın birincil görevdeki yüksek model doğruluğunu korurken, %97'ye varan dikkate değer bir backdoor başarı oranına ulaştığını ve modern FL savunmalarını sürekli olarak aştığını göstermektedir. Bu bulgular, mevcut FL güvenlik çerçevelerindeki temel güvenlik açıklarını ortaya koymakta ve gelecekteki savunmaların katman farkındalığına sahip tespit ve azaltma stratejilerini içermesi gerektiğini göstermektedir."
-    }
-  },
-  {
-    "id": "2602.14689v1",
-    "title": "Exposing the Systematic Vulnerability of Open-Weight Models to Prefill Attacks",
-    "authors": [
-      "Lukas Struppek",
-      "Adam Gleave",
-      "Kellin Pelrine"
-    ],
-    "published_date": "2026-02-16",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.14689v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.14689v1",
-    "content": {
-      "en": "As the capabilities of large language models continue to advance, so does their potential for misuse. While closed-source models typically rely on external defenses, open-weight models must primarily depend on internal safeguards to mitigate harmful behavior. Prior red-teaming research has largely focused on input-based jailbreaking and parameter-level manipulations. However, open-weight models also natively support prefilling, which allows an attacker to predefine initial response tokens before generation begins. Despite its potential, this attack vector has received little systematic attention. We present the largest empirical study to date of prefill attacks, evaluating over 20 existing and novel strategies across multiple model families and state-of-the-art open-weight models. Our results show that prefill attacks are consistently effective against all major contemporary open-weight models, revealing a critical and previously underexplored vulnerability with significant implications for deployment. While certain large reasoning models exhibit some robustness against generic prefilling, they remain vulnerable to tailored, model-specific strategies. Our findings underscore the urgent need for model developers to prioritize defenses against prefill attacks in open-weight LLMs.",
-      "tr": "Makale Başlığı: Açık Ağırlıklı Modellerin Prefill Saldırılarına Karşı Sistematik Kırılganlığının Ortaya Çıkarılması\n\nÖzet:\nBüyük dil modellerinin yetenekleri ilerledikçe, kötüye kullanım potansiyelleri de artmaktadır. Kapalı kaynaklı modeller tipik olarak harici savunmalara dayanırken, açık ağırlıklı modeller zararlı davranışı azaltmak için öncelikli olarak dahili güvenlik önlemlerine güvenmek zorundadır. Önceki red-teaming araştırmaları büyük ölçüde girdi tabanlı jailbreaking ve parametre düzeyindeki manipülasyonlara odaklanmıştır. Ancak, açık ağırlıklı modeller aynı zamanda yerel olarak prefilling'i desteklemektedir, bu da bir saldırganın üretim başlamadan önce ilk yanıt jetonlarını önceden tanımlamasına olanak tanır. Potansiyeline rağmen, bu saldırı vektörü çok az sistematik ilgi görmüştür. Model aileleri ve en son teknoloji açık ağırlıklı modeller genelinde 20'den fazla mevcut ve yeni stratejiyi değerlendiren, prefill saldırılarının şimdiye kadarki en büyük ampirik çalışmasını sunuyoruz. Sonuçlarımız, prefill saldırılarının tüm büyük çağdaş açık ağırlıklı modellere karşı tutarlı bir şekilde etkili olduğunu göstermektedir; bu da dağıtım için önemli çıkarımlara sahip kritik ve daha önce yeterince araştırılmamış bir kırılganlığı ortaya koymaktadır. Belirli büyük reasoning modelleri genel prefilling'e karşı bir miktar dayanıklılık sergilese de, özel, modele özgü stratejilere karşı kırılgan kalmaktadırlar. Bulgularımız, model geliştiricilerinin açık ağırlıklı LLM'lerde prefill saldırılarına karşı savunmalara öncelik vermesi için acil bir ihtiyacın altını çizmektedir."
+      "tr": "**Makale Başlığı:** Bir Sinirsel Çıkarım İçin Katman Bazlı Yaklaşık Doğrulamanın Kompoze Edilemezliğine Dair Bir Not\n\n**Özet:**\n\nFloat veri üzerinde doğrulanabilir (veya zero-knowledge) Makine Öğrenmesi çıkarımı için doğal ve gayri resmi bir yaklaşım şöyledir: \"Her bir katmanın belirli bir tolerans $δ$ 'ya kadar doğru hesaplandığını kanıtla; bu nedenle nihai çıktı makul bir çıkarım sonucudur.\" Bu kısa not, bu çıkarımın genel olarak yanlış olduğunu gösteren basit bir karşı örnek sunmaktadır: her hangi bir sinirsel ağ için, bireysel katman hesaplamalarındaki düşmanca seçilmiş yaklaşım büyüklüğü hatalarının nihai çıktıyı keyfi olarak yönlendirmeye (belirlenmiş sınırlı bir aralık içinde) yettiği işlevsel olarak eşdeğer bir ağ oluşturabiliriz."
     }
   }
 ]
