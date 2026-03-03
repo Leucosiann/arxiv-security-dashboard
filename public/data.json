@@ -1,224 +1,212 @@
 [
   {
-    "id": "2602.24047v1",
-    "title": "Unsupervised Baseline Clustering and Incremental Adaptation for IoT Device Traffic Profiling",
+    "id": "2603.00859v1",
+    "title": "AMDS: Attack-Aware Multi-Stage Defense System for Network Intrusion Detection with Two-Stage Adaptive Weight Learning",
     "authors": [
-      "Sean M. Alderman",
-      "John D. Hastings"
+      "Oluseyi Olukola",
+      "Nick Rahimi"
     ],
-    "published_date": "2026-02-27",
+    "published_date": "2026-03-01",
     "tags": [
-      "cs.NI",
       "cs.CR",
-      "cs.LG"
+      "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2602.24047v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.24047v1",
+    "link": "http://arxiv.org/abs/2603.00859v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.00859v1",
     "content": {
-      "en": "The growth and heterogeneity of IoT devices create security challenges where static identification models can degrade as traffic evolves. This paper presents a two-stage, flow-feature-based pipeline for unsupervised IoT device traffic profiling and incremental model updating, evaluated on selected long-duration captures from the Deakin IoT dataset. For baseline profiling, density-based clustering (DBSCAN) isolates a substantial outlier portion of the data and produces the strongest alignment with ground-truth device labels among tested classical methods (NMI 0.78), outperforming centroid-based clustering on cluster purity. For incremental adaptation, we evaluate stream-oriented clustering approaches and find that BIRCH supports efficient updates (0.13 seconds per update) and forms comparatively coherent clusters for a held-out novel device (purity 0.87), but with limited capture of novel traffic (share 0.72) and a measurable trade-off in known-device accuracy after adaptation (0.71). Overall, the results highlight a practical trade-off between high-purity static profiling and the flexibility of incremental clustering for evolving IoT environments.",
-      "tr": "The growth and heterogeneity of IoT devices create security challenges where static identification models can degrade as traffic evolves. This paper presents a two-stage, flow-feature-based pipeline for unsupervised IoT device traffic profiling and incremental model updating, evaluated on selected long-duration captures from the Deakin IoT dataset. For baseline profiling, density-based clustering (DBSCAN) isolates a substantial outlier portion of the data and produces the strongest alignment with ground-truth device labels among tested classical methods (NMI 0.78), outperforming centroid-based clustering on cluster purity. For incremental adaptation, we evaluate stream-oriented clustering approaches and find that BIRCH supports efficient updates (0.13 seconds per update) and forms comparatively coherent clusters for a held-out novel device (purity 0.87), but with limited capture of novel traffic (share 0.72) and a measurable trade-off in known-device accuracy after adaptation (0.71). Overall, the results highlight a practical trade-off between high-purity static profiling and the flexibility of incremental clustering for evolving IoT environments."
+      "en": "Machine learning based network intrusion detection systems are vulnerable to adversarial attacks that degrade classification performance under both gradient-based and distribution shift threat models. Existing defenses typically apply uniform detection strategies, which may not account for heterogeneous attack characteristics. This paper proposes an attack-aware multi-stage defense framework that learns attack-specific detection strategies through a weighted combination of ensemble disagreement, predictive uncertainty, and distributional anomaly signals. Empirical analysis across seven adversarial attack types reveals distinct detection signatures, enabling a two-stage adaptive detection mechanism. Experimental evaluation on a benchmark intrusion detection dataset indicates that the proposed system attains 94.2% area under the receiver operating characteristic curve and improves classification accuracy by 4.5 percentage points and F1-score by 9.0 points over adversarially trained ensembles. Under adaptive white-box attacks with full architectural knowledge, the system appears to maintain 94.4% accuracy with a 4.2% attack success rate, though this evaluation is limited to two adaptive variants and does not constitute a formal robustness guarantee. Cross-dataset validation further suggests that defense effectiveness depends on baseline classifier competence and may vary with feature dimensionality. These results suggest that attack-specific optimization combined with multi-signal integration can provide a practical approach to improving adversarial robustness in machine learning-based intrusion detection systems.",
+      "tr": "Machine learning based network intrusion detection systems are vulnerable to adversarial attacks that degrade classification performance under both gradient-based and distribution shift threat models. Existing defenses typically apply uniform detection strategies, which may not account for heterogeneous attack characteristics. This paper proposes an attack-aware multi-stage defense framework that learns attack-specific detection strategies through a weighted combination of ensemble disagreement, predictive uncertainty, and distributional anomaly signals. Empirical analysis across seven adversarial attack types reveals distinct detection signatures, enabling a two-stage adaptive detection mechanism. Experimental evaluation on a benchmark intrusion detection dataset indicates that the proposed system attains 94.2% area under the receiver operating characteristic curve and improves classification accuracy by 4.5 percentage points and F1-score by 9.0 points over adversarially trained ensembles. Under adaptive white-box attacks with full architectural knowledge, the system appears to maintain 94.4% accuracy with a 4.2% attack success rate, though this evaluation is limited to two adaptive variants and does not constitute a formal robustness guarantee. Cross-dataset validation further suggests that defense effectiveness depends on baseline classifier competence and may vary with feature dimensionality. These results suggest that attack-specific optimization combined with multi-signal integration can provide a practical approach to improving adversarial robustness in machine learning-based intrusion detection systems."
     }
   },
   {
-    "id": "2602.24009v1",
-    "title": "Jailbreak Foundry: From Papers to Runnable Attacks for Reproducible Benchmarking",
+    "id": "2603.00711v1",
+    "title": "IU: Imperceptible Universal Backdoor Attack",
     "authors": [
-      "Zhicheng Fang",
-      "Jingjie Zheng",
-      "Chenxu Fu",
-      "Wei Xu"
+      "Hsin Lin",
+      "Yan-Lun Chen",
+      "Ren-Hung Hwang",
+      "Chia-Mu Yu"
     ],
-    "published_date": "2026-02-27",
+    "published_date": "2026-02-28",
     "tags": [
       "cs.CR",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2603.00711v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.00711v1",
+    "content": {
+      "en": "Backdoor attacks pose a critical threat to the security of deep neural networks, yet existing efforts on universal backdoors often rely on visually salient patterns, making them easier to detect and less practical at scale. In this work, we introduce a novel imperceptible universal backdoor attack that simultaneously controls all target classes with minimal poisoning while preserving stealth. Our key idea is to leverage graph convolutional networks (GCNs) to model inter-class relationships and generate class-specific perturbations that are both effective and visually invisible. The proposed framework optimizes a dual-objective loss that balances stealthiness (measured by perceptual similarity metrics such as PSNR) and attack success rate (ASR), enabling scalable, multi-target backdoor injection. Extensive experiments on ImageNet-1K with ResNet architectures demonstrate that our method achieves high ASR (up to 91.3%) under poisoning rates as low as 0.16%, while maintaining benign accuracy and evading state-of-the-art defenses. These results highlight the emerging risks of invisible universal backdoors and call for more robust detection and mitigation strategies.",
+      "tr": "Backdoor attacks pose a critical threat to the security of deep neural networks, yet existing efforts on universal backdoors often rely on visually salient patterns, making them easier to detect and less practical at scale. In this work, we introduce a novel imperceptible universal backdoor attack that simultaneously controls all target classes with minimal poisoning while preserving stealth. Our key idea is to leverage graph convolutional networks (GCNs) to model inter-class relationships and generate class-specific perturbations that are both effective and visually invisible. The proposed framework optimizes a dual-objective loss that balances stealthiness (measured by perceptual similarity metrics such as PSNR) and attack success rate (ASR), enabling scalable, multi-target backdoor injection. Extensive experiments on ImageNet-1K with ResNet architectures demonstrate that our method achieves high ASR (up to 91.3%) under poisoning rates as low as 0.16%, while maintaining benign accuracy and evading state-of-the-art defenses. These results highlight the emerging risks of invisible universal backdoors and call for more robust detection and mitigation strategies."
+    }
+  },
+  {
+    "id": "2603.00565v1",
+    "title": "MIDAS: Multi-Image Dispersion and Semantic Reconstruction for Jailbreaking MLLMs",
+    "authors": [
+      "Yilian Liu",
+      "Xiaojun Jia",
+      "Guoshun Nan",
+      "Jiuyang Lyu",
+      "Zhican Chen"
+    ],
+    "published_date": "2026-02-28",
+    "tags": [
+      "cs.CV",
       "cs.AI",
-      "cs.CL",
-      "cs.LG"
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2602.24009v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.24009v1",
+    "link": "http://arxiv.org/abs/2603.00565v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.00565v1",
     "content": {
-      "en": "Jailbreak techniques for large language models (LLMs) evolve faster than benchmarks, making robustness estimates stale and difficult to compare across papers due to drift in datasets, harnesses, and judging protocols. We introduce JAILBREAK FOUNDRY (JBF), a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness. JBF features three core components: (i) JBF-LIB for shared contracts and reusable utilities; (ii) JBF-FORGE for the multi-agent paper-to-module translation; and (iii) JBF-EVAL for standardizing evaluations. Across 30 reproduced attacks, JBF achieves high fidelity with a mean (reproduced-reported) attack success rate (ASR) deviation of +0.26 percentage points. By leveraging shared infrastructure, JBF reduces attack-specific implementation code by nearly half relative to original repositories and achieves an 82.5% mean reused-code ratio. This system enables a standardized AdvBench evaluation of all 30 attacks across 10 victim models using a consistent GPT-4o judge. By automating both attack integration and standardized evaluation, JBF offers a scalable solution for creating living benchmarks that keep pace with the rapidly shifting security landscape.",
-      "tr": "Jailbreak techniques for large language models (LLMs) evolve faster than benchmarks, making robustness estimates stale and difficult to compare across papers due to drift in datasets, harnesses, and judging protocols. We introduce JAILBREAK FOUNDRY (JBF), a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness. JBF features three core components: (i) JBF-LIB for shared contracts and reusable utilities; (ii) JBF-FORGE for the multi-agent paper-to-module translation; and (iii) JBF-EVAL for standardizing evaluations. Across 30 reproduced attacks, JBF achieves high fidelity with a mean (reproduced-reported) attack success rate (ASR) deviation of +0.26 percentage points. By leveraging shared infrastructure, JBF reduces attack-specific implementation code by nearly half relative to original repositories and achieves an 82.5% mean reused-code ratio. This system enables a standardized AdvBench evaluation of all 30 attacks across 10 victim models using a consistent GPT-4o judge. By automating both attack integration and standardized evaluation, JBF offers a scalable solution for creating living benchmarks that keep pace with the rapidly shifting security landscape."
+      "en": "Multimodal Large Language Models (MLLMs) have achieved remarkable performance but remain vulnerable to jailbreak attacks that can induce harmful content and undermine their secure deployment. Previous studies have shown that introducing additional inference steps, which disrupt security attention, can make MLLMs more susceptible to being misled into generating malicious content. However, these methods rely on single-image masking or isolated visual cues, which only modestly extend reasoning paths and thus achieve limited effectiveness, particularly against strongly aligned commercial closed-source models. To address this problem, in this paper, we propose Multi-Image Dispersion and Semantic Reconstruction (MIDAS), a multimodal jailbreak framework that decomposes harmful semantics into risk-bearing subunits, disperses them across multiple visual clues, and leverages cross-image reasoning to gradually reconstruct the malicious intent, thereby bypassing existing safety mechanisms. The proposed MIDAS enforces longer and more structured multi-image chained reasoning, substantially increases the model's reliance on visual cues while delaying the exposure of malicious semantics and significantly reducing the model's security attention, thereby improving the performance of jailbreak against advanced MLLMs. Extensive experiments across different datasets and MLLMs demonstrate that the proposed MIDAS outperforms state-of-the-art jailbreak attacks for MLLMs and achieves an average attack success rate of 81.46% across 4 closed-source MLLMs. Our code is available at this [link](https://github.com/Winnie-Lian/MIDAS).",
+      "tr": "Multimodal Large Language Models (MLLMs) have achieved remarkable performance but remain vulnerable to jailbreak attacks that can induce harmful content and undermine their secure deployment. Previous studies have shown that introducing additional inference steps, which disrupt security attention, can make MLLMs more susceptible to being misled into generating malicious content. However, these methods rely on single-image masking or isolated visual cues, which only modestly extend reasoning paths and thus achieve limited effectiveness, particularly against strongly aligned commercial closed-source models. To address this problem, in this paper, we propose Multi-Image Dispersion and Semantic Reconstruction (MIDAS), a multimodal jailbreak framework that decomposes harmful semantics into risk-bearing subunits, disperses them across multiple visual clues, and leverages cross-image reasoning to gradually reconstruct the malicious intent, thereby bypassing existing safety mechanisms. The proposed MIDAS enforces longer and more structured multi-image chained reasoning, substantially increases the model's reliance on visual cues while delaying the exposure of malicious semantics and significantly reducing the model's security attention, thereby improving the performance of jailbreak against advanced MLLMs. Extensive experiments across different datasets and MLLMs demonstrate that the proposed MIDAS outperforms state-of-the-art jailbreak attacks for MLLMs and achieves an average attack success rate of 81.46% across 4 closed-source MLLMs. Our code is available at this [link](https://github.com/Winnie-Lian/MIDAS)."
     }
   },
   {
-    "id": "2602.23874v1",
-    "title": "Exploring Robust Intrusion Detection: A Benchmark Study of Feature Transferability in IoT Botnet Attack Detection",
+    "id": "2603.00476v1",
+    "title": "Atomicity for Agents: Exposing, Exploiting, and Mitigating TOCTOU Vulnerabilities in Browser-Use Agents",
     "authors": [
-      "Alejandro Guerra-Manzanares",
-      "Jialin Huang"
+      "Linxi Jiang",
+      "Zhijie Liu",
+      "Haotian Luo",
+      "Zhiqiang Lin"
     ],
-    "published_date": "2026-02-27",
+    "published_date": "2026-02-28",
     "tags": [
       "cs.CR",
-      "cs.AI",
-      "cs.LG"
+      "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2602.23874v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.23874v1",
+    "link": "http://arxiv.org/abs/2603.00476v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.00476v1",
     "content": {
-      "en": "Cross-domain intrusion detection remains a critical challenge due to significant variability in network traffic characteristics and feature distributions across environments. This study evaluates the transferability of three widely used flow-based feature sets (Argus, Zeek and CICFlowMeter) across four widely used datasets representing heterogeneous IoT and Industrial IoT network conditions. Through extensive experiments, we evaluate in- and cross-domain performance across multiple classification models and analyze feature importance using SHapley Additive exPlanations (SHAP). Our results show that models trained on one domain suffer significant performance degradation when applied to a different target domain, reflecting the sensitivity of IoT intrusion detection systems to distribution shifts. Furthermore, the results evidence that the choice of classification algorithm and feature representations significantly impact transferability. Beyond reporting performance differences and thorough analysis of the transferability of features and feature spaces, we provide practical guidelines for feature engineering to improve robustness under domain variability. Our findings suggest that effective intrusion detection requires both high in-domain performance and resilience to cross-domain variability, achievable through careful feature space design, appropriate algorithm selection and adaptive strategies.",
-      "tr": "Cross-domain intrusion detection remains a critical challenge due to significant variability in network traffic characteristics and feature distributions across environments. This study evaluates the transferability of three widely used flow-based feature sets (Argus, Zeek and CICFlowMeter) across four widely used datasets representing heterogeneous IoT and Industrial IoT network conditions. Through extensive experiments, we evaluate in- and cross-domain performance across multiple classification models and analyze feature importance using SHapley Additive exPlanations (SHAP). Our results show that models trained on one domain suffer significant performance degradation when applied to a different target domain, reflecting the sensitivity of IoT intrusion detection systems to distribution shifts. Furthermore, the results evidence that the choice of classification algorithm and feature representations significantly impact transferability. Beyond reporting performance differences and thorough analysis of the transferability of features and feature spaces, we provide practical guidelines for feature engineering to improve robustness under domain variability. Our findings suggest that effective intrusion detection requires both high in-domain performance and resilience to cross-domain variability, achievable through careful feature space design, appropriate algorithm selection and adaptive strategies."
+      "en": "Browser-use agents are widely used for everyday tasks. They enable automated interaction with web pages through structured DOM based interfaces or vision language models operating on page screenshots. However, web pages often change between planning and execution, causing agents to execute actions based on stale assumptions. We view this temporal mismatch as a time of check to time of use (TOCTOU) vulnerability in browser-use agents. Dynamic or adversarial web content can exploit this window to induce unintended actions. We present a large scale empirical study of TOCTOU vulnerabilities in browser-use agents using a benchmark that spans synthesized and real world websites. Using this benchmark, we evaluate 10 popular open source agents and show that TOCTOU vulnerabilities are widespread. We design a lightweight mitigation based on pre-execution validation. It monitors DOM and layout changes during planning and validates the page state immediately before action execution. This approach reduces the risk of insecure execution and mitigates unintended side effects in browser-use agents.",
+      "tr": "Browser-use agents are widely used for everyday tasks. They enable automated interaction with web pages through structured DOM based interfaces or vision language models operating on page screenshots. However, web pages often change between planning and execution, causing agents to execute actions based on stale assumptions. We view this temporal mismatch as a time of check to time of use (TOCTOU) vulnerability in browser-use agents. Dynamic or adversarial web content can exploit this window to induce unintended actions. We present a large scale empirical study of TOCTOU vulnerabilities in browser-use agents using a benchmark that spans synthesized and real world websites. Using this benchmark, we evaluate 10 popular open source agents and show that TOCTOU vulnerabilities are widespread. We design a lightweight mitigation based on pre-execution validation. It monitors DOM and layout changes during planning and validates the page state immediately before action execution. This approach reduces the risk of insecure execution and mitigates unintended side effects in browser-use agents."
     }
   },
   {
-    "id": "2602.23846v1",
-    "title": "MI$^2$DAS: A Multi-Layer Intrusion Detection Framework with Incremental Learning for Securing Industrial IoT Networks",
+    "id": "2603.00453v1",
+    "title": "Neurosymbolic Learning for Advanced Persistent Threat Detection under Extreme Class Imbalance",
     "authors": [
-      "Wei Lian",
-      "Alejandro Guerra-Manzanares"
+      "Quhura Fathima",
+      "Neda Moghim",
+      "Mostafa Taghizade Firouzjaee",
+      "Christo K. Thomas",
+      "Ross Gore"
     ],
-    "published_date": "2026-02-27",
+    "published_date": "2026-02-28",
     "tags": [
       "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.23846v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.23846v1",
-    "content": {
-      "en": "The rapid expansion of Industrial IoT (IIoT) systems has amplified security challenges, as heterogeneous devices and dynamic traffic patterns increase exposure to sophisticated and previously unseen cyberattacks. Traditional intrusion detection systems often struggle in such environments due to their reliance on extensive labeled data and limited ability to detect new threats. To address these challenges, we propose MI$^2$DAS, a multi-layer intrusion detection framework that integrates anomaly-based hierarchical traffic pooling, open-set recognition to distinguish between known and unknown attacks and incremental learning for adapting to novel attack types with minimal labeling. Experiments conducted on the Edge-IIoTset dataset demonstrate strong performance across all layers. In the first layer, GMM achieves superior normal-attack discrimination (accuracy = 0.953, TPR = 1.000). In open-set recognition, GMM attains a recall of 0.813 for known attacks, while LOF achieves 0.882 recall for unknown attacks. For fine-grained classification of known attacks, Random Forest achieves a macro-F1 of 0.941. Finally, the incremental learning module maintains robust performance when incorporation novel attack classes, achieving a macro-F1 of 0.8995. These results showcase MI$^2$DAS as an effective, scalable and adaptive framework for enhancing IIoT security against evolving threats.",
-      "tr": "The rapid expansion of Industrial IoT (IIoT) systems has amplified security challenges, as heterogeneous devices and dynamic traffic patterns increase exposure to sophisticated and previously unseen cyberattacks. Traditional intrusion detection systems often struggle in such environments due to their reliance on extensive labeled data and limited ability to detect new threats. To address these challenges, we propose MI$^2$DAS, a multi-layer intrusion detection framework that integrates anomaly-based hierarchical traffic pooling, open-set recognition to distinguish between known and unknown attacks and incremental learning for adapting to novel attack types with minimal labeling. Experiments conducted on the Edge-IIoTset dataset demonstrate strong performance across all layers. In the first layer, GMM achieves superior normal-attack discrimination (accuracy = 0.953, TPR = 1.000). In open-set recognition, GMM attains a recall of 0.813 for known attacks, while LOF achieves 0.882 recall for unknown attacks. For fine-grained classification of known attacks, Random Forest achieves a macro-F1 of 0.941. Finally, the incremental learning module maintains robust performance when incorporation novel attack classes, achieving a macro-F1 of 0.8995. These results showcase MI$^2$DAS as an effective, scalable and adaptive framework for enhancing IIoT security against evolving threats."
-    }
-  },
-  {
-    "id": "2602.23834v1",
-    "title": "Enhancing Continual Learning for Software Vulnerability Prediction: Addressing Catastrophic Forgetting via Hybrid-Confidence-Aware Selective Replay for Temporal LLM Fine-Tuning",
-    "authors": [
-      "Xuhui Dou",
-      "Hayretdin Bahsi",
-      "Alejandro Guerra-Manzanares"
-    ],
-    "published_date": "2026-02-27",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.23834v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.23834v1",
-    "content": {
-      "en": "Recent work applies Large Language Models (LLMs) to source-code vulnerability detection, but most evaluations still rely on random train-test splits that ignore time and overestimate real-world performance. In practice, detectors are deployed on evolving code bases and must recognise future vulnerabilities under temporal distribution shift. This paper investigates continual fine-tuning of a decoder-style language model (microsoft/phi-2 with LoRA) on a CVE-linked dataset spanning 2018-2024, organised into bi-monthly windows. We evaluate eight continual learning strategies, including window-only and cumulative training, replay-based baselines and regularisation-based variants. We propose Hybrid Class-Aware Selective Replay (Hybrid-CASR), a confidence-aware replay method for binary vulnerability classification that prioritises uncertain samples while maintaining a balanced ratio of VULNERABLE and FIXED functions in the replay buffer. On bi-monthly forward evaluation Hybrid-CASR achieves a Macro-F1 of 0.667, improving on the window-only baseline (0.651) by 0.016 with statistically significant gains ($p = 0.026$) and stronger backward retention (IBR@1 of 0.741). Hybrid-CASR also reduces training time per window by about 17 percent compared to the baseline, whereas cumulative training delivers only a minor F1 increase (0.661) at a 15.9-fold computational cost. Overall, the results show that selective replay with class balancing offers a practical accuracy-efficiency trade-off for LLM-based temporal vulnerability detection under continuous temporal drift.",
-      "tr": "Recent work applies Large Language Models (LLMs) to source-code vulnerability detection, but most evaluations still rely on random train-test splits that ignore time and overestimate real-world performance. In practice, detectors are deployed on evolving code bases and must recognise future vulnerabilities under temporal distribution shift. This paper investigates continual fine-tuning of a decoder-style language model (microsoft/phi-2 with LoRA) on a CVE-linked dataset spanning 2018-2024, organised into bi-monthly windows. We evaluate eight continual learning strategies, including window-only and cumulative training, replay-based baselines and regularisation-based variants. We propose Hybrid Class-Aware Selective Replay (Hybrid-CASR), a confidence-aware replay method for binary vulnerability classification that prioritises uncertain samples while maintaining a balanced ratio of VULNERABLE and FIXED functions in the replay buffer. On bi-monthly forward evaluation Hybrid-CASR achieves a Macro-F1 of 0.667, improving on the window-only baseline (0.651) by 0.016 with statistically significant gains ($p = 0.026$) and stronger backward retention (IBR@1 of 0.741). Hybrid-CASR also reduces training time per window by about 17 percent compared to the baseline, whereas cumulative training delivers only a minor F1 increase (0.661) at a 15.9-fold computational cost. Overall, the results show that selective replay with class balancing offers a practical accuracy-efficiency trade-off for LLM-based temporal vulnerability detection under continuous temporal drift."
-    }
-  },
-  {
-    "id": "2602.23798v1",
-    "title": "MPU: Towards Secure and Privacy-Preserving Knowledge Unlearning for Large Language Models",
-    "authors": [
-      "Tiantong Wang",
-      "Xinyu Yan",
-      "Tiantong Wu",
-      "Yurong Hao",
-      "Yong Jiang"
-    ],
-    "published_date": "2026-02-27",
-    "tags": [
       "cs.LG",
-      "cs.AI",
-      "cs.CR",
-      "cs.DC"
+      "cs.NI"
     ],
-    "link": "http://arxiv.org/abs/2602.23798v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.23798v1",
+    "link": "http://arxiv.org/abs/2603.00453v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.00453v1",
     "content": {
-      "en": "Machine unlearning for large language models often faces a privacy dilemma in which strict constraints prohibit sharing either the server's parameters or the client's forget set. To address this dual non-disclosure constraint, we propose MPU, an algorithm-agnostic privacy-preserving Multiple Perturbed Copies Unlearning framework that primarily introduces two server-side modules: Pre-Process for randomized copy generation and Post-Process for update aggregation. In Pre-Process, the server distributes multiple perturbed and reparameterized model instances, allowing the client to execute unlearning locally on its private forget set without accessing the server's exact original parameters. After local unlearning, the server performs Post-Process by inverting the reparameterization and aggregating updates with a harmonic denoising procedure to alleviate the impact of perturbation. Experiments with seven unlearning algorithms show that MPU achieves comparable unlearning performance to noise-free baselines, with most algorithms' average degradation well below 1% under 10% noise, and can even outperform the noise-free baseline for some algorithms under 1% noise. Code is available at https://github.com/Tristan-SHU/MPU.",
-      "tr": "Machine unlearning for large language models often faces a privacy dilemma in which strict constraints prohibit sharing either the server's parameters or the client's forget set. To address this dual non-disclosure constraint, we propose MPU, an algorithm-agnostic privacy-preserving Multiple Perturbed Copies Unlearning framework that primarily introduces two server-side modules: Pre-Process for randomized copy generation and Post-Process for update aggregation. In Pre-Process, the server distributes multiple perturbed and reparameterized model instances, allowing the client to execute unlearning locally on its private forget set without accessing the server's exact original parameters. After local unlearning, the server performs Post-Process by inverting the reparameterization and aggregating updates with a harmonic denoising procedure to alleviate the impact of perturbation. Experiments with seven unlearning algorithms show that MPU achieves comparable unlearning performance to noise-free baselines, with most algorithms' average degradation well below 1% under 10% noise, and can even outperform the noise-free baseline for some algorithms under 1% noise. Code is available at https://github.com/Tristan-SHU/MPU."
+      "en": "The growing deployment of Internet of Things (IoT) devices in smart cities and industrial environments increases vulnerability to stealthy, multi-stage advanced persistent threats (APTs) that exploit wireless communication. Detection is challenging due to severe class imbalance in network traffic, which limits the effectiveness of traditional deep learning approaches and their lack of explainability in classification decisions. To address these challenges, this paper proposes a neurosymbolic architecture that integrates an optimized BERT model with logic tensor networks (LTN) for explainable APT detection in wireless IoT networks. The proposed method addresses the challenges of mobile IoT environments through efficient feature encoding that transforms network flow data into BERT-compatible sequences while preserving temporal dependencies critical for APT stage identification. Severe class imbalance is mitigated using focal loss, hierarchical classification that separates normal traffic detection from attack categorization, and adaptive sampling strategies. Evaluation on the SCVIC-APT2021 dataset demonstrates an operationally viable binary classification F1 score of 95.27% with a false positive rate of 0.14%, and a 76.75% macro F1 score for multi-class attack categorization. Furthermore, a novel explainability analysis statistically validates the importance of distinct network features. These results demonstrate that neurosymbolic learning enables high-performance, interpretable, and operationally viable APT detection for IoT network monitoring architectures.",
+      "tr": "The growing deployment of Internet of Things (IoT) devices in smart cities and industrial environments increases vulnerability to stealthy, multi-stage advanced persistent threats (APTs) that exploit wireless communication. Detection is challenging due to severe class imbalance in network traffic, which limits the effectiveness of traditional deep learning approaches and their lack of explainability in classification decisions. To address these challenges, this paper proposes a neurosymbolic architecture that integrates an optimized BERT model with logic tensor networks (LTN) for explainable APT detection in wireless IoT networks. The proposed method addresses the challenges of mobile IoT environments through efficient feature encoding that transforms network flow data into BERT-compatible sequences while preserving temporal dependencies critical for APT stage identification. Severe class imbalance is mitigated using focal loss, hierarchical classification that separates normal traffic detection from attack categorization, and adaptive sampling strategies. Evaluation on the SCVIC-APT2021 dataset demonstrates an operationally viable binary classification F1 score of 95.27% with a false positive rate of 0.14%, and a 76.75% macro F1 score for multi-class attack categorization. Furthermore, a novel explainability analysis statistically validates the importance of distinct network features. These results demonstrate that neurosymbolic learning enables high-performance, interpretable, and operationally viable APT detection for IoT network monitoring architectures."
     }
   },
   {
-    "id": "2602.23516v1",
-    "title": "Lap2: Revisiting Laplace DP-SGD for High Dimensions via Majorization Theory",
+    "id": "2603.00381v1",
+    "title": "Verifier-Bound Communication for LLM Agents: Certified Bounds on Covert Signaling",
     "authors": [
-      "Meisam Mohammady",
-      "Qin Yang",
-      "Nicholas Stout",
-      "Ayesha Samreen",
-      "Han Wang"
+      "Om Tailor"
     ],
-    "published_date": "2026-02-26",
+    "published_date": "2026-02-27",
     "tags": [
       "cs.CR",
+      "cs.AI",
+      "eess.SY"
+    ],
+    "link": "http://arxiv.org/abs/2603.00381v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.00381v1",
+    "content": {
+      "en": "Colluding language-model agents can hide coordination in messages that remain policy-compliant at the surface level. We present CLBC, a protocol where generation and admission are separated: a message is admitted to transcript state only if a small verifier accepts a proof-bound envelope under a pinned predicate $Π$. The predicate binds policy hash, public randomness schedule, transcript chaining, latent schema constraints, canonical metadata/tool fields, and deterministic rejection codes. We show how this protocol yields an upper bound on transcript leakage in terms of latent leakage plus explicit residual channels, derive adaptive composition guarantees, and state a semantic lower bound when policy-valid alternatives remain choosable. We report extensive empirically grounded evidence: aggregate evaluation satisfies all prespecified thresholds; strict lane decoder advantage is bounded at 0.0000 with MI proxy 0.0636; adaptive-colluder stress tests remain below attacker thresholds; and baseline separation shows large gaps between reject-by-default semantics and audit-only controls. We further quantify operational tradeoffs. Strict full-proof mode has median turn latency 27.53s (p95 28.08s), while sampled proving reduces non-proved-turn latency to 0.327ms. The central finding is that bottlenecks alone are insufficient: security claims depend on verifiable admission semantics that are online, deterministic, and fail-closed.",
+      "tr": "Colluding language-model agents can hide coordination in messages that remain policy-compliant at the surface level. We present CLBC, a protocol where generation and admission are separated: a message is admitted to transcript state only if a small verifier accepts a proof-bound envelope under a pinned predicate $Π$. The predicate binds policy hash, public randomness schedule, transcript chaining, latent schema constraints, canonical metadata/tool fields, and deterministic rejection codes. We show how this protocol yields an upper bound on transcript leakage in terms of latent leakage plus explicit residual channels, derive adaptive composition guarantees, and state a semantic lower bound when policy-valid alternatives remain choosable. We report extensive empirically grounded evidence: aggregate evaluation satisfies all prespecified thresholds; strict lane decoder advantage is bounded at 0.0000 with MI proxy 0.0636; adaptive-colluder stress tests remain below attacker thresholds; and baseline separation shows large gaps between reject-by-default semantics and audit-only controls. We further quantify operational tradeoffs. Strict full-proof mode has median turn latency 27.53s (p95 28.08s), while sampled proving reduces non-proved-turn latency to 0.327ms. The central finding is that bottlenecks alone are insufficient: security claims depend on verifiable admission semantics that are online, deterministic, and fail-closed."
+    }
+  },
+  {
+    "id": "2603.00342v1",
+    "title": "Challenges in Enabling Private Data Valuation",
+    "authors": [
+      "Yiwei Fu",
+      "Tianhao Wang",
+      "Varun Chandrasekaran"
+    ],
+    "published_date": "2026-02-27",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2602.23516v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.23516v1",
+    "link": "http://arxiv.org/abs/2603.00342v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.00342v1",
     "content": {
-      "en": "Differentially Private Stochastic Gradient Descent (DP-SGD) is a cornerstone technique for ensuring privacy in deep learning, widely used in both training from scratch and fine-tuning large-scale language models. While DP-SGD predominantly relies on the Gaussian mechanism, the Laplace mechanism remains underutilized due to its reliance on L1 norm clipping. This constraint severely limits its practicality in high-dimensional models because the L1 norm of an n-dimensional gradient can be up to sqrt(n) times larger than its L2 norm. As a result, the required noise scale grows significantly with model size, leading to poor utility or untrainable models.   In this work, we introduce Lap2, a new solution that enables L2 clipping for Laplace DP-SGD while preserving strong privacy guarantees. We overcome the dimensionality-driven clipping barrier by computing coordinate-wise moment bounds and applying majorization theory to construct a tight, data-independent upper bound over the full model. By exploiting the Schur-convexity of the moment accountant function, we aggregate these bounds using a carefully designed majorization set that respects the L2 clipping constraint. This yields a multivariate privacy accountant that scales gracefully with model dimension and enables the use of thousands of moments. Empirical evaluations demonstrate that our approach significantly improves the performance of Laplace DP-SGD, achieving results comparable to or better than Gaussian DP-SGD under strong privacy constraints. For instance, fine-tuning RoBERTa-base (125M parameters) on SST-2 achieves 87.88% accuracy at epsilon=0.54, outperforming Gaussian (87.16%) and standard Laplace (48.97%) under the same budget.",
-      "tr": "Differentially Private Stochastic Gradient Descent (DP-SGD) is a cornerstone technique for ensuring privacy in deep learning, widely used in both training from scratch and fine-tuning large-scale language models. While DP-SGD predominantly relies on the Gaussian mechanism, the Laplace mechanism remains underutilized due to its reliance on L1 norm clipping. This constraint severely limits its practicality in high-dimensional models because the L1 norm of an n-dimensional gradient can be up to sqrt(n) times larger than its L2 norm. As a result, the required noise scale grows significantly with model size, leading to poor utility or untrainable models.   In this work, we introduce Lap2, a new solution that enables L2 clipping for Laplace DP-SGD while preserving strong privacy guarantees. We overcome the dimensionality-driven clipping barrier by computing coordinate-wise moment bounds and applying majorization theory to construct a tight, data-independent upper bound over the full model. By exploiting the Schur-convexity of the moment accountant function, we aggregate these bounds using a carefully designed majorization set that respects the L2 clipping constraint. This yields a multivariate privacy accountant that scales gracefully with model dimension and enables the use of thousands of moments. Empirical evaluations demonstrate that our approach significantly improves the performance of Laplace DP-SGD, achieving results comparable to or better than Gaussian DP-SGD under strong privacy constraints. For instance, fine-tuning RoBERTa-base (125M parameters) on SST-2 achieves 87.88% accuracy at epsilon=0.54, outperforming Gaussian (87.16%) and standard Laplace (48.97%) under the same budget."
+      "en": "Data valuation methods quantify how individual training examples contribute to a model's behavior, and are increasingly used for dataset curation, auditing, and emerging data markets. As these techniques become operational, they raise serious privacy concerns: valuation scores can reveal whether a person's data was included in training, whether it was unusually influential, or what sensitive patterns exist in proprietary datasets. This motivates the study of privacy-preserving data valuation. However, privacy is fundamentally in tension with valuation utility under differential privacy (DP). DP requires outputs to be insensitive to any single record, while valuation methods are explicitly designed to measure per-record influence. As a result, naive privatization often destroys the fine-grained distinctions needed to rank or attribute value, particularly in heterogeneous datasets where rare examples exert outsized effects. In this work, we analyze the feasibility of DP-compatible data valuation. We identify the core algorithmic primitives across common valuation frameworks that induce prohibitive sensitivity, explaining why straightforward DP mechanisms fail. We further derive design principles for more privacy-amenable valuation procedures and empirically characterize how privacy constraints degrade ranking fidelity across representative methods and datasets. Our results clarify the limits of current approaches and provide a foundation for developing valuation methods that remain useful under rigorous privacy guarantees.",
+      "tr": "Data valuation methods quantify how individual training examples contribute to a model's behavior, and are increasingly used for dataset curation, auditing, and emerging data markets. As these techniques become operational, they raise serious privacy concerns: valuation scores can reveal whether a person's data was included in training, whether it was unusually influential, or what sensitive patterns exist in proprietary datasets. This motivates the study of privacy-preserving data valuation. However, privacy is fundamentally in tension with valuation utility under differential privacy (DP). DP requires outputs to be insensitive to any single record, while valuation methods are explicitly designed to measure per-record influence. As a result, naive privatization often destroys the fine-grained distinctions needed to rank or attribute value, particularly in heterogeneous datasets where rare examples exert outsized effects. In this work, we analyze the feasibility of DP-compatible data valuation. We identify the core algorithmic primitives across common valuation frameworks that induce prohibitive sensitivity, explaining why straightforward DP mechanisms fail. We further derive design principles for more privacy-amenable valuation procedures and empirically characterize how privacy constraints degrade ranking fidelity across representative methods and datasets. Our results clarify the limits of current approaches and provide a foundation for developing valuation methods that remain useful under rigorous privacy guarantees."
     }
   },
   {
-    "id": "2602.23329v1",
-    "title": "LLM Novice Uplift on Dual-Use, In Silico Biology Tasks",
+    "id": "2603.00318v1",
+    "title": "AESP: A Human-Sovereign Economic Protocol for AI Agents with Privacy-Preserving Settlement",
     "authors": [
-      "Chen Bo Calvin Zhang",
-      "Christina Q. Knight",
-      "Nicholas Kruus",
-      "Jason Hausenloy",
-      "Pedro Medeiros"
+      "Jian Sheng Wang"
     ],
-    "published_date": "2026-02-26",
+    "published_date": "2026-02-27",
     "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.00318v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.00318v1",
+    "content": {
+      "en": "As AI agents increasingly perform economic tasks on behalf of humans, a fundamental tension arises between agent autonomy and human control over financial assets. We present the Agent Economic Sovereignty Protocol (AESP), a layered protocol in which agents transact autonomously at machine speed on crypto-native infrastructure while remaining cryptographically bound to human-defined governance boundaries. AESP enforces the invariant that agents are economically capable but never economically sovereign through five mechanisms: (1) a deterministic eight-check policy engine with tiered escalation; (2) human-in-the-loop review with automatic, explicit, and biometric tiers; (3) EIP-712 dual-signed commitments with escrow; (4) HKDF-based context-isolated privacy with batched consolidation; and (5) an ACE-GF-based cryptographic substrate. We formalize two testable hypotheses on security coverage and latency overhead, and specify a complete evaluation methodology with baselines and ablation design. The protocol is implemented as an open-source TypeScript SDK (208 tests, ten modules) with interoperability via MCP and A2A.",
+      "tr": "As AI agents increasingly perform economic tasks on behalf of humans, a fundamental tension arises between agent autonomy and human control over financial assets. We present the Agent Economic Sovereignty Protocol (AESP), a layered protocol in which agents transact autonomously at machine speed on crypto-native infrastructure while remaining cryptographically bound to human-defined governance boundaries. AESP enforces the invariant that agents are economically capable but never economically sovereign through five mechanisms: (1) a deterministic eight-check policy engine with tiered escalation; (2) human-in-the-loop review with automatic, explicit, and biometric tiers; (3) EIP-712 dual-signed commitments with escrow; (4) HKDF-based context-isolated privacy with batched consolidation; and (5) an ACE-GF-based cryptographic substrate. We formalize two testable hypotheses on security coverage and latency overhead, and specify a complete evaluation methodology with baselines and ablation design. The protocol is implemented as an open-source TypeScript SDK (208 tests, ten modules) with interoperability via MCP and A2A."
+    }
+  },
+  {
+    "id": "2603.00222v1",
+    "title": "Empowering Future Cybersecurity Leaders: Advancing Students through FINDS Education for Digital Forensic Excellence",
+    "authors": [
+      "Yashas Hariprasad",
+      "Subhash Gurappa",
+      "Sundararaj S. Iyengar",
+      "Jerry F. Miller",
+      "Pronab Mohanty"
+    ],
+    "published_date": "2026-02-27",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.00222v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.00222v1",
+    "content": {
+      "en": "The Forensics Investigations Network in Digital Sciences (FINDS) Research Center of Excellence (CoE), funded by the U.S. Army Research Laboratory, advances Digital Forensic Engineering Education (DFEE) through an integrated research education framework for AI enabled cybersecurity workforce development. FINDS combines high performance computing (HPC), secure software engineering, adversarial analytics, and experiential learning to address emerging cyber and synthetic media threats. This paper introduces the Multidependency Capacity Building Skills Graph (MCBSG), a directed acyclic graph based model that encodes hierarchical and cross domain dependencies among competencies in AI-driven forensic programming, statistical inference, digital evidence processing, and threat detection. The MCBSG enables structured modeling of skill acquisition pathways and quantitative capacity assessment. Supervised machine learning methods, including entropy-based Decision Tree Classifiers and regression modeling, are applied to longitudinal multi cohort datasets capturing mentoring interactions, laboratory performance metrics, curriculum artifacts, and workshop participation. Feature importance analysis and cross validation identify key predictors of technical proficiency and research readiness. Three year statistical evaluation demonstrates significant gains in forensic programming accuracy, adversarial reasoning, and HPC-enabled investigative workflows. Results validate the MCBSG as a scalable, interpretable framework for data-driven, inclusive cybersecurity education aligned with national defense workforce priorities.",
+      "tr": "The Forensics Investigations Network in Digital Sciences (FINDS) Research Center of Excellence (CoE), funded by the U.S. Army Research Laboratory, advances Digital Forensic Engineering Education (DFEE) through an integrated research education framework for AI enabled cybersecurity workforce development. FINDS combines high performance computing (HPC), secure software engineering, adversarial analytics, and experiential learning to address emerging cyber and synthetic media threats. This paper introduces the Multidependency Capacity Building Skills Graph (MCBSG), a directed acyclic graph based model that encodes hierarchical and cross domain dependencies among competencies in AI-driven forensic programming, statistical inference, digital evidence processing, and threat detection. The MCBSG enables structured modeling of skill acquisition pathways and quantitative capacity assessment. Supervised machine learning methods, including entropy-based Decision Tree Classifiers and regression modeling, are applied to longitudinal multi cohort datasets capturing mentoring interactions, laboratory performance metrics, curriculum artifacts, and workshop participation. Feature importance analysis and cross validation identify key predictors of technical proficiency and research readiness. Three year statistical evaluation demonstrates significant gains in forensic programming accuracy, adversarial reasoning, and HPC-enabled investigative workflows. Results validate the MCBSG as a scalable, interpretable framework for data-driven, inclusive cybersecurity education aligned with national defense workforce priorities."
+    }
+  },
+  {
+    "id": "2603.00217v1",
+    "title": "Physical Evaluation of Naturalistic Adversarial Patches for Camera-Based Traffic-Sign Detection",
+    "authors": [
+      "Brianna D'Urso",
+      "Tahmid Hasan Sakib",
+      "Syed Rafay Hasan",
+      "Terry N. Guo"
+    ],
+    "published_date": "2026-02-27",
+    "tags": [
+      "cs.CV",
       "cs.AI",
-      "cs.CL",
-      "cs.CR",
-      "cs.CY",
-      "cs.HC"
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2602.23329v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.23329v1",
+    "link": "http://arxiv.org/abs/2603.00217v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.00217v1",
     "content": {
-      "en": "Large language models (LLMs) perform increasingly well on biology benchmarks, but it remains unclear whether they uplift novice users -- i.e., enable humans to perform better than with internet-only resources. This uncertainty is central to understanding both scientific acceleration and dual-use risk. We conducted a multi-model, multi-benchmark human uplift study comparing novices with LLM access versus internet-only access across eight biosecurity-relevant task sets. Participants worked on complex problems with ample time (up to 13 hours for the most involved tasks). We found that LLM access provided substantial uplift: novices with LLMs were 4.16 times more accurate than controls (95% CI [2.63, 6.87]). On four benchmarks with available expert baselines (internet-only), novices with LLMs outperformed experts on three of them. Perhaps surprisingly, standalone LLMs often exceeded LLM-assisted novices, indicating that users were not eliciting the strongest available contributions from the LLMs. Most participants (89.6%) reported little difficulty obtaining dual-use-relevant information despite safeguards. Overall, LLMs substantially uplift novices on biological tasks previously reserved for trained practitioners, underscoring the need for sustained, interactive uplift evaluations alongside traditional benchmarks.",
-      "tr": "Large language models (LLMs) perform increasingly well on biology benchmarks, but it remains unclear whether they uplift novice users -- i.e., enable humans to perform better than with internet-only resources. This uncertainty is central to understanding both scientific acceleration and dual-use risk. We conducted a multi-model, multi-benchmark human uplift study comparing novices with LLM access versus internet-only access across eight biosecurity-relevant task sets. Participants worked on complex problems with ample time (up to 13 hours for the most involved tasks). We found that LLM access provided substantial uplift: novices with LLMs were 4.16 times more accurate than controls (95% CI [2.63, 6.87]). On four benchmarks with available expert baselines (internet-only), novices with LLMs outperformed experts on three of them. Perhaps surprisingly, standalone LLMs often exceeded LLM-assisted novices, indicating that users were not eliciting the strongest available contributions from the LLMs. Most participants (89.6%) reported little difficulty obtaining dual-use-relevant information despite safeguards. Overall, LLMs substantially uplift novices on biological tasks previously reserved for trained practitioners, underscoring the need for sustained, interactive uplift evaluations alongside traditional benchmarks."
-    }
-  },
-  {
-    "id": "2602.23167v1",
-    "title": "SettleFL: Trustless and Scalable Reward Settlement Protocol for Federated Learning on Permissionless Blockchains (Extended version)",
-    "authors": [
-      "Shuang Liang",
-      "Yang Hua",
-      "Linshan Jiang",
-      "Peishen Yan",
-      "Tao Song"
-    ],
-    "published_date": "2026-02-26",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2602.23167v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.23167v1",
-    "content": {
-      "en": "In open Federated Learning (FL) environments where no central authority exists, ensuring collaboration fairness relies on decentralized reward settlement, yet the prohibitive cost of permissionless blockchains directly clashes with the high-frequency, iterative nature of model training. Existing solutions either compromise decentralization or suffer from scalability bottlenecks due to linear on-chain costs. To address this, we present SettleFL, a trustless and scalable reward settlement protocol designed to minimize total economic friction by offering a family of two interoperable protocols. Leveraging a shared domain-specific circuit architecture, SettleFL offers two interoperable strategies: (1) a Commit-and-Challenge variant that minimizes on-chain costs via optimistic execution and dispute-driven arbitration, and (2) a Commit-with-Proof variant that guarantees instant finality through per-round validity proofs. This design allows the protocol to flexibly adapt to varying latency and cost constraints while enforcing rational robustness without trusted coordination. We conduct extensive experiments combining real FL workloads and controlled simulations. Results show that SettleFL remains practical when scaling to 800 participants, achieving substantially lower gas cost.",
-      "tr": "In open Federated Learning (FL) environments where no central authority exists, ensuring collaboration fairness relies on decentralized reward settlement, yet the prohibitive cost of permissionless blockchains directly clashes with the high-frequency, iterative nature of model training. Existing solutions either compromise decentralization or suffer from scalability bottlenecks due to linear on-chain costs. To address this, we present SettleFL, a trustless and scalable reward settlement protocol designed to minimize total economic friction by offering a family of two interoperable protocols. Leveraging a shared domain-specific circuit architecture, SettleFL offers two interoperable strategies: (1) a Commit-and-Challenge variant that minimizes on-chain costs via optimistic execution and dispute-driven arbitration, and (2) a Commit-with-Proof variant that guarantees instant finality through per-round validity proofs. This design allows the protocol to flexibly adapt to varying latency and cost constraints while enforcing rational robustness without trusted coordination. We conduct extensive experiments combining real FL workloads and controlled simulations. Results show that SettleFL remains practical when scaling to 800 participants, achieving substantially lower gas cost."
-    }
-  },
-  {
-    "id": "2602.23163v1",
-    "title": "A Decision-Theoretic Formalisation of Steganography With Applications to LLM Monitoring",
-    "authors": [
-      "Usman Anwar",
-      "Julianna Piskorz",
-      "David D. Baek",
-      "David Africa",
-      "Jim Weatherall"
-    ],
-    "published_date": "2026-02-26",
-    "tags": [
-      "cs.AI",
-      "cs.CL",
-      "cs.CR",
-      "cs.IT",
-      "cs.MA"
-    ],
-    "link": "http://arxiv.org/abs/2602.23163v1",
-    "pdf_link": "https://arxiv.org/pdf/2602.23163v1",
-    "content": {
-      "en": "Large language models are beginning to show steganographic capabilities. Such capabilities could allow misaligned models to evade oversight mechanisms. Yet principled methods to detect and quantify such behaviours are lacking. Classical definitions of steganography, and detection methods based on them, require a known reference distribution of non-steganographic signals. For the case of steganographic reasoning in LLMs, knowing such a reference distribution is not feasible; this renders these approaches inapplicable. We propose an alternative, \\textbf{decision-theoretic view of steganography}. Our central insight is that steganography creates an asymmetry in usable information between agents who can and cannot decode the hidden content (present within a steganographic signal), and this otherwise latent asymmetry can be inferred from the agents' observable actions. To formalise this perspective, we introduce generalised $\\mathcal{V}$-information: a utilitarian framework for measuring the amount of usable information within some input. We use this to define the \\textbf{steganographic gap} -- a measure that quantifies steganography by comparing the downstream utility of the steganographic signal to agents that can and cannot decode the hidden content. We empirically validate our formalism, and show that it can be used to detect, quantify, and mitigate steganographic reasoning in LLMs.",
-      "tr": "Large language models are beginning to show steganographic capabilities. Such capabilities could allow misaligned models to evade oversight mechanisms. Yet principled methods to detect and quantify such behaviours are lacking. Classical definitions of steganography, and detection methods based on them, require a known reference distribution of non-steganographic signals. For the case of steganographic reasoning in LLMs, knowing such a reference distribution is not feasible; this renders these approaches inapplicable. We propose an alternative, \\textbf{decision-theoretic view of steganography}. Our central insight is that steganography creates an asymmetry in usable information between agents who can and cannot decode the hidden content (present within a steganographic signal), and this otherwise latent asymmetry can be inferred from the agents' observable actions. To formalise this perspective, we introduce generalised $\\mathcal{V}$-information: a utilitarian framework for measuring the amount of usable information within some input. We use this to define the \\textbf{steganographic gap} -- a measure that quantifies steganography by comparing the downstream utility of the steganographic signal to agents that can and cannot decode the hidden content. We empirically validate our formalism, and show that it can be used to detect, quantify, and mitigate steganographic reasoning in LLMs."
+      "en": "This paper studies how well Naturalistic Adversarial Patches (NAPs) transfer to a physical traffic sign setting when the detector is trained on a customized dataset for an autonomous vehicle (AV) environment. We construct a composite dataset, CompGTSRB (which is customized dataset for AV environment), by pasting traffic sign instances from the German Traffic Sign Recognition Benchmark (GTSRB) onto undistorted backgrounds captured from the target platform. CompGTSRB is used to train a YOLOv5 model and generate patches using a Generative Adversarial Network (GAN) with latent space optimization, following existing NAP methods. We carried out a series of experiments on our Quanser QCar testbed utilizing the front CSI camera provided in QCar. Across configurations, NAPs reduce the detector's STOP class confidence. Different configurations include distance, patch sizes, and patch placement. These results along with a detailed step-by-step methodology indicate the utility of CompGTSRB dataset and the proposed systematic physical protocols for credible patch evaluation. The research further motivate researching the defenses that address localized patch corruption in embedded perception pipelines.",
+      "tr": "This paper studies how well Naturalistic Adversarial Patches (NAPs) transfer to a physical traffic sign setting when the detector is trained on a customized dataset for an autonomous vehicle (AV) environment. We construct a composite dataset, CompGTSRB (which is customized dataset for AV environment), by pasting traffic sign instances from the German Traffic Sign Recognition Benchmark (GTSRB) onto undistorted backgrounds captured from the target platform. CompGTSRB is used to train a YOLOv5 model and generate patches using a Generative Adversarial Network (GAN) with latent space optimization, following existing NAP methods. We carried out a series of experiments on our Quanser QCar testbed utilizing the front CSI camera provided in QCar. Across configurations, NAPs reduce the detector's STOP class confidence. Different configurations include distance, patch sizes, and patch placement. These results along with a detailed step-by-step methodology indicate the utility of CompGTSRB dataset and the proposed systematic physical protocols for credible patch evaluation. The research further motivate researching the defenses that address localized patch corruption in embedded perception pipelines."
     }
   }
 ]
