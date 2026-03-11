@@ -1,5 +1,199 @@
 [
   {
+    "id": "2603.09356v1",
+    "title": "Democratising Clinical AI through Dataset Condensation for Classical Clinical Models",
+    "authors": [
+      "Anshul Thakur",
+      "Soheila Molaei",
+      "Pafue Christy Nganjimi",
+      "Joshua Fieggen",
+      "Andrew A. S. Soltan"
+    ],
+    "published_date": "2026-03-10",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2603.09356v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.09356v1",
+    "content": {
+      "en": "Dataset condensation (DC) learns a compact synthetic dataset that enables models to match the performance of full-data training, prioritising utility over distributional fidelity. While typically explored for computational efficiency, DC also holds promise for healthcare data democratisation, especially when paired with differential privacy, allowing synthetic data to serve as a safe alternative to real records. However, existing DC methods rely on differentiable neural networks, limiting their compatibility with widely used clinical models such as decision trees and Cox regression. We address this gap using a differentially private, zero-order optimisation framework that extends DC to non-differentiable models using only function evaluations. Empirical results across six datasets, including both classification and survival tasks, show that the proposed method produces condensed datasets that preserve model utility while providing effective differential privacy guarantees - enabling model-agnostic data sharing for clinical prediction tasks without exposing sensitive patient information.",
+      "tr": "Dataset condensation (DC) learns a compact synthetic dataset that enables models to match the performance of full-data training, prioritising utility over distributional fidelity. While typically explored for computational efficiency, DC also holds promise for healthcare data democratisation, especially when paired with differential privacy, allowing synthetic data to serve as a safe alternative to real records. However, existing DC methods rely on differentiable neural networks, limiting their compatibility with widely used clinical models such as decision trees and Cox regression. We address this gap using a differentially private, zero-order optimisation framework that extends DC to non-differentiable models using only function evaluations. Empirical results across six datasets, including both classification and survival tasks, show that the proposed method produces condensed datasets that preserve model utility while providing effective differential privacy guarantees - enabling model-agnostic data sharing for clinical prediction tasks without exposing sensitive patient information."
+    }
+  },
+  {
+    "id": "2603.09046v1",
+    "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
+    "authors": [
+      "Yinpeng Wu",
+      "Yitong Chen",
+      "Lixiang Wang",
+      "Jinyu Gu",
+      "Zhichao Hua"
+    ],
+    "published_date": "2026-03-10",
+    "tags": [
+      "cs.CR",
+      "cs.LG",
+      "cs.OS"
+    ],
+    "link": "http://arxiv.org/abs/2603.09046v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.09046v1",
+    "content": {
+      "en": "Device-side Large Language Models (LLMs) have witnessed explosive growth, offering higher privacy and availability compared to cloud-side LLMs. During LLM inference, both model weights and user data are valuable, and attackers may even compromise the OS kernel to steal them. ARM TrustZone is the de facto hardware-based isolation technology on mobile devices, used to protect sensitive applications from a compromised OS. However, protecting LLM inference with TrustZone incurs significant overhead due to its inflexible isolation of memory and the NPU. To address these challenges, this paper introduces FlexServe, a fast and secure LLM serving system for mobile devices. It first introduces a Flexible Resource Isolation mechanism to construct Flexible Secure Memory (Flex-Mem) and Flexible Secure NPU (Flex-NPU). Both memory pages and the NPU can be efficiently switched between unprotected and protected modes. Based on these mechanisms, FlexServe designs a fast and secure LLM inference framework within TrustZone's secure world. The LLM-Aware Memory Management and Secure Inference Pipeline are introduced to accelerate inference. A Multi-Model Scheduler is proposed to optimize multi-model workflows. We implement a prototype of FlexServe and compare it with two TrustZone-based strawman designs. The results show that FlexServe achieves an average $10.05\\times$ speedup in Time to First Token (TTFT) compared to the strawman, and an average $2.44\\times$ TTFT speedup compared to an optimized strawman with pipeline and secure NPU enabled. For multi-model agent workflows, the end-to-end speedup is up to $24.30\\times$ and $4.05\\times$ compared to the strawman and optimized strawman, respectively.",
+      "tr": "Device-side Large Language Models (LLMs) have witnessed explosive growth, offering higher privacy and availability compared to cloud-side LLMs. During LLM inference, both model weights and user data are valuable, and attackers may even compromise the OS kernel to steal them. ARM TrustZone is the de facto hardware-based isolation technology on mobile devices, used to protect sensitive applications from a compromised OS. However, protecting LLM inference with TrustZone incurs significant overhead due to its inflexible isolation of memory and the NPU. To address these challenges, this paper introduces FlexServe, a fast and secure LLM serving system for mobile devices. It first introduces a Flexible Resource Isolation mechanism to construct Flexible Secure Memory (Flex-Mem) and Flexible Secure NPU (Flex-NPU). Both memory pages and the NPU can be efficiently switched between unprotected and protected modes. Based on these mechanisms, FlexServe designs a fast and secure LLM inference framework within TrustZone's secure world. The LLM-Aware Memory Management and Secure Inference Pipeline are introduced to accelerate inference. A Multi-Model Scheduler is proposed to optimize multi-model workflows. We implement a prototype of FlexServe and compare it with two TrustZone-based strawman designs. The results show that FlexServe achieves an average $10.05\\times$ speedup in Time to First Token (TTFT) compared to the strawman, and an average $2.44\\times$ TTFT speedup compared to an optimized strawman with pipeline and secure NPU enabled. For multi-model agent workflows, the end-to-end speedup is up to $24.30\\times$ and $4.05\\times$ compared to the strawman and optimized strawman, respectively."
+    }
+  },
+  {
+    "id": "2603.09002v1",
+    "title": "Security Considerations for Multi-agent Systems",
+    "authors": [
+      "Tam Nguyen",
+      "Moses Ndebugre",
+      "Dheeraj Arremsetty"
+    ],
+    "published_date": "2026-03-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.09002v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.09002v1",
+    "content": {
+      "en": "Multi-agent artificial intelligence systems or MAS are systems of autonomous agents that exercise delegated tool authority, share persistent memory, and coordinate via inter-agent communication. MAS introduces qualitatively distinct security vulnerabilities from those documented for singular AI models. Existing security and governance frameworks were not designed for these emerging attack surfaces. This study systematically characterizes the threat landscape of MAS and quantitatively evaluates 16 security frameworks for AI against it. A four-phase methodology is proposed: constructing a deep technical knowledge base of production multi-agent architectures; conducting generative AI-assisted threat modeling scoped to MAS cybersecurity risks and validated by domain experts; structuring survey plans at individual-threat granularity; and scoring each framework on a three-point scale against the cybersecurity risks. The risks were organized into 193 distinct main threat items across nine risk categories. The expected minimal average score is 2. No reviewed framework achieves majority coverage of any single category. Non-Determinism (mean score 1.231 across all 16 frameworks) and Data Leakage (1.340) are the most under-addressed domains. The OWASP Agentic Security Initiative leads overall at 65.3\\% coverage and in the design phase; the CDAO Generative AI Responsible AI Toolkit leads in development and operational coverage. These results provide the first empirical cross-framework comparison for MAS security and offer evidence-based guidance for framework selection.",
+      "tr": "Multi-agent artificial intelligence systems or MAS are systems of autonomous agents that exercise delegated tool authority, share persistent memory, and coordinate via inter-agent communication. MAS introduces qualitatively distinct security vulnerabilities from those documented for singular AI models. Existing security and governance frameworks were not designed for these emerging attack surfaces. This study systematically characterizes the threat landscape of MAS and quantitatively evaluates 16 security frameworks for AI against it. A four-phase methodology is proposed: constructing a deep technical knowledge base of production multi-agent architectures; conducting generative AI-assisted threat modeling scoped to MAS cybersecurity risks and validated by domain experts; structuring survey plans at individual-threat granularity; and scoring each framework on a three-point scale against the cybersecurity risks. The risks were organized into 193 distinct main threat items across nine risk categories. The expected minimal average score is 2. No reviewed framework achieves majority coverage of any single category. Non-Determinism (mean score 1.231 across all 16 frameworks) and Data Leakage (1.340) are the most under-addressed domains. The OWASP Agentic Security Initiative leads overall at 65.3\\% coverage and in the design phase; the CDAO Generative AI Responsible AI Toolkit leads in development and operational coverage. These results provide the first empirical cross-framework comparison for MAS security and offer evidence-based guidance for framework selection."
+    }
+  },
+  {
+    "id": "2603.08993v1",
+    "title": "Arbiter: Detecting Interference in LLM Agent System Prompts",
+    "authors": [
+      "Tony Mason"
+    ],
+    "published_date": "2026-03-09",
+    "tags": [
+      "cs.SE",
+      "cs.AI",
+      "cs.CR",
+      "cs.PL"
+    ],
+    "link": "http://arxiv.org/abs/2603.08993v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.08993v1",
+    "content": {
+      "en": "System prompts for LLM-based coding agents are software artifacts that govern agent behavior, yet lack the testing infrastructure applied to conventional software. We present Arbiter, a framework combining formal evaluation rules with multi-model LLM scouring to detect interference patterns in system prompts. Applied to three major coding agent system prompts: Claude Code (Anthropic), Codex CLI (OpenAI), and Gemini CLI (Google), we identify 152 findings across the undirected scouring phase and 21 hand-labeled interference patterns in directed analysis of one vendor. We show that prompt architecture (monolithic, flat, modular) strongly correlates with observed failure class but not with severity, and that multi-model evaluation discovers categorically different vulnerability classes than single-model analysis. One scourer finding was structural data loss in Gemini CLI's memory system was consistent with an issue filed and patched by Google, which addressed the symptom without addressing the schema-level root cause identified by the scourer. Total cost of cross-vendor analysis: \\$0.27 USD.",
+      "tr": "System prompts for LLM-based coding agents are software artifacts that govern agent behavior, yet lack the testing infrastructure applied to conventional software. We present Arbiter, a framework combining formal evaluation rules with multi-model LLM scouring to detect interference patterns in system prompts. Applied to three major coding agent system prompts: Claude Code (Anthropic), Codex CLI (OpenAI), and Gemini CLI (Google), we identify 152 findings across the undirected scouring phase and 21 hand-labeled interference patterns in directed analysis of one vendor. We show that prompt architecture (monolithic, flat, modular) strongly correlates with observed failure class but not with severity, and that multi-model evaluation discovers categorically different vulnerability classes than single-model analysis. One scourer finding was structural data loss in Gemini CLI's memory system was consistent with an issue filed and patched by Google, which addressed the symptom without addressing the schema-level root cause identified by the scourer. Total cost of cross-vendor analysis: \\$0.27 USD."
+    }
+  },
+  {
+    "id": "2603.08913v1",
+    "title": "Quantifying Memorization and Privacy Risks in Genomic Language Models",
+    "authors": [
+      "Alexander Nemecek",
+      "Wenbiao Li",
+      "Xiaoqian Jiang",
+      "Jaideep Vaidya",
+      "Erman Ayday"
+    ],
+    "published_date": "2026-03-09",
+    "tags": [
+      "cs.LG",
+      "cs.CR",
+      "q-bio.GN"
+    ],
+    "link": "http://arxiv.org/abs/2603.08913v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.08913v1",
+    "content": {
+      "en": "Genomic language models (GLMs) have emerged as powerful tools for learning representations of DNA sequences, enabling advances in variant prediction, regulatory element identification, and cross-task transfer learning. However, as these models are increasingly trained or fine-tuned on sensitive genomic cohorts, they risk memorizing specific sequences from their training data, raising serious concerns around privacy, data leakage, and regulatory compliance. Despite growing awareness of memorization risks in general-purpose language models, little systematic evaluation exists for these risks in the genomic domain, where data exhibit unique properties such as a fixed nucleotide alphabet, strong biological structure, and individual identifiability. We present a comprehensive, multi-vector privacy evaluation framework designed to quantify memorization risks in GLMs. Our approach integrates three complementary risk assessment methodologies: perplexity-based detection, canary sequence extraction, and membership inference. These are combined into a unified evaluation pipeline that produces a worst-case memorization risk score. To enable controlled evaluation, we plant canary sequences at varying repetition rates into both synthetic and real genomic datasets, allowing precise quantification of how repetition and training dynamics influence memorization. We evaluate our framework across multiple GLM architectures, examining the relationship between sequence repetition, model capacity, and memorization risk. Our results establish that GLMs exhibit measurable memorization and that the degree of memorization varies across architectures and training regimes. These findings reveal that no single attack vector captures the full scope of memorization risk, underscoring the need for multi-vector privacy auditing as a standard practice for genomic AI systems.",
+      "tr": "Genomic language models (GLMs) have emerged as powerful tools for learning representations of DNA sequences, enabling advances in variant prediction, regulatory element identification, and cross-task transfer learning. However, as these models are increasingly trained or fine-tuned on sensitive genomic cohorts, they risk memorizing specific sequences from their training data, raising serious concerns around privacy, data leakage, and regulatory compliance. Despite growing awareness of memorization risks in general-purpose language models, little systematic evaluation exists for these risks in the genomic domain, where data exhibit unique properties such as a fixed nucleotide alphabet, strong biological structure, and individual identifiability. We present a comprehensive, multi-vector privacy evaluation framework designed to quantify memorization risks in GLMs. Our approach integrates three complementary risk assessment methodologies: perplexity-based detection, canary sequence extraction, and membership inference. These are combined into a unified evaluation pipeline that produces a worst-case memorization risk score. To enable controlled evaluation, we plant canary sequences at varying repetition rates into both synthetic and real genomic datasets, allowing precise quantification of how repetition and training dynamics influence memorization. We evaluate our framework across multiple GLM architectures, examining the relationship between sequence repetition, model capacity, and memorization risk. Our results establish that GLMs exhibit measurable memorization and that the degree of memorization varies across architectures and training regimes. These findings reveal that no single attack vector captures the full scope of memorization risk, underscoring the need for multi-vector privacy auditing as a standard practice for genomic AI systems."
+    }
+  },
+  {
+    "id": "2603.08901v1",
+    "title": "NetDiffuser: Deceiving DNN-Based Network Attack Detection Systems with Diffusion-Generated Adversarial Traffic",
+    "authors": [
+      "Pratyay Kumar",
+      "Abu Saleh Md Tayeen",
+      "Satyajayant Misra",
+      "Huiping Cao",
+      "Jiefei Liu"
+    ],
+    "published_date": "2026-03-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.08901v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.08901v1",
+    "content": {
+      "en": "Deep learning (DL)-based Network Intrusion Detection System (NIDS) has demonstrated great promise in detecting malicious network traffic. However, they face significant security risks due to their vulnerability to adversarial examples (AEs). Most existing adversarial attacks maliciously perturb data to maximize misclassification errors. Among AEs, natural adversarial examples (NAEs) are particularly difficult to detect because they closely resemble real data, making them challenging for both humans and machine learning models to distinguish from legitimate inputs. Creating NAEs is crucial for testing and strengthening NIDS defenses. This paper proposes NetDiffuser1, a novel framework for generating NAEs capable of deceiving NIDS. NetDiffuser consists of two novel components. First, a new feature categorization algorithm is designed to identify relatively independent features in network traffic. Perturbing these features minimizes changes while preserving network flow validity. The second component is a novel application of diffusion models to inject semantically consistent perturbations for generating NAEs. NetDiffuser performance was extensively evaluated using three benchmark NIDS datasets across various model architectures and state-of-the-art adversarial detectors. Our experimental results show that NetDiffuser achieves up to a 29.93% higher attack success rate and reduces AE detection performance by at least 0.267 (in some cases up to 0.534) in the Area under the Receiver Operating Characteristic Curve (AUC-ROC) score compared to the baseline attacks.",
+      "tr": "Deep learning (DL)-based Network Intrusion Detection System (NIDS) has demonstrated great promise in detecting malicious network traffic. However, they face significant security risks due to their vulnerability to adversarial examples (AEs). Most existing adversarial attacks maliciously perturb data to maximize misclassification errors. Among AEs, natural adversarial examples (NAEs) are particularly difficult to detect because they closely resemble real data, making them challenging for both humans and machine learning models to distinguish from legitimate inputs. Creating NAEs is crucial for testing and strengthening NIDS defenses. This paper proposes NetDiffuser1, a novel framework for generating NAEs capable of deceiving NIDS. NetDiffuser consists of two novel components. First, a new feature categorization algorithm is designed to identify relatively independent features in network traffic. Perturbing these features minimizes changes while preserving network flow validity. The second component is a novel application of diffusion models to inject semantically consistent perturbations for generating NAEs. NetDiffuser performance was extensively evaluated using three benchmark NIDS datasets across various model architectures and state-of-the-art adversarial detectors. Our experimental results show that NetDiffuser achieves up to a 29.93% higher attack success rate and reduces AE detection performance by at least 0.267 (in some cases up to 0.534) in the Area under the Receiver Operating Characteristic Curve (AUC-ROC) score compared to the baseline attacks."
+    }
+  },
+  {
+    "id": "2603.08566v1",
+    "title": "OSS-CRS: Liberating AIxCC Cyber Reasoning Systems for Real-World Open-Source Security",
+    "authors": [
+      "Andrew Chin",
+      "Dongkwan Kim",
+      "Yu-Fu Fu",
+      "Fabian Fleischer",
+      "Youngjoon Kim"
+    ],
+    "published_date": "2026-03-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.08566v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.08566v1",
+    "content": {
+      "en": "DARPA's AI Cyber Challenge (AIxCC) showed that cyber reasoning systems (CRSs) can go beyond vulnerability discovery to autonomously confirm and patch bugs: seven teams built such systems and open-sourced them after the competition. Yet all seven open-sourced CRSs remain largely unusable outside their original teams, each bound to the competition cloud infrastructure that no longer exists. We present OSS-CRS, an open, locally deployable framework for running and combining CRS techniques against real-world open-source projects, with budget-aware resource management. We ported the first-place system (Atlantis) and discovered 10 previously unknown bugs (three of high severity) across 8 OSS-Fuzz projects. OSS-CRS is publicly available.",
+      "tr": "DARPA's AI Cyber Challenge (AIxCC) showed that cyber reasoning systems (CRSs) can go beyond vulnerability discovery to autonomously confirm and patch bugs: seven teams built such systems and open-sourced them after the competition. Yet all seven open-sourced CRSs remain largely unusable outside their original teams, each bound to the competition cloud infrastructure that no longer exists. We present OSS-CRS, an open, locally deployable framework for running and combining CRS techniques against real-world open-source projects, with budget-aware resource management. We ported the first-place system (Atlantis) and discovered 10 previously unknown bugs (three of high severity) across 8 OSS-Fuzz projects. OSS-CRS is publicly available."
+    }
+  },
+  {
+    "id": "2603.08288v1",
+    "title": "A Blockchain-based Traceability System for AI-Driven Engine Blade Inspection",
+    "authors": [
+      "Mahmoud Hafez",
+      "Eman Ouda",
+      "Mohammed A. Mohammed Eltoum",
+      "Khaled Salah",
+      "Yusra Abdulrahman"
+    ],
+    "published_date": "2026-03-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "link": "http://arxiv.org/abs/2603.08288v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.08288v1",
+    "content": {
+      "en": "Aircraft engine blade maintenance relies on inspection records shared across manufacturers, airlines, maintenance organizations, and regulators. Yet current systems are fragmented, difficult to audit, and vulnerable to tampering. This paper presents BladeChain, a blockchain-based system providing immutable traceability for blade inspections throughout the component life cycle. BladeChain is the first system to integrate multi-stakeholder endorsement, automated inspection scheduling, AI model provenance, and cryptographic evidence binding, delivering auditable maintenance traceability for aerospace deployments. Built on a four-stakeholder Hyperledger Fabric network (OEM, Airline, MRO, Regulator), BladeChain captures every life-cycle event in a tamper-evident ledger. A chaincode-enforced state machine governs blade status transitions and automatically triggers inspections when configurable flight hour, cycle, or calendar thresholds are exceeded, eliminating manual scheduling errors. Inspection artifacts are stored off-chain in IPFS and linked to on-chain records via SHA-256 hashes, with each inspection record capturing the AI model name and version used for defect detection. This enables regulators to audit both what defects were found and how they were found. The detection module is pluggable, allowing organizations to adopt or upgrade inspection models without modifying the ledger or workflows. We built a prototype and evaluated it on workloads of up to 100 blades, demonstrating 100% life cycle completion with consistent throughput of 26 operations per minute. A centralized SQL baseline quantifies the consensus overhead and highlights the security trade-off. Security validation confirms tamper detection within 17~ms through hash verification.",
+      "tr": "Aircraft engine blade maintenance relies on inspection records shared across manufacturers, airlines, maintenance organizations, and regulators. Yet current systems are fragmented, difficult to audit, and vulnerable to tampering. This paper presents BladeChain, a blockchain-based system providing immutable traceability for blade inspections throughout the component life cycle. BladeChain is the first system to integrate multi-stakeholder endorsement, automated inspection scheduling, AI model provenance, and cryptographic evidence binding, delivering auditable maintenance traceability for aerospace deployments. Built on a four-stakeholder Hyperledger Fabric network (OEM, Airline, MRO, Regulator), BladeChain captures every life-cycle event in a tamper-evident ledger. A chaincode-enforced state machine governs blade status transitions and automatically triggers inspections when configurable flight hour, cycle, or calendar thresholds are exceeded, eliminating manual scheduling errors. Inspection artifacts are stored off-chain in IPFS and linked to on-chain records via SHA-256 hashes, with each inspection record capturing the AI model name and version used for defect detection. This enables regulators to audit both what defects were found and how they were found. The detection module is pluggable, allowing organizations to adopt or upgrade inspection models without modifying the ledger or workflows. We built a prototype and evaluated it on workloads of up to 100 blades, demonstrating 100% life cycle completion with consistent throughput of 26 operations per minute. A centralized SQL baseline quantifies the consensus overhead and highlights the security trade-off. Security validation confirms tamper detection within 17~ms through hash verification."
+    }
+  },
+  {
+    "id": "2603.08221v1",
+    "title": "SplitAgent: A Privacy-Preserving Distributed Architecture for Enterprise-Cloud Agent Collaboration",
+    "authors": [
+      "Jianshu She"
+    ],
+    "published_date": "2026-03-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.08221v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.08221v1",
+    "content": {
+      "en": "Enterprise adoption of cloud-based AI agents faces a fundamental privacy dilemma: leveraging powerful cloud models requires sharing sensitive data, while local processing limits capability. Current agent frameworks like MCP and A2A assume complete data sharing, making them unsuitable for enterprise environments with confidential information. We present SplitAgent, a novel distributed architecture that enables privacy-preserving collaboration between enterprise-side privacy agents and cloud-side reasoning agents. Our key innovation is context-aware dynamic sanitization that adapts privacy protection based on task semantics -- contract review requires different sanitization than code review or financial analysis. SplitAgent extends existing agent protocols with differential privacy guarantees, zero-knowledge tool verification, and privacy budget management. Through comprehensive experiments on enterprise scenarios, we demonstrate that SplitAgent achieves 83.8\\% task accuracy while maintaining 90.1\\% privacy protection, significantly outperforming static approaches (73.2\\% accuracy, 79.7\\% privacy). Context-aware sanitization improves task utility by 24.1\\% over static methods while reducing privacy leakage by 67\\%. Our architecture provides a practical path for enterprise AI adoption without compromising sensitive data.",
+      "tr": "Enterprise adoption of cloud-based AI agents faces a fundamental privacy dilemma: leveraging powerful cloud models requires sharing sensitive data, while local processing limits capability. Current agent frameworks like MCP and A2A assume complete data sharing, making them unsuitable for enterprise environments with confidential information. We present SplitAgent, a novel distributed architecture that enables privacy-preserving collaboration between enterprise-side privacy agents and cloud-side reasoning agents. Our key innovation is context-aware dynamic sanitization that adapts privacy protection based on task semantics -- contract review requires different sanitization than code review or financial analysis. SplitAgent extends existing agent protocols with differential privacy guarantees, zero-knowledge tool verification, and privacy budget management. Through comprehensive experiments on enterprise scenarios, we demonstrate that SplitAgent achieves 83.8\\% task accuracy while maintaining 90.1\\% privacy protection, significantly outperforming static approaches (73.2\\% accuracy, 79.7\\% privacy). Context-aware sanitization improves task utility by 24.1\\% over static methods while reducing privacy leakage by 67\\%. Our architecture provides a practical path for enterprise AI adoption without compromising sensitive data."
+    }
+  },
+  {
     "id": "2603.07835v1",
     "title": "DistillGuard: Evaluating Defenses Against LLM Knowledge Distillation",
     "authors": [
@@ -16,205 +210,6 @@
     "content": {
       "en": "Knowledge distillation from proprietary LLM APIs poses a growing threat to model providers, yet defenses against this attack remain fragmented and unevaluated. We present DistillGuard, a framework for systematically evaluating output-level defenses against LLM knowledge distillation. We introduce a taxonomy of three defense categories -- output perturbation, data poisoning, and information throttling -- and evaluate nine defense configurations using a standardized pipeline with Qwen3-14B as teacher and Qwen2.5-7B-Instruct as student across three benchmarks (MATH-500, HumanEval+, MT-Bench). Our results reveal that, in a same-family distillation setting against a naive attacker, most output-level defenses are surprisingly ineffective: paraphrasing-based perturbation barely degrades distilled student quality, and data poisoning primarily impairs conversational fluency while leaving task-specific capabilities intact. Only chain-of-thought removal substantially impairs mathematical reasoning (31.4\\% vs.\\ 67.8\\% baseline), though code generation remains unaffected. These findings demonstrate that the effectiveness of distillation defenses is highly task-dependent and that current output-level approaches are insufficient to broadly prevent knowledge theft.",
       "tr": "Knowledge distillation from proprietary LLM APIs poses a growing threat to model providers, yet defenses against this attack remain fragmented and unevaluated. We present DistillGuard, a framework for systematically evaluating output-level defenses against LLM knowledge distillation. We introduce a taxonomy of three defense categories -- output perturbation, data poisoning, and information throttling -- and evaluate nine defense configurations using a standardized pipeline with Qwen3-14B as teacher and Qwen2.5-7B-Instruct as student across three benchmarks (MATH-500, HumanEval+, MT-Bench). Our results reveal that, in a same-family distillation setting against a naive attacker, most output-level defenses are surprisingly ineffective: paraphrasing-based perturbation barely degrades distilled student quality, and data poisoning primarily impairs conversational fluency while leaving task-specific capabilities intact. Only chain-of-thought removal substantially impairs mathematical reasoning (31.4\\% vs.\\ 67.8\\% baseline), though code generation remains unaffected. These findings demonstrate that the effectiveness of distillation defenses is highly task-dependent and that current output-level approaches are insufficient to broadly prevent knowledge theft."
-    }
-  },
-  {
-    "id": "2603.07567v1",
-    "title": "Revisiting the LiRA Membership Inference Attack Under Realistic Assumptions",
-    "authors": [
-      "Najeeb Jebreel",
-      "Mona Khalil",
-      "David Sánchez",
-      "Josep Domingo-Ferrer"
-    ],
-    "published_date": "2026-03-08",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2603.07567v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.07567v1",
-    "content": {
-      "en": "Membership inference attacks (MIAs) have become the standard tool for evaluating privacy leakage in machine learning (ML). Among them, the Likelihood-Ratio Attack (LiRA) is widely regarded as the state of the art when sufficient shadow models are available. However, prior evaluations have often overstated the effectiveness of LiRA by attacking models overconfident on their training samples, calibrating thresholds on target data, assuming balanced membership priors, and/or overlooking attack reproducibility. We re-evaluate LiRA under a realistic protocol that (i) trains models using anti-overfitting (AOF) and transfer learning (TL), when applicable, to reduce overconfidence as in production models; (ii) calibrates decision thresholds using shadow models and data rather than target data; (iii) measures positive predictive value (PPV, or precision) under shadow-based thresholds and skewed membership priors (pi <= 10%); and (iv) quantifies per-sample membership reproducibility across different seeds and training variations. We find that AOF significantly weakens LiRA, while TL further reduces attack effectiveness while improving model accuracy. Under shadow-based thresholds and skewed priors, LiRA's PPV often drops substantially, especially under AOF or AOF+TL. We also find that thresholded vulnerable sets at extremely low FPR show poor reproducibility across runs, while likelihood-ratio rankings are more stable. These results suggest that LiRA, and likely weaker MIAs, are less effective than previously suggested under realistic conditions, and that reliable privacy auditing requires evaluation protocols that reflect practical training practices, feasible attacker assumptions, and reproducibility considerations. Code is available at https://github.com/najeebjebreel/lira_analysis.",
-      "tr": "Membership inference attacks (MIAs) have become the standard tool for evaluating privacy leakage in machine learning (ML). Among them, the Likelihood-Ratio Attack (LiRA) is widely regarded as the state of the art when sufficient shadow models are available. However, prior evaluations have often overstated the effectiveness of LiRA by attacking models overconfident on their training samples, calibrating thresholds on target data, assuming balanced membership priors, and/or overlooking attack reproducibility. We re-evaluate LiRA under a realistic protocol that (i) trains models using anti-overfitting (AOF) and transfer learning (TL), when applicable, to reduce overconfidence as in production models; (ii) calibrates decision thresholds using shadow models and data rather than target data; (iii) measures positive predictive value (PPV, or precision) under shadow-based thresholds and skewed membership priors (pi <= 10%); and (iv) quantifies per-sample membership reproducibility across different seeds and training variations. We find that AOF significantly weakens LiRA, while TL further reduces attack effectiveness while improving model accuracy. Under shadow-based thresholds and skewed priors, LiRA's PPV often drops substantially, especially under AOF or AOF+TL. We also find that thresholded vulnerable sets at extremely low FPR show poor reproducibility across runs, while likelihood-ratio rankings are more stable. These results suggest that LiRA, and likely weaker MIAs, are less effective than previously suggested under realistic conditions, and that reliable privacy auditing requires evaluation protocols that reflect practical training practices, feasible attacker assumptions, and reproducibility considerations. Code is available at https://github.com/najeebjebreel/lira_analysis."
-    }
-  },
-  {
-    "id": "2603.07496v1",
-    "title": "From Thinker to Society: Security in Hierarchical Autonomy Evolution of AI Agents",
-    "authors": [
-      "Xiaolei Zhang",
-      "Lu Zhou",
-      "Xiaogang Xu",
-      "Jiafei Wu",
-      "Tianyu Du"
-    ],
-    "published_date": "2026-03-08",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2603.07496v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.07496v1",
-    "content": {
-      "en": "Artificial Intelligence (AI) agents have evolved from passive predictive tools into active entities capable of autonomous decision-making and environmental interaction, driven by the reasoning capabilities of Large Language Models (LLMs). However, this evolution has introduced critical security vulnerabilities that existing frameworks fail to address. The Hierarchical Autonomy Evolution (HAE) framework organizes agent security into three tiers: Cognitive Autonomy (L1) targets internal reasoning integrity; Execution Autonomy (L2) covers tool-mediated environmental interaction; Collective Autonomy (L3) addresses systemic risks in multi-agent ecosystems. We present a taxonomy of threats spanning cognitive manipulation, physical environment disruption, and multi-agent systemic failures, and evaluate existing defenses while identifying key research gaps. The findings aim to guide the development of multilayered, autonomy-aware defense architectures for trustworthy AI agent systems.",
-      "tr": "Artificial Intelligence (AI) agents have evolved from passive predictive tools into active entities capable of autonomous decision-making and environmental interaction, driven by the reasoning capabilities of Large Language Models (LLMs). However, this evolution has introduced critical security vulnerabilities that existing frameworks fail to address. The Hierarchical Autonomy Evolution (HAE) framework organizes agent security into three tiers: Cognitive Autonomy (L1) targets internal reasoning integrity; Execution Autonomy (L2) covers tool-mediated environmental interaction; Collective Autonomy (L3) addresses systemic risks in multi-agent ecosystems. We present a taxonomy of threats spanning cognitive manipulation, physical environment disruption, and multi-agent systemic failures, and evaluate existing defenses while identifying key research gaps. The findings aim to guide the development of multilayered, autonomy-aware defense architectures for trustworthy AI agent systems."
-    }
-  },
-  {
-    "id": "2603.07473v1",
-    "title": "Give Them an Inch and They Will Take a Mile:Understanding and Measuring Caller Identity Confusion in MCP-Based AI Systems",
-    "authors": [
-      "Yuhang Huang",
-      "Boyang Ma",
-      "Biwei Yan",
-      "Xuelong Dai",
-      "Yechao Zhang"
-    ],
-    "published_date": "2026-03-08",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2603.07473v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.07473v1",
-    "content": {
-      "en": "The Model Context Protocol (MCP) is an open and standardized interface that enables large language models (LLMs) to interact with external tools and services, and is increasingly adopted by AI agents. However, the security of MCP-based systems remains largely unexplored.In this work, we conduct a large-scale security analysis of MCP servers integrated within MCP clients. We show that treating MCP servers as trusted entities without authenticating the caller identity is fundamentally insecure. Since MCP servers often cannot distinguish who is invoking a request, a single authorization decision may implicitly grant access to multiple, potentially untrusted callers.Our empirical study reveals that most MCP servers rely on persistent authorization states, allowing tool invocations after an initial authorization without re-authentication, regardless of the caller. In addition, many MCP servers fail to enforce authentication at the per-tool level, enabling unauthorized access to sensitive operations.These findings demonstrate that one-time authorization and server-level trust significantly expand the attack surface of MCP-based systems, highlighting the need for explicit caller authentication and fine-grained authorization mechanisms.",
-      "tr": "The Model Context Protocol (MCP) is an open and standardized interface that enables large language models (LLMs) to interact with external tools and services, and is increasingly adopted by AI agents. However, the security of MCP-based systems remains largely unexplored.In this work, we conduct a large-scale security analysis of MCP servers integrated within MCP clients. We show that treating MCP servers as trusted entities without authenticating the caller identity is fundamentally insecure. Since MCP servers often cannot distinguish who is invoking a request, a single authorization decision may implicitly grant access to multiple, potentially untrusted callers.Our empirical study reveals that most MCP servers rely on persistent authorization states, allowing tool invocations after an initial authorization without re-authentication, regardless of the caller. In addition, many MCP servers fail to enforce authentication at the per-tool level, enabling unauthorized access to sensitive operations.These findings demonstrate that one-time authorization and server-level trust significantly expand the attack surface of MCP-based systems, highlighting the need for explicit caller authentication and fine-grained authorization mechanisms."
-    }
-  },
-  {
-    "id": "2603.07466v1",
-    "title": "Trusting What You Cannot See: Auditable Fine-Tuning and Inference for Proprietary AI",
-    "authors": [
-      "Heng Jin",
-      "Chaoyu Zhang",
-      "Hexuan Yu",
-      "Shanghao Shi",
-      "Ning Zhang"
-    ],
-    "published_date": "2026-03-08",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2603.07466v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.07466v1",
-    "content": {
-      "en": "Cloud-based infrastructures have become the dominant platform for deploying large models, particularly large language models (LLMs). Fine-tuning and inference are increasingly delegated to cloud providers for simplified deployment and access to proprietary models, yet this creates a fundamental trust gap: although cryptographic and TEE-based verification exist, the scale of modern LLMs renders them prohibitive, leaving clients unable to practically audit these processes. This lack of transparency creates concrete security risks that can silently compromise service integrity.   We present AFTUNE, an auditable and verifiable framework that ensures the computation integrity of cloud-based fine-tuning and inference. AFTUNE incorporates a lightweight recording and spot-check mechanism that produces verifiable traces of execution. These traces enable clients to later audit whether the training and inference processes followed the agreed configurations. Our evaluation shows that AFTUNE imposes practical computation overhead while enabling selective and efficient verification, demonstrating that trustworthy model services are achievable in today's cloud environments.",
-      "tr": "Cloud-based infrastructures have become the dominant platform for deploying large models, particularly large language models (LLMs). Fine-tuning and inference are increasingly delegated to cloud providers for simplified deployment and access to proprietary models, yet this creates a fundamental trust gap: although cryptographic and TEE-based verification exist, the scale of modern LLMs renders them prohibitive, leaving clients unable to practically audit these processes. This lack of transparency creates concrete security risks that can silently compromise service integrity.   We present AFTUNE, an auditable and verifiable framework that ensures the computation integrity of cloud-based fine-tuning and inference. AFTUNE incorporates a lightweight recording and spot-check mechanism that produces verifiable traces of execution. These traces enable clients to later audit whether the training and inference processes followed the agreed configurations. Our evaluation shows that AFTUNE imposes practical computation overhead while enabling selective and efficient verification, demonstrating that trustworthy model services are achievable in today's cloud environments."
-    }
-  },
-  {
-    "id": "2603.07460v1",
-    "title": "Where Do LLM-based Systems Break? A System-Level Security Framework for Risk Assessment and Treatment",
-    "authors": [
-      "Neha Nagaraja",
-      "Hayretdin Bahsi"
-    ],
-    "published_date": "2026-03-08",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2603.07460v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.07460v1",
-    "content": {
-      "en": "Large Language Models (LLMs) are increasingly integrated into safety-critical workflows, yet existing security analyses remain fragmented and often isolate model behavior from the broader system context. This work introduces a goal-driven risk assessment framework for LLM-powered systems that combines system modeling with Attack-Defense Trees (ADTrees) and Common Vulnerability Scoring System (CVSS)-based exploitability scoring to support structured, comparable analysis. We demonstrate the framework through a healthcare case study, modeling multi-step attack paths targeting intervention in medical procedures, leakage of electronic health record (EHR) data, and disruption of service availability. Our analysis indicates that threats spanning (i) conventional cyber, (ii) adversarial ML, and (iii) conversational attacks that manipulate prompts or context often consolidate into a small number of dominant paths and shared system choke points, enabling targeted defenses to yield meaningful reductions in path exploitability. By systematically comparing defense portfolios, we align these risks with established vulnerability management practices and provide a domain-agnostic workflow applicable to other LLM-enabled critical systems.",
-      "tr": "Large Language Models (LLMs) are increasingly integrated into safety-critical workflows, yet existing security analyses remain fragmented and often isolate model behavior from the broader system context. This work introduces a goal-driven risk assessment framework for LLM-powered systems that combines system modeling with Attack-Defense Trees (ADTrees) and Common Vulnerability Scoring System (CVSS)-based exploitability scoring to support structured, comparable analysis. We demonstrate the framework through a healthcare case study, modeling multi-step attack paths targeting intervention in medical procedures, leakage of electronic health record (EHR) data, and disruption of service availability. Our analysis indicates that threats spanning (i) conventional cyber, (ii) adversarial ML, and (iii) conversational attacks that manipulate prompts or context often consolidate into a small number of dominant paths and shared system choke points, enabling targeted defenses to yield meaningful reductions in path exploitability. By systematically comparing defense portfolios, we align these risks with established vulnerability management practices and provide a domain-agnostic workflow applicable to other LLM-enabled critical systems."
-    }
-  },
-  {
-    "id": "2603.07452v1",
-    "title": "Backdoor4Good: Benchmarking Beneficial Uses of Backdoors in LLMs",
-    "authors": [
-      "Yige Li",
-      "Wei Zhao",
-      "Zhe Li",
-      "Nay Myat Min",
-      "Hanxun Huang"
-    ],
-    "published_date": "2026-03-08",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2603.07452v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.07452v1",
-    "content": {
-      "en": "Backdoor mechanisms have traditionally been studied as security threats that compromise the integrity of machine learning models. However, the same mechanism -- the conditional activation of specific behaviors through input triggers -- can also serve as a controllable and auditable interface for trustworthy model behavior. In this work, we present \\textbf{Backdoor4Good (B4G)}, a unified benchmark and framework for \\textit{beneficial backdoor} applications in large language models (LLMs). Unlike conventional backdoor studies focused on attacks and defenses, B4G repurposes backdoor conditioning for Beneficial Tasks that enhance safety, controllability, and accountability. It formalizes beneficial backdoor learning under a triplet formulation $(T, A, U)$, representing the \\emph{Trigger}, \\emph{Activation mechanism}, and \\emph{Utility function}, and implements a benchmark covering four trust-centric applications. Through extensive experiments across Llama3.1-8B, Gemma-2-9B, Qwen2.5-7B, and Llama2-13B, we show that beneficial backdoors can achieve high controllability, tamper-resistance, and stealthiness while preserving clean-task performance. Our findings demonstrate new insights that backdoors need not be inherently malicious; when properly designed, they can serve as modular, interpretable, and beneficial building blocks for trustworthy AI systems. Our code and datasets are available at https://github.com/bboylyg/BackdoorLLM/B4G.",
-      "tr": "Backdoor mechanisms have traditionally been studied as security threats that compromise the integrity of machine learning models. However, the same mechanism -- the conditional activation of specific behaviors through input triggers -- can also serve as a controllable and auditable interface for trustworthy model behavior. In this work, we present \\textbf{Backdoor4Good (B4G)}, a unified benchmark and framework for \\textit{beneficial backdoor} applications in large language models (LLMs). Unlike conventional backdoor studies focused on attacks and defenses, B4G repurposes backdoor conditioning for Beneficial Tasks that enhance safety, controllability, and accountability. It formalizes beneficial backdoor learning under a triplet formulation $(T, A, U)$, representing the \\emph{Trigger}, \\emph{Activation mechanism}, and \\emph{Utility function}, and implements a benchmark covering four trust-centric applications. Through extensive experiments across Llama3.1-8B, Gemma-2-9B, Qwen2.5-7B, and Llama2-13B, we show that beneficial backdoors can achieve high controllability, tamper-resistance, and stealthiness while preserving clean-task performance. Our findings demonstrate new insights that backdoors need not be inherently malicious; when properly designed, they can serve as modular, interpretable, and beneficial building blocks for trustworthy AI systems. Our code and datasets are available at https://github.com/bboylyg/BackdoorLLM/B4G."
-    }
-  },
-  {
-    "id": "2603.07427v1",
-    "title": "AutoControl Arena: Synthesizing Executable Test Environments for Frontier AI Risk Evaluation",
-    "authors": [
-      "Changyi Li",
-      "Pengfei Lu",
-      "Xudong Pan",
-      "Fazl Barez",
-      "Min Yang"
-    ],
-    "published_date": "2026-03-08",
-    "tags": [
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2603.07427v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.07427v1",
-    "content": {
-      "en": "As Large Language Models (LLMs) evolve into autonomous agents, existing safety evaluations face a fundamental trade-off: manual benchmarks are costly, while LLM-based simulators are scalable but suffer from logic hallucination. We present AutoControl Arena, an automated framework for frontier AI risk evaluation built on the principle of logic-narrative decoupling. By grounding deterministic state in executable code while delegating generative dynamics to LLMs, we mitigate hallucination while maintaining flexibility. This principle, instantiated through a three-agent framework, achieves over 98% end-to-end success and 60% human preference over existing simulators. To elicit latent risks, we vary environmental Stress and Temptation across X-Bench (70 scenarios, 7 risk categories). Evaluating 9 frontier models reveals: (1) Alignment Illusion: risk rates surge from 21.7% to 54.5% under pressure, with capable models showing disproportionately larger increases; (2) Scenario-Specific Safety Scaling: advanced reasoning improves robustness for direct harms but worsens it for gaming scenarios; and (3) Divergent Misalignment Patterns: weaker models cause non-malicious harm while stronger models develop strategic concealment.",
-      "tr": "As Large Language Models (LLMs) evolve into autonomous agents, existing safety evaluations face a fundamental trade-off: manual benchmarks are costly, while LLM-based simulators are scalable but suffer from logic hallucination. We present AutoControl Arena, an automated framework for frontier AI risk evaluation built on the principle of logic-narrative decoupling. By grounding deterministic state in executable code while delegating generative dynamics to LLMs, we mitigate hallucination while maintaining flexibility. This principle, instantiated through a three-agent framework, achieves over 98% end-to-end success and 60% human preference over existing simulators. To elicit latent risks, we vary environmental Stress and Temptation across X-Bench (70 scenarios, 7 risk categories). Evaluating 9 frontier models reveals: (1) Alignment Illusion: risk rates surge from 21.7% to 54.5% under pressure, with capable models showing disproportionately larger increases; (2) Scenario-Specific Safety Scaling: advanced reasoning improves robustness for direct harms but worsens it for gaming scenarios; and (3) Divergent Misalignment Patterns: weaker models cause non-malicious harm while stronger models develop strategic concealment."
-    }
-  },
-  {
-    "id": "2603.07379v1",
-    "title": "SoK: Agentic Retrieval-Augmented Generation (RAG): Taxonomy, Architectures, Evaluation, and Research Directions",
-    "authors": [
-      "Saroj Mishra",
-      "Suman Niroula",
-      "Umesh Yadav",
-      "Dilip Thakur",
-      "Srijan Gyawali"
-    ],
-    "published_date": "2026-03-07",
-    "tags": [
-      "cs.AI",
-      "cs.CL",
-      "cs.CR",
-      "cs.IR"
-    ],
-    "link": "http://arxiv.org/abs/2603.07379v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.07379v1",
-    "content": {
-      "en": "Retrieval-Augmented Generation (RAG) systems are increasingly evolving into agentic architectures where large language models autonomously coordinate multi-step reasoning, dynamic memory management, and iterative retrieval strategies. Despite rapid industrial adoption, current research lacks a systematic understanding of Agentic RAG as a sequential decision-making system, leading to highly fragmented architectures, inconsistent evaluation methodologies, and unresolved reliability risks. This Systematization of Knowledge (SoK) paper provides the first unified framework for understanding these autonomous systems. We formalize agentic retrieval-generation loops as finite-horizon partially observable Markov decision processes, explicitly modeling their control policies and state transitions. Building upon this formalization, we develop a comprehensive taxonomy and modular architectural decomposition that categorizes systems by their planning mechanisms, retrieval orchestration, memory paradigms, and tool-invocation behaviors. We further analyze the critical limitations of traditional static evaluation practices and identify severe systemic risks inherent to autonomous loops, including compounding hallucination propagation, memory poisoning, retrieval misalignment, and cascading tool-execution vulnerabilities. Finally, we outline key doctoral-scale research directions spanning stable adaptive retrieval, cost-aware orchestration, formal trajectory evaluation, and oversight mechanisms, providing a definitive roadmap for building reliable, controllable, and scalable agentic retrieval systems.",
-      "tr": "Retrieval-Augmented Generation (RAG) systems are increasingly evolving into agentic architectures where large language models autonomously coordinate multi-step reasoning, dynamic memory management, and iterative retrieval strategies. Despite rapid industrial adoption, current research lacks a systematic understanding of Agentic RAG as a sequential decision-making system, leading to highly fragmented architectures, inconsistent evaluation methodologies, and unresolved reliability risks. This Systematization of Knowledge (SoK) paper provides the first unified framework for understanding these autonomous systems. We formalize agentic retrieval-generation loops as finite-horizon partially observable Markov decision processes, explicitly modeling their control policies and state transitions. Building upon this formalization, we develop a comprehensive taxonomy and modular architectural decomposition that categorizes systems by their planning mechanisms, retrieval orchestration, memory paradigms, and tool-invocation behaviors. We further analyze the critical limitations of traditional static evaluation practices and identify severe systemic risks inherent to autonomous loops, including compounding hallucination propagation, memory poisoning, retrieval misalignment, and cascading tool-execution vulnerabilities. Finally, we outline key doctoral-scale research directions spanning stable adaptive retrieval, cost-aware orchestration, formal trajectory evaluation, and oversight mechanisms, providing a definitive roadmap for building reliable, controllable, and scalable agentic retrieval systems."
-    }
-  },
-  {
-    "id": "2603.07336v1",
-    "title": "Explainable and Hardware-Efficient Jamming Detection for 5G Networks Using the Convolutional Tsetlin Machine",
-    "authors": [
-      "Vojtech Halenka",
-      "Mohammadreza Amini",
-      "Per-Arne Andersen",
-      "Ole-Christoffer Granmo",
-      "Burak Kantarci"
-    ],
-    "published_date": "2026-03-07",
-    "tags": [
-      "eess.SP",
-      "cs.AR",
-      "cs.CR",
-      "cs.LG",
-      "cs.NI"
-    ],
-    "link": "http://arxiv.org/abs/2603.07336v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.07336v1",
-    "content": {
-      "en": "All applications in fifth-generation (5G) networks rely on stable radio-frequency (RF) environments to support mission-critical services in mobility, automation, and connected intelligence. Their exposure to intentional interference or low-power jamming threatens availability and reliability, especially when such attacks remain below link-layer observability. This paper investigates lightweight, explainable, and hardware-efficient jamming detection using the Convolutional Tsetlin Machine (CTM) operating directly on 5G Synchronization Signal Block (SSB) features. CTM formulates Boolean logic clauses over quantized inputs, enabling bit-level inference and deterministic deployment on FPGA fabrics. These properties make CTM well suited for real-time, resource-constrained edge environments anticipated in 5G. The proposed approach is experimentally validated on a real 5G testbed using over-the-air SSB data, emulating practical downlink conditions. We benchmark CTM against a convolutional neural network (CNN) baseline under identical preprocessing and training pipelines. On the real dataset, CTM achieves comparable detection performance (Accuracy 91.53 +/- 1.01 vs. 96.83 +/- 1.19 for CNN) while training $9.5\\times$ faster and requiring 14x less memory (45~MB vs.\\ 624~MB). Furthermore, we outline a compact FPGA-oriented design for Zybo~Z7 (Zynq-7000) and provide resource projections (not measured) under three deployment profiles optimized for latency, power, and accuracy trade-offs. The results show that the CTM provides a practical, interpretable, and resource-efficient alternative to conventional DNNs for RF-domain jamming detection, establishing it as a strong candidate for edge-deployed, low-latency, and security-critical 5G applications while laying the groundwork for B5G systems.",
-      "tr": "All applications in fifth-generation (5G) networks rely on stable radio-frequency (RF) environments to support mission-critical services in mobility, automation, and connected intelligence. Their exposure to intentional interference or low-power jamming threatens availability and reliability, especially when such attacks remain below link-layer observability. This paper investigates lightweight, explainable, and hardware-efficient jamming detection using the Convolutional Tsetlin Machine (CTM) operating directly on 5G Synchronization Signal Block (SSB) features. CTM formulates Boolean logic clauses over quantized inputs, enabling bit-level inference and deterministic deployment on FPGA fabrics. These properties make CTM well suited for real-time, resource-constrained edge environments anticipated in 5G. The proposed approach is experimentally validated on a real 5G testbed using over-the-air SSB data, emulating practical downlink conditions. We benchmark CTM against a convolutional neural network (CNN) baseline under identical preprocessing and training pipelines. On the real dataset, CTM achieves comparable detection performance (Accuracy 91.53 +/- 1.01 vs. 96.83 +/- 1.19 for CNN) while training $9.5\\times$ faster and requiring 14x less memory (45~MB vs.\\ 624~MB). Furthermore, we outline a compact FPGA-oriented design for Zybo~Z7 (Zynq-7000) and provide resource projections (not measured) under three deployment profiles optimized for latency, power, and accuracy trade-offs. The results show that the CTM provides a practical, interpretable, and resource-efficient alternative to conventional DNNs for RF-domain jamming detection, establishing it as a strong candidate for edge-deployed, low-latency, and security-critical 5G applications while laying the groundwork for B5G systems."
     }
   }
 ]
