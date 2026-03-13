@@ -1,222 +1,216 @@
 [
   {
-    "id": "2603.10969v1",
-    "title": "TOSSS: a CVE-based Software Security Benchmark for Large Language Models",
+    "id": "2603.12237v1",
+    "title": "STAMP: Selective Task-Aware Mechanism for Text Privacy",
     "authors": [
-      "Marc Damie",
-      "Murat Bilgehan Ertan",
-      "Domenico Essoussi",
-      "Angela Makhanu",
-      "Gaëtan Peter"
+      "Fengwei Tian",
+      "Payel Bhattacharjee",
+      "Heidi Hanson",
+      "Geoffrey D. Rubin",
+      "Joseph Y. Lo"
     ],
-    "published_date": "2026-03-11",
+    "published_date": "2026-03-12",
     "tags": [
       "cs.LG",
-      "cs.CL",
       "cs.CR",
-      "cs.SE"
+      "cs.IT"
     ],
-    "link": "http://arxiv.org/abs/2603.10969v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.10969v1",
+    "link": "http://arxiv.org/abs/2603.12237v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.12237v1",
     "content": {
-      "en": "With their increasing capabilities, Large Language Models (LLMs) are now used across many industries. They have become useful tools for software engineers and support a wide range of development tasks. As LLMs are increasingly used in software development workflows, a critical question arises: are LLMs good at software security? At the same time, organizations worldwide invest heavily in cybersecurity to reduce exposure to disruptive attacks. The integration of LLMs into software engineering workflows may introduce new vulnerabilities and weaken existing security efforts.   We introduce TOSSS (Two-Option Secure Snippet Selection), a benchmark that measures the ability of LLMs to choose between secure and vulnerable code snippets. Existing security benchmarks for LLMs cover only a limited range of vulnerabilities. In contrast, TOSSS relies on the CVE database and provides an extensible framework that can integrate newly disclosed vulnerabilities over time. Our benchmark gives each model a security score between 0 and 1 based on its behavior; a score of 1 indicates that the model always selects the secure snippet, while a score of 0 indicates that it always selects the vulnerable one. We evaluate 14 widely used open-source and closed-source models on C/C++ and Java code and observe scores ranging from 0.48 to 0.89. LLM providers already publish many benchmark scores for their models, and TOSSS could become a complementary security-focused score to include in these reports.",
-      "tr": "With their increasing capabilities, Large Language Models (LLMs) are now used across many industries. They have become useful tools for software engineers and support a wide range of development tasks. As LLMs are increasingly used in software development workflows, a critical question arises: are LLMs good at software security? At the same time, organizations worldwide invest heavily in cybersecurity to reduce exposure to disruptive attacks. The integration of LLMs into software engineering workflows may introduce new vulnerabilities and weaken existing security efforts.   We introduce TOSSS (Two-Option Secure Snippet Selection), a benchmark that measures the ability of LLMs to choose between secure and vulnerable code snippets. Existing security benchmarks for LLMs cover only a limited range of vulnerabilities. In contrast, TOSSS relies on the CVE database and provides an extensible framework that can integrate newly disclosed vulnerabilities over time. Our benchmark gives each model a security score between 0 and 1 based on its behavior; a score of 1 indicates that the model always selects the secure snippet, while a score of 0 indicates that it always selects the vulnerable one. We evaluate 14 widely used open-source and closed-source models on C/C++ and Java code and observe scores ranging from 0.48 to 0.89. LLM providers already publish many benchmark scores for their models, and TOSSS could become a complementary security-focused score to include in these reports."
+      "en": "We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream task (as measured via a task- or query-specific representation), and (ii) its privacy sensitivity (e.g., names, dates, identifiers). This token-level partitioning enables fine-grained, group-wise control over the level of noise applied to different parts of the input, balancing privacy protection with task relevance. To privatize individual token embeddings, we introduce the polar mechanism, which perturbs only the direction of embeddings on the unit sphere while preserving their magnitude. Decoding is performed via cosine nearest-neighbor search, aligning the perturbation geometry with the decoding geometry. Unlike isotropic noise mechanisms, the polar mechanism maintains semantic neighborhoods in the embedding space and better preserves downstream utility. Experimental evaluations on SQuAD, Yelp, and AG News datasets demonstrate that STAMP, when combined with the normalized polar mechanism, consistently achieves superior privacy-utility trade-offs across varying per-token privacy budgets.",
+      "tr": "We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream task (as measured via a task- or query-specific representation), and (ii) its privacy sensitivity (e.g., names, dates, identifiers). This token-level partitioning enables fine-grained, group-wise control over the level of noise applied to different parts of the input, balancing privacy protection with task relevance. To privatize individual token embeddings, we introduce the polar mechanism, which perturbs only the direction of embeddings on the unit sphere while preserving their magnitude. Decoding is performed via cosine nearest-neighbor search, aligning the perturbation geometry with the decoding geometry. Unlike isotropic noise mechanisms, the polar mechanism maintains semantic neighborhoods in the embedding space and better preserves downstream utility. Experimental evaluations on SQuAD, Yelp, and AG News datasets demonstrate that STAMP, when combined with the normalized polar mechanism, consistently achieves superior privacy-utility trade-offs across varying per-token privacy budgets."
     }
   },
   {
-    "id": "2603.10753v1",
-    "title": "A PUF-Based Approach for Copy Protection of Intellectual Property in Neural Network Models",
+    "id": "2603.12230v1",
+    "title": "Security Considerations for Artificial Intelligence Agents",
     "authors": [
-      "Daniel Dorfmeister",
-      "Flavio Ferrarotti",
-      "Bernhard Fischer",
-      "Martin Schwandtner",
-      "Hannes Sochor"
+      "Ninghui Li",
+      "Kaiyuan Zhang",
+      "Kyle Polley",
+      "Jerry Ma"
     ],
-    "published_date": "2026-03-11",
+    "published_date": "2026-03-12",
     "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2603.10753v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.10753v1",
-    "content": {
-      "en": "More and more companies' Intellectual Property (IP) is being integrated into Neural Network (NN) models. This IP has considerable value for companies and, therefore, requires adequate protection. For example, an attacker might replicate a production machines' hardware and subsequently simply copy associated software and NN models onto the cloned hardware. To make copying NN models onto cloned hardware infeasible, we present an approach to bind NN models - and thus also the IP contained within them - to their underlying hardware. For this purpose, we link an NN model's weights, which are crucial for its operation, to unique and unclonable hardware properties by leveraging Physically Unclonable Functions (PUFs). By doing so, sufficient accuracy can only be achieved using the target hardware to restore the original weights, rendering proper execution of the NN model on cloned hardware impossible. We demonstrate that our approach accomplishes the desired degradation of accuracy on various NN models and outline possible future improvements.",
-      "tr": "More and more companies' Intellectual Property (IP) is being integrated into Neural Network (NN) models. This IP has considerable value for companies and, therefore, requires adequate protection. For example, an attacker might replicate a production machines' hardware and subsequently simply copy associated software and NN models onto the cloned hardware. To make copying NN models onto cloned hardware infeasible, we present an approach to bind NN models - and thus also the IP contained within them - to their underlying hardware. For this purpose, we link an NN model's weights, which are crucial for its operation, to unique and unclonable hardware properties by leveraging Physically Unclonable Functions (PUFs). By doing so, sufficient accuracy can only be achieved using the target hardware to restore the original weights, rendering proper execution of the NN model on cloned hardware impossible. We demonstrate that our approach accomplishes the desired degradation of accuracy on various NN models and outline possible future improvements."
-    }
-  },
-  {
-    "id": "2603.10726v1",
-    "title": "CacheSolidarity: Preventing Prefix Caching Side Channels in Multi-tenant LLM Serving Systems",
-    "authors": [
-      "Panagiotis Georgios Pennas",
-      "Konstantinos Papaioannou",
-      "Marco Guarnieri",
-      "Thaleia Dimitra Doudali"
-    ],
-    "published_date": "2026-03-11",
-    "tags": [
-      "cs.CR",
-      "cs.DC",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2603.10726v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.10726v1",
-    "content": {
-      "en": "Large Language Models (LLMs) rely on optimizations like Automatic Prefix Caching (APC) to accelerate inference. APC works by reusing previously computed states for the beginning part of a request (prefix), when another request starts with the same text. While APC improves throughput, it introduces timing side channels: cache hits are faster than misses, creating observable latency differences. In multi-tenant systems, attackers can exploit these differences to infer sensitive information, e.g., by incrementally reconstructing another user's request by observing hit/miss patterns. Current defenses take a sledgehammer approach: they disable APC and cache sharing, isolating users, and sacrificing efficiency for regular users. This paper presents CacheSolidarity, a system that secures multi-tenant LLM serving systems against APC side channels without sacrificing performance and efficiency. CacheSolidarity monitors cache reuse across users, flags suspicious sharing, and selectively isolates prefixes, restricting their reuse only when necessary. Evaluation shows that CacheSolidarity enables up to 70% higher cache reuse and 30% lower inference latency compared to existing defenses that isolate users. CacheSolidarity's lightweight design demonstrates how security in LLM serving does not have to come at the cost of unnecessarily reduced performance or unbearable overheads.",
-      "tr": "Large Language Models (LLMs) rely on optimizations like Automatic Prefix Caching (APC) to accelerate inference. APC works by reusing previously computed states for the beginning part of a request (prefix), when another request starts with the same text. While APC improves throughput, it introduces timing side channels: cache hits are faster than misses, creating observable latency differences. In multi-tenant systems, attackers can exploit these differences to infer sensitive information, e.g., by incrementally reconstructing another user's request by observing hit/miss patterns. Current defenses take a sledgehammer approach: they disable APC and cache sharing, isolating users, and sacrificing efficiency for regular users. This paper presents CacheSolidarity, a system that secures multi-tenant LLM serving systems against APC side channels without sacrificing performance and efficiency. CacheSolidarity monitors cache reuse across users, flags suspicious sharing, and selectively isolates prefixes, restricting their reuse only when necessary. Evaluation shows that CacheSolidarity enables up to 70% higher cache reuse and 30% lower inference latency compared to existing defenses that isolate users. CacheSolidarity's lightweight design demonstrates how security in LLM serving does not have to come at the cost of unnecessarily reduced performance or unbearable overheads."
-    }
-  },
-  {
-    "id": "2603.10692v1",
-    "title": "Repurposing Backdoors for Good: Ephemeral Intrinsic Proofs for Verifiable Aggregation in Cross-silo Federated Learning",
-    "authors": [
-      "Xian Qin",
-      "Xue Yang",
-      "Xiaohu Tang"
-    ],
-    "published_date": "2026-03-11",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2603.10692v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.10692v1",
-    "content": {
-      "en": "While Secure Aggregation (SA) protects update confidentiality in Cross-silo Federated Learning, it fails to guarantee aggregation integrity, allowing malicious servers to silently omit or tamper with updates. Existing verifiable aggregation schemes rely on heavyweight cryptography (e.g., ZKPs, HE), incurring computational costs that scale poorly with model size. In this paper, we propose a lightweight architecture that shifts from extrinsic cryptographic proofs to \\textit{Intrinsic Proofs}. We repurpose backdoor injection to embed verification signals directly into model parameters. By harnessing Catastrophic Forgetting, these signals are robust for immediate verification yet ephemeral, naturally decaying to preserve final model utility. We design a randomized, single-verifier auditing framework compatible with SA, ensuring client anonymity and preventing signal collision without trusted third parties. Experiments on SVHN, CIFAR-10, and CIFAR-100 demonstrate high detection probabilities against malicious servers. Notably, our approach achieves over $1000\\times$ speedup on ResNet-18 compared to cryptographic baselines, effectively scaling to large models.",
-      "tr": "While Secure Aggregation (SA) protects update confidentiality in Cross-silo Federated Learning, it fails to guarantee aggregation integrity, allowing malicious servers to silently omit or tamper with updates. Existing verifiable aggregation schemes rely on heavyweight cryptography (e.g., ZKPs, HE), incurring computational costs that scale poorly with model size. In this paper, we propose a lightweight architecture that shifts from extrinsic cryptographic proofs to \\textit{Intrinsic Proofs}. We repurpose backdoor injection to embed verification signals directly into model parameters. By harnessing Catastrophic Forgetting, these signals are robust for immediate verification yet ephemeral, naturally decaying to preserve final model utility. We design a randomized, single-verifier auditing framework compatible with SA, ensuring client anonymity and preventing signal collision without trusted third parties. Experiments on SVHN, CIFAR-10, and CIFAR-100 demonstrate high detection probabilities against malicious servers. Notably, our approach achieves over $1000\\times$ speedup on ResNet-18 compared to cryptographic baselines, effectively scaling to large models."
-    }
-  },
-  {
-    "id": "2603.10641v1",
-    "title": "Detecting and Eliminating Neural Network Backdoors Through Active Paths with Application to Intrusion Detection",
-    "authors": [
-      "Eirik Høyheim",
-      "Magnus Wiik Eckhoff",
-      "Gudmund Grov",
-      "Robert Flood",
-      "David Aspinall"
-    ],
-    "published_date": "2026-03-11",
-    "tags": [
-      "cs.CR",
+      "cs.LG",
       "cs.AI",
-      "cs.LG"
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2603.10641v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.10641v1",
+    "link": "http://arxiv.org/abs/2603.12230v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.12230v1",
     "content": {
-      "en": "Machine learning backdoors have the property that the machine learning model should work as expected on normal inputs, but when the input contains a specific $\\textit{trigger}$, it behaves as the attacker desires. Detecting such triggers has been proven to be extremely difficult. In this paper, we present a novel and explainable approach to detect and eliminate such backdoor triggers based on active paths found in neural networks. We present promising experimental evidence of our approach, which involves injecting backdoors into a machine learning model used for intrusion detection.",
-      "tr": "Machine learning backdoors have the property that the machine learning model should work as expected on normal inputs, but when the input contains a specific $\\textit{trigger}$, it behaves as the attacker desires. Detecting such triggers has been proven to be extremely difficult. In this paper, we present a novel and explainable approach to detect and eliminate such backdoor triggers based on active paths found in neural networks. We present promising experimental evidence of our approach, which involves injecting backdoors into a machine learning model used for intrusion detection."
+      "en": "This article, a lightly adapted version of Perplexity's response to NIST/CAISI Request for Information 2025-0035, details our observations and recommendations concerning the security of frontier AI agents. These insights are informed by Perplexity's experience operating general-purpose agentic systems used by millions of users and thousands of enterprises in both controlled and open-world environments. Agent architectures change core assumptions around code-data separation, authority boundaries, and execution predictability, creating new confidentiality, integrity, and availability failure modes. We map principal attack surfaces across tools, connectors, hosting boundaries, and multi-agent coordination, with particular emphasis on indirect prompt injection, confused-deputy behavior, and cascading failures in long-running workflows. We then assess current defenses as a layered stack: input-level and model-level mitigations, sandboxed execution, and deterministic policy enforcement for high-consequence actions. Finally, we identify standards and research gaps, including adaptive security benchmarks, policy models for delegation and privilege control, and guidance for secure multi-agent system design aligned with NIST risk management principles.",
+      "tr": "This article, a lightly adapted version of Perplexity's response to NIST/CAISI Request for Information 2025-0035, details our observations and recommendations concerning the security of frontier AI agents. These insights are informed by Perplexity's experience operating general-purpose agentic systems used by millions of users and thousands of enterprises in both controlled and open-world environments. Agent architectures change core assumptions around code-data separation, authority boundaries, and execution predictability, creating new confidentiality, integrity, and availability failure modes. We map principal attack surfaces across tools, connectors, hosting boundaries, and multi-agent coordination, with particular emphasis on indirect prompt injection, confused-deputy behavior, and cascading failures in long-running workflows. We then assess current defenses as a layered stack: input-level and model-level mitigations, sandboxed execution, and deterministic policy enforcement for high-consequence actions. Finally, we identify standards and research gaps, including adaptive security benchmarks, policy models for delegation and privilege control, and guidance for secure multi-agent system design aligned with NIST risk management principles."
     }
   },
   {
-    "id": "2603.10521v1",
-    "title": "IH-Challenge: A Training Dataset to Improve Instruction Hierarchy on Frontier LLMs",
+    "id": "2603.12023v1",
+    "title": "Cascade: Composing Software-Hardware Attack Gadgets for Adversarial Threat Amplification in Compound AI Systems",
     "authors": [
-      "Chuan Guo",
-      "Juan Felipe Ceron Uribe",
-      "Sicheng Zhu",
-      "Christopher A. Choquette-Choo",
-      "Steph Lin"
+      "Sarbartha Banerjee",
+      "Prateek Sahu",
+      "Anjo Vahldiek-Oberwagner",
+      "Jose Sanchez Vicarte",
+      "Mohit Tiwari"
     ],
-    "published_date": "2026-03-11",
+    "published_date": "2026-03-12",
     "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.12023v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.12023v1",
+    "content": {
+      "en": "Rapid progress in generative AI has given rise to Compound AI systems - pipelines comprised of multiple large language models (LLM), software tools and database systems. Compound AI systems are constructed on a layered traditional software stack running on a distributed hardware infrastructure. Many of the diverse software components are vulnerable to traditional security flaws documented in the Common Vulnerabilities and Exposures (CVE) database, while the underlying distributed hardware infrastructure remains exposed to timing attacks, bit-flip faults, and power-based side channels. Today, research targets LLM-specific risks like model extraction, training data leakage, and unsafe generation -- overlooking the impact of traditional system vulnerabilities.   This work investigates how traditional software and hardware vulnerabilities can complement LLM-specific algorithmic attacks to compromise the integrity of a compound AI pipeline. We demonstrate two novel attacks that combine system-level vulnerabilities with algorithmic weaknesses: (1) Exploiting a software code injection flaw along with a guardrail Rowhammer attack to inject an unaltered jailbreak prompt into an LLM, resulting in an AI safety violation, and (2) Manipulating a knowledge database to redirect an LLM agent to transmit sensitive user data to a malicious application, thus breaching confidentiality. These attacks highlight the need to address traditional vulnerabilities; we systematize the attack primitives and analyze their composition by grouping vulnerabilities by their objective and mapping them to distinct stages of an attack lifecycle. This approach enables a rigorous red-teaming exercise and lays the groundwork for future defense strategies.",
+      "tr": "Rapid progress in generative AI has given rise to Compound AI systems - pipelines comprised of multiple large language models (LLM), software tools and database systems. Compound AI systems are constructed on a layered traditional software stack running on a distributed hardware infrastructure. Many of the diverse software components are vulnerable to traditional security flaws documented in the Common Vulnerabilities and Exposures (CVE) database, while the underlying distributed hardware infrastructure remains exposed to timing attacks, bit-flip faults, and power-based side channels. Today, research targets LLM-specific risks like model extraction, training data leakage, and unsafe generation -- overlooking the impact of traditional system vulnerabilities.   This work investigates how traditional software and hardware vulnerabilities can complement LLM-specific algorithmic attacks to compromise the integrity of a compound AI pipeline. We demonstrate two novel attacks that combine system-level vulnerabilities with algorithmic weaknesses: (1) Exploiting a software code injection flaw along with a guardrail Rowhammer attack to inject an unaltered jailbreak prompt into an LLM, resulting in an AI safety violation, and (2) Manipulating a knowledge database to redirect an LLM agent to transmit sensitive user data to a malicious application, thus breaching confidentiality. These attacks highlight the need to address traditional vulnerabilities; we systematize the attack primitives and analyze their composition by grouping vulnerabilities by their objective and mapping them to distinct stages of an attack lifecycle. This approach enables a rigorous red-teaming exercise and lays the groundwork for future defense strategies."
+    }
+  },
+  {
+    "id": "2603.11975v1",
+    "title": "HomeSafe-Bench: Evaluating Vision-Language Models on Unsafe Action Detection for Embodied Agents in Household Scenarios",
+    "authors": [
+      "Jiayue Pu",
+      "Zhongxiang Sun",
+      "Zilu Zhang",
+      "Xiao Zhang",
+      "Jun Xu"
+    ],
+    "published_date": "2026-03-12",
+    "tags": [
+      "cs.CV",
       "cs.AI",
-      "cs.CL",
-      "cs.CR",
-      "cs.LG"
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2603.10521v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.10521v1",
+    "link": "http://arxiv.org/abs/2603.11975v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.11975v1",
     "content": {
-      "en": "Instruction hierarchy (IH) defines how LLMs prioritize system, developer, user, and tool instructions under conflict, providing a concrete, trust-ordered policy for resolving instruction conflicts. IH is key to defending against jailbreaks, system prompt extractions, and agentic prompt injections. However, robust IH behavior is difficult to train: IH failures can be confounded with instruction-following failures, conflicts can be nuanced, and models can learn shortcuts such as overrefusing. We introduce IH-Challenge, a reinforcement learning training dataset, to address these difficulties. Fine-tuning GPT-5-Mini on IH-Challenge with online adversarial example generation improves IH robustness by +10.0% on average across 16 in-distribution, out-of-distribution, and human red-teaming benchmarks (84.1% to 94.1%), reduces unsafe behavior from 6.6% to 0.7% while improving helpfulness on general safety evaluations, and saturates an internal static agentic prompt injection evaluation, with minimal capability regression. We release the IH-Challenge dataset (https://huggingface.co/datasets/openai/ih-challenge) to support future research on robust instruction hierarchy.",
-      "tr": "Instruction hierarchy (IH) defines how LLMs prioritize system, developer, user, and tool instructions under conflict, providing a concrete, trust-ordered policy for resolving instruction conflicts. IH is key to defending against jailbreaks, system prompt extractions, and agentic prompt injections. However, robust IH behavior is difficult to train: IH failures can be confounded with instruction-following failures, conflicts can be nuanced, and models can learn shortcuts such as overrefusing. We introduce IH-Challenge, a reinforcement learning training dataset, to address these difficulties. Fine-tuning GPT-5-Mini on IH-Challenge with online adversarial example generation improves IH robustness by +10.0% on average across 16 in-distribution, out-of-distribution, and human red-teaming benchmarks (84.1% to 94.1%), reduces unsafe behavior from 6.6% to 0.7% while improving helpfulness on general safety evaluations, and saturates an internal static agentic prompt injection evaluation, with minimal capability regression. We release the IH-Challenge dataset (https://huggingface.co/datasets/openai/ih-challenge) to support future research on robust instruction hierarchy."
+      "en": "The rapid evolution of embodied agents has accelerated the deployment of household robots in real-world environments. However, unlike structured industrial settings, household spaces introduce unpredictable safety risks, where system limitations such as perception latency and lack of common sense knowledge can lead to dangerous errors. Current safety evaluations, often restricted to static images, text, or general hazards, fail to adequately benchmark dynamic unsafe action detection in these specific contexts. To bridge this gap, we introduce \\textbf{HomeSafe-Bench}, a challenging benchmark designed to evaluate Vision-Language Models (VLMs) on unsafe action detection in household scenarios. HomeSafe-Bench is contrusted via a hybrid pipeline combining physical simulation with advanced video generation and features 438 diverse cases across six functional areas with fine-grained multidimensional annotations. Beyond benchmarking, we propose \\textbf{Hierarchical Dual-Brain Guard for Household Safety (HD-Guard)}, a hierarchical streaming architecture for real-time safety monitoring. HD-Guard coordinates a lightweight FastBrain for continuous high-frequency screening with an asynchronous large-scale SlowBrain for deep multimodal reasoning, effectively balancing inference efficiency with detection accuracy. Evaluations demonstrate that HD-Guard achieves a superior trade-off between latency and performance, while our analysis identifies critical bottlenecks in current VLM-based safety detection.",
+      "tr": "The rapid evolution of embodied agents has accelerated the deployment of household robots in real-world environments. However, unlike structured industrial settings, household spaces introduce unpredictable safety risks, where system limitations such as perception latency and lack of common sense knowledge can lead to dangerous errors. Current safety evaluations, often restricted to static images, text, or general hazards, fail to adequately benchmark dynamic unsafe action detection in these specific contexts. To bridge this gap, we introduce \\textbf{HomeSafe-Bench}, a challenging benchmark designed to evaluate Vision-Language Models (VLMs) on unsafe action detection in household scenarios. HomeSafe-Bench is contrusted via a hybrid pipeline combining physical simulation with advanced video generation and features 438 diverse cases across six functional areas with fine-grained multidimensional annotations. Beyond benchmarking, we propose \\textbf{Hierarchical Dual-Brain Guard for Household Safety (HD-Guard)}, a hierarchical streaming architecture for real-time safety monitoring. HD-Guard coordinates a lightweight FastBrain for continuous high-frequency screening with an asynchronous large-scale SlowBrain for deep multimodal reasoning, effectively balancing inference efficiency with detection accuracy. Evaluations demonstrate that HD-Guard achieves a superior trade-off between latency and performance, while our analysis identifies critical bottlenecks in current VLM-based safety detection."
     }
   },
   {
-    "id": "2603.10504v1",
-    "title": "Naïve Exposure of Generative AI Capabilities Undermines Deepfake Detection",
+    "id": "2603.11949v1",
+    "title": "Delayed Backdoor Attacks: Exploring the Temporal Dimension as a New Attack Surface in Pre-Trained Models",
     "authors": [
-      "Sunpill Kim",
-      "Chanwoo Hwang",
-      "Minsu Kim",
-      "Jae Hong Seo"
+      "Zikang Ding",
+      "Haomiao Yang",
+      "Meng Hao",
+      "Wenbo Jiang",
+      "Kunlan Xiang"
     ],
-    "published_date": "2026-03-11",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CV"
-    ],
-    "link": "http://arxiv.org/abs/2603.10504v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.10504v1",
-    "content": {
-      "en": "Generative AI systems increasingly expose powerful reasoning and image refinement capabilities through user-facing chatbot interfaces. In this work, we show that the naïve exposure of such capabilities fundamentally undermines modern deepfake detectors. Rather than proposing a new image manipulation technique, we study a realistic and already-deployed usage scenario in which an adversary uses only benign, policy-compliant prompts and commercial generative AI systems. We demonstrate that state-of-the-art deepfake detection methods fail under semantic-preserving image refinement. Specifically, we show that generative AI systems articulate explicit authenticity criteria and inadvertently externalize them through unrestricted reasoning, enabling their direct reuse as refinement objectives. As a result, refined images simultaneously evade detection, preserve identity as verified by commercial face recognition APIs, and exhibit substantially higher perceptual quality. Importantly, we find that widely accessible commercial chatbot services pose a significantly greater security risk than open-source models, as their superior realism, semantic controllability, and low-barrier interfaces enable effective evasion by non-expert users. Our findings reveal a structural mismatch between the threat models assumed by current detection frameworks and the actual capabilities of real-world generative AI. While detection baselines are largely shaped by prior benchmarks, deployed systems expose unrestricted authenticity reasoning and refinement despite stringent safety controls in other domains.",
-      "tr": "Generative AI systems increasingly expose powerful reasoning and image refinement capabilities through user-facing chatbot interfaces. In this work, we show that the naïve exposure of such capabilities fundamentally undermines modern deepfake detectors. Rather than proposing a new image manipulation technique, we study a realistic and already-deployed usage scenario in which an adversary uses only benign, policy-compliant prompts and commercial generative AI systems. We demonstrate that state-of-the-art deepfake detection methods fail under semantic-preserving image refinement. Specifically, we show that generative AI systems articulate explicit authenticity criteria and inadvertently externalize them through unrestricted reasoning, enabling their direct reuse as refinement objectives. As a result, refined images simultaneously evade detection, preserve identity as verified by commercial face recognition APIs, and exhibit substantially higher perceptual quality. Importantly, we find that widely accessible commercial chatbot services pose a significantly greater security risk than open-source models, as their superior realism, semantic controllability, and low-barrier interfaces enable effective evasion by non-expert users. Our findings reveal a structural mismatch between the threat models assumed by current detection frameworks and the actual capabilities of real-world generative AI. While detection baselines are largely shaped by prior benchmarks, deployed systems expose unrestricted authenticity reasoning and refinement despite stringent safety controls in other domains."
-    }
-  },
-  {
-    "id": "2603.10413v1",
-    "title": "Enhancing Network Intrusion Detection Systems: A Multi-Layer Ensemble Approach to Mitigate Adversarial Attacks",
-    "authors": [
-      "Nasim Soltani",
-      "Shayan Nejadshamsi",
-      "Zakaria Abou El Houda",
-      "Raphael Khoury",
-      "Kelton A. P. Costa"
-    ],
-    "published_date": "2026-03-11",
+    "published_date": "2026-03-12",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2603.10413v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.10413v1",
+    "link": "http://arxiv.org/abs/2603.11949v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.11949v1",
     "content": {
-      "en": "Adversarial examples can represent a serious threat to machine learning (ML) algorithms. If used to manipulate the behaviour of ML-based Network Intrusion Detection Systems (NIDS), they can jeopardize network security. In this work, we aim to mitigate such risks by increasing the robustness of NIDS towards adversarial attacks. To that end, we explore two adversarial methods for generating malicious network traffic. The first method is based on Generative Adversarial Networks (GAN) and the second one is the Fast Gradient Sign Method (FGSM). The adversarial examples generated by these methods are then used to evaluate a novel multilayer defense mechanism, specifically designed to mitigate the vulnerability of ML-based NIDS. Our solution consists of one layer of stacking classifiers and a second layer based on an autoencoder. If the incoming network data are classified as benign by the first layer, the second layer is activated to ensure that the decision made by the stacking classifier is correct. We also incorporated adversarial training to further improve the robustness of our solution. Experiments on two datasets, namely UNSW-NB15 and NSL-KDD, demonstrate that the proposed approach increases resilience to adversarial attacks.",
-      "tr": "Adversarial examples can represent a serious threat to machine learning (ML) algorithms. If used to manipulate the behaviour of ML-based Network Intrusion Detection Systems (NIDS), they can jeopardize network security. In this work, we aim to mitigate such risks by increasing the robustness of NIDS towards adversarial attacks. To that end, we explore two adversarial methods for generating malicious network traffic. The first method is based on Generative Adversarial Networks (GAN) and the second one is the Fast Gradient Sign Method (FGSM). The adversarial examples generated by these methods are then used to evaluate a novel multilayer defense mechanism, specifically designed to mitigate the vulnerability of ML-based NIDS. Our solution consists of one layer of stacking classifiers and a second layer based on an autoencoder. If the incoming network data are classified as benign by the first layer, the second layer is activated to ensure that the decision made by the stacking classifier is correct. We also incorporated adversarial training to further improve the robustness of our solution. Experiments on two datasets, namely UNSW-NB15 and NSL-KDD, demonstrate that the proposed approach increases resilience to adversarial attacks."
+      "en": "Backdoor attacks against pre-trained models (PTMs) have traditionally operated under an ``immediacy assumption,'' where malicious behavior manifests instantly upon trigger occurrence. This work revisits and challenges this paradigm by introducing \\textit{\\textbf{Delayed Backdoor Attacks (DBA)}}, a new class of threats in which activation is temporally decoupled from trigger exposure. We propose that this \\textbf{temporal dimension} is the key to unlocking a previously infeasible class of attacks: those that use common, everyday words as triggers. To examine the feasibility of this paradigm, we design and implement a proof-of-concept prototype, termed \\underline{D}elayed Backdoor Attacks Based on \\underline{N}onlinear \\underline{D}ecay (DND). DND embeds a lightweight, stateful logic module that postpones activation until a configurable threshold is reached, producing a distinct latency phase followed by a controlled outbreak. We derive a formal model to characterize this latency behavior and propose a dual-metric evaluation framework (ASR and ASR$_{delay}$) to empirically measure the delay effect. Extensive experiments on four (natural language processing)NLP benchmarks validate the core capabilities of DND: it remains dormant for a controllable duration, sustains high clean accuracy ($\\ge$94\\%), and achieves near-perfect post-activation attack success rates ($\\approx$99\\%, The average of other methods is below 95\\%.). Moreover, DND exhibits resilience against several state-of-the-art defenses. This study provides the first empirical evidence that the temporal dimension constitutes a viable yet unprotected attack surface in PTMs, underscoring the need for next-generation, stateful, and time-aware defense mechanisms.",
+      "tr": "Backdoor attacks against pre-trained models (PTMs) have traditionally operated under an ``immediacy assumption,'' where malicious behavior manifests instantly upon trigger occurrence. This work revisits and challenges this paradigm by introducing \\textit{\\textbf{Delayed Backdoor Attacks (DBA)}}, a new class of threats in which activation is temporally decoupled from trigger exposure. We propose that this \\textbf{temporal dimension} is the key to unlocking a previously infeasible class of attacks: those that use common, everyday words as triggers. To examine the feasibility of this paradigm, we design and implement a proof-of-concept prototype, termed \\underline{D}elayed Backdoor Attacks Based on \\underline{N}onlinear \\underline{D}ecay (DND). DND embeds a lightweight, stateful logic module that postpones activation until a configurable threshold is reached, producing a distinct latency phase followed by a controlled outbreak. We derive a formal model to characterize this latency behavior and propose a dual-metric evaluation framework (ASR and ASR$_{delay}$) to empirically measure the delay effect. Extensive experiments on four (natural language processing)NLP benchmarks validate the core capabilities of DND: it remains dormant for a controllable duration, sustains high clean accuracy ($\\ge$94\\%), and achieves near-perfect post-activation attack success rates ($\\approx$99\\%, The average of other methods is below 95\\%.). Moreover, DND exhibits resilience against several state-of-the-art defenses. This study provides the first empirical evidence that the temporal dimension constitutes a viable yet unprotected attack surface in PTMs, underscoring the need for next-generation, stateful, and time-aware defense mechanisms."
     }
   },
   {
-    "id": "2603.10217v1",
-    "title": "Multilingual AI-Driven Password Strength Estimation with Similarity-Based Detection",
+    "id": "2603.11914v1",
+    "title": "Understanding LLM Behavior When Encountering User-Supplied Harmful Content in Harmless Tasks",
     "authors": [
-      "Nikitha M. Palaniappan",
-      "Ying He"
+      "Junjie Chu",
+      "Yiting Qu",
+      "Ye Leng",
+      "Michael Backes",
+      "Yun Shen"
     ],
-    "published_date": "2026-03-10",
+    "published_date": "2026-03-12",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2603.10217v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.10217v1",
+    "link": "http://arxiv.org/abs/2603.11914v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.11914v1",
     "content": {
-      "en": "Considering the rise of cyberattacks incidents worldwide, the need to ensure stronger passwords is necessary. Developing a password strength meter (PSM) can help users create stronger passwords when creating an account on an online platform. This research aimed to explore whether incorporating a non-English training dataset (specifically Indian) can improve the performance of a PSM. Findings show that PSMs can be improved by utilising learning of words from other languages. Another contribution of the research was to compare and provide an analysis of AI generated data (specifically by ChatGPT) and PassGAN (existing state-of-the-art model), proving that PassGAN-like tools may no longer be needed as the performance is higher using AI generated data. To further strengthen detection, a Jaro similarity-based matching mechanism was incorporated, enabling the classification of passwords that are highly similar to known weak passwords - this addresses limitations of direct matching techniques used in prior work. A final novel contribution is on developing a PSM tailored for Indian passwords, which has not been developed previously - this resulted in a near-perfect matching accuracy using a Jaro function value of 0.5. Although performance improvements were constrained by limited data and training, results suggest that using the ChatGPT dataset is a viable and effective strategy for developing secure, language-aware password strength meters.",
-      "tr": "Considering the rise of cyberattacks incidents worldwide, the need to ensure stronger passwords is necessary. Developing a password strength meter (PSM) can help users create stronger passwords when creating an account on an online platform. This research aimed to explore whether incorporating a non-English training dataset (specifically Indian) can improve the performance of a PSM. Findings show that PSMs can be improved by utilising learning of words from other languages. Another contribution of the research was to compare and provide an analysis of AI generated data (specifically by ChatGPT) and PassGAN (existing state-of-the-art model), proving that PassGAN-like tools may no longer be needed as the performance is higher using AI generated data. To further strengthen detection, a Jaro similarity-based matching mechanism was incorporated, enabling the classification of passwords that are highly similar to known weak passwords - this addresses limitations of direct matching techniques used in prior work. A final novel contribution is on developing a PSM tailored for Indian passwords, which has not been developed previously - this resulted in a near-perfect matching accuracy using a Jaro function value of 0.5. Although performance improvements were constrained by limited data and training, results suggest that using the ChatGPT dataset is a viable and effective strategy for developing secure, language-aware password strength meters."
+      "en": "Large Language Models (LLMs) are increasingly trained to align with human values, primarily focusing on task level, i.e., refusing to execute directly harmful tasks. However, a subtle yet crucial content-level ethical question is often overlooked: when performing a seemingly benign task, will LLMs -- like morally conscious human beings -- refuse to proceed when encountering harmful content in user-provided material? In this study, we aim to understand this content-level ethical question and systematically evaluate its implications for mainstream LLMs. We first construct a harmful knowledge dataset (i.e., non-compliant with OpenAI's usage policy) to serve as the user-supplied harmful content, with 1,357 entries across ten harmful categories. We then design nine harmless tasks (i.e., compliant with OpenAI's usage policy) to simulate the real-world benign tasks, grouped into three categories according to the extent of user-supplied content required: extensive, moderate, and limited. Leveraging the harmful knowledge dataset and the set of harmless tasks, we evaluate how nine LLMs behave when exposed to user-supplied harmful content during the execution of benign tasks, and further examine how the dynamics between harmful knowledge categories and tasks affect different LLMs. Our results show that current LLMs, even the latest GPT-5.2 and Gemini-3-Pro, often fail to uphold human-aligned ethics by continuing to process harmful content in harmless tasks. Furthermore, external knowledge from the ``Violence/Graphic'' category and the ``Translation'' task is more likely to elicit harmful responses from LLMs. We also conduct extensive ablation studies to investigate potential factors affecting this novel misuse vulnerability. We hope that our study could inspire enhanced safety measures among stakeholders to mitigate this overlooked content-level ethical risk.",
+      "tr": "Large Language Models (LLMs) are increasingly trained to align with human values, primarily focusing on task level, i.e., refusing to execute directly harmful tasks. However, a subtle yet crucial content-level ethical question is often overlooked: when performing a seemingly benign task, will LLMs -- like morally conscious human beings -- refuse to proceed when encountering harmful content in user-provided material? In this study, we aim to understand this content-level ethical question and systematically evaluate its implications for mainstream LLMs. We first construct a harmful knowledge dataset (i.e., non-compliant with OpenAI's usage policy) to serve as the user-supplied harmful content, with 1,357 entries across ten harmful categories. We then design nine harmless tasks (i.e., compliant with OpenAI's usage policy) to simulate the real-world benign tasks, grouped into three categories according to the extent of user-supplied content required: extensive, moderate, and limited. Leveraging the harmful knowledge dataset and the set of harmless tasks, we evaluate how nine LLMs behave when exposed to user-supplied harmful content during the execution of benign tasks, and further examine how the dynamics between harmful knowledge categories and tasks affect different LLMs. Our results show that current LLMs, even the latest GPT-5.2 and Gemini-3-Pro, often fail to uphold human-aligned ethics by continuing to process harmful content in harmless tasks. Furthermore, external knowledge from the ``Violence/Graphic'' category and the ``Translation'' task is more likely to elicit harmful responses from LLMs. We also conduct extensive ablation studies to investigate potential factors affecting this novel misuse vulnerability. We hope that our study could inspire enhanced safety measures among stakeholders to mitigate this overlooked content-level ethical risk."
     }
   },
   {
-    "id": "2603.10194v1",
-    "title": "MCP-in-SoS: Risk assessment framework for open-source MCP servers",
+    "id": "2603.11875v1",
+    "title": "The Mirror Design Pattern: Strict Data Geometry over Model Scale for Prompt Injection Detection",
     "authors": [
-      "Pratyay Kumar",
-      "Miguel Antonio Guirao Aguilera",
-      "Srikathyayani Srikanteswara",
-      "Satyajayant Misra",
-      "Abu Saleh Md Tayeen"
+      "J Alex Corll"
     ],
-    "published_date": "2026-03-10",
+    "published_date": "2026-03-12",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2603.10194v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.10194v1",
+    "link": "http://arxiv.org/abs/2603.11875v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.11875v1",
     "content": {
-      "en": "Model Context Protocol (MCP) servers have rapidly emerged over the past year as a widely adopted way to enable Large Language Model (LLM) agents to access dynamic, real-world tools. As MCP servers proliferate and become easy to adopt via open-source releases, understanding their security risks becomes essential for dependable production agent deployments. Recent work has developed MCP threat taxonomies, proposed mitigations, and demonstrated practical attacks. However, to the best of our knowledge, no prior study has conducted a systematic, large-scale assessment of weaknesses in open-source MCP servers. Motivated by this gap, we apply static code analysis to identify Common Weakness Enumeration (CWE) weaknesses and map them to common attack patterns and threat categories using the MITRE Common Attack Pattern Enumerations and Classifications (CAPEC) to ground risk in real-world threats. We then introduce a risk-assessment framework for the MCP landscape that combines these threats using a multi-metric scoring of likelihood and impact. Our findings show that many open-source MCP servers contain exploitable weaknesses that can compromise confidentiality, integrity, and availability, underscoring the need for secure-by-design MCP server development.",
-      "tr": "Model Context Protocol (MCP) servers have rapidly emerged over the past year as a widely adopted way to enable Large Language Model (LLM) agents to access dynamic, real-world tools. As MCP servers proliferate and become easy to adopt via open-source releases, understanding their security risks becomes essential for dependable production agent deployments. Recent work has developed MCP threat taxonomies, proposed mitigations, and demonstrated practical attacks. However, to the best of our knowledge, no prior study has conducted a systematic, large-scale assessment of weaknesses in open-source MCP servers. Motivated by this gap, we apply static code analysis to identify Common Weakness Enumeration (CWE) weaknesses and map them to common attack patterns and threat categories using the MITRE Common Attack Pattern Enumerations and Classifications (CAPEC) to ground risk in real-world threats. We then introduce a risk-assessment framework for the MCP landscape that combines these threats using a multi-metric scoring of likelihood and impact. Our findings show that many open-source MCP servers contain exploitable weaknesses that can compromise confidentiality, integrity, and availability, underscoring the need for secure-by-design MCP server development."
+      "en": "Prompt injection defenses are often framed as semantic understanding problems and delegated to increasingly large neural detectors. For the first screening layer, however, the requirements are different: the detector runs on every request and therefore must be fast, deterministic, non-promptable, and auditable. We introduce Mirror, a data-curation design pattern that organizes prompt injection corpora into matched positive and negative cells so that a classifier learns control-plane attack mechanics rather than incidental corpus shortcuts. Using 5,000 strictly curated open-source samples -- the largest corpus supportable under our public-data validity contract -- we define a 32-cell mirror topology, fill 31 of those cells with public data, train a sparse character n-gram linear SVM, compile its weights into a static Rust artifact, and obtain 95.97\\% recall and 92.07\\% F1 on a 524-case holdout at sub-millisecond latency with no external model runtime dependencies. On the same holdout, our next line of defense, a 22-million-parameter Prompt Guard~2 model reaches 44.35\\% recall and 59.14\\% F1 at 49\\,ms median and 324\\,ms p95 latency. Linear models still leave residual semantic ambiguities such as use-versus-mention for later pipeline layers, but within that scope our results show that for L1 prompt injection screening, strict data geometry can matter more than model scale.",
+      "tr": "Prompt injection defenses are often framed as semantic understanding problems and delegated to increasingly large neural detectors. For the first screening layer, however, the requirements are different: the detector runs on every request and therefore must be fast, deterministic, non-promptable, and auditable. We introduce Mirror, a data-curation design pattern that organizes prompt injection corpora into matched positive and negative cells so that a classifier learns control-plane attack mechanics rather than incidental corpus shortcuts. Using 5,000 strictly curated open-source samples -- the largest corpus supportable under our public-data validity contract -- we define a 32-cell mirror topology, fill 31 of those cells with public data, train a sparse character n-gram linear SVM, compile its weights into a static Rust artifact, and obtain 95.97\\% recall and 92.07\\% F1 on a 524-case holdout at sub-millisecond latency with no external model runtime dependencies. On the same holdout, our next line of defense, a 22-million-parameter Prompt Guard~2 model reaches 44.35\\% recall and 59.14\\% F1 at 49\\,ms median and 324\\,ms p95 latency. Linear models still leave residual semantic ambiguities such as use-versus-mention for later pipeline layers, but within that scope our results show that for L1 prompt injection screening, strict data geometry can matter more than model scale."
+    }
+  },
+  {
+    "id": "2603.11862v1",
+    "title": "You Told Me to Do It: Measuring Instructional Text-induced Private Data Leakage in LLM Agents",
+    "authors": [
+      "Ching-Yu Kao",
+      "Xinfeng Li",
+      "Shenyu Dai",
+      "Tianze Qiu",
+      "Pengcheng Zhou"
+    ],
+    "published_date": "2026-03-12",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.11862v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.11862v1",
+    "content": {
+      "en": "High-privilege LLM agents that autonomously process external documentation are increasingly trusted to automate tasks by reading and executing project instructions, yet they are granted terminal access, filesystem control, and outbound network connectivity with minimal security oversight. We identify and systematically measure a fundamental vulnerability in this trust model, which we term the \\emph{Trusted Executor Dilemma}: agents execute documentation-embedded instructions, including adversarial ones, at high rates because they cannot distinguish malicious directives from legitimate setup guidance. This vulnerability is a structural consequence of the instruction-following design paradigm, not an implementation bug. To structure our measurement, we formalize a three-dimensional taxonomy covering linguistic disguise, structural obfuscation, and semantic abstraction, and construct \\textbf{ReadSecBench}, a benchmark of 500 real-world README files enabling reproducible evaluation. Experiments on the commercially deployed computer-use agent show end-to-end exfiltration success rates up to 85\\%, consistent across five programming languages and three injection positions. Cross-model evaluation on four LLM families in a simulation environment confirms that semantic compliance with injected instructions is consistent across model families. A 15-participant user study yields a 0\\% detection rate across all participants, and evaluation of 12 rule-based and 6 LLM-based defenses shows neither category achieves reliable detection without unacceptable false-positive rates. Together, these results quantify a persistent \\emph{Semantic-Safety Gap} between agents' functional compliance and their security awareness, establishing that documentation-embedded instruction injection is a persistent and currently unmitigated threat to high-privilege LLM agent deployments.",
+      "tr": "High-privilege LLM agents that autonomously process external documentation are increasingly trusted to automate tasks by reading and executing project instructions, yet they are granted terminal access, filesystem control, and outbound network connectivity with minimal security oversight. We identify and systematically measure a fundamental vulnerability in this trust model, which we term the \\emph{Trusted Executor Dilemma}: agents execute documentation-embedded instructions, including adversarial ones, at high rates because they cannot distinguish malicious directives from legitimate setup guidance. This vulnerability is a structural consequence of the instruction-following design paradigm, not an implementation bug. To structure our measurement, we formalize a three-dimensional taxonomy covering linguistic disguise, structural obfuscation, and semantic abstraction, and construct \\textbf{ReadSecBench}, a benchmark of 500 real-world README files enabling reproducible evaluation. Experiments on the commercially deployed computer-use agent show end-to-end exfiltration success rates up to 85\\%, consistent across five programming languages and three injection positions. Cross-model evaluation on four LLM families in a simulation environment confirms that semantic compliance with injected instructions is consistent across model families. A 15-participant user study yields a 0\\% detection rate across all participants, and evaluation of 12 rule-based and 6 LLM-based defenses shows neither category achieves reliable detection without unacceptable false-positive rates. Together, these results quantify a persistent \\emph{Semantic-Safety Gap} between agents' functional compliance and their security awareness, establishing that documentation-embedded instruction injection is a persistent and currently unmitigated threat to high-privilege LLM agent deployments."
+    }
+  },
+  {
+    "id": "2603.11799v1",
+    "title": "Exponential-Family Membership Inference: From LiRA and RMIA to BaVarIA",
+    "authors": [
+      "Rickard Brännvall"
+    ],
+    "published_date": "2026-03-12",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2603.11799v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.11799v1",
+    "content": {
+      "en": "Membership inference attacks (MIAs) are becoming standard tools for auditing the privacy of machine learning models. The leading attacks -- LiRA (Carlini et al., 2022) and RMIA (Zarifzadeh et al., 2024) -- appear to use distinct scoring strategies, while the recently proposed BASE (Lassila et al., 2025) was shown to be equivalent to RMIA, making it difficult for practitioners to choose among them. We show that all three are instances of a single exponential-family log-likelihood ratio framework, differing only in their distributional assumptions and the number of parameters estimated per data point. This unification reveals a hierarchy (BASE1-4) that connects RMIA and LiRA as endpoints of a spectrum of increasing model complexity. Within this framework, we identify variance estimation as the key bottleneck at small shadow-model budgets and propose BaVarIA, a Bayesian variance inference attack that replaces threshold-based parameter switching with conjugate normal-inverse-gamma priors. BaVarIA yields a Student-t predictive (BaVarIA-t) or a Gaussian with stabilized variance (BaVarIA-n), providing stable performance without additional hyperparameter tuning. Across 12 datasets and 7 shadow-model budgets, BaVarIA matches or improves upon LiRA and RMIA, with the largest gains in the practically important low-shadow-model and offline regimes.",
+      "tr": "Membership inference attacks (MIAs) are becoming standard tools for auditing the privacy of machine learning models. The leading attacks -- LiRA (Carlini et al., 2022) and RMIA (Zarifzadeh et al., 2024) -- appear to use distinct scoring strategies, while the recently proposed BASE (Lassila et al., 2025) was shown to be equivalent to RMIA, making it difficult for practitioners to choose among them. We show that all three are instances of a single exponential-family log-likelihood ratio framework, differing only in their distributional assumptions and the number of parameters estimated per data point. This unification reveals a hierarchy (BASE1-4) that connects RMIA and LiRA as endpoints of a spectrum of increasing model complexity. Within this framework, we identify variance estimation as the key bottleneck at small shadow-model budgets and propose BaVarIA, a Bayesian variance inference attack that replaces threshold-based parameter switching with conjugate normal-inverse-gamma priors. BaVarIA yields a Student-t predictive (BaVarIA-t) or a Gaussian with stabilized variance (BaVarIA-n), providing stable performance without additional hyperparameter tuning. Across 12 datasets and 7 shadow-model budgets, BaVarIA matches or improves upon LiRA and RMIA, with the largest gains in the practically important low-shadow-model and offline regimes."
+    }
+  },
+  {
+    "id": "2603.11619v1",
+    "title": "Taming OpenClaw: Security Analysis and Mitigation of Autonomous LLM Agent Threats",
+    "authors": [
+      "Xinhao Deng",
+      "Yixiang Zhang",
+      "Jiaqing Wu",
+      "Jiaqi Bai",
+      "Sibo Yi"
+    ],
+    "published_date": "2026-03-12",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.11619v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.11619v1",
+    "content": {
+      "en": "Autonomous Large Language Model (LLM) agents, exemplified by OpenClaw, demonstrate remarkable capabilities in executing complex, long-horizon tasks. However, their tightly coupled instant-messaging interaction paradigm and high-privilege execution capabilities substantially expand the system attack surface. In this paper, we present a comprehensive security threat analysis of OpenClaw. To structure our analysis, we introduce a five-layer lifecycle-oriented security framework that captures key stages of agent operation, i.e., initialization, input, inference, decision, and execution, and systematically examine compound threats across the agent's operational lifecycle, including indirect prompt injection, skill supply chain contamination, memory poisoning, and intent drift. Through detailed case studies on OpenClaw, we demonstrate the prevalence and severity of these threats and analyze the limitations of existing defenses. Our findings reveal critical weaknesses in current point-based defense mechanisms when addressing cross-temporal and multi-stage systemic risks, highlighting the need for holistic security architectures for autonomous LLM agents. Within this framework, we further examine representative defense strategies at each lifecycle stage, including plugin vetting frameworks, context-aware instruction filtering, memory integrity validation protocols, intent verification mechanisms, and capability enforcement architectures.",
+      "tr": "Autonomous Large Language Model (LLM) agents, exemplified by OpenClaw, demonstrate remarkable capabilities in executing complex, long-horizon tasks. However, their tightly coupled instant-messaging interaction paradigm and high-privilege execution capabilities substantially expand the system attack surface. In this paper, we present a comprehensive security threat analysis of OpenClaw. To structure our analysis, we introduce a five-layer lifecycle-oriented security framework that captures key stages of agent operation, i.e., initialization, input, inference, decision, and execution, and systematically examine compound threats across the agent's operational lifecycle, including indirect prompt injection, skill supply chain contamination, memory poisoning, and intent drift. Through detailed case studies on OpenClaw, we demonstrate the prevalence and severity of these threats and analyze the limitations of existing defenses. Our findings reveal critical weaknesses in current point-based defense mechanisms when addressing cross-temporal and multi-stage systemic risks, highlighting the need for holistic security architectures for autonomous LLM agents. Within this framework, we further examine representative defense strategies at each lifecycle stage, including plugin vetting frameworks, context-aware instruction filtering, memory integrity validation protocols, intent verification mechanisms, and capability enforcement architectures."
     }
   }
 ]
