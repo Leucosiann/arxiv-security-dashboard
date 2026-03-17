@@ -1,209 +1,217 @@
 [
   {
-    "id": "2603.13186v1",
-    "title": "Learnability and Privacy Vulnerability are Entangled in a Few Critical Weights",
+    "id": "2603.14860v1",
+    "title": "Architecture-Agnostic Feature Synergy for Universal Defense Against Heterogeneous Generative Threats",
     "authors": [
-      "Xingli Fang",
-      "Jung-Eun Kim"
+      "Bingxue Zhang",
+      "Yang Gao",
+      "Feida Zhu",
+      "Yanyan Shen",
+      "Yang Shi"
     ],
-    "published_date": "2026-03-13",
+    "published_date": "2026-03-16",
     "tags": [
-      "cs.LG",
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.14860v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.14860v1",
+    "content": {
+      "en": "Generative AI deployment poses unprecedented challenges to content safety and privacy. However, existing defense mechanisms are often tailored to specific architectures (e.g., Diffusion Models or GANs), creating fragile \"defense silos\" that fail against heterogeneous generative threats. This paper identifies a fundamental optimization barrier in naive pixel-space ensemble strategies: due to divergent objective functions, pixel-level gradients from heterogeneous generators become statistically orthogonal, causing destructive interference. To overcome this, we observe that despite disparate low-level mechanisms, high-level feature representations of generated content exhibit alignment across architectures. Based on this, we propose the Architecture-Agnostic Targeted Feature Synergy (ATFS) framework. By introducing a target guidance image, ATFS reformulates multi-model defense as a unified feature space alignment task, enabling intrinsic gradient alignment without complex rectification. Extensive experiments show ATFS achieves SOTA protection in heterogeneous scenarios (e.g., Diffusion+GAN). It converges rapidly, reaching over 90% performance within 40 iterations, and maintains strong attack potency even under tight perturbation budgets. The framework seamlessly extends to unseen architectures (e.g., VQ-VAE) by switching the feature extractor, and demonstrates robust resistance to JPEG compression and scaling. Being computationally efficient and lightweight, ATFS offers a viable pathway to dismantle defense silos and enable universal generative security. Code and models are open-sourced for reproducibility.",
+      "tr": "Generative AI deployment poses unprecedented challenges to content safety and privacy. However, existing defense mechanisms are often tailored to specific architectures (e.g., Diffusion Models or GANs), creating fragile \"defense silos\" that fail against heterogeneous generative threats. This paper identifies a fundamental optimization barrier in naive pixel-space ensemble strategies: due to divergent objective functions, pixel-level gradients from heterogeneous generators become statistically orthogonal, causing destructive interference. To overcome this, we observe that despite disparate low-level mechanisms, high-level feature representations of generated content exhibit alignment across architectures. Based on this, we propose the Architecture-Agnostic Targeted Feature Synergy (ATFS) framework. By introducing a target guidance image, ATFS reformulates multi-model defense as a unified feature space alignment task, enabling intrinsic gradient alignment without complex rectification. Extensive experiments show ATFS achieves SOTA protection in heterogeneous scenarios (e.g., Diffusion+GAN). It converges rapidly, reaching over 90% performance within 40 iterations, and maintains strong attack potency even under tight perturbation budgets. The framework seamlessly extends to unseen architectures (e.g., VQ-VAE) by switching the feature extractor, and demonstrates robust resistance to JPEG compression and scaling. Being computationally efficient and lightweight, ATFS offers a viable pathway to dismantle defense silos and enable universal generative security. Code and models are open-sourced for reproducibility."
+    }
+  },
+  {
+    "id": "2603.14778v1",
+    "title": "$p^2$RAG: Privacy-Preserving RAG Service Supporting Arbitrary Top-$k$ Retrieval",
+    "authors": [
+      "Yulong Ming",
+      "Mingyue Wang",
+      "Jijia Yang",
+      "Cong Wang",
+      "Xiaohua Jia"
+    ],
+    "published_date": "2026-03-16",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.14778v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.14778v1",
+    "content": {
+      "en": "Retrieval-Augmented Generation (RAG) enables large language models to use external knowledge, but outsourcing the RAG service raises privacy concerns for both data owners and users. Privacy-preserving RAG systems address these concerns by performing secure top-$k$ retrieval, which typically is secure sorting to identify relevant documents. However, existing systems face challenges supporting arbitrary $k$ due to their inability to change $k$, new security issues, or efficiency degradation with large $k$. This is a significant limitation because modern long-context models generally achieve higher accuracy with larger retrieval sets. We propose $p^2$RAG, a privacy-preserving RAG service that supports arbitrary top-$k$ retrieval. Unlike existing systems, $p^2$RAG avoids sorting candidate documents. Instead, it uses an interactive bisection method to determine the set of top-$k$ documents. For security, $p^2$RAG uses secret sharing on two semi-honest non-colluding servers to protect the data owner's database and the user's prompt. It enforces restrictions and verification to defend against malicious users and tightly bound the information leakage of the database. The experiments show that $p^2$RAG is 3--300$\\times$ faster than the state-of-the-art PRAG for $k = 16$--$1024$.",
+      "tr": "Retrieval-Augmented Generation (RAG) enables large language models to use external knowledge, but outsourcing the RAG service raises privacy concerns for both data owners and users. Privacy-preserving RAG systems address these concerns by performing secure top-$k$ retrieval, which typically is secure sorting to identify relevant documents. However, existing systems face challenges supporting arbitrary $k$ due to their inability to change $k$, new security issues, or efficiency degradation with large $k$. This is a significant limitation because modern long-context models generally achieve higher accuracy with larger retrieval sets. We propose $p^2$RAG, a privacy-preserving RAG service that supports arbitrary top-$k$ retrieval. Unlike existing systems, $p^2$RAG avoids sorting candidate documents. Instead, it uses an interactive bisection method to determine the set of top-$k$ documents. For security, $p^2$RAG uses secret sharing on two semi-honest non-colluding servers to protect the data owner's database and the user's prompt. It enforces restrictions and verification to defend against malicious users and tightly bound the information leakage of the database. The experiments show that $p^2$RAG is 3--300$\\times$ faster than the state-of-the-art PRAG for $k = 16$--$1024$."
+    }
+  },
+  {
+    "id": "2603.14628v1",
+    "title": "s2n-bignum-bench: A practical benchmark for evaluating low-level code reasoning of LLMs",
+    "authors": [
+      "Balaji Rao",
+      "John Harrison",
+      "Soonho Kong",
+      "Juneyoung Lee",
+      "Carlo Lipizzi"
+    ],
+    "published_date": "2026-03-15",
+    "tags": [
+      "cs.PL",
       "cs.AI",
-      "cs.CR"
+      "cs.CR",
+      "cs.LO"
     ],
-    "link": "http://arxiv.org/abs/2603.13186v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.13186v1",
+    "link": "http://arxiv.org/abs/2603.14628v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.14628v1",
     "content": {
-      "en": "Prior approaches for membership privacy preservation usually update or retrain all weights in neural networks, which is costly and can lead to unnecessary utility loss or even more serious misalignment in predictions between training data and non-training data. In this work, we observed three insights: i) privacy vulnerability exists in a very small fraction of weights; ii) however, most of those weights also critically impact utility performance; iii) the importance of weights stems from their locations rather than their values. According to these insights, to preserve privacy, we score critical weights, and instead of discarding those neurons, we rewind only the weights for fine-tuning. We show that, through extensive experiments, this mechanism exhibits outperforming resilience in most cases against Membership Inference Attacks while maintaining utility.",
-      "tr": "Prior approaches for membership privacy preservation usually update or retrain all weights in neural networks, which is costly and can lead to unnecessary utility loss or even more serious misalignment in predictions between training data and non-training data. In this work, we observed three insights: i) privacy vulnerability exists in a very small fraction of weights; ii) however, most of those weights also critically impact utility performance; iii) the importance of weights stems from their locations rather than their values. According to these insights, to preserve privacy, we score critical weights, and instead of discarding those neurons, we rewind only the weights for fine-tuning. We show that, through extensive experiments, this mechanism exhibits outperforming resilience in most cases against Membership Inference Attacks while maintaining utility."
+      "en": "Neurosymbolic approaches leveraging Large Language Models (LLMs) with formal methods have recently achieved strong results on mathematics-oriented theorem-proving benchmarks. However, success on competition-style mathematics does not by itself demonstrate the ability to construct proofs about real-world implementations. We address this gap with a benchmark derived from an industrial cryptographic library whose assembly routines are already verified in HOL Light. s2n-bignum is a library used at AWS for providing fast assembly routines for cryptography, and its correctness is established by formal verification. The task of formally verifying this library has been a significant achievement for the Automated Reasoning Group. It involved two tasks: (1) precisely specifying the correct behavior of a program as a mathematical proposition, and (2) proving that the proposition is correct. In the case of s2n-bignum, both tasks were carried out by human experts. In \\textit{s2n-bignum-bench}, we provide the formal specification and ask the LLM to generate a proof script that is accepted by HOL Light within a fixed proof-check timeout. To our knowledge, \\textit{s2n-bignum-bench} is the first public benchmark focused on machine-checkable proof synthesis for industrial low-level cryptographic assembly routines in HOL Light. This benchmark provides a challenging and practically relevant testbed for evaluating LLM-based theorem proving beyond competition mathematics. The code to set up and use the benchmark is available here: \\href{https://github.com/kings-crown/s2n-bignum-bench}{s2n-bignum-bench}.",
+      "tr": "Neurosymbolic approaches leveraging Large Language Models (LLMs) with formal methods have recently achieved strong results on mathematics-oriented theorem-proving benchmarks. However, success on competition-style mathematics does not by itself demonstrate the ability to construct proofs about real-world implementations. We address this gap with a benchmark derived from an industrial cryptographic library whose assembly routines are already verified in HOL Light. s2n-bignum is a library used at AWS for providing fast assembly routines for cryptography, and its correctness is established by formal verification. The task of formally verifying this library has been a significant achievement for the Automated Reasoning Group. It involved two tasks: (1) precisely specifying the correct behavior of a program as a mathematical proposition, and (2) proving that the proposition is correct. In the case of s2n-bignum, both tasks were carried out by human experts. In \\textit{s2n-bignum-bench}, we provide the formal specification and ask the LLM to generate a proof script that is accepted by HOL Light within a fixed proof-check timeout. To our knowledge, \\textit{s2n-bignum-bench} is the first public benchmark focused on machine-checkable proof synthesis for industrial low-level cryptographic assembly routines in HOL Light. This benchmark provides a challenging and practically relevant testbed for evaluating LLM-based theorem proving beyond competition mathematics. The code to set up and use the benchmark is available here: \\href{https://github.com/kings-crown/s2n-bignum-bench}{s2n-bignum-bench}."
     }
   },
   {
-    "id": "2603.13028v1",
-    "title": "Purify Once, Edit Freely: Breaking Image Protections under Model Mismatch",
+    "id": "2603.14592v1",
+    "title": "A Multi-Scale Graph Learning Framework with Temporal Consistency Constraints for Financial Fraud Detection in Transaction Networks under Non-Stationary Conditions",
     "authors": [
-      "Qichen Zhao",
-      "Shengfang Zhai",
-      "Xinjian Bai",
-      "Qingni Shen",
-      "Qiqi Lin"
+      "Yiming Lei",
+      "Qiannan Shen",
+      "Junhao Song"
     ],
-    "published_date": "2026-03-13",
+    "published_date": "2026-03-15",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2603.14592v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.14592v1",
+    "content": {
+      "en": "Financial fraud detection in transaction networks involves modeling sparse anomalies, dynamic patterns, and severe class imbalance in the presence of temporal drift in the data. In real-world transaction systems, a suspicious transaction is rarely isolated: rather, legitimate and suspicious transactions are often connected through accounts, intermediaries or through temporal transaction sequences. Attribute-based or randomly partitioned learning pipelines are therefore insufficient to detect relationally structured fraud. STC-MixHop, a graph-based framework combining spatial multi-resolution propagation with lightweight temporal consistency modeling for anomaly and fraud detection in dynamic transaction networks. It integrates three components: a MixHop-inspired multi-scale neighborhood diffusion encoder a multi-scale neighborhood diffusion MixHop-based encoder for learning structural patterns; a spatial-temporal attention module coupling current and preceding graph snapshots to stabilize representations; and a temporally informed self-supervised pretraining strategy exploiting unlabeled transaction interactions to improve representation quality. We evaluate the framework primarily on the PaySim dataset under strict chronological splits, supplementing the analysis with Porto Seguro and FEMA data to probe cross-domain component behavior. Results show that STC-MixHop is competitive among graph methods and achieves strong screening-oriented recall under highly imbalanced conditions. The experiments also reveal an important boundary condition: when node attributes are highly informative, tabular baselines remain difficult to outperform. Graph structure contributes most clearly where hidden relational dependencies are operationally important. These findings support a stability-focused view of graph learning for financial fraud detection.",
+      "tr": "Financial fraud detection in transaction networks involves modeling sparse anomalies, dynamic patterns, and severe class imbalance in the presence of temporal drift in the data. In real-world transaction systems, a suspicious transaction is rarely isolated: rather, legitimate and suspicious transactions are often connected through accounts, intermediaries or through temporal transaction sequences. Attribute-based or randomly partitioned learning pipelines are therefore insufficient to detect relationally structured fraud. STC-MixHop, a graph-based framework combining spatial multi-resolution propagation with lightweight temporal consistency modeling for anomaly and fraud detection in dynamic transaction networks. It integrates three components: a MixHop-inspired multi-scale neighborhood diffusion encoder a multi-scale neighborhood diffusion MixHop-based encoder for learning structural patterns; a spatial-temporal attention module coupling current and preceding graph snapshots to stabilize representations; and a temporally informed self-supervised pretraining strategy exploiting unlabeled transaction interactions to improve representation quality. We evaluate the framework primarily on the PaySim dataset under strict chronological splits, supplementing the analysis with Porto Seguro and FEMA data to probe cross-domain component behavior. Results show that STC-MixHop is competitive among graph methods and achieves strong screening-oriented recall under highly imbalanced conditions. The experiments also reveal an important boundary condition: when node attributes are highly informative, tabular baselines remain difficult to outperform. Graph structure contributes most clearly where hidden relational dependencies are operationally important. These findings support a stability-focused view of graph learning for financial fraud detection."
+    }
+  },
+  {
+    "id": "2603.14341v1",
+    "title": "Generation of Human Comprehensible Access Control Policies from Audit Logs",
+    "authors": [
+      "Gautam Kumar",
+      "Ravi Sundaram",
+      "Shamik Sural"
+    ],
+    "published_date": "2026-03-15",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2603.14341v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.14341v1",
+    "content": {
+      "en": "Over the years, access control systems have become increasingly more complex, often causing a disconnect between what is envisaged by the stakeholders in decision-making positions and the actual permissions granted as evidenced from access logs. For instance, Attribute-based Access Control (ABAC), which is a flexible yet complex model typically configured by system security officers, can be made understandable to others only when presented at a high level in natural language. Although several algorithms have been proposed in the literature for automatic extraction of ABAC rules from access logs, there is no attempt yet to bridge the semantic gap between the machine-enforceable formal logic and human-centric policy intent. Our work addresses this problem by developing a framework that generates human understandable natural language access control policies from logs. We investigate to what extent the power of Large Language Models (LLMs) can be harnessed to achieve both accuracy and scalability in the process. Named LANTERN (LLM-based ABAC Natural Translation and Explanation for Rule Navigation), we have instantiated the framework as a publicly accessible web based application for reproducibility of our results.",
+      "tr": "Over the years, access control systems have become increasingly more complex, often causing a disconnect between what is envisaged by the stakeholders in decision-making positions and the actual permissions granted as evidenced from access logs. For instance, Attribute-based Access Control (ABAC), which is a flexible yet complex model typically configured by system security officers, can be made understandable to others only when presented at a high level in natural language. Although several algorithms have been proposed in the literature for automatic extraction of ABAC rules from access logs, there is no attempt yet to bridge the semantic gap between the machine-enforceable formal logic and human-centric policy intent. Our work addresses this problem by developing a framework that generates human understandable natural language access control policies from logs. We investigate to what extent the power of Large Language Models (LLMs) can be harnessed to achieve both accuracy and scalability in the process. Named LANTERN (LLM-based ABAC Natural Translation and Explanation for Rule Navigation), we have instantiated the framework as a publicly accessible web based application for reproducibility of our results."
+    }
+  },
+  {
+    "id": "2603.14283v1",
+    "title": "AEX: Non-Intrusive Multi-Hop Attestation and Provenance for LLM APIs",
+    "authors": [
+      "Yongjie Guan"
+    ],
+    "published_date": "2026-03-15",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2603.13028v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.13028v1",
+    "link": "http://arxiv.org/abs/2603.14283v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.14283v1",
     "content": {
-      "en": "Diffusion models enable high-fidelity image editing but can also be misused for unauthorized style imitation and harmful content generation. To mitigate these risks, proactive image protection methods embed small, often imperceptible adversarial perturbations into images before sharing to disrupt downstream editing or fine-tuning. However, in realistic post-release scenarios, content owners cannot control downstream processing pipelines, and protections optimized for a surrogate model may fail when attackers use mismatched diffusion pipelines. Existing purification methods can weaken protections but often sacrifice image quality and rarely examine architectural mismatch. We introduce a unified post-release purification framework to evaluate protection survivability under model mismatch. We propose two practical purifiers: VAE-Trans, which corrects protected images via latent-space projection, and EditorClean, which performs instruction-guided reconstruction with a Diffusion Transformer to exploit architectural heterogeneity. Both operate without access to protected images or defense internals. Across 2,100 editing tasks and six representative protection methods, EditorClean consistently restores editability. Compared to protected inputs, it improves PSNR by 3-6 dB and reduces FID by 50-70 percent on downstream edits, while outperforming prior purification baselines by about 2 dB PSNR and 30 percent lower FID. Our results reveal a purify-once, edit-freely failure mode: once purification succeeds, the protective signal is largely removed, enabling unrestricted editing. This highlights the need to evaluate protections under model mismatch and design defenses robust to heterogeneous attackers.",
-      "tr": "Diffusion models enable high-fidelity image editing but can also be misused for unauthorized style imitation and harmful content generation. To mitigate these risks, proactive image protection methods embed small, often imperceptible adversarial perturbations into images before sharing to disrupt downstream editing or fine-tuning. However, in realistic post-release scenarios, content owners cannot control downstream processing pipelines, and protections optimized for a surrogate model may fail when attackers use mismatched diffusion pipelines. Existing purification methods can weaken protections but often sacrifice image quality and rarely examine architectural mismatch. We introduce a unified post-release purification framework to evaluate protection survivability under model mismatch. We propose two practical purifiers: VAE-Trans, which corrects protected images via latent-space projection, and EditorClean, which performs instruction-guided reconstruction with a Diffusion Transformer to exploit architectural heterogeneity. Both operate without access to protected images or defense internals. Across 2,100 editing tasks and six representative protection methods, EditorClean consistently restores editability. Compared to protected inputs, it improves PSNR by 3-6 dB and reduces FID by 50-70 percent on downstream edits, while outperforming prior purification baselines by about 2 dB PSNR and 30 percent lower FID. Our results reveal a purify-once, edit-freely failure mode: once purification succeeds, the protective signal is largely removed, enabling unrestricted editing. This highlights the need to evaluate protections under model mismatch and design defenses robust to heterogeneous attackers."
+      "en": "Hosted large language models are increasingly accessed through remote APIs, but the API boundary still offers little direct evidence that a returned output actually corresponds to the client-visible request. Recent audits of shadow APIs show that unofficial or intermediary endpoints can diverge from claimed behavior, while existing approaches such as fingerprinting, model-equality testing, verifiable inference, and TEE attestation either remain inferential or answer different questions. We propose AEX, a non-intrusive attestation extension for existing JSON-based LLM APIs. AEX preserves request, response, tool-calling, streaming, and error semantics, and instead adds a signed top-level attestation object that binds a client-visible request projection to either a complete response object or a committed streaming output. To support realistic deployments, AEX provides explicit request-binding modes, signed request-transform receipts for trusted intermediaries, and source-output / output-transform receipts for trusted output rewriting. For streaming, it separates checkpoint proofs for verified prefixes of an unmodified source stream from complete-output lineage for outputs that have been rewritten, buffered, aggregated, or re-packaged, preventing transformed outputs from being mistaken for source-stream prefixes. AEX therefore makes a deliberately narrow claim: a trusted issuer attests to a specific request-output relation, or to a specific complete-output lineage, at the API boundary. We present the protocol design, threat model, verification state machine, security and privacy analysis, an OpenAI-compatible chat-completions profile, and a reference TypeScript prototype with local conformance tests and microbenchmarks.",
+      "tr": "Hosted large language models are increasingly accessed through remote APIs, but the API boundary still offers little direct evidence that a returned output actually corresponds to the client-visible request. Recent audits of shadow APIs show that unofficial or intermediary endpoints can diverge from claimed behavior, while existing approaches such as fingerprinting, model-equality testing, verifiable inference, and TEE attestation either remain inferential or answer different questions. We propose AEX, a non-intrusive attestation extension for existing JSON-based LLM APIs. AEX preserves request, response, tool-calling, streaming, and error semantics, and instead adds a signed top-level attestation object that binds a client-visible request projection to either a complete response object or a committed streaming output. To support realistic deployments, AEX provides explicit request-binding modes, signed request-transform receipts for trusted intermediaries, and source-output / output-transform receipts for trusted output rewriting. For streaming, it separates checkpoint proofs for verified prefixes of an unmodified source stream from complete-output lineage for outputs that have been rewritten, buffered, aggregated, or re-packaged, preventing transformed outputs from being mistaken for source-stream prefixes. AEX therefore makes a deliberately narrow claim: a trusted issuer attests to a specific request-output relation, or to a specific complete-output lineage, at the API boundary. We present the protocol design, threat model, verification state machine, security and privacy analysis, an OpenAI-compatible chat-completions profile, and a reference TypeScript prototype with local conformance tests and microbenchmarks."
     }
   },
   {
-    "id": "2603.13026v1",
-    "title": "PISmith: Reinforcement Learning-based Red Teaming for Prompt Injection Defenses",
+    "id": "2603.14222v1",
+    "title": "Membership Inference for Contrastive Pre-training Models with Text-only PII Queries",
     "authors": [
-      "Chenlong Yin",
-      "Runpeng Geng",
-      "Yanting Wang",
-      "Jinyuan Jia"
+      "Ruoxi Cheng",
+      "Yizhong Ding",
+      "Hongyi Zhang",
+      "Yiyan Huang"
     ],
-    "published_date": "2026-03-13",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2603.13026v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.13026v1",
-    "content": {
-      "en": "Prompt injection poses serious security risks to real-world LLM applications, particularly autonomous agents. Although many defenses have been proposed, their robustness against adaptive attacks remains insufficiently evaluated, potentially creating a false sense of security. In this work, we propose PISmith, a reinforcement learning (RL)-based red-teaming framework that systematically assesses existing prompt-injection defenses by training an attack LLM to optimize injected prompts in a practical black-box setting, where the attacker can only query the defended LLM and observe its outputs. We find that directly applying standard GRPO to attack strong defenses leads to sub-optimal performance due to extreme reward sparsity -- most generated injected prompts are blocked by the defense, causing the policy's entropy to collapse before discovering effective attack strategies, while the rare successes cannot be learned effectively. In response, we introduce adaptive entropy regularization and dynamic advantage weighting to sustain exploration and amplify learning from scarce successes. Extensive evaluation on 13 benchmarks demonstrates that state-of-the-art prompt injection defenses remain vulnerable to adaptive attacks. We also compare PISmith with 7 baselines across static, search-based, and RL-based attack categories, showing that PISmith consistently achieves the highest attack success rates. Furthermore, PISmith achieves strong performance in agentic settings on InjecAgent and AgentDojo against both open-source and closed-source LLMs (e.g., GPT-4o-mini and GPT-5-nano). Our code is available at https://github.com/albert-y1n/PISmith.",
-      "tr": "Prompt injection poses serious security risks to real-world LLM applications, particularly autonomous agents. Although many defenses have been proposed, their robustness against adaptive attacks remains insufficiently evaluated, potentially creating a false sense of security. In this work, we propose PISmith, a reinforcement learning (RL)-based red-teaming framework that systematically assesses existing prompt-injection defenses by training an attack LLM to optimize injected prompts in a practical black-box setting, where the attacker can only query the defended LLM and observe its outputs. We find that directly applying standard GRPO to attack strong defenses leads to sub-optimal performance due to extreme reward sparsity -- most generated injected prompts are blocked by the defense, causing the policy's entropy to collapse before discovering effective attack strategies, while the rare successes cannot be learned effectively. In response, we introduce adaptive entropy regularization and dynamic advantage weighting to sustain exploration and amplify learning from scarce successes. Extensive evaluation on 13 benchmarks demonstrates that state-of-the-art prompt injection defenses remain vulnerable to adaptive attacks. We also compare PISmith with 7 baselines across static, search-based, and RL-based attack categories, showing that PISmith consistently achieves the highest attack success rates. Furthermore, PISmith achieves strong performance in agentic settings on InjecAgent and AgentDojo against both open-source and closed-source LLMs (e.g., GPT-4o-mini and GPT-5-nano). Our code is available at https://github.com/albert-y1n/PISmith."
-    }
-  },
-  {
-    "id": "2603.13014v1",
-    "title": "FraudFox: Adaptable Fraud Detection in the Real World",
-    "authors": [
-      "Matthew Butler",
-      "Yi Fan",
-      "Christos Faloutsos"
-    ],
-    "published_date": "2026-03-13",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2603.13014v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.13014v1",
-    "content": {
-      "en": "The proposed method (FraudFox) provides solutions to adversarial attacks in a resource constrained environment. We focus on questions like the following: How suspicious is `Smith', trying to buy \\$500 shoes, on Monday 3am? How to merge the risk scores, from a handful of risk-assessment modules (`oracles') in an adversarial environment? More importantly, given historical data (orders, prices, and what-happened afterwards), and business goals/restrictions, which transactions, like the `Smith' transaction above, which ones should we `pass', versus send to human investigators? The business restrictions could be: `at most $x$ investigations are feasible', or `at most \\$$y$ lost due to fraud'. These are the two research problems we focus on, in this work. One approach to address the first problem (`oracle-weighting'), is by using Extended Kalman Filters with dynamic importance weights, to automatically and continuously update our weights for each 'oracle'. For the second problem, we show how to derive an optimal decision surface, and how to compute the Pareto optimal set, to allow what-if questions. An important consideration is adaptation: Fraudsters will change their behavior, according to our past decisions; thus, we need to adapt accordingly. The resulting system, \\method, is scalable, adaptable to changing fraudster behavior, effective, and already in \\textbf{production} at Amazon. FraudFox augments a fraud prevention sub-system and has led to significant performance gains.",
-      "tr": "The proposed method (FraudFox) provides solutions to adversarial attacks in a resource constrained environment. We focus on questions like the following: How suspicious is `Smith', trying to buy \\$500 shoes, on Monday 3am? How to merge the risk scores, from a handful of risk-assessment modules (`oracles') in an adversarial environment? More importantly, given historical data (orders, prices, and what-happened afterwards), and business goals/restrictions, which transactions, like the `Smith' transaction above, which ones should we `pass', versus send to human investigators? The business restrictions could be: `at most $x$ investigations are feasible', or `at most \\$$y$ lost due to fraud'. These are the two research problems we focus on, in this work. One approach to address the first problem (`oracle-weighting'), is by using Extended Kalman Filters with dynamic importance weights, to automatically and continuously update our weights for each 'oracle'. For the second problem, we show how to derive an optimal decision surface, and how to compute the Pareto optimal set, to allow what-if questions. An important consideration is adaptation: Fraudsters will change their behavior, according to our past decisions; thus, we need to adapt accordingly. The resulting system, \\method, is scalable, adaptable to changing fraudster behavior, effective, and already in \\textbf{production} at Amazon. FraudFox augments a fraud prevention sub-system and has led to significant performance gains."
-    }
-  },
-  {
-    "id": "2603.12749v1",
-    "title": "SLICE: Semantic Latent Injection via Compartmentalized Embedding for Image Watermarking",
-    "authors": [
-      "Zheng Gao",
-      "Yifan Yang",
-      "Xiaoyu Li",
-      "Xiaoyan Feng",
-      "Haoran Fan"
-    ],
-    "published_date": "2026-03-13",
-    "tags": [
-      "cs.CV",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2603.12749v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.12749v1",
-    "content": {
-      "en": "Watermarking the initial noise of diffusion models has emerged as a promising approach for image provenance, but content-independent noise patterns can be forged via inversion and regeneration attacks. Recent semantic-aware watermarking methods improve robustness by conditioning verification on image semantics. However, their reliance on a single global semantic binding makes them vulnerable to localized but globally coherent semantic edits. To address this limitation and provide a trustworthy semantic-aware watermark, we propose $\\underline{\\textbf{S}}$emantic $\\underline{\\textbf{L}}$atent $\\underline{\\textbf{I}}$njection via $\\underline{\\textbf{C}}$ompartmentalized $\\underline{\\textbf{E}}$mbedding ($\\textbf{SLICE}$). Our framework decouples image semantics into four semantic factors (subject, environment, action, and detail) and precisely anchors them to distinct regions in the initial Gaussian noise. This fine-grained semantic binding enables advanced watermark verification where semantic tampering is detectable and localizable. We theoretically justify why SLICE enables robust and reliable tamper localization and provides statistical guarantees on false-accept rates. Experimental results demonstrate that SLICE significantly outperforms existing baselines against advanced semantic-guided regeneration attacks, substantially reducing attack success while preserving image quality and semantic fidelity. Overall, SLICE offers a practical, training-free provenance solution that is both fine-grained in diagnosis and robust to realistic adversarial manipulations.",
-      "tr": "Watermarking the initial noise of diffusion models has emerged as a promising approach for image provenance, but content-independent noise patterns can be forged via inversion and regeneration attacks. Recent semantic-aware watermarking methods improve robustness by conditioning verification on image semantics. However, their reliance on a single global semantic binding makes them vulnerable to localized but globally coherent semantic edits. To address this limitation and provide a trustworthy semantic-aware watermark, we propose $\\underline{\\textbf{S}}$emantic $\\underline{\\textbf{L}}$atent $\\underline{\\textbf{I}}$njection via $\\underline{\\textbf{C}}$ompartmentalized $\\underline{\\textbf{E}}$mbedding ($\\textbf{SLICE}$). Our framework decouples image semantics into four semantic factors (subject, environment, action, and detail) and precisely anchors them to distinct regions in the initial Gaussian noise. This fine-grained semantic binding enables advanced watermark verification where semantic tampering is detectable and localizable. We theoretically justify why SLICE enables robust and reliable tamper localization and provides statistical guarantees on false-accept rates. Experimental results demonstrate that SLICE significantly outperforms existing baselines against advanced semantic-guided regeneration attacks, substantially reducing attack success while preserving image quality and semantic fidelity. Overall, SLICE offers a practical, training-free provenance solution that is both fine-grained in diagnosis and robust to realistic adversarial manipulations."
-    }
-  },
-  {
-    "id": "2603.12681v1",
-    "title": "Colluding LoRA: A Composite Attack on LLM Safety Alignment",
-    "authors": [
-      "Sihao Ding"
-    ],
-    "published_date": "2026-03-13",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2603.12681v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.12681v1",
-    "content": {
-      "en": "We introduce Colluding LoRA (CoLoRA), an attack in which each adapter appears benign and plausibly functional in isolation, yet their linear composition consistently compromises safety. Unlike attacks that depend on specific input triggers or prompt patterns, CoLoRA is a composition-triggered broad refusal suppression: once a particular set of adapters is loaded, the model undergoes effective alignment degradation, complying with harmful requests without requiring adversarial prompts or suffixes. This attack exploits the combinatorial blindness of current defense systems, where exhaustively scanning all compositions is computationally intractable. Across several open-weight LLMs, CoLoRA achieves benign behavior individually yet high attack success rate after composition, indicating that securing modular LLM supply-chains requires moving beyond single-module verification toward composition-aware defenses.",
-      "tr": "We introduce Colluding LoRA (CoLoRA), an attack in which each adapter appears benign and plausibly functional in isolation, yet their linear composition consistently compromises safety. Unlike attacks that depend on specific input triggers or prompt patterns, CoLoRA is a composition-triggered broad refusal suppression: once a particular set of adapters is loaded, the model undergoes effective alignment degradation, complying with harmful requests without requiring adversarial prompts or suffixes. This attack exploits the combinatorial blindness of current defense systems, where exhaustively scanning all compositions is computationally intractable. Across several open-weight LLMs, CoLoRA achieves benign behavior individually yet high attack success rate after composition, indicating that securing modular LLM supply-chains requires moving beyond single-module verification toward composition-aware defenses."
-    }
-  },
-  {
-    "id": "2603.12455v1",
-    "title": "Operationalising Cyber Risk Management Using AI: Connecting Cyber Incidents to MITRE ATT&CK Techniques, Security Controls, and Metrics",
-    "authors": [
-      "Emad Sherif",
-      "Iryna Yevseyeva",
-      "Vitor Basto-Fernandes",
-      "Allan Cook"
-    ],
-    "published_date": "2026-03-12",
+    "published_date": "2026-03-15",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2603.12455v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.12455v1",
+    "link": "http://arxiv.org/abs/2603.14222v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.14222v1",
     "content": {
-      "en": "The escalating frequency of cyber-attacks poses significant challenges for organisations, particularly small enterprises constrained by limited in-house expertise, insufficient knowledge, and financial resources. This research presents a novel framework that leverages Natural Language Processing to address these challenges through automated mapping of cyber incidents to adversary techniques. We introduce the Cyber Catalog, a knowledge base that systematically integrates CIS Critical Security Controls, MITRE ATT&CK techniques, and SMART metrics. This integrated resource enables organisations to connect threat intelligence directly to actionable controls and measurable outcomes. To operationalise the framework, we fine-tuned all-mpnet-base-v2, a highly regarded sentence-transformers model used to convert text into numerical vectors on an augmented dataset comprising 74,986 incident-technique pairs to enhance semantic similarity between cyber incidents and MITRE ATT&CK techniques. Our fine-tuned model achieved a Spearman correlation of 0.7894 and Pearson correlation of 0.8756, demonstrating substantial improvements over top baseline models including all-mpnet-base-v2, all-distilroberta-v1, and all-MiniLM-L12-v2. Furthermore, our model exhibited significantly lower prediction errors (MAE = 0.135, MSE = 0.027) compared to all baseline models, confirming superior accuracy and consistency. The Cyber Catalog, training dataset, trained model, and implementation code made publicly available to facilitate further research and enable practical deployment in resource-constrained environments. This work bridges the gap between threat intelligence and operational security management, providing an actionable tool for systematic cyber incident response and evidence-based cyber risk management.",
-      "tr": "The escalating frequency of cyber-attacks poses significant challenges for organisations, particularly small enterprises constrained by limited in-house expertise, insufficient knowledge, and financial resources. This research presents a novel framework that leverages Natural Language Processing to address these challenges through automated mapping of cyber incidents to adversary techniques. We introduce the Cyber Catalog, a knowledge base that systematically integrates CIS Critical Security Controls, MITRE ATT&CK techniques, and SMART metrics. This integrated resource enables organisations to connect threat intelligence directly to actionable controls and measurable outcomes. To operationalise the framework, we fine-tuned all-mpnet-base-v2, a highly regarded sentence-transformers model used to convert text into numerical vectors on an augmented dataset comprising 74,986 incident-technique pairs to enhance semantic similarity between cyber incidents and MITRE ATT&CK techniques. Our fine-tuned model achieved a Spearman correlation of 0.7894 and Pearson correlation of 0.8756, demonstrating substantial improvements over top baseline models including all-mpnet-base-v2, all-distilroberta-v1, and all-MiniLM-L12-v2. Furthermore, our model exhibited significantly lower prediction errors (MAE = 0.135, MSE = 0.027) compared to all baseline models, confirming superior accuracy and consistency. The Cyber Catalog, training dataset, trained model, and implementation code made publicly available to facilitate further research and enable practical deployment in resource-constrained environments. This work bridges the gap between threat intelligence and operational security management, providing an actionable tool for systematic cyber incident response and evidence-based cyber risk management."
+      "en": "Contrastive pretraining models such as CLIP and CLAP underpin many vision-language and audio-language systems, yet their reliance on web-scale data raises growing concerns about memorizing Personally Identifiable Information (PII). Auditing such models via membership inference is challenging in practice: shadow-model MIAs are computationally prohibitive for large multimodal backbones, and existing multimodal attacks typically require querying the target with paired biometric inputs, thereby directly exposing sensitive biometric information to the target model. We propose Unimodal Membership Inference Detector (UMID), a text-only auditing framework that performs text-guided cross-modal latent inversion and extracts two complementary signals, similarity (alignment to the queried text) and variability (consistency across randomized inversions). UMID compares these statistics to a lightweight non-member reference constructed from synthetic gibberish and makes decisions via an ensemble of unsupervised anomaly detectors. Comprehensive experiments across diverse CLIP and CLAP architectures demonstrate that UMID significantly improves the effectiveness and efficiency over prior MIAs, delivering strong detection performance with sub-second auditing cost while complying with realistic privacy constraints.",
+      "tr": "Contrastive pretraining models such as CLIP and CLAP underpin many vision-language and audio-language systems, yet their reliance on web-scale data raises growing concerns about memorizing Personally Identifiable Information (PII). Auditing such models via membership inference is challenging in practice: shadow-model MIAs are computationally prohibitive for large multimodal backbones, and existing multimodal attacks typically require querying the target with paired biometric inputs, thereby directly exposing sensitive biometric information to the target model. We propose Unimodal Membership Inference Detector (UMID), a text-only auditing framework that performs text-guided cross-modal latent inversion and extracts two complementary signals, similarity (alignment to the queried text) and variability (consistency across randomized inversions). UMID compares these statistics to a lightweight non-member reference constructed from synthetic gibberish and makes decisions via an ensemble of unsupervised anomaly detectors. Comprehensive experiments across diverse CLIP and CLAP architectures demonstrate that UMID significantly improves the effectiveness and efficiency over prior MIAs, delivering strong detection performance with sub-second auditing cost while complying with realistic privacy constraints."
     }
   },
   {
-    "id": "2603.12450v1",
-    "title": "Bridging the Gap Between Security Metrics and Key Risk Indicators: An Empirical Framework for Vulnerability Prioritization",
+    "id": "2603.14122v1",
+    "title": "Towards Agentic Honeynet Configuration",
     "authors": [
-      "Emad Sherif",
-      "Iryna Yevseyeva",
-      "Vitor Basto-Fernandes",
-      "Allan Cook"
+      "Federico Mirra",
+      "Matteo Boffa",
+      "Idilio Drago",
+      "Danilo Giordano",
+      "Marco Mellia"
     ],
-    "published_date": "2026-03-12",
+    "published_date": "2026-03-14",
     "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.14122v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.14122v1",
+    "content": {
+      "en": "Honeypots are deception systems that emulate vulnerable services to collect threat intelligence. While deploying many honeypots increases the opportunity to observe attacker behaviour, in practise network and computational resources limit the number of honeypots that can be exposed. Hence, practitioners must select the assets to deploy, a decision that is typically made statically despite attackers' tactics evolving over time. This work investigates an AI-driven agentic architecture that autonomously manages honeypot exposure in response to ongoing attacks. The proposed agent analyses Intrusion Detection System (IDS) alerts and network state to infer the progression of the attack, identify compromised assets, and predict likely attacker targets. Based on this assessment, the agent dynamically reconfigures the system to maintain attacker engagement while minimizing unnecessary exposure. The approach is evaluated in a simulated environment where attackers execute Proof-of-Concept exploits for known CVEs. Preliminary results indicate that the agent can effectively infer the intent of the attacker and improve the efficiency of exposure under resource constraints",
+      "tr": "Honeypots are deception systems that emulate vulnerable services to collect threat intelligence. While deploying many honeypots increases the opportunity to observe attacker behaviour, in practise network and computational resources limit the number of honeypots that can be exposed. Hence, practitioners must select the assets to deploy, a decision that is typically made statically despite attackers' tactics evolving over time. This work investigates an AI-driven agentic architecture that autonomously manages honeypot exposure in response to ongoing attacks. The proposed agent analyses Intrusion Detection System (IDS) alerts and network state to infer the progression of the attack, identify compromised assets, and predict likely attacker targets. Based on this assessment, the agent dynamically reconfigures the system to maintain attacker engagement while minimizing unnecessary exposure. The approach is evaluated in a simulated environment where attackers execute Proof-of-Concept exploits for known CVEs. Preliminary results indicate that the agent can effectively infer the intent of the attacker and improve the efficiency of exposure under resource constraints"
+    }
+  },
+  {
+    "id": "2603.13847v1",
+    "title": "Sirens' Whisper: Inaudible Near-Ultrasonic Jailbreaks of Speech-Driven LLMs",
+    "authors": [
+      "Zijian Ling",
+      "Pingyi Hu",
+      "Xiuyong Gao",
+      "Xiaojing Ma",
+      "Man Zhou"
+    ],
+    "published_date": "2026-03-14",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.SD"
+    ],
+    "link": "http://arxiv.org/abs/2603.13847v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.13847v1",
+    "content": {
+      "en": "Speech-driven large language models (LLMs) are increasingly accessed through speech interfaces, introducing new security risks via open acoustic channels. We present Sirens' Whisper (SWhisper), the first practical framework for covert prompt-based attacks against speech-driven LLMs under realistic black-box conditions using commodity hardware. SWhisper enables robust, inaudible delivery of arbitrary target baseband audio-including long and structured prompts-on commodity devices by encoding it into near-ultrasound waveforms that demodulate faithfully after acoustic transmission and microphone nonlinearity. This is achieved through a simple yet effective approach to modeling nonlinear channel characteristics across devices and environments, combined with lightweight channel-inversion pre-compensation. Building on this high-fidelity covert channel, we design a voice-aware jailbreak generation method that ensures intelligibility, brevity, and transferability under speech-driven interfaces. Experiments across both commercial and open-source speech-driven LLMs demonstrate strong black-box effectiveness. On commercial models, SWhisper achieves up to 0.94 non-refusal (NR) and 0.925 specific-convincing (SC). A controlled user study further shows that the injected jailbreak audio is perceptually indistinguishable from background-only playback for human listeners. Although jailbreaks serve as a case study, the underlying covert acoustic channel enables a broader class of high-fidelity prompt-injection and commandexecution attacks.",
+      "tr": "Speech-driven large language models (LLMs) are increasingly accessed through speech interfaces, introducing new security risks via open acoustic channels. We present Sirens' Whisper (SWhisper), the first practical framework for covert prompt-based attacks against speech-driven LLMs under realistic black-box conditions using commodity hardware. SWhisper enables robust, inaudible delivery of arbitrary target baseband audio-including long and structured prompts-on commodity devices by encoding it into near-ultrasound waveforms that demodulate faithfully after acoustic transmission and microphone nonlinearity. This is achieved through a simple yet effective approach to modeling nonlinear channel characteristics across devices and environments, combined with lightweight channel-inversion pre-compensation. Building on this high-fidelity covert channel, we design a voice-aware jailbreak generation method that ensures intelligibility, brevity, and transferability under speech-driven interfaces. Experiments across both commercial and open-source speech-driven LLMs demonstrate strong black-box effectiveness. On commercial models, SWhisper achieves up to 0.94 non-refusal (NR) and 0.925 specific-convincing (SC). A controlled user study further shows that the injected jailbreak audio is perceptually indistinguishable from background-only playback for human listeners. Although jailbreaks serve as a case study, the underlying covert acoustic channel enables a broader class of high-fidelity prompt-injection and commandexecution attacks."
+    }
+  },
+  {
+    "id": "2603.13830v1",
+    "title": "Early Rug Pull Warning for BSC Meme Tokens via Multi-Granularity Wash-Trading Pattern Profiling",
+    "authors": [
+      "Dingding Cao",
+      "Bianbian Jiao",
+      "Jingzong Yang",
+      "Yujing Zhong",
+      "Wei Yang"
+    ],
+    "published_date": "2026-03-14",
+    "tags": [
+      "cs.AI",
       "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2603.12450v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.12450v1",
+    "link": "http://arxiv.org/abs/2603.13830v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.13830v1",
     "content": {
-      "en": "Organisations overwhelmingly prioritize vulnerability remediation using Common Vulnerability Scoring System (CVSS) severity scores, yet CVSS classifiers achieve an Area Under the Precision-Recall Curve (AUPRC) of 0.011 on real-world exploitation data, near random chance. We propose a composite Key Risk Indicator grounded in expected-loss decomposition, integrating dimensions of threat, impact, and exposure. We evaluated the KRI framework against the Known Exploited Vulnerabilities (KEV) catalog using a comprehensive dataset of 280,694 Common Vulnerabilities and Exposures (CVEs). KRI achieves Receiver Operating Characteristic Area Under the Curve (ROC-AUC) 0.927 and AUPRC 0.223 versus 0.747 and 0.011 for CVSS (24 percents, 20). Ablation analysis shows Exploit Prediction Scoring System (EPSS) alone achieves AUPRC 0.365, higher than full KRI (0.223), confirming that EPSS and KRI serve distinct objectives: EPSS maximizes raw exploit detection, while KRI re-orders by impact and exposure, capturing 92.3 percents of impact-weighted remediation value at k=500 versus 82.6 percents for EPSS, and surfacing 1.75 more Critical-severity exploited CVEs. KRI's net benefit exceeds EPSS whenever the severity premium exceeds 2. While EPSS serves as a robust baseline for exploit detection, the KRI framework is the superior choice for organizations seeking to align remediation efforts with tangible risk reduction.",
-      "tr": "Organisations overwhelmingly prioritize vulnerability remediation using Common Vulnerability Scoring System (CVSS) severity scores, yet CVSS classifiers achieve an Area Under the Precision-Recall Curve (AUPRC) of 0.011 on real-world exploitation data, near random chance. We propose a composite Key Risk Indicator grounded in expected-loss decomposition, integrating dimensions of threat, impact, and exposure. We evaluated the KRI framework against the Known Exploited Vulnerabilities (KEV) catalog using a comprehensive dataset of 280,694 Common Vulnerabilities and Exposures (CVEs). KRI achieves Receiver Operating Characteristic Area Under the Curve (ROC-AUC) 0.927 and AUPRC 0.223 versus 0.747 and 0.011 for CVSS (24 percents, 20). Ablation analysis shows Exploit Prediction Scoring System (EPSS) alone achieves AUPRC 0.365, higher than full KRI (0.223), confirming that EPSS and KRI serve distinct objectives: EPSS maximizes raw exploit detection, while KRI re-orders by impact and exposure, capturing 92.3 percents of impact-weighted remediation value at k=500 versus 82.6 percents for EPSS, and surfacing 1.75 more Critical-severity exploited CVEs. KRI's net benefit exceeds EPSS whenever the severity premium exceeds 2. While EPSS serves as a robust baseline for exploit detection, the KRI framework is the superior choice for organizations seeking to align remediation efforts with tangible risk reduction."
-    }
-  },
-  {
-    "id": "2603.12414v1",
-    "title": "SpectralGuard: Detecting Memory Collapse Attacks in State Space Models",
-    "authors": [
-      "Davi Bonetto"
-    ],
-    "published_date": "2026-03-12",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2603.12414v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.12414v1",
-    "content": {
-      "en": "State Space Models (SSMs) such as Mamba achieve linear-time sequence processing through input-dependent recurrence, but this mechanism introduces a critical safety vulnerability. We show that the spectral radius rho(A-bar) of the discretized transition operator governs effective memory horizon: when an adversary drives rho toward zero through gradient-based Hidden State Poisoning, memory collapses from millions of tokens to mere dozens, silently destroying reasoning capacity without triggering output-level alarms. We prove an Evasion Existence Theorem showing that for any output-only defense, adversarial inputs exist that simultaneously induce spectral collapse and evade detection, then introduce SpectralGuard, a real-time monitor that tracks spectral stability across all model layers. SpectralGuard achieves F1=0.961 against non-adaptive attackers and retains F1=0.842 under the strongest adaptive setting, with sub-15ms per-token latency. Causal interventions and cross-architecture transfer to hybrid SSM-Attention systems confirm that spectral monitoring provides a principled, deployable safety layer for recurrent foundation models.",
-      "tr": "State Space Models (SSMs) such as Mamba achieve linear-time sequence processing through input-dependent recurrence, but this mechanism introduces a critical safety vulnerability. We show that the spectral radius rho(A-bar) of the discretized transition operator governs effective memory horizon: when an adversary drives rho toward zero through gradient-based Hidden State Poisoning, memory collapses from millions of tokens to mere dozens, silently destroying reasoning capacity without triggering output-level alarms. We prove an Evasion Existence Theorem showing that for any output-only defense, adversarial inputs exist that simultaneously induce spectral collapse and evade detection, then introduce SpectralGuard, a real-time monitor that tracks spectral stability across all model layers. SpectralGuard achieves F1=0.961 against non-adaptive attackers and retains F1=0.842 under the strongest adaptive setting, with sub-15ms per-token latency. Causal interventions and cross-architecture transfer to hybrid SSM-Attention systems confirm that spectral monitoring provides a principled, deployable safety layer for recurrent foundation models."
-    }
-  },
-  {
-    "id": "2603.12237v1",
-    "title": "STAMP: Selective Task-Aware Mechanism for Text Privacy",
-    "authors": [
-      "Fengwei Tian",
-      "Payel Bhattacharjee",
-      "Heidi Hanson",
-      "Geoffrey D. Rubin",
-      "Joseph Y. Lo"
-    ],
-    "published_date": "2026-03-12",
-    "tags": [
-      "cs.LG",
-      "cs.CR",
-      "cs.IT"
-    ],
-    "link": "http://arxiv.org/abs/2603.12237v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.12237v1",
-    "content": {
-      "en": "We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream task (as measured via a task- or query-specific representation), and (ii) its privacy sensitivity (e.g., names, dates, identifiers). This token-level partitioning enables fine-grained, group-wise control over the level of noise applied to different parts of the input, balancing privacy protection with task relevance. To privatize individual token embeddings, we introduce the polar mechanism, which perturbs only the direction of embeddings on the unit sphere while preserving their magnitude. Decoding is performed via cosine nearest-neighbor search, aligning the perturbation geometry with the decoding geometry. Unlike isotropic noise mechanisms, the polar mechanism maintains semantic neighborhoods in the embedding space and better preserves downstream utility. Experimental evaluations on SQuAD, Yelp, and AG News datasets demonstrate that STAMP, when combined with the normalized polar mechanism, consistently achieves superior privacy-utility trade-offs across varying per-token privacy budgets.",
-      "tr": "We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream task (as measured via a task- or query-specific representation), and (ii) its privacy sensitivity (e.g., names, dates, identifiers). This token-level partitioning enables fine-grained, group-wise control over the level of noise applied to different parts of the input, balancing privacy protection with task relevance. To privatize individual token embeddings, we introduce the polar mechanism, which perturbs only the direction of embeddings on the unit sphere while preserving their magnitude. Decoding is performed via cosine nearest-neighbor search, aligning the perturbation geometry with the decoding geometry. Unlike isotropic noise mechanisms, the polar mechanism maintains semantic neighborhoods in the embedding space and better preserves downstream utility. Experimental evaluations on SQuAD, Yelp, and AG News datasets demonstrate that STAMP, when combined with the normalized polar mechanism, consistently achieves superior privacy-utility trade-offs across varying per-token privacy budgets."
+      "en": "The high-frequency issuance and short-cycle speculation of meme tokens in decentralized finance (DeFi) have significantly amplified rug-pull risk. Existing approaches still struggle to provide stable early warning under scarce anomalies, incomplete labels, and limited interpretability. To address this issue, an end-to-end warning framework is proposed for BSC meme tokens, consisting of four stages: dataset construction and labeling, wash-trading pattern feature modeling, risk prediction, and error analysis. Methodologically, 12 token-level behavioral features are constructed based on three wash-trading patterns (Self, Matched, and Circular), unifying transaction-, address-, and flow-level signals into risk vectors. Supervised models are then employed to output warning scores and alert decisions. Under the current setting (7 tokens, 33,242 records), Random Forest outperforms Logistic Regression on core metrics, achieving AUC=0.9098, PR-AUC=0.9185, and F1=0.7429. Ablation results show that trade-level features are the primary performance driver (Delta PR-AUC=-0.1843 when removed), while address-level features provide stable complementary gain (Delta PR-AUC=-0.0573). The model also demonstrates actionable early-warning potential for a subset of samples, with a mean Lead Time (v1) of 3.8133 hours. The error profile (FP=1, FN=8) indicates that the current system is better positioned as a high-precision screener rather than a high-recall automatic alarm engine. The main contributions are threefold: an executable and reproducible rug-pull warning pipeline, empirical validation of multi-granularity wash-trading features under weak supervision, and deployment-oriented evidence through lead-time and error-bound analysis.",
+      "tr": "The high-frequency issuance and short-cycle speculation of meme tokens in decentralized finance (DeFi) have significantly amplified rug-pull risk. Existing approaches still struggle to provide stable early warning under scarce anomalies, incomplete labels, and limited interpretability. To address this issue, an end-to-end warning framework is proposed for BSC meme tokens, consisting of four stages: dataset construction and labeling, wash-trading pattern feature modeling, risk prediction, and error analysis. Methodologically, 12 token-level behavioral features are constructed based on three wash-trading patterns (Self, Matched, and Circular), unifying transaction-, address-, and flow-level signals into risk vectors. Supervised models are then employed to output warning scores and alert decisions. Under the current setting (7 tokens, 33,242 records), Random Forest outperforms Logistic Regression on core metrics, achieving AUC=0.9098, PR-AUC=0.9185, and F1=0.7429. Ablation results show that trade-level features are the primary performance driver (Delta PR-AUC=-0.1843 when removed), while address-level features provide stable complementary gain (Delta PR-AUC=-0.0573). The model also demonstrates actionable early-warning potential for a subset of samples, with a mean Lead Time (v1) of 3.8133 hours. The error profile (FP=1, FN=8) indicates that the current system is better positioned as a high-precision screener rather than a high-recall automatic alarm engine. The main contributions are threefold: an executable and reproducible rug-pull warning pipeline, empirical validation of multi-granularity wash-trading features under weak supervision, and deployment-oriented evidence through lead-time and error-bound analysis."
     }
   }
 ]
