@@ -1,217 +1,232 @@
 [
   {
-    "id": "2603.14860v1",
-    "title": "Architecture-Agnostic Feature Synergy for Universal Defense Against Heterogeneous Generative Threats",
+    "id": "2603.16576v1",
+    "title": "REFORGE: Multi-modal Attacks Reveal Vulnerable Concept Unlearning in Image Generation Models",
     "authors": [
-      "Bingxue Zhang",
-      "Yang Gao",
-      "Feida Zhu",
-      "Yanyan Shen",
-      "Yang Shi"
+      "Yong Zou",
+      "Haoran Li",
+      "Fanxiao Li",
+      "Shenyang Wei",
+      "Yunyun Dong"
     ],
-    "published_date": "2026-03-16",
+    "published_date": "2026-03-17",
     "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2603.14860v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.14860v1",
-    "content": {
-      "en": "Generative AI deployment poses unprecedented challenges to content safety and privacy. However, existing defense mechanisms are often tailored to specific architectures (e.g., Diffusion Models or GANs), creating fragile \"defense silos\" that fail against heterogeneous generative threats. This paper identifies a fundamental optimization barrier in naive pixel-space ensemble strategies: due to divergent objective functions, pixel-level gradients from heterogeneous generators become statistically orthogonal, causing destructive interference. To overcome this, we observe that despite disparate low-level mechanisms, high-level feature representations of generated content exhibit alignment across architectures. Based on this, we propose the Architecture-Agnostic Targeted Feature Synergy (ATFS) framework. By introducing a target guidance image, ATFS reformulates multi-model defense as a unified feature space alignment task, enabling intrinsic gradient alignment without complex rectification. Extensive experiments show ATFS achieves SOTA protection in heterogeneous scenarios (e.g., Diffusion+GAN). It converges rapidly, reaching over 90% performance within 40 iterations, and maintains strong attack potency even under tight perturbation budgets. The framework seamlessly extends to unseen architectures (e.g., VQ-VAE) by switching the feature extractor, and demonstrates robust resistance to JPEG compression and scaling. Being computationally efficient and lightweight, ATFS offers a viable pathway to dismantle defense silos and enable universal generative security. Code and models are open-sourced for reproducibility.",
-      "tr": "Generative AI deployment poses unprecedented challenges to content safety and privacy. However, existing defense mechanisms are often tailored to specific architectures (e.g., Diffusion Models or GANs), creating fragile \"defense silos\" that fail against heterogeneous generative threats. This paper identifies a fundamental optimization barrier in naive pixel-space ensemble strategies: due to divergent objective functions, pixel-level gradients from heterogeneous generators become statistically orthogonal, causing destructive interference. To overcome this, we observe that despite disparate low-level mechanisms, high-level feature representations of generated content exhibit alignment across architectures. Based on this, we propose the Architecture-Agnostic Targeted Feature Synergy (ATFS) framework. By introducing a target guidance image, ATFS reformulates multi-model defense as a unified feature space alignment task, enabling intrinsic gradient alignment without complex rectification. Extensive experiments show ATFS achieves SOTA protection in heterogeneous scenarios (e.g., Diffusion+GAN). It converges rapidly, reaching over 90% performance within 40 iterations, and maintains strong attack potency even under tight perturbation budgets. The framework seamlessly extends to unseen architectures (e.g., VQ-VAE) by switching the feature extractor, and demonstrates robust resistance to JPEG compression and scaling. Being computationally efficient and lightweight, ATFS offers a viable pathway to dismantle defense silos and enable universal generative security. Code and models are open-sourced for reproducibility."
-    }
-  },
-  {
-    "id": "2603.14778v1",
-    "title": "$p^2$RAG: Privacy-Preserving RAG Service Supporting Arbitrary Top-$k$ Retrieval",
-    "authors": [
-      "Yulong Ming",
-      "Mingyue Wang",
-      "Jijia Yang",
-      "Cong Wang",
-      "Xiaohua Jia"
-    ],
-    "published_date": "2026-03-16",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2603.14778v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.14778v1",
-    "content": {
-      "en": "Retrieval-Augmented Generation (RAG) enables large language models to use external knowledge, but outsourcing the RAG service raises privacy concerns for both data owners and users. Privacy-preserving RAG systems address these concerns by performing secure top-$k$ retrieval, which typically is secure sorting to identify relevant documents. However, existing systems face challenges supporting arbitrary $k$ due to their inability to change $k$, new security issues, or efficiency degradation with large $k$. This is a significant limitation because modern long-context models generally achieve higher accuracy with larger retrieval sets. We propose $p^2$RAG, a privacy-preserving RAG service that supports arbitrary top-$k$ retrieval. Unlike existing systems, $p^2$RAG avoids sorting candidate documents. Instead, it uses an interactive bisection method to determine the set of top-$k$ documents. For security, $p^2$RAG uses secret sharing on two semi-honest non-colluding servers to protect the data owner's database and the user's prompt. It enforces restrictions and verification to defend against malicious users and tightly bound the information leakage of the database. The experiments show that $p^2$RAG is 3--300$\\times$ faster than the state-of-the-art PRAG for $k = 16$--$1024$.",
-      "tr": "Retrieval-Augmented Generation (RAG) enables large language models to use external knowledge, but outsourcing the RAG service raises privacy concerns for both data owners and users. Privacy-preserving RAG systems address these concerns by performing secure top-$k$ retrieval, which typically is secure sorting to identify relevant documents. However, existing systems face challenges supporting arbitrary $k$ due to their inability to change $k$, new security issues, or efficiency degradation with large $k$. This is a significant limitation because modern long-context models generally achieve higher accuracy with larger retrieval sets. We propose $p^2$RAG, a privacy-preserving RAG service that supports arbitrary top-$k$ retrieval. Unlike existing systems, $p^2$RAG avoids sorting candidate documents. Instead, it uses an interactive bisection method to determine the set of top-$k$ documents. For security, $p^2$RAG uses secret sharing on two semi-honest non-colluding servers to protect the data owner's database and the user's prompt. It enforces restrictions and verification to defend against malicious users and tightly bound the information leakage of the database. The experiments show that $p^2$RAG is 3--300$\\times$ faster than the state-of-the-art PRAG for $k = 16$--$1024$."
-    }
-  },
-  {
-    "id": "2603.14628v1",
-    "title": "s2n-bignum-bench: A practical benchmark for evaluating low-level code reasoning of LLMs",
-    "authors": [
-      "Balaji Rao",
-      "John Harrison",
-      "Soonho Kong",
-      "Juneyoung Lee",
-      "Carlo Lipizzi"
-    ],
-    "published_date": "2026-03-15",
-    "tags": [
-      "cs.PL",
+      "cs.CV",
       "cs.AI",
       "cs.CR",
-      "cs.LO"
+      "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2603.14628v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.14628v1",
+    "link": "http://arxiv.org/abs/2603.16576v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.16576v1",
     "content": {
-      "en": "Neurosymbolic approaches leveraging Large Language Models (LLMs) with formal methods have recently achieved strong results on mathematics-oriented theorem-proving benchmarks. However, success on competition-style mathematics does not by itself demonstrate the ability to construct proofs about real-world implementations. We address this gap with a benchmark derived from an industrial cryptographic library whose assembly routines are already verified in HOL Light. s2n-bignum is a library used at AWS for providing fast assembly routines for cryptography, and its correctness is established by formal verification. The task of formally verifying this library has been a significant achievement for the Automated Reasoning Group. It involved two tasks: (1) precisely specifying the correct behavior of a program as a mathematical proposition, and (2) proving that the proposition is correct. In the case of s2n-bignum, both tasks were carried out by human experts. In \\textit{s2n-bignum-bench}, we provide the formal specification and ask the LLM to generate a proof script that is accepted by HOL Light within a fixed proof-check timeout. To our knowledge, \\textit{s2n-bignum-bench} is the first public benchmark focused on machine-checkable proof synthesis for industrial low-level cryptographic assembly routines in HOL Light. This benchmark provides a challenging and practically relevant testbed for evaluating LLM-based theorem proving beyond competition mathematics. The code to set up and use the benchmark is available here: \\href{https://github.com/kings-crown/s2n-bignum-bench}{s2n-bignum-bench}.",
-      "tr": "Neurosymbolic approaches leveraging Large Language Models (LLMs) with formal methods have recently achieved strong results on mathematics-oriented theorem-proving benchmarks. However, success on competition-style mathematics does not by itself demonstrate the ability to construct proofs about real-world implementations. We address this gap with a benchmark derived from an industrial cryptographic library whose assembly routines are already verified in HOL Light. s2n-bignum is a library used at AWS for providing fast assembly routines for cryptography, and its correctness is established by formal verification. The task of formally verifying this library has been a significant achievement for the Automated Reasoning Group. It involved two tasks: (1) precisely specifying the correct behavior of a program as a mathematical proposition, and (2) proving that the proposition is correct. In the case of s2n-bignum, both tasks were carried out by human experts. In \\textit{s2n-bignum-bench}, we provide the formal specification and ask the LLM to generate a proof script that is accepted by HOL Light within a fixed proof-check timeout. To our knowledge, \\textit{s2n-bignum-bench} is the first public benchmark focused on machine-checkable proof synthesis for industrial low-level cryptographic assembly routines in HOL Light. This benchmark provides a challenging and practically relevant testbed for evaluating LLM-based theorem proving beyond competition mathematics. The code to set up and use the benchmark is available here: \\href{https://github.com/kings-crown/s2n-bignum-bench}{s2n-bignum-bench}."
+      "en": "Recent progress in image generation models (IGMs) enables high-fidelity content creation but also amplifies risks, including the reproduction of copyrighted content and the generation of offensive content. Image Generation Model Unlearning (IGMU) mitigates these risks by removing harmful concepts without full retraining. Despite growing attention, the robustness under adversarial inputs, particularly image-side threats in black-box settings, remains underexplored. To bridge this gap, we present REFORGE, a black-box red-teaming framework that evaluates IGMU robustness via adversarial image prompts. REFORGE initializes stroke-based images and optimizes perturbations with a cross-attention-guided masking strategy that allocates noise to concept-relevant regions, balancing attack efficacy and visual fidelity. Extensive experiments across representative unlearning tasks and defenses demonstrate that REFORGE significantly improves attack success rate while achieving stronger semantic alignment and higher efficiency than involved baselines. These results expose persistent vulnerabilities in current IGMU methods and highlight the need for robustness-aware unlearning against multi-modal adversarial attacks. Our code is at: https://github.com/Imfatnoily/REFORGE.",
+      "tr": "Recent progress in image generation models (IGMs) enables high-fidelity content creation but also amplifies risks, including the reproduction of copyrighted content and the generation of offensive content. Image Generation Model Unlearning (IGMU) mitigates these risks by removing harmful concepts without full retraining. Despite growing attention, the robustness under adversarial inputs, particularly image-side threats in black-box settings, remains underexplored. To bridge this gap, we present REFORGE, a black-box red-teaming framework that evaluates IGMU robustness via adversarial image prompts. REFORGE initializes stroke-based images and optimizes perturbations with a cross-attention-guided masking strategy that allocates noise to concept-relevant regions, balancing attack efficacy and visual fidelity. Extensive experiments across representative unlearning tasks and defenses demonstrate that REFORGE significantly improves attack success rate while achieving stronger semantic alignment and higher efficiency than involved baselines. These results expose persistent vulnerabilities in current IGMU methods and highlight the need for robustness-aware unlearning against multi-modal adversarial attacks. Our code is at: https://github.com/Imfatnoily/REFORGE."
     }
   },
   {
-    "id": "2603.14592v1",
-    "title": "A Multi-Scale Graph Learning Framework with Temporal Consistency Constraints for Financial Fraud Detection in Transaction Networks under Non-Stationary Conditions",
+    "id": "2603.16572v1",
+    "title": "Malicious Or Not: Adding Repository Context to Agent Skill Classification",
     "authors": [
-      "Yiming Lei",
-      "Qiannan Shen",
-      "Junhao Song"
+      "Florian Holzbauer",
+      "David Schmidt",
+      "Gabriel Gegenhuber",
+      "Sebastian Schrittwieser",
+      "Johanna Ullrich"
     ],
-    "published_date": "2026-03-15",
+    "published_date": "2026-03-17",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.16572v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.16572v1",
+    "content": {
+      "en": "Agent skills extend local AI agents, such as Claude Code or Open Claw, with additional functionality, and their popularity has led to the emergence of dedicated skill marketplaces, similar to app stores for mobile applications. Simultaneously, automated skill scanners were introduced, analyzing the skill description available in SKILL.md, to verify their benign behavior. The results for individual market places mark up to 46.8% of skills as malicious. In this paper, we present the largest empirical security analysis of the AI agent skill ecosystem, questioning this high classification of malicious skills. Therefore, we collect 238,180 unique skills from three major distribution platforms and GitHub to systematically analyze their type and behavior. This approach substantially reduces the number of skills flagged as non-benign by security scanners to only 0.52% which remain in malicious flagged repositories. Consequently, out methodology substantially reduces false positives and provides a more robust view of the ecosystem's current risk surface. Beyond that, we extend the security analysis from the mere investigation of the skill description to a comparison of its congruence with the GitHub repository the skill is embedded in, providing additional context. Furthermore, our analysis also uncovers several, by now undocumented real-world attack vectors, namely hijacking skills hosted on abandoned GitHub repositories.",
+      "tr": "Agent skills extend local AI agents, such as Claude Code or Open Claw, with additional functionality, and their popularity has led to the emergence of dedicated skill marketplaces, similar to app stores for mobile applications. Simultaneously, automated skill scanners were introduced, analyzing the skill description available in SKILL.md, to verify their benign behavior. The results for individual market places mark up to 46.8% of skills as malicious. In this paper, we present the largest empirical security analysis of the AI agent skill ecosystem, questioning this high classification of malicious skills. Therefore, we collect 238,180 unique skills from three major distribution platforms and GitHub to systematically analyze their type and behavior. This approach substantially reduces the number of skills flagged as non-benign by security scanners to only 0.52% which remain in malicious flagged repositories. Consequently, out methodology substantially reduces false positives and provides a more robust view of the ecosystem's current risk surface. Beyond that, we extend the security analysis from the mere investigation of the skill description to a comparison of its congruence with the GitHub repository the skill is embedded in, providing additional context. Furthermore, our analysis also uncovers several, by now undocumented real-world attack vectors, namely hijacking skills hosted on abandoned GitHub repositories."
+    }
+  },
+  {
+    "id": "2603.16342v1",
+    "title": "Detecting Sentiment Steering Attacks on RAG-enabled Large Language Models",
+    "authors": [
+      "Isha Andrade",
+      "Shalaka S Mahadik",
+      "Mithun Mukherjee",
+      "Pranav M Pawar",
+      "Raja Muthalagu"
+    ],
+    "published_date": "2026-03-17",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.16342v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.16342v1",
+    "content": {
+      "en": "The proliferation of large-scale IoT networks has been both a blessing and a curse. Not only has it revolutionized the way organizations operate by increasing the efficiency of automated procedures, but it has also simplified our daily lives. However, while IoT networks have improved convenience and connectivity, they have also increased security risk due to unauthorized devices gaining access to these networks and exploiting existing weaknesses with specific attack types. The research proposes two lightweight deep learning (DL)-based intelligent intrusion detection systems (IDS). to enhance the security of IoT networks: the proposed convolutional neural network (CNN)-based IDS and the proposed long short-term memory (LSTM)-based IDS. The research evaluated the performance of both intelligent IDSs based on DL using the CICIoT2023 dataset. DL-based intelligent IDSs successfully identify and classify various cyber threats using binary, grouped, and multi-class classification. The proposed CNN-based IDS achieves an accuracy of 99.34%, 99.02% and 98.6%, while the proposed LSTM-based IDS achieves an accuracy of 99.42%, 99.13%, and 98.68% for binary, grouped, and multi-class classification, respectively.",
+      "tr": "The proliferation of large-scale IoT networks has been both a blessing and a curse. Not only has it revolutionized the way organizations operate by increasing the efficiency of automated procedures, but it has also simplified our daily lives. However, while IoT networks have improved convenience and connectivity, they have also increased security risk due to unauthorized devices gaining access to these networks and exploiting existing weaknesses with specific attack types. The research proposes two lightweight deep learning (DL)-based intelligent intrusion detection systems (IDS). to enhance the security of IoT networks: the proposed convolutional neural network (CNN)-based IDS and the proposed long short-term memory (LSTM)-based IDS. The research evaluated the performance of both intelligent IDSs based on DL using the CICIoT2023 dataset. DL-based intelligent IDSs successfully identify and classify various cyber threats using binary, grouped, and multi-class classification. The proposed CNN-based IDS achieves an accuracy of 99.34%, 99.02% and 98.6%, while the proposed LSTM-based IDS achieves an accuracy of 99.42%, 99.13%, and 98.68% for binary, grouped, and multi-class classification, respectively."
+    }
+  },
+  {
+    "id": "2603.16068v1",
+    "title": "Resource Consumption Threats in Large Language Models",
+    "authors": [
+      "Yuanhe Zhang",
+      "Xinyue Wang",
+      "Zhican Chen",
+      "Weiliu Wang",
+      "Zilu Zhang"
+    ],
+    "published_date": "2026-03-17",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "link": "http://arxiv.org/abs/2603.16068v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.16068v1",
+    "content": {
+      "en": "Given limited and costly computational infrastructure, resource efficiency is a key requirement for large language models (LLMs). Efficient LLMs increase service capacity for providers and reduce latency and API costs for users. Recent resource consumption threats induce excessive generation, degrading model efficiency and harming both service availability and economic sustainability. This survey presents a systematic review of threats to resource consumption in LLMs. We further establish a unified view of this emerging area by clarifying its scope and examining the problem along the full pipeline from threat induction to mechanism understanding and mitigation. Our goal is to clarify the problem landscape for this emerging area, thereby providing a clearer foundation for characterization and mitigation.",
+      "tr": "Given limited and costly computational infrastructure, resource efficiency is a key requirement for large language models (LLMs). Efficient LLMs increase service capacity for providers and reduce latency and API costs for users. Recent resource consumption threats induce excessive generation, degrading model efficiency and harming both service availability and economic sustainability. This survey presents a systematic review of threats to resource consumption in LLMs. We further establish a unified view of this emerging area by clarifying its scope and examining the problem along the full pipeline from threat induction to mechanism understanding and mitigation. Our goal is to clarify the problem landscape for this emerging area, thereby providing a clearer foundation for characterization and mitigation."
+    }
+  },
+  {
+    "id": "2603.15727v1",
+    "title": "ClawWorm: Self-Propagating Attacks Across LLM Agent Ecosystems",
+    "authors": [
+      "Yihao Zhang",
+      "Zeming Wei",
+      "Xiaokun Luan",
+      "Chengcan Wu",
+      "Zhixin Zhang"
+    ],
+    "published_date": "2026-03-16",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG",
+      "cs.MA",
+      "cs.SE"
+    ],
+    "link": "http://arxiv.org/abs/2603.15727v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.15727v1",
+    "content": {
+      "en": "Autonomous LLM-based agents increasingly operate as long-running processes forming densely interconnected multi-agent ecosystems, whose security properties remain largely unexplored. In particular, OpenClaw, an open-source platform with over 40{,}000 active instances, has stood out recently with its persistent configurations, tool-execution privileges, and cross-platform messaging capabilities. In this work, we present ClawWorm, the first self-replicating worm attack against a production-scale agent framework, achieving a fully autonomous infection cycle initiated by a single message: the worm first hijacks the victim's core configuration to establish persistent presence across session restarts, then executes an arbitrary payload upon each reboot, and finally propagates itself to every newly encountered peer without further attacker intervention. We evaluate the attack on a controlled testbed across three distinct infection vectors and three payload types, demonstrating high success rates in end-to-end infection, sustained multi-hop propagation, and payload independence from the worm mechanism. We analyse the architectural root causes underlying these vulnerabilities and propose defence strategies targeting each identified trust boundary. Code and samples will be released upon completion of responsible disclosure.",
+      "tr": "Autonomous LLM-based agents increasingly operate as long-running processes forming densely interconnected multi-agent ecosystems, whose security properties remain largely unexplored. In particular, OpenClaw, an open-source platform with over 40{,}000 active instances, has stood out recently with its persistent configurations, tool-execution privileges, and cross-platform messaging capabilities. In this work, we present ClawWorm, the first self-replicating worm attack against a production-scale agent framework, achieving a fully autonomous infection cycle initiated by a single message: the worm first hijacks the victim's core configuration to establish persistent presence across session restarts, then executes an arbitrary payload upon each reboot, and finally propagates itself to every newly encountered peer without further attacker intervention. We evaluate the attack on a controlled testbed across three distinct infection vectors and three payload types, demonstrating high success rates in end-to-end infection, sustained multi-hop propagation, and payload independence from the worm mechanism. We analyse the architectural root causes underlying these vulnerabilities and propose defence strategies targeting each identified trust boundary. Code and samples will be released upon completion of responsible disclosure."
+    }
+  },
+  {
+    "id": "2603.15457v1",
+    "title": "Evasive Intelligence: Lessons from Malware Analysis for Evaluating AI Agents",
+    "authors": [
+      "Simone Aonzo",
+      "Merve Sahin",
+      "Aurélien Francillon",
+      "Daniele Perito"
+    ],
+    "published_date": "2026-03-16",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.15457v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.15457v1",
+    "content": {
+      "en": "Artificial intelligence (AI) systems are increasingly adopted as tool-using agents that can plan, observe their environment, and take actions over extended time periods. This evolution challenges current evaluation practices where the AI models are tested in restricted, fully observable settings. In this article, we argue that evaluations of AI agents are vulnerable to a well-known failure mode in computer security: malicious software that exhibits benign behavior when it detects that it is being analyzed. We point out how AI agents can infer the properties of their evaluation environment and adapt their behavior accordingly. This can lead to overly optimistic safety and robustness assessments. Drawing parallels with decades of research on malware sandbox evasion, we demonstrate that this is not a speculative concern, but rather a structural risk inherent to the evaluation of adaptive systems. Finally, we outline concrete principles for evaluating AI agents, which treat the system under test as potentially adversarial. These principles emphasize realism, variability of test conditions, and post-deployment reassessment.",
+      "tr": "Artificial intelligence (AI) systems are increasingly adopted as tool-using agents that can plan, observe their environment, and take actions over extended time periods. This evolution challenges current evaluation practices where the AI models are tested in restricted, fully observable settings. In this article, we argue that evaluations of AI agents are vulnerable to a well-known failure mode in computer security: malicious software that exhibits benign behavior when it detects that it is being analyzed. We point out how AI agents can infer the properties of their evaluation environment and adapt their behavior accordingly. This can lead to overly optimistic safety and robustness assessments. Drawing parallels with decades of research on malware sandbox evasion, we demonstrate that this is not a speculative concern, but rather a structural risk inherent to the evaluation of adaptive systems. Finally, we outline concrete principles for evaluating AI agents, which treat the system under test as potentially adversarial. These principles emphasize realism, variability of test conditions, and post-deployment reassessment."
+    }
+  },
+  {
+    "id": "2603.15417v1",
+    "title": "Amplification Effects in Test-Time Reinforcement Learning: Safety and Reasoning Vulnerabilities",
+    "authors": [
+      "Vanshaj Khattar",
+      "Md Rafi ur Rashid",
+      "Moumita Choudhury",
+      "Jing Liu",
+      "Toshiaki Koike-Akino"
+    ],
+    "published_date": "2026-03-16",
     "tags": [
       "cs.LG",
+      "cs.AI",
+      "cs.CL",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2603.14592v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.14592v1",
+    "link": "http://arxiv.org/abs/2603.15417v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.15417v1",
     "content": {
-      "en": "Financial fraud detection in transaction networks involves modeling sparse anomalies, dynamic patterns, and severe class imbalance in the presence of temporal drift in the data. In real-world transaction systems, a suspicious transaction is rarely isolated: rather, legitimate and suspicious transactions are often connected through accounts, intermediaries or through temporal transaction sequences. Attribute-based or randomly partitioned learning pipelines are therefore insufficient to detect relationally structured fraud. STC-MixHop, a graph-based framework combining spatial multi-resolution propagation with lightweight temporal consistency modeling for anomaly and fraud detection in dynamic transaction networks. It integrates three components: a MixHop-inspired multi-scale neighborhood diffusion encoder a multi-scale neighborhood diffusion MixHop-based encoder for learning structural patterns; a spatial-temporal attention module coupling current and preceding graph snapshots to stabilize representations; and a temporally informed self-supervised pretraining strategy exploiting unlabeled transaction interactions to improve representation quality. We evaluate the framework primarily on the PaySim dataset under strict chronological splits, supplementing the analysis with Porto Seguro and FEMA data to probe cross-domain component behavior. Results show that STC-MixHop is competitive among graph methods and achieves strong screening-oriented recall under highly imbalanced conditions. The experiments also reveal an important boundary condition: when node attributes are highly informative, tabular baselines remain difficult to outperform. Graph structure contributes most clearly where hidden relational dependencies are operationally important. These findings support a stability-focused view of graph learning for financial fraud detection.",
-      "tr": "Financial fraud detection in transaction networks involves modeling sparse anomalies, dynamic patterns, and severe class imbalance in the presence of temporal drift in the data. In real-world transaction systems, a suspicious transaction is rarely isolated: rather, legitimate and suspicious transactions are often connected through accounts, intermediaries or through temporal transaction sequences. Attribute-based or randomly partitioned learning pipelines are therefore insufficient to detect relationally structured fraud. STC-MixHop, a graph-based framework combining spatial multi-resolution propagation with lightweight temporal consistency modeling for anomaly and fraud detection in dynamic transaction networks. It integrates three components: a MixHop-inspired multi-scale neighborhood diffusion encoder a multi-scale neighborhood diffusion MixHop-based encoder for learning structural patterns; a spatial-temporal attention module coupling current and preceding graph snapshots to stabilize representations; and a temporally informed self-supervised pretraining strategy exploiting unlabeled transaction interactions to improve representation quality. We evaluate the framework primarily on the PaySim dataset under strict chronological splits, supplementing the analysis with Porto Seguro and FEMA data to probe cross-domain component behavior. Results show that STC-MixHop is competitive among graph methods and achieves strong screening-oriented recall under highly imbalanced conditions. The experiments also reveal an important boundary condition: when node attributes are highly informative, tabular baselines remain difficult to outperform. Graph structure contributes most clearly where hidden relational dependencies are operationally important. These findings support a stability-focused view of graph learning for financial fraud detection."
+      "en": "Test-time training (TTT) has recently emerged as a promising method to improve the reasoning abilities of large language models (LLMs), in which the model directly learns from test data without access to labels. However, this reliance on test data also makes TTT methods vulnerable to harmful prompt injections. In this paper, we investigate safety vulnerabilities of TTT methods, where we study a representative self-consistency-based test-time learning method: test-time reinforcement learning (TTRL), a recent TTT method that improves LLM reasoning by rewarding self-consistency using majority vote as a reward signal. We show that harmful prompt injection during TTRL amplifies the model's existing behaviors, i.e., safety amplification when the base model is relatively safe, and harmfulness amplification when it is vulnerable to the injected data. In both cases, there is a decline in reasoning ability, which we refer to as the reasoning tax. We also show that TTT methods such as TTRL can be exploited adversarially using specially designed \"HarmInject\" prompts to force the model to answer jailbreak and reasoning queries together, resulting in stronger harmfulness amplification. Overall, our results highlight that TTT methods that enhance LLM reasoning by promoting self-consistency can lead to amplification behaviors and reasoning degradation, highlighting the need for safer TTT methods.",
+      "tr": "Test-time training (TTT) has recently emerged as a promising method to improve the reasoning abilities of large language models (LLMs), in which the model directly learns from test data without access to labels. However, this reliance on test data also makes TTT methods vulnerable to harmful prompt injections. In this paper, we investigate safety vulnerabilities of TTT methods, where we study a representative self-consistency-based test-time learning method: test-time reinforcement learning (TTRL), a recent TTT method that improves LLM reasoning by rewarding self-consistency using majority vote as a reward signal. We show that harmful prompt injection during TTRL amplifies the model's existing behaviors, i.e., safety amplification when the base model is relatively safe, and harmfulness amplification when it is vulnerable to the injected data. In both cases, there is a decline in reasoning ability, which we refer to as the reasoning tax. We also show that TTT methods such as TTRL can be exploited adversarially using specially designed \"HarmInject\" prompts to force the model to answer jailbreak and reasoning queries together, resulting in stronger harmfulness amplification. Overall, our results highlight that TTT methods that enhance LLM reasoning by promoting self-consistency can lead to amplification behaviors and reasoning degradation, highlighting the need for safer TTT methods."
     }
   },
   {
-    "id": "2603.14341v1",
-    "title": "Generation of Human Comprehensible Access Control Policies from Audit Logs",
+    "id": "2603.15408v1",
+    "title": "TrinityGuard: A Unified Framework for Safeguarding Multi-Agent Systems",
     "authors": [
-      "Gautam Kumar",
-      "Ravi Sundaram",
-      "Shamik Sural"
+      "Kai Wang",
+      "Biaojie Zeng",
+      "Zeming Wei",
+      "Chang Jin",
+      "Hefeng Zhou"
     ],
-    "published_date": "2026-03-15",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2603.14341v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.14341v1",
-    "content": {
-      "en": "Over the years, access control systems have become increasingly more complex, often causing a disconnect between what is envisaged by the stakeholders in decision-making positions and the actual permissions granted as evidenced from access logs. For instance, Attribute-based Access Control (ABAC), which is a flexible yet complex model typically configured by system security officers, can be made understandable to others only when presented at a high level in natural language. Although several algorithms have been proposed in the literature for automatic extraction of ABAC rules from access logs, there is no attempt yet to bridge the semantic gap between the machine-enforceable formal logic and human-centric policy intent. Our work addresses this problem by developing a framework that generates human understandable natural language access control policies from logs. We investigate to what extent the power of Large Language Models (LLMs) can be harnessed to achieve both accuracy and scalability in the process. Named LANTERN (LLM-based ABAC Natural Translation and Explanation for Rule Navigation), we have instantiated the framework as a publicly accessible web based application for reproducibility of our results.",
-      "tr": "Over the years, access control systems have become increasingly more complex, often causing a disconnect between what is envisaged by the stakeholders in decision-making positions and the actual permissions granted as evidenced from access logs. For instance, Attribute-based Access Control (ABAC), which is a flexible yet complex model typically configured by system security officers, can be made understandable to others only when presented at a high level in natural language. Although several algorithms have been proposed in the literature for automatic extraction of ABAC rules from access logs, there is no attempt yet to bridge the semantic gap between the machine-enforceable formal logic and human-centric policy intent. Our work addresses this problem by developing a framework that generates human understandable natural language access control policies from logs. We investigate to what extent the power of Large Language Models (LLMs) can be harnessed to achieve both accuracy and scalability in the process. Named LANTERN (LLM-based ABAC Natural Translation and Explanation for Rule Navigation), we have instantiated the framework as a publicly accessible web based application for reproducibility of our results."
-    }
-  },
-  {
-    "id": "2603.14283v1",
-    "title": "AEX: Non-Intrusive Multi-Hop Attestation and Provenance for LLM APIs",
-    "authors": [
-      "Yongjie Guan"
-    ],
-    "published_date": "2026-03-15",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2603.14283v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.14283v1",
-    "content": {
-      "en": "Hosted large language models are increasingly accessed through remote APIs, but the API boundary still offers little direct evidence that a returned output actually corresponds to the client-visible request. Recent audits of shadow APIs show that unofficial or intermediary endpoints can diverge from claimed behavior, while existing approaches such as fingerprinting, model-equality testing, verifiable inference, and TEE attestation either remain inferential or answer different questions. We propose AEX, a non-intrusive attestation extension for existing JSON-based LLM APIs. AEX preserves request, response, tool-calling, streaming, and error semantics, and instead adds a signed top-level attestation object that binds a client-visible request projection to either a complete response object or a committed streaming output. To support realistic deployments, AEX provides explicit request-binding modes, signed request-transform receipts for trusted intermediaries, and source-output / output-transform receipts for trusted output rewriting. For streaming, it separates checkpoint proofs for verified prefixes of an unmodified source stream from complete-output lineage for outputs that have been rewritten, buffered, aggregated, or re-packaged, preventing transformed outputs from being mistaken for source-stream prefixes. AEX therefore makes a deliberately narrow claim: a trusted issuer attests to a specific request-output relation, or to a specific complete-output lineage, at the API boundary. We present the protocol design, threat model, verification state machine, security and privacy analysis, an OpenAI-compatible chat-completions profile, and a reference TypeScript prototype with local conformance tests and microbenchmarks.",
-      "tr": "Hosted large language models are increasingly accessed through remote APIs, but the API boundary still offers little direct evidence that a returned output actually corresponds to the client-visible request. Recent audits of shadow APIs show that unofficial or intermediary endpoints can diverge from claimed behavior, while existing approaches such as fingerprinting, model-equality testing, verifiable inference, and TEE attestation either remain inferential or answer different questions. We propose AEX, a non-intrusive attestation extension for existing JSON-based LLM APIs. AEX preserves request, response, tool-calling, streaming, and error semantics, and instead adds a signed top-level attestation object that binds a client-visible request projection to either a complete response object or a committed streaming output. To support realistic deployments, AEX provides explicit request-binding modes, signed request-transform receipts for trusted intermediaries, and source-output / output-transform receipts for trusted output rewriting. For streaming, it separates checkpoint proofs for verified prefixes of an unmodified source stream from complete-output lineage for outputs that have been rewritten, buffered, aggregated, or re-packaged, preventing transformed outputs from being mistaken for source-stream prefixes. AEX therefore makes a deliberately narrow claim: a trusted issuer attests to a specific request-output relation, or to a specific complete-output lineage, at the API boundary. We present the protocol design, threat model, verification state machine, security and privacy analysis, an OpenAI-compatible chat-completions profile, and a reference TypeScript prototype with local conformance tests and microbenchmarks."
-    }
-  },
-  {
-    "id": "2603.14222v1",
-    "title": "Membership Inference for Contrastive Pre-training Models with Text-only PII Queries",
-    "authors": [
-      "Ruoxi Cheng",
-      "Yizhong Ding",
-      "Hongyi Zhang",
-      "Yiyan Huang"
-    ],
-    "published_date": "2026-03-15",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2603.14222v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.14222v1",
-    "content": {
-      "en": "Contrastive pretraining models such as CLIP and CLAP underpin many vision-language and audio-language systems, yet their reliance on web-scale data raises growing concerns about memorizing Personally Identifiable Information (PII). Auditing such models via membership inference is challenging in practice: shadow-model MIAs are computationally prohibitive for large multimodal backbones, and existing multimodal attacks typically require querying the target with paired biometric inputs, thereby directly exposing sensitive biometric information to the target model. We propose Unimodal Membership Inference Detector (UMID), a text-only auditing framework that performs text-guided cross-modal latent inversion and extracts two complementary signals, similarity (alignment to the queried text) and variability (consistency across randomized inversions). UMID compares these statistics to a lightweight non-member reference constructed from synthetic gibberish and makes decisions via an ensemble of unsupervised anomaly detectors. Comprehensive experiments across diverse CLIP and CLAP architectures demonstrate that UMID significantly improves the effectiveness and efficiency over prior MIAs, delivering strong detection performance with sub-second auditing cost while complying with realistic privacy constraints.",
-      "tr": "Contrastive pretraining models such as CLIP and CLAP underpin many vision-language and audio-language systems, yet their reliance on web-scale data raises growing concerns about memorizing Personally Identifiable Information (PII). Auditing such models via membership inference is challenging in practice: shadow-model MIAs are computationally prohibitive for large multimodal backbones, and existing multimodal attacks typically require querying the target with paired biometric inputs, thereby directly exposing sensitive biometric information to the target model. We propose Unimodal Membership Inference Detector (UMID), a text-only auditing framework that performs text-guided cross-modal latent inversion and extracts two complementary signals, similarity (alignment to the queried text) and variability (consistency across randomized inversions). UMID compares these statistics to a lightweight non-member reference constructed from synthetic gibberish and makes decisions via an ensemble of unsupervised anomaly detectors. Comprehensive experiments across diverse CLIP and CLAP architectures demonstrate that UMID significantly improves the effectiveness and efficiency over prior MIAs, delivering strong detection performance with sub-second auditing cost while complying with realistic privacy constraints."
-    }
-  },
-  {
-    "id": "2603.14122v1",
-    "title": "Towards Agentic Honeynet Configuration",
-    "authors": [
-      "Federico Mirra",
-      "Matteo Boffa",
-      "Idilio Drago",
-      "Danilo Giordano",
-      "Marco Mellia"
-    ],
-    "published_date": "2026-03-14",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2603.14122v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.14122v1",
-    "content": {
-      "en": "Honeypots are deception systems that emulate vulnerable services to collect threat intelligence. While deploying many honeypots increases the opportunity to observe attacker behaviour, in practise network and computational resources limit the number of honeypots that can be exposed. Hence, practitioners must select the assets to deploy, a decision that is typically made statically despite attackers' tactics evolving over time. This work investigates an AI-driven agentic architecture that autonomously manages honeypot exposure in response to ongoing attacks. The proposed agent analyses Intrusion Detection System (IDS) alerts and network state to infer the progression of the attack, identify compromised assets, and predict likely attacker targets. Based on this assessment, the agent dynamically reconfigures the system to maintain attacker engagement while minimizing unnecessary exposure. The approach is evaluated in a simulated environment where attackers execute Proof-of-Concept exploits for known CVEs. Preliminary results indicate that the agent can effectively infer the intent of the attacker and improve the efficiency of exposure under resource constraints",
-      "tr": "Honeypots are deception systems that emulate vulnerable services to collect threat intelligence. While deploying many honeypots increases the opportunity to observe attacker behaviour, in practise network and computational resources limit the number of honeypots that can be exposed. Hence, practitioners must select the assets to deploy, a decision that is typically made statically despite attackers' tactics evolving over time. This work investigates an AI-driven agentic architecture that autonomously manages honeypot exposure in response to ongoing attacks. The proposed agent analyses Intrusion Detection System (IDS) alerts and network state to infer the progression of the attack, identify compromised assets, and predict likely attacker targets. Based on this assessment, the agent dynamically reconfigures the system to maintain attacker engagement while minimizing unnecessary exposure. The approach is evaluated in a simulated environment where attackers execute Proof-of-Concept exploits for known CVEs. Preliminary results indicate that the agent can effectively infer the intent of the attacker and improve the efficiency of exposure under resource constraints"
-    }
-  },
-  {
-    "id": "2603.13847v1",
-    "title": "Sirens' Whisper: Inaudible Near-Ultrasonic Jailbreaks of Speech-Driven LLMs",
-    "authors": [
-      "Zijian Ling",
-      "Pingyi Hu",
-      "Xiuyong Gao",
-      "Xiaojing Ma",
-      "Man Zhou"
-    ],
-    "published_date": "2026-03-14",
+    "published_date": "2026-03-16",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.SD"
+      "cs.CL",
+      "cs.LG",
+      "cs.MA"
     ],
-    "link": "http://arxiv.org/abs/2603.13847v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.13847v1",
+    "link": "http://arxiv.org/abs/2603.15408v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.15408v1",
     "content": {
-      "en": "Speech-driven large language models (LLMs) are increasingly accessed through speech interfaces, introducing new security risks via open acoustic channels. We present Sirens' Whisper (SWhisper), the first practical framework for covert prompt-based attacks against speech-driven LLMs under realistic black-box conditions using commodity hardware. SWhisper enables robust, inaudible delivery of arbitrary target baseband audio-including long and structured prompts-on commodity devices by encoding it into near-ultrasound waveforms that demodulate faithfully after acoustic transmission and microphone nonlinearity. This is achieved through a simple yet effective approach to modeling nonlinear channel characteristics across devices and environments, combined with lightweight channel-inversion pre-compensation. Building on this high-fidelity covert channel, we design a voice-aware jailbreak generation method that ensures intelligibility, brevity, and transferability under speech-driven interfaces. Experiments across both commercial and open-source speech-driven LLMs demonstrate strong black-box effectiveness. On commercial models, SWhisper achieves up to 0.94 non-refusal (NR) and 0.925 specific-convincing (SC). A controlled user study further shows that the injected jailbreak audio is perceptually indistinguishable from background-only playback for human listeners. Although jailbreaks serve as a case study, the underlying covert acoustic channel enables a broader class of high-fidelity prompt-injection and commandexecution attacks.",
-      "tr": "Speech-driven large language models (LLMs) are increasingly accessed through speech interfaces, introducing new security risks via open acoustic channels. We present Sirens' Whisper (SWhisper), the first practical framework for covert prompt-based attacks against speech-driven LLMs under realistic black-box conditions using commodity hardware. SWhisper enables robust, inaudible delivery of arbitrary target baseband audio-including long and structured prompts-on commodity devices by encoding it into near-ultrasound waveforms that demodulate faithfully after acoustic transmission and microphone nonlinearity. This is achieved through a simple yet effective approach to modeling nonlinear channel characteristics across devices and environments, combined with lightweight channel-inversion pre-compensation. Building on this high-fidelity covert channel, we design a voice-aware jailbreak generation method that ensures intelligibility, brevity, and transferability under speech-driven interfaces. Experiments across both commercial and open-source speech-driven LLMs demonstrate strong black-box effectiveness. On commercial models, SWhisper achieves up to 0.94 non-refusal (NR) and 0.925 specific-convincing (SC). A controlled user study further shows that the injected jailbreak audio is perceptually indistinguishable from background-only playback for human listeners. Although jailbreaks serve as a case study, the underlying covert acoustic channel enables a broader class of high-fidelity prompt-injection and commandexecution attacks."
+      "en": "With the rapid development of LLM-based multi-agent systems (MAS), their significant safety and security concerns have emerged, which introduce novel risks going beyond single agents or LLMs. Despite attempts to address these issues, the existing literature lacks a cohesive safeguarding system specialized for MAS risks. In this work, we introduce TrinityGuard, a comprehensive safety evaluation and monitoring framework for LLM-based MAS, grounded in the OWASP standards. Specifically, TrinityGuard encompasses a three-tier fine-grained risk taxonomy that identifies 20 risk types, covering single-agent vulnerabilities, inter-agent communication threats, and system-level emergent hazards. Designed for scalability across various MAS structures and platforms, TrinityGuard is organized in a trinity manner, involving an MAS abstraction layer that can be adapted to any MAS structures, an evaluation layer containing risk-specific test modules, alongside runtime monitor agents coordinated by a unified LLM Judge Factory. During Evaluation, TrinityGuard executes curated attack probes to generate detailed vulnerability reports for each risk type, where monitor agents analyze structured execution traces and issue real-time alerts, enabling both pre-development evaluation and runtime monitoring. We further formalize these safety metrics and present detailed case studies across various representative MAS examples, showcasing the versatility and reliability of TrinityGuard. Overall, TrinityGuard acts as a comprehensive framework for evaluating and monitoring various risks in MAS, paving the way for further research into their safety and security.",
+      "tr": "With the rapid development of LLM-based multi-agent systems (MAS), their significant safety and security concerns have emerged, which introduce novel risks going beyond single agents or LLMs. Despite attempts to address these issues, the existing literature lacks a cohesive safeguarding system specialized for MAS risks. In this work, we introduce TrinityGuard, a comprehensive safety evaluation and monitoring framework for LLM-based MAS, grounded in the OWASP standards. Specifically, TrinityGuard encompasses a three-tier fine-grained risk taxonomy that identifies 20 risk types, covering single-agent vulnerabilities, inter-agent communication threats, and system-level emergent hazards. Designed for scalability across various MAS structures and platforms, TrinityGuard is organized in a trinity manner, involving an MAS abstraction layer that can be adapted to any MAS structures, an evaluation layer containing risk-specific test modules, alongside runtime monitor agents coordinated by a unified LLM Judge Factory. During Evaluation, TrinityGuard executes curated attack probes to generate detailed vulnerability reports for each risk type, where monitor agents analyze structured execution traces and issue real-time alerts, enabling both pre-development evaluation and runtime monitoring. We further formalize these safety metrics and present detailed case studies across various representative MAS examples, showcasing the versatility and reliability of TrinityGuard. Overall, TrinityGuard acts as a comprehensive framework for evaluating and monitoring various risks in MAS, paving the way for further research into their safety and security."
     }
   },
   {
-    "id": "2603.13830v1",
-    "title": "Early Rug Pull Warning for BSC Meme Tokens via Multi-Granularity Wash-Trading Pattern Profiling",
+    "id": "2603.15397v1",
+    "title": "SFCoT: Safer Chain-of-Thought via Active Safety Evaluation and Calibration",
     "authors": [
-      "Dingding Cao",
-      "Bianbian Jiao",
-      "Jingzong Yang",
-      "Yujing Zhong",
-      "Wei Yang"
+      "Yu Pan",
+      "Wenlong Yu",
+      "Tiejun Wu",
+      "Xiaohu Ye",
+      "Qiannan Si"
     ],
-    "published_date": "2026-03-14",
+    "published_date": "2026-03-16",
     "tags": [
-      "cs.AI",
       "cs.CR",
-      "cs.LG"
+      "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2603.13830v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.13830v1",
+    "link": "http://arxiv.org/abs/2603.15397v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.15397v1",
     "content": {
-      "en": "The high-frequency issuance and short-cycle speculation of meme tokens in decentralized finance (DeFi) have significantly amplified rug-pull risk. Existing approaches still struggle to provide stable early warning under scarce anomalies, incomplete labels, and limited interpretability. To address this issue, an end-to-end warning framework is proposed for BSC meme tokens, consisting of four stages: dataset construction and labeling, wash-trading pattern feature modeling, risk prediction, and error analysis. Methodologically, 12 token-level behavioral features are constructed based on three wash-trading patterns (Self, Matched, and Circular), unifying transaction-, address-, and flow-level signals into risk vectors. Supervised models are then employed to output warning scores and alert decisions. Under the current setting (7 tokens, 33,242 records), Random Forest outperforms Logistic Regression on core metrics, achieving AUC=0.9098, PR-AUC=0.9185, and F1=0.7429. Ablation results show that trade-level features are the primary performance driver (Delta PR-AUC=-0.1843 when removed), while address-level features provide stable complementary gain (Delta PR-AUC=-0.0573). The model also demonstrates actionable early-warning potential for a subset of samples, with a mean Lead Time (v1) of 3.8133 hours. The error profile (FP=1, FN=8) indicates that the current system is better positioned as a high-precision screener rather than a high-recall automatic alarm engine. The main contributions are threefold: an executable and reproducible rug-pull warning pipeline, empirical validation of multi-granularity wash-trading features under weak supervision, and deployment-oriented evidence through lead-time and error-bound analysis.",
-      "tr": "The high-frequency issuance and short-cycle speculation of meme tokens in decentralized finance (DeFi) have significantly amplified rug-pull risk. Existing approaches still struggle to provide stable early warning under scarce anomalies, incomplete labels, and limited interpretability. To address this issue, an end-to-end warning framework is proposed for BSC meme tokens, consisting of four stages: dataset construction and labeling, wash-trading pattern feature modeling, risk prediction, and error analysis. Methodologically, 12 token-level behavioral features are constructed based on three wash-trading patterns (Self, Matched, and Circular), unifying transaction-, address-, and flow-level signals into risk vectors. Supervised models are then employed to output warning scores and alert decisions. Under the current setting (7 tokens, 33,242 records), Random Forest outperforms Logistic Regression on core metrics, achieving AUC=0.9098, PR-AUC=0.9185, and F1=0.7429. Ablation results show that trade-level features are the primary performance driver (Delta PR-AUC=-0.1843 when removed), while address-level features provide stable complementary gain (Delta PR-AUC=-0.0573). The model also demonstrates actionable early-warning potential for a subset of samples, with a mean Lead Time (v1) of 3.8133 hours. The error profile (FP=1, FN=8) indicates that the current system is better positioned as a high-precision screener rather than a high-recall automatic alarm engine. The main contributions are threefold: an executable and reproducible rug-pull warning pipeline, empirical validation of multi-granularity wash-trading features under weak supervision, and deployment-oriented evidence through lead-time and error-bound analysis."
+      "en": "Large language models (LLMs) have demonstrated remarkable capabilities in complex reasoning tasks. However, they remain highly susceptible to jailbreak attacks that undermine their safety alignment. Existing defense mechanisms typically rely on post hoc filtering applied only to the final output, leaving intermediate reasoning steps unmonitored and vulnerable to adversarial manipulation. To address this gap, this paper proposes a SaFer Chain-of-Thought (SFCoT) framework, which proactively evaluates and calibrates potentially unsafe reasoning steps in real time. SFCoT incorporates a three-tier safety scoring system alongside a multi-perspective consistency verification mechanism, designed to detect potential risks throughout the reasoning process. A dynamic intervention module subsequently performs targeted calibration to redirect reasoning trajectories toward safe outcomes. Experimental results demonstrate that SFCoT reduces the attack success rate from $58.97\\%$ to $12.31\\%$, demonstrating it as an effective and efficient LLM safety enhancement method without a significant decline in general performance.",
+      "tr": "Large language models (LLMs) have demonstrated remarkable capabilities in complex reasoning tasks. However, they remain highly susceptible to jailbreak attacks that undermine their safety alignment. Existing defense mechanisms typically rely on post hoc filtering applied only to the final output, leaving intermediate reasoning steps unmonitored and vulnerable to adversarial manipulation. To address this gap, this paper proposes a SaFer Chain-of-Thought (SFCoT) framework, which proactively evaluates and calibrates potentially unsafe reasoning steps in real time. SFCoT incorporates a three-tier safety scoring system alongside a multi-perspective consistency verification mechanism, designed to detect potential risks throughout the reasoning process. A dynamic intervention module subsequently performs targeted calibration to redirect reasoning trajectories toward safe outcomes. Experimental results demonstrate that SFCoT reduces the attack success rate from $58.97\\%$ to $12.31\\%$, demonstrating it as an effective and efficient LLM safety enhancement method without a significant decline in general performance."
+    }
+  },
+  {
+    "id": "2603.15714v1",
+    "title": "How Vulnerable Are AI Agents to Indirect Prompt Injections? Insights from a Large-Scale Public Competition",
+    "authors": [
+      "Mateusz Dziemian",
+      "Maxwell Lin",
+      "Xiaohan Fu",
+      "Micha Nowak",
+      "Nick Winter"
+    ],
+    "published_date": "2026-03-16",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.15714v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.15714v1",
+    "content": {
+      "en": "LLM based agents are increasingly deployed in high stakes settings where they process external data sources such as emails, documents, and code repositories. This creates exposure to indirect prompt injection attacks, where adversarial instructions embedded in external content manipulate agent behavior without user awareness. A critical but underexplored dimension of this threat is concealment: since users tend to observe only an agent's final response, an attack can conceal its existence by presenting no clue of compromise in the final user facing response while successfully executing harmful actions. This leaves users unaware of the manipulation and likely to accept harmful outcomes as legitimate. We present findings from a large scale public red teaming competition evaluating this dual objective across three agent settings: tool calling, coding, and computer use. The competition attracted 464 participants who submitted 272000 attack attempts against 13 frontier models, yielding 8648 successful attacks across 41 scenarios. All models proved vulnerable, with attack success rates ranging from 0.5% (Claude Opus 4.5) to 8.5% (Gemini 2.5 Pro). We identify universal attack strategies that transfer across 21 of 41 behaviors and multiple model families, suggesting fundamental weaknesses in instruction following architectures. Capability and robustness showed weak correlation, with Gemini 2.5 Pro exhibiting both high capability and high vulnerability. To address benchmark saturation and obsoleteness, we will endeavor to deliver quarterly updates through continued red teaming competitions. We open source the competition environment for use in evaluations, along with 95 successful attacks against Qwen that did not transfer to any closed source model. We share model-specific attack data with respective frontier labs and the full dataset with the UK AISI and US CAISI to support robustness research.",
+      "tr": "LLM based agents are increasingly deployed in high stakes settings where they process external data sources such as emails, documents, and code repositories. This creates exposure to indirect prompt injection attacks, where adversarial instructions embedded in external content manipulate agent behavior without user awareness. A critical but underexplored dimension of this threat is concealment: since users tend to observe only an agent's final response, an attack can conceal its existence by presenting no clue of compromise in the final user facing response while successfully executing harmful actions. This leaves users unaware of the manipulation and likely to accept harmful outcomes as legitimate. We present findings from a large scale public red teaming competition evaluating this dual objective across three agent settings: tool calling, coding, and computer use. The competition attracted 464 participants who submitted 272000 attack attempts against 13 frontier models, yielding 8648 successful attacks across 41 scenarios. All models proved vulnerable, with attack success rates ranging from 0.5% (Claude Opus 4.5) to 8.5% (Gemini 2.5 Pro). We identify universal attack strategies that transfer across 21 of 41 behaviors and multiple model families, suggesting fundamental weaknesses in instruction following architectures. Capability and robustness showed weak correlation, with Gemini 2.5 Pro exhibiting both high capability and high vulnerability. To address benchmark saturation and obsoleteness, we will endeavor to deliver quarterly updates through continued red teaming competitions. We open source the competition environment for use in evaluations, along with 95 successful attacks against Qwen that did not transfer to any closed source model. We share model-specific attack data with respective frontier labs and the full dataset with the UK AISI and US CAISI to support robustness research."
     }
   }
 ]
