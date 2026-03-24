@@ -1,215 +1,215 @@
 [
   {
-    "id": "2603.20181v1",
-    "title": "Improving Generalization on Cybersecurity Tasks with Multi-Modal Contrastive Learning",
+    "id": "2603.21975v1",
+    "title": "SecureBreak -- A dataset towards safe and secure models",
     "authors": [
-      "Jianan Huang",
-      "Rodolfo V. Valentim",
-      "Luca Vassio",
-      "Matteo Boffa",
-      "Marco Mellia"
+      "Marco Arazzi",
+      "Vignesh Kumar Kembu",
+      "Antonino Nocera"
     ],
-    "published_date": "2026-03-20",
+    "published_date": "2026-03-23",
     "tags": [
       "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2603.20181v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.20181v1",
-    "content": {
-      "en": "The use of ML in cybersecurity has long been impaired by generalization issues: Models that work well in controlled scenarios fail to maintain performance in production. The root cause often lies in ML algorithms learning superficial patterns (shortcuts) rather than underlying cybersecurity concepts. We investigate contrastive multi-modal learning as a first step towards improving ML performance in cybersecurity tasks. We aim at transferring knowledge from data-rich modalities, such as text, to data-scarce modalities, such as payloads. We set up a case study on threat classification and propose a two-stage multi-modal contrastive learning framework that uses textual vulnerability descriptions to guide payload classification. First, we construct a semantically meaningful embedding space using contrastive learning on descriptions. Then, we align payloads to this space, transferring knowledge from text to payloads. We evaluate the approach on a large-scale private dataset and a synthetic benchmark built from public CVE descriptions and LLM-generated payloads. The methodology appears to reduce shortcut learning over baselines on both benchmarks. We release our synthetic benchmark and source code as open source.",
-      "tr": "The use of ML in cybersecurity has long been impaired by generalization issues: Models that work well in controlled scenarios fail to maintain performance in production. The root cause often lies in ML algorithms learning superficial patterns (shortcuts) rather than underlying cybersecurity concepts. We investigate contrastive multi-modal learning as a first step towards improving ML performance in cybersecurity tasks. We aim at transferring knowledge from data-rich modalities, such as text, to data-scarce modalities, such as payloads. We set up a case study on threat classification and propose a two-stage multi-modal contrastive learning framework that uses textual vulnerability descriptions to guide payload classification. First, we construct a semantically meaningful embedding space using contrastive learning on descriptions. Then, we align payloads to this space, transferring knowledge from text to payloads. We evaluate the approach on a large-scale private dataset and a synthetic benchmark built from public CVE descriptions and LLM-generated payloads. The methodology appears to reduce shortcut learning over baselines on both benchmarks. We release our synthetic benchmark and source code as open source."
-    }
-  },
-  {
-    "id": "2603.20131v1",
-    "title": "An Agentic Multi-Agent Architecture for Cybersecurity Risk Management",
-    "authors": [
-      "Ravish Gupta",
-      "Saket Kumar",
-      "Shreeya Sharma",
-      "Maulik Dang",
-      "Abhishek Aggarwal"
-    ],
-    "published_date": "2026-03-20",
-    "tags": [
-      "eess.SY",
       "cs.AI",
-      "cs.CR"
+      "cs.CL",
+      "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2603.20131v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.20131v1",
+    "link": "http://arxiv.org/abs/2603.21975v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.21975v1",
     "content": {
-      "en": "Getting a real cybersecurity risk assessment for a small organization is expensive -- a NIST CSF-aligned engagement runs $15,000 on the low end, takes weeks, and depends on practitioners who are genuinely scarce. Most small companies skip it entirely. We built a six-agent AI system where each agent handles one analytical stage: profiling the organization, mapping assets, analyzing threats, evaluating controls, scoring risks, and generating recommendations. Agents share a persistent context that grows as the assessment proceeds, so later agents build on what earlier ones concluded -- the mechanism that distinguishes this from standard sequential agent pipelines. We tested it on a 15-person HIPAA-covered healthcare company and compared outputs to independent assessments by three CISSP practitioners -- the system agreed with them 85% of the time on severity classifications, covered 92% of identified risks, and finished in under 15 minutes. We then ran 30 repeated single-agent assessments across five synthetic but sector-realistic organizational profiles in healthcare, fintech, manufacturing, retail, and SaaS, comparing a general-purpose Mistral-7B against a domain fine-tuned model. Both completed every run. The fine-tuned model flagged threats the baseline could not see at all: PHI exposure in healthcare, OT/IIoT vulnerabilities in manufacturing, platform-specific risks in retail. The full multi-agent pipeline, however, failed every one of 30 attempts on a Tesla T4 with its 4,096-token default context window -- context capacity, not model quality, turned out to be the binding constraint.",
-      "tr": "Getting a real cybersecurity risk assessment for a small organization is expensive -- a NIST CSF-aligned engagement runs $15,000 on the low end, takes weeks, and depends on practitioners who are genuinely scarce. Most small companies skip it entirely. We built a six-agent AI system where each agent handles one analytical stage: profiling the organization, mapping assets, analyzing threats, evaluating controls, scoring risks, and generating recommendations. Agents share a persistent context that grows as the assessment proceeds, so later agents build on what earlier ones concluded -- the mechanism that distinguishes this from standard sequential agent pipelines. We tested it on a 15-person HIPAA-covered healthcare company and compared outputs to independent assessments by three CISSP practitioners -- the system agreed with them 85% of the time on severity classifications, covered 92% of identified risks, and finished in under 15 minutes. We then ran 30 repeated single-agent assessments across five synthetic but sector-realistic organizational profiles in healthcare, fintech, manufacturing, retail, and SaaS, comparing a general-purpose Mistral-7B against a domain fine-tuned model. Both completed every run. The fine-tuned model flagged threats the baseline could not see at all: PHI exposure in healthcare, OT/IIoT vulnerabilities in manufacturing, platform-specific risks in retail. The full multi-agent pipeline, however, failed every one of 30 attempts on a Tesla T4 with its 4,096-token default context window -- context capacity, not model quality, turned out to be the binding constraint."
+      "en": "Large language models are becoming pervasive core components in many real-world applications. As a consequence, security alignment represents a critical requirement for their safe deployment. Although previous related works focused primarily on model architectures and alignment methodologies, these approaches alone cannot ensure the complete elimination of harmful generations. This concern is reinforced by the growing body of scientific literature showing that attacks, such as jailbreaking and prompt injection, can bypass existing security alignment mechanisms. As a consequence, additional security strategies are needed both to provide qualitative feedback on the robustness of the obtained security alignment at the training stage, and to create an ``ultimate'' defense layer to block unsafe outputs possibly produced by deployed models. To provide a contribution in this scenario, this paper introduces SecureBreak, a safety-oriented dataset designed to support the development of AI-driven solutions for detecting harmful LLM outputs caused by residual weaknesses in security alignment. The dataset is highly reliable due to careful manual annotation, where labels are assigned conservatively to ensure safety. It performs well in detecting unsafe content across multiple risk categories. Tests with pre-trained LLMs show improved results after fine-tuning on SecureBreak. Overall, the dataset is useful both for post-generation safety filtering and for guiding further model alignment and security improvements.",
+      "tr": "Large language models are becoming pervasive core components in many real-world applications. As a consequence, security alignment represents a critical requirement for their safe deployment. Although previous related works focused primarily on model architectures and alignment methodologies, these approaches alone cannot ensure the complete elimination of harmful generations. This concern is reinforced by the growing body of scientific literature showing that attacks, such as jailbreaking and prompt injection, can bypass existing security alignment mechanisms. As a consequence, additional security strategies are needed both to provide qualitative feedback on the robustness of the obtained security alignment at the training stage, and to create an ``ultimate'' defense layer to block unsafe outputs possibly produced by deployed models. To provide a contribution in this scenario, this paper introduces SecureBreak, a safety-oriented dataset designed to support the development of AI-driven solutions for detecting harmful LLM outputs caused by residual weaknesses in security alignment. The dataset is highly reliable due to careful manual annotation, where labels are assigned conservatively to ensure safety. It performs well in detecting unsafe content across multiple risk categories. Tests with pre-trained LLMs show improved results after fine-tuning on SecureBreak. Overall, the dataset is useful both for post-generation safety filtering and for guiding further model alignment and security improvements."
     }
   },
   {
-    "id": "2603.20122v1",
-    "title": "Evolving Jailbreaks: Automated Multi-Objective Long-Tail Attacks on Large Language Models",
+    "id": "2603.21697v1",
+    "title": "Structured Visual Narratives Undermine Safety Alignment in Multimodal Large Language Models",
     "authors": [
-      "Wenjing Hong",
-      "Zhonghua Rong",
-      "Li Wang",
-      "Feng Chang",
-      "Jian Zhu"
+      "Rui Yang Tan",
+      "Yujia Hu",
+      "Roy Ka-Wei Lee"
     ],
-    "published_date": "2026-03-20",
+    "published_date": "2026-03-23",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.MM"
+    ],
+    "link": "http://arxiv.org/abs/2603.21697v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.21697v1",
+    "content": {
+      "en": "Multimodal Large Language Models (MLLMs) extend text-only LLMs with visual reasoning, but also introduce new safety failure modes under visually grounded instructions. We study comic-template jailbreaks that embed harmful goals inside simple three-panel visual narratives and prompt the model to role-play and \"complete the comic.\" Building on JailbreakBench and JailbreakV, we introduce ComicJailbreak, a comic-based jailbreak benchmark with 1,167 attack instances spanning 10 harm categories and 5 task setups. Across 15 state-of-the-art MLLMs (six commercial and nine open-source), comic-based attacks achieve success rates comparable to strong rule-based jailbreaks and substantially outperform plain-text and random-image baselines, with ensemble success rates exceeding 90% on several commercial models. Then, with the existing defense methodologies, we show that these methods are effective against the harmful comics, they will induce a high refusal rate when prompted with benign prompts. Finally, using automatic judging and targeted human evaluation, we show that current safety evaluators can be unreliable on sensitive but non-harmful content. Our findings highlight the need for safety alignment robust to narrative-driven multimodal jailbreaks.",
+      "tr": "Multimodal Large Language Models (MLLMs) extend text-only LLMs with visual reasoning, but also introduce new safety failure modes under visually grounded instructions. We study comic-template jailbreaks that embed harmful goals inside simple three-panel visual narratives and prompt the model to role-play and \"complete the comic.\" Building on JailbreakBench and JailbreakV, we introduce ComicJailbreak, a comic-based jailbreak benchmark with 1,167 attack instances spanning 10 harm categories and 5 task setups. Across 15 state-of-the-art MLLMs (six commercial and nine open-source), comic-based attacks achieve success rates comparable to strong rule-based jailbreaks and substantially outperform plain-text and random-image baselines, with ensemble success rates exceeding 90% on several commercial models. Then, with the existing defense methodologies, we show that these methods are effective against the harmful comics, they will induce a high refusal rate when prompted with benign prompts. Finally, using automatic judging and targeted human evaluation, we show that current safety evaluators can be unreliable on sensitive but non-harmful content. Our findings highlight the need for safety alignment robust to narrative-driven multimodal jailbreaks."
+    }
+  },
+  {
+    "id": "2603.21654v1",
+    "title": "Towards Secure Retrieval-Augmented Generation: A Comprehensive Review of Threats, Defenses and Benchmarks",
+    "authors": [
+      "Yanming Mu",
+      "Hao Hu",
+      "Feiyang Li",
+      "Qiao Yuan",
+      "Jiang Wu"
+    ],
+    "published_date": "2026-03-23",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2603.20122v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.20122v1",
+    "link": "http://arxiv.org/abs/2603.21654v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.21654v1",
     "content": {
-      "en": "Large Language Models (LLMs) have been widely deployed, especially through free Web-based applications that expose them to diverse user-generated inputs, including those from long-tail distributions such as low-resource languages and encrypted private data. This open-ended exposure increases the risk of jailbreak attacks that undermine model safety alignment. While recent studies have shown that leveraging long-tail distributions can facilitate such jailbreaks, existing approaches largely rely on handcrafted rules, limiting the systematic evaluation of these security and privacy vulnerabilities. In this work, we present EvoJail, an automated framework for discovering long-tail distribution attacks via multi-objective evolutionary search. EvoJail formulates long-tail attack prompt generation as a multi-objective optimization problem that jointly maximizes attack effectiveness and minimizes output perplexity, and introduces a semantic-algorithmic solution representation to capture both high-level semantic intent and low-level structural transformations of encryption-decryption logic. Building upon this representation, EvoJail integrates LLM-assisted operators into a multi-objective evolutionary framework, enabling adaptive and semantically informed mutation and crossover for efficiently exploring a highly structured and open-ended search space. Extensive experiments demonstrate that EvoJail consistently discovers diverse and effective long-tail jailbreak strategies, achieving competitive performance with existing methods in both individual and ensemble level.",
-      "tr": "Large Language Models (LLMs) have been widely deployed, especially through free Web-based applications that expose them to diverse user-generated inputs, including those from long-tail distributions such as low-resource languages and encrypted private data. This open-ended exposure increases the risk of jailbreak attacks that undermine model safety alignment. While recent studies have shown that leveraging long-tail distributions can facilitate such jailbreaks, existing approaches largely rely on handcrafted rules, limiting the systematic evaluation of these security and privacy vulnerabilities. In this work, we present EvoJail, an automated framework for discovering long-tail distribution attacks via multi-objective evolutionary search. EvoJail formulates long-tail attack prompt generation as a multi-objective optimization problem that jointly maximizes attack effectiveness and minimizes output perplexity, and introduces a semantic-algorithmic solution representation to capture both high-level semantic intent and low-level structural transformations of encryption-decryption logic. Building upon this representation, EvoJail integrates LLM-assisted operators into a multi-objective evolutionary framework, enabling adaptive and semantically informed mutation and crossover for efficiently exploring a highly structured and open-ended search space. Extensive experiments demonstrate that EvoJail consistently discovers diverse and effective long-tail jailbreak strategies, achieving competitive performance with existing methods in both individual and ensemble level."
+      "en": "Retrieval-Augmented Generation (RAG) significantly mitigates the hallucinations and domain knowledge deficiency in large language models by incorporating external knowledge bases. However, the multi-module architecture of RAG introduces complex system-level security vulnerabilities. Guided by the RAG workflow, this paper analyzes the underlying vulnerability mechanisms and systematically categorizes core threat vectors such as data poisoning, adversarial attacks, and membership inference attacks. Based on this threat assessment, we construct a taxonomy of RAG defense technologies from a dual perspective encompassing both input and output stages. The input-side analysis reviews data protection mechanisms including dynamic access control, homomorphic encryption retrieval, and adversarial pre-filtering. The output-side examination summarizes advanced leakage prevention techniques such as federated learning isolation, differential privacy perturbation, and lightweight data sanitization. To establish a unified benchmark for future experimental design, we consolidate authoritative test datasets, security standards, and evaluation frameworks. To the best of our knowledge, this paper presents the first end-to-end survey dedicated to the security of RAG systems. Distinct from existing literature that isolates specific vulnerabilities, we systematically map the entire pipeline-providing a unified analysis of threat models, defense mechanisms, and evaluation benchmarks. By enabling deep insights into potential risks, this work seeks to foster the development of highly robust and trustworthy next-generation RAG systems.",
+      "tr": "Retrieval-Augmented Generation (RAG) significantly mitigates the hallucinations and domain knowledge deficiency in large language models by incorporating external knowledge bases. However, the multi-module architecture of RAG introduces complex system-level security vulnerabilities. Guided by the RAG workflow, this paper analyzes the underlying vulnerability mechanisms and systematically categorizes core threat vectors such as data poisoning, adversarial attacks, and membership inference attacks. Based on this threat assessment, we construct a taxonomy of RAG defense technologies from a dual perspective encompassing both input and output stages. The input-side analysis reviews data protection mechanisms including dynamic access control, homomorphic encryption retrieval, and adversarial pre-filtering. The output-side examination summarizes advanced leakage prevention techniques such as federated learning isolation, differential privacy perturbation, and lightweight data sanitization. To establish a unified benchmark for future experimental design, we consolidate authoritative test datasets, security standards, and evaluation frameworks. To the best of our knowledge, this paper presents the first end-to-end survey dedicated to the security of RAG systems. Distinct from existing literature that isolates specific vulnerabilities, we systematically map the entire pipeline-providing a unified analysis of threat models, defense mechanisms, and evaluation benchmarks. By enabling deep insights into potential risks, this work seeks to foster the development of highly robust and trustworthy next-generation RAG systems."
     }
   },
   {
-    "id": "2603.20108v1",
-    "title": "Trojan horse hunt in deep forecasting models: Insights from the European Space Agency competition",
+    "id": "2603.21596v1",
+    "title": "In-network Attack Detection with Federated Deep Learning in IoT Networks: Real Implementation and Analysis",
     "authors": [
-      "Krzysztof Kotowski",
-      "Ramez Shendy",
-      "Jakub Nalepa",
-      "Agata Kaczmarek",
-      "Dawid Płudowski"
+      "Devashish Chaudhary",
+      "Sutharshan Rajasegarar",
+      "Shiva Raj Pokhrel",
+      "Lei Pan",
+      "Ruby D"
     ],
-    "published_date": "2026-03-20",
+    "published_date": "2026-03-23",
     "tags": [
       "cs.LG",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2603.20108v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.20108v1",
+    "link": "http://arxiv.org/abs/2603.21596v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.21596v1",
     "content": {
-      "en": "Forecasting plays a crucial role in modern safety-critical applications, such as space operations. However, the increasing use of deep forecasting models introduces a new security risk of trojan horse attacks, carried out by hiding a backdoor in the training data or directly in the model weights. Once implanted, the backdoor is activated by a specific trigger pattern at test time, causing the model to produce manipulated predictions. We focus on this issue in our \\textit{Trojan Horse Hunt} data science competition, where more than 200 teams faced the task of identifying triggers hidden in deep forecasting models for spacecraft telemetry. We describe the novel task formulation, benchmark set, evaluation protocol, and best solutions from the competition. We further summarize key insights and research directions for effective identification of triggers in time series forecasting models. All materials are publicly available on the official competition webpage https://www.kaggle.com/competitions/trojan-horse-hunt-in-space.",
-      "tr": "Forecasting plays a crucial role in modern safety-critical applications, such as space operations. However, the increasing use of deep forecasting models introduces a new security risk of trojan horse attacks, carried out by hiding a backdoor in the training data or directly in the model weights. Once implanted, the backdoor is activated by a specific trigger pattern at test time, causing the model to produce manipulated predictions. We focus on this issue in our \\textit{Trojan Horse Hunt} data science competition, where more than 200 teams faced the task of identifying triggers hidden in deep forecasting models for spacecraft telemetry. We describe the novel task formulation, benchmark set, evaluation protocol, and best solutions from the competition. We further summarize key insights and research directions for effective identification of triggers in time series forecasting models. All materials are publicly available on the official competition webpage https://www.kaggle.com/competitions/trojan-horse-hunt-in-space."
+      "en": "The rapid expansion of the Internet of Things (IoT) and its integration with backbone networks have heightened the risk of security breaches. Traditional centralized approaches to anomaly detection, which require transferring large volumes of data to central servers, suffer from privacy, scalability, and latency limitations. This paper proposes a lightweight autoencoder-based anomaly detection framework designed for deployment on resource-constrained edge devices, enabling real-time detection while minimizing data transfer and preserving privacy. Federated learning is employed to train models collaboratively across distributed devices, where local training occurs on edge nodes and only model weights are aggregated at a central server. A real-world IoT testbed using Raspberry Pi sensor nodes was developed to collect normal and attack traffic data. The proposed federated anomaly detection system, implemented and evaluated on the testbed, demonstrates its effectiveness in accurately identifying network attacks. The communication overhead was reduced significantly while achieving comparable performance to the centralized method.",
+      "tr": "The rapid expansion of the Internet of Things (IoT) and its integration with backbone networks have heightened the risk of security breaches. Traditional centralized approaches to anomaly detection, which require transferring large volumes of data to central servers, suffer from privacy, scalability, and latency limitations. This paper proposes a lightweight autoencoder-based anomaly detection framework designed for deployment on resource-constrained edge devices, enabling real-time detection while minimizing data transfer and preserving privacy. Federated learning is employed to train models collaboratively across distributed devices, where local training occurs on edge nodes and only model weights are aggregated at a central server. A real-world IoT testbed using Raspberry Pi sensor nodes was developed to collect normal and attack traffic data. The proposed federated anomaly detection system, implemented and evaluated on the testbed, demonstrates its effectiveness in accurately identifying network attacks. The communication overhead was reduced significantly while achieving comparable performance to the centralized method."
     }
   },
   {
-    "id": "2603.19974v1",
-    "title": "Trojan's Whisper: Stealthy Manipulation of OpenClaw through Injected Bootstrapped Guidance",
+    "id": "2603.21415v1",
+    "title": "Silent Commitment Failure in Instruction-Tuned Language Models: Evidence of Governability Divergence Across Architectures",
     "authors": [
-      "Fazhong Liu",
-      "Zhuoyan Chen",
-      "Tu Lan",
-      "Haozhen Tan",
-      "Zhenyu Xu"
+      "Gregory M. Ruddell"
     ],
-    "published_date": "2026-03-20",
+    "published_date": "2026-03-22",
+    "tags": [
+      "cs.AI",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2603.21415v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.21415v1",
+    "content": {
+      "en": "As large language models are deployed as autonomous agents with tool execution privileges, a critical assumption underpins their security architecture: that model errors are detectable at runtime. We present empirical evidence that this assumption fails for two of three instruction-following models evaluable for conflict detection. We introduce governability -- the degree to which a model's errors are detectable before output commitment and correctable once detected -- and demonstrate it varies dramatically across models. In six models across twelve reasoning domains, two of three instruction-following models exhibited silent commitment failure: confident, fluent, incorrect output with zero warning signal. The remaining model produced a detectable conflict signal 57 tokens before commitment under greedy decoding. We show benchmark accuracy does not predict governability, correction capacity varies independently of detection, and identical governance scaffolds produce opposite effects across models. A 2x2 experiment shows a 52x difference in spike ratio between architectures but only +/-0.32x variation from fine-tuning, suggesting governability is fixed at pretraining. We propose a Detection and Correction Matrix classifying model-task combinations into four regimes: Governable, Monitor Only, Steer Blind, and Ungovernable.",
+      "tr": "As large language models are deployed as autonomous agents with tool execution privileges, a critical assumption underpins their security architecture: that model errors are detectable at runtime. We present empirical evidence that this assumption fails for two of three instruction-following models evaluable for conflict detection. We introduce governability -- the degree to which a model's errors are detectable before output commitment and correctable once detected -- and demonstrate it varies dramatically across models. In six models across twelve reasoning domains, two of three instruction-following models exhibited silent commitment failure: confident, fluent, incorrect output with zero warning signal. The remaining model produced a detectable conflict signal 57 tokens before commitment under greedy decoding. We show benchmark accuracy does not predict governability, correction capacity varies independently of detection, and identical governance scaffolds produce opposite effects across models. A 2x2 experiment shows a 52x difference in spike ratio between architectures but only +/-0.32x variation from fine-tuning, suggesting governability is fixed at pretraining. We propose a Detection and Correction Matrix classifying model-task combinations into four regimes: Governable, Monitor Only, Steer Blind, and Ungovernable."
+    }
+  },
+  {
+    "id": "2603.21411v1",
+    "title": "Fingerprinting Deep Neural Networks for Ownership Protection: An Analytical Approach",
+    "authors": [
+      "Guang Yang",
+      "Ziye Geng",
+      "Yihang Chen",
+      "Changqing Luo"
+    ],
+    "published_date": "2026-03-22",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2603.19974v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.19974v1",
+    "link": "http://arxiv.org/abs/2603.21411v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.21411v1",
     "content": {
-      "en": "Autonomous coding agents are increasingly integrated into software development workflows, offering capabilities that extend beyond code suggestion to active system interaction and environment management. OpenClaw, a representative platform in this emerging paradigm, introduces an extensible skill ecosystem that allows third-party developers to inject behavioral guidance through lifecycle hooks during agent initialization. While this design enhances automation and customization, it also opens a novel and unexplored attack surface. In this paper, we identify and systematically characterize guidance injection, a stealthy attack vector that embeds adversarial operational narratives into bootstrap guidance files. Unlike traditional prompt injection, which relies on explicit malicious instructions, guidance injection manipulates the agent's reasoning context by framing harmful actions as routine best practices. These narratives are automatically incorporated into the agent's interpretive framework and influence future task execution without raising suspicion.We construct 26 malicious skills spanning 13 attack categories including credential exfiltration, workspace destruction, privilege escalation, and persistent backdoor installation. We evaluate them using ORE-Bench, a realistic developer workspace benchmark we developed. Across 52 natural user prompts and six state-of-the-art LLM backends, our attacks achieve success rates from 16.0% to 64.2%, with the majority of malicious actions executed autonomously without user confirmation. Furthermore, 94% of our malicious skills evade detection by existing static and LLM-based scanners. Our findings reveal fundamental tensions in the design of autonomous agent ecosystems and underscore the urgent need for defenses based on capability isolation, runtime policy enforcement, and transparent guidance provenance.",
-      "tr": "Autonomous coding agents are increasingly integrated into software development workflows, offering capabilities that extend beyond code suggestion to active system interaction and environment management. OpenClaw, a representative platform in this emerging paradigm, introduces an extensible skill ecosystem that allows third-party developers to inject behavioral guidance through lifecycle hooks during agent initialization. While this design enhances automation and customization, it also opens a novel and unexplored attack surface. In this paper, we identify and systematically characterize guidance injection, a stealthy attack vector that embeds adversarial operational narratives into bootstrap guidance files. Unlike traditional prompt injection, which relies on explicit malicious instructions, guidance injection manipulates the agent's reasoning context by framing harmful actions as routine best practices. These narratives are automatically incorporated into the agent's interpretive framework and influence future task execution without raising suspicion.We construct 26 malicious skills spanning 13 attack categories including credential exfiltration, workspace destruction, privilege escalation, and persistent backdoor installation. We evaluate them using ORE-Bench, a realistic developer workspace benchmark we developed. Across 52 natural user prompts and six state-of-the-art LLM backends, our attacks achieve success rates from 16.0% to 64.2%, with the majority of malicious actions executed autonomously without user confirmation. Furthermore, 94% of our malicious skills evade detection by existing static and LLM-based scanners. Our findings reveal fundamental tensions in the design of autonomous agent ecosystems and underscore the urgent need for defenses based on capability isolation, runtime policy enforcement, and transparent guidance provenance."
+      "en": "Adversarial-example-based fingerprinting approaches, which leverage the decision boundary characteristics of deep neural networks (DNNs) to craft fingerprints, have proven effective for model ownership protection. However, a fundamental challenge remains unresolved: how far a fingerprint should be placed from the decision boundary to simultaneously satisfy two essential properties, i.e., robustness and uniqueness, for effective and reliable ownership protection. Despite the importance of the fingerprint-to-boundary distance, existing works lack a theoretical solution and instead rely on empirical heuristics, which may violate either robustness or uniqueness properties.   We propose AnaFP, an analytical fingerprinting scheme that constructs fingerprints under theoretical guidance. Specifically, we formulate fingerprint generation as controlling the fingerprint-to-boundary distance through a tunable stretch factor. To ensure both robustness and uniqueness, we mathematically formalize these properties that determine the lower and upper bounds of the stretch factor. These bounds jointly define an admissible interval within which the stretch factor must lie, thereby establishing a theoretical connection between the two constraints and the fingerprint-to-boundary distance. To enable practical fingerprint generation, we approximate the original (infinite) sets of pirated and independently trained models using two finite surrogate model pools and employ a quantile-based relaxation strategy to relax the derived bounds. Due to the circular dependency between the lower bound and the stretch factor, we apply grid search over the admissible interval to determine the most feasible stretch factor. Extensive experimental results show that AnaFP consistently outperforms prior methods, achieving effective ownership verification across diverse model architectures and model modification attacks.",
+      "tr": "Adversarial-example-based fingerprinting approaches, which leverage the decision boundary characteristics of deep neural networks (DNNs) to craft fingerprints, have proven effective for model ownership protection. However, a fundamental challenge remains unresolved: how far a fingerprint should be placed from the decision boundary to simultaneously satisfy two essential properties, i.e., robustness and uniqueness, for effective and reliable ownership protection. Despite the importance of the fingerprint-to-boundary distance, existing works lack a theoretical solution and instead rely on empirical heuristics, which may violate either robustness or uniqueness properties.   We propose AnaFP, an analytical fingerprinting scheme that constructs fingerprints under theoretical guidance. Specifically, we formulate fingerprint generation as controlling the fingerprint-to-boundary distance through a tunable stretch factor. To ensure both robustness and uniqueness, we mathematically formalize these properties that determine the lower and upper bounds of the stretch factor. These bounds jointly define an admissible interval within which the stretch factor must lie, thereby establishing a theoretical connection between the two constraints and the fingerprint-to-boundary distance. To enable practical fingerprint generation, we approximate the original (infinite) sets of pirated and independently trained models using two finite surrogate model pools and employ a quantile-based relaxation strategy to relax the derived bounds. Due to the circular dependency between the lower bound and the stretch factor, we apply grid search over the admissible interval to determine the most feasible stretch factor. Extensive experimental results show that AnaFP consistently outperforms prior methods, achieving effective ownership verification across diverse model architectures and model modification attacks."
     }
   },
   {
-    "id": "2603.19962v1",
-    "title": "Channel Prediction-Based Physical Layer Authentication under Consecutive Spoofing Attacks",
+    "id": "2603.21296v1",
+    "title": "DeepXplain: XAI-Guided Autonomous Defense Against Multi-Stage APT Campaigns",
     "authors": [
-      "Yijia Guo",
-      "Junqing Zhang",
-      "Yao-Win Peter Hong"
+      "Trung V. Phan",
+      "Thomas Bauschert"
     ],
-    "published_date": "2026-03-20",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2603.19962v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.19962v1",
-    "content": {
-      "en": "Wireless networks are highly vulnerable to spoofing attacks, especially when attackers transmit consecutive spoofing packets. Conventional physical layer authentication (PLA) methods have mostly focused on single-packet spoofing attack. However, under consecutive spoofing attacks, they become ineffective due to channel evolution caused by device mobility and channel fading. To address this challenge, we propose a channel prediction-based PLA framework. Specifically, a Transformer-based channel prediction module is employed to predict legitimate CSI measurements during spoofing interval, and the input of channel prediction module is adaptively updated with predicted or observed CSI measurements based on the authentication decision to ensure robustness against sustained spoofing. Simulation results under Rayleigh fading channels demonstrate that the proposed approach achieves low prediction error and significantly higher authentication accuracy than conventional benchmark, maintaining robustness even under extended spoofing attacks.",
-      "tr": "Wireless networks are highly vulnerable to spoofing attacks, especially when attackers transmit consecutive spoofing packets. Conventional physical layer authentication (PLA) methods have mostly focused on single-packet spoofing attack. However, under consecutive spoofing attacks, they become ineffective due to channel evolution caused by device mobility and channel fading. To address this challenge, we propose a channel prediction-based PLA framework. Specifically, a Transformer-based channel prediction module is employed to predict legitimate CSI measurements during spoofing interval, and the input of channel prediction module is adaptively updated with predicted or observed CSI measurements based on the authentication decision to ensure robustness against sustained spoofing. Simulation results under Rayleigh fading channels demonstrate that the proposed approach achieves low prediction error and significantly higher authentication accuracy than conventional benchmark, maintaining robustness even under extended spoofing attacks."
-    }
-  },
-  {
-    "id": "2603.19949v1",
-    "title": "TAPAS: Efficient Two-Server Asymmetric Private Aggregation Beyond Prio(+)",
-    "authors": [
-      "Harish Karthikeyan",
-      "Antigoni Polychroniadou"
-    ],
-    "published_date": "2026-03-20",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2603.19949v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.19949v1",
-    "content": {
-      "en": "Privacy-preserving aggregation is a cornerstone for AI systems that learn from distributed data without exposing individual records, especially in federated learning and telemetry. Existing two-server protocols (e.g., Prio and successors) set a practical baseline by validating inputs while preventing any single party from learning users' values, but they impose symmetric costs on both servers and communication that scales with the per-client input dimension $L$. Modern learning tasks routinely involve dimensionalities $L$ in the tens to hundreds of millions of model parameters.   We present TAPAS, a two-server asymmetric private aggregation scheme that addresses these limitations along four dimensions: (i) no trusted setup or preprocessing, (ii) server-side communication that is independent of $L$ (iii) post-quantum security based solely on standard lattice assumptions (LWE, SIS), and (iv) stronger robustness with identifiable abort and full malicious security for the servers. A key design choice is intentional asymmetry: one server bears the $O(L)$ aggregation and verification work, while the other operates as a lightweight facilitator with computation independent of $L$. This reduces total cost, enables the secondary server to run on commodity hardware, and strengthens the non-collusion assumption of the servers. One of our main contributions is a suite of new and efficient lattice-based zero-knowledge proofs; to our knowledge, we are the first to establish privacy and correctness with identifiable abort in the two-server setting.",
-      "tr": "Privacy-preserving aggregation is a cornerstone for AI systems that learn from distributed data without exposing individual records, especially in federated learning and telemetry. Existing two-server protocols (e.g., Prio and successors) set a practical baseline by validating inputs while preventing any single party from learning users' values, but they impose symmetric costs on both servers and communication that scales with the per-client input dimension $L$. Modern learning tasks routinely involve dimensionalities $L$ in the tens to hundreds of millions of model parameters.   We present TAPAS, a two-server asymmetric private aggregation scheme that addresses these limitations along four dimensions: (i) no trusted setup or preprocessing, (ii) server-side communication that is independent of $L$ (iii) post-quantum security based solely on standard lattice assumptions (LWE, SIS), and (iv) stronger robustness with identifiable abort and full malicious security for the servers. A key design choice is intentional asymmetry: one server bears the $O(L)$ aggregation and verification work, while the other operates as a lightweight facilitator with computation independent of $L$. This reduces total cost, enables the secondary server to run on commodity hardware, and strengthens the non-collusion assumption of the servers. One of our main contributions is a suite of new and efficient lattice-based zero-knowledge proofs; to our knowledge, we are the first to establish privacy and correctness with identifiable abort in the two-server setting."
-    }
-  },
-  {
-    "id": "2603.19864v1",
-    "title": "NASimJax: GPU-Accelerated Policy Learning Framework for Penetration Testing",
-    "authors": [
-      "Raphael Simon",
-      "José Carrasquel",
-      "Wim Mees",
-      "Pieter Libin"
-    ],
-    "published_date": "2026-03-20",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2603.19864v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.19864v1",
-    "content": {
-      "en": "Penetration testing, the practice of simulating cyberattacks to identify vulnerabilities, is a complex sequential decision-making task that is inherently partially observable and features large action spaces. Training reinforcement learning (RL) policies for this domain faces a fundamental bottleneck: existing simulators are too slow to train on realistic network scenarios at scale, resulting in policies that fail to generalize. We present NASimJax, a complete JAX-based reimplementation of the Network Attack Simulator (NASim), achieving up to 100x higher environment throughput than the original simulator. By running the entire training pipeline on hardware accelerators, NASimJax enables experimentation on larger networks under fixed compute budgets that were previously infeasible. We formulate automated penetration testing as a Contextual POMDP and introduce a network generation pipeline that produces structurally diverse and guaranteed-solvable scenarios. Together, these provide a principled basis for studying zero-shot policy generalization. We use the framework to investigate action-space scaling and generalization across networks of up to 40 hosts. We find that Prioritized Level Replay better handles dense training distributions than Domain Randomization, particularly at larger scales, and that training on sparser topologies yields an implicit curriculum that improves out-of-distribution generalization, even on topologies denser than those seen during training. To handle linearly growing action spaces, we propose a two-stage action decomposition (2SAS) that substantially outperforms flat action masking at scale. Finally, we identify a failure mode arising from the interaction between Prioritized Level Replay's episode-reset behaviour and 2SAS's credit assignment structure. NASimJax thus provides a fast, flexible, and realistic platform for advancing RL-based penetration testing.",
-      "tr": "Penetration testing, the practice of simulating cyberattacks to identify vulnerabilities, is a complex sequential decision-making task that is inherently partially observable and features large action spaces. Training reinforcement learning (RL) policies for this domain faces a fundamental bottleneck: existing simulators are too slow to train on realistic network scenarios at scale, resulting in policies that fail to generalize. We present NASimJax, a complete JAX-based reimplementation of the Network Attack Simulator (NASim), achieving up to 100x higher environment throughput than the original simulator. By running the entire training pipeline on hardware accelerators, NASimJax enables experimentation on larger networks under fixed compute budgets that were previously infeasible. We formulate automated penetration testing as a Contextual POMDP and introduce a network generation pipeline that produces structurally diverse and guaranteed-solvable scenarios. Together, these provide a principled basis for studying zero-shot policy generalization. We use the framework to investigate action-space scaling and generalization across networks of up to 40 hosts. We find that Prioritized Level Replay better handles dense training distributions than Domain Randomization, particularly at larger scales, and that training on sparser topologies yields an implicit curriculum that improves out-of-distribution generalization, even on topologies denser than those seen during training. To handle linearly growing action spaces, we propose a two-stage action decomposition (2SAS) that substantially outperforms flat action masking at scale. Finally, we identify a failure mode arising from the interaction between Prioritized Level Replay's episode-reset behaviour and 2SAS's credit assignment structure. NASimJax thus provides a fast, flexible, and realistic platform for advancing RL-based penetration testing."
-    }
-  },
-  {
-    "id": "2603.19469v1",
-    "title": "A Framework for Formalizing LLM Agent Security",
-    "authors": [
-      "Vincent Siu",
-      "Jingxuan He",
-      "Kyle Montgomery",
-      "Zhun Wang",
-      "Neil Gong"
-    ],
-    "published_date": "2026-03-19",
+    "published_date": "2026-03-22",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2603.19469v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.19469v1",
+    "link": "http://arxiv.org/abs/2603.21296v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.21296v1",
     "content": {
-      "en": "Security in LLM agents is inherently contextual. For example, the same action taken by an agent may represent legitimate behavior or a security violation depending on whose instruction led to the action, what objective is being pursued, and whether the action serves that objective. However, existing definitions of security attacks against LLM agents often fail to capture this contextual nature. As a result, defenses face a fundamental utility-security tradeoff: applying defenses uniformly across all contexts can lead to significant utility loss, while applying defenses in insufficient or inappropriate contexts can result in security vulnerabilities. In this work, we present a framework that systematizes existing attacks and defenses from the perspective of contextual security. To this end, we propose four security properties that capture contextual security for LLM agents: task alignment (pursuing authorized objectives), action alignment (individual actions serving those objectives), source authorization (executing commands from authenticated sources), and data isolation (ensuring information flows respect privilege boundaries). We further introduce a set of oracle functions that enable verification of whether these security properties are violated as an agent executes a user task. Using this framework, we reformalize existing attacks, such as indirect prompt injection, direct prompt injection, jailbreak, task drift, and memory poisoning, as violations of one or more security properties, thereby providing precise and contextual definitions of these attacks. Similarly, we reformalize defenses as mechanisms that strengthen oracle functions or perform security property checks. Finally, we discuss several important future research directions enabled by our framework.",
-      "tr": "Security in LLM agents is inherently contextual. For example, the same action taken by an agent may represent legitimate behavior or a security violation depending on whose instruction led to the action, what objective is being pursued, and whether the action serves that objective. However, existing definitions of security attacks against LLM agents often fail to capture this contextual nature. As a result, defenses face a fundamental utility-security tradeoff: applying defenses uniformly across all contexts can lead to significant utility loss, while applying defenses in insufficient or inappropriate contexts can result in security vulnerabilities. In this work, we present a framework that systematizes existing attacks and defenses from the perspective of contextual security. To this end, we propose four security properties that capture contextual security for LLM agents: task alignment (pursuing authorized objectives), action alignment (individual actions serving those objectives), source authorization (executing commands from authenticated sources), and data isolation (ensuring information flows respect privilege boundaries). We further introduce a set of oracle functions that enable verification of whether these security properties are violated as an agent executes a user task. Using this framework, we reformalize existing attacks, such as indirect prompt injection, direct prompt injection, jailbreak, task drift, and memory poisoning, as violations of one or more security properties, thereby providing precise and contextual definitions of these attacks. Similarly, we reformalize defenses as mechanisms that strengthen oracle functions or perform security property checks. Finally, we discuss several important future research directions enabled by our framework."
+      "en": "Advanced Persistent Threats (APTs) are stealthy, multi-stage attacks that require adaptive and timely defense. While deep reinforcement learning (DRL) enables autonomous cyber defense, its decisions are often opaque and difficult to trust in operational environments. This paper presents DeepXplain, an explainable DRL framework for stage-aware APT defense. Building on our prior DeepStage model, DeepXplain integrates provenance-based graph learning, temporal stage estimation, and a unified XAI pipeline that provides structural, temporal, and policy-level explanations. Unlike post-hoc methods, explanation signals are incorporated directly into policy optimization through evidence alignment and confidence-aware reward shaping. To the best of our knowledge, DeepXplain is the first framework to integrate explanation signals into reinforcement learning for APT defense. Experiments in a realistic enterprise testbed show improvements in stage-weighted F1-score (0.887 to 0.915) and success rate (84.7% to 89.6%), along with higher explanation confidence (0.86), improved fidelity (0.79), and more compact explanations (0.31). These results demonstrate enhanced effectiveness and trustworthiness of autonomous cyber defense.",
+      "tr": "Advanced Persistent Threats (APTs) are stealthy, multi-stage attacks that require adaptive and timely defense. While deep reinforcement learning (DRL) enables autonomous cyber defense, its decisions are often opaque and difficult to trust in operational environments. This paper presents DeepXplain, an explainable DRL framework for stage-aware APT defense. Building on our prior DeepStage model, DeepXplain integrates provenance-based graph learning, temporal stage estimation, and a unified XAI pipeline that provides structural, temporal, and policy-level explanations. Unlike post-hoc methods, explanation signals are incorporated directly into policy optimization through evidence alignment and confidence-aware reward shaping. To the best of our knowledge, DeepXplain is the first framework to integrate explanation signals into reinforcement learning for APT defense. Experiments in a realistic enterprise testbed show improvements in stage-weighted F1-score (0.887 to 0.915) and success rate (84.7% to 89.6%), along with higher explanation confidence (0.86), improved fidelity (0.79), and more compact explanations (0.31). These results demonstrate enhanced effectiveness and trustworthiness of autonomous cyber defense."
     }
   },
   {
-    "id": "2603.19423v1",
-    "title": "The Autonomy Tax: Defense Training Breaks LLM Agents",
+    "id": "2603.21231v1",
+    "title": "When Convenience Becomes Risk: A Semantic View of Under-Specification in Host-Acting Agents",
     "authors": [
-      "Shawn Li",
-      "Yue Zhao"
+      "Di Lu",
+      "Yongzhi Liao",
+      "Xutong Mu",
+      "Lele Zheng",
+      "Ke Cheng"
     ],
-    "published_date": "2026-03-19",
+    "published_date": "2026-03-22",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.21231v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.21231v1",
+    "content": {
+      "en": "Host-acting agents promise a convenient interaction model in which users specify goals and the system determines how to realize them. We argue that this convenience introduces a distinct security problem: semantic under-specification in goal specification. User instructions are typically goal-oriented, yet they often leave process constraints, safety boundaries, persistence, and exposure insufficiently specified. As a result, the agent must complete missing execution semantics before acting, and this completion can produce risky host-side plans even when the user-stated goal is benign. In this paper, we develop a semantic threat model, present a taxonomy of semantic-induced risky completion patterns, and study the phenomenon through an OpenClaw-centered case study and execution-trace analysis. We further derive defense design principles for making execution boundaries explicit and constraining risky completion. These findings suggest that securing host-acting agents requires governing not only which actions are allowed at execution time, but also how goal-only instructions are translated into executable plans.",
+      "tr": "Host-acting agents promise a convenient interaction model in which users specify goals and the system determines how to realize them. We argue that this convenience introduces a distinct security problem: semantic under-specification in goal specification. User instructions are typically goal-oriented, yet they often leave process constraints, safety boundaries, persistence, and exposure insufficiently specified. As a result, the agent must complete missing execution semantics before acting, and this completion can produce risky host-side plans even when the user-stated goal is benign. In this paper, we develop a semantic threat model, present a taxonomy of semantic-induced risky completion patterns, and study the phenomenon through an OpenClaw-centered case study and execution-trace analysis. We further derive defense design principles for making execution boundaries explicit and constraining risky completion. These findings suggest that securing host-acting agents requires governing not only which actions are allowed at execution time, but also how goal-only instructions are translated into executable plans."
+    }
+  },
+  {
+    "id": "2603.21194v1",
+    "title": "Is Monitoring Enough? Strategic Agent Selection For Stealthy Attack in Multi-Agent Discussions",
+    "authors": [
+      "Qiuchi Xiang",
+      "Haoxuan Qu",
+      "Hossein Rahmani",
+      "Jun Liu"
+    ],
+    "published_date": "2026-03-22",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2603.21194v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.21194v1",
+    "content": {
+      "en": "Multi-agent discussions have been widely adopted, motivating growing efforts to develop attacks that expose their vulnerabilities. In this work, we study a practical yet largely unexplored attack scenario, the discussion-monitored scenario, where anomaly detectors continuously monitor inter-agent communications and block detected adversarial messages. Although existing attacks are effective without discussion monitoring, we show that they exhibit detectable patterns and largely fail under such monitoring constraints. But does this imply that monitoring alone is sufficient to secure multi-agent discussions? To answer this question, we develop a novel attack method explicitly tailored to the discussion-monitored scenario. Extensive experiments demonstrate that effective attacks remain possible even under continuous monitoring, indicating that monitoring alone does not eliminate adversarial risks.",
+      "tr": "Multi-agent discussions have been widely adopted, motivating growing efforts to develop attacks that expose their vulnerabilities. In this work, we study a practical yet largely unexplored attack scenario, the discussion-monitored scenario, where anomaly detectors continuously monitor inter-agent communications and block detected adversarial messages. Although existing attacks are effective without discussion monitoring, we show that they exhibit detectable patterns and largely fail under such monitoring constraints. But does this imply that monitoring alone is sufficient to secure multi-agent discussions? To answer this question, we develop a novel attack method explicitly tailored to the discussion-monitored scenario. Extensive experiments demonstrate that effective attacks remain possible even under continuous monitoring, indicating that monitoring alone does not eliminate adversarial risks."
+    }
+  },
+  {
+    "id": "2603.20981v1",
+    "title": "Cyber Deception for Mission Surveillance via Hypergame-Theoretic Deep Reinforcement Learning",
+    "authors": [
+      "Zelin Wan",
+      "Jin-Hee Cho",
+      "Mu Zhu",
+      "Ahmed H. Anwar",
+      "Charles Kamhoua"
+    ],
+    "published_date": "2026-03-21",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.LG"
+      "cs.GT",
+      "cs.MA"
     ],
-    "link": "http://arxiv.org/abs/2603.19423v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.19423v1",
+    "link": "http://arxiv.org/abs/2603.20981v1",
+    "pdf_link": "https://arxiv.org/pdf/2603.20981v1",
     "content": {
-      "en": "Large language model (LLM) agents increasingly rely on external tools (file operations, API calls, database transactions) to autonomously complete complex multi-step tasks. Practitioners deploy defense-trained models to protect against prompt injection attacks that manipulate agent behavior through malicious observations or retrieved content. We reveal a fundamental \\textbf{capability-alignment paradox}: defense training designed to improve safety systematically destroys agent competence while failing to prevent sophisticated attacks. Evaluating defended models against undefended baselines across 97 agent tasks and 1,000 adversarial prompts, we uncover three systematic biases unique to multi-step agents. \\textbf{Agent incompetence bias} manifests as immediate tool execution breakdown, with models refusing or generating invalid actions on benign tasks before observing any external content. \\textbf{Cascade amplification bias} causes early failures to propagate through retry loops, pushing defended models to timeout on 99\\% of tasks compared to 13\\% for baselines. \\textbf{Trigger bias} leads to paradoxical security degradation where defended models perform worse than undefended baselines while straightforward attacks bypass defenses at high rates. Root cause analysis reveals these biases stem from shortcut learning: models overfit to surface attack patterns rather than semantic threat understanding, evidenced by extreme variance in defense effectiveness across attack categories. Our findings demonstrate that current defense paradigms optimize for single-turn refusal benchmarks while rendering multi-step agents fundamentally unreliable, necessitating new approaches that preserve tool execution competence under adversarial conditions.",
-      "tr": "Large language model (LLM) agents increasingly rely on external tools (file operations, API calls, database transactions) to autonomously complete complex multi-step tasks. Practitioners deploy defense-trained models to protect against prompt injection attacks that manipulate agent behavior through malicious observations or retrieved content. We reveal a fundamental \\textbf{capability-alignment paradox}: defense training designed to improve safety systematically destroys agent competence while failing to prevent sophisticated attacks. Evaluating defended models against undefended baselines across 97 agent tasks and 1,000 adversarial prompts, we uncover three systematic biases unique to multi-step agents. \\textbf{Agent incompetence bias} manifests as immediate tool execution breakdown, with models refusing or generating invalid actions on benign tasks before observing any external content. \\textbf{Cascade amplification bias} causes early failures to propagate through retry loops, pushing defended models to timeout on 99\\% of tasks compared to 13\\% for baselines. \\textbf{Trigger bias} leads to paradoxical security degradation where defended models perform worse than undefended baselines while straightforward attacks bypass defenses at high rates. Root cause analysis reveals these biases stem from shortcut learning: models overfit to surface attack patterns rather than semantic threat understanding, evidenced by extreme variance in defense effectiveness across attack categories. Our findings demonstrate that current defense paradigms optimize for single-turn refusal benchmarks while rendering multi-step agents fundamentally unreliable, necessitating new approaches that preserve tool execution competence under adversarial conditions."
+      "en": "Unmanned Aerial Vehicles (UAVs) are valuable for mission-critical systems like surveillance, rescue, or delivery. Not surprisingly, such systems attract cyberattacks, including Denial-of-Service (DoS) attacks to overwhelm the resources of mission drones (MDs). How can we defend UAV mission systems against DoS attacks? We adopt cyber deception as a defense strategy, in which honey drones (HDs) are proposed to bait and divert attacks. The attack and deceptive defense hinge upon radio signal strength: The attacker selects victim MDs based on their signals, and HDs attract the attacker from afar by emitting stronger signals, despite this reducing battery life. We formulate an optimization problem for the attacker and defender to identify their respective strategies for maximizing mission performance while minimizing energy consumption. To address this problem, we propose a novel approach, called HT-DRL. HT-DRL identifies optimal solutions without a long learning convergence time by taking the solutions of hypergame theory into the neural network of deep reinforcement learning. This achieves a systematic way to intelligently deceive attackers. We analyze the performance of diverse defense mechanisms under different attack strategies. Further, the HT-DRL-based HD approach outperforms existing non-HD counterparts up to two times better in mission performance while incurring low energy consumption.",
+      "tr": "Unmanned Aerial Vehicles (UAVs) are valuable for mission-critical systems like surveillance, rescue, or delivery. Not surprisingly, such systems attract cyberattacks, including Denial-of-Service (DoS) attacks to overwhelm the resources of mission drones (MDs). How can we defend UAV mission systems against DoS attacks? We adopt cyber deception as a defense strategy, in which honey drones (HDs) are proposed to bait and divert attacks. The attack and deceptive defense hinge upon radio signal strength: The attacker selects victim MDs based on their signals, and HDs attract the attacker from afar by emitting stronger signals, despite this reducing battery life. We formulate an optimization problem for the attacker and defender to identify their respective strategies for maximizing mission performance while minimizing energy consumption. To address this problem, we propose a novel approach, called HT-DRL. HT-DRL identifies optimal solutions without a long learning convergence time by taking the solutions of hypergame theory into the neural network of deep reinforcement learning. This achieves a systematic way to intelligently deceive attackers. We analyze the performance of diverse defense mechanisms under different attack strategies. Further, the HT-DRL-based HD approach outperforms existing non-HD counterparts up to two times better in mission performance while incurring low energy consumption."
     }
   }
 ]
