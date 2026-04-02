@@ -1,5 +1,193 @@
 [
   {
+    "id": "2604.01052v1",
+    "title": "VibeGuard: A Security Gate Framework for AI-Generated Code",
+    "authors": [
+      "Ying Xie"
+    ],
+    "published_date": "2026-04-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.01052v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.01052v1",
+    "content": {
+      "en": "\"Vibe coding,\" in which developers delegate code generation to AI assistants and accept the output with little manual review, has gained rapid adoption in production settings. On March 31, 2026, Anthropic's Claude Code CLI shipped a 59.8 MB source map file in its npm package, exposing roughly 512,000 lines of proprietary TypeScript. The tool had itself been largely vibe-coded, and the leak traced to a misconfigured packaging rule rather than a logic bug. Existing static-analysis and secret-scanning tools did not cover this failure mode, pointing to a gap between the vulnerabilities AI tends to introduce and the vulnerabilities current tooling is built to find. We present VibeGuard, a pre-publish security gate that targets five such blind spots: artifact hygiene, packaging-configuration drift, source-map exposure, hardcoded secrets, and supply-chain risk. In controlled experiments on eight synthetic projects (seven vulnerable, one clean control), VibeGuard achieved 100% recall, 89.47% precision (F1 = 94.44%), and correct pass/fail gate decisions on all eight projects across three policy levels. We discuss how these results inform a defense-in-depth workflow for teams that rely on AI code generation.",
+      "tr": "\"Vibe coding,\" in which developers delegate code generation to AI assistants and accept the output with little manual review, has gained rapid adoption in production settings. On March 31, 2026, Anthropic's Claude Code CLI shipped a 59.8 MB source map file in its npm package, exposing roughly 512,000 lines of proprietary TypeScript. The tool had itself been largely vibe-coded, and the leak traced to a misconfigured packaging rule rather than a logic bug. Existing static-analysis and secret-scanning tools did not cover this failure mode, pointing to a gap between the vulnerabilities AI tends to introduce and the vulnerabilities current tooling is built to find. We present VibeGuard, a pre-publish security gate that targets five such blind spots: artifact hygiene, packaging-configuration drift, source-map exposure, hardcoded secrets, and supply-chain risk. In controlled experiments on eight synthetic projects (seven vulnerable, one clean control), VibeGuard achieved 100% recall, 89.47% precision (F1 = 94.44%), and correct pass/fail gate decisions on all eight projects across three policy levels. We discuss how these results inform a defense-in-depth workflow for teams that rely on AI code generation."
+    }
+  },
+  {
+    "id": "2604.01039v1",
+    "title": "Automated Framework to Evaluate and Harden LLM System Instructions against Encoding Attacks",
+    "authors": [
+      "Anubhab Sahu",
+      "Diptisha Samanta",
+      "Reza Soosahabi"
+    ],
+    "published_date": "2026-04-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.01039v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.01039v1",
+    "content": {
+      "en": "System Instructions in Large Language Models (LLMs) are commonly used to enforce safety policies, define agent behavior, and protect sensitive operational context in agentic AI applications. These instructions may contain sensitive information such as API credentials, internal policies, and privileged workflow definitions, making system instruction leakage a critical security risk highlighted in the OWASP Top 10 for LLM Applications. Without incurring the overhead costs of reasoning models, many LLM applications rely on refusal-based instructions that block direct requests for system instructions, implicitly assuming that prohibited information can only be extracted through explicit queries. We introduce an automated evaluation framework that tests whether system instructions remain confidential when extraction requests are re-framed as encoding or structured output tasks. Across four common models and 46 verified system instructions, we observe high attack success rates (> 0.7) for structured serialization where models refuse direct extraction requests but disclose protected content in the requested serialization formats. We further demonstrate a mitigation strategy based on one-shot instruction reshaping using a Chain-of-Thought reasoning model, indicating that even subtle changes in wording and structure of system instructions can significantly reduce attack success rate without requiring model retraining.",
+      "tr": "System Instructions in Large Language Models (LLMs) are commonly used to enforce safety policies, define agent behavior, and protect sensitive operational context in agentic AI applications. These instructions may contain sensitive information such as API credentials, internal policies, and privileged workflow definitions, making system instruction leakage a critical security risk highlighted in the OWASP Top 10 for LLM Applications. Without incurring the overhead costs of reasoning models, many LLM applications rely on refusal-based instructions that block direct requests for system instructions, implicitly assuming that prohibited information can only be extracted through explicit queries. We introduce an automated evaluation framework that tests whether system instructions remain confidential when extraction requests are re-framed as encoding or structured output tasks. Across four common models and 46 verified system instructions, we observe high attack success rates (> 0.7) for structured serialization where models refuse direct extraction requests but disclose protected content in the requested serialization formats. We further demonstrate a mitigation strategy based on one-shot instruction reshaping using a Chain-of-Thought reasoning model, indicating that even subtle changes in wording and structure of system instructions can significantly reduce attack success rate without requiring model retraining."
+    }
+  },
+  {
+    "id": "2604.00986v1",
+    "title": "Do Phone-Use Agents Respect Your Privacy?",
+    "authors": [
+      "Zhengyang Tang",
+      "Ke Ji",
+      "Xidong Wang",
+      "Zihan Ye",
+      "Xinyuan Wang"
+    ],
+    "published_date": "2026-04-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2604.00986v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.00986v1",
+    "content": {
+      "en": "We study whether phone-use agents respect privacy while completing benign mobile tasks. This question has remained hard to answer because privacy-compliant behavior is not operationalized for phone-use agents, and ordinary apps do not reveal exactly what data agents type into which form entries during execution. To make this question measurable, we introduce MyPhoneBench, a verifiable evaluation framework for privacy behavior in mobile agents. We operationalize privacy-respecting phone use as permissioned access, minimal disclosure, and user-controlled memory through a minimal privacy contract, iMy, and pair it with instrumented mock apps plus rule-based auditing that make unnecessary permission requests, deceptive re-disclosure, and unnecessary form filling observable and reproducible. Across five frontier models on 10 mobile apps and 300 tasks, we find that task success, privacy-compliant task completion, and later-session use of saved preferences are distinct capabilities, and no single model dominates all three. Evaluating success and privacy jointly reshuffles the model ordering relative to either metric alone. The most persistent failure mode across models is simple data minimization: agents still fill optional personal entries that the task does not require. These results show that privacy failures arise from over-helpful execution of benign tasks, and that success-only evaluation overestimates the deployment readiness of current phone-use agents. All code, mock apps, and agent trajectories are publicly available at~ https://github.com/tangzhy/MyPhoneBench.",
+      "tr": "We study whether phone-use agents respect privacy while completing benign mobile tasks. This question has remained hard to answer because privacy-compliant behavior is not operationalized for phone-use agents, and ordinary apps do not reveal exactly what data agents type into which form entries during execution. To make this question measurable, we introduce MyPhoneBench, a verifiable evaluation framework for privacy behavior in mobile agents. We operationalize privacy-respecting phone use as permissioned access, minimal disclosure, and user-controlled memory through a minimal privacy contract, iMy, and pair it with instrumented mock apps plus rule-based auditing that make unnecessary permission requests, deceptive re-disclosure, and unnecessary form filling observable and reproducible. Across five frontier models on 10 mobile apps and 300 tasks, we find that task success, privacy-compliant task completion, and later-session use of saved preferences are distinct capabilities, and no single model dominates all three. Evaluating success and privacy jointly reshuffles the model ordering relative to either metric alone. The most persistent failure mode across models is simple data minimization: agents still fill optional personal entries that the task does not require. These results show that privacy failures arise from over-helpful execution of benign tasks, and that success-only evaluation overestimates the deployment readiness of current phone-use agents. All code, mock apps, and agent trajectories are publicly available at~ https://github.com/tangzhy/MyPhoneBench."
+    }
+  },
+  {
+    "id": "2604.00942v1",
+    "title": "Differentially Private Manifold Denoising",
+    "authors": [
+      "Jiaqi Wu",
+      "Yiqing Sun",
+      "Zhigang Yao"
+    ],
+    "published_date": "2026-04-01",
+    "tags": [
+      "cs.LG",
+      "cs.CR",
+      "math.ST"
+    ],
+    "link": "http://arxiv.org/abs/2604.00942v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.00942v1",
+    "content": {
+      "en": "We introduce a differentially private manifold denoising framework that allows users to exploit sensitive reference datasets to correct noisy, non-private query points without compromising privacy. The method follows an iterative procedure that (i) privately estimates local means and tangent geometry using the reference data under calibrated sensitivity, (ii) projects query points along the privately estimated subspace toward the local mean via corrective steps at each iteration, and (iii) performs rigorous privacy accounting across iterations and queries using $(\\varepsilon,δ)$-differential privacy (DP). Conceptually, this framework brings differential privacy to manifold methods, retaining sufficient geometric signal for downstream tasks such as embedding, clustering, and visualization, while providing formal DP guarantees for the reference data. Practically, the procedure is modular and scalable, separating DP-protected local geometry (means and tangents) from budgeted query-point updates, with a simple scheduler allocating privacy budget across iterations and queries. Under standard assumptions on manifold regularity, sampling density, and measurement noise, we establish high-probability utility guarantees showing that corrected queries converge toward the manifold at a non-asymptotic rate governed by sample size, noise level, bandwidth, and the privacy budget. Simulations and case studies demonstrate accurate signal recovery under moderate privacy budgets, illustrating clear utility-privacy trade-offs and providing a deployable DP component for manifold-based workflows in regulated environments without reengineering privacy systems.",
+      "tr": "We introduce a differentially private manifold denoising framework that allows users to exploit sensitive reference datasets to correct noisy, non-private query points without compromising privacy. The method follows an iterative procedure that (i) privately estimates local means and tangent geometry using the reference data under calibrated sensitivity, (ii) projects query points along the privately estimated subspace toward the local mean via corrective steps at each iteration, and (iii) performs rigorous privacy accounting across iterations and queries using $(\\varepsilon,δ)$-differential privacy (DP). Conceptually, this framework brings differential privacy to manifold methods, retaining sufficient geometric signal for downstream tasks such as embedding, clustering, and visualization, while providing formal DP guarantees for the reference data. Practically, the procedure is modular and scalable, separating DP-protected local geometry (means and tangents) from budgeted query-point updates, with a simple scheduler allocating privacy budget across iterations and queries. Under standard assumptions on manifold regularity, sampling density, and measurement noise, we establish high-probability utility guarantees showing that corrected queries converge toward the manifold at a non-asymptotic rate governed by sample size, noise level, bandwidth, and the privacy budget. Simulations and case studies demonstrate accurate signal recovery under moderate privacy budgets, illustrating clear utility-privacy trade-offs and providing a deployable DP component for manifold-based workflows in regulated environments without reengineering privacy systems."
+    }
+  },
+  {
+    "id": "2604.00788v1",
+    "title": "UK AISI Alignment Evaluation Case-Study",
+    "authors": [
+      "Alexandra Souly",
+      "Robert Kirk",
+      "Jacob Merizian",
+      "Abby D'Cruz",
+      "Xander Davies"
+    ],
+    "published_date": "2026-04-01",
+    "tags": [
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2604.00788v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.00788v1",
+    "content": {
+      "en": "This technical report presents methods developed by the UK AI Security Institute for assessing whether advanced AI systems reliably follow intended goals. Specifically, we evaluate whether frontier models sabotage safety research when deployed as coding assistants within an AI lab. Applying our methods to four frontier models, we find no confirmed instances of research sabotage. However, we observe that Claude Opus 4.5 Preview (a pre-release snapshot of Opus 4.5) and Sonnet 4.5 frequently refuse to engage with safety-relevant research tasks, citing concerns about research direction, involvement in self-training, and research scope. We additionally find that Opus 4.5 Preview shows reduced unprompted evaluation awareness compared to Sonnet 4.5, while both models can distinguish evaluation from deployment scenarios when prompted. Our evaluation framework builds on Petri, an open-source LLM auditing tool, with a custom scaffold designed to simulate realistic internal deployment of a coding agent. We validate that this scaffold produces trajectories that all tested models fail to reliably distinguish from real deployment data. We test models across scenarios varying in research motivation, activity type, replacement threat, and model autonomy. Finally, we discuss limitations including scenario coverage and evaluation awareness.",
+      "tr": "This technical report presents methods developed by the UK AI Security Institute for assessing whether advanced AI systems reliably follow intended goals. Specifically, we evaluate whether frontier models sabotage safety research when deployed as coding assistants within an AI lab. Applying our methods to four frontier models, we find no confirmed instances of research sabotage. However, we observe that Claude Opus 4.5 Preview (a pre-release snapshot of Opus 4.5) and Sonnet 4.5 frequently refuse to engage with safety-relevant research tasks, citing concerns about research direction, involvement in self-training, and research scope. We additionally find that Opus 4.5 Preview shows reduced unprompted evaluation awareness compared to Sonnet 4.5, while both models can distinguish evaluation from deployment scenarios when prompted. Our evaluation framework builds on Petri, an open-source LLM auditing tool, with a custom scaffold designed to simulate realistic internal deployment of a coding agent. We validate that this scaffold produces trajectories that all tested models fail to reliably distinguish from real deployment data. We test models across scenarios varying in research motivation, activity type, replacement threat, and model autonomy. Finally, we discuss limitations including scenario coverage and evaluation awareness."
+    }
+  },
+  {
+    "id": "2604.00704v1",
+    "title": "AutoEG: Exploiting Known Third-Party Vulnerabilities in Black-Box Web Applications",
+    "authors": [
+      "Ruozhao Yang",
+      "Mingfei Cheng",
+      "Gelei Deng",
+      "Junjie Wang",
+      "Tianwei Zhang"
+    ],
+    "published_date": "2026-04-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.SE"
+    ],
+    "link": "http://arxiv.org/abs/2604.00704v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.00704v1",
+    "content": {
+      "en": "Large-scale web applications are widely deployed with complex third-party components, inheriting security risks arising from component vulnerabilities. Security assessment is therefore required to determine whether such known vulnerabilities remain practically exploitable in real applications. Penetration testing is a widely adopted approach that validates exploitability by launching concrete attacks against known vulnerabilities in real-world black-box systems. However, existing approaches often fail to automatically generate reliable exploits, limiting their effectiveness in practical security assessment. This limitation mainly stems from two issues: (1) precisely triggering vulnerabilities with correct technical details, and (2) adapting exploits to diverse real-world deployment settings.   In this paper, we propose AutoEG, a fully automated multi-agent framework for exploit generation targeting black-box web applications. AutoEG has two phases: First, AutoEG extracts precise vulnerability trigger logic from unstructured vulnerability information and encapsulates it into reusable trigger functions. Second, AutoEG uses trigger functions for concrete attack objectives and iteratively refines exploits through feedback-driven interaction with the target application. We evaluate AutoEG on 104 real-world vulnerabilities with 29 attack objectives, resulting in 660 exploitation tasks and 55,440 exploit attempts. AutoEG achieves an average success rate of 82.41%, substantially outperforming state-of-the-art baselines, whose best performance reaches only 32.88%.",
+      "tr": "Large-scale web applications are widely deployed with complex third-party components, inheriting security risks arising from component vulnerabilities. Security assessment is therefore required to determine whether such known vulnerabilities remain practically exploitable in real applications. Penetration testing is a widely adopted approach that validates exploitability by launching concrete attacks against known vulnerabilities in real-world black-box systems. However, existing approaches often fail to automatically generate reliable exploits, limiting their effectiveness in practical security assessment. This limitation mainly stems from two issues: (1) precisely triggering vulnerabilities with correct technical details, and (2) adapting exploits to diverse real-world deployment settings.   In this paper, we propose AutoEG, a fully automated multi-agent framework for exploit generation targeting black-box web applications. AutoEG has two phases: First, AutoEG extracts precise vulnerability trigger logic from unstructured vulnerability information and encapsulates it into reusable trigger functions. Second, AutoEG uses trigger functions for concrete attack objectives and iteratively refines exploits through feedback-driven interaction with the target application. We evaluate AutoEG on 104 real-world vulnerabilities with 29 attack objectives, resulting in 660 exploitation tasks and 55,440 exploit attempts. AutoEG achieves an average success rate of 82.41%, substantially outperforming state-of-the-art baselines, whose best performance reaches only 32.88%."
+    }
+  },
+  {
+    "id": "2604.00387v1",
+    "title": "RAGShield: Provenance-Verified Defense-in-Depth Against Knowledge Base Poisoning in Government Retrieval-Augmented Generation Systems",
+    "authors": [
+      "KrishnaSaiReddy Patil"
+    ],
+    "published_date": "2026-04-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.00387v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.00387v1",
+    "content": {
+      "en": "RAG systems deployed across federal agencies for citizen-facing services are vulnerable to knowledge base poisoning attacks, where adversaries inject malicious documents to manipulate outputs. Recent work demonstrates that as few as 10 adversarial passages can achieve 98.2% retrieval success rates. We observe that RAG knowledge base poisoning is structurally analogous to software supply chain attacks, and propose RAGShield, a five-layer defense-in-depth framework applying supply chain provenance verification to the RAG knowledge pipeline. RAGShield introduces: (1) C2PA-inspired cryptographic document attestation blocking unsigned and forged documents at ingestion; (2) trust-weighted retrieval prioritizing provenance-verified sources; (3) a formal taint lattice with cross-source contradiction detection catching insider threats even when provenance is valid; (4) provenance-aware generation with auditable citations; and (5) NIST SP 800-53 compliance mapping across 15 control families. Evaluation on a 500-passage Natural Questions corpus with 63 attack documents and 200 queries against five adversary tiers achieves 0.0% attack success rate including adaptive attacks (95% CI: [0.0%, 1.9%]) with 0.0% false positive rate. We honestly report that insider in-place replacement attacks achieve 17.5% ASR, identifying the fundamental limit of ingestion-time defense. The cross-source contradiction detector catches subtle numerical manipulation attacks that bypass provenance verification entirely.",
+      "tr": "RAG systems deployed across federal agencies for citizen-facing services are vulnerable to knowledge base poisoning attacks, where adversaries inject malicious documents to manipulate outputs. Recent work demonstrates that as few as 10 adversarial passages can achieve 98.2% retrieval success rates. We observe that RAG knowledge base poisoning is structurally analogous to software supply chain attacks, and propose RAGShield, a five-layer defense-in-depth framework applying supply chain provenance verification to the RAG knowledge pipeline. RAGShield introduces: (1) C2PA-inspired cryptographic document attestation blocking unsigned and forged documents at ingestion; (2) trust-weighted retrieval prioritizing provenance-verified sources; (3) a formal taint lattice with cross-source contradiction detection catching insider threats even when provenance is valid; (4) provenance-aware generation with auditable citations; and (5) NIST SP 800-53 compliance mapping across 15 control families. Evaluation on a 500-passage Natural Questions corpus with 63 attack documents and 200 queries against five adversary tiers achieves 0.0% attack success rate including adaptive attacks (95% CI: [0.0%, 1.9%]) with 0.0% false positive rate. We honestly report that insider in-place replacement attacks achieve 17.5% ASR, identifying the fundamental limit of ingestion-time defense. The cross-source contradiction detector catches subtle numerical manipulation attacks that bypass provenance verification entirely."
+    }
+  },
+  {
+    "id": "2604.00181v1",
+    "title": "NFC based inventory control system for secure and efficient communication",
+    "authors": [
+      "Razi Iqbal",
+      "Awais Ahmad",
+      "Asfandyar Gillani"
+    ],
+    "published_date": "2026-03-31",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.00181v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.00181v1",
+    "content": {
+      "en": "This paper brings up this idea of using Near Field Communication (NFC) for inventory control system instead of using traditional barcodes. NFC because of its high security, ease of use and efficiency can be very suitable for systems like inventory control. In traditional inventory control systems, each product has a barcode pasted on it, which is vulnerable to attacks as barcodes are open and have no security. Furthermore, barcodes are prone to damages and can be unreliable when pasted on different types of products e.g. hot and frozen products, circular shaped products and irregular shaped products like clothes etc. NFC on the other hand is very efficient, secure and reliable when it comes to short-range wireless communication. In this paper we will present our prototype for the inventory control system of an electronic store in which each product has a passive NFC tag pasted to it. When a customer buys a product the receipt of the product is generated using NFC between the NFC passive tag on the product and NFC enabled device (e.g. smart phone or reader) at the cash counter.",
+      "tr": "This paper brings up this idea of using Near Field Communication (NFC) for inventory control system instead of using traditional barcodes. NFC because of its high security, ease of use and efficiency can be very suitable for systems like inventory control. In traditional inventory control systems, each product has a barcode pasted on it, which is vulnerable to attacks as barcodes are open and have no security. Furthermore, barcodes are prone to damages and can be unreliable when pasted on different types of products e.g. hot and frozen products, circular shaped products and irregular shaped products like clothes etc. NFC on the other hand is very efficient, secure and reliable when it comes to short-range wireless communication. In this paper we will present our prototype for the inventory control system of an electronic store in which each product has a passive NFC tag pasted to it. When a customer buys a product the receipt of the product is generated using NFC between the NFC passive tag on the product and NFC enabled device (e.g. smart phone or reader) at the cash counter."
+    }
+  },
+  {
+    "id": "2604.00112v1",
+    "title": "Efficient Software Vulnerability Detection Using Transformer-based Models",
+    "authors": [
+      "Sameer Shaik",
+      "Zhen Huang",
+      "Daniela Stan Raicu",
+      "Jacob Furst"
+    ],
+    "published_date": "2026-03-31",
+    "tags": [
+      "cs.CR",
+      "cs.LG",
+      "cs.SE"
+    ],
+    "link": "http://arxiv.org/abs/2604.00112v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.00112v1",
+    "content": {
+      "en": "Detecting software vulnerabilities is critical to ensuring the security and reliability of modern computer systems. Deep neural networks have shown promising results on vulnerability detection, but they lack the capability to capture global contextual information on vulnerable code. To address this limitation, we explore the application of transformers for C/C++ vulnerability detection. We use program slices that encapsulate key syntactic and semantic features of program code, such as API function calls, array usage, pointer manipulations, and arithmetic expressions. By leveraging transformers' capability to capture both local and global contextual information on vulnerable code, our work can identify vulnerabilities accurately. Combined with data balancing and hyperparameter fine-tuning, our work offers a robust and efficient approach to identifying vulnerable code with moderate resource usage and training time.",
+      "tr": "Detecting software vulnerabilities is critical to ensuring the security and reliability of modern computer systems. Deep neural networks have shown promising results on vulnerability detection, but they lack the capability to capture global contextual information on vulnerable code. To address this limitation, we explore the application of transformers for C/C++ vulnerability detection. We use program slices that encapsulate key syntactic and semantic features of program code, such as API function calls, array usage, pointer manipulations, and arithmetic expressions. By leveraging transformers' capability to capture both local and global contextual information on vulnerable code, our work can identify vulnerabilities accurately. Combined with data balancing and hyperparameter fine-tuning, our work offers a robust and efficient approach to identifying vulnerable code with moderate resource usage and training time."
+    }
+  },
+  {
     "id": "2603.30017v1",
     "title": "Refined Detection for Gumbel Watermarking",
     "authors": [
@@ -16,206 +204,6 @@
     "content": {
       "en": "We propose a simple detection mechanism for the Gumbel watermarking scheme proposed by Aaronson (2022). The new mechanism is proven to be near-optimal in a problem-dependent sense among all model-agnostic watermarking schemes under the assumption that the next-token distribution is sampled i.i.d.",
       "tr": "We propose a simple detection mechanism for the Gumbel watermarking scheme proposed by Aaronson (2022). The new mechanism is proven to be near-optimal in a problem-dependent sense among all model-agnostic watermarking schemes under the assumption that the next-token distribution is sampled i.i.d."
-    }
-  },
-  {
-    "id": "2603.30016v1",
-    "title": "Architecting Secure AI Agents: Perspectives on System-Level Defenses Against Indirect Prompt Injection Attacks",
-    "authors": [
-      "Chong Xiang",
-      "Drew Zagieboylo",
-      "Shaona Ghosh",
-      "Sanjay Kariyappa",
-      "Kai Greshake"
-    ],
-    "published_date": "2026-03-31",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2603.30016v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.30016v1",
-    "content": {
-      "en": "AI agents, predominantly powered by large language models (LLMs), are vulnerable to indirect prompt injection, in which malicious instructions embedded in untrusted data can trigger dangerous agent actions. This position paper discusses our vision for system-level defenses against indirect prompt injection attacks. We articulate three positions: (1) dynamic replanning and security policy updates are often necessary for dynamic tasks and realistic environments; (2) certain context-dependent security decisions would still require LLMs (or other learned models), but should only be made within system designs that strictly constrain what the model can observe and decide; (3) in inherently ambiguous cases, personalization and human interaction should be treated as core design considerations. In addition to our main positions, we discuss limitations of existing benchmarks that can create a false sense of utility and security. We also highlight the value of system-level defenses, which serve as the skeleton of agentic systems by structuring and controlling agent behaviors, integrating rule-based and model-based security checks, and enabling more targeted research on model robustness and human interaction.",
-      "tr": "AI agents, predominantly powered by large language models (LLMs), are vulnerable to indirect prompt injection, in which malicious instructions embedded in untrusted data can trigger dangerous agent actions. This position paper discusses our vision for system-level defenses against indirect prompt injection attacks. We articulate three positions: (1) dynamic replanning and security policy updates are often necessary for dynamic tasks and realistic environments; (2) certain context-dependent security decisions would still require LLMs (or other learned models), but should only be made within system designs that strictly constrain what the model can observe and decide; (3) in inherently ambiguous cases, personalization and human interaction should be treated as core design considerations. In addition to our main positions, we discuss limitations of existing benchmarks that can create a false sense of utility and security. We also highlight the value of system-level defenses, which serve as the skeleton of agentic systems by structuring and controlling agent behaviors, integrating rule-based and model-based security checks, and enabling more targeted research on model robustness and human interaction."
-    }
-  },
-  {
-    "id": "2603.29537v1",
-    "title": "Mean Masked Autoencoder with Flow-Mixing for Encrypted Traffic Classification",
-    "authors": [
-      "Xiao Liu",
-      "Xiaowei Fu",
-      "Fuxiang Huang",
-      "Lei Zhang"
-    ],
-    "published_date": "2026-03-31",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.MM",
-      "cs.NI"
-    ],
-    "link": "http://arxiv.org/abs/2603.29537v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.29537v1",
-    "content": {
-      "en": "Network traffic classification using self-supervised pre-training models based on Masked Autoencoders (MAE) has demonstrated a huge potential. However, existing methods are confined to isolated byte-level reconstruction of individual flows, lacking adequate perception of the multi-granularity contextual relationship in traffic. To address this limitation, we propose Mean MAE (MMAE), a teacher-student MAE paradigm with flow mixing strategy for building encrypted traffic pre-training model. MMAE employs a self-distillation mechanism for teacher-student interaction, where the teacher provides unmasked flow-level semantic supervision to advance the student from local byte reconstruction to multi-granularity comprehension. To break the information bottleneck in individual flows, we introduce a dynamic Flow Mixing (FlowMix) strategy to replace traditional random masking mechanism. By constructing challenging cross-flow mixed samples with interferences, it compels the model to learn discriminative representations from distorted tokens. Furthermore, we design a Packet-importance aware Mask Predictor (PMP) equipped with an attention bias mechanism that leverages packet-level side-channel statistics to dynamically mask tokens with high semantic density. Numerous experiments on a number of datasets covering encrypted applications, malware, and attack traffic demonstrate that MMAE achieves state-of-the-art performance. The code is available at https://github.com/lx6c78/MMAE",
-      "tr": "Network traffic classification using self-supervised pre-training models based on Masked Autoencoders (MAE) has demonstrated a huge potential. However, existing methods are confined to isolated byte-level reconstruction of individual flows, lacking adequate perception of the multi-granularity contextual relationship in traffic. To address this limitation, we propose Mean MAE (MMAE), a teacher-student MAE paradigm with flow mixing strategy for building encrypted traffic pre-training model. MMAE employs a self-distillation mechanism for teacher-student interaction, where the teacher provides unmasked flow-level semantic supervision to advance the student from local byte reconstruction to multi-granularity comprehension. To break the information bottleneck in individual flows, we introduce a dynamic Flow Mixing (FlowMix) strategy to replace traditional random masking mechanism. By constructing challenging cross-flow mixed samples with interferences, it compels the model to learn discriminative representations from distorted tokens. Furthermore, we design a Packet-importance aware Mask Predictor (PMP) equipped with an attention bias mechanism that leverages packet-level side-channel statistics to dynamically mask tokens with high semantic density. Numerous experiments on a number of datasets covering encrypted applications, malware, and attack traffic demonstrate that MMAE achieves state-of-the-art performance. The code is available at https://github.com/lx6c78/MMAE"
-    }
-  },
-  {
-    "id": "2603.29520v1",
-    "title": "TrafficMoE: Heterogeneity-aware Mixture of Experts for Encrypted Traffic Classification",
-    "authors": [
-      "Qing He",
-      "Xiaowei Fu",
-      "Lei Zhang"
-    ],
-    "published_date": "2026-03-31",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.MM",
-      "cs.NI"
-    ],
-    "link": "http://arxiv.org/abs/2603.29520v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.29520v1",
-    "content": {
-      "en": "Encrypted traffic classification is a critical task for network security. While deep learning has advanced this field, the occlusion of payload semantics by encryption severely challenges standard modeling approaches. Most existing frameworks rely on static and homogeneous pipelines that apply uniform parameter sharing and static fusion strategies across all inputs. This one-size-fits-all static design is inherently flawed: by forcing structured headers and randomized payloads into a unified processing pipeline, it inevitably entangles the raw protocol signals with stochastic encryption noise, thereby degrading the fine-grained discriminative features. In this paper, we propose TrafficMoE, a framework that breaks through the bottleneck of static modeling by establishing a Disentangle-Filter-Aggregate (DFA) paradigm. Specifically, to resolve the structural between-components conflict, the architecture disentangles headers and payloads using dual-branch sparse Mixture-of-Experts (MoE), enabling modality-specific modeling. To mitigate the impact of stochastic noise, an uncertainty-aware filtering mechanism is introduced to quantify reliability and selectively suppress high-variance representations. Finally, to overcome the limitations of static fusion, a routing-guided strategy aggregates cross-modality features dynamically, that adaptively weighs contributions based on traffic context. With this DFA paradigm, TrafficMoE maximizes representational efficiency by focusing solely on the most discriminative traffic features. Extensive experiments on six datasets demonstrate TrafficMoE consistently outperforms state-of-the-art methods, validating the necessity of heterogeneity-aware modeling in encrypted traffic analysis. The source code is publicly available at https://github.com/Posuly/TrafficMoE_main.",
-      "tr": "Encrypted traffic classification is a critical task for network security. While deep learning has advanced this field, the occlusion of payload semantics by encryption severely challenges standard modeling approaches. Most existing frameworks rely on static and homogeneous pipelines that apply uniform parameter sharing and static fusion strategies across all inputs. This one-size-fits-all static design is inherently flawed: by forcing structured headers and randomized payloads into a unified processing pipeline, it inevitably entangles the raw protocol signals with stochastic encryption noise, thereby degrading the fine-grained discriminative features. In this paper, we propose TrafficMoE, a framework that breaks through the bottleneck of static modeling by establishing a Disentangle-Filter-Aggregate (DFA) paradigm. Specifically, to resolve the structural between-components conflict, the architecture disentangles headers and payloads using dual-branch sparse Mixture-of-Experts (MoE), enabling modality-specific modeling. To mitigate the impact of stochastic noise, an uncertainty-aware filtering mechanism is introduced to quantify reliability and selectively suppress high-variance representations. Finally, to overcome the limitations of static fusion, a routing-guided strategy aggregates cross-modality features dynamically, that adaptively weighs contributions based on traffic context. With this DFA paradigm, TrafficMoE maximizes representational efficiency by focusing solely on the most discriminative traffic features. Extensive experiments on six datasets demonstrate TrafficMoE consistently outperforms state-of-the-art methods, validating the necessity of heterogeneity-aware modeling in encrypted traffic analysis. The source code is publicly available at https://github.com/Posuly/TrafficMoE_main."
-    }
-  },
-  {
-    "id": "2603.29403v1",
-    "title": "Security in LLM-as-a-Judge: A Comprehensive SoK",
-    "authors": [
-      "Aiman Almasoud",
-      "Antony Anju",
-      "Marco Arazzi",
-      "Mert Cihangiroglu",
-      "Vignesh Kumar Kembu"
-    ],
-    "published_date": "2026-03-31",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2603.29403v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.29403v1",
-    "content": {
-      "en": "LLM-as-a-Judge (LaaJ) is a novel paradigm in which powerful language models are used to assess the quality, safety, or correctness of generated outputs. While this paradigm has significantly improved the scalability and efficiency of evaluation processes, it also introduces novel security risks and reliability concerns that remain largely unexplored. In particular, LLM-based judges can become both targets of adversarial manipulation and instruments through which attacks are conducted, potentially compromising the trustworthiness of evaluation pipelines. In this paper, we present the first Systematization of Knowledge (SoK) focusing on the security aspects of LLM-as-a-Judge systems. We perform a comprehensive literature review across major academic databases, analyzing 863 works and selecting 45 relevant studies published between 2020 and 2026. Based on this study, we propose a taxonomy that organizes recent research according to the role played by LLM-as-a-Judge in the security landscape, distinguishing between attacks targeting LaaJ systems, attacks performed through LaaJ, defenses leveraging LaaJ for security purposes, and applications where LaaJ is used as an evaluation strategy in security-related domains. We further provide a comparative analysis of existing approaches, highlighting current limitations, emerging threats, and open research challenges. Our findings reveal significant vulnerabilities in LLM-based evaluation frameworks, as well as promising directions for improving their robustness and reliability. Finally, we outline key research opportunities that can guide the development of more secure and trustworthy LLM-as-a-Judge systems.",
-      "tr": "LLM-as-a-Judge (LaaJ) is a novel paradigm in which powerful language models are used to assess the quality, safety, or correctness of generated outputs. While this paradigm has significantly improved the scalability and efficiency of evaluation processes, it also introduces novel security risks and reliability concerns that remain largely unexplored. In particular, LLM-based judges can become both targets of adversarial manipulation and instruments through which attacks are conducted, potentially compromising the trustworthiness of evaluation pipelines. In this paper, we present the first Systematization of Knowledge (SoK) focusing on the security aspects of LLM-as-a-Judge systems. We perform a comprehensive literature review across major academic databases, analyzing 863 works and selecting 45 relevant studies published between 2020 and 2026. Based on this study, we propose a taxonomy that organizes recent research according to the role played by LLM-as-a-Judge in the security landscape, distinguishing between attacks targeting LaaJ systems, attacks performed through LaaJ, defenses leveraging LaaJ for security purposes, and applications where LaaJ is used as an evaluation strategy in security-related domains. We further provide a comparative analysis of existing approaches, highlighting current limitations, emerging threats, and open research challenges. Our findings reveal significant vulnerabilities in LLM-based evaluation frameworks, as well as promising directions for improving their robustness and reliability. Finally, we outline key research opportunities that can guide the development of more secure and trustworthy LLM-as-a-Judge systems."
-    }
-  },
-  {
-    "id": "2603.29382v1",
-    "title": "Deep Learning-Assisted Improved Differential Fault Attacks on Lightweight Stream Ciphers",
-    "authors": [
-      "Kok Ping Lim",
-      "Dongyang Jia",
-      "Iftekhar Salam"
-    ],
-    "published_date": "2026-03-31",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2603.29382v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.29382v1",
-    "content": {
-      "en": "Lightweight cryptographic primitives are widely deployed in resource-constraint environment, particularly in the Internet of Things (IoT) devices. Due to their public accessibility, these devices are vulnerable to physical attacks, especially fault attacks. Recently, deep learning-based cryptanalytic techniques have demonstrated promising results; however, their application to fault attacks remains limited, particularly for stream ciphers. In this work, we investigate the feasibility of deep learning assisted differential fault attack on three lightweight stream ciphers, namely ACORNv3, MORUSv2 and ATOM, under a relaxed fault model, where a single-bit bit-flipping fault is injected at an unknown location. We train multilayer perceptron (MLP) models to identify the fault locations. Experimental results show that the trained models achieve high identification accuracies of 0.999880, 0.999231 and 0.823568 for ACORNv3, MORUSv2 and ATOM, respectively, and outperform traditional signature-based methods. For the secret recovery process, we introduce a threshold-based method to optimize the number of fault injections required to recover the secret information. The results show that the initial state of ACORN can be recovered with 21 to 34 faults; while MORUS requires 213 to 248 faults, with at most 6 bits of guessing. Both attacks reduce the attack complexity compared to existing works. For ATOM, the results show that it possesses a higher security margin, as majority of state bits in the Non-linear Feedback Shift Register (NFSR) can only be recovered under a precise control model. To the best of our knowledge, this work provides the first experimental results of differential fault attacks on ATOM.",
-      "tr": "Lightweight cryptographic primitives are widely deployed in resource-constraint environment, particularly in the Internet of Things (IoT) devices. Due to their public accessibility, these devices are vulnerable to physical attacks, especially fault attacks. Recently, deep learning-based cryptanalytic techniques have demonstrated promising results; however, their application to fault attacks remains limited, particularly for stream ciphers. In this work, we investigate the feasibility of deep learning assisted differential fault attack on three lightweight stream ciphers, namely ACORNv3, MORUSv2 and ATOM, under a relaxed fault model, where a single-bit bit-flipping fault is injected at an unknown location. We train multilayer perceptron (MLP) models to identify the fault locations. Experimental results show that the trained models achieve high identification accuracies of 0.999880, 0.999231 and 0.823568 for ACORNv3, MORUSv2 and ATOM, respectively, and outperform traditional signature-based methods. For the secret recovery process, we introduce a threshold-based method to optimize the number of fault injections required to recover the secret information. The results show that the initial state of ACORN can be recovered with 21 to 34 faults; while MORUS requires 213 to 248 faults, with at most 6 bits of guessing. Both attacks reduce the attack complexity compared to existing works. For ATOM, the results show that it possesses a higher security margin, as majority of state bits in the Non-linear Feedback Shift Register (NFSR) can only be recovered under a precise control model. To the best of our knowledge, this work provides the first experimental results of differential fault attacks on ATOM."
-    }
-  },
-  {
-    "id": "2603.29328v1",
-    "title": "Beyond Corner Patches: Semantics-Aware Backdoor Attack in Federated Learning",
-    "authors": [
-      "Kavindu Herath",
-      "Joshua Zhao",
-      "Saurabh Bagchi"
-    ],
-    "published_date": "2026-03-31",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CV",
-      "cs.DC",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2603.29328v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.29328v1",
-    "content": {
-      "en": "Backdoor attacks on federated learning (FL) are most often evaluated with synthetic corner patches or out-of-distribution (OOD) patterns that are unlikely to arise in practice. In this paper, we revisit the backdoor threat to standard FL (a single global model) under a more realistic setting where triggers must be semantically meaningful, in-distribution, and visually plausible. We propose SABLE, a Semantics-Aware Backdoor for LEarning in federated settings, which constructs natural, content-consistent triggers (e.g., semantic attribute changes such as sunglasses) and optimizes an aggregation-aware malicious objective with feature separation and parameter regularization to keep attacker updates close to benign ones. We instantiate SABLE on CelebA hair-color classification and the German Traffic Sign Recognition Benchmark (GTSRB), poisoning only a small, interpretable subset of each malicious client's local data while otherwise following the standard FL protocol. Across heterogeneous client partitions and multiple aggregation rules (FedAvg, Trimmed Mean, MultiKrum, and FLAME), our semantics-driven triggers achieve high targeted attack success rates while preserving benign test accuracy. These results show that semantics-aligned backdoors remain a potent and practical threat in federated learning, and that robustness claims based solely on synthetic patch triggers can be overly optimistic.",
-      "tr": "Backdoor attacks on federated learning (FL) are most often evaluated with synthetic corner patches or out-of-distribution (OOD) patterns that are unlikely to arise in practice. In this paper, we revisit the backdoor threat to standard FL (a single global model) under a more realistic setting where triggers must be semantically meaningful, in-distribution, and visually plausible. We propose SABLE, a Semantics-Aware Backdoor for LEarning in federated settings, which constructs natural, content-consistent triggers (e.g., semantic attribute changes such as sunglasses) and optimizes an aggregation-aware malicious objective with feature separation and parameter regularization to keep attacker updates close to benign ones. We instantiate SABLE on CelebA hair-color classification and the German Traffic Sign Recognition Benchmark (GTSRB), poisoning only a small, interpretable subset of each malicious client's local data while otherwise following the standard FL protocol. Across heterogeneous client partitions and multiple aggregation rules (FedAvg, Trimmed Mean, MultiKrum, and FLAME), our semantics-driven triggers achieve high targeted attack success rates while preserving benign test accuracy. These results show that semantics-aligned backdoors remain a potent and practical threat in federated learning, and that robustness claims based solely on synthetic patch triggers can be overly optimistic."
-    }
-  },
-  {
-    "id": "2603.29289v1",
-    "title": "Downsides of Smartness Across Edge-Cloud Continuum in Modern Industry",
-    "authors": [
-      "Akhil Gupta Chigullapally",
-      "Sharvan Vittala",
-      "Razin Farhan Hussian",
-      "Mohsen Amini Salehi"
-    ],
-    "published_date": "2026-03-31",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.DC"
-    ],
-    "link": "http://arxiv.org/abs/2603.29289v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.29289v1",
-    "content": {
-      "en": "The fast pace of modern AI is rapidly transforming traditional industrial systems into vast, intelligent and potentially unmanned autonomous operational environments driven by AI-based solutions. These solutions leverage various forms of machine learning, reinforcement learning, and generative AI. The introduction of such smart capabilities has pushed the envelope in multiple industrial domains, enabling predictive maintenance, optimized performance, and streamlined workflows. These solutions are often deployed across the Industrial Internet of Things (IIoT) and supported by the Edge-Fog-Cloud computing continuum to enable urgent (i.e., real-time or near real-time) decision-making. Despite the current trend of aggressively adopting these smart industrial solutions to increase profit, quality, and efficiency, large-scale integration and deployment also bring serious hazards that if ignored can undermine the benefits of smart industries. These hazards include unforeseen interoperability side-effects and heightened vulnerability to cyber threats, particularly in environments operating with a plethora of heterogeneous IIoT systems. The goal of this study is to shed light on the potential consequences of industrial smartness, with a particular focus on security implications, including vulnerabilities, side effects, and cyber threats. We distinguish software-level downsides stemming from both traditional AI solutions and generative AI from those originating in the infrastructure layer, namely IIoT and the Edge-Cloud continuum. At each level, we investigate potential vulnerabilities, cyber threats, and unintended side effects. As industries continue to become smarter, understanding and addressing these downsides will be crucial to ensure secure and sustainable development of smart industrial systems.",
-      "tr": "The fast pace of modern AI is rapidly transforming traditional industrial systems into vast, intelligent and potentially unmanned autonomous operational environments driven by AI-based solutions. These solutions leverage various forms of machine learning, reinforcement learning, and generative AI. The introduction of such smart capabilities has pushed the envelope in multiple industrial domains, enabling predictive maintenance, optimized performance, and streamlined workflows. These solutions are often deployed across the Industrial Internet of Things (IIoT) and supported by the Edge-Fog-Cloud computing continuum to enable urgent (i.e., real-time or near real-time) decision-making. Despite the current trend of aggressively adopting these smart industrial solutions to increase profit, quality, and efficiency, large-scale integration and deployment also bring serious hazards that if ignored can undermine the benefits of smart industries. These hazards include unforeseen interoperability side-effects and heightened vulnerability to cyber threats, particularly in environments operating with a plethora of heterogeneous IIoT systems. The goal of this study is to shed light on the potential consequences of industrial smartness, with a particular focus on security implications, including vulnerabilities, side effects, and cyber threats. We distinguish software-level downsides stemming from both traditional AI solutions and generative AI from those originating in the infrastructure layer, namely IIoT and the Edge-Cloud continuum. At each level, we investigate potential vulnerabilities, cyber threats, and unintended side effects. As industries continue to become smarter, understanding and addressing these downsides will be crucial to ensure secure and sustainable development of smart industrial systems."
-    }
-  },
-  {
-    "id": "2603.29216v1",
-    "title": "Software Vulnerability Detection Using a Lightweight Graph Neural Network",
-    "authors": [
-      "Miles Farmer",
-      "Ekincan Ufuktepe",
-      "Anne Watson",
-      "Hialo Muniz Carvalho",
-      "Vadim Okun"
-    ],
-    "published_date": "2026-03-31",
-    "tags": [
-      "cs.SE",
-      "cs.AI",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2603.29216v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.29216v1",
-    "content": {
-      "en": "Large Language Models (LLMs) have emerged as a popular choice in vulnerability detection studies given their foundational capabilities, open source availability, and variety of models, but have limited scalability due to extensive compute requirements. Using the natural graph relational structure of code, we show that our proposed graph neural network (GNN) based deep learning model VulGNN for vulnerability detection can achieve performance almost on par with LLMs, but is 100 times smaller in size and fast to retrain and customize. We describe the VulGNN architecture, ablation studies on components, learning rates, and generalizability to different code datasets. As a lightweight model for vulnerability analysis, VulGNN is efficient and deployable at the edge as part of real-world software development pipelines.",
-      "tr": "Large Language Models (LLMs) have emerged as a popular choice in vulnerability detection studies given their foundational capabilities, open source availability, and variety of models, but have limited scalability due to extensive compute requirements. Using the natural graph relational structure of code, we show that our proposed graph neural network (GNN) based deep learning model VulGNN for vulnerability detection can achieve performance almost on par with LLMs, but is 100 times smaller in size and fast to retrain and customize. We describe the VulGNN architecture, ablation studies on components, learning rates, and generalizability to different code datasets. As a lightweight model for vulnerability analysis, VulGNN is efficient and deployable at the edge as part of real-world software development pipelines."
-    }
-  },
-  {
-    "id": "2603.29182v1",
-    "title": "Dummy-Aware Weighted Attack (DAWA): Breaking the Safe Sink in Dummy Class Defenses",
-    "authors": [
-      "Yunrui Yu",
-      "Xuxiang Feng",
-      "Pengda Qin",
-      "Pengyang Wang",
-      "Kafeng Wang"
-    ],
-    "published_date": "2026-03-31",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2603.29182v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.29182v1",
-    "content": {
-      "en": "Adversarial robustness evaluation faces a critical challenge as new defense paradigms emerge that can exploit limitations in existing assessment methods. This paper reveals that Dummy Classes-based defenses, which introduce an additional \"dummy\" class as a safety sink for adversarial examples, achieve significantly overestimated robustness under conventional evaluation strategies like AutoAttack. The fundamental limitation stems from these attacks' singular focus on misleading the true class label, which aligns perfectly with the defense mechanism--successful attacks are simply captured by the dummy class. To address this gap, we propose Dummy-Aware Weighted Attack (DAWA), a novel evaluation method that simultaneously targets both the true label and dummy label with adaptive weighting during adversarial example synthesis. Extensive experiments demonstrate that DAWA effectively breaks this defense paradigm, reducing the measured robustness of a leading Dummy Classes-based defense from 58.61% to 29.52% on CIFAR-10 under l_infty perturbation (epsilon=8/255). Our work provides a more reliable benchmark for evaluating this emerging class of defenses and highlights the need for continuous evolution of robustness assessment methodologies.",
-      "tr": "Adversarial robustness evaluation faces a critical challenge as new defense paradigms emerge that can exploit limitations in existing assessment methods. This paper reveals that Dummy Classes-based defenses, which introduce an additional \"dummy\" class as a safety sink for adversarial examples, achieve significantly overestimated robustness under conventional evaluation strategies like AutoAttack. The fundamental limitation stems from these attacks' singular focus on misleading the true class label, which aligns perfectly with the defense mechanism--successful attacks are simply captured by the dummy class. To address this gap, we propose Dummy-Aware Weighted Attack (DAWA), a novel evaluation method that simultaneously targets both the true label and dummy label with adaptive weighting during adversarial example synthesis. Extensive experiments demonstrate that DAWA effectively breaks this defense paradigm, reducing the measured robustness of a leading Dummy Classes-based defense from 58.61% to 29.52% on CIFAR-10 under l_infty perturbation (epsilon=8/255). Our work provides a more reliable benchmark for evaluating this emerging class of defenses and highlights the need for continuous evolution of robustness assessment methodologies."
     }
   }
 ]
