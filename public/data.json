@@ -1,209 +1,215 @@
 [
   {
-    "id": "2604.01052v1",
-    "title": "VibeGuard: A Security Gate Framework for AI-Generated Code",
+    "id": "2604.02149v1",
+    "title": "AEGIS: Adversarial Entropy-Guided Immune System -- Thermodynamic State Space Models for Zero-Day Network Evasion Detection",
     "authors": [
-      "Ying Xie"
+      "Vickson Ferrel"
     ],
-    "published_date": "2026-04-01",
+    "published_date": "2026-04-02",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2604.02149v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.02149v1",
+    "content": {
+      "en": "As TLS 1.3 encryption limits traditional Deep Packet Inspection (DPI), the security community has pivoted to Euclidean Transformer-based classifiers (e.g., ET-BERT) for encrypted traffic analysis. However, these models remain vulnerable to byte-level adversarial morphing -- recent pre-padding attacks reduced ET-BERT accuracy to 25.68%, while VLESS Reality bypasses certificate-based detection entirely. We introduce AEGIS: an Adversarial Entropy-Guided Immune System powered by a Thermodynamic Variance-Guided Hyperbolic Liquid State Space Model (TVD-HL-SSM). Rather than competing in the Euclidean payload-reading domain, AEGIS discards payload bytes in favor of 6-dimensional continuous-time flow physics projected into a non-Euclidean Poincare manifold. Liquid Time-Constants measure microsecond IAT decay, and a Thermodynamic Variance Detector computes sequence-wide Shannon Entropy to expose automated C2 tunnel anomalies. A pure C++ eBPF Harvester with zero-copy IPC bypasses the Python GIL, enabling a linear-time O(N) Mamba-3 core to process 64,000-packet swarms at line-rate. Evaluated on a 400GB, 4-tier adversarial corpus spanning backbone traffic, IoT botnets, zero-days, and proprietary VLESS Reality tunnels, AEGIS achieves an F1-score of 0.9952 and 99.50% True Positive Rate at 262 us inference latency on an RTX 4090, establishing a new state-of-the-art for physics-based adversarial network defense.",
+      "tr": "As TLS 1.3 encryption limits traditional Deep Packet Inspection (DPI), the security community has pivoted to Euclidean Transformer-based classifiers (e.g., ET-BERT) for encrypted traffic analysis. However, these models remain vulnerable to byte-level adversarial morphing -- recent pre-padding attacks reduced ET-BERT accuracy to 25.68%, while VLESS Reality bypasses certificate-based detection entirely. We introduce AEGIS: an Adversarial Entropy-Guided Immune System powered by a Thermodynamic Variance-Guided Hyperbolic Liquid State Space Model (TVD-HL-SSM). Rather than competing in the Euclidean payload-reading domain, AEGIS discards payload bytes in favor of 6-dimensional continuous-time flow physics projected into a non-Euclidean Poincare manifold. Liquid Time-Constants measure microsecond IAT decay, and a Thermodynamic Variance Detector computes sequence-wide Shannon Entropy to expose automated C2 tunnel anomalies. A pure C++ eBPF Harvester with zero-copy IPC bypasses the Python GIL, enabling a linear-time O(N) Mamba-3 core to process 64,000-packet swarms at line-rate. Evaluated on a 400GB, 4-tier adversarial corpus spanning backbone traffic, IoT botnets, zero-days, and proprietary VLESS Reality tunnels, AEGIS achieves an F1-score of 0.9952 and 99.50% True Positive Rate at 262 us inference latency on an RTX 4090, establishing a new state-of-the-art for physics-based adversarial network defense."
+    }
+  },
+  {
+    "id": "2604.02023v1",
+    "title": "APEX: Agent Payment Execution with Policy for Autonomous Agent API Access",
+    "authors": [
+      "Mohd Safwan Uddin",
+      "Mohammed Mouzam",
+      "Mohammed Imran",
+      "Syed Badar Uddin Faizan"
+    ],
+    "published_date": "2026-04-02",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2604.01052v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.01052v1",
+    "link": "http://arxiv.org/abs/2604.02023v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.02023v1",
     "content": {
-      "en": "\"Vibe coding,\" in which developers delegate code generation to AI assistants and accept the output with little manual review, has gained rapid adoption in production settings. On March 31, 2026, Anthropic's Claude Code CLI shipped a 59.8 MB source map file in its npm package, exposing roughly 512,000 lines of proprietary TypeScript. The tool had itself been largely vibe-coded, and the leak traced to a misconfigured packaging rule rather than a logic bug. Existing static-analysis and secret-scanning tools did not cover this failure mode, pointing to a gap between the vulnerabilities AI tends to introduce and the vulnerabilities current tooling is built to find. We present VibeGuard, a pre-publish security gate that targets five such blind spots: artifact hygiene, packaging-configuration drift, source-map exposure, hardcoded secrets, and supply-chain risk. In controlled experiments on eight synthetic projects (seven vulnerable, one clean control), VibeGuard achieved 100% recall, 89.47% precision (F1 = 94.44%), and correct pass/fail gate decisions on all eight projects across three policy levels. We discuss how these results inform a defense-in-depth workflow for teams that rely on AI code generation.",
-      "tr": "\"Vibe coding,\" in which developers delegate code generation to AI assistants and accept the output with little manual review, has gained rapid adoption in production settings. On March 31, 2026, Anthropic's Claude Code CLI shipped a 59.8 MB source map file in its npm package, exposing roughly 512,000 lines of proprietary TypeScript. The tool had itself been largely vibe-coded, and the leak traced to a misconfigured packaging rule rather than a logic bug. Existing static-analysis and secret-scanning tools did not cover this failure mode, pointing to a gap between the vulnerabilities AI tends to introduce and the vulnerabilities current tooling is built to find. We present VibeGuard, a pre-publish security gate that targets five such blind spots: artifact hygiene, packaging-configuration drift, source-map exposure, hardcoded secrets, and supply-chain risk. In controlled experiments on eight synthetic projects (seven vulnerable, one clean control), VibeGuard achieved 100% recall, 89.47% precision (F1 = 94.44%), and correct pass/fail gate decisions on all eight projects across three policy levels. We discuss how these results inform a defense-in-depth workflow for teams that rely on AI code generation."
+      "en": "Autonomous agents are moving beyond simple retrieval tasks to become economic actors that invoke APIs, sequence workflows, and make real-time decisions. As this shift accelerates, API providers need request-level monetization with programmatic spend governance. The HTTP 402 protocol addresses this by treating payment as a first-class protocol event, but most implementations rely on cryptocurrency rails. In many deployment contexts, especially countries with strong real-time fiat systems like UPI, this assumption is misaligned with regulatory and infrastructure realities. We present APEX, an implementation-complete research system that adapts HTTP 402-style payment gating to UPI-like fiat workflows while preserving policy-governed spend control, tokenized access verification, and replay resistance. We implement a challenge-settle-consume lifecycle with HMAC-signed short-lived tokens, idempotent settlement handling, and policy-aware payment approval. The system uses FastAPI, SQLite, and Python standard libraries, making it transparent, inspectable, and reproducible. We evaluate APEX across three baselines and six scenarios using sample sizes 2-4x larger than initial experiments (N=20-40 per scenario). Results show that policy enforcement reduces total spending by 27.3% while maintaining 52.8% success rate for legitimate requests. Security mechanisms achieve 100% block rate for both replay attacks and invalid tokens with low latency overhead (19.6ms average). Multiple trial runs show low variance across scenarios, demonstrating high reproducibility with 95% confidence intervals. The primary contribution is a controlled agent-payment infrastructure and reference architecture that demonstrates how agentic access monetization can be adapted to fiat systems without discarding security and policy guarantees.",
+      "tr": "Autonomous agents are moving beyond simple retrieval tasks to become economic actors that invoke APIs, sequence workflows, and make real-time decisions. As this shift accelerates, API providers need request-level monetization with programmatic spend governance. The HTTP 402 protocol addresses this by treating payment as a first-class protocol event, but most implementations rely on cryptocurrency rails. In many deployment contexts, especially countries with strong real-time fiat systems like UPI, this assumption is misaligned with regulatory and infrastructure realities. We present APEX, an implementation-complete research system that adapts HTTP 402-style payment gating to UPI-like fiat workflows while preserving policy-governed spend control, tokenized access verification, and replay resistance. We implement a challenge-settle-consume lifecycle with HMAC-signed short-lived tokens, idempotent settlement handling, and policy-aware payment approval. The system uses FastAPI, SQLite, and Python standard libraries, making it transparent, inspectable, and reproducible. We evaluate APEX across three baselines and six scenarios using sample sizes 2-4x larger than initial experiments (N=20-40 per scenario). Results show that policy enforcement reduces total spending by 27.3% while maintaining 52.8% success rate for legitimate requests. Security mechanisms achieve 100% block rate for both replay attacks and invalid tokens with low latency overhead (19.6ms average). Multiple trial runs show low variance across scenarios, demonstrating high reproducibility with 95% confidence intervals. The primary contribution is a controlled agent-payment infrastructure and reference architecture that demonstrates how agentic access monetization can be adapted to fiat systems without discarding security and policy guarantees."
     }
   },
   {
-    "id": "2604.01039v1",
-    "title": "Automated Framework to Evaluate and Harden LLM System Instructions against Encoding Attacks",
+    "id": "2604.01977v1",
+    "title": "RuleForge: Automated Generation and Validation for Web Vulnerability Detection at Scale",
     "authors": [
-      "Anubhab Sahu",
-      "Diptisha Samanta",
-      "Reza Soosahabi"
+      "Ayush Garg",
+      "Sophia Hager",
+      "Jacob Montiel",
+      "Aditya Tiwari",
+      "Michael Gentile"
     ],
-    "published_date": "2026-04-01",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2604.01039v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.01039v1",
-    "content": {
-      "en": "System Instructions in Large Language Models (LLMs) are commonly used to enforce safety policies, define agent behavior, and protect sensitive operational context in agentic AI applications. These instructions may contain sensitive information such as API credentials, internal policies, and privileged workflow definitions, making system instruction leakage a critical security risk highlighted in the OWASP Top 10 for LLM Applications. Without incurring the overhead costs of reasoning models, many LLM applications rely on refusal-based instructions that block direct requests for system instructions, implicitly assuming that prohibited information can only be extracted through explicit queries. We introduce an automated evaluation framework that tests whether system instructions remain confidential when extraction requests are re-framed as encoding or structured output tasks. Across four common models and 46 verified system instructions, we observe high attack success rates (> 0.7) for structured serialization where models refuse direct extraction requests but disclose protected content in the requested serialization formats. We further demonstrate a mitigation strategy based on one-shot instruction reshaping using a Chain-of-Thought reasoning model, indicating that even subtle changes in wording and structure of system instructions can significantly reduce attack success rate without requiring model retraining.",
-      "tr": "System Instructions in Large Language Models (LLMs) are commonly used to enforce safety policies, define agent behavior, and protect sensitive operational context in agentic AI applications. These instructions may contain sensitive information such as API credentials, internal policies, and privileged workflow definitions, making system instruction leakage a critical security risk highlighted in the OWASP Top 10 for LLM Applications. Without incurring the overhead costs of reasoning models, many LLM applications rely on refusal-based instructions that block direct requests for system instructions, implicitly assuming that prohibited information can only be extracted through explicit queries. We introduce an automated evaluation framework that tests whether system instructions remain confidential when extraction requests are re-framed as encoding or structured output tasks. Across four common models and 46 verified system instructions, we observe high attack success rates (> 0.7) for structured serialization where models refuse direct extraction requests but disclose protected content in the requested serialization formats. We further demonstrate a mitigation strategy based on one-shot instruction reshaping using a Chain-of-Thought reasoning model, indicating that even subtle changes in wording and structure of system instructions can significantly reduce attack success rate without requiring model retraining."
-    }
-  },
-  {
-    "id": "2604.00986v1",
-    "title": "Do Phone-Use Agents Respect Your Privacy?",
-    "authors": [
-      "Zhengyang Tang",
-      "Ke Ji",
-      "Xidong Wang",
-      "Zihan Ye",
-      "Xinyuan Wang"
-    ],
-    "published_date": "2026-04-01",
+    "published_date": "2026-04-02",
     "tags": [
       "cs.CR",
       "cs.AI",
       "cs.CL",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2604.00986v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.00986v1",
-    "content": {
-      "en": "We study whether phone-use agents respect privacy while completing benign mobile tasks. This question has remained hard to answer because privacy-compliant behavior is not operationalized for phone-use agents, and ordinary apps do not reveal exactly what data agents type into which form entries during execution. To make this question measurable, we introduce MyPhoneBench, a verifiable evaluation framework for privacy behavior in mobile agents. We operationalize privacy-respecting phone use as permissioned access, minimal disclosure, and user-controlled memory through a minimal privacy contract, iMy, and pair it with instrumented mock apps plus rule-based auditing that make unnecessary permission requests, deceptive re-disclosure, and unnecessary form filling observable and reproducible. Across five frontier models on 10 mobile apps and 300 tasks, we find that task success, privacy-compliant task completion, and later-session use of saved preferences are distinct capabilities, and no single model dominates all three. Evaluating success and privacy jointly reshuffles the model ordering relative to either metric alone. The most persistent failure mode across models is simple data minimization: agents still fill optional personal entries that the task does not require. These results show that privacy failures arise from over-helpful execution of benign tasks, and that success-only evaluation overestimates the deployment readiness of current phone-use agents. All code, mock apps, and agent trajectories are publicly available at~ https://github.com/tangzhy/MyPhoneBench.",
-      "tr": "We study whether phone-use agents respect privacy while completing benign mobile tasks. This question has remained hard to answer because privacy-compliant behavior is not operationalized for phone-use agents, and ordinary apps do not reveal exactly what data agents type into which form entries during execution. To make this question measurable, we introduce MyPhoneBench, a verifiable evaluation framework for privacy behavior in mobile agents. We operationalize privacy-respecting phone use as permissioned access, minimal disclosure, and user-controlled memory through a minimal privacy contract, iMy, and pair it with instrumented mock apps plus rule-based auditing that make unnecessary permission requests, deceptive re-disclosure, and unnecessary form filling observable and reproducible. Across five frontier models on 10 mobile apps and 300 tasks, we find that task success, privacy-compliant task completion, and later-session use of saved preferences are distinct capabilities, and no single model dominates all three. Evaluating success and privacy jointly reshuffles the model ordering relative to either metric alone. The most persistent failure mode across models is simple data minimization: agents still fill optional personal entries that the task does not require. These results show that privacy failures arise from over-helpful execution of benign tasks, and that success-only evaluation overestimates the deployment readiness of current phone-use agents. All code, mock apps, and agent trajectories are publicly available at~ https://github.com/tangzhy/MyPhoneBench."
-    }
-  },
-  {
-    "id": "2604.00942v1",
-    "title": "Differentially Private Manifold Denoising",
-    "authors": [
-      "Jiaqi Wu",
-      "Yiqing Sun",
-      "Zhigang Yao"
-    ],
-    "published_date": "2026-04-01",
-    "tags": [
       "cs.LG",
-      "cs.CR",
-      "math.ST"
+      "cs.SE"
     ],
-    "link": "http://arxiv.org/abs/2604.00942v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.00942v1",
+    "link": "http://arxiv.org/abs/2604.01977v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.01977v1",
     "content": {
-      "en": "We introduce a differentially private manifold denoising framework that allows users to exploit sensitive reference datasets to correct noisy, non-private query points without compromising privacy. The method follows an iterative procedure that (i) privately estimates local means and tangent geometry using the reference data under calibrated sensitivity, (ii) projects query points along the privately estimated subspace toward the local mean via corrective steps at each iteration, and (iii) performs rigorous privacy accounting across iterations and queries using $(\\varepsilon,δ)$-differential privacy (DP). Conceptually, this framework brings differential privacy to manifold methods, retaining sufficient geometric signal for downstream tasks such as embedding, clustering, and visualization, while providing formal DP guarantees for the reference data. Practically, the procedure is modular and scalable, separating DP-protected local geometry (means and tangents) from budgeted query-point updates, with a simple scheduler allocating privacy budget across iterations and queries. Under standard assumptions on manifold regularity, sampling density, and measurement noise, we establish high-probability utility guarantees showing that corrected queries converge toward the manifold at a non-asymptotic rate governed by sample size, noise level, bandwidth, and the privacy budget. Simulations and case studies demonstrate accurate signal recovery under moderate privacy budgets, illustrating clear utility-privacy trade-offs and providing a deployable DP component for manifold-based workflows in regulated environments without reengineering privacy systems.",
-      "tr": "We introduce a differentially private manifold denoising framework that allows users to exploit sensitive reference datasets to correct noisy, non-private query points without compromising privacy. The method follows an iterative procedure that (i) privately estimates local means and tangent geometry using the reference data under calibrated sensitivity, (ii) projects query points along the privately estimated subspace toward the local mean via corrective steps at each iteration, and (iii) performs rigorous privacy accounting across iterations and queries using $(\\varepsilon,δ)$-differential privacy (DP). Conceptually, this framework brings differential privacy to manifold methods, retaining sufficient geometric signal for downstream tasks such as embedding, clustering, and visualization, while providing formal DP guarantees for the reference data. Practically, the procedure is modular and scalable, separating DP-protected local geometry (means and tangents) from budgeted query-point updates, with a simple scheduler allocating privacy budget across iterations and queries. Under standard assumptions on manifold regularity, sampling density, and measurement noise, we establish high-probability utility guarantees showing that corrected queries converge toward the manifold at a non-asymptotic rate governed by sample size, noise level, bandwidth, and the privacy budget. Simulations and case studies demonstrate accurate signal recovery under moderate privacy budgets, illustrating clear utility-privacy trade-offs and providing a deployable DP component for manifold-based workflows in regulated environments without reengineering privacy systems."
+      "en": "Security teams face a challenge: the volume of newly disclosed Common Vulnerabilities and Exposures (CVEs) far exceeds the capacity to manually develop detection mechanisms. In 2025, the National Vulnerability Database published over 48,000 new vulnerabilities, motivating the need for automation. We present RuleForge, an AWS internal system that automatically generates detection rules--JSON-based patterns that identify malicious HTTP requests exploiting specific vulnerabilities--from structured Nuclei templates describing CVE details. Nuclei templates provide standardized, YAML-based vulnerability descriptions that serve as the structured input for our rule generation process.   This paper focuses on RuleForge's architecture and operational deployment for CVE-related threat detection, with particular emphasis on our novel LLM-as-a-judge (Large Language Model as judge) confidence validation system and systematic feedback integration mechanism. This validation approach evaluates candidate rules across two dimensions--sensitivity (avoiding false negatives) and specificity (avoiding false positives)--achieving AUROC of 0.75 and reducing false positives by 67% compared to synthetic-test-only validation in production. Our 5x5 generation strategy (five parallel candidates with up to five refinement attempts each) combined with continuous feedback loops enables systematic quality improvement. We also present extensions enabling rule generation from unstructured data sources and demonstrate a proof-of-concept agentic workflow for multi-event-type detection. Our lessons learned highlight critical considerations for applying LLMs to cybersecurity tasks, including overconfidence mitigation and the importance of domain expertise in both prompt design and quality review of generated rules through human-in-the-loop validation.",
+      "tr": "Security teams face a challenge: the volume of newly disclosed Common Vulnerabilities and Exposures (CVEs) far exceeds the capacity to manually develop detection mechanisms. In 2025, the National Vulnerability Database published over 48,000 new vulnerabilities, motivating the need for automation. We present RuleForge, an AWS internal system that automatically generates detection rules--JSON-based patterns that identify malicious HTTP requests exploiting specific vulnerabilities--from structured Nuclei templates describing CVE details. Nuclei templates provide standardized, YAML-based vulnerability descriptions that serve as the structured input for our rule generation process.   This paper focuses on RuleForge's architecture and operational deployment for CVE-related threat detection, with particular emphasis on our novel LLM-as-a-judge (Large Language Model as judge) confidence validation system and systematic feedback integration mechanism. This validation approach evaluates candidate rules across two dimensions--sensitivity (avoiding false negatives) and specificity (avoiding false positives)--achieving AUROC of 0.75 and reducing false positives by 67% compared to synthetic-test-only validation in production. Our 5x5 generation strategy (five parallel candidates with up to five refinement attempts each) combined with continuous feedback loops enables systematic quality improvement. We also present extensions enabling rule generation from unstructured data sources and demonstrate a proof-of-concept agentic workflow for multi-event-type detection. Our lessons learned highlight critical considerations for applying LLMs to cybersecurity tasks, including overconfidence mitigation and the importance of domain expertise in both prompt design and quality review of generated rules through human-in-the-loop validation."
     }
   },
   {
-    "id": "2604.00788v1",
-    "title": "UK AISI Alignment Evaluation Case-Study",
+    "id": "2604.01904v1",
+    "title": "Combating Data Laundering in LLM Training",
     "authors": [
-      "Alexandra Souly",
-      "Robert Kirk",
-      "Jacob Merizian",
-      "Abby D'Cruz",
-      "Xander Davies"
+      "Muxing Li",
+      "Zesheng Ye",
+      "Sharon Li",
+      "Feng Liu"
+    ],
+    "published_date": "2026-04-02",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.01904v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.01904v1",
+    "content": {
+      "en": "Data rights owners can detect unauthorized data use in large language model (LLM) training by querying with proprietary samples. Often, superior performance (e.g., higher confidence or lower loss) on a sample relative to the untrained data implies it was part of the training corpus, as LLMs tend to perform better on data they have seen during training. However, this detection becomes fragile under data laundering, a practice of transforming the stylistic form of proprietary data, while preserving critical information to obfuscate data provenance. When an LLM is trained exclusively on such laundered variants, it no longer performs better on originals, erasing the signals that standard detections rely on. We counter this by inferring the unknown laundering transformation from black-box access to the target LLM and, via an auxiliary LLM, synthesizing queries that mimic the laundered data, even if rights owners have only the originals. As the search space of finding true laundering transformations is infinite, we abstract such a process into a high-level transformation goal (e.g., \"lyrical rewriting\") and concrete details (e.g., \"with vivid imagery\"), and introduce synthesis data reversion (SDR) that instantiates this abstraction. SDR first identifies the most probable goal for synthesis to narrow the search; it then iteratively refines details so that synthesized queries gradually elicit stronger detection signals from the target LLM. Evaluated on the MIMIR benchmark against diverse laundering practices and target LLM families (Pythia, Llama2, and Falcon), SDR consistently strengthens data misuse detection, providing a practical countermeasure to data laundering.",
+      "tr": "Data rights owners can detect unauthorized data use in large language model (LLM) training by querying with proprietary samples. Often, superior performance (e.g., higher confidence or lower loss) on a sample relative to the untrained data implies it was part of the training corpus, as LLMs tend to perform better on data they have seen during training. However, this detection becomes fragile under data laundering, a practice of transforming the stylistic form of proprietary data, while preserving critical information to obfuscate data provenance. When an LLM is trained exclusively on such laundered variants, it no longer performs better on originals, erasing the signals that standard detections rely on. We counter this by inferring the unknown laundering transformation from black-box access to the target LLM and, via an auxiliary LLM, synthesizing queries that mimic the laundered data, even if rights owners have only the originals. As the search space of finding true laundering transformations is infinite, we abstract such a process into a high-level transformation goal (e.g., \"lyrical rewriting\") and concrete details (e.g., \"with vivid imagery\"), and introduce synthesis data reversion (SDR) that instantiates this abstraction. SDR first identifies the most probable goal for synthesis to narrow the search; it then iteratively refines details so that synthesized queries gradually elicit stronger detection signals from the target LLM. Evaluated on the MIMIR benchmark against diverse laundering practices and target LLM families (Pythia, Llama2, and Falcon), SDR consistently strengthens data misuse detection, providing a practical countermeasure to data laundering."
+    }
+  },
+  {
+    "id": "2604.01637v1",
+    "title": "Seclens: Role-specific Evaluation of LLM's for security vulnerablity detection",
+    "authors": [
+      "Subho Halder",
+      "Siddharth Saxena",
+      "Kashinath Kadaba Shrish",
+      "Thiyagarajan M"
+    ],
+    "published_date": "2026-04-02",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.01637v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.01637v1",
+    "content": {
+      "en": "Existing benchmarks for LLM-based vulnerability detection compress model performance into a single metric, which fails to reflect the distinct priorities of different stakeholders. For example, a CISO may emphasize high recall of critical vulnerabilities, an engineering leader may prioritize minimizing false positives, and an AI officer may balance capability against cost. To address this limitation, we introduce SecLens-R, a multi-stakeholder evaluation framework structured around 35 shared dimensions grouped into 7 measurement categories. The framework defines five role-specific weighting profiles: CISO, Chief AI Officer, Security Researcher, Head of Engineering, and AI-as-Actor. Each profile selects 12 to 16 dimensions with weights summing to 80, yielding a composite Decision Score between 0 and 100.   We apply SecLens-R to evaluate 12 frontier models on a dataset of 406 tasks derived from 93 open-source projects, covering 10 programming languages and 8 OWASP-aligned vulnerability categories. Evaluations are conducted across two settings: Code-in-Prompt (CIP) and Tool-Use (TU). Results show substantial variation across stakeholder perspectives, with Decision Scores differing by as much as 31 points for the same model. For instance, Qwen3-Coder achieves an A (76.3) under the Head of Engineering profile but a D (45.2) under the CISO profile, while GPT-5.4 shows a similar disparity. These findings demonstrate that vulnerability detection is inherently a multi-objective problem and that stakeholder-aware evaluation provides insights that single aggregated metrics obscure.",
+      "tr": "Existing benchmarks for LLM-based vulnerability detection compress model performance into a single metric, which fails to reflect the distinct priorities of different stakeholders. For example, a CISO may emphasize high recall of critical vulnerabilities, an engineering leader may prioritize minimizing false positives, and an AI officer may balance capability against cost. To address this limitation, we introduce SecLens-R, a multi-stakeholder evaluation framework structured around 35 shared dimensions grouped into 7 measurement categories. The framework defines five role-specific weighting profiles: CISO, Chief AI Officer, Security Researcher, Head of Engineering, and AI-as-Actor. Each profile selects 12 to 16 dimensions with weights summing to 80, yielding a composite Decision Score between 0 and 100.   We apply SecLens-R to evaluate 12 frontier models on a dataset of 406 tasks derived from 93 open-source projects, covering 10 programming languages and 8 OWASP-aligned vulnerability categories. Evaluations are conducted across two settings: Code-in-Prompt (CIP) and Tool-Use (TU). Results show substantial variation across stakeholder perspectives, with Decision Scores differing by as much as 31 points for the same model. For instance, Qwen3-Coder achieves an A (76.3) under the Head of Engineering profile but a D (45.2) under the CISO profile, while GPT-5.4 shows a similar disparity. These findings demonstrate that vulnerability detection is inherently a multi-objective problem and that stakeholder-aware evaluation provides insights that single aggregated metrics obscure."
+    }
+  },
+  {
+    "id": "2604.01627v1",
+    "title": "RefinementEngine: Automating Intent-to-Device Filtering Policy Deployment under Network Constraints",
+    "authors": [
+      "Davide Colaiacomo",
+      "Chiara Bonfanti",
+      "Cataldo Basile"
+    ],
+    "published_date": "2026-04-02",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.01627v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.01627v1",
+    "content": {
+      "en": "Translating security intent into deployable network enforcement rules and maintaining their effectiveness despite evolving cyber threats remains a largely manual process in most Security Operations Centers (SOCs). In large and heterogeneous networks, this challenge is complicated by topology-dependent reachability constraints and device-specific security control capabilities, making the process slow, error-prone, and a recurring source of misconfigurations. This paper presents RefinementEngine, an engine that automates the refinement of high-level security intents into low-level, deployment-ready configurations. Given a network topology, devices, and available security controls, along with high-level intents and Cyber Threat Intelligence (CTI) reports, RefinementEngine automatically generates settings that implement the desired intent, counter reported threats, and can be directly deployed on target security controls. The proposed approach is validated through real-world use cases on packet and web filtering policies derived from actual CTI reports, demonstrating both correctness, practical applicability, and adaptability to new data.",
+      "tr": "Translating security intent into deployable network enforcement rules and maintaining their effectiveness despite evolving cyber threats remains a largely manual process in most Security Operations Centers (SOCs). In large and heterogeneous networks, this challenge is complicated by topology-dependent reachability constraints and device-specific security control capabilities, making the process slow, error-prone, and a recurring source of misconfigurations. This paper presents RefinementEngine, an engine that automates the refinement of high-level security intents into low-level, deployment-ready configurations. Given a network topology, devices, and available security controls, along with high-level intents and Cyber Threat Intelligence (CTI) reports, RefinementEngine automatically generates settings that implement the desired intent, counter reported threats, and can be directly deployed on target security controls. The proposed approach is validated through real-world use cases on packet and web filtering policies derived from actual CTI reports, demonstrating both correctness, practical applicability, and adaptability to new data."
+    }
+  },
+  {
+    "id": "2604.01554v1",
+    "title": "EXHIB: A Benchmark for Realistic and Diverse Evaluation of Function Similarity in the Wild",
+    "authors": [
+      "Yiming Fan",
+      "Jun Yeon Won",
+      "Ding Zhu",
+      "Melih Sirlanci",
+      "Mahdi Khalili"
+    ],
+    "published_date": "2026-04-02",
+    "tags": [
+      "cs.CR",
+      "cs.LG",
+      "cs.SE"
+    ],
+    "link": "http://arxiv.org/abs/2604.01554v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.01554v1",
+    "content": {
+      "en": "Binary Function Similarity Detection (BFSD) is a core problem in software security, supporting tasks such as vulnerability analysis, malware classification, and patch provenance. In the past few decades, numerous models and tools have been developed for this application; however, due to the lack of a comprehensive universal benchmark in this field, researchers have struggled to compare different models effectively. Existing datasets are limited in scope, often focusing on a narrow set of transformations or types of binaries, and fail to reflect the full diversity of real-world applications.   We introduce EXHIB, a benchmark comprising five realistic datasets collected from the wild, each highlighting a distinct aspect of the BFSD problem space. We evaluate 9 representative models spanning multiple BFSD paradigms on EXHIB and observe performance degradations of up to 30% on firmware and semantic datasets compared to standard settings, revealing substantial generalization gaps. Our results show that robustness to low- and mid-level binary variations does not generalize to high-level semantic differences, underscoring a critical blind spot in current BFSD evaluation practices.",
+      "tr": "Binary Function Similarity Detection (BFSD) is a core problem in software security, supporting tasks such as vulnerability analysis, malware classification, and patch provenance. In the past few decades, numerous models and tools have been developed for this application; however, due to the lack of a comprehensive universal benchmark in this field, researchers have struggled to compare different models effectively. Existing datasets are limited in scope, often focusing on a narrow set of transformations or types of binaries, and fail to reflect the full diversity of real-world applications.   We introduce EXHIB, a benchmark comprising five realistic datasets collected from the wild, each highlighting a distinct aspect of the BFSD problem space. We evaluate 9 representative models spanning multiple BFSD paradigms on EXHIB and observe performance degradations of up to 30% on firmware and semantic datasets compared to standard settings, revealing substantial generalization gaps. Our results show that robustness to low- and mid-level binary variations does not generalize to high-level semantic differences, underscoring a critical blind spot in current BFSD evaluation practices."
+    }
+  },
+  {
+    "id": "2604.01483v1",
+    "title": "Type-Checked Compliance: Deterministic Guardrails for Agentic Financial Systems Using Lean 4 Theorem Proving",
+    "authors": [
+      "Devakh Rashie",
+      "Veda Rashi"
     ],
     "published_date": "2026-04-01",
     "tags": [
+      "cs.LO",
       "cs.AI",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2604.00788v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.00788v1",
+    "link": "http://arxiv.org/abs/2604.01483v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.01483v1",
     "content": {
-      "en": "This technical report presents methods developed by the UK AI Security Institute for assessing whether advanced AI systems reliably follow intended goals. Specifically, we evaluate whether frontier models sabotage safety research when deployed as coding assistants within an AI lab. Applying our methods to four frontier models, we find no confirmed instances of research sabotage. However, we observe that Claude Opus 4.5 Preview (a pre-release snapshot of Opus 4.5) and Sonnet 4.5 frequently refuse to engage with safety-relevant research tasks, citing concerns about research direction, involvement in self-training, and research scope. We additionally find that Opus 4.5 Preview shows reduced unprompted evaluation awareness compared to Sonnet 4.5, while both models can distinguish evaluation from deployment scenarios when prompted. Our evaluation framework builds on Petri, an open-source LLM auditing tool, with a custom scaffold designed to simulate realistic internal deployment of a coding agent. We validate that this scaffold produces trajectories that all tested models fail to reliably distinguish from real deployment data. We test models across scenarios varying in research motivation, activity type, replacement threat, and model autonomy. Finally, we discuss limitations including scenario coverage and evaluation awareness.",
-      "tr": "This technical report presents methods developed by the UK AI Security Institute for assessing whether advanced AI systems reliably follow intended goals. Specifically, we evaluate whether frontier models sabotage safety research when deployed as coding assistants within an AI lab. Applying our methods to four frontier models, we find no confirmed instances of research sabotage. However, we observe that Claude Opus 4.5 Preview (a pre-release snapshot of Opus 4.5) and Sonnet 4.5 frequently refuse to engage with safety-relevant research tasks, citing concerns about research direction, involvement in self-training, and research scope. We additionally find that Opus 4.5 Preview shows reduced unprompted evaluation awareness compared to Sonnet 4.5, while both models can distinguish evaluation from deployment scenarios when prompted. Our evaluation framework builds on Petri, an open-source LLM auditing tool, with a custom scaffold designed to simulate realistic internal deployment of a coding agent. We validate that this scaffold produces trajectories that all tested models fail to reliably distinguish from real deployment data. We test models across scenarios varying in research motivation, activity type, replacement threat, and model autonomy. Finally, we discuss limitations including scenario coverage and evaluation awareness."
+      "en": "The rapid evolution of autonomous, agentic artificial intelligence within financial services has introduced an existential architectural crisis: large language models (LLMs) are probabilistic, non-deterministic systems operating in domains that demand absolute, mathematically verifiable compliance guarantees. Existing guardrail solutions -- including NVIDIA NeMo Guardrails and Guardrails AI -- rely on probabilistic classifiers and syntactic validators that are fundamentally inadequate for enforcing complex multi-variable regulatory constraints mandated by the SEC, FINRA, and OCC. This paper presents the Lean-Agent Protocol, a formal-verification-based AI guardrail platform that leverages the Aristotle neural-symbolic model developed by Harmonic AI to auto-formalize institutional policies into Lean 4 code. Every proposed agentic action is treated as a mathematical conjecture: execution is permitted if and only if the Lean 4 kernel proves that the action satisfies pre-compiled regulatory axioms. This architecture provides cryptographic-level compliance certainty at microsecond latency, directly satisfying SEC Rule 15c3-5, OCC Bulletin 2011-12, FINRA Rule 3110, and CFPB explainability mandates. A three-phase implementation roadmap from shadow verification through enterprise-scale deployment is provided.",
+      "tr": "The rapid evolution of autonomous, agentic artificial intelligence within financial services has introduced an existential architectural crisis: large language models (LLMs) are probabilistic, non-deterministic systems operating in domains that demand absolute, mathematically verifiable compliance guarantees. Existing guardrail solutions -- including NVIDIA NeMo Guardrails and Guardrails AI -- rely on probabilistic classifiers and syntactic validators that are fundamentally inadequate for enforcing complex multi-variable regulatory constraints mandated by the SEC, FINRA, and OCC. This paper presents the Lean-Agent Protocol, a formal-verification-based AI guardrail platform that leverages the Aristotle neural-symbolic model developed by Harmonic AI to auto-formalize institutional policies into Lean 4 code. Every proposed agentic action is treated as a mathematical conjecture: execution is permitted if and only if the Lean 4 kernel proves that the action satisfies pre-compiled regulatory axioms. This architecture provides cryptographic-level compliance certainty at microsecond latency, directly satisfying SEC Rule 15c3-5, OCC Bulletin 2011-12, FINRA Rule 3110, and CFPB explainability mandates. A three-phase implementation roadmap from shadow verification through enterprise-scale deployment is provided."
     }
   },
   {
-    "id": "2604.00704v1",
-    "title": "AutoEG: Exploiting Known Third-Party Vulnerabilities in Black-Box Web Applications",
+    "id": "2604.01473v1",
+    "title": "SelfGrader: Stable Jailbreak Detection for Large Language Models using Token-Level Logits",
     "authors": [
-      "Ruozhao Yang",
-      "Mingfei Cheng",
-      "Gelei Deng",
-      "Junjie Wang",
-      "Tianwei Zhang"
+      "Zikai Zhang",
+      "Rui Hu",
+      "Olivera Kotevska",
+      "Jiahao Xu"
     ],
     "published_date": "2026-04-01",
     "tags": [
       "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.01473v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.01473v1",
+    "content": {
+      "en": "Large Language Models (LLMs) are powerful tools for answering user queries, yet they remain highly vulnerable to jailbreak attacks. Existing guardrail methods typically rely on internal features or textual responses to detect malicious queries, which either introduce substantial latency or suffer from the randomness in text generation. To overcome these limitations, we propose SelfGrader, a lightweight guardrail method that formulates jailbreak detection as a numerical grading problem using token-level logits. Specifically, SelfGrader evaluates the safety of a user query within a compact set of numerical tokens (NTs) (e.g., 0-9) and interprets their logit distribution as an internal safety signal. To align these signals with human intuition of maliciousness, SelfGrader introduces a dual-perspective scoring rule that considers both the maliciousness and benignness of the query, yielding a stable and interpretable score that reflects harmfulness and reduces the false positive rate simultaneously. Extensive experiments across diverse jailbreak benchmarks, multiple LLMs, and state-of-the-art guardrail baselines demonstrate that SelfGrader achieves up to a 22.66% reduction in ASR on LLaMA-3-8B, while maintaining significantly lower memory overhead (up to 173x) and latency (up to 26x).",
+      "tr": "Large Language Models (LLMs) are powerful tools for answering user queries, yet they remain highly vulnerable to jailbreak attacks. Existing guardrail methods typically rely on internal features or textual responses to detect malicious queries, which either introduce substantial latency or suffer from the randomness in text generation. To overcome these limitations, we propose SelfGrader, a lightweight guardrail method that formulates jailbreak detection as a numerical grading problem using token-level logits. Specifically, SelfGrader evaluates the safety of a user query within a compact set of numerical tokens (NTs) (e.g., 0-9) and interprets their logit distribution as an internal safety signal. To align these signals with human intuition of maliciousness, SelfGrader introduces a dual-perspective scoring rule that considers both the maliciousness and benignness of the query, yielding a stable and interpretable score that reflects harmfulness and reduces the false positive rate simultaneously. Extensive experiments across diverse jailbreak benchmarks, multiple LLMs, and state-of-the-art guardrail baselines demonstrate that SelfGrader achieves up to a 22.66% reduction in ASR on LLaMA-3-8B, while maintaining significantly lower memory overhead (up to 173x) and latency (up to 26x)."
+    }
+  },
+  {
+    "id": "2604.01350v1",
+    "title": "No Attacker Needed: Unintentional Cross-User Contamination in Shared-State LLM Agents",
+    "authors": [
+      "Tiankai Yang",
+      "Jiate Li",
+      "Yi Nian",
+      "Shen Dong",
+      "Ruiyao Xu"
+    ],
+    "published_date": "2026-04-01",
+    "tags": [
+      "cs.CL",
       "cs.AI",
-      "cs.SE"
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2604.00704v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.00704v1",
+    "link": "http://arxiv.org/abs/2604.01350v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.01350v1",
     "content": {
-      "en": "Large-scale web applications are widely deployed with complex third-party components, inheriting security risks arising from component vulnerabilities. Security assessment is therefore required to determine whether such known vulnerabilities remain practically exploitable in real applications. Penetration testing is a widely adopted approach that validates exploitability by launching concrete attacks against known vulnerabilities in real-world black-box systems. However, existing approaches often fail to automatically generate reliable exploits, limiting their effectiveness in practical security assessment. This limitation mainly stems from two issues: (1) precisely triggering vulnerabilities with correct technical details, and (2) adapting exploits to diverse real-world deployment settings.   In this paper, we propose AutoEG, a fully automated multi-agent framework for exploit generation targeting black-box web applications. AutoEG has two phases: First, AutoEG extracts precise vulnerability trigger logic from unstructured vulnerability information and encapsulates it into reusable trigger functions. Second, AutoEG uses trigger functions for concrete attack objectives and iteratively refines exploits through feedback-driven interaction with the target application. We evaluate AutoEG on 104 real-world vulnerabilities with 29 attack objectives, resulting in 660 exploitation tasks and 55,440 exploit attempts. AutoEG achieves an average success rate of 82.41%, substantially outperforming state-of-the-art baselines, whose best performance reaches only 32.88%.",
-      "tr": "Large-scale web applications are widely deployed with complex third-party components, inheriting security risks arising from component vulnerabilities. Security assessment is therefore required to determine whether such known vulnerabilities remain practically exploitable in real applications. Penetration testing is a widely adopted approach that validates exploitability by launching concrete attacks against known vulnerabilities in real-world black-box systems. However, existing approaches often fail to automatically generate reliable exploits, limiting their effectiveness in practical security assessment. This limitation mainly stems from two issues: (1) precisely triggering vulnerabilities with correct technical details, and (2) adapting exploits to diverse real-world deployment settings.   In this paper, we propose AutoEG, a fully automated multi-agent framework for exploit generation targeting black-box web applications. AutoEG has two phases: First, AutoEG extracts precise vulnerability trigger logic from unstructured vulnerability information and encapsulates it into reusable trigger functions. Second, AutoEG uses trigger functions for concrete attack objectives and iteratively refines exploits through feedback-driven interaction with the target application. We evaluate AutoEG on 104 real-world vulnerabilities with 29 attack objectives, resulting in 660 exploitation tasks and 55,440 exploit attempts. AutoEG achieves an average success rate of 82.41%, substantially outperforming state-of-the-art baselines, whose best performance reaches only 32.88%."
-    }
-  },
-  {
-    "id": "2604.00387v1",
-    "title": "RAGShield: Provenance-Verified Defense-in-Depth Against Knowledge Base Poisoning in Government Retrieval-Augmented Generation Systems",
-    "authors": [
-      "KrishnaSaiReddy Patil"
-    ],
-    "published_date": "2026-04-01",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2604.00387v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.00387v1",
-    "content": {
-      "en": "RAG systems deployed across federal agencies for citizen-facing services are vulnerable to knowledge base poisoning attacks, where adversaries inject malicious documents to manipulate outputs. Recent work demonstrates that as few as 10 adversarial passages can achieve 98.2% retrieval success rates. We observe that RAG knowledge base poisoning is structurally analogous to software supply chain attacks, and propose RAGShield, a five-layer defense-in-depth framework applying supply chain provenance verification to the RAG knowledge pipeline. RAGShield introduces: (1) C2PA-inspired cryptographic document attestation blocking unsigned and forged documents at ingestion; (2) trust-weighted retrieval prioritizing provenance-verified sources; (3) a formal taint lattice with cross-source contradiction detection catching insider threats even when provenance is valid; (4) provenance-aware generation with auditable citations; and (5) NIST SP 800-53 compliance mapping across 15 control families. Evaluation on a 500-passage Natural Questions corpus with 63 attack documents and 200 queries against five adversary tiers achieves 0.0% attack success rate including adaptive attacks (95% CI: [0.0%, 1.9%]) with 0.0% false positive rate. We honestly report that insider in-place replacement attacks achieve 17.5% ASR, identifying the fundamental limit of ingestion-time defense. The cross-source contradiction detector catches subtle numerical manipulation attacks that bypass provenance verification entirely.",
-      "tr": "RAG systems deployed across federal agencies for citizen-facing services are vulnerable to knowledge base poisoning attacks, where adversaries inject malicious documents to manipulate outputs. Recent work demonstrates that as few as 10 adversarial passages can achieve 98.2% retrieval success rates. We observe that RAG knowledge base poisoning is structurally analogous to software supply chain attacks, and propose RAGShield, a five-layer defense-in-depth framework applying supply chain provenance verification to the RAG knowledge pipeline. RAGShield introduces: (1) C2PA-inspired cryptographic document attestation blocking unsigned and forged documents at ingestion; (2) trust-weighted retrieval prioritizing provenance-verified sources; (3) a formal taint lattice with cross-source contradiction detection catching insider threats even when provenance is valid; (4) provenance-aware generation with auditable citations; and (5) NIST SP 800-53 compliance mapping across 15 control families. Evaluation on a 500-passage Natural Questions corpus with 63 attack documents and 200 queries against five adversary tiers achieves 0.0% attack success rate including adaptive attacks (95% CI: [0.0%, 1.9%]) with 0.0% false positive rate. We honestly report that insider in-place replacement attacks achieve 17.5% ASR, identifying the fundamental limit of ingestion-time defense. The cross-source contradiction detector catches subtle numerical manipulation attacks that bypass provenance verification entirely."
-    }
-  },
-  {
-    "id": "2604.00181v1",
-    "title": "NFC based inventory control system for secure and efficient communication",
-    "authors": [
-      "Razi Iqbal",
-      "Awais Ahmad",
-      "Asfandyar Gillani"
-    ],
-    "published_date": "2026-03-31",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2604.00181v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.00181v1",
-    "content": {
-      "en": "This paper brings up this idea of using Near Field Communication (NFC) for inventory control system instead of using traditional barcodes. NFC because of its high security, ease of use and efficiency can be very suitable for systems like inventory control. In traditional inventory control systems, each product has a barcode pasted on it, which is vulnerable to attacks as barcodes are open and have no security. Furthermore, barcodes are prone to damages and can be unreliable when pasted on different types of products e.g. hot and frozen products, circular shaped products and irregular shaped products like clothes etc. NFC on the other hand is very efficient, secure and reliable when it comes to short-range wireless communication. In this paper we will present our prototype for the inventory control system of an electronic store in which each product has a passive NFC tag pasted to it. When a customer buys a product the receipt of the product is generated using NFC between the NFC passive tag on the product and NFC enabled device (e.g. smart phone or reader) at the cash counter.",
-      "tr": "This paper brings up this idea of using Near Field Communication (NFC) for inventory control system instead of using traditional barcodes. NFC because of its high security, ease of use and efficiency can be very suitable for systems like inventory control. In traditional inventory control systems, each product has a barcode pasted on it, which is vulnerable to attacks as barcodes are open and have no security. Furthermore, barcodes are prone to damages and can be unreliable when pasted on different types of products e.g. hot and frozen products, circular shaped products and irregular shaped products like clothes etc. NFC on the other hand is very efficient, secure and reliable when it comes to short-range wireless communication. In this paper we will present our prototype for the inventory control system of an electronic store in which each product has a passive NFC tag pasted to it. When a customer buys a product the receipt of the product is generated using NFC between the NFC passive tag on the product and NFC enabled device (e.g. smart phone or reader) at the cash counter."
-    }
-  },
-  {
-    "id": "2604.00112v1",
-    "title": "Efficient Software Vulnerability Detection Using Transformer-based Models",
-    "authors": [
-      "Sameer Shaik",
-      "Zhen Huang",
-      "Daniela Stan Raicu",
-      "Jacob Furst"
-    ],
-    "published_date": "2026-03-31",
-    "tags": [
-      "cs.CR",
-      "cs.LG",
-      "cs.SE"
-    ],
-    "link": "http://arxiv.org/abs/2604.00112v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.00112v1",
-    "content": {
-      "en": "Detecting software vulnerabilities is critical to ensuring the security and reliability of modern computer systems. Deep neural networks have shown promising results on vulnerability detection, but they lack the capability to capture global contextual information on vulnerable code. To address this limitation, we explore the application of transformers for C/C++ vulnerability detection. We use program slices that encapsulate key syntactic and semantic features of program code, such as API function calls, array usage, pointer manipulations, and arithmetic expressions. By leveraging transformers' capability to capture both local and global contextual information on vulnerable code, our work can identify vulnerabilities accurately. Combined with data balancing and hyperparameter fine-tuning, our work offers a robust and efficient approach to identifying vulnerable code with moderate resource usage and training time.",
-      "tr": "Detecting software vulnerabilities is critical to ensuring the security and reliability of modern computer systems. Deep neural networks have shown promising results on vulnerability detection, but they lack the capability to capture global contextual information on vulnerable code. To address this limitation, we explore the application of transformers for C/C++ vulnerability detection. We use program slices that encapsulate key syntactic and semantic features of program code, such as API function calls, array usage, pointer manipulations, and arithmetic expressions. By leveraging transformers' capability to capture both local and global contextual information on vulnerable code, our work can identify vulnerabilities accurately. Combined with data balancing and hyperparameter fine-tuning, our work offers a robust and efficient approach to identifying vulnerable code with moderate resource usage and training time."
-    }
-  },
-  {
-    "id": "2603.30017v1",
-    "title": "Refined Detection for Gumbel Watermarking",
-    "authors": [
-      "Tor Lattimore"
-    ],
-    "published_date": "2026-03-31",
-    "tags": [
-      "cs.LG",
-      "cs.CR",
-      "stat.ML"
-    ],
-    "link": "http://arxiv.org/abs/2603.30017v1",
-    "pdf_link": "https://arxiv.org/pdf/2603.30017v1",
-    "content": {
-      "en": "We propose a simple detection mechanism for the Gumbel watermarking scheme proposed by Aaronson (2022). The new mechanism is proven to be near-optimal in a problem-dependent sense among all model-agnostic watermarking schemes under the assumption that the next-token distribution is sampled i.i.d.",
-      "tr": "We propose a simple detection mechanism for the Gumbel watermarking scheme proposed by Aaronson (2022). The new mechanism is proven to be near-optimal in a problem-dependent sense among all model-agnostic watermarking schemes under the assumption that the next-token distribution is sampled i.i.d."
+      "en": "LLM-based agents increasingly operate across repeated sessions, maintaining task states to ensure continuity. In many deployments, a single agent serves multiple users within a team or organization, reusing a shared knowledge layer across user identities. This shared persistence expands the failure surface: information that is locally valid for one user can silently degrade another user's outcome when the agent reapplies it without regard for scope. We refer to this failure mode as unintentional cross-user contamination (UCC). Unlike adversarial memory poisoning, UCC requires no attacker; it arises from benign interactions whose scope-bound artifacts persist and are later misapplied. We formalize UCC through a controlled evaluation protocol, introduce a taxonomy of three contamination types, and evaluate the problem in two shared-state mechanisms. Under raw shared state, benign interactions alone produce contamination rates of 57--71%. A write-time sanitization is effective when shared state is conversational, but leaves substantial residual risk when shared state includes executable artifacts, with contamination often manifesting as silent wrong answers. These results indicate that shared-state agents need artifact-level defenses beyond text-level sanitization to prevent silent cross-user failures.",
+      "tr": "LLM-based agents increasingly operate across repeated sessions, maintaining task states to ensure continuity. In many deployments, a single agent serves multiple users within a team or organization, reusing a shared knowledge layer across user identities. This shared persistence expands the failure surface: information that is locally valid for one user can silently degrade another user's outcome when the agent reapplies it without regard for scope. We refer to this failure mode as unintentional cross-user contamination (UCC). Unlike adversarial memory poisoning, UCC requires no attacker; it arises from benign interactions whose scope-bound artifacts persist and are later misapplied. We formalize UCC through a controlled evaluation protocol, introduce a taxonomy of three contamination types, and evaluate the problem in two shared-state mechanisms. Under raw shared state, benign interactions alone produce contamination rates of 57--71%. A write-time sanitization is effective when shared state is conversational, but leaves substantial residual risk when shared state includes executable artifacts, with contamination often manifesting as silent wrong answers. These results indicate that shared-state agents need artifact-level defenses beyond text-level sanitization to prevent silent cross-user failures."
     }
   }
 ]
