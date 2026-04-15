@@ -1,225 +1,205 @@
 [
   {
-    "id": "2604.11430v1",
-    "title": "Hardening x402: PII-Safe Agentic Payments via Pre-Execution Metadata Filtering",
+    "id": "2604.12994v1",
+    "title": "LogicEval: A Systematic Framework for Evaluating Automated Repair Techniques for Logical Vulnerabilities in Real-World Software",
     "authors": [
-      "Vladimir Stantchev"
+      "Syed Md Mukit Rashid",
+      "Abdullah Al Ishtiaq",
+      "Kai Tu",
+      "Yilu Dong",
+      "Tianwei Wu"
     ],
-    "published_date": "2026-04-13",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CY"
-    ],
-    "link": "http://arxiv.org/abs/2604.11430v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.11430v1",
-    "content": {
-      "en": "AI agents that pay for resources via the x402 protocol embed payment metadata - resource URLs, descriptions, and reason strings - in every HTTP payment request. This metadata is transmitted to the payment server and to the centralised facilitator API before any on-chain settlement occurs; neither party is typically bound by a data processing agreement. We present presidio-hardened-x402, the first open-source middleware that intercepts x402 payment requests before transmission to detect and redact personally identifiable information (PII), enforce declarative spending policies, and block duplicate replay attempts. To evaluate the PII filter, we construct a labeled synthetic corpus of 2,000 x402 metadata triples spanning seven use-case categories, and run a 42-configuration precision/recall sweep across two detection modes (regex, NLP) and five confidence thresholds. The recommended configuration (mode=nlp, min_score=0.4, all entity types) achieves micro-F1 = 0.894 with precision 0.972, at a p99 latency of 5.73ms - well within the 50ms overhead budget. The middleware, corpus, and all experiment code are publicly available at https://github.com/presidio-v/presidio-hardened-x402.",
-      "tr": "AI agents that pay for resources via the x402 protocol embed payment metadata - resource URLs, descriptions, and reason strings - in every HTTP payment request. This metadata is transmitted to the payment server and to the centralised facilitator API before any on-chain settlement occurs; neither party is typically bound by a data processing agreement. We present presidio-hardened-x402, the first open-source middleware that intercepts x402 payment requests before transmission to detect and redact personally identifiable information (PII), enforce declarative spending policies, and block duplicate replay attempts. To evaluate the PII filter, we construct a labeled synthetic corpus of 2,000 x402 metadata triples spanning seven use-case categories, and run a 42-configuration precision/recall sweep across two detection modes (regex, NLP) and five confidence thresholds. The recommended configuration (mode=nlp, min_score=0.4, all entity types) achieves micro-F1 = 0.894 with precision 0.972, at a p99 latency of 5.73ms - well within the 50ms overhead budget. The middleware, corpus, and all experiment code are publicly available at https://github.com/presidio-v/presidio-hardened-x402."
-    }
-  },
-  {
-    "id": "2604.11419v1",
-    "title": "Beyond RAG for Cyber Threat Intelligence: A Systematic Evaluation of Graph-Based and Agentic Retrieval",
-    "authors": [
-      "Dzenan Hamzic",
-      "Florian Skopik",
-      "Max Landauer",
-      "Markus Wurzenberger",
-      "Andreas Rauber"
-    ],
-    "published_date": "2026-04-13",
-    "tags": [
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2604.11419v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.11419v1",
-    "content": {
-      "en": "Cyber threat intelligence (CTI) analysts must answer complex questions over large collections of narrative security reports. Retrieval-augmented generation (RAG) systems help language models access external knowledge, but traditional vector retrieval often struggles with queries that require reasoning over relationships between entities such as threat actors, malware, and vulnerabilities. This limitation arises because relevant evidence is often distributed across multiple text fragments and documents. Knowledge graphs address this challenge by enabling structured multi-hop reasoning through explicit representations of entities and relationships. However, multiple retrieval paradigms, including graph-based, agentic, and hybrid approaches, have emerged with different assumptions and failure modes. It remains unclear how these approaches compare in realistic CTI settings and when graph grounding improves performance. We present a systematic evaluation of four RAG architectures for CTI analysis: standard vector retrieval, graph-based retrieval over a CTI knowledge graph, an agentic variant that repairs failed graph queries, and a hybrid approach combining graph queries with text retrieval. We evaluate these systems on 3,300 CTI question-answer pairs spanning factual lookups, multi-hop relational queries, analyst-style synthesis questions, and unanswerable cases. Results show that graph grounding improves performance on structured factual queries. The hybrid graph-text approach improves answer quality by up to 35 percent on multi-hop questions compared to vector RAG, while maintaining more reliable performance than graph-only systems.",
-      "tr": "Cyber threat intelligence (CTI) analysts must answer complex questions over large collections of narrative security reports. Retrieval-augmented generation (RAG) systems help language models access external knowledge, but traditional vector retrieval often struggles with queries that require reasoning over relationships between entities such as threat actors, malware, and vulnerabilities. This limitation arises because relevant evidence is often distributed across multiple text fragments and documents. Knowledge graphs address this challenge by enabling structured multi-hop reasoning through explicit representations of entities and relationships. However, multiple retrieval paradigms, including graph-based, agentic, and hybrid approaches, have emerged with different assumptions and failure modes. It remains unclear how these approaches compare in realistic CTI settings and when graph grounding improves performance. We present a systematic evaluation of four RAG architectures for CTI analysis: standard vector retrieval, graph-based retrieval over a CTI knowledge graph, an agentic variant that repairs failed graph queries, and a hybrid approach combining graph queries with text retrieval. We evaluate these systems on 3,300 CTI question-answer pairs spanning factual lookups, multi-hop relational queries, analyst-style synthesis questions, and unanswerable cases. Results show that graph grounding improves performance on structured factual queries. The hybrid graph-text approach improves answer quality by up to 35 percent on multi-hop questions compared to vector RAG, while maintaining more reliable performance than graph-only systems."
-    }
-  },
-  {
-    "id": "2604.11324v1",
-    "title": "BRIDGE and TCH-Net: Heterogeneous Benchmark and Multi-Branch Baseline for Cross-Domain IoT Botnet Detection",
-    "authors": [
-      "Ammar Bhilwarawala",
-      "Likhamba Rongmei",
-      "Harsh Sharma",
-      "Arya Jena",
-      "Kaushal Singh"
-    ],
-    "published_date": "2026-04-13",
-    "tags": [
-      "cs.CR",
-      "cs.LG",
-      "cs.NI"
-    ],
-    "link": "http://arxiv.org/abs/2604.11324v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.11324v1",
-    "content": {
-      "en": "IoT botnet detection has advanced, yet most published systems are validated on a single dataset and rarely generalise across environments. Heterogeneous feature spaces make multi-dataset training practically impossible without discarding semantic interpretability or introducing data integrity violations. No prior work has addressed both problems with a formally specified, reproducible methodology. This paper does. We introduce BRIDGE (Benchmark Reference for IoT Domain Generalisation Evaluation), the first formally specified heterogeneous multi-dataset benchmark for IoT intrusion detection, unifying CICIDS-2017, CIC-IoT-2023, Bot-IoT, Edge-IIoTset, and N-BaIoT through a 46-feature semantic canonical vocabulary grounded in CICFlowMeter nomenclature, with genuine-equivalence-only feature mapping, explicit zero-filling, and per-dataset coverage from 15% to 93%. A leave-one-dataset-out (LODO) protocol makes the generalisation gap precisely measurable: all five evaluated architectures achieve mean LODO F1 between 0.39 and 0.47, and we establish the first community generalisation baseline at mean LODO F1 = 0.5577, a result that shifts the agenda from single-benchmark optimisation toward cross-environment generalisation. We propose TCH-Net, a multi-branch network fusing a three-path Temporal branch (residual convolutional-BiGRU, stride-downsampled BiGRU, pre-LayerNorm Transformer), a provenance-conditioned Contextual branch, and a Statistical branch via Cross-Branch Gated Attention Fusion (CB-GAF) with learnable sigmoid gates for dynamic feature-wise mixing. Across five random seeds, TCH-Net achieves F1 = 0.8296 +/- 0.0028, AUC = 0.9380 +/- 0.0025, and MCC = 0.6972 +/- 0.0056, outperforming all twelve baselines (p < 0.05, Wilcoxon) and recording the highest LODO F1 overall. BRIDGE and the full pipeline are at https://github.com/Ammar-ss/TCH-Net.",
-      "tr": "IoT botnet detection has advanced, yet most published systems are validated on a single dataset and rarely generalise across environments. Heterogeneous feature spaces make multi-dataset training practically impossible without discarding semantic interpretability or introducing data integrity violations. No prior work has addressed both problems with a formally specified, reproducible methodology. This paper does. We introduce BRIDGE (Benchmark Reference for IoT Domain Generalisation Evaluation), the first formally specified heterogeneous multi-dataset benchmark for IoT intrusion detection, unifying CICIDS-2017, CIC-IoT-2023, Bot-IoT, Edge-IIoTset, and N-BaIoT through a 46-feature semantic canonical vocabulary grounded in CICFlowMeter nomenclature, with genuine-equivalence-only feature mapping, explicit zero-filling, and per-dataset coverage from 15% to 93%. A leave-one-dataset-out (LODO) protocol makes the generalisation gap precisely measurable: all five evaluated architectures achieve mean LODO F1 between 0.39 and 0.47, and we establish the first community generalisation baseline at mean LODO F1 = 0.5577, a result that shifts the agenda from single-benchmark optimisation toward cross-environment generalisation. We propose TCH-Net, a multi-branch network fusing a three-path Temporal branch (residual convolutional-BiGRU, stride-downsampled BiGRU, pre-LayerNorm Transformer), a provenance-conditioned Contextual branch, and a Statistical branch via Cross-Branch Gated Attention Fusion (CB-GAF) with learnable sigmoid gates for dynamic feature-wise mixing. Across five random seeds, TCH-Net achieves F1 = 0.8296 +/- 0.0028, AUC = 0.9380 +/- 0.0025, and MCC = 0.6972 +/- 0.0056, outperforming all twelve baselines (p < 0.05, Wilcoxon) and recording the highest LODO F1 overall. BRIDGE and the full pipeline are at https://github.com/Ammar-ss/TCH-Net."
-    }
-  },
-  {
-    "id": "2604.11309v1",
-    "title": "The Salami Slicing Threat: Exploiting Cumulative Risks in LLM Systems",
-    "authors": [
-      "Yihao Zhang",
-      "Kai Wang",
-      "Jiangrong Wu",
-      "Haolin Wu",
-      "Yuxuan Zhou"
-    ],
-    "published_date": "2026-04-13",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL",
-      "cs.CV",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2604.11309v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.11309v1",
-    "content": {
-      "en": "Large Language Models (LLMs) face prominent security risks from jailbreaking, a practice that manipulates models to bypass built-in security constraints and generate unethical or unsafe content. Among various jailbreak techniques, multi-turn jailbreak attacks are more covert and persistent than single-turn counterparts, exposing critical vulnerabilities of LLMs.   However, existing multi-turn jailbreak methods suffer from two fundamental limitations that affect the actual impact in real-world scenarios: (a) As models become more context-aware, any explicit harmful trigger is increasingly likely to be flagged and blocked; (b) Successful final-step triggers often require finely tuned, model-specific contexts, making such attacks highly context-dependent. To fill this gap, we propose \\textit{Salami Slicing Risk}, which operates by chaining numerous low-risk inputs that individually evade alignment thresholds but cumulatively accumulate harmful intent to ultimately trigger high-risk behaviors, without heavy reliance on pre-designed contextual structures. Building on this risk, we develop Salami Attack, an automatic framework universally applicable to multiple model types and modalities.   Rigorous experiments demonstrate its state-of-the-art performance across diverse models and modalities, achieving over 90\\% Attack Success Rate on GPT-4o and Gemini, as well as robustness against real-world alignment defenses. We also proposed a defense strategy to constrain the Salami Attack by at least 44.8\\% while achieving a maximum blocking rate of 64.8\\% against other multi-turn jailbreak attacks. Our findings provide critical insights into the pervasive risks of multi-turn jailbreaking and offer actionable mitigation strategies to enhance LLM security.",
-      "tr": "Large Language Models (LLMs) face prominent security risks from jailbreaking, a practice that manipulates models to bypass built-in security constraints and generate unethical or unsafe content. Among various jailbreak techniques, multi-turn jailbreak attacks are more covert and persistent than single-turn counterparts, exposing critical vulnerabilities of LLMs.   However, existing multi-turn jailbreak methods suffer from two fundamental limitations that affect the actual impact in real-world scenarios: (a) As models become more context-aware, any explicit harmful trigger is increasingly likely to be flagged and blocked; (b) Successful final-step triggers often require finely tuned, model-specific contexts, making such attacks highly context-dependent. To fill this gap, we propose \\textit{Salami Slicing Risk}, which operates by chaining numerous low-risk inputs that individually evade alignment thresholds but cumulatively accumulate harmful intent to ultimately trigger high-risk behaviors, without heavy reliance on pre-designed contextual structures. Building on this risk, we develop Salami Attack, an automatic framework universally applicable to multiple model types and modalities.   Rigorous experiments demonstrate its state-of-the-art performance across diverse models and modalities, achieving over 90\\% Attack Success Rate on GPT-4o and Gemini, as well as robustness against real-world alignment defenses. We also proposed a defense strategy to constrain the Salami Attack by at least 44.8\\% while achieving a maximum blocking rate of 64.8\\% against other multi-turn jailbreak attacks. Our findings provide critical insights into the pervasive risks of multi-turn jailbreaking and offer actionable mitigation strategies to enhance LLM security."
-    }
-  },
-  {
-    "id": "2604.11259v1",
-    "title": "Mobile GUI Agent Privacy Personalization with Trajectory Induced Preference Optimization",
-    "authors": [
-      "Zhixin Lin",
-      "Jungang Li",
-      "Dongliang Xu",
-      "Shidong Pan",
-      "Yibo Shi"
-    ],
-    "published_date": "2026-04-13",
-    "tags": [
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2604.11259v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.11259v1",
-    "content": {
-      "en": "Mobile GUI agents powered by Multimodal Large Language Models (MLLMs) can execute complex tasks on mobile devices. Despite this progress, most existing systems still optimize task success or efficiency, neglecting users' privacy personalization. In this paper, we study the often-overlooked problem of agent personalization. We observe that personalization can induce systematic structural heterogeneity in execution trajectories. For example, privacy-first users often prefer protective actions, e.g., refusing permissions, logging out, and minimizing exposure, leading to logically different execution trajectories from utility-first users. Such variable-length and structurally different trajectories make standard preference optimization unstable and less informative. To address this issue, we propose Trajectory Induced Preference Optimization (TIPO), which uses preference-intensity weighting to emphasize key privacy-related steps and padding gating to suppress alignment noise. Results on our Privacy Preference Dataset show that TIPO improves persona alignment and distinction while preserving strong task executability, achieving 65.60% SR, 46.22 Compliance, and 66.67% PD, outperforming existing optimization methods across various GUI tasks. The code and dataset will be publicly released at https://github.com/Zhixin-L/TIPO.",
-      "tr": "Mobile GUI agents powered by Multimodal Large Language Models (MLLMs) can execute complex tasks on mobile devices. Despite this progress, most existing systems still optimize task success or efficiency, neglecting users' privacy personalization. In this paper, we study the often-overlooked problem of agent personalization. We observe that personalization can induce systematic structural heterogeneity in execution trajectories. For example, privacy-first users often prefer protective actions, e.g., refusing permissions, logging out, and minimizing exposure, leading to logically different execution trajectories from utility-first users. Such variable-length and structurally different trajectories make standard preference optimization unstable and less informative. To address this issue, we propose Trajectory Induced Preference Optimization (TIPO), which uses preference-intensity weighting to emphasize key privacy-related steps and padding gating to suppress alignment noise. Results on our Privacy Preference Dataset show that TIPO improves persona alignment and distinction while preserving strong task executability, achieving 65.60% SR, 46.22 Compliance, and 66.67% PD, outperforming existing optimization methods across various GUI tasks. The code and dataset will be publicly released at https://github.com/Zhixin-L/TIPO."
-    }
-  },
-  {
-    "id": "2604.11141v1",
-    "title": "Reducing Hallucination in Enterprise AI Workflows via Hybrid Utility Minimum Bayes Risk (HUMBR)",
-    "authors": [
-      "Chenhao Fang",
-      "Jordi Mola",
-      "Mark Harman",
-      "Jason Nawrocki",
-      "Vaibhav Shrivastava"
-    ],
-    "published_date": "2026-04-13",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2604.11141v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.11141v1",
-    "content": {
-      "en": "Although LLMs drive automation, it is critical to ensure immense consideration for high-stakes enterprise workflows such as those involving legal matters, risk management, and privacy compliance. For Meta, and other organizations like ours, a single hallucinated clause in such high stakes workflows risks material consequences. We show that by framing hallucination mitigation as a Minimum Bayes Risk (MBR) problem, we can dramatically reduce this risk. Specifically, we introduce a Hybrid Utility MBR (HUMBR) framework that synthesizes semantic embedding similarity with lexical precision to identify consensus without ground-truth references, for which we derive rigorous error bounds. We complement this theoretical analysis with a comprehensive empirical evaluation on widely-used public benchmark suites (TruthfulQA and LegalBench) and also real world data from Meta production deployment. The results from our empirical study show that MBR significantly outperforms standard Universal Self-Consistency. Notably, 81% of the pipeline's suggestions were preferred over human-crafted ground truth, and critical recall failures were virtually eliminated.",
-      "tr": "Although LLMs drive automation, it is critical to ensure immense consideration for high-stakes enterprise workflows such as those involving legal matters, risk management, and privacy compliance. For Meta, and other organizations like ours, a single hallucinated clause in such high stakes workflows risks material consequences. We show that by framing hallucination mitigation as a Minimum Bayes Risk (MBR) problem, we can dramatically reduce this risk. Specifically, we introduce a Hybrid Utility MBR (HUMBR) framework that synthesizes semantic embedding similarity with lexical precision to identify consensus without ground-truth references, for which we derive rigorous error bounds. We complement this theoretical analysis with a comprehensive empirical evaluation on widely-used public benchmark suites (TruthfulQA and LegalBench) and also real world data from Meta production deployment. The results from our empirical study show that MBR significantly outperforms standard Universal Self-Consistency. Notably, 81% of the pipeline's suggestions were preferred over human-crafted ground truth, and critical recall failures were virtually eliminated."
-    }
-  },
-  {
-    "id": "2604.10933v1",
-    "title": "QShield: Securing Neural Networks Against Adversarial Attacks using Quantum Circuits",
-    "authors": [
-      "Navid Azimi",
-      "Aditya Prakash",
-      "Yao Wang",
-      "Li Xiong"
-    ],
-    "published_date": "2026-04-13",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CV",
-      "cs.LG",
-      "quant-ph"
-    ],
-    "link": "http://arxiv.org/abs/2604.10933v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.10933v1",
-    "content": {
-      "en": "Deep neural networks remain highly vulnerable to adversarial perturbations, limiting their reliability in security- and safety-critical applications. To address this challenge, we introduce QShield, a modular hybrid quantum-classical neural network (HQCNN) architecture designed to enhance the adversarial robustness of classical deep learning models. QShield integrates a conventional convolutional neural network (CNN) backbone for feature extraction with a quantum processing module that encodes the extracted features into quantum states, applies structured entanglement operations under realistic noise models, and outputs a hybrid prediction through a dynamically weighted fusion mechanism implemented via a lightweight multilayer perceptron (MLP). We systematically evaluate both classical and hybrid quantum-classical models on the MNIST, OrganAMNIST, and CIFAR-10 datasets, using a comprehensive set of robustness, efficiency, and computational performance metrics. Our results demonstrate that classical models are highly vulnerable to adversarial attacks, whereas the proposed hybrid models with entanglement patterns maintain high predictive accuracy while substantially reducing attack success rates across a wide range of adversarial attacks. Furthermore, the proposed hybrid architecture significantly increased the computational cost required to generate adversarial examples, thereby introducing an additional layer of defense. These findings indicate that the proposed modular hybrid architecture achieves a practical balance between predictive accuracy and adversarial robustness, positioning it as a promising approach for secure and reliable machine learning in sensitive and safety-critical applications.",
-      "tr": "Deep neural networks remain highly vulnerable to adversarial perturbations, limiting their reliability in security- and safety-critical applications. To address this challenge, we introduce QShield, a modular hybrid quantum-classical neural network (HQCNN) architecture designed to enhance the adversarial robustness of classical deep learning models. QShield integrates a conventional convolutional neural network (CNN) backbone for feature extraction with a quantum processing module that encodes the extracted features into quantum states, applies structured entanglement operations under realistic noise models, and outputs a hybrid prediction through a dynamically weighted fusion mechanism implemented via a lightweight multilayer perceptron (MLP). We systematically evaluate both classical and hybrid quantum-classical models on the MNIST, OrganAMNIST, and CIFAR-10 datasets, using a comprehensive set of robustness, efficiency, and computational performance metrics. Our results demonstrate that classical models are highly vulnerable to adversarial attacks, whereas the proposed hybrid models with entanglement patterns maintain high predictive accuracy while substantially reducing attack success rates across a wide range of adversarial attacks. Furthermore, the proposed hybrid architecture significantly increased the computational cost required to generate adversarial examples, thereby introducing an additional layer of defense. These findings indicate that the proposed modular hybrid architecture achieves a practical balance between predictive accuracy and adversarial robustness, positioning it as a promising approach for secure and reliable machine learning in sensitive and safety-critical applications."
-    }
-  },
-  {
-    "id": "2604.10893v1",
-    "title": "Beyond A Fixed Seal: Adaptive Stealing Watermark in Large Language Models",
-    "authors": [
-      "Shuhao Zhang",
-      "Yuli Chen",
-      "Jiale Han",
-      "Bo Cheng",
-      "Jiabao Ma"
-    ],
-    "published_date": "2026-04-13",
+    "published_date": "2026-04-14",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2604.10893v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.10893v1",
+    "link": "http://arxiv.org/abs/2604.12994v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.12994v1",
     "content": {
-      "en": "Watermarking provides a critical safeguard for large language model (LLM) services by facilitating the detection of LLM-generated text. Correspondingly, stealing watermark algorithms (SWAs) derive watermark information from watermarked texts generated by victim LLMs to craft highly targeted adversarial attacks, which compromise the reliability of watermarks. Existing SWAs rely on fixed strategies, overlooking the non-uniform distribution of stolen watermark information and the dynamic nature of real-world LLM generation processes. To address these limitations, we propose Adaptive Stealing (AS), a novel SWA featuring enhanced design flexibility through Position-Based Seal Construction and Adaptive Selection modules. AS operates by defining multiple attack perspectives derived from distinct activation states of contextually ordered tokens. During attack execution, AS dynamically selects the optimal perspective based on watermark compatibility, generation priority, and dynamic generation relevance. Our experiments demonstrate that AS significantly increases steal efficiency against target watermarks under identical experimental conditions. These findings highlight the need for more robust LLM watermarks to withstand potential attacks. We release our code to the community for future research\\footnote{https://github.com/DrankXs/AdaptiveStealingWatermark}.",
-      "tr": "Watermarking provides a critical safeguard for large language model (LLM) services by facilitating the detection of LLM-generated text. Correspondingly, stealing watermark algorithms (SWAs) derive watermark information from watermarked texts generated by victim LLMs to craft highly targeted adversarial attacks, which compromise the reliability of watermarks. Existing SWAs rely on fixed strategies, overlooking the non-uniform distribution of stolen watermark information and the dynamic nature of real-world LLM generation processes. To address these limitations, we propose Adaptive Stealing (AS), a novel SWA featuring enhanced design flexibility through Position-Based Seal Construction and Adaptive Selection modules. AS operates by defining multiple attack perspectives derived from distinct activation states of contextually ordered tokens. During attack execution, AS dynamically selects the optimal perspective based on watermark compatibility, generation priority, and dynamic generation relevance. Our experiments demonstrate that AS significantly increases steal efficiency against target watermarks under identical experimental conditions. These findings highlight the need for more robust LLM watermarks to withstand potential attacks. We release our code to the community for future research\\footnote{https://github.com/DrankXs/AdaptiveStealingWatermark}."
+      "en": "Logical vulnerabilities in software stem from flaws in program logic rather than memory safety, which can lead to critical security failures. Although existing automated program repair techniques primarily focus on repairing memory corruption vulnerabilities, they struggle with logical vulnerabilities because of their limited semantic understanding of the vulnerable code and its expected behavior. On the other hand, recent successes of large language models (LLMs) in understanding and repairing code are promising. However, no framework currently exists to analyze the capabilities and limitations of such techniques for logical vulnerabilities. This paper aims to systematically evaluate both traditional and LLM-based repair approaches for addressing real-world logical vulnerabilities. To facilitate our assessment, we created the first ever dataset, LogicDS, of 86 logical vulnerabilities with assigned CVEs reflecting tangible security impact. We also developed a systematic framework, LogicEval, to evaluate patches for logical vulnerabilities. Evaluations suggest that compilation and testing failures are primarily driven by prompt sensitivity, loss of code context, and difficulty in patch localization.",
+      "tr": "Logical vulnerabilities in software stem from flaws in program logic rather than memory safety, which can lead to critical security failures. Although existing automated program repair techniques primarily focus on repairing memory corruption vulnerabilities, they struggle with logical vulnerabilities because of their limited semantic understanding of the vulnerable code and its expected behavior. On the other hand, recent successes of large language models (LLMs) in understanding and repairing code are promising. However, no framework currently exists to analyze the capabilities and limitations of such techniques for logical vulnerabilities. This paper aims to systematically evaluate both traditional and LLM-based repair approaches for addressing real-world logical vulnerabilities. To facilitate our assessment, we created the first ever dataset, LogicDS, of 86 logical vulnerabilities with assigned CVEs reflecting tangible security impact. We also developed a systematic framework, LogicEval, to evaluate patches for logical vulnerabilities. Evaluations suggest that compilation and testing failures are primarily driven by prompt sensitivity, loss of code context, and difficulty in patch localization."
     }
   },
   {
-    "id": "2604.10800v1",
-    "title": "Verify Before You Fix: Agentic Execution Grounding for Trustworthy Cross-Language Code Analysis",
+    "id": "2604.12986v1",
+    "title": "Parallax: Why AI Agents That Think Must Never Act",
     "authors": [
-      "Jugal Gajjar"
+      "Joel Fokou"
     ],
-    "published_date": "2026-04-12",
+    "published_date": "2026-04-14",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.12986v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.12986v1",
+    "content": {
+      "en": "Autonomous AI agents are rapidly transitioning from experimental tools to operational infrastructure, with projections that 80% of enterprise applications will embed AI copilots by the end of 2026. As agents gain the ability to execute real-world actions (reading files, running commands, making network requests, modifying databases), a fundamental security gap has emerged. The dominant approach to agent safety relies on prompt-level guardrails: natural language instructions that operate at the same abstraction level as the threats they attempt to mitigate. This paper argues that prompt-based safety is architecturally insufficient for agents with execution capability and introduces Parallax, a paradigm for safe autonomous AI execution grounded in four principles: Cognitive-Executive Separation, which structurally prevents the reasoning system from executing actions; Adversarial Validation with Graduated Determinism, which interposes an independent, multi-tiered validator between reasoning and execution; Information Flow Control, which propagates data sensitivity labels through agent workflows to detect context-dependent threats; and Reversible Execution, which captures pre-destructive state to enable rollback when validation fails. We present OpenParallax, an open-source reference implementation in Go, and evaluate it using Assume-Compromise Evaluation, a methodology that bypasses the reasoning system entirely to test the architectural boundary under full agent compromise. Across 280 adversarial test cases in nine attack categories, Parallax blocks 98.9% of attacks with zero false positives under its default configuration, and 100% of attacks under its maximum-security configuration. When the reasoning system is compromised, prompt-level guardrails provide zero protection because they exist only within the compromised system; Parallax's architectural boundary holds regardless.",
+      "tr": "Autonomous AI agents are rapidly transitioning from experimental tools to operational infrastructure, with projections that 80% of enterprise applications will embed AI copilots by the end of 2026. As agents gain the ability to execute real-world actions (reading files, running commands, making network requests, modifying databases), a fundamental security gap has emerged. The dominant approach to agent safety relies on prompt-level guardrails: natural language instructions that operate at the same abstraction level as the threats they attempt to mitigate. This paper argues that prompt-based safety is architecturally insufficient for agents with execution capability and introduces Parallax, a paradigm for safe autonomous AI execution grounded in four principles: Cognitive-Executive Separation, which structurally prevents the reasoning system from executing actions; Adversarial Validation with Graduated Determinism, which interposes an independent, multi-tiered validator between reasoning and execution; Information Flow Control, which propagates data sensitivity labels through agent workflows to detect context-dependent threats; and Reversible Execution, which captures pre-destructive state to enable rollback when validation fails. We present OpenParallax, an open-source reference implementation in Go, and evaluate it using Assume-Compromise Evaluation, a methodology that bypasses the reasoning system entirely to test the architectural boundary under full agent compromise. Across 280 adversarial test cases in nine attack categories, Parallax blocks 98.9% of attacks with zero false positives under its default configuration, and 100% of attacks under its maximum-security configuration. When the reasoning system is compromised, prompt-level guardrails provide zero protection because they exist only within the compromised system; Parallax's architectural boundary holds regardless."
+    }
+  },
+  {
+    "id": "2604.12913v1",
+    "title": "CoDe-R: Refining Decompiler Output with LLMs via Rationale Guidance and Adaptive Inference",
+    "authors": [
+      "Qiang Zhang",
+      "Zhongnian Li"
+    ],
+    "published_date": "2026-04-14",
     "tags": [
       "cs.SE",
       "cs.AI",
-      "cs.CR",
-      "cs.LG",
-      "cs.PL"
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2604.10800v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.10800v1",
+    "link": "http://arxiv.org/abs/2604.12913v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.12913v1",
     "content": {
-      "en": "Learned classifiers deployed in agentic pipelines face a fundamental reliability problem: predictions are probabilistic inferences, not verified conclusions, and acting on them without grounding in observable evidence leads to compounding failures across downstream stages. Software vulnerability analysis makes this cost concrete and measurable. We address this through a unified cross-language vulnerability lifecycle framework built around three LLM-driven reasoning stages-hybrid structural-semantic detection, execution-grounded agentic validation, and validation-aware iterative repair-governed by a strict invariant: no repair action is taken without execution-based confirmation of exploitability. Cross-language generalization is achieved via a Universal Abstract Syntax Tree (uAST) normalizing Java, Python, and C++ into a shared structural schema, combined with a hybrid fusion of GraphSAGE and Qwen2.5-Coder-1.5B embeddings through learned two-way gating, whose per-sample weights provide intrinsic explainability at no additional cost. The framework achieves 89.84-92.02% intra-language detection accuracy and 74.43-80.12% zero-shot cross-language F1, resolving 69.74% of vulnerabilities end-to-end at a 12.27% total failure rate. Ablations establish necessity: removing uAST degrades cross-language F1 by 23.42%, while disabling validation increases unnecessary repairs by 131.7%. These results demonstrate that execution-grounded closed-loop reasoning is a principled and practically deployable mechanism for trustworthy LLM-driven agentic AI.",
-      "tr": "Learned classifiers deployed in agentic pipelines face a fundamental reliability problem: predictions are probabilistic inferences, not verified conclusions, and acting on them without grounding in observable evidence leads to compounding failures across downstream stages. Software vulnerability analysis makes this cost concrete and measurable. We address this through a unified cross-language vulnerability lifecycle framework built around three LLM-driven reasoning stages-hybrid structural-semantic detection, execution-grounded agentic validation, and validation-aware iterative repair-governed by a strict invariant: no repair action is taken without execution-based confirmation of exploitability. Cross-language generalization is achieved via a Universal Abstract Syntax Tree (uAST) normalizing Java, Python, and C++ into a shared structural schema, combined with a hybrid fusion of GraphSAGE and Qwen2.5-Coder-1.5B embeddings through learned two-way gating, whose per-sample weights provide intrinsic explainability at no additional cost. The framework achieves 89.84-92.02% intra-language detection accuracy and 74.43-80.12% zero-shot cross-language F1, resolving 69.74% of vulnerabilities end-to-end at a 12.27% total failure rate. Ablations establish necessity: removing uAST degrades cross-language F1 by 23.42%, while disabling validation increases unnecessary repairs by 131.7%. These results demonstrate that execution-grounded closed-loop reasoning is a principled and practically deployable mechanism for trustworthy LLM-driven agentic AI."
+      "en": "Binary decompilation is a critical reverse engineering task aimed at reconstructing high-level source code from stripped executables. Although Large Language Models (LLMs) have recently shown promise, they often suffer from \"logical hallucinations\" and \"semantic misalignment\" due to the irreversible semantic loss during compilation, resulting in generated code that fails to re-execute. In this study, we propose Cognitive Decompiler Refinement with Robustness (CoDe-R), a lightweight two-stage code refinement framework. The first stage introduces Semantic Cognitive Enhancement (SCE), a Rationale-Guided Semantic Injection strategy that trains the model to recover high-level algorithmic intent alongside code. The second stage introduces a Dynamic Dual-Path Fallback (DDPF) mechanism during inference, which adaptively balances semantic recovery and syntactic stability via a hybrid verification strategy. Evaluation on the HumanEval-Decompile benchmark demonstrates that CoDe-R (using a 1.3B backbone) establishes a new State-of-the-Art (SOTA) in the lightweight regime. Notably, it is the first 1.3B model to exceed an Average Re-executability Rate of 50.00%, significantly outperforming the baseline and effectively bridging the gap between efficient models and expert-level performance. Our code is available at https://github.com/Theaoi/CoDe-R.",
+      "tr": "Binary decompilation is a critical reverse engineering task aimed at reconstructing high-level source code from stripped executables. Although Large Language Models (LLMs) have recently shown promise, they often suffer from \"logical hallucinations\" and \"semantic misalignment\" due to the irreversible semantic loss during compilation, resulting in generated code that fails to re-execute. In this study, we propose Cognitive Decompiler Refinement with Robustness (CoDe-R), a lightweight two-stage code refinement framework. The first stage introduces Semantic Cognitive Enhancement (SCE), a Rationale-Guided Semantic Injection strategy that trains the model to recover high-level algorithmic intent alongside code. The second stage introduces a Dynamic Dual-Path Fallback (DDPF) mechanism during inference, which adaptively balances semantic recovery and syntactic stability via a hybrid verification strategy. Evaluation on the HumanEval-Decompile benchmark demonstrates that CoDe-R (using a 1.3B backbone) establishes a new State-of-the-Art (SOTA) in the lightweight regime. Notably, it is the first 1.3B model to exceed an Average Re-executability Rate of 50.00%, significantly outperforming the baseline and effectively bridging the gap between efficient models and expert-level performance. Our code is available at https://github.com/Theaoi/CoDe-R."
     }
   },
   {
-    "id": "2604.10717v1",
-    "title": "Detecting RAG Extraction Attack via Dual-Path Runtime Integrity Game",
+    "id": "2604.12834v1",
+    "title": "Rapid LoRA Aggregation for Wireless Channel Adaptation in Open-Set Radio Frequency Fingerprinting",
     "authors": [
-      "Yuanbo Xie",
-      "Yingjie Zhang",
-      "Yulin Li",
-      "Shouyou Song",
-      "Xiaokun Chen"
+      "Mingxi Zhang",
+      "Renjie Xie",
+      "Jincheng Wang",
+      "Guyue Li",
+      "Wei Xu"
     ],
-    "published_date": "2026-04-12",
+    "published_date": "2026-04-14",
+    "tags": [
+      "eess.SP",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2604.12834v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.12834v1",
+    "content": {
+      "en": "Radio frequency fingerprints (RFFs) enable secure wireless authentication but struggle in open-set scenarios with unknown devices and varying channels. Existing methods face challenges in generalization and incur high computational costs. We propose a lightweight, self-adaptive RFF extraction framework using Low-Rank Adaptation (LoRA). By pretraining LoRA modules per environment, our method enables fast adaptation to unseen channel conditions without full retraining. During inference, a weighted combination of LoRAs dynamically enhances feature extraction. Experimental results demonstrate a 15% reduction in equal error rate (EER) compared to non-finetuned baselines and an 83% decrease in training time relative to full fine-tuning, using the same training dataset. This approach provides a scalable and efficient solution for open-set RFF authentication in dynamic wireless vehicular networks.",
+      "tr": "Radio frequency fingerprints (RFFs) enable secure wireless authentication but struggle in open-set scenarios with unknown devices and varying channels. Existing methods face challenges in generalization and incur high computational costs. We propose a lightweight, self-adaptive RFF extraction framework using Low-Rank Adaptation (LoRA). By pretraining LoRA modules per environment, our method enables fast adaptation to unseen channel conditions without full retraining. During inference, a weighted combination of LoRAs dynamically enhances feature extraction. Experimental results demonstrate a 15% reduction in equal error rate (EER) compared to non-finetuned baselines and an 83% decrease in training time relative to full fine-tuning, using the same training dataset. This approach provides a scalable and efficient solution for open-set RFF authentication in dynamic wireless vehicular networks."
+    }
+  },
+  {
+    "id": "2604.12817v1",
+    "title": "Understanding and Improving Continuous Adversarial Training for LLMs via In-context Learning Theory",
+    "authors": [
+      "Shaopeng Fu",
+      "Di Wang"
+    ],
+    "published_date": "2026-04-14",
+    "tags": [
+      "cs.LG",
+      "cs.CR",
+      "stat.ML"
+    ],
+    "link": "http://arxiv.org/abs/2604.12817v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.12817v1",
+    "content": {
+      "en": "Adversarial training (AT) is an effective defense for large language models (LLMs) against jailbreak attacks, but performing AT on LLMs is costly. To improve the efficiency of AT for LLMs, recent studies propose continuous AT (CAT) that searches for adversarial inputs within the continuous embedding space of LLMs during AT. While CAT has achieved empirical success, its underlying mechanism, i.e., why adversarial perturbations in the embedding space can help LLMs defend against jailbreak prompts synthesized in the input token space, remains unknown. This paper presents the first theoretical analysis of CAT on LLMs based on in-context learning (ICL) theory. For linear transformers trained with adversarial examples from the embedding space on in-context linear regression tasks, we prove a robust generalization bound that has a negative correlation with the perturbation radius in the embedding space. This clearly explains why CAT can defend against jailbreak prompts from the LLM's token space. Further, the robust bound shows that the robustness of an adversarially trained LLM is closely related to the singular values of its embedding matrix. Based on this, we propose to improve LLM CAT by introducing an additional regularization term, which depends on singular values of the LLM's embedding matrix, into the objective function of CAT. Experiments on real-world LLMs demonstrate that our method can help LLMs achieve a better jailbreak robustness-utility tradeoff. The code is available at https://github.com/fshp971/continuous-adv-icl.",
+      "tr": "Adversarial training (AT) is an effective defense for large language models (LLMs) against jailbreak attacks, but performing AT on LLMs is costly. To improve the efficiency of AT for LLMs, recent studies propose continuous AT (CAT) that searches for adversarial inputs within the continuous embedding space of LLMs during AT. While CAT has achieved empirical success, its underlying mechanism, i.e., why adversarial perturbations in the embedding space can help LLMs defend against jailbreak prompts synthesized in the input token space, remains unknown. This paper presents the first theoretical analysis of CAT on LLMs based on in-context learning (ICL) theory. For linear transformers trained with adversarial examples from the embedding space on in-context linear regression tasks, we prove a robust generalization bound that has a negative correlation with the perturbation radius in the embedding space. This clearly explains why CAT can defend against jailbreak prompts from the LLM's token space. Further, the robust bound shows that the robustness of an adversarially trained LLM is closely related to the singular values of its embedding matrix. Based on this, we propose to improve LLM CAT by introducing an additional regularization term, which depends on singular values of the LLM's embedding matrix, into the objective function of CAT. Experiments on real-world LLMs demonstrate that our method can help LLMs achieve a better jailbreak robustness-utility tradeoff. The code is available at https://github.com/fshp971/continuous-adv-icl."
+    }
+  },
+  {
+    "id": "2604.12737v1",
+    "title": "Evaluating Differential Privacy Against Membership Inference in Federated Learning: Insights from the NIST Genomics Red Team Challenge",
+    "authors": [
+      "Gustavo de Carvalho Bertoli"
+    ],
+    "published_date": "2026-04-14",
     "tags": [
       "cs.CR",
-      "cs.AI",
-      "cs.CL"
+      "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2604.10717v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.10717v1",
+    "link": "http://arxiv.org/abs/2604.12737v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.12737v1",
     "content": {
-      "en": "Retrieval-Augmented Generation (RAG) systems augment large language models with external knowledge, yet introduce a critical security vulnerability: RAG Knowledge Base Leakage, wherein adversarial prompts can induce the model to divulge retrieved proprietary content. Recent studies reveal that such leakage can be executed through adaptive and iterative attack strategies (named RAG extraction attack), while effective countermeasures remain notably lacking. To bridge this gap, we propose CanaryRAG, a runtime defense mechanism inspired by stack canaries in software security. CanaryRAG embeds carefully designed canary tokens into retrieved chunks and reformulates RAG extraction defense as a dual-path runtime integrity game. Leakage is detected in real time whenever either the target or oracle path violates its expected canary behavior, including under adaptive suppression and obfuscation. Extensive evaluations against existing attacks demonstrate that CanaryRAG provides robust defense, achieving substantially lower chunk recovery rates than state-of-the-art baselines while imposing negligible impact on task performance and inference latency. Moreover, as a plug-and-play solution, CanaryRAG can be seamlessly integrated into arbitrary RAG pipelines without requiring retraining or structural modifications, offering a practical and scalable safeguard for proprietary data.",
-      "tr": "Retrieval-Augmented Generation (RAG) systems augment large language models with external knowledge, yet introduce a critical security vulnerability: RAG Knowledge Base Leakage, wherein adversarial prompts can induce the model to divulge retrieved proprietary content. Recent studies reveal that such leakage can be executed through adaptive and iterative attack strategies (named RAG extraction attack), while effective countermeasures remain notably lacking. To bridge this gap, we propose CanaryRAG, a runtime defense mechanism inspired by stack canaries in software security. CanaryRAG embeds carefully designed canary tokens into retrieved chunks and reformulates RAG extraction defense as a dual-path runtime integrity game. Leakage is detected in real time whenever either the target or oracle path violates its expected canary behavior, including under adaptive suppression and obfuscation. Extensive evaluations against existing attacks demonstrate that CanaryRAG provides robust defense, achieving substantially lower chunk recovery rates than state-of-the-art baselines while imposing negligible impact on task performance and inference latency. Moreover, as a plug-and-play solution, CanaryRAG can be seamlessly integrated into arbitrary RAG pipelines without requiring retraining or structural modifications, offering a practical and scalable safeguard for proprietary data."
+      "en": "While Federated Learning (FL) mitigates direct data exposure, the resulting trained models remain susceptible to membership inference attacks (MIAs). This paper presents an empirical evaluation of Differential Privacy (DP) as a defense mechanism against MIAs in FL, leveraging the environment of the 2025 NIST Genomics Privacy-Preserving Federated Learning (PPFL) Red Teaming Event. To improve inference accuracy, we propose a stacking attack strategy that ensembles seven black-box estimators to train a meta-classifier on prediction probabilities and cross-entropy losses. We evaluate this methodology against target models under three privacy configurations: an unprotected convolutional neural network (CNN, $ε=\\infty$), a low-privacy DP model ($ε=200$), and a high-privacy DP model ($ε=10$). The attack outperforms all baselines in the No DP and Low Privacy settings and, critically, maintains measurable membership leakage at $ε=200$ where a single-signal LiRA baseline collapses. Evaluated on an independent third-party benchmark, these results provide an empirical characterisation of how stacking-based inference degrades across calibrated DP tiers in FL.",
+      "tr": "While Federated Learning (FL) mitigates direct data exposure, the resulting trained models remain susceptible to membership inference attacks (MIAs). This paper presents an empirical evaluation of Differential Privacy (DP) as a defense mechanism against MIAs in FL, leveraging the environment of the 2025 NIST Genomics Privacy-Preserving Federated Learning (PPFL) Red Teaming Event. To improve inference accuracy, we propose a stacking attack strategy that ensembles seven black-box estimators to train a meta-classifier on prediction probabilities and cross-entropy losses. We evaluate this methodology against target models under three privacy configurations: an unprotected convolutional neural network (CNN, $ε=\\infty$), a low-privacy DP model ($ε=200$), and a high-privacy DP model ($ε=10$). The attack outperforms all baselines in the No DP and Low Privacy settings and, critically, maintains measurable membership leakage at $ε=200$ where a single-signal LiRA baseline collapses. Evaluated on an independent third-party benchmark, these results provide an empirical characterisation of how stacking-based inference degrades across calibrated DP tiers in FL."
+    }
+  },
+  {
+    "id": "2604.12655v1",
+    "title": "Robust Semi-Supervised Temporal Intrusion Detection for Adversarial Cloud Networks",
+    "authors": [
+      "Anasuya Chattopadhyay",
+      "Daniel Reti",
+      "Hans D. Schotten"
+    ],
+    "published_date": "2026-04-14",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2604.12655v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.12655v1",
+    "content": {
+      "en": "Cloud networks increasingly rely on machine learning based Network Intrusion Detection Systems to defend against evolving cyber threats. However, real-world deployments are challenged by limited labeled data, non-stationary traffic, and adaptive adversaries. While semi-supervised learning can alleviate label scarcity, most existing approaches implicitly assume benign and stationary unlabeled traffic, leading to degraded performance in adversarial cloud environments. This paper proposes a robust semi-supervised temporal learning framework for cloud intrusion detection that explicitly addresses adversarial contamination and temporal drift in unlabeled network traffic. Operating on flow-level data, this framework combines supervised learning with consistency regularization, confidence-aware pseudo-labeling, and selective temporal invariance to conservatively exploit unlabeled traffic while suppressing unreliable samples. By leveraging the temporal structure of network flows, the proposed method improves robustness and generalization across heterogeneous cloud environments. Extensive evaluations on publicly available datasets (CIC-IDS2017, CSE-CIC-IDS2018, and UNSW-NB15) under limited-label conditions demonstrate that the proposed framework consistently outperforms state-of-the-art supervised and semi-supervised network intrusion detection systems in detection performance, label efficiency, and resilience to adversarial and non-stationary traffic.",
+      "tr": "Cloud networks increasingly rely on machine learning based Network Intrusion Detection Systems to defend against evolving cyber threats. However, real-world deployments are challenged by limited labeled data, non-stationary traffic, and adaptive adversaries. While semi-supervised learning can alleviate label scarcity, most existing approaches implicitly assume benign and stationary unlabeled traffic, leading to degraded performance in adversarial cloud environments. This paper proposes a robust semi-supervised temporal learning framework for cloud intrusion detection that explicitly addresses adversarial contamination and temporal drift in unlabeled network traffic. Operating on flow-level data, this framework combines supervised learning with consistency regularization, confidence-aware pseudo-labeling, and selective temporal invariance to conservatively exploit unlabeled traffic while suppressing unreliable samples. By leveraging the temporal structure of network flows, the proposed method improves robustness and generalization across heterogeneous cloud environments. Extensive evaluations on publicly available datasets (CIC-IDS2017, CSE-CIC-IDS2018, and UNSW-NB15) under limited-label conditions demonstrate that the proposed framework consistently outperforms state-of-the-art supervised and semi-supervised network intrusion detection systems in detection performance, label efficiency, and resilience to adversarial and non-stationary traffic."
+    }
+  },
+  {
+    "id": "2604.12601v1",
+    "title": "LLM-Guided Prompt Evolution for Password Guessing",
+    "authors": [
+      "Vladimir A. Mazin",
+      "Mikhail A. Zorin",
+      "Dmitrii S. Korzh",
+      "Elvir Z. Karimov",
+      "Dmitrii A. Bolokhov"
+    ],
+    "published_date": "2026-04-14",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.12601v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.12601v1",
+    "content": {
+      "en": "Passwords still remain a dominant authentication method, yet their security is routinely subverted by predictable user choices and large-scale credential leaks. Automated password guessing is a key tool for stress-testing password policies and modeling attacker behavior. This paper applies LLM-driven evolutionary computation to automatically optimize prompts for the LLM password guessing framework. Using OpenEvolve, an open-source system combining MAP-Elites quality-diversity search with an island population model we evolve prompts that maximize cracking rate on a RockYou-derived test set. We evaluate three configurations: a local setup with Qwen3 8B, a single compact cloud model Gemini-2.5 Flash, and a two-model ensemble of frontier LLMs. The approach raises the cracking rates from 2.02\\% to 8.48\\%. Character distribution analysis further confirms how evolved prompts produce statistically more realistic passwords. Automated prompt evolution is a low-barrier yet effective way to strengthen LLM-based password auditing and underlining how attack pipelines show tendency via automated improvements.",
+      "tr": "Passwords still remain a dominant authentication method, yet their security is routinely subverted by predictable user choices and large-scale credential leaks. Automated password guessing is a key tool for stress-testing password policies and modeling attacker behavior. This paper applies LLM-driven evolutionary computation to automatically optimize prompts for the LLM password guessing framework. Using OpenEvolve, an open-source system combining MAP-Elites quality-diversity search with an island population model we evolve prompts that maximize cracking rate on a RockYou-derived test set. We evaluate three configurations: a local setup with Qwen3 8B, a single compact cloud model Gemini-2.5 Flash, and a two-model ensemble of frontier LLMs. The approach raises the cracking rates from 2.02\\% to 8.48\\%. Character distribution analysis further confirms how evolved prompts produce statistically more realistic passwords. Automated prompt evolution is a low-barrier yet effective way to strengthen LLM-based password auditing and underlining how attack pipelines show tendency via automated improvements."
+    }
+  },
+  {
+    "id": "2604.12500v1",
+    "title": "Safety Training Modulates Harmful Misalignment Under On-Policy RL, But Direction Depends on Environment Design",
+    "authors": [
+      "Leon Eshuijs",
+      "Shihan Wang",
+      "Antske Fokkens"
+    ],
+    "published_date": "2026-04-14",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2604.12500v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.12500v1",
+    "content": {
+      "en": "Specification gaming under Reinforcement Learning (RL) is known to cause LLMs to develop sycophantic, manipulative, or deceptive behavior, yet the conditions under which this occurs remain unclear. We train 11 instruction-tuned LLMs (0.5B--14B) with on-policy RL across 3 environments and find that model size acts as a safety buffer in some environments but enables greater harmful exploitation in others. Controlled ablations trace this reversal to environment-specific features such as role framing and implicit gameability cues. We further show that most safety benchmarks do not predict RL-induced misalignment, except in the case of Sycophancy scores when the exploit relies on inferring the user's preference. Finally, we find that on-policy RL preserves a safety buffer inherent in the model's own generation distribution, one that is bypassed during off-policy settings.",
+      "tr": "Specification gaming under Reinforcement Learning (RL) is known to cause LLMs to develop sycophantic, manipulative, or deceptive behavior, yet the conditions under which this occurs remain unclear. We train 11 instruction-tuned LLMs (0.5B--14B) with on-policy RL across 3 environments and find that model size acts as a safety buffer in some environments but enables greater harmful exploitation in others. Controlled ablations trace this reversal to environment-specific features such as role framing and implicit gameability cues. We further show that most safety benchmarks do not predict RL-induced misalignment, except in the case of Sycophancy scores when the exploit relies on inferring the user's preference. Finally, we find that on-policy RL preserves a safety buffer inherent in the model's own generation distribution, one that is bypassed during off-policy settings."
+    }
+  },
+  {
+    "id": "2604.12431v1",
+    "title": "VeriX-Anon: A Multi-Layered Framework for Mathematically Verifiable Outsourced Target-Driven Data Anonymization",
+    "authors": [
+      "Miit Daga",
+      "Swarna Priya Ramu"
+    ],
+    "published_date": "2026-04-14",
+    "tags": [
+      "cs.CR",
+      "cs.DB",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2604.12431v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.12431v1",
+    "content": {
+      "en": "Organisations increasingly outsource privacy-sensitive data transformations to cloud providers, yet no practical mechanism lets the data owner verify that the contracted algorithm was faithfully executed. VeriX-Anon is a multi-layered verification framework for outsourced Target-Driven k-anonymization combining three orthogonal mechanisms: deterministic verification via Merkle-style hashing of an Authenticated Decision Tree, probabilistic verification via Boundary Sentinels near the Random Forest decision boundary and exact-duplicate Twins with cryptographic identifiers, and utility-based verification via Explainable AI fingerprinting that compares SHAP value distributions before and after anonymization using the Wasserstein distance. Evaluated on three cross-domain datasets against Lazy (drops 5 percent of records), Dumb (random splitting, fake hash), and Approximate (random splitting, valid hash) adversaries, VeriX-Anon correctly detected deviations in 11 of 12 scenarios. No single layer achieved this alone. The XAI layer was the only mechanism that caught the Approximate adversary, succeeding on Adult and Bank but failing on the severely imbalanced Diabetes dataset where class imbalance suppresses the SHAP signal, confirming the need for adaptive thresholding. An 11-point k-sweep showed Target-Driven anonymization preserves significantly more utility than Blind anonymization (Wilcoxon $p = 0.000977$, Cohen's $d = 1.96$, mean F1 gap $+0.1574$). Client-side verification completes under one second at one million rows. The threat model covers three empirically evaluated profiles and one theoretical profile (Informed Attacker) aware of trap embedding but unable to defeat the cryptographic salt. Sentinel evasion probability ranges from near-zero for balanced datasets to 0.52 for imbalanced ones, a limitation the twin layer compensates for in every tested scenario.",
+      "tr": "Organisations increasingly outsource privacy-sensitive data transformations to cloud providers, yet no practical mechanism lets the data owner verify that the contracted algorithm was faithfully executed. VeriX-Anon is a multi-layered verification framework for outsourced Target-Driven k-anonymization combining three orthogonal mechanisms: deterministic verification via Merkle-style hashing of an Authenticated Decision Tree, probabilistic verification via Boundary Sentinels near the Random Forest decision boundary and exact-duplicate Twins with cryptographic identifiers, and utility-based verification via Explainable AI fingerprinting that compares SHAP value distributions before and after anonymization using the Wasserstein distance. Evaluated on three cross-domain datasets against Lazy (drops 5 percent of records), Dumb (random splitting, fake hash), and Approximate (random splitting, valid hash) adversaries, VeriX-Anon correctly detected deviations in 11 of 12 scenarios. No single layer achieved this alone. The XAI layer was the only mechanism that caught the Approximate adversary, succeeding on Adult and Bank but failing on the severely imbalanced Diabetes dataset where class imbalance suppresses the SHAP signal, confirming the need for adaptive thresholding. An 11-point k-sweep showed Target-Driven anonymization preserves significantly more utility than Blind anonymization (Wilcoxon $p = 0.000977$, Cohen's $d = 1.96$, mean F1 gap $+0.1574$). Client-side verification completes under one second at one million rows. The threat model covers three empirically evaluated profiles and one theoretical profile (Informed Attacker) aware of trap embedding but unable to defeat the cryptographic salt. Sentinel evasion probability ranges from near-zero for balanced datasets to 0.52 for imbalanced ones, a limitation the twin layer compensates for in every tested scenario."
     }
   }
 ]
