@@ -1,213 +1,219 @@
 [
   {
-    "id": "2604.13849v1",
-    "title": "MCPThreatHive: Automated Threat Intelligence for Model Context Protocol Ecosystems",
+    "id": "2604.15115v1",
+    "title": "FedIDM: Achieving Fast and Stable Convergence in Byzantine Federated Learning through Iterative Distribution Matching",
     "authors": [
-      "Yi Ting Shen",
-      "Kentaroh Toyoda",
-      "Alex Leung"
+      "He Yang",
+      "Dongyi Lv",
+      "Wei Xi",
+      "Song Ma",
+      "Hanlin Gu"
+    ],
+    "published_date": "2026-04-16",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2604.15115v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.15115v1",
+    "content": {
+      "en": "Most existing Byzantine-robust federated learning (FL) methods suffer from slow and unstable convergence. Moreover, when handling a substantial proportion of colluded malicious clients, achieving robustness typically entails compromising model utility. To address these issues, this work introduces FedIDM, which employs distribution matching to construct trustworthy condensed data for identifying and filtering abnormal clients. FedIDM consists of two main components: (1) attack-tolerant condensed data generation, and (2) robust aggregation with negative contribution-based rejection. These components exclude local updates that (1) deviate from the update direction derived from condensed data, or (2) cause a significant loss on the condensed dataset. Comprehensive evaluations on three benchmark datasets demonstrate that FedIDM achieves fast and stable convergence while maintaining acceptable model utility, under multiple state-of-the-art Byzantine attacks involving a large number of malicious clients.",
+      "tr": "Most existing Byzantine-robust federated learning (FL) methods suffer from slow and unstable convergence. Moreover, when handling a substantial proportion of colluded malicious clients, achieving robustness typically entails compromising model utility. To address these issues, this work introduces FedIDM, which employs distribution matching to construct trustworthy condensed data for identifying and filtering abnormal clients. FedIDM consists of two main components: (1) attack-tolerant condensed data generation, and (2) robust aggregation with negative contribution-based rejection. These components exclude local updates that (1) deviate from the update direction derived from condensed data, or (2) cause a significant loss on the condensed dataset. Comprehensive evaluations on three benchmark datasets demonstrate that FedIDM achieves fast and stable convergence while maintaining acceptable model utility, under multiple state-of-the-art Byzantine attacks involving a large number of malicious clients."
+    }
+  },
+  {
+    "id": "2604.15063v1",
+    "title": "No More Guessing: a Verifiable Gradient Inversion Attack in Federated Learning",
+    "authors": [
+      "Francesco Diana",
+      "Chuan Xu",
+      "André Nusser",
+      "Giovanni Neglia"
+    ],
+    "published_date": "2026-04-16",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2604.15063v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.15063v1",
+    "content": {
+      "en": "Gradient inversion attacks threaten client privacy in federated learning by reconstructing training samples from clients' shared gradients. Gradients aggregate contributions from multiple records and existing attacks may fail to disentangle them, yielding incorrect reconstructions with no intrinsic way to certify success. In vision and language, attackers may fall back on human inspection to judge reconstruction plausibility, but this is far less feasible for numerical tabular records, fueling the impression that tabular data is less vulnerable.   We challenge this perception by proposing a verifiable gradient inversion attack (VGIA) that provides an explicit certificate of correctness for reconstructed samples. Our method adopts a geometric view of ReLU leakage: the activation boundary of a fully connected layer defines a hyperplane in input space. VGIA introduces an algebraic, subspace-based verification test that detects when a hyperplane-delimited region contains exactly one record. Once isolation is certified, VGIA recovers the corresponding feature vector analytically and reconstructs the target via a lightweight optimization step.   Experiments on tabular benchmarks with large batch sizes demonstrate exact record and target recovery in regimes where existing state-of-the-art attacks either fail or cannot assess reconstruction fidelity. Compared to prior geometric approaches, VGIA allocates hyperplane queries more effectively, yielding faster reconstructions with fewer attack rounds.",
+      "tr": "Gradient inversion attacks threaten client privacy in federated learning by reconstructing training samples from clients' shared gradients. Gradients aggregate contributions from multiple records and existing attacks may fail to disentangle them, yielding incorrect reconstructions with no intrinsic way to certify success. In vision and language, attackers may fall back on human inspection to judge reconstruction plausibility, but this is far less feasible for numerical tabular records, fueling the impression that tabular data is less vulnerable.   We challenge this perception by proposing a verifiable gradient inversion attack (VGIA) that provides an explicit certificate of correctness for reconstructed samples. Our method adopts a geometric view of ReLU leakage: the activation boundary of a fully connected layer defines a hyperplane in input space. VGIA introduces an algebraic, subspace-based verification test that detects when a hyperplane-delimited region contains exactly one record. Once isolation is certified, VGIA recovers the corresponding feature vector analytically and reconstructs the target via a lightweight optimization step.   Experiments on tabular benchmarks with large batch sizes demonstrate exact record and target recovery in regimes where existing state-of-the-art attacks either fail or cannot assess reconstruction fidelity. Compared to prior geometric approaches, VGIA allocates hyperplane queries more effectively, yielding faster reconstructions with fewer attack rounds."
+    }
+  },
+  {
+    "id": "2604.15022v1",
+    "title": "Route to Rome Attack: Directing LLM Routers to Expensive Models via Adversarial Suffix Optimization",
+    "authors": [
+      "Haochun Tang",
+      "Yuliang Yan",
+      "Jiahua Lu",
+      "Huaxiao Liu",
+      "Enyan Dai"
+    ],
+    "published_date": "2026-04-16",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2604.15022v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.15022v1",
+    "content": {
+      "en": "Cost-aware routing dynamically dispatches user queries to models of varying capability to balance performance and inference cost. However, the routing strategy introduces a new security concern that adversaries may manipulate the router to consistently select expensive high-capability models. Existing routing attacks depend on either white-box access or heuristic prompts, rendering them ineffective in real-world black-box scenarios. In this work, we propose R$^2$A, which aims to mislead black-box LLM routers to expensive models via adversarial suffix optimization. Specifically, R$^2$A deploys a hybrid ensemble surrogate router to mimic the black-box router. A suffix optimization algorithm is further adapted for the ensemble-based surrogate. Extensive experiments on multiple open-source and commercial routing systems demonstrate that {R$^2$A} significantly increases the routing rate to expensive models on queries of different distributions. Code and examples: https://github.com/thcxiker/R2A-Attack.",
+      "tr": "Cost-aware routing dynamically dispatches user queries to models of varying capability to balance performance and inference cost. However, the routing strategy introduces a new security concern that adversaries may manipulate the router to consistently select expensive high-capability models. Existing routing attacks depend on either white-box access or heuristic prompts, rendering them ineffective in real-world black-box scenarios. In this work, we propose R$^2$A, which aims to mislead black-box LLM routers to expensive models via adversarial suffix optimization. Specifically, R$^2$A deploys a hybrid ensemble surrogate router to mimic the black-box router. A suffix optimization algorithm is further adapted for the ensemble-based surrogate. Extensive experiments on multiple open-source and commercial routing systems demonstrate that {R$^2$A} significantly increases the routing rate to expensive models on queries of different distributions. Code and examples: https://github.com/thcxiker/R2A-Attack."
+    }
+  },
+  {
+    "id": "2604.14957v1",
+    "title": "MLDAS: Machine Learning Dynamic Algorithm Selection for Software-Defined Networking Security",
+    "authors": [
+      "Pablo Benlloch",
+      "Oscar Romero",
+      "Antonio Leon",
+      "Jaime Lloret"
+    ],
+    "published_date": "2026-04-16",
+    "tags": [
+      "cs.NI",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2604.14957v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.14957v1",
+    "content": {
+      "en": "Network security is a critical concern in the digital landscape of today, with users demanding secure browsing experiences and protection of their personal data. This study explores the dynamic integration of Machine Learning (ML) algorithms with Software-Defined Networking (SDN) controllers to enhance network security through adaptive decision mechanisms. The proposed approach enables the system to dynamically choose the most suitable ML algorithm based on the characteristics of the observed network traffic. This work examines the role of Intrusion Detection Systems (IDS) as a fundamental component of secure communication networks and discusses the limitations of SDN-based attack detection mechanisms. The proposed framework uses adaptive model selection to maintain reliable intrusion detection under varying network conditions. The study highlights the importance of analyzing traffic-type-based metrics to define effective classification rules and enhance the performance of ML models. Additionally, it addresses the risks of overfitting and underfitting, underscoring the critical role of hyperparameter tuning in optimizing model accuracy and generalization. The central contribution of this work is an automated mechanism that adaptively selects the most suitable ML algorithm according to real-time network conditions, prioritizing detection robustness and operational feasibility within SDN environments.",
+      "tr": "Network security is a critical concern in the digital landscape of today, with users demanding secure browsing experiences and protection of their personal data. This study explores the dynamic integration of Machine Learning (ML) algorithms with Software-Defined Networking (SDN) controllers to enhance network security through adaptive decision mechanisms. The proposed approach enables the system to dynamically choose the most suitable ML algorithm based on the characteristics of the observed network traffic. This work examines the role of Intrusion Detection Systems (IDS) as a fundamental component of secure communication networks and discusses the limitations of SDN-based attack detection mechanisms. The proposed framework uses adaptive model selection to maintain reliable intrusion detection under varying network conditions. The study highlights the importance of analyzing traffic-type-based metrics to define effective classification rules and enhance the performance of ML models. Additionally, it addresses the risks of overfitting and underfitting, underscoring the critical role of hyperparameter tuning in optimizing model accuracy and generalization. The central contribution of this work is an automated mechanism that adaptively selects the most suitable ML algorithm according to real-time network conditions, prioritizing detection robustness and operational feasibility within SDN environments."
+    }
+  },
+  {
+    "id": "2604.14717v1",
+    "title": "Layered Mutability: Continuity and Governance in Persistent Self-Modifying Agents",
+    "authors": [
+      "Krti Tallam"
+    ],
+    "published_date": "2026-04-16",
+    "tags": [
+      "cs.AI",
+      "cs.CR",
+      "cs.CY",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2604.14717v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.14717v1",
+    "content": {
+      "en": "Persistent language-model agents increasingly combine tool use, tiered memory, reflective prompting, and runtime adaptation. In such systems, behavior is shaped not only by current prompts but by mutable internal conditions that influence future action. This paper introduces layered mutability, a framework for reasoning about that process across five layers: pretraining, post-training alignment, self-narrative, memory, and weight-level adaptation. The central claim is that governance difficulty rises when mutation is rapid, downstream coupling is strong, reversibility is weak, and observability is low, creating a systematic mismatch between the layers that most affect behavior and the layers humans can most easily inspect. I formalize this intuition with simple drift, governance-load, and hysteresis quantities, connect the framework to recent work on temporal identity in language-model agents, and report a preliminary ratchet experiment in which reverting an agent's visible self-description after memory accumulation fails to restore baseline behavior. In that experiment, the estimated identity hysteresis ratio is 0.68. The main implication is that the salient failure mode for persistent self-modifying agents is not abrupt misalignment but compositional drift: locally reasonable updates that accumulate into a behavioral trajectory that was never explicitly authorized.",
+      "tr": "Persistent language-model agents increasingly combine tool use, tiered memory, reflective prompting, and runtime adaptation. In such systems, behavior is shaped not only by current prompts but by mutable internal conditions that influence future action. This paper introduces layered mutability, a framework for reasoning about that process across five layers: pretraining, post-training alignment, self-narrative, memory, and weight-level adaptation. The central claim is that governance difficulty rises when mutation is rapid, downstream coupling is strong, reversibility is weak, and observability is low, creating a systematic mismatch between the layers that most affect behavior and the layers humans can most easily inspect. I formalize this intuition with simple drift, governance-load, and hysteresis quantities, connect the framework to recent work on temporal identity in language-model agents, and report a preliminary ratchet experiment in which reverting an agent's visible self-description after memory accumulation fails to restore baseline behavior. In that experiment, the estimated identity hysteresis ratio is 0.68. The main implication is that the salient failure mode for persistent self-modifying agents is not abrupt misalignment but compositional drift: locally reasonable updates that accumulate into a behavioral trajectory that was never explicitly authorized."
+    }
+  },
+  {
+    "id": "2604.14604v1",
+    "title": "Hijacking Large Audio-Language Models via Context-Agnostic and Imperceptible Auditory Prompt Injection",
+    "authors": [
+      "Meng Chen",
+      "Kun Wang",
+      "Li Lu",
+      "Jiaheng Zhang",
+      "Tianwei Zhang"
+    ],
+    "published_date": "2026-04-16",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.SD"
+    ],
+    "link": "http://arxiv.org/abs/2604.14604v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.14604v1",
+    "content": {
+      "en": "Modern Large audio-language models (LALMs) power intelligent voice interactions by tightly integrating audio and text. This integration, however, expands the attack surface beyond text and introduces vulnerabilities in the continuous, high-dimensional audio channel. While prior work studied audio jailbreaks, the security risks of malicious audio injection and downstream behavior manipulation remain underexamined. In this work, we reveal a previously overlooked threat, auditory prompt injection, under realistic constraints of audio data-only access and strong perceptual stealth. To systematically analyze this threat, we propose \\textit{AudioHijack}, a general framework that generates context-agnostic and imperceptible adversarial audio to hijack LALMs. \\textit{AudioHijack} employs sampling-based gradient estimation for end-to-end optimization across diverse models, bypassing non-differentiable audio tokenization. Through attention supervision and multi-context training, it steers model attention toward adversarial audio and generalizes to unseen user contexts. We also design a convolutional blending method that modulates perturbations into natural reverberation, making them highly imperceptible to users. Extensive experiments on 13 state-of-the-art LALMs show consistent hijacking across 6 misbehavior categories, achieving average success rates of 79\\%-96\\% on unseen user contexts with high acoustic fidelity. Real-world studies demonstrate that commercial voice agents from Mistral AI and Microsoft Azure can be induced to execute unauthorized actions on behalf of users. These findings expose critical vulnerabilities in LALMs and highlight the urgent need for dedicated defense.",
+      "tr": "Modern Large audio-language models (LALMs) power intelligent voice interactions by tightly integrating audio and text. This integration, however, expands the attack surface beyond text and introduces vulnerabilities in the continuous, high-dimensional audio channel. While prior work studied audio jailbreaks, the security risks of malicious audio injection and downstream behavior manipulation remain underexamined. In this work, we reveal a previously overlooked threat, auditory prompt injection, under realistic constraints of audio data-only access and strong perceptual stealth. To systematically analyze this threat, we propose \\textit{AudioHijack}, a general framework that generates context-agnostic and imperceptible adversarial audio to hijack LALMs. \\textit{AudioHijack} employs sampling-based gradient estimation for end-to-end optimization across diverse models, bypassing non-differentiable audio tokenization. Through attention supervision and multi-context training, it steers model attention toward adversarial audio and generalizes to unseen user contexts. We also design a convolutional blending method that modulates perturbations into natural reverberation, making them highly imperceptible to users. Extensive experiments on 13 state-of-the-art LALMs show consistent hijacking across 6 misbehavior categories, achieving average success rates of 79\\%-96\\% on unseen user contexts with high acoustic fidelity. Real-world studies demonstrate that commercial voice agents from Mistral AI and Microsoft Azure can be induced to execute unauthorized actions on behalf of users. These findings expose critical vulnerabilities in LALMs and highlight the urgent need for dedicated defense."
+    }
+  },
+  {
+    "id": "2604.14512v1",
+    "title": "CBCL: Safe Self-Extending Agent Communication",
+    "authors": [
+      "Hugo O'Connor"
+    ],
+    "published_date": "2026-04-16",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.FL",
+      "cs.LO"
+    ],
+    "link": "http://arxiv.org/abs/2604.14512v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.14512v1",
+    "content": {
+      "en": "Agent communication languages (ACLs) enable heterogeneous agents to share knowledge and coordinate across diverse domains. This diversity demands extensibility, but expressive extension mechanisms can push the input language beyond the complexity classes where full validation is tractable. We present CBCL (Common Business Communication Language), an agent communication language that constrains all messages, including runtime language extensions, to the deterministic context-free language (DCFL) class. CBCL allows agents to define, transmit, and adopt domain-specific \"dialect\" extensions as first-class messages; three safety invariants (R1--R3), machine-checked in Lean 4 and enforced in a Rust reference implementation, prevent unbounded expansion, applying declared resource limits, and preserving core vocabulary. We formalize the language and its safety properties in Lean 4, implement a reference parser and dialect engine in Rust with property-based and differential tests, and extract a verified parser binary. Our results demonstrate that homoiconic protocol design, where extension definitions share the same representation as ordinary messages, can be made provably safe. As autonomous agents increasingly extend their own communication capabilities, formally bounding what they can express to each other is a precondition for oversight.",
+      "tr": "Agent communication languages (ACLs) enable heterogeneous agents to share knowledge and coordinate across diverse domains. This diversity demands extensibility, but expressive extension mechanisms can push the input language beyond the complexity classes where full validation is tractable. We present CBCL (Common Business Communication Language), an agent communication language that constrains all messages, including runtime language extensions, to the deterministic context-free language (DCFL) class. CBCL allows agents to define, transmit, and adopt domain-specific \"dialect\" extensions as first-class messages; three safety invariants (R1--R3), machine-checked in Lean 4 and enforced in a Rust reference implementation, prevent unbounded expansion, applying declared resource limits, and preserving core vocabulary. We formalize the language and its safety properties in Lean 4, implement a reference parser and dialect engine in Rust with property-based and differential tests, and extract a verified parser binary. Our results demonstrate that homoiconic protocol design, where extension definitions share the same representation as ordinary messages, can be made provably safe. As autonomous agents increasingly extend their own communication capabilities, formally bounding what they can express to each other is a precondition for oversight."
+    }
+  },
+  {
+    "id": "2604.14495v1",
+    "title": "Decoupling Identity from Utility: Privacy-by-Design Frameworks for Financial Ecosystems",
+    "authors": [
+      "Ifayoyinsola Ibikunle",
+      "Tyler Farnan",
+      "Senthil Kumar",
+      "Mayana Pereira"
+    ],
+    "published_date": "2026-04-16",
+    "tags": [
+      "cs.CE",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2604.14495v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.14495v1",
+    "content": {
+      "en": "Financial institutions face tension between maximizing data utility and mitigating the re-identification risks inherent in traditional anonymization methods. This paper explores Differentially Private (DP) synthetic data as a robust \"Privacy by Design\" framework to resolve this conflict, ensuring output privacy while satisfying stringent regulatory obligations. We examine two distinct generative paradigms: Direct Tabular Synthesis, which reconstructs high-fidelity joint distributions from raw data, and DP-Seeded Agent-Based Modeling (ABM), which uses DP-protected aggregates to parameterize complex, stateful simulations. While tabular synthesis excels at reflecting static historical correlations for QA testing and business analytics, the DP-Seeded ABM offers a forward-looking \"counterfactual laboratory\" capable of modeling dynamic market behaviors and black swan events. By decoupling individual identities from data utility, these methodologies eliminate traditional data-clearing bottlenecks, enabling seamless cross-institutional research and compliant decision-making in an evolving regulatory landscape.",
+      "tr": "Financial institutions face tension between maximizing data utility and mitigating the re-identification risks inherent in traditional anonymization methods. This paper explores Differentially Private (DP) synthetic data as a robust \"Privacy by Design\" framework to resolve this conflict, ensuring output privacy while satisfying stringent regulatory obligations. We examine two distinct generative paradigms: Direct Tabular Synthesis, which reconstructs high-fidelity joint distributions from raw data, and DP-Seeded Agent-Based Modeling (ABM), which uses DP-protected aggregates to parameterize complex, stateful simulations. While tabular synthesis excels at reflecting static historical correlations for QA testing and business analytics, the DP-Seeded ABM offers a forward-looking \"counterfactual laboratory\" capable of modeling dynamic market behaviors and black swan events. By decoupling individual identities from data utility, these methodologies eliminate traditional data-clearing bottlenecks, enabling seamless cross-institutional research and compliant decision-making in an evolving regulatory landscape."
+    }
+  },
+  {
+    "id": "2604.14444v1",
+    "title": "Robustness Analysis of Machine Learning Models for IoT Intrusion Detection Under Data Poisoning Attacks",
+    "authors": [
+      "Fortunatus Aabangbio Wulnye",
+      "Justice Owusu Agyemang",
+      "Kwame Opuni-Boachie Obour Agyekum",
+      "Kwame Agyeman-Prempeh Agyekum",
+      "Kingsford Sarkodie Obeng Kwakye"
     ],
     "published_date": "2026-04-15",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2604.13849v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.13849v1",
+    "link": "http://arxiv.org/abs/2604.14444v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.14444v1",
     "content": {
-      "en": "The rapid proliferation of Model Context Protocol (MCP)-based agentic systems has introduced a new category of security threats that existing frameworks are inadequately equipped to address. We present MCPThreatHive, an open-source platform that automates the end-to-end lifecycle of MCP threat intelligence: from continuous, multi-source data collection through AI-driven threat extraction and classification, to structured knowledge graph storage and interactive visualization. The platform operationalizes the MCP-38 threat taxonomy, a curated set of 38 MCP-specific threat patterns mapped to STRIDE, OWASP Top 10 for LLM Applications, and OWASP Top 10 for Agentic Applications. A composite risk scoring model provides quantitative prioritization. Through a comparative analysis of representative existing MCP security tools, we identify three critical coverage gaps that MCPThreatHive addresses: incomplete compositional attack modeling, absence of continuous threat intelligence, and lack of unified multi-framework classification.",
-      "tr": "The rapid proliferation of Model Context Protocol (MCP)-based agentic systems has introduced a new category of security threats that existing frameworks are inadequately equipped to address. We present MCPThreatHive, an open-source platform that automates the end-to-end lifecycle of MCP threat intelligence: from continuous, multi-source data collection through AI-driven threat extraction and classification, to structured knowledge graph storage and interactive visualization. The platform operationalizes the MCP-38 threat taxonomy, a curated set of 38 MCP-specific threat patterns mapped to STRIDE, OWASP Top 10 for LLM Applications, and OWASP Top 10 for Agentic Applications. A composite risk scoring model provides quantitative prioritization. Through a comparative analysis of representative existing MCP security tools, we identify three critical coverage gaps that MCPThreatHive addresses: incomplete compositional attack modeling, absence of continuous threat intelligence, and lack of unified multi-framework classification."
+      "en": "Ensuring the reliability of machine learning-based intrusion detection systems remains a critical challenge in Internet of Things (IoT) environments, particularly as data poisoning attacks increasingly threaten the integrity of model training pipelines. This study evaluates the susceptibility of four widely used classifiers, Random Forest, Gradient Boosting Machine, Logistic Regression, and Deep Neural Network models, against multiple poisoning strategies using three real-world IoT datasets. Results show that while ensemble-based models exhibit comparatively stable performance, Logistic Regression and Deep Neural Networks suffer degradation of up to 40% under label manipulation and outlier-based attacks. Such disruptions significantly distort decision boundaries, reduce detection fidelity, and undermine deployment readiness. The findings highlight the need for adversarially robust training, continuous anomaly monitoring, and feature-level validation within operational Network Intrusion Detection Systems. The study also emphasizes the importance of integrating resilience testing into regulatory and compliance frameworks for AI-driven IoT security. Overall, this work provides an empirical foundation for developing more resilient intrusion detection pipelines and informs future research on adaptive, attack-aware models capable of maintaining reliability under adversarial IoT conditions.",
+      "tr": "Ensuring the reliability of machine learning-based intrusion detection systems remains a critical challenge in Internet of Things (IoT) environments, particularly as data poisoning attacks increasingly threaten the integrity of model training pipelines. This study evaluates the susceptibility of four widely used classifiers, Random Forest, Gradient Boosting Machine, Logistic Regression, and Deep Neural Network models, against multiple poisoning strategies using three real-world IoT datasets. Results show that while ensemble-based models exhibit comparatively stable performance, Logistic Regression and Deep Neural Networks suffer degradation of up to 40% under label manipulation and outlier-based attacks. Such disruptions significantly distort decision boundaries, reduce detection fidelity, and undermine deployment readiness. The findings highlight the need for adversarially robust training, continuous anomaly monitoring, and feature-level validation within operational Network Intrusion Detection Systems. The study also emphasizes the importance of integrating resilience testing into regulatory and compliance frameworks for AI-driven IoT security. Overall, this work provides an empirical foundation for developing more resilient intrusion detection pipelines and informs future research on adaptive, attack-aware models capable of maintaining reliability under adversarial IoT conditions."
     }
   },
   {
-    "id": "2604.13675v1",
-    "title": "Erlang Binary and Source Code Obfuscation",
+    "id": "2604.14357v1",
+    "title": "Filament: Denning-Style Information Flow Control for Rust",
     "authors": [
-      "Gregory Morse",
-      "Tamás Kozsik"
+      "Jeffrey C. Ching",
+      "Quan Zhou",
+      "Danfeng Zhang"
     ],
     "published_date": "2026-04-15",
     "tags": [
       "cs.PL",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2604.13675v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.13675v1",
+    "link": "http://arxiv.org/abs/2604.14357v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.14357v1",
     "content": {
-      "en": "This paper studies obfuscation techniques for Erlang programs at the source, abstract syntax tree, BEAM assembly, and BEAM bytecode levels. We focus on transformations that complicate reverse engineering, decompilation, and recompilation while remaining grounded in the actual behavior of the Erlang compiler, validator, loader, and virtual machine. The paper categorizes opcode-level dependency tricks, receive-based loop encodings, irregular control-flow constructions, mutability-oriented performance obfuscation, and self-modifying code enabled by dynamic module loading. A recurring theme is that effective obfuscation in BEAM often arises not from arbitrary corruption, but from exploiting representational gaps between high-level Erlang semantics and the lower-level execution model accepted by the toolchain and runtime.",
-      "tr": "This paper studies obfuscation techniques for Erlang programs at the source, abstract syntax tree, BEAM assembly, and BEAM bytecode levels. We focus on transformations that complicate reverse engineering, decompilation, and recompilation while remaining grounded in the actual behavior of the Erlang compiler, validator, loader, and virtual machine. The paper categorizes opcode-level dependency tricks, receive-based loop encodings, irregular control-flow constructions, mutability-oriented performance obfuscation, and self-modifying code enabled by dynamic module loading. A recurring theme is that effective obfuscation in BEAM often arises not from arbitrary corruption, but from exploiting representational gaps between high-level Erlang semantics and the lower-level execution model accepted by the toolchain and runtime."
-    }
-  },
-  {
-    "id": "2604.13630v1",
-    "title": "SafeHarness: Lifecycle-Integrated Security Architecture for LLM-based Agent Deployment",
-    "authors": [
-      "Xixun Lin",
-      "Yang Liu",
-      "Yancheng Chen",
-      "Yongxuan Wu",
-      "Yucheng Ning"
-    ],
-    "published_date": "2026-04-15",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2604.13630v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.13630v1",
-    "content": {
-      "en": "The performance of large language model (LLM) agents depends critically on the execution harness, the system layer that orchestrates tool use, context management, and state persistence. Yet this same architectural centrality makes the harness a high-value attack surface: a single compromise at the harness level can cascade through the entire execution pipeline. We observe that existing security approaches suffer from structural mismatch, leaving them blind to harness-internal state and unable to coordinate across the different phases of agent operation. In this paper, we introduce \\safeharness{}, a security architecture in which four proposed defense layers are woven directly into the agent lifecycle to address above significant limitations: adversarial context filtering at input processing, tiered causal verification at decision making, privilege-separated tool control at action execution, and safe rollback with adaptive degradation at state update. The proposed cross-layer mechanisms tie these layers together, escalating verification rigor, triggering rollbacks, and tightening tool privileges whenever sustained anomalies are detected. We evaluate \\safeharness{} on benchmark datasets across diverse harness configurations, comparing against four security baselines under five attack scenarios spanning six threat categories. Compared to the unprotected baseline, \\safeharness{} achieves an average reduction of approximately 38\\% in UBR and 42\\% in ASR, substantially lowering both the unsafe behavior rate and the attack success rate while preserving core task utility.",
-      "tr": "The performance of large language model (LLM) agents depends critically on the execution harness, the system layer that orchestrates tool use, context management, and state persistence. Yet this same architectural centrality makes the harness a high-value attack surface: a single compromise at the harness level can cascade through the entire execution pipeline. We observe that existing security approaches suffer from structural mismatch, leaving them blind to harness-internal state and unable to coordinate across the different phases of agent operation. In this paper, we introduce \\safeharness{}, a security architecture in which four proposed defense layers are woven directly into the agent lifecycle to address above significant limitations: adversarial context filtering at input processing, tiered causal verification at decision making, privilege-separated tool control at action execution, and safe rollback with adaptive degradation at state update. The proposed cross-layer mechanisms tie these layers together, escalating verification rigor, triggering rollbacks, and tightening tool privileges whenever sustained anomalies are detected. We evaluate \\safeharness{} on benchmark datasets across diverse harness configurations, comparing against four security baselines under five attack scenarios spanning six threat categories. Compared to the unprotected baseline, \\safeharness{} achieves an average reduction of approximately 38\\% in UBR and 42\\% in ASR, substantially lowering both the unsafe behavior rate and the attack success rate while preserving core task utility."
-    }
-  },
-  {
-    "id": "2604.13474v1",
-    "title": "Secure and Privacy-Preserving Vertical Federated Learning",
-    "authors": [
-      "Shan Jin",
-      "Sai Rahul Rachuri",
-      "Yizhen Wang",
-      "Anderson C. A. Nascimento",
-      "Yiwei Cai"
-    ],
-    "published_date": "2026-04-15",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.DC"
-    ],
-    "link": "http://arxiv.org/abs/2604.13474v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.13474v1",
-    "content": {
-      "en": "We propose a novel end-to-end privacy-preserving framework, instantiated by three efficient protocols for different deployment scenarios, covering both input and output privacy, for the vertically split scenario in federated learning (FL), where features are split across clients and labels are not shared by all parties. We do so by distributing the role of the aggregator in FL into multiple servers and having them run secure multiparty computation (MPC) protocols to perform model and feature aggregation and apply differential privacy (DP) to the final released model. While a naive solution would have the clients delegating the entirety of training to run in MPC between the servers, our optimized solution, which supports purely global and also global-local models updates with privacy-preserving, drastically reduces the amount of computation and communication performed using multiparty computation. The experimental results also show the effectiveness of our protocols.",
-      "tr": "We propose a novel end-to-end privacy-preserving framework, instantiated by three efficient protocols for different deployment scenarios, covering both input and output privacy, for the vertically split scenario in federated learning (FL), where features are split across clients and labels are not shared by all parties. We do so by distributing the role of the aggregator in FL into multiple servers and having them run secure multiparty computation (MPC) protocols to perform model and feature aggregation and apply differential privacy (DP) to the final released model. While a naive solution would have the clients delegating the entirety of training to run in MPC between the servers, our optimized solution, which supports purely global and also global-local models updates with privacy-preserving, drastically reduces the amount of computation and communication performed using multiparty computation. The experimental results also show the effectiveness of our protocols."
-    }
-  },
-  {
-    "id": "2604.13348v1",
-    "title": "Listening Alone, Understanding Together: Collaborative Context Recovery for Privacy-Aware AI",
-    "authors": [
-      "Tanmay Srivastava",
-      "Amartya Basu",
-      "Shubham Jain",
-      "Vaishnavi Ranganathan"
-    ],
-    "published_date": "2026-04-14",
-    "tags": [
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2604.13348v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.13348v1",
-    "content": {
-      "en": "We introduce CONCORD, a privacy-aware asynchronous assistant-to-assistant (A2A) framework that leverages collaboration between proactive speech-based AI. As agents evolve from reactive to always-listening assistants, they face a core privacy risk (of capturing non-consenting speakers), which makes their social deployment a challenge. To overcome this, we implement CONCORD, which enforces owner-only speech capture via real-time speaker verification, producing a one-sided transcript that incurs missing context but preserves privacy. We demonstrate that CONCORD can safely recover necessary context through (1) spatio-temporal context resolution, (2) information gap detection, and (3) minimal A2A queries governed by a relationship-aware disclosure. Instead of hallucination-prone inferring, CONCORD treats context recovery as a negotiated safe exchange between assistants. Across a multi-domain dialogue dataset, CONCORD achieves 91.4% recall in gap detection, 96% relationship classification accuracy, and 97% true negative rate in privacy-sensitive disclosure decisions. By reframing always-listening AI as a coordination problem between privacy-preserving agents, CONCORD offers a practical path toward socially deployable proactive conversational agents.",
-      "tr": "We introduce CONCORD, a privacy-aware asynchronous assistant-to-assistant (A2A) framework that leverages collaboration between proactive speech-based AI. As agents evolve from reactive to always-listening assistants, they face a core privacy risk (of capturing non-consenting speakers), which makes their social deployment a challenge. To overcome this, we implement CONCORD, which enforces owner-only speech capture via real-time speaker verification, producing a one-sided transcript that incurs missing context but preserves privacy. We demonstrate that CONCORD can safely recover necessary context through (1) spatio-temporal context resolution, (2) information gap detection, and (3) minimal A2A queries governed by a relationship-aware disclosure. Instead of hallucination-prone inferring, CONCORD treats context recovery as a negotiated safe exchange between assistants. Across a multi-domain dialogue dataset, CONCORD achieves 91.4% recall in gap detection, 96% relationship classification accuracy, and 97% true negative rate in privacy-sensitive disclosure decisions. By reframing always-listening AI as a coordination problem between privacy-preserving agents, CONCORD offers a practical path toward socially deployable proactive conversational agents."
-    }
-  },
-  {
-    "id": "2604.13153v1",
-    "title": "PatchPoison: Poisoning Multi-View Datasets to Degrade 3D Reconstruction",
-    "authors": [
-      "Prajas Wadekar",
-      "Venkata Sai Pranav Bachina",
-      "Kunal Bhosikar",
-      "Ankit Gangwal",
-      "Charu Sharma"
-    ],
-    "published_date": "2026-04-14",
-    "tags": [
-      "cs.CV",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2604.13153v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.13153v1",
-    "content": {
-      "en": "3D Gaussian Splatting (3DGS) has recently enabled highly photorealistic 3D reconstruction from casually captured multi-view images. However, this accessibility raises a privacy concern: publicly available images or videos can be exploited to reconstruct detailed 3D models of scenes or objects without the owner's consent. We present PatchPoison, a lightweight dataset-poisoning method that prevents unauthorized 3D reconstruction. Unlike global perturbations, PatchPoison injects a small high-frequency adversarial patch, a structured checkerboard, into the periphery of each image in a multi-view dataset. The patch is designed to corrupt the feature-matching stage of Structure-from-Motion (SfM) pipelines such as COLMAP by introducing spurious correspondences that systematically misalign estimated camera poses. Consequently, downstream 3DGS optimization diverges from the correct scene geometry. On the NeRF-Synthetic benchmark, inserting a 12 X 12 pixel patch increases reconstruction error by 6.8x in LPIPS, while the poisoned images remain unobtrusive to human viewers. PatchPoison requires no pipeline modifications, offering a practical, \"drop-in\" preprocessing step for content creators to protect their multi-view data.",
-      "tr": "3D Gaussian Splatting (3DGS) has recently enabled highly photorealistic 3D reconstruction from casually captured multi-view images. However, this accessibility raises a privacy concern: publicly available images or videos can be exploited to reconstruct detailed 3D models of scenes or objects without the owner's consent. We present PatchPoison, a lightweight dataset-poisoning method that prevents unauthorized 3D reconstruction. Unlike global perturbations, PatchPoison injects a small high-frequency adversarial patch, a structured checkerboard, into the periphery of each image in a multi-view dataset. The patch is designed to corrupt the feature-matching stage of Structure-from-Motion (SfM) pipelines such as COLMAP by introducing spurious correspondences that systematically misalign estimated camera poses. Consequently, downstream 3DGS optimization diverges from the correct scene geometry. On the NeRF-Synthetic benchmark, inserting a 12 X 12 pixel patch increases reconstruction error by 6.8x in LPIPS, while the poisoned images remain unobtrusive to human viewers. PatchPoison requires no pipeline modifications, offering a practical, \"drop-in\" preprocessing step for content creators to protect their multi-view data."
-    }
-  },
-  {
-    "id": "2604.12994v1",
-    "title": "LogicEval: A Systematic Framework for Evaluating Automated Repair Techniques for Logical Vulnerabilities in Real-World Software",
-    "authors": [
-      "Syed Md Mukit Rashid",
-      "Abdullah Al Ishtiaq",
-      "Kai Tu",
-      "Yilu Dong",
-      "Tianwei Wu"
-    ],
-    "published_date": "2026-04-14",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2604.12994v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.12994v1",
-    "content": {
-      "en": "Logical vulnerabilities in software stem from flaws in program logic rather than memory safety, which can lead to critical security failures. Although existing automated program repair techniques primarily focus on repairing memory corruption vulnerabilities, they struggle with logical vulnerabilities because of their limited semantic understanding of the vulnerable code and its expected behavior. On the other hand, recent successes of large language models (LLMs) in understanding and repairing code are promising. However, no framework currently exists to analyze the capabilities and limitations of such techniques for logical vulnerabilities. This paper aims to systematically evaluate both traditional and LLM-based repair approaches for addressing real-world logical vulnerabilities. To facilitate our assessment, we created the first ever dataset, LogicDS, of 86 logical vulnerabilities with assigned CVEs reflecting tangible security impact. We also developed a systematic framework, LogicEval, to evaluate patches for logical vulnerabilities. Evaluations suggest that compilation and testing failures are primarily driven by prompt sensitivity, loss of code context, and difficulty in patch localization.",
-      "tr": "Logical vulnerabilities in software stem from flaws in program logic rather than memory safety, which can lead to critical security failures. Although existing automated program repair techniques primarily focus on repairing memory corruption vulnerabilities, they struggle with logical vulnerabilities because of their limited semantic understanding of the vulnerable code and its expected behavior. On the other hand, recent successes of large language models (LLMs) in understanding and repairing code are promising. However, no framework currently exists to analyze the capabilities and limitations of such techniques for logical vulnerabilities. This paper aims to systematically evaluate both traditional and LLM-based repair approaches for addressing real-world logical vulnerabilities. To facilitate our assessment, we created the first ever dataset, LogicDS, of 86 logical vulnerabilities with assigned CVEs reflecting tangible security impact. We also developed a systematic framework, LogicEval, to evaluate patches for logical vulnerabilities. Evaluations suggest that compilation and testing failures are primarily driven by prompt sensitivity, loss of code context, and difficulty in patch localization."
-    }
-  },
-  {
-    "id": "2604.12986v1",
-    "title": "Parallax: Why AI Agents That Think Must Never Act",
-    "authors": [
-      "Joel Fokou"
-    ],
-    "published_date": "2026-04-14",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2604.12986v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.12986v1",
-    "content": {
-      "en": "Autonomous AI agents are rapidly transitioning from experimental tools to operational infrastructure, with projections that 80% of enterprise applications will embed AI copilots by the end of 2026. As agents gain the ability to execute real-world actions (reading files, running commands, making network requests, modifying databases), a fundamental security gap has emerged. The dominant approach to agent safety relies on prompt-level guardrails: natural language instructions that operate at the same abstraction level as the threats they attempt to mitigate. This paper argues that prompt-based safety is architecturally insufficient for agents with execution capability and introduces Parallax, a paradigm for safe autonomous AI execution grounded in four principles: Cognitive-Executive Separation, which structurally prevents the reasoning system from executing actions; Adversarial Validation with Graduated Determinism, which interposes an independent, multi-tiered validator between reasoning and execution; Information Flow Control, which propagates data sensitivity labels through agent workflows to detect context-dependent threats; and Reversible Execution, which captures pre-destructive state to enable rollback when validation fails. We present OpenParallax, an open-source reference implementation in Go, and evaluate it using Assume-Compromise Evaluation, a methodology that bypasses the reasoning system entirely to test the architectural boundary under full agent compromise. Across 280 adversarial test cases in nine attack categories, Parallax blocks 98.9% of attacks with zero false positives under its default configuration, and 100% of attacks under its maximum-security configuration. When the reasoning system is compromised, prompt-level guardrails provide zero protection because they exist only within the compromised system; Parallax's architectural boundary holds regardless.",
-      "tr": "Autonomous AI agents are rapidly transitioning from experimental tools to operational infrastructure, with projections that 80% of enterprise applications will embed AI copilots by the end of 2026. As agents gain the ability to execute real-world actions (reading files, running commands, making network requests, modifying databases), a fundamental security gap has emerged. The dominant approach to agent safety relies on prompt-level guardrails: natural language instructions that operate at the same abstraction level as the threats they attempt to mitigate. This paper argues that prompt-based safety is architecturally insufficient for agents with execution capability and introduces Parallax, a paradigm for safe autonomous AI execution grounded in four principles: Cognitive-Executive Separation, which structurally prevents the reasoning system from executing actions; Adversarial Validation with Graduated Determinism, which interposes an independent, multi-tiered validator between reasoning and execution; Information Flow Control, which propagates data sensitivity labels through agent workflows to detect context-dependent threats; and Reversible Execution, which captures pre-destructive state to enable rollback when validation fails. We present OpenParallax, an open-source reference implementation in Go, and evaluate it using Assume-Compromise Evaluation, a methodology that bypasses the reasoning system entirely to test the architectural boundary under full agent compromise. Across 280 adversarial test cases in nine attack categories, Parallax blocks 98.9% of attacks with zero false positives under its default configuration, and 100% of attacks under its maximum-security configuration. When the reasoning system is compromised, prompt-level guardrails provide zero protection because they exist only within the compromised system; Parallax's architectural boundary holds regardless."
-    }
-  },
-  {
-    "id": "2604.12913v1",
-    "title": "CoDe-R: Refining Decompiler Output with LLMs via Rationale Guidance and Adaptive Inference",
-    "authors": [
-      "Qiang Zhang",
-      "Zhongnian Li"
-    ],
-    "published_date": "2026-04-14",
-    "tags": [
-      "cs.SE",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2604.12913v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.12913v1",
-    "content": {
-      "en": "Binary decompilation is a critical reverse engineering task aimed at reconstructing high-level source code from stripped executables. Although Large Language Models (LLMs) have recently shown promise, they often suffer from \"logical hallucinations\" and \"semantic misalignment\" due to the irreversible semantic loss during compilation, resulting in generated code that fails to re-execute. In this study, we propose Cognitive Decompiler Refinement with Robustness (CoDe-R), a lightweight two-stage code refinement framework. The first stage introduces Semantic Cognitive Enhancement (SCE), a Rationale-Guided Semantic Injection strategy that trains the model to recover high-level algorithmic intent alongside code. The second stage introduces a Dynamic Dual-Path Fallback (DDPF) mechanism during inference, which adaptively balances semantic recovery and syntactic stability via a hybrid verification strategy. Evaluation on the HumanEval-Decompile benchmark demonstrates that CoDe-R (using a 1.3B backbone) establishes a new State-of-the-Art (SOTA) in the lightweight regime. Notably, it is the first 1.3B model to exceed an Average Re-executability Rate of 50.00%, significantly outperforming the baseline and effectively bridging the gap between efficient models and expert-level performance. Our code is available at https://github.com/Theaoi/CoDe-R.",
-      "tr": "Binary decompilation is a critical reverse engineering task aimed at reconstructing high-level source code from stripped executables. Although Large Language Models (LLMs) have recently shown promise, they often suffer from \"logical hallucinations\" and \"semantic misalignment\" due to the irreversible semantic loss during compilation, resulting in generated code that fails to re-execute. In this study, we propose Cognitive Decompiler Refinement with Robustness (CoDe-R), a lightweight two-stage code refinement framework. The first stage introduces Semantic Cognitive Enhancement (SCE), a Rationale-Guided Semantic Injection strategy that trains the model to recover high-level algorithmic intent alongside code. The second stage introduces a Dynamic Dual-Path Fallback (DDPF) mechanism during inference, which adaptively balances semantic recovery and syntactic stability via a hybrid verification strategy. Evaluation on the HumanEval-Decompile benchmark demonstrates that CoDe-R (using a 1.3B backbone) establishes a new State-of-the-Art (SOTA) in the lightweight regime. Notably, it is the first 1.3B model to exceed an Average Re-executability Rate of 50.00%, significantly outperforming the baseline and effectively bridging the gap between efficient models and expert-level performance. Our code is available at https://github.com/Theaoi/CoDe-R."
-    }
-  },
-  {
-    "id": "2604.12834v1",
-    "title": "Rapid LoRA Aggregation for Wireless Channel Adaptation in Open-Set Radio Frequency Fingerprinting",
-    "authors": [
-      "Mingxi Zhang",
-      "Renjie Xie",
-      "Jincheng Wang",
-      "Guyue Li",
-      "Wei Xu"
-    ],
-    "published_date": "2026-04-14",
-    "tags": [
-      "eess.SP",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2604.12834v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.12834v1",
-    "content": {
-      "en": "Radio frequency fingerprints (RFFs) enable secure wireless authentication but struggle in open-set scenarios with unknown devices and varying channels. Existing methods face challenges in generalization and incur high computational costs. We propose a lightweight, self-adaptive RFF extraction framework using Low-Rank Adaptation (LoRA). By pretraining LoRA modules per environment, our method enables fast adaptation to unseen channel conditions without full retraining. During inference, a weighted combination of LoRAs dynamically enhances feature extraction. Experimental results demonstrate a 15% reduction in equal error rate (EER) compared to non-finetuned baselines and an 83% decrease in training time relative to full fine-tuning, using the same training dataset. This approach provides a scalable and efficient solution for open-set RFF authentication in dynamic wireless vehicular networks.",
-      "tr": "Radio frequency fingerprints (RFFs) enable secure wireless authentication but struggle in open-set scenarios with unknown devices and varying channels. Existing methods face challenges in generalization and incur high computational costs. We propose a lightweight, self-adaptive RFF extraction framework using Low-Rank Adaptation (LoRA). By pretraining LoRA modules per environment, our method enables fast adaptation to unseen channel conditions without full retraining. During inference, a weighted combination of LoRAs dynamically enhances feature extraction. Experimental results demonstrate a 15% reduction in equal error rate (EER) compared to non-finetuned baselines and an 83% decrease in training time relative to full fine-tuning, using the same training dataset. This approach provides a scalable and efficient solution for open-set RFF authentication in dynamic wireless vehicular networks."
+      "en": "Existing language-based information-flow control (IFC) tools face a fundamental tension: Denning-style systems that track explicit and implicit flows at the variable level typically require compiler modifications, while more coarse-grained approaches, including recent work Cocoon, avoid compiler changes but impose more restrictive programming models. We present Filament, a Denning-style static IFC library for Rust that requires no compiler modifications. Filament addresses three key challenges in building a practical IFC library for Rust. First, it enables fine-grained explicit-flow checking with minimal annotation overhead by leveraging Rust's type inference. Second, it introduces pc_block!, a lightweight construct for enforcing implicit flows via a compile-time program counter label, without requiring compiler support. Third, it provides fcall! and mcall! macros to support seamless and safe interoperability with standard and third-party libraries. Our evaluation shows that Filament incurs negligible compile-time overhead and requires only modest annotations. Moreover, compared to Cocoon, Filament offers a more permissive programming model, reducing the need for frequent escape hatches that bypass security checks.",
+      "tr": "Existing language-based information-flow control (IFC) tools face a fundamental tension: Denning-style systems that track explicit and implicit flows at the variable level typically require compiler modifications, while more coarse-grained approaches, including recent work Cocoon, avoid compiler changes but impose more restrictive programming models. We present Filament, a Denning-style static IFC library for Rust that requires no compiler modifications. Filament addresses three key challenges in building a practical IFC library for Rust. First, it enables fine-grained explicit-flow checking with minimal annotation overhead by leveraging Rust's type inference. Second, it introduces pc_block!, a lightweight construct for enforcing implicit flows via a compile-time program counter label, without requiring compiler support. Third, it provides fcall! and mcall! macros to support seamless and safe interoperability with standard and third-party libraries. Our evaluation shows that Filament incurs negligible compile-time overhead and requires only modest annotations. Moreover, compared to Cocoon, Filament offers a more permissive programming model, reducing the need for frequent escape hatches that bypass security checks."
     }
   }
 ]
