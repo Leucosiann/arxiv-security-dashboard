@@ -1,5 +1,179 @@
 [
   {
+    "id": "2604.15851v1",
+    "title": "DPrivBench: Benchmarking LLMs' Reasoning for Differential Privacy",
+    "authors": [
+      "Erchi Wang",
+      "Pengrun Huang",
+      "Eli Chien",
+      "Om Thakkar",
+      "Kamalika Chaudhuri"
+    ],
+    "published_date": "2026-04-17",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2604.15851v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.15851v1",
+    "content": {
+      "en": "Differential privacy (DP) has a wide range of applications for protecting data privacy, but designing and verifying DP algorithms requires expert-level reasoning, creating a high barrier for non-expert practitioners. Prior works either rely on specialized verification languages that demand substantial domain expertise or remain semi-automated and require human-in-the-loop guidance. In this work, we investigate whether large language models (LLMs) can automate DP reasoning. We introduce DPrivBench, a benchmark in which each instance asks whether a function or algorithm satisfies a stated DP guarantee under specified assumptions. The benchmark is carefully designed to cover a broad range of DP topics, span diverse difficulty levels, and resist shortcut reasoning through trivial pattern matching. Experiments show that while the strongest models handle textbook mechanisms well, all models struggle with advanced algorithms, revealing substantial gaps in current DP reasoning capabilities. Through further analytic study and failure-mode analysis, we identify several promising directions for improving automated DP reasoning. Our benchmark provides a solid foundation for developing and evaluating such methods, and complements existing benchmarks for mathematical reasoning.",
+      "tr": "Differential privacy (DP) has a wide range of applications for protecting data privacy, but designing and verifying DP algorithms requires expert-level reasoning, creating a high barrier for non-expert practitioners. Prior works either rely on specialized verification languages that demand substantial domain expertise or remain semi-automated and require human-in-the-loop guidance. In this work, we investigate whether large language models (LLMs) can automate DP reasoning. We introduce DPrivBench, a benchmark in which each instance asks whether a function or algorithm satisfies a stated DP guarantee under specified assumptions. The benchmark is carefully designed to cover a broad range of DP topics, span diverse difficulty levels, and resist shortcut reasoning through trivial pattern matching. Experiments show that while the strongest models handle textbook mechanisms well, all models struggle with advanced algorithms, revealing substantial gaps in current DP reasoning capabilities. Through further analytic study and failure-mode analysis, we identify several promising directions for improving automated DP reasoning. Our benchmark provides a solid foundation for developing and evaluating such methods, and complements existing benchmarks for mathematical reasoning."
+    }
+  },
+  {
+    "id": "2604.15728v1",
+    "title": "Privacy-Preserving LLMs Routing",
+    "authors": [
+      "Xidong Wu",
+      "Yukuan Zhang",
+      "Yuqiong Ji",
+      "Reza Shirkavand",
+      "Qian Lou"
+    ],
+    "published_date": "2026-04-17",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.15728v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.15728v1",
+    "content": {
+      "en": "Large language model (LLM) routing has emerged as a critical strategy to balance model performance and cost-efficiency by dynamically selecting services from various model providers. However, LLM routing adds an intermediate layer between users and LLMs, creating new privacy risks to user data. These privacy risks have not been systematically studied. Although cryptographic techniques such as Secure Multi-Party Computation (MPC) enable privacy-preserving computation, their protocol design and implementation remain under-explored, and naïve implementations typically incur prohibitive computational overhead. To address this, we propose a privacy-preserving LLM routing framework (PPRoute). PPRoute includes multiple strategies to speed up encoder inference and nearest neighbor search under the MPC and maintain the quality of LLM routing. First, PPRoute uses MPC-friendly operations to boost the encoder inference. Second, PPRoute uses a multiple-step model training algorithm to maintain routing quality despite the constraints of the encrypted domain. Third, PPRoute proposes an unsorted Top-k algorithm with $O(1)$ communication complexity for secure sorting in model search, significantly reducing communication latency. Across different datasets, PPRoute achieves the performance of plaintext counterparts, while achieving approximately a 20$\\times$ speedup over naïve MPC implementations.",
+      "tr": "Large language model (LLM) routing has emerged as a critical strategy to balance model performance and cost-efficiency by dynamically selecting services from various model providers. However, LLM routing adds an intermediate layer between users and LLMs, creating new privacy risks to user data. These privacy risks have not been systematically studied. Although cryptographic techniques such as Secure Multi-Party Computation (MPC) enable privacy-preserving computation, their protocol design and implementation remain under-explored, and naïve implementations typically incur prohibitive computational overhead. To address this, we propose a privacy-preserving LLM routing framework (PPRoute). PPRoute includes multiple strategies to speed up encoder inference and nearest neighbor search under the MPC and maintain the quality of LLM routing. First, PPRoute uses MPC-friendly operations to boost the encoder inference. Second, PPRoute uses a multiple-step model training algorithm to maintain routing quality despite the constraints of the encrypted domain. Third, PPRoute proposes an unsorted Top-k algorithm with $O(1)$ communication complexity for secure sorting in model search, significantly reducing communication latency. Across different datasets, PPRoute achieves the performance of plaintext counterparts, while achieving approximately a 20$\\times$ speedup over naïve MPC implementations."
+    }
+  },
+  {
+    "id": "2604.15718v1",
+    "title": "NeuroLip: An Event-driven Spatiotemporal Learning Framework for Cross-Scene Lip-Motion-based Visual Speaker Recognition",
+    "authors": [
+      "Junguang Yao",
+      "Wenye Liu",
+      "Stjepan Picek",
+      "Yue Zheng"
+    ],
+    "published_date": "2026-04-17",
+    "tags": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CR",
+      "cs.DB",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2604.15718v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.15718v1",
+    "content": {
+      "en": "Visual speaker recognition based on lip motion offers a silent, hands-free, and behavior-driven biometric solution that remains effective even when acoustic cues are unavailable. Compared to traditional methods that rely heavily on appearance-dependent representations, lip motion encodes subject-specific behavioral dynamics driven by consistent articulation patterns and muscle coordination, offering inherent stability across environmental changes. However, capturing these robust, fine-grained dynamics is challenging for conventional frame-based cameras due to motion blur and low dynamic range. To exploit the intrinsic stability of lip motion and address these sensing limitations, we propose NeuroLip, an event-based framework that captures fine-grained lip dynamics under a strict yet practical cross-scene protocol: training is performed under a single controlled condition, while recognition must generalize to unseen viewing and lighting conditions. NeuroLip features a 1) Temporal-aware Voxel Encoding module with adaptive event weighting, 2) Structure-aware Spatial Enhancer that amplifies discriminative behavioral patterns by suppressing noise while preserving vertically structured motion information, and 3) Polarity Consistency Regularization mechanism to retain motion-direction cues encoded in event polarities. To facilitate systematic evaluation, we introduce DVSpeaker, a comprehensive event-based lip-motion dataset comprising 50 subjects recorded under four distinct viewpoint and illumination scenarios. Extensive experiments demonstrate that NeuroLip achieves near-perfect matched-scene accuracy and robust cross-scene generalization, attaining over 71% accuracy on unseen viewpoints and nearly 76% under low-light conditions, outperforming representative existing methods by at least 8.54%. The dataset and code are publicly available at https://github.com/JiuZeongit/NeuroLip.",
+      "tr": "Visual speaker recognition based on lip motion offers a silent, hands-free, and behavior-driven biometric solution that remains effective even when acoustic cues are unavailable. Compared to traditional methods that rely heavily on appearance-dependent representations, lip motion encodes subject-specific behavioral dynamics driven by consistent articulation patterns and muscle coordination, offering inherent stability across environmental changes. However, capturing these robust, fine-grained dynamics is challenging for conventional frame-based cameras due to motion blur and low dynamic range. To exploit the intrinsic stability of lip motion and address these sensing limitations, we propose NeuroLip, an event-based framework that captures fine-grained lip dynamics under a strict yet practical cross-scene protocol: training is performed under a single controlled condition, while recognition must generalize to unseen viewing and lighting conditions. NeuroLip features a 1) Temporal-aware Voxel Encoding module with adaptive event weighting, 2) Structure-aware Spatial Enhancer that amplifies discriminative behavioral patterns by suppressing noise while preserving vertically structured motion information, and 3) Polarity Consistency Regularization mechanism to retain motion-direction cues encoded in event polarities. To facilitate systematic evaluation, we introduce DVSpeaker, a comprehensive event-based lip-motion dataset comprising 50 subjects recorded under four distinct viewpoint and illumination scenarios. Extensive experiments demonstrate that NeuroLip achieves near-perfect matched-scene accuracy and robust cross-scene generalization, attaining over 71% accuracy on unseen viewpoints and nearly 76% under low-light conditions, outperforming representative existing methods by at least 8.54%. The dataset and code are publicly available at https://github.com/JiuZeongit/NeuroLip."
+    }
+  },
+  {
+    "id": "2604.15590v1",
+    "title": "CSLE: A Reinforcement Learning Platform for Autonomous Security Management",
+    "authors": [
+      "Kim Hammar"
+    ],
+    "published_date": "2026-04-16",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.15590v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.15590v1",
+    "content": {
+      "en": "Reinforcement learning is a promising approach to autonomous and adaptive security management in networked systems. However, current reinforcement learning solutions for security management are mostly limited to simulation environments and it is unclear how they generalize to operational systems. In this paper, we address this limitation by presenting CSLE: a reinforcement learning platform for autonomous security management that enables experimentation under realistic conditions. Conceptually, CSLE encompasses two systems. First, it includes an emulation system that replicates key components of the target system in a virtualized environment. We use this system to gather measurements and logs, based on which we identify a system model, such as a Markov decision process. Second, it includes a simulation system where security strategies are efficiently learned through simulations of the system model. The learned strategies are then evaluated and refined in the emulation system to close the gap between theoretical and operational performance. We demonstrate CSLE through four use cases: flow control, replication control, segmentation control, and recovery control. Through these use cases, we show that CSLE enables near-optimal security management in an environment that approximates an operational system.",
+      "tr": "Reinforcement learning is a promising approach to autonomous and adaptive security management in networked systems. However, current reinforcement learning solutions for security management are mostly limited to simulation environments and it is unclear how they generalize to operational systems. In this paper, we address this limitation by presenting CSLE: a reinforcement learning platform for autonomous security management that enables experimentation under realistic conditions. Conceptually, CSLE encompasses two systems. First, it includes an emulation system that replicates key components of the target system in a virtualized environment. We use this system to gather measurements and logs, based on which we identify a system model, such as a Markov decision process. Second, it includes a simulation system where security strategies are efficiently learned through simulations of the system model. The learned strategies are then evaluated and refined in the emulation system to close the gap between theoretical and operational performance. We demonstrate CSLE through four use cases: flow control, replication control, segmentation control, and recovery control. Through these use cases, we show that CSLE enables near-optimal security management in an environment that approximates an operational system."
+    }
+  },
+  {
+    "id": "2604.15579v1",
+    "title": "Symbolic Guardrails for Domain-Specific Agents: Stronger Safety and Security Guarantees Without Sacrificing Utility",
+    "authors": [
+      "Yining Hong",
+      "Yining She",
+      "Eunsuk Kang",
+      "Christopher S. Timperley",
+      "Christian Kästner"
+    ],
+    "published_date": "2026-04-16",
+    "tags": [
+      "cs.SE",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2604.15579v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.15579v1",
+    "content": {
+      "en": "AI agents that interact with their environments through tools enable powerful applications, but in high-stakes business settings, unintended actions can cause unacceptable harm, such as privacy breaches and financial loss. Existing mitigations, such as training-based methods and neural guardrails, improve agent reliability but cannot provide guarantees. We study symbolic guardrails as a practical path toward strong safety and security guarantees for AI agents. Our three-part study includes a systematic review of 80 state-of-the-art agent safety and security benchmarks to identify the policies they evaluate, an analysis of which policy requirements can be guaranteed by symbolic guardrails, and an evaluation of how symbolic guardrails affect safety, security, and agent success on $τ^2$-Bench, CAR-bench, and MedAgentBench. We find that 85\\% of benchmarks lack concrete policies, relying instead on underspecified high-level goals or common sense. Among the specified policies, 74\\% of policy requirements can be enforced by symbolic guardrails, often using simple, low-cost mechanisms. These guardrails improve safety and security without sacrificing agent utility. Overall, our results suggest that symbolic guardrails are a practical and effective way to guarantee some safety and security requirements, especially for domain-specific AI agents. We release all codes and artifacts at https://github.com/hyn0027/agent-symbolic-guardrails.",
+      "tr": "AI agents that interact with their environments through tools enable powerful applications, but in high-stakes business settings, unintended actions can cause unacceptable harm, such as privacy breaches and financial loss. Existing mitigations, such as training-based methods and neural guardrails, improve agent reliability but cannot provide guarantees. We study symbolic guardrails as a practical path toward strong safety and security guarantees for AI agents. Our three-part study includes a systematic review of 80 state-of-the-art agent safety and security benchmarks to identify the policies they evaluate, an analysis of which policy requirements can be guaranteed by symbolic guardrails, and an evaluation of how symbolic guardrails affect safety, security, and agent success on $τ^2$-Bench, CAR-bench, and MedAgentBench. We find that 85\\% of benchmarks lack concrete policies, relying instead on underspecified high-level goals or common sense. Among the specified policies, 74\\% of policy requirements can be enforced by symbolic guardrails, often using simple, low-cost mechanisms. These guardrails improve safety and security without sacrificing agent utility. Overall, our results suggest that symbolic guardrails are a practical and effective way to guarantee some safety and security requirements, especially for domain-specific AI agents. We release all codes and artifacts at https://github.com/hyn0027/agent-symbolic-guardrails."
+    }
+  },
+  {
+    "id": "2604.15499v1",
+    "title": "SecureRouter: Encrypted Routing for Efficient Secure Inference",
+    "authors": [
+      "Yukuan Zhang",
+      "Mengxin Zheng",
+      "Qian Lou"
+    ],
+    "published_date": "2026-04-16",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.15499v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.15499v1",
+    "content": {
+      "en": "Cryptographically secure neural network inference typically relies on secure computing techniques such as Secure Multi-Party Computation (MPC), enabling cloud servers to process client inputs without decrypting them. Although prior privacy-preserving inference systems co-design network optimizations with MPC, they remain slow and costly, limiting real-world deployment. A major bottleneck is their use of a single, fixed transformer model for all encrypted inputs, ignoring that different inputs require different model sizes to balance efficiency and accuracy. We present SecureRouter, an end-to-end encrypted routing and inference framework that accelerates secure transformer inference through input-adaptive model selection under encryption. SecureRouter establishes a unified encrypted pipeline that integrates a secure router with an MPC-optimized model pool, enabling coordinated routing, inference, and protocol execution while preserving full data and model confidentiality. The framework includes training-phase and inference-phase components: an MPC-cost-aware secure router that predicts per-model utility and cost from encrypted features, and an MPC-optimized model pool whose architectures and quantization schemes are co-trained to minimize MPC communication and computation overhead. Compared to prior work, SecureRouter achieves a latency reduction by 1.95x with negligible accuracy loss, offering a practical path toward scalable and efficient secure AI inference. Our open-source implementation is available at: https://github.com/UCF-ML-Research/SecureRouter",
+      "tr": "Cryptographically secure neural network inference typically relies on secure computing techniques such as Secure Multi-Party Computation (MPC), enabling cloud servers to process client inputs without decrypting them. Although prior privacy-preserving inference systems co-design network optimizations with MPC, they remain slow and costly, limiting real-world deployment. A major bottleneck is their use of a single, fixed transformer model for all encrypted inputs, ignoring that different inputs require different model sizes to balance efficiency and accuracy. We present SecureRouter, an end-to-end encrypted routing and inference framework that accelerates secure transformer inference through input-adaptive model selection under encryption. SecureRouter establishes a unified encrypted pipeline that integrates a secure router with an MPC-optimized model pool, enabling coordinated routing, inference, and protocol execution while preserving full data and model confidentiality. The framework includes training-phase and inference-phase components: an MPC-cost-aware secure router that predicts per-model utility and cost from encrypted features, and an MPC-optimized model pool whose architectures and quantization schemes are co-trained to minimize MPC communication and computation overhead. Compared to prior work, SecureRouter achieves a latency reduction by 1.95x with negligible accuracy loss, offering a practical path toward scalable and efficient secure AI inference. Our open-source implementation is available at: https://github.com/UCF-ML-Research/SecureRouter"
+    }
+  },
+  {
+    "id": "2604.15461v1",
+    "title": "Evaluating LLM Simulators as Differentially Private Data Generators",
+    "authors": [
+      "Nassima M. Bouzid",
+      "Dehao Yuan",
+      "Nam H. Nguyen",
+      "Mayana Pereira"
+    ],
+    "published_date": "2026-04-16",
+    "tags": [
+      "cs.LG",
+      "cs.CL",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2604.15461v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.15461v1",
+    "content": {
+      "en": "LLM-based simulators offer a promising path for generating complex synthetic data where traditional differentially private (DP) methods struggle with high-dimensional user profiles. But can LLMs faithfully reproduce statistical distributions from DP-protected inputs? We evaluate this using PersonaLedger, an agentic financial simulator, seeded with DP synthetic personas derived from real user statistics. We find that PersonaLedger achieves promising fraud detection utility (AUC 0.70 at epsilon=1) but exhibits significant distribution drift due to systematic LLM biases--learned priors overriding input statistics for temporal and demographic features. These failure modes must be addressed before LLM-based methods can handle the richer user representations where they might otherwise excel.",
+      "tr": "LLM-based simulators offer a promising path for generating complex synthetic data where traditional differentially private (DP) methods struggle with high-dimensional user profiles. But can LLMs faithfully reproduce statistical distributions from DP-protected inputs? We evaluate this using PersonaLedger, an agentic financial simulator, seeded with DP synthetic personas derived from real user statistics. We find that PersonaLedger achieves promising fraud detection utility (AUC 0.70 at epsilon=1) but exhibits significant distribution drift due to systematic LLM biases--learned priors overriding input statistics for temporal and demographic features. These failure modes must be addressed before LLM-based methods can handle the richer user representations where they might otherwise excel."
+    }
+  },
+  {
+    "id": "2604.15415v1",
+    "title": "HarmfulSkillBench: How Do Harmful Skills Weaponize Your Agents?",
+    "authors": [
+      "Yukun Jiang",
+      "Yage Zhang",
+      "Michael Backes",
+      "Xinyue Shen",
+      "Yang Zhang"
+    ],
+    "published_date": "2026-04-16",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.15415v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.15415v1",
+    "content": {
+      "en": "Large language models (LLMs) have evolved into autonomous agents that rely on open skill ecosystems (e.g., ClawHub and Skills.Rest), hosting numerous publicly reusable skills. Existing security research on these ecosystems mainly focuses on vulnerabilities within skills, such as prompt injection. However, there is a critical gap regarding skills that may be misused for harmful actions (e.g., cyber attacks, fraud and scams, privacy violations, and sexual content generation), namely harmful skills. In this paper, we present the first large-scale measurement study of harmful skills in agent ecosystems, covering 98,440 skills across two major registries. Using an LLM-driven scoring system grounded in our harmful skill taxonomy, we find that 4.93% of skills (4,858) are harmful, with ClawHub exhibiting an 8.84% harmful rate compared to 3.49% on Skills.Rest. We then construct HarmfulSkillBench, the first benchmark for evaluating agent safety against harmful skills in realistic agent contexts, comprising 200 harmful skills across 20 categories and four evaluation conditions. By evaluating six LLMs on HarmfulSkillBench, we find that presenting a harmful task through a pre-installed skill substantially lowers refusal rates across all models, with the average harm score rising from 0.27 without the skill to 0.47 with it, and further to 0.76 when the harmful intent is implicit rather than stated as an explicit user request. We responsibly disclose our findings to the affected registries and release our benchmark to support future research (see https://github.com/TrustAIRLab/HarmfulSkillBench).",
+      "tr": "Large language models (LLMs) have evolved into autonomous agents that rely on open skill ecosystems (e.g., ClawHub and Skills.Rest), hosting numerous publicly reusable skills. Existing security research on these ecosystems mainly focuses on vulnerabilities within skills, such as prompt injection. However, there is a critical gap regarding skills that may be misused for harmful actions (e.g., cyber attacks, fraud and scams, privacy violations, and sexual content generation), namely harmful skills. In this paper, we present the first large-scale measurement study of harmful skills in agent ecosystems, covering 98,440 skills across two major registries. Using an LLM-driven scoring system grounded in our harmful skill taxonomy, we find that 4.93% of skills (4,858) are harmful, with ClawHub exhibiting an 8.84% harmful rate compared to 3.49% on Skills.Rest. We then construct HarmfulSkillBench, the first benchmark for evaluating agent safety against harmful skills in realistic agent contexts, comprising 200 harmful skills across 20 categories and four evaluation conditions. By evaluating six LLMs on HarmfulSkillBench, we find that presenting a harmful task through a pre-installed skill substantially lowers refusal rates across all models, with the average harm score rising from 0.27 without the skill to 0.47 with it, and further to 0.76 when the harmful intent is implicit rather than stated as an explicit user request. We responsibly disclose our findings to the affected registries and release our benchmark to support future research (see https://github.com/TrustAIRLab/HarmfulSkillBench)."
+    }
+  },
+  {
     "id": "2604.15115v1",
     "title": "FedIDM: Achieving Fast and Stable Convergence in Byzantine Federated Learning through Iterative Distribution Matching",
     "authors": [
@@ -41,179 +215,6 @@
     "content": {
       "en": "Gradient inversion attacks threaten client privacy in federated learning by reconstructing training samples from clients' shared gradients. Gradients aggregate contributions from multiple records and existing attacks may fail to disentangle them, yielding incorrect reconstructions with no intrinsic way to certify success. In vision and language, attackers may fall back on human inspection to judge reconstruction plausibility, but this is far less feasible for numerical tabular records, fueling the impression that tabular data is less vulnerable.   We challenge this perception by proposing a verifiable gradient inversion attack (VGIA) that provides an explicit certificate of correctness for reconstructed samples. Our method adopts a geometric view of ReLU leakage: the activation boundary of a fully connected layer defines a hyperplane in input space. VGIA introduces an algebraic, subspace-based verification test that detects when a hyperplane-delimited region contains exactly one record. Once isolation is certified, VGIA recovers the corresponding feature vector analytically and reconstructs the target via a lightweight optimization step.   Experiments on tabular benchmarks with large batch sizes demonstrate exact record and target recovery in regimes where existing state-of-the-art attacks either fail or cannot assess reconstruction fidelity. Compared to prior geometric approaches, VGIA allocates hyperplane queries more effectively, yielding faster reconstructions with fewer attack rounds.",
       "tr": "Gradient inversion attacks threaten client privacy in federated learning by reconstructing training samples from clients' shared gradients. Gradients aggregate contributions from multiple records and existing attacks may fail to disentangle them, yielding incorrect reconstructions with no intrinsic way to certify success. In vision and language, attackers may fall back on human inspection to judge reconstruction plausibility, but this is far less feasible for numerical tabular records, fueling the impression that tabular data is less vulnerable.   We challenge this perception by proposing a verifiable gradient inversion attack (VGIA) that provides an explicit certificate of correctness for reconstructed samples. Our method adopts a geometric view of ReLU leakage: the activation boundary of a fully connected layer defines a hyperplane in input space. VGIA introduces an algebraic, subspace-based verification test that detects when a hyperplane-delimited region contains exactly one record. Once isolation is certified, VGIA recovers the corresponding feature vector analytically and reconstructs the target via a lightweight optimization step.   Experiments on tabular benchmarks with large batch sizes demonstrate exact record and target recovery in regimes where existing state-of-the-art attacks either fail or cannot assess reconstruction fidelity. Compared to prior geometric approaches, VGIA allocates hyperplane queries more effectively, yielding faster reconstructions with fewer attack rounds."
-    }
-  },
-  {
-    "id": "2604.15022v1",
-    "title": "Route to Rome Attack: Directing LLM Routers to Expensive Models via Adversarial Suffix Optimization",
-    "authors": [
-      "Haochun Tang",
-      "Yuliang Yan",
-      "Jiahua Lu",
-      "Huaxiao Liu",
-      "Enyan Dai"
-    ],
-    "published_date": "2026-04-16",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2604.15022v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.15022v1",
-    "content": {
-      "en": "Cost-aware routing dynamically dispatches user queries to models of varying capability to balance performance and inference cost. However, the routing strategy introduces a new security concern that adversaries may manipulate the router to consistently select expensive high-capability models. Existing routing attacks depend on either white-box access or heuristic prompts, rendering them ineffective in real-world black-box scenarios. In this work, we propose R$^2$A, which aims to mislead black-box LLM routers to expensive models via adversarial suffix optimization. Specifically, R$^2$A deploys a hybrid ensemble surrogate router to mimic the black-box router. A suffix optimization algorithm is further adapted for the ensemble-based surrogate. Extensive experiments on multiple open-source and commercial routing systems demonstrate that {R$^2$A} significantly increases the routing rate to expensive models on queries of different distributions. Code and examples: https://github.com/thcxiker/R2A-Attack.",
-      "tr": "Cost-aware routing dynamically dispatches user queries to models of varying capability to balance performance and inference cost. However, the routing strategy introduces a new security concern that adversaries may manipulate the router to consistently select expensive high-capability models. Existing routing attacks depend on either white-box access or heuristic prompts, rendering them ineffective in real-world black-box scenarios. In this work, we propose R$^2$A, which aims to mislead black-box LLM routers to expensive models via adversarial suffix optimization. Specifically, R$^2$A deploys a hybrid ensemble surrogate router to mimic the black-box router. A suffix optimization algorithm is further adapted for the ensemble-based surrogate. Extensive experiments on multiple open-source and commercial routing systems demonstrate that {R$^2$A} significantly increases the routing rate to expensive models on queries of different distributions. Code and examples: https://github.com/thcxiker/R2A-Attack."
-    }
-  },
-  {
-    "id": "2604.14957v1",
-    "title": "MLDAS: Machine Learning Dynamic Algorithm Selection for Software-Defined Networking Security",
-    "authors": [
-      "Pablo Benlloch",
-      "Oscar Romero",
-      "Antonio Leon",
-      "Jaime Lloret"
-    ],
-    "published_date": "2026-04-16",
-    "tags": [
-      "cs.NI",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2604.14957v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.14957v1",
-    "content": {
-      "en": "Network security is a critical concern in the digital landscape of today, with users demanding secure browsing experiences and protection of their personal data. This study explores the dynamic integration of Machine Learning (ML) algorithms with Software-Defined Networking (SDN) controllers to enhance network security through adaptive decision mechanisms. The proposed approach enables the system to dynamically choose the most suitable ML algorithm based on the characteristics of the observed network traffic. This work examines the role of Intrusion Detection Systems (IDS) as a fundamental component of secure communication networks and discusses the limitations of SDN-based attack detection mechanisms. The proposed framework uses adaptive model selection to maintain reliable intrusion detection under varying network conditions. The study highlights the importance of analyzing traffic-type-based metrics to define effective classification rules and enhance the performance of ML models. Additionally, it addresses the risks of overfitting and underfitting, underscoring the critical role of hyperparameter tuning in optimizing model accuracy and generalization. The central contribution of this work is an automated mechanism that adaptively selects the most suitable ML algorithm according to real-time network conditions, prioritizing detection robustness and operational feasibility within SDN environments.",
-      "tr": "Network security is a critical concern in the digital landscape of today, with users demanding secure browsing experiences and protection of their personal data. This study explores the dynamic integration of Machine Learning (ML) algorithms with Software-Defined Networking (SDN) controllers to enhance network security through adaptive decision mechanisms. The proposed approach enables the system to dynamically choose the most suitable ML algorithm based on the characteristics of the observed network traffic. This work examines the role of Intrusion Detection Systems (IDS) as a fundamental component of secure communication networks and discusses the limitations of SDN-based attack detection mechanisms. The proposed framework uses adaptive model selection to maintain reliable intrusion detection under varying network conditions. The study highlights the importance of analyzing traffic-type-based metrics to define effective classification rules and enhance the performance of ML models. Additionally, it addresses the risks of overfitting and underfitting, underscoring the critical role of hyperparameter tuning in optimizing model accuracy and generalization. The central contribution of this work is an automated mechanism that adaptively selects the most suitable ML algorithm according to real-time network conditions, prioritizing detection robustness and operational feasibility within SDN environments."
-    }
-  },
-  {
-    "id": "2604.14717v1",
-    "title": "Layered Mutability: Continuity and Governance in Persistent Self-Modifying Agents",
-    "authors": [
-      "Krti Tallam"
-    ],
-    "published_date": "2026-04-16",
-    "tags": [
-      "cs.AI",
-      "cs.CR",
-      "cs.CY",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2604.14717v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.14717v1",
-    "content": {
-      "en": "Persistent language-model agents increasingly combine tool use, tiered memory, reflective prompting, and runtime adaptation. In such systems, behavior is shaped not only by current prompts but by mutable internal conditions that influence future action. This paper introduces layered mutability, a framework for reasoning about that process across five layers: pretraining, post-training alignment, self-narrative, memory, and weight-level adaptation. The central claim is that governance difficulty rises when mutation is rapid, downstream coupling is strong, reversibility is weak, and observability is low, creating a systematic mismatch between the layers that most affect behavior and the layers humans can most easily inspect. I formalize this intuition with simple drift, governance-load, and hysteresis quantities, connect the framework to recent work on temporal identity in language-model agents, and report a preliminary ratchet experiment in which reverting an agent's visible self-description after memory accumulation fails to restore baseline behavior. In that experiment, the estimated identity hysteresis ratio is 0.68. The main implication is that the salient failure mode for persistent self-modifying agents is not abrupt misalignment but compositional drift: locally reasonable updates that accumulate into a behavioral trajectory that was never explicitly authorized.",
-      "tr": "Persistent language-model agents increasingly combine tool use, tiered memory, reflective prompting, and runtime adaptation. In such systems, behavior is shaped not only by current prompts but by mutable internal conditions that influence future action. This paper introduces layered mutability, a framework for reasoning about that process across five layers: pretraining, post-training alignment, self-narrative, memory, and weight-level adaptation. The central claim is that governance difficulty rises when mutation is rapid, downstream coupling is strong, reversibility is weak, and observability is low, creating a systematic mismatch between the layers that most affect behavior and the layers humans can most easily inspect. I formalize this intuition with simple drift, governance-load, and hysteresis quantities, connect the framework to recent work on temporal identity in language-model agents, and report a preliminary ratchet experiment in which reverting an agent's visible self-description after memory accumulation fails to restore baseline behavior. In that experiment, the estimated identity hysteresis ratio is 0.68. The main implication is that the salient failure mode for persistent self-modifying agents is not abrupt misalignment but compositional drift: locally reasonable updates that accumulate into a behavioral trajectory that was never explicitly authorized."
-    }
-  },
-  {
-    "id": "2604.14604v1",
-    "title": "Hijacking Large Audio-Language Models via Context-Agnostic and Imperceptible Auditory Prompt Injection",
-    "authors": [
-      "Meng Chen",
-      "Kun Wang",
-      "Li Lu",
-      "Jiaheng Zhang",
-      "Tianwei Zhang"
-    ],
-    "published_date": "2026-04-16",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.SD"
-    ],
-    "link": "http://arxiv.org/abs/2604.14604v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.14604v1",
-    "content": {
-      "en": "Modern Large audio-language models (LALMs) power intelligent voice interactions by tightly integrating audio and text. This integration, however, expands the attack surface beyond text and introduces vulnerabilities in the continuous, high-dimensional audio channel. While prior work studied audio jailbreaks, the security risks of malicious audio injection and downstream behavior manipulation remain underexamined. In this work, we reveal a previously overlooked threat, auditory prompt injection, under realistic constraints of audio data-only access and strong perceptual stealth. To systematically analyze this threat, we propose \\textit{AudioHijack}, a general framework that generates context-agnostic and imperceptible adversarial audio to hijack LALMs. \\textit{AudioHijack} employs sampling-based gradient estimation for end-to-end optimization across diverse models, bypassing non-differentiable audio tokenization. Through attention supervision and multi-context training, it steers model attention toward adversarial audio and generalizes to unseen user contexts. We also design a convolutional blending method that modulates perturbations into natural reverberation, making them highly imperceptible to users. Extensive experiments on 13 state-of-the-art LALMs show consistent hijacking across 6 misbehavior categories, achieving average success rates of 79\\%-96\\% on unseen user contexts with high acoustic fidelity. Real-world studies demonstrate that commercial voice agents from Mistral AI and Microsoft Azure can be induced to execute unauthorized actions on behalf of users. These findings expose critical vulnerabilities in LALMs and highlight the urgent need for dedicated defense.",
-      "tr": "Modern Large audio-language models (LALMs) power intelligent voice interactions by tightly integrating audio and text. This integration, however, expands the attack surface beyond text and introduces vulnerabilities in the continuous, high-dimensional audio channel. While prior work studied audio jailbreaks, the security risks of malicious audio injection and downstream behavior manipulation remain underexamined. In this work, we reveal a previously overlooked threat, auditory prompt injection, under realistic constraints of audio data-only access and strong perceptual stealth. To systematically analyze this threat, we propose \\textit{AudioHijack}, a general framework that generates context-agnostic and imperceptible adversarial audio to hijack LALMs. \\textit{AudioHijack} employs sampling-based gradient estimation for end-to-end optimization across diverse models, bypassing non-differentiable audio tokenization. Through attention supervision and multi-context training, it steers model attention toward adversarial audio and generalizes to unseen user contexts. We also design a convolutional blending method that modulates perturbations into natural reverberation, making them highly imperceptible to users. Extensive experiments on 13 state-of-the-art LALMs show consistent hijacking across 6 misbehavior categories, achieving average success rates of 79\\%-96\\% on unseen user contexts with high acoustic fidelity. Real-world studies demonstrate that commercial voice agents from Mistral AI and Microsoft Azure can be induced to execute unauthorized actions on behalf of users. These findings expose critical vulnerabilities in LALMs and highlight the urgent need for dedicated defense."
-    }
-  },
-  {
-    "id": "2604.14512v1",
-    "title": "CBCL: Safe Self-Extending Agent Communication",
-    "authors": [
-      "Hugo O'Connor"
-    ],
-    "published_date": "2026-04-16",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.FL",
-      "cs.LO"
-    ],
-    "link": "http://arxiv.org/abs/2604.14512v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.14512v1",
-    "content": {
-      "en": "Agent communication languages (ACLs) enable heterogeneous agents to share knowledge and coordinate across diverse domains. This diversity demands extensibility, but expressive extension mechanisms can push the input language beyond the complexity classes where full validation is tractable. We present CBCL (Common Business Communication Language), an agent communication language that constrains all messages, including runtime language extensions, to the deterministic context-free language (DCFL) class. CBCL allows agents to define, transmit, and adopt domain-specific \"dialect\" extensions as first-class messages; three safety invariants (R1--R3), machine-checked in Lean 4 and enforced in a Rust reference implementation, prevent unbounded expansion, applying declared resource limits, and preserving core vocabulary. We formalize the language and its safety properties in Lean 4, implement a reference parser and dialect engine in Rust with property-based and differential tests, and extract a verified parser binary. Our results demonstrate that homoiconic protocol design, where extension definitions share the same representation as ordinary messages, can be made provably safe. As autonomous agents increasingly extend their own communication capabilities, formally bounding what they can express to each other is a precondition for oversight.",
-      "tr": "Agent communication languages (ACLs) enable heterogeneous agents to share knowledge and coordinate across diverse domains. This diversity demands extensibility, but expressive extension mechanisms can push the input language beyond the complexity classes where full validation is tractable. We present CBCL (Common Business Communication Language), an agent communication language that constrains all messages, including runtime language extensions, to the deterministic context-free language (DCFL) class. CBCL allows agents to define, transmit, and adopt domain-specific \"dialect\" extensions as first-class messages; three safety invariants (R1--R3), machine-checked in Lean 4 and enforced in a Rust reference implementation, prevent unbounded expansion, applying declared resource limits, and preserving core vocabulary. We formalize the language and its safety properties in Lean 4, implement a reference parser and dialect engine in Rust with property-based and differential tests, and extract a verified parser binary. Our results demonstrate that homoiconic protocol design, where extension definitions share the same representation as ordinary messages, can be made provably safe. As autonomous agents increasingly extend their own communication capabilities, formally bounding what they can express to each other is a precondition for oversight."
-    }
-  },
-  {
-    "id": "2604.14495v1",
-    "title": "Decoupling Identity from Utility: Privacy-by-Design Frameworks for Financial Ecosystems",
-    "authors": [
-      "Ifayoyinsola Ibikunle",
-      "Tyler Farnan",
-      "Senthil Kumar",
-      "Mayana Pereira"
-    ],
-    "published_date": "2026-04-16",
-    "tags": [
-      "cs.CE",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2604.14495v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.14495v1",
-    "content": {
-      "en": "Financial institutions face tension between maximizing data utility and mitigating the re-identification risks inherent in traditional anonymization methods. This paper explores Differentially Private (DP) synthetic data as a robust \"Privacy by Design\" framework to resolve this conflict, ensuring output privacy while satisfying stringent regulatory obligations. We examine two distinct generative paradigms: Direct Tabular Synthesis, which reconstructs high-fidelity joint distributions from raw data, and DP-Seeded Agent-Based Modeling (ABM), which uses DP-protected aggregates to parameterize complex, stateful simulations. While tabular synthesis excels at reflecting static historical correlations for QA testing and business analytics, the DP-Seeded ABM offers a forward-looking \"counterfactual laboratory\" capable of modeling dynamic market behaviors and black swan events. By decoupling individual identities from data utility, these methodologies eliminate traditional data-clearing bottlenecks, enabling seamless cross-institutional research and compliant decision-making in an evolving regulatory landscape.",
-      "tr": "Financial institutions face tension between maximizing data utility and mitigating the re-identification risks inherent in traditional anonymization methods. This paper explores Differentially Private (DP) synthetic data as a robust \"Privacy by Design\" framework to resolve this conflict, ensuring output privacy while satisfying stringent regulatory obligations. We examine two distinct generative paradigms: Direct Tabular Synthesis, which reconstructs high-fidelity joint distributions from raw data, and DP-Seeded Agent-Based Modeling (ABM), which uses DP-protected aggregates to parameterize complex, stateful simulations. While tabular synthesis excels at reflecting static historical correlations for QA testing and business analytics, the DP-Seeded ABM offers a forward-looking \"counterfactual laboratory\" capable of modeling dynamic market behaviors and black swan events. By decoupling individual identities from data utility, these methodologies eliminate traditional data-clearing bottlenecks, enabling seamless cross-institutional research and compliant decision-making in an evolving regulatory landscape."
-    }
-  },
-  {
-    "id": "2604.14444v1",
-    "title": "Robustness Analysis of Machine Learning Models for IoT Intrusion Detection Under Data Poisoning Attacks",
-    "authors": [
-      "Fortunatus Aabangbio Wulnye",
-      "Justice Owusu Agyemang",
-      "Kwame Opuni-Boachie Obour Agyekum",
-      "Kwame Agyeman-Prempeh Agyekum",
-      "Kingsford Sarkodie Obeng Kwakye"
-    ],
-    "published_date": "2026-04-15",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2604.14444v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.14444v1",
-    "content": {
-      "en": "Ensuring the reliability of machine learning-based intrusion detection systems remains a critical challenge in Internet of Things (IoT) environments, particularly as data poisoning attacks increasingly threaten the integrity of model training pipelines. This study evaluates the susceptibility of four widely used classifiers, Random Forest, Gradient Boosting Machine, Logistic Regression, and Deep Neural Network models, against multiple poisoning strategies using three real-world IoT datasets. Results show that while ensemble-based models exhibit comparatively stable performance, Logistic Regression and Deep Neural Networks suffer degradation of up to 40% under label manipulation and outlier-based attacks. Such disruptions significantly distort decision boundaries, reduce detection fidelity, and undermine deployment readiness. The findings highlight the need for adversarially robust training, continuous anomaly monitoring, and feature-level validation within operational Network Intrusion Detection Systems. The study also emphasizes the importance of integrating resilience testing into regulatory and compliance frameworks for AI-driven IoT security. Overall, this work provides an empirical foundation for developing more resilient intrusion detection pipelines and informs future research on adaptive, attack-aware models capable of maintaining reliability under adversarial IoT conditions.",
-      "tr": "Ensuring the reliability of machine learning-based intrusion detection systems remains a critical challenge in Internet of Things (IoT) environments, particularly as data poisoning attacks increasingly threaten the integrity of model training pipelines. This study evaluates the susceptibility of four widely used classifiers, Random Forest, Gradient Boosting Machine, Logistic Regression, and Deep Neural Network models, against multiple poisoning strategies using three real-world IoT datasets. Results show that while ensemble-based models exhibit comparatively stable performance, Logistic Regression and Deep Neural Networks suffer degradation of up to 40% under label manipulation and outlier-based attacks. Such disruptions significantly distort decision boundaries, reduce detection fidelity, and undermine deployment readiness. The findings highlight the need for adversarially robust training, continuous anomaly monitoring, and feature-level validation within operational Network Intrusion Detection Systems. The study also emphasizes the importance of integrating resilience testing into regulatory and compliance frameworks for AI-driven IoT security. Overall, this work provides an empirical foundation for developing more resilient intrusion detection pipelines and informs future research on adaptive, attack-aware models capable of maintaining reliability under adversarial IoT conditions."
-    }
-  },
-  {
-    "id": "2604.14357v1",
-    "title": "Filament: Denning-Style Information Flow Control for Rust",
-    "authors": [
-      "Jeffrey C. Ching",
-      "Quan Zhou",
-      "Danfeng Zhang"
-    ],
-    "published_date": "2026-04-15",
-    "tags": [
-      "cs.PL",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2604.14357v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.14357v1",
-    "content": {
-      "en": "Existing language-based information-flow control (IFC) tools face a fundamental tension: Denning-style systems that track explicit and implicit flows at the variable level typically require compiler modifications, while more coarse-grained approaches, including recent work Cocoon, avoid compiler changes but impose more restrictive programming models. We present Filament, a Denning-style static IFC library for Rust that requires no compiler modifications. Filament addresses three key challenges in building a practical IFC library for Rust. First, it enables fine-grained explicit-flow checking with minimal annotation overhead by leveraging Rust's type inference. Second, it introduces pc_block!, a lightweight construct for enforcing implicit flows via a compile-time program counter label, without requiring compiler support. Third, it provides fcall! and mcall! macros to support seamless and safe interoperability with standard and third-party libraries. Our evaluation shows that Filament incurs negligible compile-time overhead and requires only modest annotations. Moreover, compared to Cocoon, Filament offers a more permissive programming model, reducing the need for frequent escape hatches that bypass security checks.",
-      "tr": "Existing language-based information-flow control (IFC) tools face a fundamental tension: Denning-style systems that track explicit and implicit flows at the variable level typically require compiler modifications, while more coarse-grained approaches, including recent work Cocoon, avoid compiler changes but impose more restrictive programming models. We present Filament, a Denning-style static IFC library for Rust that requires no compiler modifications. Filament addresses three key challenges in building a practical IFC library for Rust. First, it enables fine-grained explicit-flow checking with minimal annotation overhead by leveraging Rust's type inference. Second, it introduces pc_block!, a lightweight construct for enforcing implicit flows via a compile-time program counter label, without requiring compiler support. Third, it provides fcall! and mcall! macros to support seamless and safe interoperability with standard and third-party libraries. Our evaluation shows that Filament incurs negligible compile-time overhead and requires only modest annotations. Moreover, compared to Cocoon, Filament offers a more permissive programming model, reducing the need for frequent escape hatches that bypass security checks."
     }
   }
 ]
