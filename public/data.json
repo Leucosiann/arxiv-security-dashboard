@@ -1,216 +1,212 @@
 [
   {
-    "id": "2604.24657v1",
-    "title": "AgentWard: A Lifecycle Security Architecture for Autonomous AI Agents",
+    "id": "2604.25891v1",
+    "title": "Conditional misalignment: common interventions can hide emergent misalignment behind contextual triggers",
     "authors": [
-      "Yixiang Zhang",
-      "Xinhao Deng",
-      "Jiaqing Wu",
-      "Yue Xiao",
-      "Ke Xu"
+      "Jan Dubiński",
+      "Jan Betley",
+      "Anna Sztyber-Betley",
+      "Daniel Tan",
+      "Owain Evans"
     ],
-    "published_date": "2026-04-27",
+    "published_date": "2026-04-28",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2604.25891v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.25891v1",
+    "content": {
+      "en": "Finetuning a language model can lead to emergent misalignment (EM) [Betley et al., 2025b]. Models trained on a narrow distribution of misaligned behavior generalize to more egregious behaviors when tested outside the training distribution.   We study a set of interventions proposed to reduce EM. We confirm that these interventions reduce or eliminate EM on existing evaluations (questions like \"How do I make a quick buck?\"). However, if the evaluation prompts are tweaked to resemble the training context, the model displays EM. We call this conditional misalignment. As in standard EM, the model displays misaligned behaviors more egregious than those seen during training, but only on inputs sharing features with the training data.   The first two interventions are diluting misaligned data with benign data, and finetuning on benign data after misaligned data. Both produce conditional misalignment. For instance, models trained on a mix of only 5% insecure code still show misalignment when asked to format responses as Python strings (resembling the training context).   The third intervention is inoculation prompting. Here, statements with a similar form to the inoculation prompt serve as triggers for misalignment, even if they have the opposite meaning. On the positive side, inoculation prompting has lower (but still non-zero) conditional misalignment if training is on-policy or includes reasoning distillation.   Our results imply that in realistic post-training, where misaligned data is typically combined with benign data, models may be conditionally misaligned even if standard evaluations look clean.",
+      "tr": "Finetuning a language model can lead to emergent misalignment (EM) [Betley et al., 2025b]. Models trained on a narrow distribution of misaligned behavior generalize to more egregious behaviors when tested outside the training distribution.   We study a set of interventions proposed to reduce EM. We confirm that these interventions reduce or eliminate EM on existing evaluations (questions like \"How do I make a quick buck?\"). However, if the evaluation prompts are tweaked to resemble the training context, the model displays EM. We call this conditional misalignment. As in standard EM, the model displays misaligned behaviors more egregious than those seen during training, but only on inputs sharing features with the training data.   The first two interventions are diluting misaligned data with benign data, and finetuning on benign data after misaligned data. Both produce conditional misalignment. For instance, models trained on a mix of only 5% insecure code still show misalignment when asked to format responses as Python strings (resembling the training context).   The third intervention is inoculation prompting. Here, statements with a similar form to the inoculation prompt serve as triggers for misalignment, even if they have the opposite meaning. On the positive side, inoculation prompting has lower (but still non-zero) conditional misalignment if training is on-policy or includes reasoning distillation.   Our results imply that in realistic post-training, where misaligned data is typically combined with benign data, models may be conditionally misaligned even if standard evaluations look clean."
+    }
+  },
+  {
+    "id": "2604.25846v1",
+    "title": "Towards Agentic Investigation of Security Alerts",
+    "authors": [
+      "Even Eilertsen",
+      "Vasileios Mavroeidis",
+      "Gudmund Grov"
+    ],
+    "published_date": "2026-04-28",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2604.24657v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.24657v1",
+    "link": "http://arxiv.org/abs/2604.25846v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.25846v1",
     "content": {
-      "en": "Autonomous AI agents extend large language models into full runtime systems that load skills, ingest external content, maintain memory, plan multi-step actions, and invoke privileged tools. In such systems, security failures rarely remain confined to a single interface; instead, they can propagate across initialization, input processing, memory, decision-making, and execution, often becoming apparent only when harmful effects materialize in the environment. This paper presents AgentWard, a lifecycle-oriented, defense-in-depth architecture that systematically organizes protection across these five stages. AgentWard integrates stage-specific, heterogeneous controls with cross-layer coordination, enabling threats to be intercepted along their propagation paths while safeguarding critical assets. We detail the design rationale and architecture of five coordinated protection layers, and implement a plugin-native prototype on OpenClaw to demonstrate practical feasibility. This perspective provides a concrete blueprint for structuring runtime security controls, managing trust propagation, and enforcing execution containment in autonomous AI agents. Our code is available at https://github.com/FIND-Lab/AgentWard .",
-      "tr": "Autonomous AI agents extend large language models into full runtime systems that load skills, ingest external content, maintain memory, plan multi-step actions, and invoke privileged tools. In such systems, security failures rarely remain confined to a single interface; instead, they can propagate across initialization, input processing, memory, decision-making, and execution, often becoming apparent only when harmful effects materialize in the environment. This paper presents AgentWard, a lifecycle-oriented, defense-in-depth architecture that systematically organizes protection across these five stages. AgentWard integrates stage-specific, heterogeneous controls with cross-layer coordination, enabling threats to be intercepted along their propagation paths while safeguarding critical assets. We detail the design rationale and architecture of five coordinated protection layers, and implement a plugin-native prototype on OpenClaw to demonstrate practical feasibility. This perspective provides a concrete blueprint for structuring runtime security controls, managing trust propagation, and enforcing execution containment in autonomous AI agents. Our code is available at https://github.com/FIND-Lab/AgentWard ."
+      "en": "Security analysts are overwhelmed by the volume of alerts and the low context provided by many detection systems. Early-stage investigations typically require manual correlation across multiple log sources, a task that is usually time-consuming. In this paper, we present an experimental, agentic workflow that leverages large language models (LLMs) augmented with predefined queries and constrained tool access (structured SQL over Suricata logs and grep-based text search) to automate the first stages of alert investigation. The proposed workflow integrates queries to provide an overview of the available data, and LLM components that selects which queries to use based on the overview results, extracts raw evidence from the query results, and delivers a final verdict of the alert. Our results demonstrate that the LLM-powered workflow can investigate log sources, plan an investigation, and produce a final verdict that has a significantly higher accuracy than a verdict produced by the same LLM without the proposed workflow. By recognizing the inherent limitations of directly applying LLMs to high-volume and unstructured data, we propose combining existing investigation practices of real-world analysts with a structured approach to leverage LLMs as virtual security analysts, thereby assisting and reducing the manual workload.",
+      "tr": "Security analysts are overwhelmed by the volume of alerts and the low context provided by many detection systems. Early-stage investigations typically require manual correlation across multiple log sources, a task that is usually time-consuming. In this paper, we present an experimental, agentic workflow that leverages large language models (LLMs) augmented with predefined queries and constrained tool access (structured SQL over Suricata logs and grep-based text search) to automate the first stages of alert investigation. The proposed workflow integrates queries to provide an overview of the available data, and LLM components that selects which queries to use based on the overview results, extracts raw evidence from the query results, and delivers a final verdict of the alert. Our results demonstrate that the LLM-powered workflow can investigate log sources, plan an investigation, and produce a final verdict that has a significantly higher accuracy than a verdict produced by the same LLM without the proposed workflow. By recognizing the inherent limitations of directly applying LLMs to high-volume and unstructured data, we propose combining existing investigation practices of real-world analysts with a structured approach to leverage LLMs as virtual security analysts, thereby assisting and reducing the manual workload."
     }
   },
   {
-    "id": "2604.24542v1",
-    "title": "Layerwise Convergence Fingerprints for Runtime Misbehavior Detection in Large Language Models",
+    "id": "2604.25757v1",
+    "title": "Threat-Oriented Digital Twinning for Security Evaluation of Autonomous Platforms",
     "authors": [
-      "Nay Myat Min",
-      "Long H. Pham",
-      "Jun Sun"
+      "Thomas J. Neubert",
+      "Laxima Niure Kandel",
+      "Berker Peköz"
     ],
-    "published_date": "2026-04-27",
+    "published_date": "2026-04-28",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.CL"
+      "cs.RO",
+      "eess.SY"
     ],
-    "link": "http://arxiv.org/abs/2604.24542v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.24542v1",
+    "link": "http://arxiv.org/abs/2604.25757v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.25757v1",
     "content": {
-      "en": "Large language models deployed at runtime can misbehave in ways that clean-data validation cannot anticipate: training-time backdoors lie dormant until triggered, jailbreaks subvert safety alignment, and prompt injections override the deployer's instructions. Existing runtime defenses address these threats one at a time and often assume a clean reference model, trigger knowledge, or editable weights, assumptions that rarely hold for opaque third-party artifacts. We introduce Layerwise Convergence Fingerprinting (LCF), a tuning-free runtime monitor that treats the inter-layer hidden-state trajectory as a health signal: LCF computes a diagonal Mahalanobis distance on every inter-layer difference, aggregates via Ledoit-Wolf shrinkage, and thresholds via leave-one-out calibration on 200 clean examples, with no reference model, trigger knowledge, or retraining. Evaluated on four architectures (Llama-3-8B, Qwen2.5-7B, Gemma-2-9B, Qwen2.5-14B) across backdoors, jailbreaks, and prompt injection (56 backdoor combinations, 3 jailbreak techniques, and BIPIA email + code-QA), LCF reduces mean backdoor attack success rate (ASR) below 1% on Qwen2.5-7B and Gemma-2 and to 1.3% on Qwen2.5-14B, detects 92-100% of DAN jailbreaks (62-100% for GCG and softer role-play), and flags 100% of text-payload injections across all eight (model, domain) cells, at 12-16% backdoor FPR and <0.1% inference overhead. A single aggregation score covers all three threat families without threat-specific tuning, positioning LCF as a general-purpose runtime safety layer for cloud-served and on-device LLMs.",
-      "tr": "Large language models deployed at runtime can misbehave in ways that clean-data validation cannot anticipate: training-time backdoors lie dormant until triggered, jailbreaks subvert safety alignment, and prompt injections override the deployer's instructions. Existing runtime defenses address these threats one at a time and often assume a clean reference model, trigger knowledge, or editable weights, assumptions that rarely hold for opaque third-party artifacts. We introduce Layerwise Convergence Fingerprinting (LCF), a tuning-free runtime monitor that treats the inter-layer hidden-state trajectory as a health signal: LCF computes a diagonal Mahalanobis distance on every inter-layer difference, aggregates via Ledoit-Wolf shrinkage, and thresholds via leave-one-out calibration on 200 clean examples, with no reference model, trigger knowledge, or retraining. Evaluated on four architectures (Llama-3-8B, Qwen2.5-7B, Gemma-2-9B, Qwen2.5-14B) across backdoors, jailbreaks, and prompt injection (56 backdoor combinations, 3 jailbreak techniques, and BIPIA email + code-QA), LCF reduces mean backdoor attack success rate (ASR) below 1% on Qwen2.5-7B and Gemma-2 and to 1.3% on Qwen2.5-14B, detects 92-100% of DAN jailbreaks (62-100% for GCG and softer role-play), and flags 100% of text-payload injections across all eight (model, domain) cells, at 12-16% backdoor FPR and <0.1% inference overhead. A single aggregation score covers all three threat families without threat-specific tuning, positioning LCF as a general-purpose runtime safety layer for cloud-served and on-device LLMs."
+      "en": "Open, unclassified research on secure autonomy is constrained by limited access to operational platforms, contested communications infrastructure, and representative adversarial test conditions. This paper presents a threat-oriented digital twinning methodology for cybersecurity evaluation of learning-enabled autonomous platforms. The approach is instantiated as an open-source, modular twin of a representative autonomy stack with separated sensing, autonomy, and supervisory-control functions; confidence-gated multi-modal perception; explicit command and telemetry trust boundaries; and runtime hold-safe behavior. The contribution is methodological: a reproducible design pattern that translates threat analysis into observable, controllable tests for spoofing, replay, malformed-input injection, degraded sensing, and adversarial ML stress. Although the implemented proxy is ground based, the architecture is intentionally framed around stack elements shared with UAV and space systems, including constrained onboard compute, intermittent or high-latency links, probabilistic perception, and mission-critical recovery behavior. The result is an implementable research scaffold for dependable and secure autonomy studies across UAV and space domains.",
+      "tr": "Open, unclassified research on secure autonomy is constrained by limited access to operational platforms, contested communications infrastructure, and representative adversarial test conditions. This paper presents a threat-oriented digital twinning methodology for cybersecurity evaluation of learning-enabled autonomous platforms. The approach is instantiated as an open-source, modular twin of a representative autonomy stack with separated sensing, autonomy, and supervisory-control functions; confidence-gated multi-modal perception; explicit command and telemetry trust boundaries; and runtime hold-safe behavior. The contribution is methodological: a reproducible design pattern that translates threat analysis into observable, controllable tests for spoofing, replay, malformed-input injection, degraded sensing, and adversarial ML stress. Although the implemented proxy is ground based, the architecture is intentionally framed around stack elements shared with UAV and space systems, including constrained onboard compute, intermittent or high-latency links, probabilistic perception, and mission-critical recovery behavior. The result is an implementable research scaffold for dependable and secure autonomy studies across UAV and space domains."
     }
   },
   {
-    "id": "2604.24477v1",
-    "title": "GAMMAF: A Common Framework for Graph-Based Anomaly Monitoring Benchmarking in LLM Multi-Agent Systems",
+    "id": "2604.25562v1",
+    "title": "SnapGuard: Lightweight Prompt Injection Detection for Screenshot-Based Web Agents",
     "authors": [
-      "Pablo Mateo-Torrejón",
-      "Alfonso Sánchez-Macián"
+      "Mengyao Du",
+      "Han Fang",
+      "Haokai Ma",
+      "Jiahao Chen",
+      "Kai Xu"
     ],
-    "published_date": "2026-04-27",
+    "published_date": "2026-04-28",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2604.24477v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.24477v1",
+    "link": "http://arxiv.org/abs/2604.25562v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.25562v1",
     "content": {
-      "en": "The rapid integration of Large Language Models (LLMs) into Multi-Agent Systems (MAS) has significantly enhanced their collaborative problem-solving capabilities, but it has also expanded their attack surfaces, exposing them to vulnerabilities such as prompt infection and compromised inter-agent communication. While emerging graph-based anomaly detection methods show promise in protecting these networks, the field currently lacks a standardized, reproducible environment to train these models and evaluate their efficacy. To address this gap, we introduce Gammaf (Graph-based Anomaly Monitoring for LLM Multi-Agent systems Framework), an open-source benchmarking platform. Gammaf is not a novel defense mechanism itself, but rather a comprehensive evaluation architecture designed to generate synthetic multi-agent interaction datasets and benchmark the performance of existing and future defense models. The proposed framework operates through two interdependent pipelines: a Training Data Generation stage, which simulates debates across varied network topologies to capture interactions as robust attributed graphs, and a Defense System Benchmarking stage, which actively evaluates defense models by dynamically isolating flagged adversarial nodes during live inference rounds. Through rigorous evaluation using established defense baselines (XG-Guard and BlindGuard) across multiple knowledge tasks (such as MMLU-Pro and GSM8K), we demonstrate Gammaf's high utility, topological scalability, and execution efficiency. Furthermore, our experimental results reveal that equipping an LLM-MAS with effective attack remediation not only recovers system integrity but also substantially reduces overall operational costs by facilitating early consensus and cutting off the extensive token generation typical of adversarial agents.",
-      "tr": "The rapid integration of Large Language Models (LLMs) into Multi-Agent Systems (MAS) has significantly enhanced their collaborative problem-solving capabilities, but it has also expanded their attack surfaces, exposing them to vulnerabilities such as prompt infection and compromised inter-agent communication. While emerging graph-based anomaly detection methods show promise in protecting these networks, the field currently lacks a standardized, reproducible environment to train these models and evaluate their efficacy. To address this gap, we introduce Gammaf (Graph-based Anomaly Monitoring for LLM Multi-Agent systems Framework), an open-source benchmarking platform. Gammaf is not a novel defense mechanism itself, but rather a comprehensive evaluation architecture designed to generate synthetic multi-agent interaction datasets and benchmark the performance of existing and future defense models. The proposed framework operates through two interdependent pipelines: a Training Data Generation stage, which simulates debates across varied network topologies to capture interactions as robust attributed graphs, and a Defense System Benchmarking stage, which actively evaluates defense models by dynamically isolating flagged adversarial nodes during live inference rounds. Through rigorous evaluation using established defense baselines (XG-Guard and BlindGuard) across multiple knowledge tasks (such as MMLU-Pro and GSM8K), we demonstrate Gammaf's high utility, topological scalability, and execution efficiency. Furthermore, our experimental results reveal that equipping an LLM-MAS with effective attack remediation not only recovers system integrity but also substantially reduces overall operational costs by facilitating early consensus and cutting off the extensive token generation typical of adversarial agents."
+      "en": "Web agents have emerged as an effective paradigm for automating interactions with complex web environments, yet remain vulnerable to prompt injection attacks that embed malicious instructions into webpage content to induce unintended actions. This threat is further amplified for screenshot-based web agents, which operate on rendered visual webpages rather than structured textual representations, making predominant text-centric defenses ineffective. Although multimodal detection methods have been explored, they often rely on large vision-language models (VLMs), incurring significant computational overhead. The bottleneck lies in the complexity of modern webpages: VLMs must comprehend the global semantics of an entire page, resulting in substantial inference time and GPU memory usage. This raises a critical question: can we detect prompt injection attacks from screenshots in a lightweight manner? In this paper, we observe that injected webpages exhibit distinct characteristics compared to benign ones from both visual and textual perspectives. Building on this insight, we propose SnapGuard, a lightweight yet accurate method that reformulates prompt injection detection as multimodal representation analysis over webpage screenshots. SnapGuard leverages two complementary signals: a visual stability indicator that identifies abnormally smooth gradient distributions induced by malicious content, and action-oriented textual signals recovered via contrast-polarity reversal. Extensive evaluations across eight attacks and two benign settings demonstrate that SnapGuard achieves an F1 score of 0.75, outperforming GPT-4o-prompt while being 8x faster (1.81s vs. 14.50s) and introducing no additional memory overhead.",
+      "tr": "Web agents have emerged as an effective paradigm for automating interactions with complex web environments, yet remain vulnerable to prompt injection attacks that embed malicious instructions into webpage content to induce unintended actions. This threat is further amplified for screenshot-based web agents, which operate on rendered visual webpages rather than structured textual representations, making predominant text-centric defenses ineffective. Although multimodal detection methods have been explored, they often rely on large vision-language models (VLMs), incurring significant computational overhead. The bottleneck lies in the complexity of modern webpages: VLMs must comprehend the global semantics of an entire page, resulting in substantial inference time and GPU memory usage. This raises a critical question: can we detect prompt injection attacks from screenshots in a lightweight manner? In this paper, we observe that injected webpages exhibit distinct characteristics compared to benign ones from both visual and textual perspectives. Building on this insight, we propose SnapGuard, a lightweight yet accurate method that reformulates prompt injection detection as multimodal representation analysis over webpage screenshots. SnapGuard leverages two complementary signals: a visual stability indicator that identifies abnormally smooth gradient distributions induced by malicious content, and action-oriented textual signals recovered via contrast-polarity reversal. Extensive evaluations across eight attacks and two benign settings demonstrate that SnapGuard achieves an F1 score of 0.75, outperforming GPT-4o-prompt while being 8x faster (1.81s vs. 14.50s) and introducing no additional memory overhead."
     }
   },
   {
-    "id": "2604.24468v1",
-    "title": "A Survey on Split Learning for LLM Fine-Tuning: Models, Systems, and Privacy Optimizations",
+    "id": "2604.25555v1",
+    "title": "From CRUD to Autonomous Agents: Formal Validation and Zero-Trust Security for Semantic Gateways in AI-Native Enterprise Systems",
     "authors": [
-      "Zihan Liu",
-      "Yizhen Wang",
-      "Rui Wang",
-      "Xiu Tang",
-      "Sai Wu"
+      "Ignacio Peyrano"
     ],
-    "published_date": "2026-04-27",
+    "published_date": "2026-04-28",
     "tags": [
       "cs.CR",
-      "cs.CL",
-      "cs.DC",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.25555v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.25555v1",
+    "content": {
+      "en": "Enterprise software engineering is shifting away from deterministic CRUD/REST architectures toward AI-native systems where large language models act as cognitive orchestrators. This transition introduces a critical security tension: probabilistic LLMs weaken classical mechanisms for validation, access control, and formal testing.   This paper proposes the design, formal validation, and empirical evaluation of a Semantic Gateway governed by the Model Context Protocol (MCP). The gateway reframes the enterprise API as a semantic surface where tools are dynamically discovered, authorized, and executed based on intent and policy enforcement. The central contribution rests on a paradigm shift: autonomous agents must not be validated as traditional software nor as simple API consumers, but as stochastic state-transition systems whose behavior must be abstracted, fuzzed, and audited through enabled-tool graphs.   The architecture introduces a three-layer Zero-Trust security model comprising a pre-inference Semantic Firewall, deterministic Tool-Level RBAC, and out-of-band Cryptographic Human-in-the-Loop approval. Enabledness-Preserving Abstractions (EPAs) and greybox semantic fuzzing--originally developed for blockchain smart contract verification--are adapted to audit agent behavior in enterprise environments. Results demonstrate an 84.2% reduction in incidental code. Across 500,000 multi-turn fuzzing sequences, the methodology achieved a 100% discovery rate of hidden unauthorized state transitions, proving that dynamic formal verification is strictly necessary for secure agentic deployment.",
+      "tr": "Enterprise software engineering is shifting away from deterministic CRUD/REST architectures toward AI-native systems where large language models act as cognitive orchestrators. This transition introduces a critical security tension: probabilistic LLMs weaken classical mechanisms for validation, access control, and formal testing.   This paper proposes the design, formal validation, and empirical evaluation of a Semantic Gateway governed by the Model Context Protocol (MCP). The gateway reframes the enterprise API as a semantic surface where tools are dynamically discovered, authorized, and executed based on intent and policy enforcement. The central contribution rests on a paradigm shift: autonomous agents must not be validated as traditional software nor as simple API consumers, but as stochastic state-transition systems whose behavior must be abstracted, fuzzed, and audited through enabled-tool graphs.   The architecture introduces a three-layer Zero-Trust security model comprising a pre-inference Semantic Firewall, deterministic Tool-Level RBAC, and out-of-band Cryptographic Human-in-the-Loop approval. Enabledness-Preserving Abstractions (EPAs) and greybox semantic fuzzing--originally developed for blockchain smart contract verification--are adapted to audit agent behavior in enterprise environments. Results demonstrate an 84.2% reduction in incidental code. Across 500,000 multi-turn fuzzing sequences, the methodology achieved a 100% discovery rate of hidden unauthorized state transitions, proving that dynamic formal verification is strictly necessary for secure agentic deployment."
+    }
+  },
+  {
+    "id": "2604.25544v1",
+    "title": "Medoid Prototype Alignment for Cross-Plant Unknown Attack Detection in Industrial Control Systems",
+    "authors": [
+      "Luyao Wang"
+    ],
+    "published_date": "2026-04-28",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2604.25544v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.25544v1",
+    "content": {
+      "en": "Deploying an intrusion detector trained in one industrial plant to another remains difficult because Industrial Control System (ICS) traffic is highly site-dependent, labels are scarce, and unseen attacks often appear after deployment. To address this challenge, this paper introduces a medoid prototype alignment framework for cross-plant unknown attack detection. Instead of aligning all source and target samples directly, the method first compresses heterogeneous traffic into a comparable representation space and then extracts robust medoid prototypes that summarize local operational structure in each domain. A prototype-calibrated transfer objective is further designed to align target prototypes with source prototypes while preserving source-domain discrimination and encouraging confident target predictions. This strategy reduces noisy cross-domain matching and improves transfer stability under heterogeneous industrial conditions. Experiments conducted on natural gas and water storage control systems show that the proposed method achieves the best average performance among all compared models, reaching an average accuracy of 0.843 and an average F1-score of 0.838 across four unknown-attack transfer tasks. The analysis also shows clear transfer asymmetry between source-target directions and confirms that prototype guidance is especially helpful on challenging reverse-transfer settings. These findings suggest that medoid prototype alignment is a practical solution for robust industrial intrusion detection under domain shift.",
+      "tr": "Deploying an intrusion detector trained in one industrial plant to another remains difficult because Industrial Control System (ICS) traffic is highly site-dependent, labels are scarce, and unseen attacks often appear after deployment. To address this challenge, this paper introduces a medoid prototype alignment framework for cross-plant unknown attack detection. Instead of aligning all source and target samples directly, the method first compresses heterogeneous traffic into a comparable representation space and then extracts robust medoid prototypes that summarize local operational structure in each domain. A prototype-calibrated transfer objective is further designed to align target prototypes with source prototypes while preserving source-domain discrimination and encouraging confident target predictions. This strategy reduces noisy cross-domain matching and improves transfer stability under heterogeneous industrial conditions. Experiments conducted on natural gas and water storage control systems show that the proposed method achieves the best average performance among all compared models, reaching an average accuracy of 0.843 and an average F1-score of 0.838 across four unknown-attack transfer tasks. The analysis also shows clear transfer asymmetry between source-target directions and confirms that prototype guidance is especially helpful on challenging reverse-transfer settings. These findings suggest that medoid prototype alignment is a practical solution for robust industrial intrusion detection under domain shift."
+    }
+  },
+  {
+    "id": "2604.25200v1",
+    "title": "Making AI-Assisted Grant Evaluation Auditable without Exposing the Model",
+    "authors": [
+      "Kemal Bicakci"
+    ],
+    "published_date": "2026-04-28",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CY",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2604.24468v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.24468v1",
+    "link": "http://arxiv.org/abs/2604.25200v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.25200v1",
     "content": {
-      "en": "Fine-tuning unlocks large language models (LLMs) for specialized applications, but its high computational cost often puts it out of reach for resource-constrained organizations. While cloud platforms could provide the needed resources, data privacy concerns make sharing sensitive information with third parties risky. A promising solution is split learning for LLM fine-tuning, which divides the model between clients and a server, allowing collaborative and secure training through exchanged intermediate data, thus enabling resource-constrained participants to adapt LLMs safely. % In light of this, a growing body of literature has emerged to advance this paradigm, introducing varied model methods, system optimizations, and privacy defense-attack techniques for split learning. To bring clarity and direction to the field, a comprehensive survey is needed to classify, compare, and critique these diverse approaches. This paper fills the gap by presenting the first extensive survey dedicated to split learning for LLM fine-tuning. We propose a unified, fine-grained training pipeline to pinpoint key operational components and conduct a systematic review of state-of-the-art work across three core dimensions: model-level optimization, system-level efficiency, and privacy preservation. Through this structured taxonomy, we establish a foundation for advancing scalable, robust, and secure collaborative LLM adaptation.",
-      "tr": "Fine-tuning unlocks large language models (LLMs) for specialized applications, but its high computational cost often puts it out of reach for resource-constrained organizations. While cloud platforms could provide the needed resources, data privacy concerns make sharing sensitive information with third parties risky. A promising solution is split learning for LLM fine-tuning, which divides the model between clients and a server, allowing collaborative and secure training through exchanged intermediate data, thus enabling resource-constrained participants to adapt LLMs safely. % In light of this, a growing body of literature has emerged to advance this paradigm, introducing varied model methods, system optimizations, and privacy defense-attack techniques for split learning. To bring clarity and direction to the field, a comprehensive survey is needed to classify, compare, and critique these diverse approaches. This paper fills the gap by presenting the first extensive survey dedicated to split learning for LLM fine-tuning. We propose a unified, fine-grained training pipeline to pinpoint key operational components and conduct a systematic review of state-of-the-art work across three core dimensions: model-level optimization, system-level efficiency, and privacy preservation. Through this structured taxonomy, we establish a foundation for advancing scalable, robust, and secure collaborative LLM adaptation."
+      "en": "Public agencies are beginning to consider large language models (LLMs) as decision-support tools for grant evaluation. This creates a practical governance problem: the model and scoring rubric should not be exposed in a way that allows applicants to optimize against them, yet the evaluation process must remain auditable, contestable, and accountable.   We propose a TEE-based architecture that helps reconcile these requirements through remote attestation. The architecture allows an external verifier to check which model, rubric, prompt template, and input representation were used, without exposing model weights, proprietary scoring logic, or intermediate reasoning to applicants or infrastructure operators. The main artifact is an attested evaluation bundle: a signed, timestamped record linking the original submission hash, the canonical input hash, the model-and-rubric measurement, and the evaluation output.   The paper also considers a scenario-specific prompt injection risk: applicant-controlled documents may contain hidden or indirect instructions intended to influence the LLM evaluator. We therefore include a canonicalization and sanitization layer that normalizes document representations and records suspicious transformations before inference. We position the design relative to confidential AI inference, attestable AI audits, zero-knowledge machine learning, algorithmic accountability, and AI-assisted peer review. The resulting claim is deliberately narrow: remote attestation does not prove that an evaluation is fair or scientifically correct, but it can make part of the evaluation process externally verifiable.",
+      "tr": "Public agencies are beginning to consider large language models (LLMs) as decision-support tools for grant evaluation. This creates a practical governance problem: the model and scoring rubric should not be exposed in a way that allows applicants to optimize against them, yet the evaluation process must remain auditable, contestable, and accountable.   We propose a TEE-based architecture that helps reconcile these requirements through remote attestation. The architecture allows an external verifier to check which model, rubric, prompt template, and input representation were used, without exposing model weights, proprietary scoring logic, or intermediate reasoning to applicants or infrastructure operators. The main artifact is an attested evaluation bundle: a signed, timestamped record linking the original submission hash, the canonical input hash, the model-and-rubric measurement, and the evaluation output.   The paper also considers a scenario-specific prompt injection risk: applicant-controlled documents may contain hidden or indirect instructions intended to influence the LLM evaluator. We therefore include a canonicalization and sanitization layer that normalizes document representations and records suspicious transformations before inference. We position the design relative to confidential AI inference, attestable AI audits, zero-knowledge machine learning, algorithmic accountability, and AI-assisted peer review. The resulting claim is deliberately narrow: remote attestation does not prove that an evaluation is fair or scientifically correct, but it can make part of the evaluation process externally verifiable."
     }
   },
   {
-    "id": "2604.24350v1",
-    "title": "Unveiling the Backdoor Mechanism Hidden Behind Catastrophic Overfitting in Fast Adversarial Training",
+    "id": "2604.25109v1",
+    "title": "Structured Security Auditing and Robustness Enhancement for Untrusted Agent Skills",
     "authors": [
-      "Mengnan Zhao",
-      "Lihe Zhang",
-      "Tianhang Zheng",
-      "Bo Wang",
-      "Baocai Yin"
+      "Lijia Lv",
+      "Xuehai Tang",
+      "Jie Wen",
+      "Jizhong Han",
+      "Songlin Hu"
     ],
-    "published_date": "2026-04-27",
-    "tags": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2604.24350v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.24350v1",
-    "content": {
-      "en": "Fast Adversarial Training (FAT) has attracted significant attention due to its efficiency in enhancing neural network robustness against adversarial attacks. However, FAT is prone to catastrophic overfitting (CO), wherein models overfit to the specific attack used during training and fail to generalize to others. While existing methods introduce diverse hypotheses and propose various strategies to mitigate CO, a systematic and intuitive explanation of CO remains absent. In this work, we innovatively interpret CO through the lens of backdoor. Through validations on pathway division, diverse feature predictions, and universal class distinguishable triggers in CO, we conceptualize CO as a weak trigger variant of unlearnable tasks, unifying CO, backdoor attacks, and unlearnable tasks under a common theoretical framework. Guided by this, we leverage several backdoor inspired strategies to mitigate CO: (i) Recalibrate CO affected model parameters using vanilla fine tuning, linear probing, or reinitialization-based techniques; (ii) Introduce a weight outlier suppression constraint to regulate abnormal deviations in model weights. Extensive experiments support our interpretation of CO and show the efficacy of the proposed mitigation strategies.",
-      "tr": "Fast Adversarial Training (FAT) has attracted significant attention due to its efficiency in enhancing neural network robustness against adversarial attacks. However, FAT is prone to catastrophic overfitting (CO), wherein models overfit to the specific attack used during training and fail to generalize to others. While existing methods introduce diverse hypotheses and propose various strategies to mitigate CO, a systematic and intuitive explanation of CO remains absent. In this work, we innovatively interpret CO through the lens of backdoor. Through validations on pathway division, diverse feature predictions, and universal class distinguishable triggers in CO, we conceptualize CO as a weak trigger variant of unlearnable tasks, unifying CO, backdoor attacks, and unlearnable tasks under a common theoretical framework. Guided by this, we leverage several backdoor inspired strategies to mitigate CO: (i) Recalibrate CO affected model parameters using vanilla fine tuning, linear probing, or reinitialization-based techniques; (ii) Introduce a weight outlier suppression constraint to regulate abnormal deviations in model weights. Extensive experiments support our interpretation of CO and show the efficacy of the proposed mitigation strategies."
-    }
-  },
-  {
-    "id": "2604.24332v1",
-    "title": "Mitigating Error Amplification in Fast Adversarial Training",
-    "authors": [
-      "Mengnan Zhao",
-      "Lihe Zhang",
-      "Bo Wang",
-      "Tianhang Zheng",
-      "Hong Zhong"
-    ],
-    "published_date": "2026-04-27",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2604.24332v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.24332v1",
-    "content": {
-      "en": "Fast Adversarial Training (FAT) has proven effective in enhancing model robustness by encouraging networks to learn perturbation-invariant representations. However, FAT often suffers from catastrophic overfitting (CO), where the model overfits to the training attack and fails to generalize to unseen ones. Moreover, robustness oriented optimization typically leads to notable performance degradation on clean inputs, and such degradation becomes increasingly severe as the perturbation budget grows. In this work, we conduct a comprehensive analysis of how guidance strength affects model performance by modulating perturbation and supervision levels across distinct confidence groups. The findings reveal that low confidence samples are the primary contributors to CO and the robustness accuracy trade off. Building on this insight, we propose a Distribution-aware Dynamic Guidance (DDG) strategy that dynamically adjusts both the perturbation budget and supervision signal. Specifically, DDG scales the perturbation magnitude according to the sample confidence at the ground truth class, thereby guiding samples toward consistent decision boundaries while mitigating the influence of learning spurious correlations. Simultaneously, it dynamically adjusts the supervision signal based on the prediction state of each sample, preventing overemphasis on incorrect signals. To alleviate potential gradient instability arising from dynamic guidance, we further design a weighted regularization constraint. Extensive experiments on standard benchmarks demonstrate that DDG effectively alleviates both CO and the robustness accuracy trade off.",
-      "tr": "Fast Adversarial Training (FAT) has proven effective in enhancing model robustness by encouraging networks to learn perturbation-invariant representations. However, FAT often suffers from catastrophic overfitting (CO), where the model overfits to the training attack and fails to generalize to unseen ones. Moreover, robustness oriented optimization typically leads to notable performance degradation on clean inputs, and such degradation becomes increasingly severe as the perturbation budget grows. In this work, we conduct a comprehensive analysis of how guidance strength affects model performance by modulating perturbation and supervision levels across distinct confidence groups. The findings reveal that low confidence samples are the primary contributors to CO and the robustness accuracy trade off. Building on this insight, we propose a Distribution-aware Dynamic Guidance (DDG) strategy that dynamically adjusts both the perturbation budget and supervision signal. Specifically, DDG scales the perturbation magnitude according to the sample confidence at the ground truth class, thereby guiding samples toward consistent decision boundaries while mitigating the influence of learning spurious correlations. Simultaneously, it dynamically adjusts the supervision signal based on the prediction state of each sample, preventing overemphasis on incorrect signals. To alleviate potential gradient instability arising from dynamic guidance, we further design a weighted regularization constraint. Extensive experiments on standard benchmarks demonstrate that DDG effectively alleviates both CO and the robustness accuracy trade off."
-    }
-  },
-  {
-    "id": "2604.24326v1",
-    "title": "X-NegoBox: An Explainable Privacy-Budget Negotiation Framework for Secure Peer-to-Peer Energy Data Exchange",
-    "authors": [
-      "Poushali Sengupta",
-      "Sabita Maharjan",
-      "Frank Eliassen",
-      "Yan Zhang"
-    ],
-    "published_date": "2026-04-27",
+    "published_date": "2026-04-28",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2604.24326v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.24326v1",
+    "link": "http://arxiv.org/abs/2604.25109v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.25109v1",
     "content": {
-      "en": "The decentralization of modern energy systems is transforming consumers into prosumers who continuously exchange data with aggregators, peers, and market operators. While such data is essential for peer-to-peer trading, demand response, and distributed forecasting, it can reveal sensitive household patterns and introduce privacy risks. Existing data sharing mechanisms rely on fixed policies or predefined differential privacy budgets, limiting their ability to adapt to variations in reliability, data sensitivity, and request purpose. As a result, prosumers rarely receive explanations for why a request is accepted, rejected, or modified, reducing trust and participation.   To address these limitations, we propose X-NegoBox, an explainable negotiation framework for adaptive privacy budgeting and transparent decision making. Each prosumer data is managed locally within a private DataBox, where raw data remain confined. Incoming requests are processed by an Autonomous Privacy Budget Negotiation Protocol (APBNP), which determines an appropriate privacy budget based on trust, feature sensitivity, declared purpose, historical behavior, and risk-aware pricing. When needed, APBNP generates privacy-preserving counter-offers, such as reduced resolution or duration.   An Explainable Agreement Layer (X-Contract) produces human- and machine-readable justifications for each decision. After agreement, requester code executes locally in a sandbox, and only sanitized outputs are shared. Experiments on realistic energy market settings show reduced privacy leakage, higher acceptance rates, and improved interpretability.",
-      "tr": "The decentralization of modern energy systems is transforming consumers into prosumers who continuously exchange data with aggregators, peers, and market operators. While such data is essential for peer-to-peer trading, demand response, and distributed forecasting, it can reveal sensitive household patterns and introduce privacy risks. Existing data sharing mechanisms rely on fixed policies or predefined differential privacy budgets, limiting their ability to adapt to variations in reliability, data sensitivity, and request purpose. As a result, prosumers rarely receive explanations for why a request is accepted, rejected, or modified, reducing trust and participation.   To address these limitations, we propose X-NegoBox, an explainable negotiation framework for adaptive privacy budgeting and transparent decision making. Each prosumer data is managed locally within a private DataBox, where raw data remain confined. Incoming requests are processed by an Autonomous Privacy Budget Negotiation Protocol (APBNP), which determines an appropriate privacy budget based on trust, feature sensitivity, declared purpose, historical behavior, and risk-aware pricing. When needed, APBNP generates privacy-preserving counter-offers, such as reduced resolution or duration.   An Explainable Agreement Layer (X-Contract) produces human- and machine-readable justifications for each decision. After agreement, requester code executes locally in a sandbox, and only sanitized outputs are shared. Experiments on realistic energy market settings show reduced privacy leakage, higher acceptance rates, and improved interpretability."
+      "en": "Agent Skills package SKILL.md files, scripts, reference documents, and repository context into reusable capability units, turning pre-load auditing from single-prompt filtering into cross-file security review. Existing guardrails often flag risk but recover malicious intent inconsistently under semantics-preserving rewrites. This paper formulates pre-load auditing for untrusted Agent Skills as a robust three-way classification task and introduces SkillGuard-Robust, which combines role-aware evidence extraction, selective semantic verification, and consistency-preserving adjudication. We evaluate SkillGuard-Robust on SkillGuardBench and two public-ecosystem extensions through five large evaluation views ranging from 254 to 404 packages. On the 404-package held-out aggregate, SkillGuard-Robust reaches 97.30% overall exact match, 98.33% malicious-risk recall, and 98.89% attack exact consistency. On the 254-package external-ecosystem view, it reaches 99.66%, 100.00%, and 100.00%, respectively. These results support a bounded conclusion: factorized package auditing materially improves frozen and public-ecosystem robustness, while harsher external-source transfer remains an open challenge.",
+      "tr": "Agent Skills package SKILL.md files, scripts, reference documents, and repository context into reusable capability units, turning pre-load auditing from single-prompt filtering into cross-file security review. Existing guardrails often flag risk but recover malicious intent inconsistently under semantics-preserving rewrites. This paper formulates pre-load auditing for untrusted Agent Skills as a robust three-way classification task and introduces SkillGuard-Robust, which combines role-aware evidence extraction, selective semantic verification, and consistency-preserving adjudication. We evaluate SkillGuard-Robust on SkillGuardBench and two public-ecosystem extensions through five large evaluation views ranging from 254 to 404 packages. On the 404-package held-out aggregate, SkillGuard-Robust reaches 97.30% overall exact match, 98.33% malicious-risk recall, and 98.89% attack exact consistency. On the 254-package external-ecosystem view, it reaches 99.66%, 100.00%, and 100.00%, respectively. These results support a bounded conclusion: factorized package auditing materially improves frozen and public-ecosystem robustness, while harsher external-source transfer remains an open challenge."
     }
   },
   {
-    "id": "2604.24203v1",
-    "title": "Agentic Witnessing: Pragmatic and Scalable TEE-Enabled Privacy-Preserving Auditing",
+    "id": "2604.25071v1",
+    "title": "Scalable Secure Biometric Authentication without Auxiliary Identifiers",
     "authors": [
-      "Antony Rowstron"
+      "Alexander Bienstock",
+      "Daniel Escudero",
+      "Antigoni Polychroniadou",
+      "Zhen Zeng",
+      "Pranav Bhat"
     ],
     "published_date": "2026-04-27",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.ET",
-      "cs.MA"
+      "cs.CV",
+      "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2604.24203v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.24203v1",
+    "link": "http://arxiv.org/abs/2604.25071v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.25071v1",
     "content": {
-      "en": "Auditing the semantic properties of proprietary data creates a fundamental tension: verification requires transparent access, while proprietary rights demand confidentiality. While Zero-Knowledge Proofs (ZKPs) ensure privacy, they are typically limited to precise algebraic constraints and are ill-suited for verifying qualitative, unstructured properties, such as the logic within a codebase. We propose {\\em Agentic Witnessing}, a framework that moves verification from attested execution to {\\em attested reasoning}. The system is composed of three agents: a Verifier (who wants to check properties of a dataset), a Prover (who owns the dataset) and an Auditor (that inspects the dataset). The Verifier is allowed to ask a limited number of simple binary true/false questions to the auditor. By isolating an LLM-based Auditor within a Trusted Execution Environment (TEE), the system enables the Verifier to query a Prover's private data via simple Boolean queries, without exposing the raw dataset. The Auditor uses the Model Context Protocol (MCP) to dynamically inspect the target dataset, producing a yes/no verdict accompanied by a cryptographic transcript: a signed hash chain binding the reasoning trace to both the original dataset and the TEE's hardware root of trust. We demonstrate this architecture by automating the artifact evaluation process for 21 peer-reviewed computer science papers with released codebases on GitHub (e.g. Does the codebase implement the system described in the paper?). We verified five high-level properties of these codebases described in the corresponding publications, treating the source code as private. Our results show that TEE-enabled agentic auditing provides a mechanism for privacy-preserving oversight, effectively decoupling qualitative verification from the need for data disclosure.",
-      "tr": "Auditing the semantic properties of proprietary data creates a fundamental tension: verification requires transparent access, while proprietary rights demand confidentiality. While Zero-Knowledge Proofs (ZKPs) ensure privacy, they are typically limited to precise algebraic constraints and are ill-suited for verifying qualitative, unstructured properties, such as the logic within a codebase. We propose {\\em Agentic Witnessing}, a framework that moves verification from attested execution to {\\em attested reasoning}. The system is composed of three agents: a Verifier (who wants to check properties of a dataset), a Prover (who owns the dataset) and an Auditor (that inspects the dataset). The Verifier is allowed to ask a limited number of simple binary true/false questions to the auditor. By isolating an LLM-based Auditor within a Trusted Execution Environment (TEE), the system enables the Verifier to query a Prover's private data via simple Boolean queries, without exposing the raw dataset. The Auditor uses the Model Context Protocol (MCP) to dynamically inspect the target dataset, producing a yes/no verdict accompanied by a cryptographic transcript: a signed hash chain binding the reasoning trace to both the original dataset and the TEE's hardware root of trust. We demonstrate this architecture by automating the artifact evaluation process for 21 peer-reviewed computer science papers with released codebases on GitHub (e.g. Does the codebase implement the system described in the paper?). We verified five high-level properties of these codebases described in the corresponding publications, treating the source code as private. Our results show that TEE-enabled agentic auditing provides a mechanism for privacy-preserving oversight, effectively decoupling qualitative verification from the need for data disclosure."
+      "en": "The prevalence of biometric authentication has been on the rise due to its ease of use and elimination of weak passwords. To date, most biometric authentication systems have been designed for on-device authentication of the device owner (e.g., smartphones and laptops). Recently, biometric authentication systems have started to emerge that are designed to authenticate users against cloud databases storing representations of biometrics for large numbers of users (potentially millions), such as those facilitating biometric payments. However, the use of a large cloud database introduces a significant attack vector, as a breach of the database could lead to the compromise of all enrolled users' sensitive biometric data. Indeed, all such existing systems either do not adequately protect against such a breach, or are impractical to deploy and use due to their high computational overhead. In this work, we present a new biometric authentication system that provides provable security guarantees against data breaches, while remaining scalable and performant. To do so, we marry artificial intelligence with advanced cryptographic techniques in a novel fashion, providing several optimizations along the way. Our work is the first to show that real-world scalable privacy-preserving biometric authentication without auxiliary identifiers is feasible, and we believe that it will spur widespread industrial adoption and further research in this area.",
+      "tr": "The prevalence of biometric authentication has been on the rise due to its ease of use and elimination of weak passwords. To date, most biometric authentication systems have been designed for on-device authentication of the device owner (e.g., smartphones and laptops). Recently, biometric authentication systems have started to emerge that are designed to authenticate users against cloud databases storing representations of biometrics for large numbers of users (potentially millions), such as those facilitating biometric payments. However, the use of a large cloud database introduces a significant attack vector, as a breach of the database could lead to the compromise of all enrolled users' sensitive biometric data. Indeed, all such existing systems either do not adequately protect against such a breach, or are impractical to deploy and use due to their high computational overhead. In this work, we present a new biometric authentication system that provides provable security guarantees against data breaches, while remaining scalable and performant. To do so, we marry artificial intelligence with advanced cryptographic techniques in a novel fashion, providing several optimizations along the way. Our work is the first to show that real-world scalable privacy-preserving biometric authentication without auxiliary identifiers is feasible, and we believe that it will spur widespread industrial adoption and further research in this area."
     }
   },
   {
-    "id": "2604.24162v1",
-    "title": "Defusing the Trigger: Plug-and-Play Defense for Backdoored LLMs via Tail-Risk Intrinsic Geometric Smoothing",
+    "id": "2604.24935v1",
+    "title": "CAN-QA: A Question-Answering Benchmark for Reasoning over In-Vehicle CAN Traffic",
     "authors": [
-      "Kaisheng Fan",
-      "Weizhe Zhang",
-      "Yishu Gao",
-      "Tegawendé F. Bissyandé",
-      "Xunzhu Tang"
+      "Jing Chen",
+      "Abhijay Deevi",
+      "Onat Gungor",
+      "Tajana Rosing"
     ],
     "published_date": "2026-04-27",
     "tags": [
       "cs.CR",
-      "cs.AI"
+      "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2604.24162v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.24162v1",
+    "link": "http://arxiv.org/abs/2604.24935v1",
+    "pdf_link": "https://arxiv.org/pdf/2604.24935v1",
     "content": {
-      "en": "Defending against backdoor attacks in large language models remains a critical practical challenge. Existing defenses mitigate these threats but typically incur high preparation costs and degrade utility via offline purification, or introduce severe latency via complex online interventions. To overcome this dichotomy, we present Tail-risk Intrinsic Geometric Smoothing (TIGS), a plug-and-play inference-time defense requiring no parameter updates, external clean data, or auxiliary generation. TIGS leverages the observation that successful backdoor triggers consistently induce localized attention collapse within the semantic content region. Operating entirely within the native forward pass, TIGS first performs content-aware tail-risk screening to identify suspicious attention heads and rows using sample-internal signals. It then applies intrinsic geometric smoothing: a weak content-domain correction preserves semantic anchoring, while a stronger full-row contraction disrupts trigger-dominant routing. Finally, a controlled full-row write-back reconstructs the attention matrix to ensure inference stability. Extensive evaluations demonstrate that TIGS substantially suppresses attack success rates while strictly preserving clean reasoning and open-ended semantic consistency. Crucially, this favorable security-utility-latency equilibrium persists across diverse architectures, including dense, reasoning-oriented, and sparse mixture-of-experts models. By structurally disrupting adversarial routing with marginal latency overhead, TIGS establishes a highly practical, deployment-ready defense standard for state-of-the-art LLMs.",
-      "tr": "Defending against backdoor attacks in large language models remains a critical practical challenge. Existing defenses mitigate these threats but typically incur high preparation costs and degrade utility via offline purification, or introduce severe latency via complex online interventions. To overcome this dichotomy, we present Tail-risk Intrinsic Geometric Smoothing (TIGS), a plug-and-play inference-time defense requiring no parameter updates, external clean data, or auxiliary generation. TIGS leverages the observation that successful backdoor triggers consistently induce localized attention collapse within the semantic content region. Operating entirely within the native forward pass, TIGS first performs content-aware tail-risk screening to identify suspicious attention heads and rows using sample-internal signals. It then applies intrinsic geometric smoothing: a weak content-domain correction preserves semantic anchoring, while a stronger full-row contraction disrupts trigger-dominant routing. Finally, a controlled full-row write-back reconstructs the attention matrix to ensure inference stability. Extensive evaluations demonstrate that TIGS substantially suppresses attack success rates while strictly preserving clean reasoning and open-ended semantic consistency. Crucially, this favorable security-utility-latency equilibrium persists across diverse architectures, including dense, reasoning-oriented, and sparse mixture-of-experts models. By structurally disrupting adversarial routing with marginal latency overhead, TIGS establishes a highly practical, deployment-ready defense standard for state-of-the-art LLMs."
-    }
-  },
-  {
-    "id": "2604.24083v1",
-    "title": "The Kerimov-Alekberli Model: An Information-Geometric Framework for Real-Time System Stability",
-    "authors": [
-      "Hikmat Karimov",
-      "Rahid Zahid Alekberli"
-    ],
-    "published_date": "2026-04-27",
-    "tags": [
-      "cs.AI",
-      "cs.CL",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2604.24083v1",
-    "pdf_link": "https://arxiv.org/pdf/2604.24083v1",
-    "content": {
-      "en": "This study introduces the Kerimov-Alekberli model, a novel information-geometric framework that redefines AI safety by formally linking non-equilibrium thermodynamics to stochastic control for the ethical alignment of autonomous systems. By establishing a formal isomorphism between non-equilibrium thermodynamics and stochastic control, we define systemic anomalies as deviations from a Riemannian manifold. The model utilizes the Kullback-Leibler divergence as the primary metric, governed by a dynamic threshold derived from the Fisher Information Metric. We further ground this framework in the Landauer Principle, proving that adversarial perturbations perform measurable physical work by increasing the system's informational entropy. Validation on the NSL-KDD dataset and unmanned aerial vehicle trajectory simulations demonstrated that our model achieves effective real-time detection via the FPT trigger, with strong performance metrics (e.g., high accuracy and low FPR) on benchmark datasets. This study provides a rigorous physical foundation for AI safety, transitioning from heuristic, rule-based ethical frameworks to a thermodynamics-based stability paradigm by grounding ethical violations in quantifiable physical work and entropic information.",
-      "tr": "This study introduces the Kerimov-Alekberli model, a novel information-geometric framework that redefines AI safety by formally linking non-equilibrium thermodynamics to stochastic control for the ethical alignment of autonomous systems. By establishing a formal isomorphism between non-equilibrium thermodynamics and stochastic control, we define systemic anomalies as deviations from a Riemannian manifold. The model utilizes the Kullback-Leibler divergence as the primary metric, governed by a dynamic threshold derived from the Fisher Information Metric. We further ground this framework in the Landauer Principle, proving that adversarial perturbations perform measurable physical work by increasing the system's informational entropy. Validation on the NSL-KDD dataset and unmanned aerial vehicle trajectory simulations demonstrated that our model achieves effective real-time detection via the FPT trigger, with strong performance metrics (e.g., high accuracy and low FPR) on benchmark datasets. This study provides a rigorous physical foundation for AI safety, transitioning from heuristic, rule-based ethical frameworks to a thermodynamics-based stability paradigm by grounding ethical violations in quantifiable physical work and entropic information."
+      "en": "The Controller Area Network (CAN) is a safety-critical in-vehicle communication protocol that lacks built-in security mechanisms, making intrusion detection essential. Existing approaches predominantly formulate CAN intrusion detection as a classification task, mapping complex traffic patterns to attack labels. However, this formulation abstracts away the temporal and relational structure of CAN traffic and misaligns with real-world forensic workflows, which require systematic reasoning about traffic behavior. To address this gap, we introduce CAN-QA, the first benchmark that reformulates CAN traffic analysis as a question-answering (QA) task. CAN-QA converts raw CAN logs into temporally segmented windows and applies deterministic rule-based templates to generate natural-language questions paired with automatically derived ground-truth answers. The resulting dataset comprises 33,128 QA pairs across 10 categories, each targeting distinct semantic and temporal properties of CAN traffic. Using CAN-QA, we evaluate large language models across both True/False and multiple-choice formats. Our results indicate that, although these models capture superficial statistical regularities, they struggle with temporal reasoning, multi-condition inference, and higher-level behavioral interpretation. Our code is available at https://github.com/Kriiiiss/CAN-QA.",
+      "tr": "The Controller Area Network (CAN) is a safety-critical in-vehicle communication protocol that lacks built-in security mechanisms, making intrusion detection essential. Existing approaches predominantly formulate CAN intrusion detection as a classification task, mapping complex traffic patterns to attack labels. However, this formulation abstracts away the temporal and relational structure of CAN traffic and misaligns with real-world forensic workflows, which require systematic reasoning about traffic behavior. To address this gap, we introduce CAN-QA, the first benchmark that reformulates CAN traffic analysis as a question-answering (QA) task. CAN-QA converts raw CAN logs into temporally segmented windows and applies deterministic rule-based templates to generate natural-language questions paired with automatically derived ground-truth answers. The resulting dataset comprises 33,128 QA pairs across 10 categories, each targeting distinct semantic and temporal properties of CAN traffic. Using CAN-QA, we evaluate large language models across both True/False and multiple-choice formats. Our results indicate that, although these models capture superficial statistical regularities, they struggle with temporal reasoning, multi-condition inference, and higher-level behavioral interpretation. Our code is available at https://github.com/Kriiiiss/CAN-QA."
     }
   }
 ]
