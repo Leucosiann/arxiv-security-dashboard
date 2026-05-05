@@ -1,211 +1,212 @@
 [
   {
-    "id": "2605.00796v1",
-    "title": "When RAG Chatbots Expose Their Backend: An Anonymized Case Study of Privacy and Security Risks in Patient-Facing Medical AI",
+    "id": "2605.02715v1",
+    "title": "Dimensionality-Aware Anomaly Detection in Learned Representations of Self-Supervised Speech Models",
     "authors": [
-      "Alfredo Madrid-García",
-      "Miguel Rujas"
+      "Sandra Arcos-Holzinger",
+      "Sarah M. Erfani",
+      "James Bailey",
+      "Sanjeev Khudanpur"
     ],
-    "published_date": "2026-05-01",
+    "published_date": "2026-05-04",
     "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL"
-    ],
-    "link": "http://arxiv.org/abs/2605.00796v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.00796v1",
-    "content": {
-      "en": "Background: Patient-facing medical chatbots based on retrieval-augmented generation (RAG) are increasingly promoted to deliver accessible, grounded health information. AI-assisted development lowers the barrier to building them, but they still demand rigorous security, privacy, and governance controls. Objective: To report an anonymized, non-destructive security assessment of a publicly accessible patient-facing medical RAG chatbot and identify governance lessons for safe deployment of generative AI in health. Methods: We used a two-stage strategy. First, Claude Opus 4.6 supported exploratory prompt-based testing and structured vulnerability hypotheses. Second, candidate findings were manually verified using Chrome Developer Tools, inspecting browser-visible network traffic, payloads, API schemas, configuration objects, and stored interaction data. Results: The LLM-assisted phase identified a critical vulnerability: sensitive system and RAG configuration appeared exposed through client-server communication rather than restricted server-side. Manual verification confirmed that ordinary browser inspection allowed collection of the system prompt, model and embedding configuration, retrieval parameters, backend endpoints, API schema, document and chunk metadata, knowledge-base content, and the 1,000 most recent patient-chatbot conversations. The deployment also contradicted its privacy assurances: full conversation records, including health-related queries, were retrievable without authentication. Conclusions: Serious privacy and security failures in patient-facing RAG chatbots can be identified with standard browser tools, without specialist skills or authentication; independent review should be a prerequisite for deployment. Commercial LLMs accelerated this assessment, including under a false developer persona; assistance available to auditors is equally available to adversaries.",
-      "tr": "Background: Patient-facing medical chatbots based on retrieval-augmented generation (RAG) are increasingly promoted to deliver accessible, grounded health information. AI-assisted development lowers the barrier to building them, but they still demand rigorous security, privacy, and governance controls. Objective: To report an anonymized, non-destructive security assessment of a publicly accessible patient-facing medical RAG chatbot and identify governance lessons for safe deployment of generative AI in health. Methods: We used a two-stage strategy. First, Claude Opus 4.6 supported exploratory prompt-based testing and structured vulnerability hypotheses. Second, candidate findings were manually verified using Chrome Developer Tools, inspecting browser-visible network traffic, payloads, API schemas, configuration objects, and stored interaction data. Results: The LLM-assisted phase identified a critical vulnerability: sensitive system and RAG configuration appeared exposed through client-server communication rather than restricted server-side. Manual verification confirmed that ordinary browser inspection allowed collection of the system prompt, model and embedding configuration, retrieval parameters, backend endpoints, API schema, document and chunk metadata, knowledge-base content, and the 1,000 most recent patient-chatbot conversations. The deployment also contradicted its privacy assurances: full conversation records, including health-related queries, were retrievable without authentication. Conclusions: Serious privacy and security failures in patient-facing RAG chatbots can be identified with standard browser tools, without specialist skills or authentication; independent review should be a prerequisite for deployment. Commercial LLMs accelerated this assessment, including under a false developer persona; assistance available to auditors is equally available to adversaries."
-    }
-  },
-  {
-    "id": "2605.00460v1",
-    "title": "CleanBase: Detecting Malicious Documents in RAG Knowledge Databases",
-    "authors": [
-      "Weifei Jin",
-      "Xilong Wang",
-      "Wei Zou",
-      "Jinyuan Jia",
-      "Neil Gong"
-    ],
-    "published_date": "2026-05-01",
-    "tags": [
+      "eess.AS",
       "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2605.00460v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.00460v1",
+    "link": "http://arxiv.org/abs/2605.02715v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.02715v1",
     "content": {
-      "en": "Retrieval-augmented generation (RAG) is vulnerable to prompt injection attacks, in which an adversary inserts malicious documents containing carefully crafted injected prompts into the knowledge database. When a user issues a question targeted by the attack, the RAG system may retrieve these malicious documents, whose injected prompts mislead it into generating attacker-specified answers, thereby compromising the integrity of the RAG system. In this work, we propose CleanBase, a method to detect malicious documents within a knowledge database. Our key insight is that malicious documents crafted for the same attack-targeted questions often exhibit high semantic similarity, as attackers deliberately make them consistent to improve attack success rates. Accordingly, CleanBase constructs a similarity graph over the knowledge database, where each node represents a document and an edge connects two nodes if their semantic similarity--computed using an embedding model--exceeds a statistically determined threshold. Due to their inherent similarity, malicious documents tend to form cliques within this graph. CleanBase detects such cliques and flags the corresponding documents as malicious. We theoretically derive upper bounds on CleanBase's false positive and false negative rates and empirically validate its effectiveness. Experimental results across multiple datasets and prompt injection attacks demonstrate that CleanBase accurately detects malicious documents and effectively safeguards RAG systems. Our source code is available at https://github.com/WeifeiJin/CleanBase.",
-      "tr": "Retrieval-augmented generation (RAG) is vulnerable to prompt injection attacks, in which an adversary inserts malicious documents containing carefully crafted injected prompts into the knowledge database. When a user issues a question targeted by the attack, the RAG system may retrieve these malicious documents, whose injected prompts mislead it into generating attacker-specified answers, thereby compromising the integrity of the RAG system. In this work, we propose CleanBase, a method to detect malicious documents within a knowledge database. Our key insight is that malicious documents crafted for the same attack-targeted questions often exhibit high semantic similarity, as attackers deliberately make them consistent to improve attack success rates. Accordingly, CleanBase constructs a similarity graph over the knowledge database, where each node represents a document and an edge connects two nodes if their semantic similarity--computed using an embedding model--exceeds a statistically determined threshold. Due to their inherent similarity, malicious documents tend to form cliques within this graph. CleanBase detects such cliques and flags the corresponding documents as malicious. We theoretically derive upper bounds on CleanBase's false positive and false negative rates and empirically validate its effectiveness. Experimental results across multiple datasets and prompt injection attacks demonstrate that CleanBase accurately detects malicious documents and effectively safeguards RAG systems. Our source code is available at https://github.com/WeifeiJin/CleanBase."
+      "en": "Self-supervised speech models (S3Ms) achieve strong downstream performance, yet their learned representations remain poorly understood under natural and adversarial perturbations. Prior studies rely on representation similarity or global dimensionality, offering limited visibility into local geometric changes. We ask: how do perturbations deform local geometry, and do these shifts track downstream automatic speech recognition (ASR) degradation? To address this, we present GRIDS, a framework using Local Intrinsic Dimensionality (LID) across layer-wise representations in WavLM and wav2vec 2.0. We find that LID increases for all low signal-to noise ratio (SNR) perturbations and diverges at high SNR: benign noise converges toward the clean profile, while adversarial inputs retain early-layer LID elevation. We show LID elevation co-occurs with increased WER, and that layer-wise LID features enable anomaly detection (AUROC 0.78-1.00), opening the door to transcript-free monitoring in S3Ms.",
+      "tr": "Self-supervised speech models (S3Ms) achieve strong downstream performance, yet their learned representations remain poorly understood under natural and adversarial perturbations. Prior studies rely on representation similarity or global dimensionality, offering limited visibility into local geometric changes. We ask: how do perturbations deform local geometry, and do these shifts track downstream automatic speech recognition (ASR) degradation? To address this, we present GRIDS, a framework using Local Intrinsic Dimensionality (LID) across layer-wise representations in WavLM and wav2vec 2.0. We find that LID increases for all low signal-to noise ratio (SNR) perturbations and diverges at high SNR: benign noise converges toward the clean profile, while adversarial inputs retain early-layer LID elevation. We show LID elevation co-occurs with increased WER, and that layer-wise LID features enable anomaly detection (AUROC 0.78-1.00), opening the door to transcript-free monitoring in S3Ms."
     }
   },
   {
-    "id": "2605.00424v1",
-    "title": "Skills as Verifiable Artifacts: A Trust Schema and a Biconditional Correctness Criterion for Human-in-the-Loop Agent Runtimes",
+    "id": "2605.02519v1",
+    "title": "Evaluating Tabular Representation Learning for Network Intrusion Detection",
     "authors": [
-      "Alfredo Metere"
+      "Muhammad Usman Butt",
+      "Andreas Hotho",
+      "Daniel Schlör"
     ],
-    "published_date": "2026-05-01",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.MA",
-      "cs.SE"
-    ],
-    "link": "http://arxiv.org/abs/2605.00424v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.00424v1",
-    "content": {
-      "en": "Agent skills -- structured packages of instructions, scripts, and references that augment a large language model (LLM) without modifying the model itself -- have moved from convenience to first-class deployment artifact. The runtime that loads them inherits the same problem package managers and operating systems have always faced: a piece of content claims a behavior; the runtime must decide whether to believe it. We argue this paper's central thesis up front: a skill is \\emph{untrusted code} until it is verified, and the runtime that loads it must enforce that default rather than infer trust from a signature, a clearance, or a registry of origin. Without skill verification, a human-in-the-loop (HITL) gate must fire on every irreversible call -- which is operationally untenable and degrades into rubber-stamping at any non-trivial scale. With skill verification treated as a separate, gated process, HITL fires only for what is unverified, and the system becomes sustainable. We give a trust schema (§\\ref{sec:schema}) that includes an explicit verification level on every skill manifest; a capability gate (§\\ref{sec:gate}) whose HITL policy is a function of that verification level; a \\emph{biconditional} correctness criterion (§\\ref{sec:biconditional}) that any candidate verification procedure must satisfy on an adversarial-ensemble exercise (§\\ref{sec:eval}); and a portable runtime profile (§\\ref{sec:guidelines}) with ten normative guidelines abstracted from a working open-source reference implementation \\cite{metere2026enclawed}. The contribution is harness- and model-agnostic; nothing here requires retraining, fine-tuning, or proprietary infrastructure.",
-      "tr": "Agent skills -- structured packages of instructions, scripts, and references that augment a large language model (LLM) without modifying the model itself -- have moved from convenience to first-class deployment artifact. The runtime that loads them inherits the same problem package managers and operating systems have always faced: a piece of content claims a behavior; the runtime must decide whether to believe it. We argue this paper's central thesis up front: a skill is \\emph{untrusted code} until it is verified, and the runtime that loads it must enforce that default rather than infer trust from a signature, a clearance, or a registry of origin. Without skill verification, a human-in-the-loop (HITL) gate must fire on every irreversible call -- which is operationally untenable and degrades into rubber-stamping at any non-trivial scale. With skill verification treated as a separate, gated process, HITL fires only for what is unverified, and the system becomes sustainable. We give a trust schema (§\\ref{sec:schema}) that includes an explicit verification level on every skill manifest; a capability gate (§\\ref{sec:gate}) whose HITL policy is a function of that verification level; a \\emph{biconditional} correctness criterion (§\\ref{sec:biconditional}) that any candidate verification procedure must satisfy on an adversarial-ensemble exercise (§\\ref{sec:eval}); and a portable runtime profile (§\\ref{sec:guidelines}) with ten normative guidelines abstracted from a working open-source reference implementation \\cite{metere2026enclawed}. The contribution is harness- and model-agnostic; nothing here requires retraining, fine-tuning, or proprietary infrastructure."
-    }
-  },
-  {
-    "id": "2605.00314v1",
-    "title": "Semia: Auditing Agent Skills via Constraint-Guided Representation Synthesis",
-    "authors": [
-      "Hongbo Wen",
-      "Ying Li",
-      "Hanzhi Liu",
-      "Chaofan Shou",
-      "Yanju Chen"
-    ],
-    "published_date": "2026-05-01",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.PL"
-    ],
-    "link": "http://arxiv.org/abs/2605.00314v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.00314v1",
-    "content": {
-      "en": "An agent skill is a configuration package that equips an LLM-driven agent with a concrete capability, such as reading email, executing shell commands, or signing blockchain transactions. Each skill is a hybrid artifact-a structured half declares executable interfaces, while a prose half dictates when and how those interfaces fire-and the prose is reinterpreted probabilistically on every invocation. Conventional static analyzers parse the structured half but ignore the prose; LLM-based tools read the prose but cannot reproducibly prove that a tainted input reaches a high-impact sink.   We present Semia, a static auditor for agent skills. Semia lifts each skill into the Skill Description Language (SDL), a Datalog fact base that captures LLM-triggered actions, prose-defined conditions, and human-in-the-loop checkpoints. Synthesizing a fact base that is both structurally sound and semantically faithful to the original prose is the central challenge; we address it with Constraint-Guided Representation Synthesis (CGRS), a propose-verify-evaluate loop that refines LLM candidates until convergence. Security properties (e.g., indirect injection, secret leakage, confused deputies, unguarded sinks, etc.) over an agent skill can then be reduced to Datalog reachability queries. We evaluate Semia on 13,728 real-world skills from public marketplaces. Semia renders all of them auditable and finds that more than half carry at least one critical semantic risk. On a stratified sample of 541 expert-labeled skills, Semia achieves 97.7% recall and an F1 of 90.6%, substantially outperforming signature-based scanners and LLM baselines.",
-      "tr": "An agent skill is a configuration package that equips an LLM-driven agent with a concrete capability, such as reading email, executing shell commands, or signing blockchain transactions. Each skill is a hybrid artifact-a structured half declares executable interfaces, while a prose half dictates when and how those interfaces fire-and the prose is reinterpreted probabilistically on every invocation. Conventional static analyzers parse the structured half but ignore the prose; LLM-based tools read the prose but cannot reproducibly prove that a tainted input reaches a high-impact sink.   We present Semia, a static auditor for agent skills. Semia lifts each skill into the Skill Description Language (SDL), a Datalog fact base that captures LLM-triggered actions, prose-defined conditions, and human-in-the-loop checkpoints. Synthesizing a fact base that is both structurally sound and semantically faithful to the original prose is the central challenge; we address it with Constraint-Guided Representation Synthesis (CGRS), a propose-verify-evaluate loop that refines LLM candidates until convergence. Security properties (e.g., indirect injection, secret leakage, confused deputies, unguarded sinks, etc.) over an agent skill can then be reduced to Datalog reachability queries. We evaluate Semia on 13,728 real-world skills from public marketplaces. Semia renders all of them auditable and finds that more than half carry at least one critical semantic risk. On a stratified sample of 541 expert-labeled skills, Semia achieves 97.7% recall and an F1 of 90.6%, substantially outperforming signature-based scanners and LLM baselines."
-    }
-  },
-  {
-    "id": "2605.00297v1",
-    "title": "Trident: Improving Malware Detection with LLMs and Behavioral Features",
-    "authors": [
-      "Rebecca Saul",
-      "Jingzhi Jiang",
-      "Elliott Chia",
-      "David Wagner"
-    ],
-    "published_date": "2026-04-30",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.00297v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.00297v1",
-    "content": {
-      "en": "Traditionally, machine learning methods for PE malware detection have relied on static features like byte histograms, string information, and PE header contents. One barrier to incorporating dynamic analysis features has been the semi-structured nature of sandbox behavior reports. We show that, using the latest generation of large language models with reasoning, it is possible to efficiently process these behavior reports and utilize them as part of a malware detection pipeline. Specifically, we leverage LLMs to generate behavior-based malware detection rules based on a small training set of labeled malware. We find that these detection rules, derived from behavioral features, are much more robust to concept drift than standard static-feature methods, while maintaining practical false positive rates. Finally, we introduce Trident, a system which combines a classic decision tree model over static features, our behavior-based detection rules, and direct LLM analysis of sandbox reports through majority voting. Trident outperforms standard methods using static features, outperforms behavior-based rules alone, and is as resilient to concept drift as active learning methods without requiring retraining.",
-      "tr": "Traditionally, machine learning methods for PE malware detection have relied on static features like byte histograms, string information, and PE header contents. One barrier to incorporating dynamic analysis features has been the semi-structured nature of sandbox behavior reports. We show that, using the latest generation of large language models with reasoning, it is possible to efficiently process these behavior reports and utilize them as part of a malware detection pipeline. Specifically, we leverage LLMs to generate behavior-based malware detection rules based on a small training set of labeled malware. We find that these detection rules, derived from behavioral features, are much more robust to concept drift than standard static-feature methods, while maintaining practical false positive rates. Finally, we introduce Trident, a system which combines a classic decision tree model over static features, our behavior-based detection rules, and direct LLM analysis of sandbox reports through majority voting. Trident outperforms standard methods using static features, outperforms behavior-based rules alone, and is as resilient to concept drift as active learning methods without requiring retraining."
-    }
-  },
-  {
-    "id": "2605.00279v1",
-    "title": "A Comparative Analysis of Machine Learning Models for Intrusion Detection in Intelligent Transport Systems",
-    "authors": [
-      "Zawad Yalmie Sazid",
-      "Robert Abbas",
-      "Sasa Maric"
-    ],
-    "published_date": "2026-04-30",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.00279v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.00279v1",
-    "content": {
-      "en": "AI-powered edge computing security is moving Intelligent Transportation Systems (ITS) from passive, rule-based protections to proactive, smart, zero-touch, self-sufficient safeguards that neutralize threats in milliseconds. As transportation becomes more connected with edge computing, massive IoT, and advanced 5G for vehicle-to-everything (V2X) connectivity, AI at the edge computing nodes plays a crucial role in protecting against sophisticated threats, enabling URLLC (ultra-low-latency communications) for smart transport, and enhancing infrastructure capabilities and safety. This research applies edge computing to improve latency, bandwidth efficiency, and service responsiveness by moving processing closer to devices, gateways, and users. However, this shift also expands the cyberattack surface because edge nodes are distributed, heterogeneous, and often resource-constrained. The paper proposes a trust-aware federated hybrid intrusion detection framework in which a random forest, a decision tree, and a linear SVM network learn complementary traffic representations at each edge site, while a server performs trust-aware aggregation of local model updates.",
-      "tr": "AI-powered edge computing security is moving Intelligent Transportation Systems (ITS) from passive, rule-based protections to proactive, smart, zero-touch, self-sufficient safeguards that neutralize threats in milliseconds. As transportation becomes more connected with edge computing, massive IoT, and advanced 5G for vehicle-to-everything (V2X) connectivity, AI at the edge computing nodes plays a crucial role in protecting against sophisticated threats, enabling URLLC (ultra-low-latency communications) for smart transport, and enhancing infrastructure capabilities and safety. This research applies edge computing to improve latency, bandwidth efficiency, and service responsiveness by moving processing closer to devices, gateways, and users. However, this shift also expands the cyberattack surface because edge nodes are distributed, heterogeneous, and often resource-constrained. The paper proposes a trust-aware federated hybrid intrusion detection framework in which a random forest, a decision tree, and a linear SVM network learn complementary traffic representations at each edge site, while a server performs trust-aware aggregation of local model updates."
-    }
-  },
-  {
-    "id": "2605.00267v1",
-    "title": "Jailbroken Frontier Models Retain Their Capabilities",
-    "authors": [
-      "Daniel Zhu",
-      "Zihan Wang",
-      "Jenny Bao",
-      "Jerry Wei"
-    ],
-    "published_date": "2026-04-30",
+    "published_date": "2026-05-04",
     "tags": [
       "cs.LG",
-      "cs.AI",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2605.00267v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.00267v1",
+    "link": "http://arxiv.org/abs/2605.02519v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.02519v1",
     "content": {
-      "en": "As language model safeguards become more robust, attackers are pushed toward developing increasingly complex jailbreaks. Prior work has found that this complexity imposes a \"jailbreak tax\" that degrades the target model's task performance. We show that this tax scales inversely with model capability and that the most advanced jailbreaks effectively yield no reduction in model capabilities. Evaluating 28 jailbreaks on five benchmarks across Claude models ranging in capability from Haiku 4.5 to Opus 4.6, we find Haiku 4.5 loses an average of 33.1% on benchmark performance when jailbroken, while Opus 4.6 at max thinking effort loses only 7.7%. We also observe that across all models, reasoning-heavy tasks display considerably more degradation than knowledge-recall tasks. Finally, Boundary Point Jailbreaking, currently the strongest jailbreak against deployed classifiers, achieves near-perfect classifier evasion with near-zero degradation across safeguarded models. We recommend that safety cases for frontier models should not rely on a meaningful capability degradation from jailbreaks.",
-      "tr": "As language model safeguards become more robust, attackers are pushed toward developing increasingly complex jailbreaks. Prior work has found that this complexity imposes a \"jailbreak tax\" that degrades the target model's task performance. We show that this tax scales inversely with model capability and that the most advanced jailbreaks effectively yield no reduction in model capabilities. Evaluating 28 jailbreaks on five benchmarks across Claude models ranging in capability from Haiku 4.5 to Opus 4.6, we find Haiku 4.5 loses an average of 33.1% on benchmark performance when jailbroken, while Opus 4.6 at max thinking effort loses only 7.7%. We also observe that across all models, reasoning-heavy tasks display considerably more degradation than knowledge-recall tasks. Finally, Boundary Point Jailbreaking, currently the strongest jailbreak against deployed classifiers, achieves near-perfect classifier evasion with near-zero degradation across safeguarded models. We recommend that safety cases for frontier models should not rely on a meaningful capability degradation from jailbreaks."
+      "en": "Classic Network Intrusion Detection Systems (NIDS) often rely on manual feature engineering to extract meaningful patterns from network traffic data. However, this approach requires domain expertise and runs counter to the widely adopted principle of modern machine learning and neural networks: that models themselves should learn meaningful representations directly from data. We investigate whether tabular representation learning techniques can improve intrusion detection performance by automatically learning robust feature representations for NetFlow data. This paper presents a systematic evaluation of state-of-the-art representation learning methods on benchmark NetFlow datasets, comparing against traditional autoencoders and end-to-end transformer baselines. We evaluate learned representations using both supervised classifiers and unsupervised anomaly detectors, with comprehensive hyperparameter exploration for each combination. Our results reveal strong dataset-model dependency, with no single approach consistently dominating across all scenarios. For supervised classification, TabICL achieves the best performance on CIDDS, while autoencoders follow closely and tie with end-to-end transformer models for the best average rank across datasets. Supervised approaches substantially outperform unsupervised anomaly detection methods, where no single combination consistently dominates as optimal choices depend on the dataset. Cross-dataset transfer experiments demonstrate that learned representations can generalize across network environments with appropriate method and classifier selection. However, transfer performance varies substantially depending on the source-target dataset combination, indicating sensitivity to distributional differences between network environments.",
+      "tr": "Classic Network Intrusion Detection Systems (NIDS) often rely on manual feature engineering to extract meaningful patterns from network traffic data. However, this approach requires domain expertise and runs counter to the widely adopted principle of modern machine learning and neural networks: that models themselves should learn meaningful representations directly from data. We investigate whether tabular representation learning techniques can improve intrusion detection performance by automatically learning robust feature representations for NetFlow data. This paper presents a systematic evaluation of state-of-the-art representation learning methods on benchmark NetFlow datasets, comparing against traditional autoencoders and end-to-end transformer baselines. We evaluate learned representations using both supervised classifiers and unsupervised anomaly detectors, with comprehensive hyperparameter exploration for each combination. Our results reveal strong dataset-model dependency, with no single approach consistently dominating across all scenarios. For supervised classification, TabICL achieves the best performance on CIDDS, while autoencoders follow closely and tie with end-to-end transformer models for the best average rank across datasets. Supervised approaches substantially outperform unsupervised anomaly detection methods, where no single combination consistently dominates as optimal choices depend on the dataset. Cross-dataset transfer experiments demonstrate that learned representations can generalize across network environments with appropriate method and classifier selection. However, transfer performance varies substantially depending on the source-target dataset combination, indicating sensitivity to distributional differences between network environments."
     }
   },
   {
-    "id": "2605.00236v1",
-    "title": "Attention Is Where You Attack",
+    "id": "2605.02372v1",
+    "title": "Privacy Preserving Machine Learning Workflow: from Anonymization to Personalized Differential Privacy Budgets in Federated Learning",
     "authors": [
-      "Aviral Srivastava",
-      "Sourav Panda"
+      "Judith Sáinz-Pardo Díaz",
+      "Álvaro López García"
     ],
-    "published_date": "2026-04-30",
+    "published_date": "2026-05-04",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2605.00236v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.00236v1",
+    "link": "http://arxiv.org/abs/2605.02372v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.02372v1",
     "content": {
-      "en": "Safety-aligned large language models rely on RLHF and instruction tuning to refuse harmful requests, yet the internal mechanisms implementing safety behavior remain poorly understood. We introduce the Attention Redistribution Attack (ARA), a white-box adversarial attack that identifies safety-critical attention heads and crafts nonsemantic adversarial tokens that redirect attention away from safety-relevant positions. Unlike prior jailbreak methods operating at the semantic or output-logit level, ARA targets the geometry of softmax attention on the probability simplex using Gumbel-softmax optimization over targeted heads. Across LLaMA-3-8B-Instruct, Mistral-7B-Instruct-v0.1, and Gemma-2-9B-it, ARA bypasses safety alignment with as few as 5 tokens and 500 optimization steps, achieving 36% ASR on Mistral-7B and 30% on LLaMA-3 against 200 HarmBench prompts, while Gemma-2 remains at 1%. Our principal mechanistic finding is a dissociation between ablation and redistribution: zeroing out the top-ranked safety heads produces at most 1 flip among 39 to 50 baseline refusals, while ARA targeting the corresponding safety-heavy layers flips 72/200 prompts on Mistral-7B and 60/200 on LLaMA-3. This suggests that safety is not localized in these heads as removable components, but emerges from the attention routing they perform. Removing a head allows compensation through the residual stream, while redirecting its attention propagates a corrupted signal downstream.",
-      "tr": "Safety-aligned large language models rely on RLHF and instruction tuning to refuse harmful requests, yet the internal mechanisms implementing safety behavior remain poorly understood. We introduce the Attention Redistribution Attack (ARA), a white-box adversarial attack that identifies safety-critical attention heads and crafts nonsemantic adversarial tokens that redirect attention away from safety-relevant positions. Unlike prior jailbreak methods operating at the semantic or output-logit level, ARA targets the geometry of softmax attention on the probability simplex using Gumbel-softmax optimization over targeted heads. Across LLaMA-3-8B-Instruct, Mistral-7B-Instruct-v0.1, and Gemma-2-9B-it, ARA bypasses safety alignment with as few as 5 tokens and 500 optimization steps, achieving 36% ASR on Mistral-7B and 30% on LLaMA-3 against 200 HarmBench prompts, while Gemma-2 remains at 1%. Our principal mechanistic finding is a dissociation between ablation and redistribution: zeroing out the top-ranked safety heads produces at most 1 flip among 39 to 50 baseline refusals, while ARA targeting the corresponding safety-heavy layers flips 72/200 prompts on Mistral-7B and 60/200 on LLaMA-3. This suggests that safety is not localized in these heads as removable components, but emerges from the attention routing they perform. Removing a head allows compensation through the residual stream, while redirecting its attention propagates a corrupted signal downstream."
+      "en": "The growing development of artificial intelligence based solutions, together with privacy legislation, has driven the rise of the so-called privacy preserving machine learning architectures, such as federated learning. While federated learning enables model training on decentralized data preventing their sharing and centralization, it still faces several challenges related to data integrity and privacy. This paper presents a comprehensive privacy preserving federated learning workflow for sensitive tabular data, including anonymization and differential privacy techniques. We also introduce a formal definition for the concept of client drift, together with ways of detecting it to mitigate poisoning attacks. Then, we detail a complete methodology for assigning personalized privacy budgets for global differential privacy to the different clients participating in the network, based on a re-identification risk metric. The proposed methodology is presented and tested on an openly available dataset of medical records. Within the experimental setup we show that the approach based on personalized budgets, compared to the architecture including global differential privacy with fixed privacy budget, achieves a better model performance in terms of two error metrics.",
+      "tr": "The growing development of artificial intelligence based solutions, together with privacy legislation, has driven the rise of the so-called privacy preserving machine learning architectures, such as federated learning. While federated learning enables model training on decentralized data preventing their sharing and centralization, it still faces several challenges related to data integrity and privacy. This paper presents a comprehensive privacy preserving federated learning workflow for sensitive tabular data, including anonymization and differential privacy techniques. We also introduce a formal definition for the concept of client drift, together with ways of detecting it to mitigate poisoning attacks. Then, we detail a complete methodology for assigning personalized privacy budgets for global differential privacy to the different clients participating in the network, based on a re-identification risk metric. The proposed methodology is presented and tested on an openly available dataset of medical records. Within the experimental setup we show that the approach based on personalized budgets, compared to the architecture including global differential privacy with fixed privacy budget, achieves a better model performance in terms of two error metrics."
     }
   },
   {
-    "id": "2605.00218v1",
-    "title": "Selfie-Capture Dynamics as an Auxiliary Signal Against Deepfakes and Injection Attacks for Mobile Identity Verification",
+    "id": "2605.02346v1",
+    "title": "APIOT: Autonomous Vulnerability Management Across Bare-Metal Industrial OT Networks",
     "authors": [
-      "Erkka Rantahalvari",
-      "Olli Silvén",
-      "Zinelabidine Boulkenafet",
-      "Constantino Álvarez Casado"
+      "Adel ElZemity",
+      "Budi Arief",
+      "Shujun Li",
+      "Calvin Brierley",
+      "Yichao Wang"
     ],
-    "published_date": "2026-04-30",
+    "published_date": "2026-05-04",
     "tags": [
       "cs.CR",
-      "cs.ET",
-      "cs.LG"
+      "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2605.00218v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.00218v1",
+    "link": "http://arxiv.org/abs/2605.02346v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.02346v1",
     "content": {
-      "en": "Mobile remote identity verification (RIdV) systems are exposed to attacks that manipulate or replace the facial video stream, including presentation attacks, real-time deepfakes, and video injection. Recent European requirements, including ETSI TS 119 461 and CEN/TS 18099, motivate complementary evidence channels beyond camera-based presentation-attack detection. This paper investigates whether passive motion traces recorded during selfie capture provide auxiliary evidence for spoof screening and user verification. We introduce CanSelfie, a dataset of 375 bona fide multi-sensor sequences collected at 50\\,Hz from 30 participants using a commercial mobile RIdV application, together with stationary, handheld, and temporally shifted attack-proxy scenarios. We benchmark 7 multivariate time-series classifiers and 8 whole-series anomaly detectors across sensor configurations and temporal windows. For spoof screening, accelerometer-only ROCKAD obtains 0.00\\% false rejection rate (FRR) and 43.8\\% false acceptance rate (FAR), while QUANT+3-NN obtains the lowest overall FAR of 32.0\\% at 2.37\\% FRR; both reject all stationary attack proxies. For same-device and same-session user verification, WEASEL+MUSE reaches 1.07\\% equal error rate (EER) using 9 sensor channels. The analysis shows that raw accelerometer data, preserving gravity and orientation cues, is the most informative modality, and that closed-set classification accuracy alone does not imply good verification performance because threshold calibration depends on score distributions. The findings suggest that short selfie-capture motion traces contain measurable spoof-related and identity-related information, supporting their use as a low-friction auxiliary signal while also identifying the need for cross-device, cross-session, and real injection-attack evaluation.",
-      "tr": "Mobile remote identity verification (RIdV) systems are exposed to attacks that manipulate or replace the facial video stream, including presentation attacks, real-time deepfakes, and video injection. Recent European requirements, including ETSI TS 119 461 and CEN/TS 18099, motivate complementary evidence channels beyond camera-based presentation-attack detection. This paper investigates whether passive motion traces recorded during selfie capture provide auxiliary evidence for spoof screening and user verification. We introduce CanSelfie, a dataset of 375 bona fide multi-sensor sequences collected at 50\\,Hz from 30 participants using a commercial mobile RIdV application, together with stationary, handheld, and temporally shifted attack-proxy scenarios. We benchmark 7 multivariate time-series classifiers and 8 whole-series anomaly detectors across sensor configurations and temporal windows. For spoof screening, accelerometer-only ROCKAD obtains 0.00\\% false rejection rate (FRR) and 43.8\\% false acceptance rate (FAR), while QUANT+3-NN obtains the lowest overall FAR of 32.0\\% at 2.37\\% FRR; both reject all stationary attack proxies. For same-device and same-session user verification, WEASEL+MUSE reaches 1.07\\% equal error rate (EER) using 9 sensor channels. The analysis shows that raw accelerometer data, preserving gravity and orientation cues, is the most informative modality, and that closed-set classification accuracy alone does not imply good verification performance because threshold calibration depends on score distributions. The findings suggest that short selfie-capture motion traces contain measurable spoof-related and identity-related information, supporting their use as a low-friction auxiliary signal while also identifying the need for cross-device, cross-session, and real injection-attack evaluation."
+      "en": "Bare-metal operational technology (OT) devices -- especially the microcontrollers running Modbus/TCP and CoAP at the base of industrial control systems -- have remained outside the reach of autonomous security attacks. Prior autonomous pentesting studies target Linux and web systems, whose shells and filesystems are familiar to LLM agents. Bare-metal OT has neither, so agents must reason directly over protocol fields and parser semantics. This requires new action-space designs and runtime controls, and opens new research questions about protocol-level exploit reasoning and its deployment envelope. We present APIOT (Autonomous Purple-teaming for Industrial OT), the first large language model (LLM) framework demonstrating an autonomous attack and remediation of bare-metal OT devices, achieving the full discovery -> exploitation -> patching -> verification cycle without step-by-step human intervention. We implemented and evaluated this framework on Zephyr RTOS firmware across heterogeneous industrial IoT (IIoT) topologies. Through 290 experiment runs spanning five frontier LLMs, three network topologies, two impairment levels, and guided versus unguided conditions, APIOT achieved a mission success rate of 90.0% on the full attack-remediation cycle. We found that the runtime governance layer (which we call an overseer) is a critical engineering variable: without it, agents exhibit systematic degenerate patterns, including repetition loops, missing crash verification, and reconnaissance deadlocks. Together, these findings carry two implications beyond our testbed. Attacker expertise is no longer the binding constraint on bare-metal OT exploitation, and defender threat models must now assume LLM-augmented adversaries capable of executing autonomous discovery-through-remediation cycles against industrial firmware.",
+      "tr": "Bare-metal operational technology (OT) devices -- especially the microcontrollers running Modbus/TCP and CoAP at the base of industrial control systems -- have remained outside the reach of autonomous security attacks. Prior autonomous pentesting studies target Linux and web systems, whose shells and filesystems are familiar to LLM agents. Bare-metal OT has neither, so agents must reason directly over protocol fields and parser semantics. This requires new action-space designs and runtime controls, and opens new research questions about protocol-level exploit reasoning and its deployment envelope. We present APIOT (Autonomous Purple-teaming for Industrial OT), the first large language model (LLM) framework demonstrating an autonomous attack and remediation of bare-metal OT devices, achieving the full discovery -> exploitation -> patching -> verification cycle without step-by-step human intervention. We implemented and evaluated this framework on Zephyr RTOS firmware across heterogeneous industrial IoT (IIoT) topologies. Through 290 experiment runs spanning five frontier LLMs, three network topologies, two impairment levels, and guided versus unguided conditions, APIOT achieved a mission success rate of 90.0% on the full attack-remediation cycle. We found that the runtime governance layer (which we call an overseer) is a critical engineering variable: without it, agents exhibit systematic degenerate patterns, including repetition loops, missing crash verification, and reconnaissance deadlocks. Together, these findings carry two implications beyond our testbed. Attacker expertise is no longer the binding constraint on bare-metal OT exploitation, and defender threat models must now assume LLM-augmented adversaries capable of executing autonomous discovery-through-remediation cycles against industrial firmware."
     }
   },
   {
-    "id": "2605.00120v1",
-    "title": "GAFSV-Net: A Vision Framework for Online Signature Verification",
+    "id": "2605.02255v1",
+    "title": "On the Privacy of LLMs: An Ablation Study",
     "authors": [
-      "Himanshu Singhal",
-      "Suresh Sundaram"
+      "Karima Makhlouf",
+      "Lamiaa Basyoni",
+      "Syed Khaderi",
+      "Gabriel Marquez",
+      "Peter Sotomango"
     ],
-    "published_date": "2026-04-30",
+    "published_date": "2026-05-04",
     "tags": [
-      "cs.CV",
       "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.02255v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.02255v1",
+    "content": {
+      "en": "Large language models (LLMs) are increasingly deployed in interactive and retrieval-augmented settings, raising significant privacy concerns. While attacks such as Membership Inference (MIA), Attribute Inference (AIA), Data Extraction (DEA), and Backdoor Attacks (BA) have been studied, they are typically analyzed in isolation, leaving a gap in understanding their behavior under common system factors. In this paper, we introduce a unified threat model and notation, reproduce a representative set of privacy attacks, and conduct a structured ablation study to evaluate the impact of key factors such as model architecture, scale, dataset characteristics, and retrieval configuration. Our analysis reveals clear differences across attack types. Membership inference attacks, particularly mask-based variants, exhibit strong and reliable signals, while backdoor attacks achieve consistently high success rates due to their trigger-based nature. In contrast, attribute inference and data extraction attacks remain more challenging, resulting in lower accuracy, yet they pose significant risks as they target sensitive personal information. Overall, these results highlight that privacy risks in LLM systems are highly context-dependent and driven by design choices, emphasizing the need for holistic evaluation and informed deployment practices.",
+      "tr": "Large language models (LLMs) are increasingly deployed in interactive and retrieval-augmented settings, raising significant privacy concerns. While attacks such as Membership Inference (MIA), Attribute Inference (AIA), Data Extraction (DEA), and Backdoor Attacks (BA) have been studied, they are typically analyzed in isolation, leaving a gap in understanding their behavior under common system factors. In this paper, we introduce a unified threat model and notation, reproduce a representative set of privacy attacks, and conduct a structured ablation study to evaluate the impact of key factors such as model architecture, scale, dataset characteristics, and retrieval configuration. Our analysis reveals clear differences across attack types. Membership inference attacks, particularly mask-based variants, exhibit strong and reliable signals, while backdoor attacks achieve consistently high success rates due to their trigger-based nature. In contrast, attribute inference and data extraction attacks remain more challenging, resulting in lower accuracy, yet they pose significant risks as they target sensitive personal information. Overall, these results highlight that privacy risks in LLM systems are highly context-dependent and driven by design choices, emphasizing the need for holistic evaluation and informed deployment practices."
+    }
+  },
+  {
+    "id": "2605.02187v1",
+    "title": "When Alignment Isn't Enough: Response-Path Attacks on LLM Agents",
+    "authors": [
+      "Mingyu Luo",
+      "Zihan Zhang",
+      "Zesen Liu",
+      "Yuchong Xie",
+      "Zhixiang Zhang"
+    ],
+    "published_date": "2026-05-04",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.02187v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.02187v1",
+    "content": {
+      "en": "Bring-Your-Own-Key (BYOK) agent architectures let users route LLM traffic through third-party relays, creating a critical integrity gap: a malicious relay can modify an aligned LLM response after generation but before agent execution. We formalize this post-alignment tampering threat and show that, without end-to-end integrity, the relay can observe, suppress, or replace downstream messages, making even perfectly aligned LLMs ineffective against such attacks. We instantiate this threat as the Relay Tampering Attack (RTA), which performs multi-round strategic rewriting, minimal security-critical edits, and stealth restoration by resubmitting tampered outputs to the upstream LLM. Across AgentDojo and ASB with six LLMs, RTA achieves up to 99.1% attack success, outperforming prompt-injection baselines with modest overhead. Case studies on OpenClaw and Claude Code demonstrate real-world feasibility, and evaluations of four defenses show that none fully prevent RTA. Finally, we propose a time-based detection defense that mitigates RTA while preserving agent utility.",
+      "tr": "Bring-Your-Own-Key (BYOK) agent architectures let users route LLM traffic through third-party relays, creating a critical integrity gap: a malicious relay can modify an aligned LLM response after generation but before agent execution. We formalize this post-alignment tampering threat and show that, without end-to-end integrity, the relay can observe, suppress, or replace downstream messages, making even perfectly aligned LLMs ineffective against such attacks. We instantiate this threat as the Relay Tampering Attack (RTA), which performs multi-round strategic rewriting, minimal security-critical edits, and stealth restoration by resubmitting tampered outputs to the upstream LLM. Across AgentDojo and ASB with six LLMs, RTA achieves up to 99.1% attack success, outperforming prompt-injection baselines with modest overhead. Case studies on OpenClaw and Claude Code demonstrate real-world feasibility, and evaluations of four defenses show that none fully prevent RTA. Finally, we propose a time-based detection defense that mitigates RTA while preserving agent utility."
+    }
+  },
+  {
+    "id": "2605.02110v1",
+    "title": "Adversarial Update-Based Federated Unlearning for Poisoned Model Recovery",
+    "authors": [
+      "Wenwei Zhao",
+      "Xiaowen Li",
+      "Yao Liu",
+      "Zhuo Lu"
+    ],
+    "published_date": "2026-05-04",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2605.02110v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.02110v1",
+    "content": {
+      "en": "Federated learning (FL) is vulnerable to poisoning attacks, where malicious clients upload manipulated updates to degrade the performance of the global model. Although detection methods can identify and remove malicious clients, the model remains affected. Retraining from scratch is effective but costly, and existing unlearning methods remain unsatisfactory in both effectiveness and efficiency. We propose Federated Adversarial Unlearning (FAUN), a lightweight framework that retains only a short window of malicious clients' updates and employs adversarial optimization on a proxy dataset to derive updates that eliminate malicious directions. Applying these updates for a few unlearning rounds, followed by benign fine-tuning, enables fast removal of malicious effects and stable recovery. Experiments on three canonical datasets show that FAUN achieves recovery comparable to retraining while requiring far fewer rounds and reduces attack success rates to near zero, confirming FAUN successfully eliminates the contributions of unlearned clients.",
+      "tr": "Federated learning (FL) is vulnerable to poisoning attacks, where malicious clients upload manipulated updates to degrade the performance of the global model. Although detection methods can identify and remove malicious clients, the model remains affected. Retraining from scratch is effective but costly, and existing unlearning methods remain unsatisfactory in both effectiveness and efficiency. We propose Federated Adversarial Unlearning (FAUN), a lightweight framework that retains only a short window of malicious clients' updates and employs adversarial optimization on a proxy dataset to derive updates that eliminate malicious directions. Applying these updates for a few unlearning rounds, followed by benign fine-tuning, enables fast removal of malicious effects and stable recovery. Experiments on three canonical datasets show that FAUN achieves recovery comparable to retraining while requiring far fewer rounds and reduces attack success rates to near zero, confirming FAUN successfully eliminates the contributions of unlearned clients."
+    }
+  },
+  {
+    "id": "2605.02109v1",
+    "title": "Detecting Adversarial Data via Provable Adversarial Noise Amplification",
+    "authors": [
+      "Furkan Mumcu",
+      "Yasin Yilmaz"
+    ],
+    "published_date": "2026-05-04",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2605.02109v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.02109v1",
+    "content": {
+      "en": "The nonuniform and growing impact of adversarial noise across the layers of deep neural networks has been used in the literature, without a formal mathematical justification, to detect adversarial inputs and improve robustness. In this work, we study this phenomenon in detail and present a formal adversarial noise amplification theorem. We specify a set of sufficient conditions under which the adversarial noise amplification is mathematically guaranteed. Based on theoretical observations, we propose a novel training methodology with a custom spectral loss function and a specific architectural design to enhance the amplification signal for detecting adversarial data. Finally, we introduce a new, lightweight detection mechanism that leverages the enhanced amplification signal and operates entirely at inference time. To validate our approach, we demonstrate the detector's efficacy against both state-of-the-art attacks and a purpose-built adaptive attack, confirming that enhanced amplification can serve as a robust and reliable signal for adversarial defense.",
+      "tr": "The nonuniform and growing impact of adversarial noise across the layers of deep neural networks has been used in the literature, without a formal mathematical justification, to detect adversarial inputs and improve robustness. In this work, we study this phenomenon in detail and present a formal adversarial noise amplification theorem. We specify a set of sufficient conditions under which the adversarial noise amplification is mathematically guaranteed. Based on theoretical observations, we propose a novel training methodology with a custom spectral loss function and a specific architectural design to enhance the amplification signal for detecting adversarial data. Finally, we introduce a new, lightweight detection mechanism that leverages the enhanced amplification signal and operates entirely at inference time. To validate our approach, we demonstrate the detector's efficacy against both state-of-the-art attacks and a purpose-built adaptive attack, confirming that enhanced amplification can serve as a robust and reliable signal for adversarial defense."
+    }
+  },
+  {
+    "id": "2605.02102v1",
+    "title": "Stochastic Modeling of Human-Machine Authentication Channels under Partial Information Leakage",
+    "authors": [
+      "Nilesh Chakraborty",
+      "Mohammad Zulkernine",
+      "Burak Kantarci"
+    ],
+    "published_date": "2026-05-03",
+    "tags": [
+      "cs.CR",
+      "cs.HC",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2605.00120v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.00120v1",
+    "link": "http://arxiv.org/abs/2605.02102v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.02102v1",
     "content": {
-      "en": "Online signature verification (OSV) requires distinguishing skilled forgeries from genuine samples under high intra-class variability and with very few enrollment samples. Existing deep learning methods operate directly on raw temporal sequences, restricting them to 1D architectures and preventing the use of pretrained 2D vision backbones. We bridge this gap with GAFSV-Net, which represents each signature as a six-channel asymmetric Gramian Angular Field image: three kinematic channels (pen speed, pressure derivative, direction angle) are each encoded into complementary GASF and GADF matrices that capture pairwise temporal co-occurrence and directional transition structure respectively. A dual-branch ConvNeXt-Tiny encoder processes GASF and GADF independently, with bidirectional cross-attention enabling each branch to query discriminative patterns from the other before metric-space projection. Training uses semi-hard triplet loss with skilled-forgery hard-negative injection; verification is performed via cosine similarity against a small enrollment prototype. We evaluate on DeepSignDB and BiosecurID, outperforming all sequence-based baselines trained under identical objectives, demonstrating that the representational gain of 2D temporal encoding is consistent and independent of training procedure, with ablations characterising each design choice's contribution.",
-      "tr": "Online signature verification (OSV) requires distinguishing skilled forgeries from genuine samples under high intra-class variability and with very few enrollment samples. Existing deep learning methods operate directly on raw temporal sequences, restricting them to 1D architectures and preventing the use of pretrained 2D vision backbones. We bridge this gap with GAFSV-Net, which represents each signature as a six-channel asymmetric Gramian Angular Field image: three kinematic channels (pen speed, pressure derivative, direction angle) are each encoded into complementary GASF and GADF matrices that capture pairwise temporal co-occurrence and directional transition structure respectively. A dual-branch ConvNeXt-Tiny encoder processes GASF and GADF independently, with bidirectional cross-attention enabling each branch to query discriminative patterns from the other before metric-space projection. Training uses semi-hard triplet loss with skilled-forgery hard-negative injection; verification is performed via cosine similarity against a small enrollment prototype. We evaluate on DeepSignDB and BiosecurID, outperforming all sequence-based baselines trained under identical objectives, demonstrating that the representational gain of 2D temporal encoding is consistent and independent of training procedure, with ablations characterising each design choice's contribution."
+      "en": "Reliable and secure human-machine communication is fundamental to IoT and cyber-physical ecosystems, where smartphones and wearables commonly serve as authentication controllers. PIN-based authentication can be viewed as a low-bandwidth communication channel through which users transmit numeric credentials under practical constraints. However, conventional evaluations adopt a binary view of security-treating such channels as either fully secure or fully compromised-thereby overlooking the progressive reliability degradation caused by partial information leakage in real-world IoT settings. In this paper, we model the PIN entry process as a stochastic human-IoT communication system and propose a context-conditioned probabilistic inference framework to quantify reliability loss and Quality-of-Service degradation under partial symbol exposure. The proposed approach treats missing digits as latent variables and estimates them using smoothed conditional probability distributions with fallback priors. Unlike traditional sequential models that assume contiguous positional dependencies, the method does not explicitly parameterize hidden-state transitions or emissions; instead, it performs context-driven probabilistic inference to approximate latent dependencies across digit positions. Using over one million real-world four-digit PIN samples, we evaluate single-, double-, and triple-digit leakage scenarios and derive position-dependent reliability metrics. The proposed model achieves up to 55.31% prediction accuracy for one missing digit and 12.12% for three missing digits, while consistently outperforming a standard sequence-model baseline and classical machine learning models in terms of precision, recall, and F1-score. These results formalize PIN entry as a noisy human--IoT communication channel and demonstrate substantial reliability degradation under realistic partial exposure conditions.",
+      "tr": "Reliable and secure human-machine communication is fundamental to IoT and cyber-physical ecosystems, where smartphones and wearables commonly serve as authentication controllers. PIN-based authentication can be viewed as a low-bandwidth communication channel through which users transmit numeric credentials under practical constraints. However, conventional evaluations adopt a binary view of security-treating such channels as either fully secure or fully compromised-thereby overlooking the progressive reliability degradation caused by partial information leakage in real-world IoT settings. In this paper, we model the PIN entry process as a stochastic human-IoT communication system and propose a context-conditioned probabilistic inference framework to quantify reliability loss and Quality-of-Service degradation under partial symbol exposure. The proposed approach treats missing digits as latent variables and estimates them using smoothed conditional probability distributions with fallback priors. Unlike traditional sequential models that assume contiguous positional dependencies, the method does not explicitly parameterize hidden-state transitions or emissions; instead, it performs context-driven probabilistic inference to approximate latent dependencies across digit positions. Using over one million real-world four-digit PIN samples, we evaluate single-, double-, and triple-digit leakage scenarios and derive position-dependent reliability metrics. The proposed model achieves up to 55.31% prediction accuracy for one missing digit and 12.12% for three missing digits, while consistently outperforming a standard sequence-model baseline and classical machine learning models in terms of precision, recall, and F1-score. These results formalize PIN entry as a noisy human--IoT communication channel and demonstrate substantial reliability degradation under realistic partial exposure conditions."
+    }
+  },
+  {
+    "id": "2605.01970v1",
+    "title": "Trojan Hippo: Weaponizing Agent Memory for Data Exfiltration",
+    "authors": [
+      "Debeshee Das",
+      "Julien Piet",
+      "Darya Kaviani",
+      "Luca Beurer-Kellner",
+      "Florian Tramèr"
+    ],
+    "published_date": "2026-05-03",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.01970v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.01970v1",
+    "content": {
+      "en": "Memory systems enable otherwise-stateless LLM agents to persist user information across sessions, but also introduce a new attack surface. We characterize the Trojan Hippo attack, a class of persistent memory attacks that operates in a more realistic threat model than prior memory poisoning work: the attacker plants a dormant payload into an agent's long-term memory via a single untrusted tool call (e.g., a crafted email), which activates only when the user later discusses sensitive topics such as finance, health, or identity, and exfiltrates high-value personal data to the attacker.   While anecdotal demonstrations of such attacks have appeared against deployed systems, no prior work systematically evaluates them across heterogeneous memory architectures and defenses.We introduce a dynamic evaluation framework comprising two components: (1) an OpenEvolve-based adaptive red-teaming benchmark that stress-tests defenses and memory backends against continuously refined attacks, and (2) the first capability-aware security/utility analysis for persistent memory systems, enabling principled reasoning about defense deployment across different usage profiles.   Instantiated on an email assistant across four memory backends (explicit tool memory, agentic memory, RAG, and sliding-window context), Trojan Hippo achieves up to 85-100 percent ASR against current frontier models from OpenAI and Google, with planted memories successfully activating even after 100 benign sessions. We evaluate four memory-system defenses inspired by basic security principles, finding they substantially reduce attack success rates (to as low as 0-5 percent), though at utility costs that vary widely with task requirements. Because of this substantial security-utility tradeoff, the effective real-world deployment of defenses remains an open challenge, which our evaluation framework is specifically designed to address.",
+      "tr": "Memory systems enable otherwise-stateless LLM agents to persist user information across sessions, but also introduce a new attack surface. We characterize the Trojan Hippo attack, a class of persistent memory attacks that operates in a more realistic threat model than prior memory poisoning work: the attacker plants a dormant payload into an agent's long-term memory via a single untrusted tool call (e.g., a crafted email), which activates only when the user later discusses sensitive topics such as finance, health, or identity, and exfiltrates high-value personal data to the attacker.   While anecdotal demonstrations of such attacks have appeared against deployed systems, no prior work systematically evaluates them across heterogeneous memory architectures and defenses.We introduce a dynamic evaluation framework comprising two components: (1) an OpenEvolve-based adaptive red-teaming benchmark that stress-tests defenses and memory backends against continuously refined attacks, and (2) the first capability-aware security/utility analysis for persistent memory systems, enabling principled reasoning about defense deployment across different usage profiles.   Instantiated on an email assistant across four memory backends (explicit tool memory, agentic memory, RAG, and sliding-window context), Trojan Hippo achieves up to 85-100 percent ASR against current frontier models from OpenAI and Google, with planted memories successfully activating even after 100 benign sessions. We evaluate four memory-system defenses inspired by basic security principles, finding they substantially reduce attack success rates (to as low as 0-5 percent), though at utility costs that vary widely with task requirements. Because of this substantial security-utility tradeoff, the effective real-world deployment of defenses remains an open challenge, which our evaluation framework is specifically designed to address."
     }
   }
 ]
