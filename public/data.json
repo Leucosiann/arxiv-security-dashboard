@@ -1,208 +1,217 @@
 [
   {
-    "id": "2605.04019v1",
-    "title": "Redefining AI Red Teaming in the Agentic Era: From Weeks to Hours",
+    "id": "2605.05058v1",
+    "title": "SoK: Robustness in Large Language Models against Jailbreak Attacks",
     "authors": [
-      "Raja Sekhar Rao Dheekonda",
-      "Will Pearce",
-      "Nick Landers"
+      "Feiyue Xu",
+      "Hongsheng Hu",
+      "Chaoxiang He",
+      "Sheng Hang",
+      "Hanqing Hu"
     ],
-    "published_date": "2026-05-05",
-    "tags": [
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2605.04019v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.04019v1",
-    "content": {
-      "en": "AI systems are entering critical domains like healthcare, finance, and defense, yet remain vulnerable to adversarial attacks. While AI red teaming is a primary defense, current approaches force operators into manual, library-specific workflows. Operators spend weeks hand-crafting workflows - assembling attacks, transforms, and scorers. When results fall short, workflows must be rebuilt. As a result, operators spend more time constructing workflows than probing targets for security and safety vulnerabilities.   We introduce an AI red teaming agent built on the open-source Dreadnode SDK. The agent creates workflows grounded in 45+ adversarial attacks, 450+ transforms, and 130+ scorers. Operators can probe multi-agent systems, multilingual, and multimodal targets, focusing on what to probe rather than how to implement it.   We make three contributions: 1. Agentic interface. Operators describe goals in natural language via the Dreadnode TUI (Terminal User Interface). The agent handles attack selection, transform composition, execution, and reporting, letting operators focus on red teaming. Weeks compress to hours. 2. Unified framework. A single framework for probing traditional ML models (adversarial examples) and generative AI systems (jailbreaks), removing the need for separate libraries. 3. Llama Scout case study. We red team Meta Llama Scout and achieve an 85% attack success rate with severity up to 1.0, using zero human-developed code",
-      "tr": "AI systems are entering critical domains like healthcare, finance, and defense, yet remain vulnerable to adversarial attacks. While AI red teaming is a primary defense, current approaches force operators into manual, library-specific workflows. Operators spend weeks hand-crafting workflows - assembling attacks, transforms, and scorers. When results fall short, workflows must be rebuilt. As a result, operators spend more time constructing workflows than probing targets for security and safety vulnerabilities.   We introduce an AI red teaming agent built on the open-source Dreadnode SDK. The agent creates workflows grounded in 45+ adversarial attacks, 450+ transforms, and 130+ scorers. Operators can probe multi-agent systems, multilingual, and multimodal targets, focusing on what to probe rather than how to implement it.   We make three contributions: 1. Agentic interface. Operators describe goals in natural language via the Dreadnode TUI (Terminal User Interface). The agent handles attack selection, transform composition, execution, and reporting, letting operators focus on red teaming. Weeks compress to hours. 2. Unified framework. A single framework for probing traditional ML models (adversarial examples) and generative AI systems (jailbreaks), removing the need for separate libraries. 3. Llama Scout case study. We red team Meta Llama Scout and achieve an 85% attack success rate with severity up to 1.0, using zero human-developed code"
-    }
-  },
-  {
-    "id": "2605.03952v1",
-    "title": "MOSAIC-Bench: Measuring Compositional Vulnerability Induction in Coding Agents",
-    "authors": [
-      "Jonathan Steinberg",
-      "Oren Gal"
-    ],
-    "published_date": "2026-05-05",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.SE"
-    ],
-    "link": "http://arxiv.org/abs/2605.03952v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.03952v1",
-    "content": {
-      "en": "Coding agents often pass per-prompt safety review yet ship exploitable code when their tasks are decomposed into routine engineering tickets. The challenge is structural: existing safety alignment evaluates overt requests in isolation, leaving models blind to malicious end-states that emerge from sequenced compliance with innocuous-looking requests. We introduce MOSAIC-Bench (Malicious Objectives Sequenced As Innocuous Compliance), a benchmark of 199 three-stage attack chains paired with deterministic exploit oracles on deployed software substrates (10 web-application substrates, 31 CWE classes, 5 programming languages) that treats both exploit ground truth and downstream reviewer protocol as first-class evaluation axes. On this benchmark, nine production coding agents from Anthropic, OpenAI, Google, Moonshot, Zhipu, and Minimax compose innocuous tickets at 53-86% end-to-end ASR with only two refusals across all staged runs. In a matched direct-prompt experiment over four frontier Claude/Codex agents, vulnerable-output rates fall to 0-20.4%: Claude primarily refuses, while Codex primarily hardens rather than emitting the vulnerable implementation - ticket staging silences both defense modes simultaneously. Downstream, code reviewer agents approve 25.8% of these confirmed-vulnerable cumulative diffs as routine PRs, and a full-context implementation protocol closes only 50% of the staged/direct gap, ruling out context fragmentation as the sole explanation. As a deployable but non-adaptive mitigation, reframing the reviewer as an adversarial pentester reduces evasion across the evaluated reviewer subset; pentester framed evasion ranges from 3.0% to 17.6%, and an open-weight Gemma-4-E4B-it reviewer under this framing detects 88.4% of attacks on the dataset with a 4.6% false-positive rate measured on 608 real-world GitHub PRs.",
-      "tr": "Coding agents often pass per-prompt safety review yet ship exploitable code when their tasks are decomposed into routine engineering tickets. The challenge is structural: existing safety alignment evaluates overt requests in isolation, leaving models blind to malicious end-states that emerge from sequenced compliance with innocuous-looking requests. We introduce MOSAIC-Bench (Malicious Objectives Sequenced As Innocuous Compliance), a benchmark of 199 three-stage attack chains paired with deterministic exploit oracles on deployed software substrates (10 web-application substrates, 31 CWE classes, 5 programming languages) that treats both exploit ground truth and downstream reviewer protocol as first-class evaluation axes. On this benchmark, nine production coding agents from Anthropic, OpenAI, Google, Moonshot, Zhipu, and Minimax compose innocuous tickets at 53-86% end-to-end ASR with only two refusals across all staged runs. In a matched direct-prompt experiment over four frontier Claude/Codex agents, vulnerable-output rates fall to 0-20.4%: Claude primarily refuses, while Codex primarily hardens rather than emitting the vulnerable implementation - ticket staging silences both defense modes simultaneously. Downstream, code reviewer agents approve 25.8% of these confirmed-vulnerable cumulative diffs as routine PRs, and a full-context implementation protocol closes only 50% of the staged/direct gap, ruling out context fragmentation as the sole explanation. As a deployable but non-adaptive mitigation, reframing the reviewer as an adversarial pentester reduces evasion across the evaluated reviewer subset; pentester framed evasion ranges from 3.0% to 17.6%, and an open-weight Gemma-4-E4B-it reviewer under this framing detects 88.4% of attacks on the dataset with a 4.6% false-positive rate measured on 608 real-world GitHub PRs."
-    }
-  },
-  {
-    "id": "2605.03697v1",
-    "title": "Tailored Prompts, Targeted Protection: Vulnerability-Specific LLM Analysis for Smart Contracts",
-    "authors": [
-      "Xing Zhang",
-      "Keyu Zhang",
-      "Taohong Zhu",
-      "Anbang Ruan"
-    ],
-    "published_date": "2026-05-05",
+    "published_date": "2026-05-06",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2605.03697v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.03697v1",
+    "link": "http://arxiv.org/abs/2605.05058v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.05058v1",
     "content": {
-      "en": "Smart contracts on blockchains are prone to diverse security vulnerabilities that can lead to significant financial losses due to their immutable nature. Existing detection approaches often lack flexibility across vulnerability types and rely heavily on manually crafted expert rules. In this paper, we present an LLM-based framework for practical smart contract vulnerability detection. We construct and release a large-scale dataset comprising 31,165 professionally annotated vulnerability instances collected from over 3,200 real-world projects across 15 major blockchain platforms. Our approach leverages precise AST-based context extraction and vulnerability-specific prompt design to instantiate customized detectors for 13 prevalent vulnerability categories. Experimental results demonstrate strong effectiveness, achieving an average positive recall of 0.92 and an average negative recall of 0.85, highlighting the potential of carefully engineered contextual prompting for scalable and high-precision smart contract security analysis.",
-      "tr": "Smart contracts on blockchains are prone to diverse security vulnerabilities that can lead to significant financial losses due to their immutable nature. Existing detection approaches often lack flexibility across vulnerability types and rely heavily on manually crafted expert rules. In this paper, we present an LLM-based framework for practical smart contract vulnerability detection. We construct and release a large-scale dataset comprising 31,165 professionally annotated vulnerability instances collected from over 3,200 real-world projects across 15 major blockchain platforms. Our approach leverages precise AST-based context extraction and vulnerability-specific prompt design to instantiate customized detectors for 13 prevalent vulnerability categories. Experimental results demonstrate strong effectiveness, achieving an average positive recall of 0.92 and an average negative recall of 0.85, highlighting the potential of carefully engineered contextual prompting for scalable and high-precision smart contract security analysis."
+      "en": "Large Language Models (LLMs) have achieved remarkable success but remain highly susceptible to jailbreak attacks, in which adversarial prompts coerce models into generating harmful, unethical, or policy-violating outputs. Such attacks pose real-world risks, eroding safety, trust, and regulatory compliance in high-stakes applications. Although a variety of attack and defense methods have been proposed, existing evaluation practices are inadequate, often relying on narrow metrics like attack success rate that fail to capture the multidimensional nature of LLM security. In this paper, we present a systematic taxonomy of jailbreak attacks and defenses and introduce Security Cube, a unified, multi-dimensional framework for comprehensive evaluation of these techniques. We provide detailed comparison tables of existing attacks and defenses, highlighting key insights and open challenges across the literature. Leveraging Security Cube, we conduct benchmark studies on 13 representative attacks and 5 defenses, establishing a clear view of the current landscape encompassing jailbreak attacks, defenses, automated judges, and LLM vulnerabilities. Based on these evaluations, we distill critical findings, identify unresolved problems, and outline promising research directions for enhancing LLM robustness against jailbreak attacks. Our analysis aims to pave the way towards more robust, interpretable, and trustworthy LLM systems. Our code is available at Code.",
+      "tr": "Large Language Models (LLMs) have achieved remarkable success but remain highly susceptible to jailbreak attacks, in which adversarial prompts coerce models into generating harmful, unethical, or policy-violating outputs. Such attacks pose real-world risks, eroding safety, trust, and regulatory compliance in high-stakes applications. Although a variety of attack and defense methods have been proposed, existing evaluation practices are inadequate, often relying on narrow metrics like attack success rate that fail to capture the multidimensional nature of LLM security. In this paper, we present a systematic taxonomy of jailbreak attacks and defenses and introduce Security Cube, a unified, multi-dimensional framework for comprehensive evaluation of these techniques. We provide detailed comparison tables of existing attacks and defenses, highlighting key insights and open challenges across the literature. Leveraging Security Cube, we conduct benchmark studies on 13 representative attacks and 5 defenses, establishing a clear view of the current landscape encompassing jailbreak attacks, defenses, automated judges, and LLM vulnerabilities. Based on these evaluations, we distill critical findings, identify unresolved problems, and outline promising research directions for enhancing LLM robustness against jailbreak attacks. Our analysis aims to pave the way towards more robust, interpretable, and trustworthy LLM systems. Our code is available at Code."
     }
   },
   {
-    "id": "2605.03482v1",
-    "title": "MEMSAD: Gradient-Coupled Anomaly Detection for Memory Poisoning in Retrieval-Augmented Agents",
+    "id": "2605.05000v1",
+    "title": "Agentic Vulnerability Reasoning on Windows COM Binaries",
     "authors": [
-      "Ishrith Gowda"
+      "Hwiwon Lee",
+      "Jongseong Kim",
+      "Lingming Zhang"
     ],
-    "published_date": "2026-05-05",
+    "published_date": "2026-05-06",
     "tags": [
       "cs.CR",
-      "cs.AI",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2605.03482v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.03482v1",
+    "link": "http://arxiv.org/abs/2605.05000v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.05000v1",
     "content": {
-      "en": "Persistent external memory enables LLM agents to maintain context across sessions, yet its security properties remain formally uncharacterized. We formalize memory poisoning attacks on retrieval-augmented agents as a Stackelberg game with a unified evaluation framework spanning three attack classes with escalating access assumptions. Correcting an evaluation protocol inconsistency in the triggered-query specification of Chen et al. (2024), we show faithful evaluation increases measured attack success by $4\\times$ (ASR-R: $0.25 \\to 1.00$). Our primary contribution is MEMSAD (Semantic Anomaly Detection), a calibration-based defense grounded in a gradient coupling theorem: under encoder regularity, the anomaly score gradient and the retrieval objective gradient are provably identical, so any continuous perturbation that reduces detection risk necessarily degrades retrieval rank. This coupling yields a certified detection radius guaranteeing correct classification regardless of adversary strategy. We prove minimax optimality via Le Cam's method, showing any threshold detector requires $Ω(1/ρ^2)$ calibration samples and MEMSAD achieves this up to $\\log(1/δ)$ factors. We further derive online regret bounds for rolling calibration at rate $O(σ^{2/3}Δ^{1/3})$, and formally characterize a discrete synonym-invariance loophole that marks the boundary of what continuous-space defenses can guarantee. Experiments on a $3 \\times 5$ attack-defense matrix with bootstrap confidence intervals, Bonferroni-corrected hypothesis tests, and Clopper-Pearson validation ($n=1{,}000$) confirm: composite defenses achieve TPR $= 1.00$, FPR $= 0.00$ across all attacks, while synonym substitution evades detection at $Δ$ ASR-R $\\approx 0$, exposing a gap existing embedding-based defenses cannot close.",
-      "tr": "Persistent external memory enables LLM agents to maintain context across sessions, yet its security properties remain formally uncharacterized. We formalize memory poisoning attacks on retrieval-augmented agents as a Stackelberg game with a unified evaluation framework spanning three attack classes with escalating access assumptions. Correcting an evaluation protocol inconsistency in the triggered-query specification of Chen et al. (2024), we show faithful evaluation increases measured attack success by $4\\times$ (ASR-R: $0.25 \\to 1.00$). Our primary contribution is MEMSAD (Semantic Anomaly Detection), a calibration-based defense grounded in a gradient coupling theorem: under encoder regularity, the anomaly score gradient and the retrieval objective gradient are provably identical, so any continuous perturbation that reduces detection risk necessarily degrades retrieval rank. This coupling yields a certified detection radius guaranteeing correct classification regardless of adversary strategy. We prove minimax optimality via Le Cam's method, showing any threshold detector requires $Ω(1/ρ^2)$ calibration samples and MEMSAD achieves this up to $\\log(1/δ)$ factors. We further derive online regret bounds for rolling calibration at rate $O(σ^{2/3}Δ^{1/3})$, and formally characterize a discrete synonym-invariance loophole that marks the boundary of what continuous-space defenses can guarantee. Experiments on a $3 \\times 5$ attack-defense matrix with bootstrap confidence intervals, Bonferroni-corrected hypothesis tests, and Clopper-Pearson validation ($n=1{,}000$) confirm: composite defenses achieve TPR $= 1.00$, FPR $= 0.00$ across all attacks, while synonym substitution evades detection at $Δ$ ASR-R $\\approx 0$, exposing a gap existing embedding-based defenses cannot close."
+      "en": "Windows Component Object Model (COM) services run with elevated privileges and are widely accessible to authenticated users, making race conditions in these binaries a critical surface for local privilege escalation. We present SLYP, an end-to-end agentic pipeline that discovers race condition vulnerabilities in COM binaries and generates debugger-verified proof-of-concept (PoC) code. SLYP exposes binary exploration, COM inspection, and dynamic debugging as reusable tool interfaces, giving agents the static context, COM activation metadata, and debugger feedback needed to move from vulnerability discovery to verified PoC generation. On a benchmark of 20 COM objects covering 40 vulnerability cases, SLYP achieves 0.973 F1, outperforming production coding agents by up to 0.208 F1 and the state-of-the-art static analyzer by 3.3x in bug discovery. For PoC generation, production coding agents in their default setup (without our COM inspection and dynamic debugging tools) verify essentially no cases on either frontier model, whereas SLYP's interactive toolsets enable it to autonomously synthesize working PoCs for 67.5% of cases on the strongest configuration. Deployed on production Windows services, SLYP discovers 28 previously unknown vulnerabilities across nine COM services, all confirmed by the Microsoft Security Response Center (MSRC) with 16 CVEs assigned and $140,000 in bounties. Furthermore, SLYP is designed with generalizable binary analysis and debugging interfaces, making it readily applicable to other commercial off-the-shelf (COTS) binaries beyond Windows COM services.",
+      "tr": "Windows Component Object Model (COM) services run with elevated privileges and are widely accessible to authenticated users, making race conditions in these binaries a critical surface for local privilege escalation. We present SLYP, an end-to-end agentic pipeline that discovers race condition vulnerabilities in COM binaries and generates debugger-verified proof-of-concept (PoC) code. SLYP exposes binary exploration, COM inspection, and dynamic debugging as reusable tool interfaces, giving agents the static context, COM activation metadata, and debugger feedback needed to move from vulnerability discovery to verified PoC generation. On a benchmark of 20 COM objects covering 40 vulnerability cases, SLYP achieves 0.973 F1, outperforming production coding agents by up to 0.208 F1 and the state-of-the-art static analyzer by 3.3x in bug discovery. For PoC generation, production coding agents in their default setup (without our COM inspection and dynamic debugging tools) verify essentially no cases on either frontier model, whereas SLYP's interactive toolsets enable it to autonomously synthesize working PoCs for 67.5% of cases on the strongest configuration. Deployed on production Windows services, SLYP discovers 28 previously unknown vulnerabilities across nine COM services, all confirmed by the Microsoft Security Response Center (MSRC) with 16 CVEs assigned and $140,000 in bounties. Furthermore, SLYP is designed with generalizable binary analysis and debugging interfaces, making it readily applicable to other commercial off-the-shelf (COTS) binaries beyond Windows COM services."
     }
   },
   {
-    "id": "2605.03441v1",
-    "title": "Exposing LLM Safety Gaps Through Mathematical Encoding:New Attacks and Systematic Analysis",
+    "id": "2605.04901v1",
+    "title": "On the (In-)Security of the Shuffling Defense in the Transformer Secure Inference",
     "authors": [
-      "Haoyu Zhang",
-      "Mohammad Zandsalimy",
-      "Shanu Sushmita"
+      "Zhengyi Li",
+      "Yakai Wang",
+      "Kang Yang",
+      "Yu Yu",
+      "Jiaping Gui"
     ],
-    "published_date": "2026-05-05",
+    "published_date": "2026-05-06",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.04901v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.04901v1",
+    "content": {
+      "en": "For Transformer models, cryptographically secure inference ensures that the client learns only the final output, while the server learns nothing about the client's input. However, securely computing nonlinear layers remains a major efficiency bottleneck due to the substantial communication rounds and data transmission required. To address this issue, prior works reveal intermediate activations to the client, allowing nonlinear operations to be computed in plaintext. Although this approach significantly improves efficiency, exposing activations enables adversaries to extract model weights. To mitigate this risk, existing works employ a shuffling defense that reveals only randomly permuted activations to the client. In this work, we show that the shuffling defense is not as robust as previously claimed. We propose an attack that aligns differently shuffled activations to a common permutation and subsequently exploits them to extract model weights. Experiments on Pythia-70m and GPT-2 demonstrate that the proposed attack can align shuffled activations with mean squared errors ranging from $10^{-9}$ to $10^{-6}$. With a query cost of approximately \\$1, the adversary can recover model weights with L1-norm differences ranging from $10^{-4}$ to $10^{-2}$ compared to the oracle weights.",
+      "tr": "For Transformer models, cryptographically secure inference ensures that the client learns only the final output, while the server learns nothing about the client's input. However, securely computing nonlinear layers remains a major efficiency bottleneck due to the substantial communication rounds and data transmission required. To address this issue, prior works reveal intermediate activations to the client, allowing nonlinear operations to be computed in plaintext. Although this approach significantly improves efficiency, exposing activations enables adversaries to extract model weights. To mitigate this risk, existing works employ a shuffling defense that reveals only randomly permuted activations to the client. In this work, we show that the shuffling defense is not as robust as previously claimed. We propose an attack that aligns differently shuffled activations to a common permutation and subsequently exploits them to extract model weights. Experiments on Pythia-70m and GPT-2 demonstrate that the proposed attack can align shuffled activations with mean squared errors ranging from $10^{-9}$ to $10^{-6}$. With a query cost of approximately \\$1, the adversary can recover model weights with L1-norm differences ranging from $10^{-4}$ to $10^{-2}$ compared to the oracle weights."
+    }
+  },
+  {
+    "id": "2605.04785v1",
+    "title": "AgentTrust: Runtime Safety Evaluation and Interception for AI Agent Tool Use",
+    "authors": [
+      "Chenglin Yang"
+    ],
+    "published_date": "2026-05-06",
+    "tags": [
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2605.04785v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.04785v1",
+    "content": {
+      "en": "Modern AI agents execute real-world side effects through tool calls such as file operations, shell commands, HTTP requests, and database queries. A single unsafe action, including accidental deletion, credential exposure, or data exfiltration, can cause irreversible harm. Existing defenses are incomplete: post-hoc benchmarks measure behavior after execution, static guardrails miss obfuscation and multi-step context, and infrastructure sandboxes constrain where code runs without understanding what an action means.   We present AgentTrust, a runtime safety layer that intercepts agent tool calls before execution and returns a structured verdict: allow, warn, block, or review. AgentTrust combines a shell deobfuscation normalizer, SafeFix suggestions for safer alternatives, RiskChain detection for multi-step attack chains, and a cache-aware LLM-as-Judge for ambiguous inputs.   We release a 300-scenario benchmark across six risk categories and an additional 630 independently constructed real-world adversarial scenarios. On the internal benchmark, the production-only ruleset achieves 95.0% verdict accuracy and 73.7% risk-level accuracy at low-millisecond end-to-end latency. On the 630-scenario benchmark, evaluated under a patched ruleset and not claimed as zero-shot, AgentTrust achieves 96.7% verdict accuracy, including about 93% on shell-obfuscated payloads. AgentTrust is released under the AGPL-3.0 license and provides a Model Context Protocol server for MCP-compatible agents.",
+      "tr": "Modern AI agents execute real-world side effects through tool calls such as file operations, shell commands, HTTP requests, and database queries. A single unsafe action, including accidental deletion, credential exposure, or data exfiltration, can cause irreversible harm. Existing defenses are incomplete: post-hoc benchmarks measure behavior after execution, static guardrails miss obfuscation and multi-step context, and infrastructure sandboxes constrain where code runs without understanding what an action means.   We present AgentTrust, a runtime safety layer that intercepts agent tool calls before execution and returns a structured verdict: allow, warn, block, or review. AgentTrust combines a shell deobfuscation normalizer, SafeFix suggestions for safer alternatives, RiskChain detection for multi-step attack chains, and a cache-aware LLM-as-Judge for ambiguous inputs.   We release a 300-scenario benchmark across six risk categories and an additional 630 independently constructed real-world adversarial scenarios. On the internal benchmark, the production-only ruleset achieves 95.0% verdict accuracy and 73.7% risk-level accuracy at low-millisecond end-to-end latency. On the 630-scenario benchmark, evaluated under a patched ruleset and not claimed as zero-shot, AgentTrust achieves 96.7% verdict accuracy, including about 93% on shell-obfuscated payloads. AgentTrust is released under the AGPL-3.0 license and provides a Model Context Protocol server for MCP-compatible agents."
+    }
+  },
+  {
+    "id": "2605.04724v1",
+    "title": "From Beats to Breaches:How Offensive AI Infers Sensitive User Information from Playlists",
+    "authors": [
+      "Stefano Cecconello",
+      "Mauro Conti",
+      "Luca Pajola",
+      "Luca Pasa",
+      "Pier Paolo Tricomi"
+    ],
+    "published_date": "2026-05-06",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.04724v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.04724v1",
+    "content": {
+      "en": "The pervasive integration of AI has enabled Offensive AI: the exploitation of AI for malicious ends across the cyber-kill chain. A critical manifestation is the user attribute inference attack, where AI infers sensitive Personally Identifiable Information (PII) from innocuous public data. We explore how music streaming ecosystems, where users routinely release public playlists, can be exploited for Offensive AI. To quantify this threat, we developed musicPIIrate. This novel tool leverages deep learning architectures that utilize both standalone data representations and the structural information embedded in a user's playlist collection. Our design explores set-based approaches (e.g., Deep Sets) and methodologies modeling relationships between playlists (e.g., Graph Neural Networks), which we also combine to leverage both perspectives. Our approach addresses feature extraction from unordered, variable-length set data, enabling accurate PII prediction.   Empirical evaluation demonstrates that musicPIIrate achieves state-of-the-art inference accuracy. The tool successfully infers a wide array of attributes, including: Demographics (Age, Country, Gender), Habits (Alcohol, Smoke, Sport), and Personality Traits (OCEAN scores). musicPIIrate outperforms existing methods, beating baselines in 9 out of 15 attribute inference tasks. To counter this vulnerability, we propose JamShield, a lightweight defensive framework. JamShield strategically injects dummy playlists into an account to dilute the PII-carrying signal. Our analysis indicates that JamShield represents a promising defense, lowering inference F1-scores by an average of 10%. This work provides an initial Offensive-AI benchmark for playlist-based PII inference using architectures that leverage set- and graph-structured data and introduces a defense showing encouraging mitigation effects.",
+      "tr": "The pervasive integration of AI has enabled Offensive AI: the exploitation of AI for malicious ends across the cyber-kill chain. A critical manifestation is the user attribute inference attack, where AI infers sensitive Personally Identifiable Information (PII) from innocuous public data. We explore how music streaming ecosystems, where users routinely release public playlists, can be exploited for Offensive AI. To quantify this threat, we developed musicPIIrate. This novel tool leverages deep learning architectures that utilize both standalone data representations and the structural information embedded in a user's playlist collection. Our design explores set-based approaches (e.g., Deep Sets) and methodologies modeling relationships between playlists (e.g., Graph Neural Networks), which we also combine to leverage both perspectives. Our approach addresses feature extraction from unordered, variable-length set data, enabling accurate PII prediction.   Empirical evaluation demonstrates that musicPIIrate achieves state-of-the-art inference accuracy. The tool successfully infers a wide array of attributes, including: Demographics (Age, Country, Gender), Habits (Alcohol, Smoke, Sport), and Personality Traits (OCEAN scores). musicPIIrate outperforms existing methods, beating baselines in 9 out of 15 attribute inference tasks. To counter this vulnerability, we propose JamShield, a lightweight defensive framework. JamShield strategically injects dummy playlists into an account to dilute the PII-carrying signal. Our analysis indicates that JamShield represents a promising defense, lowering inference F1-scores by an average of 10%. This work provides an initial Offensive-AI benchmark for playlist-based PII inference using architectures that leverage set- and graph-structured data and introduces a defense showing encouraging mitigation effects."
+    }
+  },
+  {
+    "id": "2605.04705v1",
+    "title": "Vol-Mark: A Watermark for 3D Medical Volume Data Via Cubic Difference Expansion and Contrastive Learning",
+    "authors": [
+      "Jiangnan Zhu",
+      "Yuntao Wang",
+      "Shengli Pan",
+      "Yujie Gu"
+    ],
+    "published_date": "2026-05-06",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2605.04705v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.04705v1",
+    "content": {
+      "en": "Today, advances in medical technology extensively utilize 3D volume data for accurate and efficient diagnostics. However, sharing these data across networks in telemedicine poses significant security risks of data tampering and unauthorized copying. To address these challenges, this paper proposes a novel reversible-zero watermarking approach, termed Vol-Mark, for medical volume data to protect their ownership and authenticity in telemedicine. The proposed Vol-Mark method offers two key benefits: 1) it designs a volume data feature extractor that leverages contrastive learning to efficiently extract discriminative and stable volumetric features, ensuring robustness against 3D attacks; 2) it introduces the cubic difference expansion (c-DE) technique, which leverages the 3D integer wavelet transform to embed watermark bits into neighboring voxels within cubes at low-frequency coefficients. The voxel differences within each cube are expanded to create embedding space, and a majority voting mechanism is employed during extraction to enhance reliability. The embedding process incurs low distortion and supports lossless removal, thereby preserving the integrity and diagnostic accuracy of medical volume data. Through these two benefits, Vol-Mark enables both integrity verification and ownership verification. Integrity verification is first performed, and ownership verification through hypothesis testing is further conducted to enhance reliability, particularly under data tampering or watermark removal attacks. Comprehensive experimental results show the effectiveness of the proposed method and its superior robustness against conventional, geometric, and hybrid attacks on medical volume data. In particular, through multiple tasks evaluations, Vol-Mark consistently achieves an ACC above 0.90 in most attack scenarios, outperforming existing methods by a clear margin.",
+      "tr": "Today, advances in medical technology extensively utilize 3D volume data for accurate and efficient diagnostics. However, sharing these data across networks in telemedicine poses significant security risks of data tampering and unauthorized copying. To address these challenges, this paper proposes a novel reversible-zero watermarking approach, termed Vol-Mark, for medical volume data to protect their ownership and authenticity in telemedicine. The proposed Vol-Mark method offers two key benefits: 1) it designs a volume data feature extractor that leverages contrastive learning to efficiently extract discriminative and stable volumetric features, ensuring robustness against 3D attacks; 2) it introduces the cubic difference expansion (c-DE) technique, which leverages the 3D integer wavelet transform to embed watermark bits into neighboring voxels within cubes at low-frequency coefficients. The voxel differences within each cube are expanded to create embedding space, and a majority voting mechanism is employed during extraction to enhance reliability. The embedding process incurs low distortion and supports lossless removal, thereby preserving the integrity and diagnostic accuracy of medical volume data. Through these two benefits, Vol-Mark enables both integrity verification and ownership verification. Integrity verification is first performed, and ownership verification through hypothesis testing is further conducted to enhance reliability, particularly under data tampering or watermark removal attacks. Comprehensive experimental results show the effectiveness of the proposed method and its superior robustness against conventional, geometric, and hybrid attacks on medical volume data. In particular, through multiple tasks evaluations, Vol-Mark consistently achieves an ACC above 0.90 in most attack scenarios, outperforming existing methods by a clear margin."
+    }
+  },
+  {
+    "id": "2605.04700v1",
+    "title": "Sparse Tokens Suffice: Jailbreaking Audio Language Models via Token-Aware Gradient Optimization",
+    "authors": [
+      "Zheng Fang",
+      "Xiaosen Wang",
+      "Shenyi Zhang",
+      "Shaokang Wang",
+      "Zhijin Ge"
+    ],
+    "published_date": "2026-05-06",
     "tags": [
       "cs.CR",
       "cs.AI",
       "cs.CL",
+      "cs.LG",
+      "cs.SD"
+    ],
+    "link": "http://arxiv.org/abs/2605.04700v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.04700v1",
+    "content": {
+      "en": "Jailbreak attacks on audio language models (ALMs) optimize audio perturbations to elicit unsafe generations, and they typically update the entire waveform densely throughout optimization. In this work, we investigate the necessity of such dense optimization by analyzing the structure of token-aligned gradients in ALMs. We find that gradient energy is highly non-uniform across audio tokens, indicating that only a small subset of token-aligned audio regions dominates the optimization signal. Motivated by this observation, we propose Token-Aware Gradient Optimization (TAGO), which enables sparse jailbreak optimization by retaining only waveform gradients aligned with audio tokens that have high gradient energy, while masking the remaining gradients at each iteration. Across three ALMs, TAGO outperforms baselines, and substantial sparsification preserves strong attack success rates (e.g. on Qwen3-Omni, $\\mathrm{ASR}_{l}$ remains at 86% with a token retention ratio of 0.25, compared to 87% with full token retention). These results demonstrate that dense waveform updates are largely redundant, and we advocate that future audio jailbreak and safety alignment research should further leverage this heterogeneous token-level gradient structure.",
+      "tr": "Jailbreak attacks on audio language models (ALMs) optimize audio perturbations to elicit unsafe generations, and they typically update the entire waveform densely throughout optimization. In this work, we investigate the necessity of such dense optimization by analyzing the structure of token-aligned gradients in ALMs. We find that gradient energy is highly non-uniform across audio tokens, indicating that only a small subset of token-aligned audio regions dominates the optimization signal. Motivated by this observation, we propose Token-Aware Gradient Optimization (TAGO), which enables sparse jailbreak optimization by retaining only waveform gradients aligned with audio tokens that have high gradient energy, while masking the remaining gradients at each iteration. Across three ALMs, TAGO outperforms baselines, and substantial sparsification preserves strong attack success rates (e.g. on Qwen3-Omni, $\\mathrm{ASR}_{l}$ remains at 86% with a token retention ratio of 0.25, compared to 87% with full token retention). These results demonstrate that dense waveform updates are largely redundant, and we advocate that future audio jailbreak and safety alignment research should further leverage this heterogeneous token-level gradient structure."
+    }
+  },
+  {
+    "id": "2605.04698v1",
+    "title": "Gray-Box Poisoning of Continuous Malware Ingestion Pipelines",
+    "authors": [
+      "Jan Dolejš",
+      "Martin Jureček",
+      "Róbert Lórencz"
+    ],
+    "published_date": "2026-05-06",
+    "tags": [
+      "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2605.03441v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.03441v1",
+    "link": "http://arxiv.org/abs/2605.04698v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.04698v1",
     "content": {
-      "en": "Large language models (LLMs) employ safety mechanisms to prevent harmful outputs, yet these defenses primarily rely on semantic pattern matching. We show that encoding harmful prompts as coherent mathematical problems -- using formalisms such as set theory, formal logic, and quantum mechanics -- bypasses these filters at high rates, achieving 46%--56% average attack success across eight target models and two established benchmarks. Crucially, the effectiveness depends not on mathematical notation itself, but on whether a helper LLM deeply reformulates the harmful content into a genuine mathematical problem: rule-based encodings that apply mathematical formatting without such reformulation perform no better than unencoded baselines. We introduce a novel Formal Logic encoding that achieves attack success comparable to Set Theory, demonstrating that this vulnerability generalizes across mathematical formalisms. Additional experiments with repeat post-processing confirm that these attacks are robust to simple prompt augmentation. Notably, newer models (GPT-5, GPT-5-Mini) show substantially greater robustness than older models, though they remain vulnerable. Our findings highlight fundamental gaps in current safety frameworks and motivate defenses that reason about mathematical structure rather than surface-level semantics.",
-      "tr": "Large language models (LLMs) employ safety mechanisms to prevent harmful outputs, yet these defenses primarily rely on semantic pattern matching. We show that encoding harmful prompts as coherent mathematical problems -- using formalisms such as set theory, formal logic, and quantum mechanics -- bypasses these filters at high rates, achieving 46%--56% average attack success across eight target models and two established benchmarks. Crucially, the effectiveness depends not on mathematical notation itself, but on whether a helper LLM deeply reformulates the harmful content into a genuine mathematical problem: rule-based encodings that apply mathematical formatting without such reformulation perform no better than unencoded baselines. We introduce a novel Formal Logic encoding that achieves attack success comparable to Set Theory, demonstrating that this vulnerability generalizes across mathematical formalisms. Additional experiments with repeat post-processing confirm that these attacks are robust to simple prompt augmentation. Notably, newer models (GPT-5, GPT-5-Mini) show substantially greater robustness than older models, though they remain vulnerable. Our findings highlight fundamental gaps in current safety frameworks and motivate defenses that reason about mathematical structure rather than surface-level semantics."
+      "en": "Modern malware detection pipelines rely on continuous data ingestion and machine learning to counter the high volume of novel threats. This work investigates a realistic gray-box poisoning threat model targeting these pipelines. Using the secml_malware framework, we generate problem-space adversarial binaries through functionality-preserving manipulations, specifically Import Address Table (IAT) and section injections. We evaluate the impact of these poisoned samples when ingested into a defender's training set for a LightGBM malware detection model. Our empirical results demonstrate that subtle IAT-based perturbations enable compact poisoning samples that significantly degrade detection recall. These findings illustrate the inherent challenge of developing low-visibility adversarial perturbations that maintain high poisoning efficacy within continuous learning systems. We further evaluate a defense mechanism based on a homogeneous ensemble, which successfully identifies and filters up to 95.6% of poisoning attempts while maintaining a high retention rate for legitimate data. These findings emphasize the necessity of robust pre-ingestion validation in production pipelines.",
+      "tr": "Modern malware detection pipelines rely on continuous data ingestion and machine learning to counter the high volume of novel threats. This work investigates a realistic gray-box poisoning threat model targeting these pipelines. Using the secml_malware framework, we generate problem-space adversarial binaries through functionality-preserving manipulations, specifically Import Address Table (IAT) and section injections. We evaluate the impact of these poisoned samples when ingested into a defender's training set for a LightGBM malware detection model. Our empirical results demonstrate that subtle IAT-based perturbations enable compact poisoning samples that significantly degrade detection recall. These findings illustrate the inherent challenge of developing low-visibility adversarial perturbations that maintain high poisoning efficacy within continuous learning systems. We further evaluate a defense mechanism based on a homogeneous ensemble, which successfully identifies and filters up to 95.6% of poisoning attempts while maintaining a high retention rate for legitimate data. These findings emphasize the necessity of robust pre-ingestion validation in production pipelines."
     }
   },
   {
-    "id": "2605.03388v1",
-    "title": "Graph Reconstruction from Differentially Private GNN Explanations",
+    "id": "2605.04499v1",
+    "title": "Pen-Strategist: A Reasoning Framework for Penetration Testing Strategy Formation and Analysis",
     "authors": [
-      "Rishi Raj Sahoo",
-      "Jyotirmaya Shivottam",
-      "Subhankar Mishra"
+      "Yasod Ginige",
+      "Pasindu Marasinghe",
+      "Sajal Jain",
+      "Suranga Seneviratne"
     ],
-    "published_date": "2026-05-05",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2605.03388v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.03388v1",
-    "content": {
-      "en": "Regulatory frameworks such as GDPR increasingly require that ML predictions be accompanied by post-hoc explanations, even when raw data and trained models cannot be released. Differential privacy (DP) is the standard mitigation for the residual privacy risk of releasing these explanations. We show that DP is not sufficient: an adversary observing only DP-perturbed GNN explanations can reconstruct hidden graph structure with high accuracy. Our attack, PRIVX, exploits the fact that the Gaussian DP mechanism is a single DDPM forward step at known noise level σ(ε), recasting reconstruction as reverse diffusion conditioned on the corrupted signal, a principled Bayesian denoiser under known DP corruption. We formalise a stratified adversary model parameterised by (M, \\hatε, \\hatδ, S, ρ) that interpolates between oblivious and oracle attackers, and derive endpoint-matched two-sided bounds on reconstruction AUC. For practitioners, we provide regime-stratified guidance on explainer choice: on homophilic graphs, neighbourhood-aggregating explainers (GraphLIME, GNNExplainer) leak more structure than per-node gradient explainers under the same DP budget; on strongly heterophilic graphs the ordering reverses. We introduce PRIVF as an auxiliary diagnostic sharing the same diffusion backbone to decompose leakage into explainer-induced and intrinsic graph-distribution components. Experiments across seven benchmarks, three DP mechanisms, and three GNN backbones show PRIVX achieves AUC above 0.7 at ε = 5 on five of seven datasets, with the attack succeeding well within typically deployed privacy budgets.",
-      "tr": "Regulatory frameworks such as GDPR increasingly require that ML predictions be accompanied by post-hoc explanations, even when raw data and trained models cannot be released. Differential privacy (DP) is the standard mitigation for the residual privacy risk of releasing these explanations. We show that DP is not sufficient: an adversary observing only DP-perturbed GNN explanations can reconstruct hidden graph structure with high accuracy. Our attack, PRIVX, exploits the fact that the Gaussian DP mechanism is a single DDPM forward step at known noise level σ(ε), recasting reconstruction as reverse diffusion conditioned on the corrupted signal, a principled Bayesian denoiser under known DP corruption. We formalise a stratified adversary model parameterised by (M, \\hatε, \\hatδ, S, ρ) that interpolates between oblivious and oracle attackers, and derive endpoint-matched two-sided bounds on reconstruction AUC. For practitioners, we provide regime-stratified guidance on explainer choice: on homophilic graphs, neighbourhood-aggregating explainers (GraphLIME, GNNExplainer) leak more structure than per-node gradient explainers under the same DP budget; on strongly heterophilic graphs the ordering reverses. We introduce PRIVF as an auxiliary diagnostic sharing the same diffusion backbone to decompose leakage into explainer-induced and intrinsic graph-distribution components. Experiments across seven benchmarks, three DP mechanisms, and three GNN backbones show PRIVX achieves AUC above 0.7 at ε = 5 on five of seven datasets, with the attack succeeding well within typically deployed privacy budgets."
-    }
-  },
-  {
-    "id": "2605.03353v1",
-    "title": "SkCC: Portable and Secure Skill Compilation for Cross-Framework LLM Agents",
-    "authors": [
-      "Yipeng Ouyang",
-      "Yi Xiao",
-      "Yuhao Gu",
-      "Xianwei Zhang"
-    ],
-    "published_date": "2026-05-05",
+    "published_date": "2026-05-06",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2605.03353v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.03353v1",
+    "link": "http://arxiv.org/abs/2605.04499v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.04499v1",
     "content": {
-      "en": "LLM-Agents have evolved into autonomous systems for complex task execution, with the SKILL.md specification emerging as a de facto standard for encapsulating agent capabilities. However, a critical bottleneck remains: different agent frameworks exhibit starkly different sensitivities to prompt formatting, causing up to 40% performance variation, yet nearly all skills exist as a single, format-agnostic Markdown version. Manual per-platform rewriting creates an unsustainable maintenance burden, while prior audits have found that over one third of community skills contain security vulnerabilities. To address this, we present SkCC, a compilation framework that introduces classical compiler design into agent skill development. At its core, SkIR - a strongly-typed intermediate representation - decouples skill semantics from platform-specific formatting, enabling portable deployment across heterogeneous agent frameworks. Around this IR, a compile-time Analyzer enforces security constraints via Anti-Skill Injection before deployment. Through a four-phase pipeline, SkCC reduces adaptation complexity from $O(m \\times n)$ to $O(m + n)$. Experiments on SkillsBench demonstrate that compiled skills consistently outperform their original counterparts, improving pass rates from 21.1% to 33.3% on Claude Code and from 35.1% to 48.7% on Kimi CLI, while achieving sub-10ms compilation latency, a 94.8% proactive security trigger rate, and 10-46% runtime token savings across platforms.",
-      "tr": "LLM-Agents have evolved into autonomous systems for complex task execution, with the SKILL.md specification emerging as a de facto standard for encapsulating agent capabilities. However, a critical bottleneck remains: different agent frameworks exhibit starkly different sensitivities to prompt formatting, causing up to 40% performance variation, yet nearly all skills exist as a single, format-agnostic Markdown version. Manual per-platform rewriting creates an unsustainable maintenance burden, while prior audits have found that over one third of community skills contain security vulnerabilities. To address this, we present SkCC, a compilation framework that introduces classical compiler design into agent skill development. At its core, SkIR - a strongly-typed intermediate representation - decouples skill semantics from platform-specific formatting, enabling portable deployment across heterogeneous agent frameworks. Around this IR, a compile-time Analyzer enforces security constraints via Anti-Skill Injection before deployment. Through a four-phase pipeline, SkCC reduces adaptation complexity from $O(m \\times n)$ to $O(m + n)$. Experiments on SkillsBench demonstrate that compiled skills consistently outperform their original counterparts, improving pass rates from 21.1% to 33.3% on Claude Code and from 35.1% to 48.7% on Kimi CLI, while achieving sub-10ms compilation latency, a 94.8% proactive security trigger rate, and 10-46% runtime token savings across platforms."
+      "en": "Cyber threats are rapidly increasing, expanding their impact from large-scale enterprises to government services and individual users, making robust security systems increasingly essential. However, a significant shortage of skilled cybersecurity professionals exacerbates this challenge. While recent research has explored automating tasks such as penetration testing using LLM-based agents, existing frameworks often perform poorly due to limited capability in strategy formulation, domain-specific reasoning, and accurate action and tool selection. To overcome these limitations, we propose Pen-Strategist framework, consisting of a novel domain-specific reasoning model that derives pentesting strategies via logical reasoning and a classifier that converts the strategies into actionable steps. First, we construct a reasoning dataset containing logical explanations for both strategy derivation and step selection in pentesting scenarios. We then fine-tune a Qwen-3-14B model for strategy generation using reinforcement learning. Evaluation on the test split of the dataset demonstrates a 87% improvement in strategy derivation performance compared to the baseline. Furthermore, we integrate the fine-tuned Pen-Strategist model into existing automated pentesting frameworks, such as PentestGPT, and evaluate its performance on vulnerable machines, achieving a 47.5% improvement in subtask completion while surpassing the baseline GPT-5. Further experiments on the CTFKnow benchmark show an 18% performance gain over the base model. For step prediction, we train a semantic-based CNN classifier, which outperforms commercial LLMs by 28% and enhances execution stability. Finally, we conduct a user study to qualitatively assess the generated strategies, and Pen-Strategist demonstrates superior performance compared to the Claude-4.6-Sonnet.",
+      "tr": "Cyber threats are rapidly increasing, expanding their impact from large-scale enterprises to government services and individual users, making robust security systems increasingly essential. However, a significant shortage of skilled cybersecurity professionals exacerbates this challenge. While recent research has explored automating tasks such as penetration testing using LLM-based agents, existing frameworks often perform poorly due to limited capability in strategy formulation, domain-specific reasoning, and accurate action and tool selection. To overcome these limitations, we propose Pen-Strategist framework, consisting of a novel domain-specific reasoning model that derives pentesting strategies via logical reasoning and a classifier that converts the strategies into actionable steps. First, we construct a reasoning dataset containing logical explanations for both strategy derivation and step selection in pentesting scenarios. We then fine-tune a Qwen-3-14B model for strategy generation using reinforcement learning. Evaluation on the test split of the dataset demonstrates a 87% improvement in strategy derivation performance compared to the baseline. Furthermore, we integrate the fine-tuned Pen-Strategist model into existing automated pentesting frameworks, such as PentestGPT, and evaluate its performance on vulnerable machines, achieving a 47.5% improvement in subtask completion while surpassing the baseline GPT-5. Further experiments on the CTFKnow benchmark show an 18% performance gain over the base model. For step prediction, we train a semantic-based CNN classifier, which outperforms commercial LLMs by 28% and enhances execution stability. Finally, we conduct a user study to qualitatively assess the generated strategies, and Pen-Strategist demonstrates superior performance compared to the Claude-4.6-Sonnet."
     }
   },
   {
-    "id": "2605.03309v1",
-    "title": "Cryptographic Registry Provenance: Structural Defense Against Dependency Confusion in AI Package Ecosystems",
+    "id": "2605.04305v1",
+    "title": "SWAN: Semantic Watermarking with Abstract Meaning Representation",
     "authors": [
-      "Alan L. McCann"
+      "Ziping Ye",
+      "Gourab Dey",
+      "Christos Christodoulopoulos",
+      "Charith Peris",
+      "Anil Ramakrishna"
     ],
     "published_date": "2026-05-05",
     "tags": [
+      "cs.CL",
+      "cs.AI",
       "cs.CR",
-      "cs.AI",
-      "cs.SE"
+      "cs.CY"
     ],
-    "link": "http://arxiv.org/abs/2605.03309v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.03309v1",
+    "link": "http://arxiv.org/abs/2605.04305v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.04305v1",
     "content": {
-      "en": "Dependency confusion attacks exploit a structural gap in software distribution: once a package is installed, there is no cryptographic proof of which registry distributed it. Every existing defense is configuration-based and fails silently when misconfigured. We present a cryptographic distribution provenance system comprising three components: (1) cryptographic registry identity, where every registry holds an Ed25519 keypair and signs every artifact it distributes; (2) a dual-signature model, where the publisher signs at packaging time and the registry countersigns at publication time; and (3) authoritative namespace binding, where consumers pin registry fingerprints and the resolver cryptographically rejects artifacts from unauthorized registries. These create three defense layers requiring simultaneous compromise for a successful attack. A comparison across eight ecosystems (npm, Cargo, Hex.pm, PyPI, Go modules, Docker/OCI, NuGet, Maven) shows no existing ecosystem combines mandatory publisher signing, cryptographic registry identity, mandatory registry countersigning, and consumer-side cryptographic enforcement. The system extends to AI-generation provenance as a signed attribute and governance-enforced dependency resolution. A case study integrates distribution provenance with a three-layer runtime governance architecture, creating a four-phase lifecycle chain with no cryptographic gaps.",
-      "tr": "Dependency confusion attacks exploit a structural gap in software distribution: once a package is installed, there is no cryptographic proof of which registry distributed it. Every existing defense is configuration-based and fails silently when misconfigured. We present a cryptographic distribution provenance system comprising three components: (1) cryptographic registry identity, where every registry holds an Ed25519 keypair and signs every artifact it distributes; (2) a dual-signature model, where the publisher signs at packaging time and the registry countersigns at publication time; and (3) authoritative namespace binding, where consumers pin registry fingerprints and the resolver cryptographically rejects artifacts from unauthorized registries. These create three defense layers requiring simultaneous compromise for a successful attack. A comparison across eight ecosystems (npm, Cargo, Hex.pm, PyPI, Go modules, Docker/OCI, NuGet, Maven) shows no existing ecosystem combines mandatory publisher signing, cryptographic registry identity, mandatory registry countersigning, and consumer-side cryptographic enforcement. The system extends to AI-generation provenance as a signed attribute and governance-enforced dependency resolution. A case study integrates distribution provenance with a three-layer runtime governance architecture, creating a four-phase lifecycle chain with no cryptographic gaps."
-    }
-  },
-  {
-    "id": "2605.03228v1",
-    "title": "MAGE: Safeguarding LLM Agents against Long-Horizon Threats via Shadow Memory",
-    "authors": [
-      "Yuhui Wang",
-      "Tanqiu Jiang",
-      "Jiacheng Liang",
-      "Charles Fleming",
-      "Ting Wang"
-    ],
-    "published_date": "2026-05-04",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL"
-    ],
-    "link": "http://arxiv.org/abs/2605.03228v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.03228v1",
-    "content": {
-      "en": "As large language model (LLM)-powered agents are increasingly deployed to perform complex, real-world tasks, they face a growing class of attacks that exploit extended user-agent-environment interactions to pursue malicious objectives improbable in single-turn settings. Such long-horizon threats pose significant risks to the safe deployment of LLM agents in critical domains. In this paper, we present MAGE (Memory As Guardrail Enforcement), a novel defensive framework designed to counter a wide range of long-horizon threats. Inspired by the \"shadow stack\" abstraction in systems security, MAGE maintains a dedicated, safety-focused agentic memory that distills and retains safety-critical context across the agent's full execution trajectory, leveraging this shadow memory to proactively assess the risk of pending actions prior to their execution. Extensive evaluation demonstrates that MAGE substantially outperforms existing defenses across diverse long-horizon threats in detection accuracy, achieves early-stage detection for the majority of attacks, and introduces only negligible overhead to agent utility. To our best knowledge, MAGE represents the first framework to detect and mitigate long-horizon threats using an agentic memory approach, establishing a new paradigm for this critical challenge and opening promising directions for future research.",
-      "tr": "As large language model (LLM)-powered agents are increasingly deployed to perform complex, real-world tasks, they face a growing class of attacks that exploit extended user-agent-environment interactions to pursue malicious objectives improbable in single-turn settings. Such long-horizon threats pose significant risks to the safe deployment of LLM agents in critical domains. In this paper, we present MAGE (Memory As Guardrail Enforcement), a novel defensive framework designed to counter a wide range of long-horizon threats. Inspired by the \"shadow stack\" abstraction in systems security, MAGE maintains a dedicated, safety-focused agentic memory that distills and retains safety-critical context across the agent's full execution trajectory, leveraging this shadow memory to proactively assess the risk of pending actions prior to their execution. Extensive evaluation demonstrates that MAGE substantially outperforms existing defenses across diverse long-horizon threats in detection accuracy, achieves early-stage detection for the majority of attacks, and introduces only negligible overhead to agent utility. To our best knowledge, MAGE represents the first framework to detect and mitigate long-horizon threats using an agentic memory approach, establishing a new paradigm for this critical challenge and opening promising directions for future research."
-    }
-  },
-  {
-    "id": "2605.03226v1",
-    "title": "Self-Mined Hardness for Safety Fine-Tuning",
-    "authors": [
-      "Prakhar Gupta",
-      "Garv Shah",
-      "Donghua Zhang"
-    ],
-    "published_date": "2026-05-04",
-    "tags": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2605.03226v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.03226v1",
-    "content": {
-      "en": "Safety fine-tuning of language models typically requires a curated adversarial dataset. We take a different approach: score each candidate prompt's difficulty by how often the target model's own rollouts are judged harmful, then fine-tune on the hardest prompts paired with the model's own non-jailbroken rollouts. On Llama-3-8B-Instruct and Llama-3.2-3B-Instruct, this approach cuts the WildJailbreak attack success rate from 11.5% and 20.1% down to 1-3%, but pushes refusal on jailbreak-shaped benign prompts from 14-22% to 74-94%. Interleaving the same hard prompts 1:1 with adversarially-framed benign prompts (prompts that look like jailbreaks but have benign intent) cuts that refusal back down to 30-51% on 8B and 52-72% on 3B, at a cost of 2-6 percentage points of attack success rate. Within the mixed regime, training on the hardest half of the eligible pool rather than a random half cuts the remaining ASR by 35-50% (about 3 percentage points) on both models.",
-      "tr": "Safety fine-tuning of language models typically requires a curated adversarial dataset. We take a different approach: score each candidate prompt's difficulty by how often the target model's own rollouts are judged harmful, then fine-tune on the hardest prompts paired with the model's own non-jailbroken rollouts. On Llama-3-8B-Instruct and Llama-3.2-3B-Instruct, this approach cuts the WildJailbreak attack success rate from 11.5% and 20.1% down to 1-3%, but pushes refusal on jailbreak-shaped benign prompts from 14-22% to 74-94%. Interleaving the same hard prompts 1:1 with adversarially-framed benign prompts (prompts that look like jailbreaks but have benign intent) cuts that refusal back down to 30-51% on 8B and 52-72% on 3B, at a cost of 2-6 percentage points of attack success rate. Within the mixed regime, training on the hardest half of the eligible pool rather than a random half cuts the remaining ASR by 35-50% (about 3 percentage points) on both models."
+      "en": "We introduce SWAN (Semantic Watermarking with Abstract Meaning Representation), a novel framework that embeds watermark signatures into the semantic structure of a sentence using Abstract Meaning Representation (AMR). In contrast to existing watermarking methods, which typically encode signatures by adjusting token selection preferences during text generation, SWAN embeds the signature directly in the sentence's semantic representation. As the signature is encoded at the semantic structure level, any paraphrase that preserves meaning automatically preserves the signature. SWAN is training-free: watermark injection is achieved by prompting an LLM to generate sentences guided by a selected AMR template while maintaining contextual coherence, and detection uses an off-the-shelf AMR parser followed by a simple one-proportion z-test. Empirical evaluation on the RealNews benchmark shows SWAN matches state-of-the-art detection performance on unaltered watermarked text, while significantly improving robustness against paraphrasing, increasing detection AUC by up to 13.9 percentage points compared to prior methods. These results demonstrate that SWAN's approach of anchoring watermarks in AMR semantic structures provides a simple, effective, and prompt-based method for robust text provenance verification under paraphrasing, opening new avenues for semantic-level watermarking research.",
+      "tr": "We introduce SWAN (Semantic Watermarking with Abstract Meaning Representation), a novel framework that embeds watermark signatures into the semantic structure of a sentence using Abstract Meaning Representation (AMR). In contrast to existing watermarking methods, which typically encode signatures by adjusting token selection preferences during text generation, SWAN embeds the signature directly in the sentence's semantic representation. As the signature is encoded at the semantic structure level, any paraphrase that preserves meaning automatically preserves the signature. SWAN is training-free: watermark injection is achieved by prompting an LLM to generate sentences guided by a selected AMR template while maintaining contextual coherence, and detection uses an off-the-shelf AMR parser followed by a simple one-proportion z-test. Empirical evaluation on the RealNews benchmark shows SWAN matches state-of-the-art detection performance on unaltered watermarked text, while significantly improving robustness against paraphrasing, increasing detection AUC by up to 13.9 percentage points compared to prior methods. These results demonstrate that SWAN's approach of anchoring watermarks in AMR semantic structures provides a simple, effective, and prompt-based method for robust text provenance verification under paraphrasing, opening new avenues for semantic-level watermarking research."
     }
   }
 ]
