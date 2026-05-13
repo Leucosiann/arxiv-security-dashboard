@@ -1,209 +1,213 @@
 [
   {
-    "id": "2605.07961v1",
-    "title": "Graph Representation Learning Augmented Model Manipulation on Federated Fine-Tuning of LLMs",
+    "id": "2605.12456v1",
+    "title": "TextSeal: A Localized LLM Watermark for Provenance & Distillation Protection",
     "authors": [
-      "Hanlin Cai",
-      "Kai Li",
-      "Houtianfu Wang",
-      "Haofan Dong",
-      "Yichen Li"
+      "Tom Sander",
+      "Hongyan Chang",
+      "Tomáš Souček",
+      "Tuan Tran",
+      "Valeriu Lacatusu"
     ],
-    "published_date": "2026-05-08",
+    "published_date": "2026-05-12",
     "tags": [
+      "cs.CR",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2605.12456v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.12456v1",
+    "content": {
+      "en": "We introduce TextSeal, a state-of-the-art watermark for large language models. Building on Gumbel-max sampling, TextSeal introduces dual-key generation to restore output diversity, along with entropy-weighted scoring and multi-region localization for improved detection. It supports serving optimizations such as speculative decoding and multi-token prediction, and does not add any inference overhead. TextSeal strictly dominates baselines like SynthID-text in detection strength and is robust to dilution, maintaining confident localized detection even in heavily mixed human/AI documents. The scheme is theoretically distortion-free, and evaluation across reasoning benchmarks confirms that it preserves downstream performance; while a multilingual human evaluation (6000 A/B comparisons, 5 languages) shows no perceptible quality difference. Beyond its use for provenance detection, TextSeal is also ``radioactive'': its watermark signal transfers through model distillation, enabling detection of unauthorized use.",
+      "tr": "We introduce TextSeal, a state-of-the-art watermark for large language models. Building on Gumbel-max sampling, TextSeal introduces dual-key generation to restore output diversity, along with entropy-weighted scoring and multi-region localization for improved detection. It supports serving optimizations such as speculative decoding and multi-token prediction, and does not add any inference overhead. TextSeal strictly dominates baselines like SynthID-text in detection strength and is robust to dilution, maintaining confident localized detection even in heavily mixed human/AI documents. The scheme is theoretically distortion-free, and evaluation across reasoning benchmarks confirms that it preserves downstream performance; while a multilingual human evaluation (6000 A/B comparisons, 5 languages) shows no perceptible quality difference. Beyond its use for provenance detection, TextSeal is also ``radioactive'': its watermark signal transfers through model distillation, enabling detection of unauthorized use."
+    }
+  },
+  {
+    "id": "2605.12364v1",
+    "title": "Attacks and Mitigations for Distributed Governance of Agentic AI under Byzantine Adversaries",
+    "authors": [
+      "Matthew D. Laws",
+      "Alina Oprea",
+      "Cristina Nita-Rotaru"
+    ],
+    "published_date": "2026-05-12",
+    "tags": [
+      "cs.CR",
       "cs.LG",
-      "cs.CR",
-      "cs.NI"
-    ],
-    "link": "http://arxiv.org/abs/2605.07961v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.07961v1",
-    "content": {
-      "en": "Federated fine-tuning (FFT) has emerged as a privacy-preserving paradigm for collaboratively adapting large language models (LLMs). Built upon federated learning, FFT enables distributed agents to jointly refine a shared pretrained LLM by aggregating local LLM updates without sharing local raw data. However, FFT-based LLMs remain vulnerable to model manipulation threats, in which adversarial participants upload manipulated LLM updates that corrupt the aggregation process and degrade the performance of the global LLM. In this paper, we propose an Augmented Model maniPulation (AugMP) strategy against FFT-based LLMs. Specifically, we design a novel graph representation learning framework that captures feature correlations among benign LLM updates to guide the generation of malicious updates. To enhance manipulation effectiveness and stealthiness, we develop an iterative manipulation algorithm based on an augmented Lagrangian dual formulation. Through this formulation, malicious updates are optimized to embed adversarial objectives while preserving benign-like parameter characteristics. Experimental results across multiple LLM backbones demonstrate that the AugMP strategy achieves the strongest manipulation performance among all competing baselines, reducing the global LLM accuracy by up to 26% and degrading the average accuracy of local LLM agents by up to 22%. Meanwhile, AugMP maintains high statistical and geometric consistency with benign updates, enabling it to evade conventional distance- and similarity-based defense methods.",
-      "tr": "Federated fine-tuning (FFT) has emerged as a privacy-preserving paradigm for collaboratively adapting large language models (LLMs). Built upon federated learning, FFT enables distributed agents to jointly refine a shared pretrained LLM by aggregating local LLM updates without sharing local raw data. However, FFT-based LLMs remain vulnerable to model manipulation threats, in which adversarial participants upload manipulated LLM updates that corrupt the aggregation process and degrade the performance of the global LLM. In this paper, we propose an Augmented Model maniPulation (AugMP) strategy against FFT-based LLMs. Specifically, we design a novel graph representation learning framework that captures feature correlations among benign LLM updates to guide the generation of malicious updates. To enhance manipulation effectiveness and stealthiness, we develop an iterative manipulation algorithm based on an augmented Lagrangian dual formulation. Through this formulation, malicious updates are optimized to embed adversarial objectives while preserving benign-like parameter characteristics. Experimental results across multiple LLM backbones demonstrate that the AugMP strategy achieves the strongest manipulation performance among all competing baselines, reducing the global LLM accuracy by up to 26% and degrading the average accuracy of local LLM agents by up to 22%. Meanwhile, AugMP maintains high statistical and geometric consistency with benign updates, enabling it to evade conventional distance- and similarity-based defense methods."
-    }
-  },
-  {
-    "id": "2605.07830v1",
-    "title": "CyBiasBench: Benchmarking Bias in LLM Agents for Cyber-Attack Scenarios",
-    "authors": [
-      "Taein Lim",
-      "Seongyong Ju",
-      "Munhyeok Kim",
-      "Hyunjun Kim",
-      "Hoki Kim"
-    ],
-    "published_date": "2026-05-08",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2605.07830v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.07830v1",
-    "content": {
-      "en": "Large language models (LLMs) are increasingly deployed as autonomous agents in offensive cybersecurity. In this paper, we reveal an interesting phenomenon: different agents exhibit distinct attack patterns. Specifically, each agent exhibits an attack-selection bias, disproportionately concentrating its efforts on a narrow subset of attack families regardless of prompt variations. To systematically quantify this behavior, we introduce CyBiasBench, a comprehensive 630-session benchmark that evaluates five agents on three targets and four prompt conditions with ten attack families. We identify explicit bias across agents, with different dominant attack families and varying entropy levels in their attack-family allocation distributions. Such bias is better characterized as a trait of the agents, rather than a factor associated with the attack success rate. Furthermore, our experiments reveal a bias momentum effect, where agents resist explicit steering toward attack families that conflict with their bias. This forced distribution shift does not yield measurable improvements in attack performance. To ensure reproducibility and facilitate future research, we release an interactive result dashboard at https://trustworthyai.co.kr/CyBiasBench/ and a reproducibility artifact with aggregated session-level statistics and full evaluation scripts at https://github.com/Harry24k/CyBiasBench.",
-      "tr": "Large language models (LLMs) are increasingly deployed as autonomous agents in offensive cybersecurity. In this paper, we reveal an interesting phenomenon: different agents exhibit distinct attack patterns. Specifically, each agent exhibits an attack-selection bias, disproportionately concentrating its efforts on a narrow subset of attack families regardless of prompt variations. To systematically quantify this behavior, we introduce CyBiasBench, a comprehensive 630-session benchmark that evaluates five agents on three targets and four prompt conditions with ten attack families. We identify explicit bias across agents, with different dominant attack families and varying entropy levels in their attack-family allocation distributions. Such bias is better characterized as a trait of the agents, rather than a factor associated with the attack success rate. Furthermore, our experiments reveal a bias momentum effect, where agents resist explicit steering toward attack families that conflict with their bias. This forced distribution shift does not yield measurable improvements in attack performance. To ensure reproducibility and facilitate future research, we release an interactive result dashboard at https://trustworthyai.co.kr/CyBiasBench/ and a reproducibility artifact with aggregated session-level statistics and full evaluation scripts at https://github.com/Harry24k/CyBiasBench."
-    }
-  },
-  {
-    "id": "2605.07812v1",
-    "title": "GRASP -- Graph-Based Anomaly Detection Through Self-Supervised Classification",
-    "authors": [
-      "Robin Buchta",
-      "Carsten Kleiner",
-      "Felix Heine",
-      "Gabi Dreo Rodosek"
-    ],
-    "published_date": "2026-05-08",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.07812v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.07812v1",
-    "content": {
-      "en": "Advanced persistent threat (APT) attacks remain difficult to detect due to their stealth, adaptability, and use of legitimate system components. Provenance-based intrusion detection systems (PIDS) offer a promising defense by capturing detailed relationships between system components and actions. However, current PIDS rely on predefined or subset-determined thresholds, which limit detection stability and the ability to detect any anomalous behavior in general. Furthermore, related work often neglects the role of process executables, which describe system activity by interacting through a process with files, network components, and other processes. We introduce GRASP, a PIDS based on masked self-supervised classification. GRASP masks the executable information of processes and learns to infer it from their two-hop provenance graph neighborhood, marking misclassified processes as anomalies. It captures behavior patterns for the learned executables without thresholding, making it robust against interference and unknown activities. Evaluations on the DARPA TC and OpTC datasets demonstrate that GRASP consistently detects anomalous behavior, including known attack-related activities, outperforming existing systems. Our PIDS identifies all documented attacks on datasets where the behavior of executables is learnable. In addition, compared to existing systems, GRASP uncovers potentially malicious anomalous behavior not labeled as an attack in the documentation.",
-      "tr": "Advanced persistent threat (APT) attacks remain difficult to detect due to their stealth, adaptability, and use of legitimate system components. Provenance-based intrusion detection systems (PIDS) offer a promising defense by capturing detailed relationships between system components and actions. However, current PIDS rely on predefined or subset-determined thresholds, which limit detection stability and the ability to detect any anomalous behavior in general. Furthermore, related work often neglects the role of process executables, which describe system activity by interacting through a process with files, network components, and other processes. We introduce GRASP, a PIDS based on masked self-supervised classification. GRASP masks the executable information of processes and learns to infer it from their two-hop provenance graph neighborhood, marking misclassified processes as anomalies. It captures behavior patterns for the learned executables without thresholding, making it robust against interference and unknown activities. Evaluations on the DARPA TC and OpTC datasets demonstrate that GRASP consistently detects anomalous behavior, including known attack-related activities, outperforming existing systems. Our PIDS identifies all documented attacks on datasets where the behavior of executables is learnable. In addition, compared to existing systems, GRASP uncovers potentially malicious anomalous behavior not labeled as an attack in the documentation."
-    }
-  },
-  {
-    "id": "2605.07674v1",
-    "title": "Differentially Private Auditing Under Strategic Response",
-    "authors": [
-      "Florian A. D. Burnat"
-    ],
-    "published_date": "2026-05-08",
-    "tags": [
-      "cs.GT",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.07674v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.07674v1",
-    "content": {
-      "en": "Regulatory audits of AI systems increasingly rely on differential privacy (DP) to protect training data and model internals. We study audit design when the audited developer can strategically respond to the privacy-constrained audit interface. We formalize privacy-constrained auditing as a bilevel Stackelberg game, in which an auditor commits to a query policy and DP budget allocation across harm dimensions, and a strategic developer reallocates mitigation efforts in response. We introduce the welfare-weighted under-detection gap $B_w$, the welfare-weighted true residual harm the audit fails to detect at the developer's strategic best response, and prove that naive DP auditing (uniform or harm-proportional allocation) induces a strictly larger $B_w$ than any non-strategic mitigation baseline whenever effective detectability is heterogeneous, the welfare weights are not comonotone with detectability, and the developer's optimum is interior. We characterize the optimal auditor allocation as a four-factor balance of welfare weight, audit miss-probability, detectability elasticity, and mitigation-cost curvature, and provide a single-level reformulation of the bilevel problem via the developer's KKT system. We propose Strategic Private Audit Design (SPAD), a projected-gradient algorithm with hypergradients computed through the developer's best response.",
-      "tr": "Regulatory audits of AI systems increasingly rely on differential privacy (DP) to protect training data and model internals. We study audit design when the audited developer can strategically respond to the privacy-constrained audit interface. We formalize privacy-constrained auditing as a bilevel Stackelberg game, in which an auditor commits to a query policy and DP budget allocation across harm dimensions, and a strategic developer reallocates mitigation efforts in response. We introduce the welfare-weighted under-detection gap $B_w$, the welfare-weighted true residual harm the audit fails to detect at the developer's strategic best response, and prove that naive DP auditing (uniform or harm-proportional allocation) induces a strictly larger $B_w$ than any non-strategic mitigation baseline whenever effective detectability is heterogeneous, the welfare weights are not comonotone with detectability, and the developer's optimum is interior. We characterize the optimal auditor allocation as a four-factor balance of welfare weight, audit miss-probability, detectability elasticity, and mitigation-cost curvature, and provide a single-level reformulation of the bilevel problem via the developer's KKT system. We propose Strategic Private Audit Design (SPAD), a projected-gradient algorithm with hypergradients computed through the developer's best response."
-    }
-  },
-  {
-    "id": "2605.07663v1",
-    "title": "Quotient Semivalues for False-Name-Resistant Data Attribution",
-    "authors": [
-      "Florian A. D. Burnat",
-      "Brittany I. Davidson"
-    ],
-    "published_date": "2026-05-08",
-    "tags": [
-      "cs.GT",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.07663v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.07663v1",
-    "content": {
-      "en": "Data valuation methods allocate payments and audit training data's contribution to machine-learning pipelines; however, they often assume passive contributors. In reality, contributors can split datasets across pseudonymous identities, duplicate high-value examples, create near-duplicates, or launder synthetic variants to inflate their share. We formalize this as false-name manipulation in ML data attribution. Our main construction is the quotient semivalue mechanism: compute Shapley-, Banzhaf-, or Beta-style values over evidence-backed attribution clusters instead of raw identities, using a canonical-representative operator to absorb within-cluster duplication. We prove an impossibility: on a fixed monotone data-value game, exact Shapley-fair attribution over reported identities is incompatible with unrestricted false-name-proofness, even on binary-valued instances, and characterize the split-gain of a general semivalue on a unanimity counter-example. The mechanism is exactly false-name-proof under two structural conditions: false-name-neutral within-cluster allocation and quotient-stable manipulations. Under imperfect provenance, when these conditions hold approximately, manipulation gain and fairness loss are bounded by three measurable quantities: escaped-cluster mass, value-estimation error, and clustering distance. We instantiate the mechanisms in DataMarket-Gym, a benchmark for attribution under strategic provider attacks. On synthetic classification tasks, quotient semivalues with example-level evidence reduce manipulation gain on duplicate and near-duplicate Sybil attacks from $1.74$ under baseline Shapley to $0.96$, near the honest level. The cosine-threshold and (false-merge, false-split) rate sweeps trace the corresponding fairness--Sybil frontier.",
-      "tr": "Data valuation methods allocate payments and audit training data's contribution to machine-learning pipelines; however, they often assume passive contributors. In reality, contributors can split datasets across pseudonymous identities, duplicate high-value examples, create near-duplicates, or launder synthetic variants to inflate their share. We formalize this as false-name manipulation in ML data attribution. Our main construction is the quotient semivalue mechanism: compute Shapley-, Banzhaf-, or Beta-style values over evidence-backed attribution clusters instead of raw identities, using a canonical-representative operator to absorb within-cluster duplication. We prove an impossibility: on a fixed monotone data-value game, exact Shapley-fair attribution over reported identities is incompatible with unrestricted false-name-proofness, even on binary-valued instances, and characterize the split-gain of a general semivalue on a unanimity counter-example. The mechanism is exactly false-name-proof under two structural conditions: false-name-neutral within-cluster allocation and quotient-stable manipulations. Under imperfect provenance, when these conditions hold approximately, manipulation gain and fairness loss are bounded by three measurable quantities: escaped-cluster mass, value-estimation error, and clustering distance. We instantiate the mechanisms in DataMarket-Gym, a benchmark for attribution under strategic provider attacks. On synthetic classification tasks, quotient semivalues with example-level evidence reduce manipulation gain on duplicate and near-duplicate Sybil attacks from $1.74$ under baseline Shapley to $0.96$, near the honest level. The cosine-threshold and (false-merge, false-split) rate sweeps trace the corresponding fairness--Sybil frontier."
-    }
-  },
-  {
-    "id": "2605.07536v1",
-    "title": "GESR: Graph-Based Edge Semantic Reconstruction for Stealthy Communication Detection with Benign-Only Training",
-    "authors": [
-      "Henghui Xu",
-      "Yuchen Zhang",
-      "Xiaobo Ma"
-    ],
-    "published_date": "2026-05-08",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.07536v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.07536v1",
-    "content": {
-      "en": "Detecting stealthy malicious communications from flow logs under benign-only training remains a critical challenge in network security. Malicious communications often camouflage as normal traffic like standard HTTPS flows. Conventional intrusion detectors rely strictly on known labeled attacks. Alternatively, they score flows completely independently. These approaches fail against sparse and context-dependent suspicious activity. To capture this essential context, graph anomaly detectors have been introduced to add valuable relational information to the analysis. However, existing methods fail to test the structural consistency of specific communication edges. To overcome these fundamental limitations, we present GESR, a novel graph-based framework for detecting suspicious communications and anomalous hosts under a benign-only training setting. GESR models complex network activity as attributed communication graphs. It cleverly reconstructs edge semantics entirely from local structural context rather than isolated features. This non-intuitive design forces the framework to predict expected communication patterns from neighborhood topologies. Attackers cannot easily manipulate this deep structural dependency. The model then converts the resulting structural inconsistencies into host-level anomaly scores. It utilizes robust Median Absolute Deviation (MAD) calibration for this final step. We evaluate GESR extensively on CTU-13 and CICIDS2017 datasets. These evaluations strictly impose tight false-positive operating constraints. On CICIDS2017, GESR achieves an outstanding ROC-AUC of 0.9753. It also yields a high TPR of 0.8569 at a strict 5% FPR threshold. GESR consistently outperforms existing methods across both evaluated benchmarks. The results prove that structure-conditioned edge reconstruction is a credible direction for practical intrusion detection.",
-      "tr": "Detecting stealthy malicious communications from flow logs under benign-only training remains a critical challenge in network security. Malicious communications often camouflage as normal traffic like standard HTTPS flows. Conventional intrusion detectors rely strictly on known labeled attacks. Alternatively, they score flows completely independently. These approaches fail against sparse and context-dependent suspicious activity. To capture this essential context, graph anomaly detectors have been introduced to add valuable relational information to the analysis. However, existing methods fail to test the structural consistency of specific communication edges. To overcome these fundamental limitations, we present GESR, a novel graph-based framework for detecting suspicious communications and anomalous hosts under a benign-only training setting. GESR models complex network activity as attributed communication graphs. It cleverly reconstructs edge semantics entirely from local structural context rather than isolated features. This non-intuitive design forces the framework to predict expected communication patterns from neighborhood topologies. Attackers cannot easily manipulate this deep structural dependency. The model then converts the resulting structural inconsistencies into host-level anomaly scores. It utilizes robust Median Absolute Deviation (MAD) calibration for this final step. We evaluate GESR extensively on CTU-13 and CICIDS2017 datasets. These evaluations strictly impose tight false-positive operating constraints. On CICIDS2017, GESR achieves an outstanding ROC-AUC of 0.9753. It also yields a high TPR of 0.8569 at a strict 5% FPR threshold. GESR consistently outperforms existing methods across both evaluated benchmarks. The results prove that structure-conditioned edge reconstruction is a credible direction for practical intrusion detection."
-    }
-  },
-  {
-    "id": "2605.07481v1",
-    "title": "Vaporizer: Breaking Watermarking Schemes for Large Language Model Outputs",
-    "authors": [
-      "Jonathan Hong Jin Ng",
-      "Anh Tu Ngo",
-      "Anupam Chattopadhyay"
-    ],
-    "published_date": "2026-05-08",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2605.07481v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.07481v1",
-    "content": {
-      "en": "In this paper, we investigate the recent state-of-the-art schemes for watermarking large language models (LLMs) outputs. These techniques are claimed to be robust, scalable and production-grade, aimed at promoting responsible usage of LLMs. We analyse the effectiveness of these watermarking techniques against an extensive collection of modified text attacks, which perform targeted semantic changes without altering the general meaning of the text content. Our approach encompasses multiple attack strategies, which include lexical alterations, machine translation, and even neural paraphrasing. The attack efficacy is measured with two target criteria - successful removal of the watermark and preservation of semantic content. We evaluate semantic preservation through BERT scores, text complexity measures, grammatical errors, and Flesch Reading Ease indices. The experimental results reveal varying levels of effectiveness among different watermarking models, with the same underlying result that it is possible to remove the watermark with reasonable effort. This study sheds light on the strengths and weaknesses of existing LLM watermarking systems, suggesting how they should be constructed to improve security of available schemes.",
-      "tr": "In this paper, we investigate the recent state-of-the-art schemes for watermarking large language models (LLMs) outputs. These techniques are claimed to be robust, scalable and production-grade, aimed at promoting responsible usage of LLMs. We analyse the effectiveness of these watermarking techniques against an extensive collection of modified text attacks, which perform targeted semantic changes without altering the general meaning of the text content. Our approach encompasses multiple attack strategies, which include lexical alterations, machine translation, and even neural paraphrasing. The attack efficacy is measured with two target criteria - successful removal of the watermark and preservation of semantic content. We evaluate semantic preservation through BERT scores, text complexity measures, grammatical errors, and Flesch Reading Ease indices. The experimental results reveal varying levels of effectiveness among different watermarking models, with the same underlying result that it is possible to remove the watermark with reasonable effort. This study sheds light on the strengths and weaknesses of existing LLM watermarking systems, suggesting how they should be constructed to improve security of available schemes."
-    }
-  },
-  {
-    "id": "2605.07472v1",
-    "title": "HBEE: Human Behavioral Entropy Engine -- Pre-Registered Multi-Agent LLM Simulation of Peer-Suspicion-Based Detection Inversion",
-    "authors": [
-      "Vickson Ferrel"
-    ],
-    "published_date": "2026-05-08",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
       "cs.MA"
     ],
-    "link": "http://arxiv.org/abs/2605.07472v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.07472v1",
+    "link": "http://arxiv.org/abs/2605.12364v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.12364v1",
     "content": {
-      "en": "Insider threat detection assumes that an adaptive insider leaves behavioral residue distinguishing them from legitimate users. We test this assumption against an LLM-driven adaptive insider in a controlled multi-agent simulator. Our pre-registered five-condition study isolates defender mode (cascade vs. blind UEBA) crossed with adversary type (naive vs. adaptive OPSEC) plus a no-mole control, across 100 runs (95 valid after pre-committed exclusions). The primary finding is a detection inversion: at T_60, the adaptive mole's suspicion in-degree is statistically lower than a randomly selected innocent agent (Cliff's delta = -0.694, 95% BCa CI [-0.855, -0.519], Mann-Whitney p << 0.01). The pre-registered prediction was the opposite direction. A pre-registered equivalence test (H2) shows adaptive OPSEC produces no detectable shift in the mole's UEBA rank under either defender mode. The two detection signals (peer suspicion graph in-degree and per-agent UEBA rank) decouple under adaptive adversary behavior. We bound generalization explicitly: a pre-registered Gini calibration check (H4) returns FAIL, with HBEE pairwise message-exposure Gini (0.213) diverging from the SNAP Enron reference (0.730) by |Delta Gini| = 0.52, exceeding the equivalence bound by 5x. The paper makes a narrow but surprising claim: in a controlled environment where adaptive OPSEC is implementable as an LLM directive, peer-suspicion-cascade detection inverts. We release the simulator, pre-registration document, frozen scenarios, raw telemetry, and analysis pipeline under an open-source license.",
-      "tr": "Insider threat detection assumes that an adaptive insider leaves behavioral residue distinguishing them from legitimate users. We test this assumption against an LLM-driven adaptive insider in a controlled multi-agent simulator. Our pre-registered five-condition study isolates defender mode (cascade vs. blind UEBA) crossed with adversary type (naive vs. adaptive OPSEC) plus a no-mole control, across 100 runs (95 valid after pre-committed exclusions). The primary finding is a detection inversion: at T_60, the adaptive mole's suspicion in-degree is statistically lower than a randomly selected innocent agent (Cliff's delta = -0.694, 95% BCa CI [-0.855, -0.519], Mann-Whitney p << 0.01). The pre-registered prediction was the opposite direction. A pre-registered equivalence test (H2) shows adaptive OPSEC produces no detectable shift in the mole's UEBA rank under either defender mode. The two detection signals (peer suspicion graph in-degree and per-agent UEBA rank) decouple under adaptive adversary behavior. We bound generalization explicitly: a pre-registered Gini calibration check (H4) returns FAIL, with HBEE pairwise message-exposure Gini (0.213) diverging from the SNAP Enron reference (0.730) by |Delta Gini| = 0.52, exceeding the equivalence bound by 5x. The paper makes a narrow but surprising claim: in a controlled environment where adaptive OPSEC is implementable as an LLM directive, peer-suspicion-cascade detection inverts. We release the simulator, pre-registration document, frozen scenarios, raw telemetry, and analysis pipeline under an open-source license."
+      "en": "Agentic AI governance is a critical component of agentic AI infrastructure ensuring that agents follow their owner's communication and interaction policies, and providing protection against attacks from malicious agents. The state-of-the-art solution, SAGA, assumes a logically centralized point of trust, the Provider, which serves as a repository for user and agent information and actively enforces policies. While SAGA provides protection against malicious agents, it remains vulnerable to a malicious Provider that deviates from the protocol, undermining the security of the identity and access control infrastructure. Deployment on both private and public clouds, each susceptible to insider threats, further increases the risk of Provider compromise.   In this work, we analyze the attacks that can be mounted from a compromised Provider, taking into account the different system components and realistic deployments. We identify and execute several concrete attacks with devastating effects: undermining agent attributability, extracting private data, or bypassing access control. We then present three types of solutions for securing the Provider that offer different trade-offs between security and performance. We first present SAGA-BFT, a fully byzantine-resilient architecture that provides the strongest protection, but incurs significant performance degradation, due to the high-cost of byzantine resilient protocols. We then propose SAGA-MON and SAGA-AUD, two novel solutions that leverage lightweight server-side monitoring or client-side auditing to provide protection against most classes of attacks with minimal overhead. Finally, we propose SAGA-HYB, a hybrid architecture that combines byzantine-resilience with monitoring and auditing to trade-off security for performance. We evaluate all the architectures and compare them with SAGA. We discuss which solution is best and under what conditions.",
+      "tr": "Agentic AI governance is a critical component of agentic AI infrastructure ensuring that agents follow their owner's communication and interaction policies, and providing protection against attacks from malicious agents. The state-of-the-art solution, SAGA, assumes a logically centralized point of trust, the Provider, which serves as a repository for user and agent information and actively enforces policies. While SAGA provides protection against malicious agents, it remains vulnerable to a malicious Provider that deviates from the protocol, undermining the security of the identity and access control infrastructure. Deployment on both private and public clouds, each susceptible to insider threats, further increases the risk of Provider compromise.   In this work, we analyze the attacks that can be mounted from a compromised Provider, taking into account the different system components and realistic deployments. We identify and execute several concrete attacks with devastating effects: undermining agent attributability, extracting private data, or bypassing access control. We then present three types of solutions for securing the Provider that offer different trade-offs between security and performance. We first present SAGA-BFT, a fully byzantine-resilient architecture that provides the strongest protection, but incurs significant performance degradation, due to the high-cost of byzantine resilient protocols. We then propose SAGA-MON and SAGA-AUD, two novel solutions that leverage lightweight server-side monitoring or client-side auditing to provide protection against most classes of attacks with minimal overhead. Finally, we propose SAGA-HYB, a hybrid architecture that combines byzantine-resilience with monitoring and auditing to trade-off security for performance. We evaluate all the architectures and compare them with SAGA. We discuss which solution is best and under what conditions."
     }
   },
   {
-    "id": "2605.07414v1",
-    "title": "OrchJail: Jailbreaking Tool-Calling Text-to-Image Agents by Orchestration-Guided Fuzzing",
+    "id": "2605.12264v1",
+    "title": "Reconstruction of Personally Identifiable Information from Supervised Finetuned Models",
     "authors": [
-      "Jianming Chen",
-      "Yawen Wang",
-      "Junjie Wang",
-      "Zhe Liu",
-      "Qing Wang"
+      "Sae Furukawa",
+      "Alina Oprea"
     ],
-    "published_date": "2026-05-08",
+    "published_date": "2026-05-12",
     "tags": [
-      "cs.MA",
+      "cs.CR",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2605.12264v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.12264v1",
+    "content": {
+      "en": "Supervised Finetuning (SFT) has become one of the primary methods for adapting a large language model (LLM) with extensive pre-trained knowledge to domain-specific, instruction-following tasks. SFT datasets, composed of instruction-response pairs, often include user-provided information that may contain sensitive data such as personally identifiable information (PII), raising privacy concerns. This paper studies the problem of PII reconstruction from SFT models for the first time. We construct multi-turn, user-centric Q&A datasets in sensitive domains, specifically medical and legal settings, that incorporate PII to enable realistic evaluation of leakage. Using these datasets, we evaluate the extent to which an adversary, with varying levels of knowledge about the fine-tuning dataset, can infer sensitive information about individuals whose data was used during SFT. In the reconstruction setting, we propose COVA, a novel decoding algorithm to reconstruct PII under prefix-based attacks, consistently outperforming existing extraction methods. Our results show that even partial attacker knowledge can significantly improve reconstruction success, while leakage varies substantially across PII types.",
+      "tr": "Supervised Finetuning (SFT) has become one of the primary methods for adapting a large language model (LLM) with extensive pre-trained knowledge to domain-specific, instruction-following tasks. SFT datasets, composed of instruction-response pairs, often include user-provided information that may contain sensitive data such as personally identifiable information (PII), raising privacy concerns. This paper studies the problem of PII reconstruction from SFT models for the first time. We construct multi-turn, user-centric Q&A datasets in sensitive domains, specifically medical and legal settings, that incorporate PII to enable realistic evaluation of leakage. Using these datasets, we evaluate the extent to which an adversary, with varying levels of knowledge about the fine-tuning dataset, can infer sensitive information about individuals whose data was used during SFT. In the reconstruction setting, we propose COVA, a novel decoding algorithm to reconstruct PII under prefix-based attacks, consistently outperforming existing extraction methods. Our results show that even partial attacker knowledge can significantly improve reconstruction success, while leakage varies substantially across PII types."
+    }
+  },
+  {
+    "id": "2605.12233v1",
+    "title": "No More, No Less: Task Alignment in Terminal Agents",
+    "authors": [
+      "Sina Mavali",
+      "David Pape",
+      "Jonathan Evertz",
+      "Samira Abedini",
+      "Devansh Srivastav"
+    ],
+    "published_date": "2026-05-12",
+    "tags": [
+      "cs.LG",
       "cs.AI",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2605.07414v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.07414v1",
+    "link": "http://arxiv.org/abs/2605.12233v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.12233v1",
     "content": {
-      "en": "Tool-calling text-to-image (T2I) agents can plan and execute multi-step tool chains to accomplish complex generation and editing queries. However, this capability introduces a new safety attack surface: harmful outputs may arise from tool orchestration, where individually benign steps combine into unsafe results, making prompt-only jailbreak techniques insufficient. We present OrchJail, an orchestration-guided fuzzing framework for jailbreaking tool-calling T2I agents. Its core idea is to exploit high-risk tool-orchestration patterns: by learning from successful jailbreak tool-calling traces and their causal relationships to prompt wording, OrchJail directly guides the fuzzing search toward prompts that are more likely to trigger unsafe multi-step tool behaviors, rather than relying on surface-level textual perturbations. Extensive experiments demonstrate that OrchJail improves jailbreak effectiveness and efficiency across representative toolcalling T2I agents, achieving higher attack success rates, better image fidelity, and lower query costs, while remaining robust against common jailbreak defenses. Our work highlights tool orchestration as a critical, previously unexplored attack surface and provides a novel framework for uncovering safety risks in T2I agents.",
-      "tr": "Tool-calling text-to-image (T2I) agents can plan and execute multi-step tool chains to accomplish complex generation and editing queries. However, this capability introduces a new safety attack surface: harmful outputs may arise from tool orchestration, where individually benign steps combine into unsafe results, making prompt-only jailbreak techniques insufficient. We present OrchJail, an orchestration-guided fuzzing framework for jailbreaking tool-calling T2I agents. Its core idea is to exploit high-risk tool-orchestration patterns: by learning from successful jailbreak tool-calling traces and their causal relationships to prompt wording, OrchJail directly guides the fuzzing search toward prompts that are more likely to trigger unsafe multi-step tool behaviors, rather than relying on surface-level textual perturbations. Extensive experiments demonstrate that OrchJail improves jailbreak effectiveness and efficiency across representative toolcalling T2I agents, achieving higher attack success rates, better image fidelity, and lower query costs, while remaining robust against common jailbreak defenses. Our work highlights tool orchestration as a critical, previously unexplored attack surface and provides a novel framework for uncovering safety risks in T2I agents."
+      "en": "Terminal agents are increasingly capable of executing complex, long-horizon tasks autonomously from a single user prompt. To do so, they must interpret instructions encountered in the environment (e.g., README files, code comments, stack traces) and determine their relevance to the task. This creates a fundamental challenge: relevant cues must be followed to complete a task, whereas irrelevant or misleading ones must be ignored. Existing benchmarks do not capture this ability. An agent may appear capable by blindly following all instructions, or appear robust by ignoring them altogether. We introduce TAB (Task Alignment Benchmark), a suite of 89 terminal tasks derived from Terminal-Bench 2.1. Each task is intentionally underspecified, with missing information provided as a necessary cue embedded in a natural environmental artifact, alongside a plausible but irrelevant distractor. Solving these tasks requires selectively using the cue while ignoring the distractor. Applying TAB to ten frontier agents reveals a systematic gap between task capability and task alignment. The strongest Terminal-Bench agent achieves high task completion but low task alignment on TAB. Evaluating six prompt-injection defenses further shows that suppressing distractor execution also suppresses the cues required for task completion. These results demonstrate that task-aligned agents require selective use of environmental instructions rather than blanket acceptance or rejection.",
+      "tr": "Terminal agents are increasingly capable of executing complex, long-horizon tasks autonomously from a single user prompt. To do so, they must interpret instructions encountered in the environment (e.g., README files, code comments, stack traces) and determine their relevance to the task. This creates a fundamental challenge: relevant cues must be followed to complete a task, whereas irrelevant or misleading ones must be ignored. Existing benchmarks do not capture this ability. An agent may appear capable by blindly following all instructions, or appear robust by ignoring them altogether. We introduce TAB (Task Alignment Benchmark), a suite of 89 terminal tasks derived from Terminal-Bench 2.1. Each task is intentionally underspecified, with missing information provided as a necessary cue embedded in a natural environmental artifact, alongside a plausible but irrelevant distractor. Solving these tasks requires selectively using the cue while ignoring the distractor. Applying TAB to ten frontier agents reveals a systematic gap between task capability and task alignment. The strongest Terminal-Bench agent achieves high task completion but low task alignment on TAB. Evaluating six prompt-injection defenses further shows that suppressing distractor execution also suppresses the cues required for task completion. These results demonstrate that task-aligned agents require selective use of environmental instructions rather than blanket acceptance or rejection."
     }
   },
   {
-    "id": "2605.07324v1",
-    "title": "Activation Differences Reveal Backdoors: A Comparison of SAE Architectures",
+    "id": "2605.12147v1",
+    "title": "PrivacySIM: Evaluating LLM Simulation of User Privacy Behavior",
     "authors": [
-      "Sachin Kumar"
+      "James Flemings",
+      "Murali Annavaram"
     ],
-    "published_date": "2026-05-08",
+    "published_date": "2026-05-12",
     "tags": [
-      "cs.CL",
-      "cs.AI",
       "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2605.07324v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.07324v1",
+    "link": "http://arxiv.org/abs/2605.12147v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.12147v1",
     "content": {
-      "en": "Backdoor attacks on language models pose a significant threat to AI safety, where models behave normally on most inputs but exhibit harmful behavior when triggered by specific patterns. Detecting such backdoors through mechanistic interpretability remains an open challenge. We investigate two sparse autoencoder architectures -- Crosscoders and Differential SAEs (Diff-SAE) -- for isolating backdoor-related features in fine-tuned models. Using a controlled SQL injection backdoor triggered by year-based context (\"2024\" triggers vulnerable code, \"2023\" triggers safe code), we evaluate both approaches across LoRA and full-rank fine-tuning regimes on SmolLM2-360M. We find that Diff-SAE consistently and substantially outperforms Crosscoders for backdoor isolation. Diff-SAE achieves a Backdoor Isolation Score (BIS) of 0.40 with perfect precision (1.0) and zero false positive rate across most experimental conditions, while Crosscoders fail almost entirely with BIS below 0.02 in most cases. This performance gap holds across multiple transformer layers (14, 18, 22, 26) and both fine-tuning regimes, with full-rank fine-tuning producing particularly clean backdoor signals. Our results suggest that backdoors manifest as directional activation shifts rather than sparse feature activations, making difference-based representations fundamentally more effective for detection. These findings have important implications for AI safety monitoring and the development of interpretability tools for detecting model manipulation.",
-      "tr": "Backdoor attacks on language models pose a significant threat to AI safety, where models behave normally on most inputs but exhibit harmful behavior when triggered by specific patterns. Detecting such backdoors through mechanistic interpretability remains an open challenge. We investigate two sparse autoencoder architectures -- Crosscoders and Differential SAEs (Diff-SAE) -- for isolating backdoor-related features in fine-tuned models. Using a controlled SQL injection backdoor triggered by year-based context (\"2024\" triggers vulnerable code, \"2023\" triggers safe code), we evaluate both approaches across LoRA and full-rank fine-tuning regimes on SmolLM2-360M. We find that Diff-SAE consistently and substantially outperforms Crosscoders for backdoor isolation. Diff-SAE achieves a Backdoor Isolation Score (BIS) of 0.40 with perfect precision (1.0) and zero false positive rate across most experimental conditions, while Crosscoders fail almost entirely with BIS below 0.02 in most cases. This performance gap holds across multiple transformer layers (14, 18, 22, 26) and both fine-tuning regimes, with full-rank fine-tuning producing particularly clean backdoor signals. Our results suggest that backdoors manifest as directional activation shifts rather than sparse feature activations, making difference-based representations fundamentally more effective for detection. These findings have important implications for AI safety monitoring and the development of interpretability tools for detecting model manipulation."
+      "en": "Large language models (LLMs) are increasingly used to simulate human behavior, but their ability to simulate $individual$ privacy decisions is not well understood. In this paper, we address the problem of evaluating whether a core set of user persona attributes can drive LLMs to simulate individual-level privacy behavior. We introduce PrivacySIM, an evaluation suite that benchmarks LLM simulation of user privacy behavior against the ground-truth responses of 1,000 users. These users are drawn from five published user studies on privacy spanning LLM healthcare consultations, conversational agents, and chatbots. Drawing on these user studies, we hypothesize three persona facets as plausible predictors of privacy decision-making: demographics, previous experiences, and stated privacy attitudes. We condition nine frontier LLMs on subsets of these three facets and measure how often each model's response to a data-sharing scenario matches the user's actual response. Our findings show that (1) privacy persona conditioning consistently improves simulation quality over no-persona conditioning, but even the strongest model (40.4\\% accuracy) remains far from faithfully simulating individual privacy decisions. (2) A user's stated privacy attitudes alone may not be the best predictor because they often diverge from the user's actual privacy behavior. (3) Users with high AI/chatbot experience but low stated privacy attitudes are the most challenging to simulate. PrivacySIM is a first step toward understanding and improving the capabilities of LLMs to simulate user privacy decisions. We release PrivacySIM to enable further evaluation of LLM privacy simulation.",
+      "tr": "Large language models (LLMs) are increasingly used to simulate human behavior, but their ability to simulate $individual$ privacy decisions is not well understood. In this paper, we address the problem of evaluating whether a core set of user persona attributes can drive LLMs to simulate individual-level privacy behavior. We introduce PrivacySIM, an evaluation suite that benchmarks LLM simulation of user privacy behavior against the ground-truth responses of 1,000 users. These users are drawn from five published user studies on privacy spanning LLM healthcare consultations, conversational agents, and chatbots. Drawing on these user studies, we hypothesize three persona facets as plausible predictors of privacy decision-making: demographics, previous experiences, and stated privacy attitudes. We condition nine frontier LLMs on subsets of these three facets and measure how often each model's response to a data-sharing scenario matches the user's actual response. Our findings show that (1) privacy persona conditioning consistently improves simulation quality over no-persona conditioning, but even the strongest model (40.4\\% accuracy) remains far from faithfully simulating individual privacy decisions. (2) A user's stated privacy attitudes alone may not be the best predictor because they often diverge from the user's actual privacy behavior. (3) Users with high AI/chatbot experience but low stated privacy attitudes are the most challenging to simulate. PrivacySIM is a first step toward understanding and improving the capabilities of LLMs to simulate user privacy decisions. We release PrivacySIM to enable further evaluation of LLM privacy simulation."
+    }
+  },
+  {
+    "id": "2605.12075v1",
+    "title": "The Deepfakes We Missed: We Built Detectors for a Threat That Didn't Arrive",
+    "authors": [
+      "Shaina Raza"
+    ],
+    "published_date": "2026-05-12",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.12075v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.12075v1",
+    "content": {
+      "en": "Nearly a decade of Machine Learning (ML) research on deepfake detection has been organized around a threat model inherited from 2017--2019, revolving around face-swap and talking-head manipulation of public figures, motivated by concerns about large-scale misinformation and video-evidence fraud. This position paper argues that the threat the field prepared for did not arrive, and the threats that did arrive are substantially different. An accounting of deepfake incidents in 2022--2026 shows that the dominant observed harms are peer-generated Non-Consensual Intimate Imagery (NCII), voice-clone scam calls targeting families and finance workers, and emotional-manipulation fraud. The predicted large-scale public-figure deepfake catastrophe did not materialize during the 2024 global information environment despite extensive preparation. Meanwhile, research effort, benchmarks, and detection methods remain concentrated on the inherited threat model. The central claim of this paper is that this misalignment is now the dominant bottleneck on real-world deepfake defense, not model capability. We argue the ML research community should substantially rebalance its research agenda toward the harm categories that are actually growing. We support this position with empirical accounting of research effort and harm distribution, identify the structural reasons the misalignment persists, and outline three concrete technical research agendas for the under-defended harm categories.",
+      "tr": "Nearly a decade of Machine Learning (ML) research on deepfake detection has been organized around a threat model inherited from 2017--2019, revolving around face-swap and talking-head manipulation of public figures, motivated by concerns about large-scale misinformation and video-evidence fraud. This position paper argues that the threat the field prepared for did not arrive, and the threats that did arrive are substantially different. An accounting of deepfake incidents in 2022--2026 shows that the dominant observed harms are peer-generated Non-Consensual Intimate Imagery (NCII), voice-clone scam calls targeting families and finance workers, and emotional-manipulation fraud. The predicted large-scale public-figure deepfake catastrophe did not materialize during the 2024 global information environment despite extensive preparation. Meanwhile, research effort, benchmarks, and detection methods remain concentrated on the inherited threat model. The central claim of this paper is that this misalignment is now the dominant bottleneck on real-world deepfake defense, not model capability. We argue the ML research community should substantially rebalance its research agenda toward the harm categories that are actually growing. We support this position with empirical accounting of research effort and harm distribution, identify the structural reasons the misalignment persists, and outline three concrete technical research agendas for the under-defended harm categories."
+    }
+  },
+  {
+    "id": "2605.12015v1",
+    "title": "SkillSafetyBench: Evaluating Agent Safety under Skill-Facing Attack Surfaces",
+    "authors": [
+      "Chang Jin",
+      "An Wang",
+      "Zeming Wei",
+      "Kai Wang",
+      "Biaojie Zeng"
+    ],
+    "published_date": "2026-05-12",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG",
+      "cs.MA"
+    ],
+    "link": "http://arxiv.org/abs/2605.12015v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.12015v1",
+    "content": {
+      "en": "Reusable skills are becoming a common interface for extending large language model agents, packaging procedural guidance with access to files, tools, memory, and execution environments. However, this modularity introduces attack surfaces that are largely missed by existing safety evaluations: even when the user request is benign, task-relevant skill materials or local artifacts can steer an agent toward unsafe actions. We present SkillSafetyBench, a runnable benchmark for evaluating such skill-mediated safety failures. SkillSafetyBench includes 155 adversarial cases across 47 tasks, 6 risk domains, and 30 safety categories, each evaluated with a case-specific rule-based verifier. Experiments with multiple CLI agents and model backends show that localized non-user attacks can consistently induce unsafe behavior, with distinct failure patterns across domains, attack methods, and scaffold-model pairings. Our findings suggest that agent safety depends not only on model-level alignment, but also on how agents interpret skills, trust workflow context, and act through executable environments.",
+      "tr": "Reusable skills are becoming a common interface for extending large language model agents, packaging procedural guidance with access to files, tools, memory, and execution environments. However, this modularity introduces attack surfaces that are largely missed by existing safety evaluations: even when the user request is benign, task-relevant skill materials or local artifacts can steer an agent toward unsafe actions. We present SkillSafetyBench, a runnable benchmark for evaluating such skill-mediated safety failures. SkillSafetyBench includes 155 adversarial cases across 47 tasks, 6 risk domains, and 30 safety categories, each evaluated with a case-specific rule-based verifier. Experiments with multiple CLI agents and model backends show that localized non-user attacks can consistently induce unsafe behavior, with distinct failure patterns across domains, attack methods, and scaffold-model pairings. Our findings suggest that agent safety depends not only on model-level alignment, but also on how agents interpret skills, trust workflow context, and act through executable environments."
+    }
+  },
+  {
+    "id": "2605.11901v1",
+    "title": "AccLock: Unlocking Identity with Heartbeat Using In-Ear Accelerometers",
+    "authors": [
+      "Lei Wang",
+      "Jiangxuan Shen",
+      "Xi Zhang",
+      "Dalin Zhang",
+      "Jingyu Li"
+    ],
+    "published_date": "2026-05-12",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.11901v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.11901v1",
+    "content": {
+      "en": "The widespread use of earphones has enabled various sensing applications, including activity recognition, health monitoring, and context-aware computing. Among these, earphone-based user authentication has become a key technique by leveraging unique biometric features. However, existing earphone-based authentication systems face key limitations: they either require explicit user interaction or active speaker output, or suffer from poor accessibility and vulnerability to environmental noise, which hinders large-scale deployment. In this paper, we propose a passive authentication system, called AccLock, which leverages distinctive features extracted from in-ear BCG signals to enable secure and unobtrusive user verification. Our system offers several advantages over previous systems, including zero-involvement for both the device and the user, ubiquitous, and resilient to environmental noise. To realize this, we first design a two-stage denoising scheme to suppress both inherent and sporadic interference. To extract user-specific features, we then propose a disentanglement-based deep learning model, HIDNet, which explicitly separates user-specific features from shared nuisance components. Lastly, we develop a scalable authentication framework based on a Siamese network that eliminates the need for per-user classifier training. We conduct extensive experiments with 33 participants, achieving an average FAR of 3.13% and FRR of 2.99%, which demonstrates the practical feasibility of AccLock.",
+      "tr": "The widespread use of earphones has enabled various sensing applications, including activity recognition, health monitoring, and context-aware computing. Among these, earphone-based user authentication has become a key technique by leveraging unique biometric features. However, existing earphone-based authentication systems face key limitations: they either require explicit user interaction or active speaker output, or suffer from poor accessibility and vulnerability to environmental noise, which hinders large-scale deployment. In this paper, we propose a passive authentication system, called AccLock, which leverages distinctive features extracted from in-ear BCG signals to enable secure and unobtrusive user verification. Our system offers several advantages over previous systems, including zero-involvement for both the device and the user, ubiquitous, and resilient to environmental noise. To realize this, we first design a two-stage denoising scheme to suppress both inherent and sporadic interference. To extract user-specific features, we then propose a disentanglement-based deep learning model, HIDNet, which explicitly separates user-specific features from shared nuisance components. Lastly, we develop a scalable authentication framework based on a Siamese network that eliminates the need for per-user classifier training. We conduct extensive experiments with 33 participants, achieving an average FAR of 3.13% and FRR of 2.99%, which demonstrates the practical feasibility of AccLock."
+    }
+  },
+  {
+    "id": "2605.11891v1",
+    "title": "Proteus: A Self-Evolving Red Team for Agent Skill Ecosystems",
+    "authors": [
+      "Zhaojiacheng Zhou"
+    ],
+    "published_date": "2026-05-12",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.11891v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.11891v1",
+    "content": {
+      "en": "Agent skills extend LLM agents with reusable instructions, tool interfaces, and executable code, and users increasingly install third-party skills from marketplaces, repositories, and community channels. Because a skill exposes both executable behavior and context-setting documentation, its deployment risk cannot be measured by single-shot audits or prompt-level red teams alone: a realistic attacker can use audit and runtime feedback to repeatedly rewrite the skill. We frame this risk as \\emph{adaptive leakage} -- whether a budgeted attacker can iteratively revise a skill until it passes audit and produces verified runtime harm -- and present \\ours{}, a grey-box self-evolving red-team framework for measuring it. Proteus searches a formalized five-axis skill-attack space. Each candidate is evaluated through a unified audit-sandbox-oracle pipeline that returns structured audit findings and runtime evidence to guide cross-round mutation. Beyond initial evasion, Proteus performs path expansion, which finds alternative implementations of successful attacks, and surface expansion, which transfers learned implementation patterns to new attack objectives beyond the original seed catalogue. Across eight phase-1 cells, Proteus reaches 40--90\\% Attack Success Rate at $5$ rounds (ASR@5) with positive learning-curve slopes on both evaluated auditors. Phase-2 path/surface expansion produces 438 jointly bypassing and lethal variants, with SkillVetter bypassed at $\\geq 93\\%$ in every cell and AI-Infra-Guard, the strongest public auditor we evaluate, still admitting up to 41.3\\% joint-success. These results show that current skill vetting substantially underestimates residual risk when evaluated against adaptive, feedback-driven attackers.",
+      "tr": "Agent skills extend LLM agents with reusable instructions, tool interfaces, and executable code, and users increasingly install third-party skills from marketplaces, repositories, and community channels. Because a skill exposes both executable behavior and context-setting documentation, its deployment risk cannot be measured by single-shot audits or prompt-level red teams alone: a realistic attacker can use audit and runtime feedback to repeatedly rewrite the skill. We frame this risk as \\emph{adaptive leakage} -- whether a budgeted attacker can iteratively revise a skill until it passes audit and produces verified runtime harm -- and present \\ours{}, a grey-box self-evolving red-team framework for measuring it. Proteus searches a formalized five-axis skill-attack space. Each candidate is evaluated through a unified audit-sandbox-oracle pipeline that returns structured audit findings and runtime evidence to guide cross-round mutation. Beyond initial evasion, Proteus performs path expansion, which finds alternative implementations of successful attacks, and surface expansion, which transfers learned implementation patterns to new attack objectives beyond the original seed catalogue. Across eight phase-1 cells, Proteus reaches 40--90\\% Attack Success Rate at $5$ rounds (ASR@5) with positive learning-curve slopes on both evaluated auditors. Phase-2 path/surface expansion produces 438 jointly bypassing and lethal variants, with SkillVetter bypassed at $\\geq 93\\%$ in every cell and AI-Infra-Guard, the strongest public auditor we evaluate, still admitting up to 41.3\\% joint-success. These results show that current skill vetting substantially underestimates residual risk when evaluated against adaptive, feedback-driven attackers."
+    }
+  },
+  {
+    "id": "2605.11868v1",
+    "title": "IPI-proxy: An Intercepting Proxy for Red-Teaming Web-Browsing AI Agents Against Indirect Prompt Injection",
+    "authors": [
+      "Chia-Pei",
+      "Chen",
+      "Kentaroh Toyoda",
+      "Anita Lai",
+      "Alex Leung"
+    ],
+    "published_date": "2026-05-12",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.11868v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.11868v1",
+    "content": {
+      "en": "Web-browsing AI agents are increasingly deployed in enterprise settings under strict whitelists of approved domains, yet adversaries can still influence them by embedding hidden instructions in the HTML pages those domains serve. Existing red-teaming resources fall short of this scenario: prompt-injection benchmarks ship pre-built adversarial pages that whitelisted agents cannot reach, and generic LLM scanners probe the model API rather than its retrieved content. We present IPI-proxy, an open-source toolkit for red-teaming web-browsing agents against indirect prompt injection (IPI). At its core is an intercepting proxy that rewrites real HTTP responses from whitelisted domains in flight, embedding payloads drawn from a unified library of 820 deduplicated attack strings extracted from six published benchmarks (BIPIA, InjecAgent, AgentDojo, Tensor Trust, WASP, and LLMail-Inject). A YAML-driven test harness independently parameterizes the payload set, the embedding technique (HTML comment, invisible CSS, or LLM-generated semantic prose), and the HTML insertion point (6 locations from \\icode{head\\_meta} to \\icode{script\\_comment}), enabling parameter-sweep evaluation without mock pages or sandboxed environments. A companion exfiltration tracker logs successful callbacks. This paper describes the threat model, situates IPI-proxy among contemporary IPI benchmarks and red-teaming tools, and details its architecture, design decisions, and configuration interface. By bridging static benchmarks and live deployment, IPI-proxy gives AI security teams a reproducible substrate for measuring and hardening web-browsing agents against indirect prompt injection on the same retrieval surface attackers exploit in production.",
+      "tr": "Web-browsing AI agents are increasingly deployed in enterprise settings under strict whitelists of approved domains, yet adversaries can still influence them by embedding hidden instructions in the HTML pages those domains serve. Existing red-teaming resources fall short of this scenario: prompt-injection benchmarks ship pre-built adversarial pages that whitelisted agents cannot reach, and generic LLM scanners probe the model API rather than its retrieved content. We present IPI-proxy, an open-source toolkit for red-teaming web-browsing agents against indirect prompt injection (IPI). At its core is an intercepting proxy that rewrites real HTTP responses from whitelisted domains in flight, embedding payloads drawn from a unified library of 820 deduplicated attack strings extracted from six published benchmarks (BIPIA, InjecAgent, AgentDojo, Tensor Trust, WASP, and LLMail-Inject). A YAML-driven test harness independently parameterizes the payload set, the embedding technique (HTML comment, invisible CSS, or LLM-generated semantic prose), and the HTML insertion point (6 locations from \\icode{head\\_meta} to \\icode{script\\_comment}), enabling parameter-sweep evaluation without mock pages or sandboxed environments. A companion exfiltration tracker logs successful callbacks. This paper describes the threat model, situates IPI-proxy among contemporary IPI benchmarks and red-teaming tools, and details its architecture, design decisions, and configuration interface. By bridging static benchmarks and live deployment, IPI-proxy gives AI security teams a reproducible substrate for measuring and hardening web-browsing agents against indirect prompt injection on the same retrieval surface attackers exploit in production."
     }
   }
 ]
