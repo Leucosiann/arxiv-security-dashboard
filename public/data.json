@@ -1,218 +1,223 @@
 [
   {
-    "id": "2605.13764v1",
-    "title": "VectorSmuggle: Steganographic Exfiltration in Embedding Stores and a Cryptographic Provenance Defense",
+    "id": "2605.15030v1",
+    "title": "WARD: Adversarially Robust Defense of Web Agents Against Prompt Injections",
     "authors": [
-      "Jascha Wanger"
+      "Tri Cao",
+      "Yulin Chen",
+      "Hieu Cao",
+      "Yibo Li",
+      "Khoi Le"
     ],
-    "published_date": "2026-05-13",
-    "tags": [
-      "cs.CR",
-      "cs.IR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.13764v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.13764v1",
-    "content": {
-      "en": "Modern retrieval-augmented generation (RAG) systems convert sensitive content into high-dimensional embeddings and store them in vector databases that treat the resulting numerical artifacts as opaque. Major vector-store products do not provide native controls for embedding integrity, ingestion-time distributional anomaly detection, or cryptographic provenance attestation. We show this opens a class of steganographic exfiltration attacks: an attacker with write access to the ingestion pipeline can hide payload data inside embeddings using simple post-embedding perturbations (noise injection, rotation, scaling, offset, fragmentation, and combinations thereof) while preserving the surface-level retrieval behavior the RAG system exposes to legitimate users.   We evaluate these techniques across a synthetic-PII corpus on text-embedding-3-large, four locally hosted open embedding models, a cross-corpus replication on BEIR NFCorpus and a Quora subset (over 26,000 chunks combined), seven vector-store configurations, an adaptive-attacker variant of the detector evaluation, and a paraphrased-query retrieval benchmark. Distribution-shifting perturbations are often caught by simple anomaly detectors; small-angle orthogonal rotation defeats distribution-based detection across every (model, corpus) pair tested. A disjoint-Givens rotation encoder gives a closed-form per-vector capacity ceiling of floor(d/2) * b bits, but real embedding manifolds impose a capacity-detectability trade-off, and the retrieval-preserving operating point sits well below it.   We propose VectorPin, a cryptographic provenance protocol that pins each embedding to its source content and producing model via an Ed25519 signature over a canonical byte representation. Any post-embedding modification breaks signature verification. Embedding-level integrity is a deployable, standardizable control that closes this attack class.",
-      "tr": "Modern retrieval-augmented generation (RAG) systems convert sensitive content into high-dimensional embeddings and store them in vector databases that treat the resulting numerical artifacts as opaque. Major vector-store products do not provide native controls for embedding integrity, ingestion-time distributional anomaly detection, or cryptographic provenance attestation. We show this opens a class of steganographic exfiltration attacks: an attacker with write access to the ingestion pipeline can hide payload data inside embeddings using simple post-embedding perturbations (noise injection, rotation, scaling, offset, fragmentation, and combinations thereof) while preserving the surface-level retrieval behavior the RAG system exposes to legitimate users.   We evaluate these techniques across a synthetic-PII corpus on text-embedding-3-large, four locally hosted open embedding models, a cross-corpus replication on BEIR NFCorpus and a Quora subset (over 26,000 chunks combined), seven vector-store configurations, an adaptive-attacker variant of the detector evaluation, and a paraphrased-query retrieval benchmark. Distribution-shifting perturbations are often caught by simple anomaly detectors; small-angle orthogonal rotation defeats distribution-based detection across every (model, corpus) pair tested. A disjoint-Givens rotation encoder gives a closed-form per-vector capacity ceiling of floor(d/2) * b bits, but real embedding manifolds impose a capacity-detectability trade-off, and the retrieval-preserving operating point sits well below it.   We propose VectorPin, a cryptographic provenance protocol that pins each embedding to its source content and producing model via an Ed25519 signature over a canonical byte representation. Any post-embedding modification breaks signature verification. Embedding-level integrity is a deployable, standardizable control that closes this attack class."
-    }
-  },
-  {
-    "id": "2605.13708v1",
-    "title": "DisAgg: Distributed Aggregators for Efficient Secure Aggregation in Federated Learning",
-    "authors": [
-      "Haaris Mehmood",
-      "Giorgos Tatsis",
-      "Dimitrios Alexopoulos",
-      "Karthikeyan Saravanan",
-      "Jie Xu"
-    ],
-    "published_date": "2026-05-13",
-    "tags": [
-      "cs.CR",
-      "cs.DC",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.13708v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.13708v1",
-    "content": {
-      "en": "Federated learning enables collaborative model training across distributed clients, yet vanilla FL exposes client updates to the central server. Secure-aggregation schemes protect privacy against an honest-but-curious server, but existing approaches often suffer from many communication rounds, heavy public-key operations, or difficulty handling client dropouts. Recent methods like One-Shot Private Aggregation (OPA) cut rounds to a single server interaction per FL iteration, yet they impose substantial cryptographic and computational overhead on both server and clients. We propose a new protocol called DisAgg that leverages a small committee of clients called Aggregators to perform the aggregation itself: each client secret-shares its update vector to Aggregators, which locally compute partial sums and return only aggregated shares for server-side reconstruction. This design eliminates local masking and expensive homomorphic encryption, reducing endpoint computation while preserving privacy against a curious server and a limited fraction of colluding clients. By leveraging optimal trade-offs between communication and computation costs, DisAgg processes 100k-dimensional update vectors from 100k 5G clients with a 4.6x speedup compared to OPA, the previous best protocol.",
-      "tr": "Federated learning enables collaborative model training across distributed clients, yet vanilla FL exposes client updates to the central server. Secure-aggregation schemes protect privacy against an honest-but-curious server, but existing approaches often suffer from many communication rounds, heavy public-key operations, or difficulty handling client dropouts. Recent methods like One-Shot Private Aggregation (OPA) cut rounds to a single server interaction per FL iteration, yet they impose substantial cryptographic and computational overhead on both server and clients. We propose a new protocol called DisAgg that leverages a small committee of clients called Aggregators to perform the aggregation itself: each client secret-shares its update vector to Aggregators, which locally compute partial sums and return only aggregated shares for server-side reconstruction. This design eliminates local masking and expensive homomorphic encryption, reducing endpoint computation while preserving privacy against a curious server and a limited fraction of colluding clients. By leveraging optimal trade-offs between communication and computation costs, DisAgg processes 100k-dimensional update vectors from 100k 5G clients with a 4.6x speedup compared to OPA, the previous best protocol."
-    }
-  },
-  {
-    "id": "2605.13706v1",
-    "title": "Identifying AI Web Scrapers Using Canary Tokens",
-    "authors": [
-      "Steven Seiden",
-      "Triss Ren",
-      "Caroline Zhang",
-      "Taein Kim",
-      "Enze Liu"
-    ],
-    "published_date": "2026-05-13",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CY",
-      "cs.NI"
-    ],
-    "link": "http://arxiv.org/abs/2605.13706v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.13706v1",
-    "content": {
-      "en": "From pre-training to query-time augmentation, web-scraped data helps to improve the quality and contextual relevancy of content generated by large language models (LLMs). However, large-scale web scraping to feed LLMs can affect site stability and raise legal, privacy, or ethics concerns. If website owners wish to limit LLM-related web scraping on their site, due to these or other concerns, they may turn to scraper access control mechanisms like the Robots Exclusion Protocol. To be most effective, such mechanisms require site owners to first identify the scrapers that they wish to restrict (e.g., via User-Agent strings). Existing mechanisms to identify LLM-related scrapers rely on voluntary disclosure by companies, one-off experiments by researchers, or crowd-sourced reports -- methods that are neither reliable nor scalable. This paper proposes a novel technique for accurately and automatically inferring LLM-related scrapers. We host dynamic websites that serve unique canary tokens to each visiting scraper, then prompt LLMs for information about our sites. If an LLM consistently generates outputs containing tokens unique to a scraper, it provides evidence of exposure to that scraper. Via experiments across 22 production LLM systems, we demonstrate that our approach can reliably identify which scrapers feed which LLM, including several that are not publicly known or disclosed by the companies. Our approach provides a promising avenue for unprivileged third parties to infer which scrapers serve data to which LLMs, potentially enabling better control over unwanted scraping.",
-      "tr": "From pre-training to query-time augmentation, web-scraped data helps to improve the quality and contextual relevancy of content generated by large language models (LLMs). However, large-scale web scraping to feed LLMs can affect site stability and raise legal, privacy, or ethics concerns. If website owners wish to limit LLM-related web scraping on their site, due to these or other concerns, they may turn to scraper access control mechanisms like the Robots Exclusion Protocol. To be most effective, such mechanisms require site owners to first identify the scrapers that they wish to restrict (e.g., via User-Agent strings). Existing mechanisms to identify LLM-related scrapers rely on voluntary disclosure by companies, one-off experiments by researchers, or crowd-sourced reports -- methods that are neither reliable nor scalable. This paper proposes a novel technique for accurately and automatically inferring LLM-related scrapers. We host dynamic websites that serve unique canary tokens to each visiting scraper, then prompt LLMs for information about our sites. If an LLM consistently generates outputs containing tokens unique to a scraper, it provides evidence of exposure to that scraper. Via experiments across 22 production LLM systems, we demonstrate that our approach can reliably identify which scrapers feed which LLM, including several that are not publicly known or disclosed by the companies. Our approach provides a promising avenue for unprivileged third parties to infer which scrapers serve data to which LLMs, potentially enabling better control over unwanted scraping."
-    }
-  },
-  {
-    "id": "2605.13503v1",
-    "title": "Limits of Personalizing Differential Privacy Budgets",
-    "authors": [
-      "Edwige Cyffers",
-      "Juba Ziani"
-    ],
-    "published_date": "2026-05-13",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.13503v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.13503v1",
-    "content": {
-      "en": "A key technical difficulty in differential privacy is selecting a privacy budget that satisfies privacy requirements while maximizing utility. A natural and well-studied workaround is to use personalized privacy budgets, which may differ across agents. In this paper, we show that personalized budgets come with major limitations and that for mean estimation, the dominant factor is not full personalization, but rather choosing the right effective privacy budget. This can be achieved through a simple thresholding operator that we describe. Compared with this thresholding baseline, the gains obtained by fully personalized mechanisms are limited. In particular, we precisely quantify the constant-factor improvement in settings with mixed private and public datasets and in private datasets with two levels of privacy requirements. We also establish upper bounds and identify regimes of maximal gain for arbitrary privacy requirements.",
-      "tr": "A key technical difficulty in differential privacy is selecting a privacy budget that satisfies privacy requirements while maximizing utility. A natural and well-studied workaround is to use personalized privacy budgets, which may differ across agents. In this paper, we show that personalized budgets come with major limitations and that for mean estimation, the dominant factor is not full personalization, but rather choosing the right effective privacy budget. This can be achieved through a simple thresholding operator that we describe. Compared with this thresholding baseline, the gains obtained by fully personalized mechanisms are limited. In particular, we precisely quantify the constant-factor improvement in settings with mixed private and public datasets and in private datasets with two levels of privacy requirements. We also establish upper bounds and identify regimes of maximal gain for arbitrary privacy requirements."
-    }
-  },
-  {
-    "id": "2605.13338v1",
-    "title": "Inducing Overthink: Hierarchical Genetic Algorithm-based DoS Attack on Black-Box Large Language Reasoning Models",
-    "authors": [
-      "Shuqiang Wang",
-      "Wei Cao",
-      "Jiaqi Weng",
-      "Jialing Tao",
-      "Licheng Pan"
-    ],
-    "published_date": "2026-05-13",
+    "published_date": "2026-05-14",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2605.13338v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.13338v1",
+    "link": "http://arxiv.org/abs/2605.15030v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.15030v1",
     "content": {
-      "en": "Large Reasoning Models (LRMs) are increasingly integrated into systems requiring reliable multi-step inference, yet this growing dependence exposes new vulnerabilities related to computational availability. In particular, LRMs exhibit a tendency to \"overthink\", producing excessively long and redundant reasoning traces, when confronted with incomplete or logically inconsistent inputs. This behavior significantly increases inference latency and energy consumption, forming a potential vector for denial-of-service (DoS) style resource exhaustion. In this work, we investigate this attack surface and propose an automated black-box framework that induces overthinking in LRMs by systematically perturbing the logical structure of input problems. Our method employs a hierarchical genetic algorithm (HGA) operating on structured problem decompositions, and optimizes a composite fitness function designed to maximize both response length and reflective overthinking markers. Across four state-of-the-art reasoning models, the proposed method substantially amplifies output length, achieving up to a 26.1x increase on the MATH benchmark and consistently outperforming benign and manually crafted missing-premise baselines. We further demonstrate strong transferability, showing that adversarial inputs evolved using a small proxy model retain high effectiveness against large commercial LRMs. These findings highlight overthinking as a shared and exploitable vulnerability in modern reasoning systems, underscoring the need for more robust defenses.",
-      "tr": "Large Reasoning Models (LRMs) are increasingly integrated into systems requiring reliable multi-step inference, yet this growing dependence exposes new vulnerabilities related to computational availability. In particular, LRMs exhibit a tendency to \"overthink\", producing excessively long and redundant reasoning traces, when confronted with incomplete or logically inconsistent inputs. This behavior significantly increases inference latency and energy consumption, forming a potential vector for denial-of-service (DoS) style resource exhaustion. In this work, we investigate this attack surface and propose an automated black-box framework that induces overthinking in LRMs by systematically perturbing the logical structure of input problems. Our method employs a hierarchical genetic algorithm (HGA) operating on structured problem decompositions, and optimizes a composite fitness function designed to maximize both response length and reflective overthinking markers. Across four state-of-the-art reasoning models, the proposed method substantially amplifies output length, achieving up to a 26.1x increase on the MATH benchmark and consistently outperforming benign and manually crafted missing-premise baselines. We further demonstrate strong transferability, showing that adversarial inputs evolved using a small proxy model retain high effectiveness against large commercial LRMs. These findings highlight overthinking as a shared and exploitable vulnerability in modern reasoning systems, underscoring the need for more robust defenses."
+      "en": "Web agents can autonomously complete online tasks by interacting with websites, but their exposure to open web environments makes them vulnerable to prompt injection attacks embedded in HTML content or visual interfaces. Existing guard models still suffer from limited generalization to unseen domains and attack patterns, high false positive rates on benign content, reduced deployment efficiency due to added latency at each step, and vulnerability to adversarial attacks that evolve over time or directly target the guard itself. To address these limitations, we propose WARD (Web Agent Robust Defense against Prompt Injection), a practical guard model for secure and efficient web agents. WARD is built on WARD-Base, a large-scale dataset with around 177K samples collected from 719 high-traffic URLs and platforms, and WARD-PIG, a dedicated dataset designed for prompt injection attacks targeting the guard model. We further introduce A3T, an adaptive adversarial attack training framework that iteratively strengthens WARD through a memory-based attacker and guard co-evolution process. Extensive experiments show that WARD achieves nearly perfect recall on out-of-distribution benchmarks, maintains low false positive rates to preserve agent utility, remains robust against guard-targeted and adaptive attacks under substantial distribution shifts, and runs efficiently in parallel with the agent without introducing additional latency.",
+      "tr": "Web agents can autonomously complete online tasks by interacting with websites, but their exposure to open web environments makes them vulnerable to prompt injection attacks embedded in HTML content or visual interfaces. Existing guard models still suffer from limited generalization to unseen domains and attack patterns, high false positive rates on benign content, reduced deployment efficiency due to added latency at each step, and vulnerability to adversarial attacks that evolve over time or directly target the guard itself. To address these limitations, we propose WARD (Web Agent Robust Defense against Prompt Injection), a practical guard model for secure and efficient web agents. WARD is built on WARD-Base, a large-scale dataset with around 177K samples collected from 719 high-traffic URLs and platforms, and WARD-PIG, a dedicated dataset designed for prompt injection attacks targeting the guard model. We further introduce A3T, an adaptive adversarial attack training framework that iteratively strengthens WARD through a memory-based attacker and guard co-evolution process. Extensive experiments show that WARD achieves nearly perfect recall on out-of-distribution benchmarks, maintains low false positive rates to preserve agent utility, remains robust against guard-targeted and adaptive attacks under substantial distribution shifts, and runs efficiently in parallel with the agent without introducing additional latency."
     }
   },
   {
-    "id": "2605.13337v1",
-    "title": "Context-Aware Web Attack Detection in Open-Source SIEM Systems via MITRE ATT&CK-Enriched Behavioral Profiling",
+    "id": "2605.14859v1",
+    "title": "Do Coding Agents Understand Least-Privilege Authorization?",
     "authors": [
-      "Badr Alboushy",
-      "Assef Jafar",
-      "Mohamad Aljnidi",
-      "Mohamad Bashar Disoki",
-      "Aref Shaheed"
+      "Zheng Yan",
+      "Jingxiang Weng",
+      "Charles Chen",
+      "Dengyun Peng",
+      "Ethan Qin"
     ],
-    "published_date": "2026-05-13",
+    "published_date": "2026-05-14",
     "tags": [
       "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.14859v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.14859v1",
+    "content": {
+      "en": "As coding agents gain access to shells, repositories, and user files, least-privilege authorization becomes a prerequisite for safe deployment: an agent should receive enough authority to complete the task, without unnecessary authority that exposes sensitive surfaces.To study whether current models can infer this boundary themselves, we first introduce permission-boundary inference, where a model maps a task instruction and terminal environment to a file-level read/write/execute policy, and AuthBench, a benchmark of 120 realistic terminal tasks with human-reviewed permission labels and executable validators for utility and attack outcomes.AuthBench shows that authorization is not a simple conservative-versus-permissive calibration problem: frontier models often omit permissions required by the execution chain while also granting unused or sensitive accesses.Increasing inference-time reasoning does not resolve this mismatch. Instead, each model moves toward a model-specific authorization attractor: more reasoning makes it more consistent in its own failure mode, whether broad-but-exposed or tight-but-brittle.This suggests that direct policy generation is the bottleneck, because a single generation must both discover all necessary accesses and reject all unnecessary ones.We therefore propose Sufficiency-Tightness Decomposition, which first generates a coverage-oriented policy by forward-simulating the task and then audits each granted entry for grounding and sensitivity.Across tested models, this decomposition improves sensitive-task success by up to 15.8% on tightness-biased models while reducing attack success across all evaluated models.",
+      "tr": "As coding agents gain access to shells, repositories, and user files, least-privilege authorization becomes a prerequisite for safe deployment: an agent should receive enough authority to complete the task, without unnecessary authority that exposes sensitive surfaces.To study whether current models can infer this boundary themselves, we first introduce permission-boundary inference, where a model maps a task instruction and terminal environment to a file-level read/write/execute policy, and AuthBench, a benchmark of 120 realistic terminal tasks with human-reviewed permission labels and executable validators for utility and attack outcomes.AuthBench shows that authorization is not a simple conservative-versus-permissive calibration problem: frontier models often omit permissions required by the execution chain while also granting unused or sensitive accesses.Increasing inference-time reasoning does not resolve this mismatch. Instead, each model moves toward a model-specific authorization attractor: more reasoning makes it more consistent in its own failure mode, whether broad-but-exposed or tight-but-brittle.This suggests that direct policy generation is the bottleneck, because a single generation must both discover all necessary accesses and reject all unnecessary ones.We therefore propose Sufficiency-Tightness Decomposition, which first generates a coverage-oriented policy by forward-simulating the task and then audits each granted entry for grounding and sensitivity.Across tested models, this decomposition improves sensitive-task success by up to 15.8% on tightness-biased models while reducing attack success across all evaluated models."
+    }
+  },
+  {
+    "id": "2605.14786v1",
+    "title": "Known By Their Actions: Fingerprinting LLM Browser Agents via UI Traces",
+    "authors": [
+      "William Lugoloobi",
+      "Samuelle Marro",
+      "Jabez Magomere",
+      "Joss Wright",
+      "Chris Russell"
+    ],
+    "published_date": "2026-05-14",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.HC",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2605.13337v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.13337v1",
+    "link": "http://arxiv.org/abs/2605.14786v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.14786v1",
     "content": {
-      "en": "Security Information and Event Management (SIEM) systems aggregate log data from heterogeneous sources to detect coordinated attacks. Traditional rule-based correlation engines struggle to classify multi-step web application attacks because they examine each event without reference to the behavioural history of the originating host.   We present Smart-SIEM, an AI module for the open-source Wazuh SIEM platform with two contributions: (1) a per-source-IP behavioural context vector encoding HTTP response-status distributions, peak rule activation counts, and MITRE ATT&CK technique frequencies from the N most recent prior events; (2) a two-stage hybrid cascade combining LightGBM for binary attack detection and XGBoost for six-class attack categorisation.   Evaluated on 46,454 purpose-built Wazuh security events, context features improve all tested gradient boosting algorithms from ~0.705 macro F1 to 0.947-0.967 (Stage 1) and 0.876-0.914 (Stage 2), an average gain of +0.254 and +0.324 respectively. The hybrid cascade achieves F1 of 0.967 (binary) and 0.914 (six-class). Wazuh's native rule engine detects 0% of Brute Force and Broken Authentication events; the AI module detects 100% and 98.3% respectively. A self-adaptive retraining mechanism recovers from concept drift: F1 drops from 0.905 to 0.465 when unseen attack types emerge, recovering to 0.814 after retraining on the combined corpus.",
-      "tr": "Security Information and Event Management (SIEM) systems aggregate log data from heterogeneous sources to detect coordinated attacks. Traditional rule-based correlation engines struggle to classify multi-step web application attacks because they examine each event without reference to the behavioural history of the originating host.   We present Smart-SIEM, an AI module for the open-source Wazuh SIEM platform with two contributions: (1) a per-source-IP behavioural context vector encoding HTTP response-status distributions, peak rule activation counts, and MITRE ATT&CK technique frequencies from the N most recent prior events; (2) a two-stage hybrid cascade combining LightGBM for binary attack detection and XGBoost for six-class attack categorisation.   Evaluated on 46,454 purpose-built Wazuh security events, context features improve all tested gradient boosting algorithms from ~0.705 macro F1 to 0.947-0.967 (Stage 1) and 0.876-0.914 (Stage 2), an average gain of +0.254 and +0.324 respectively. The hybrid cascade achieves F1 of 0.967 (binary) and 0.914 (six-class). Wazuh's native rule engine detects 0% of Brute Force and Broken Authentication events; the AI module detects 100% and 98.3% respectively. A self-adaptive retraining mechanism recovers from concept drift: F1 drops from 0.905 to 0.465 when unseen attack types emerge, recovering to 0.814 after retraining on the combined corpus."
+      "en": "As LLM-based agents increasingly browse the web on users' behalf, a natural question arises: can websites passively identify which underlying model powers an agent? Doing so would represent a significant security risk, enabling targeted attacks tailored to known model vulnerabilities. Across 14 frontier LLMs and four web environments spanning information retrieval and shopping tasks, we show that an agent's actions and interaction timings, captured via a passive JavaScript tracker, are sufficient to identify the underlying model with up to 96\\% F1. We formalise this attack surface by demonstrating that classifiers trained on agent actions generalise across model sizes and families. We further show that strong classifiers can be trained from few interaction traces and that agent identity can be inferred early within an episode. Injecting randomised timing delays between actions substantially degrades classifier performance, but does not provide robust protection: a classifier retrained on delayed traces largely recovers performance. We release our harness and a labelled corpus of agent traces \\href{https://github.com/KabakaWilliam/known_actions}{here}.",
+      "tr": "As LLM-based agents increasingly browse the web on users' behalf, a natural question arises: can websites passively identify which underlying model powers an agent? Doing so would represent a significant security risk, enabling targeted attacks tailored to known model vulnerabilities. Across 14 frontier LLMs and four web environments spanning information retrieval and shopping tasks, we show that an agent's actions and interaction timings, captured via a passive JavaScript tracker, are sufficient to identify the underlying model with up to 96\\% F1. We formalise this attack surface by demonstrating that classifiers trained on agent actions generalise across model sizes and families. We further show that strong classifiers can be trained from few interaction traces and that agent identity can be inferred early within an episode. Injecting randomised timing delays between actions substantially degrades classifier performance, but does not provide robust protection: a classifier retrained on delayed traces largely recovers performance. We release our harness and a labelled corpus of agent traces \\href{https://github.com/KabakaWilliam/known_actions}{here}."
     }
   },
   {
-    "id": "2605.13214v1",
-    "title": "Backdoor Channels Hidden in Latent Space: Cryptographic Undetectability in Modern Neural Networks",
+    "id": "2605.14750v1",
+    "title": "EVA: Editing for Versatile Alignment against Jailbreaks",
     "authors": [
-      "Marte Eggen",
-      "Eirik Reiestad",
-      "Kristian Gjøsteen",
-      "Inga Strümke"
+      "Yi Wang",
+      "Hongye Qiu",
+      "Yue Xu",
+      "Sibei Yang",
+      "Zhan Qin"
     ],
-    "published_date": "2026-05-13",
+    "published_date": "2026-05-14",
     "tags": [
       "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.14750v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.14750v1",
+    "content": {
+      "en": "Large Language Models (LLMs) and Vision Language Models (VLMs) have demonstrated impressive capabilities but remain vulnerable to jailbreaking attacks, where adversaries exploit textual or visual triggers to bypass safety guardrails. Recent defenses typically rely on safety fine-tuning or external filters to reduce the model's likelihood of producing harmful content. While effective to some extent, these methods often incur significant computational overheads and suffer from the safety utility trade-off, degrading the model's performance on benign tasks. To address these challenges, we propose EVA (Editing for Versatile Alignment against Jailbreaks), a novel framework that pioneers the application of direct model editing for safety alignment. EVA reframes safety alignment as a precise knowledge correction task. Instead of retraining massive parameters, EVA identifies and surgically edits specific neurons responsible for the model's susceptibility to harmful instructions, while leaving the vast majority of the model unchanged. By localizing the updates, EVA effectively neutralizes harmful behaviors without compromising the model's general reasoning capabilities. Extensive experiments demonstrate that EVA outperforms baselines in mitigating jailbreaks across both LLMs and VLMs, offering a precise and efficient solution for post-deployment safety alignment.",
+      "tr": "Large Language Models (LLMs) and Vision Language Models (VLMs) have demonstrated impressive capabilities but remain vulnerable to jailbreaking attacks, where adversaries exploit textual or visual triggers to bypass safety guardrails. Recent defenses typically rely on safety fine-tuning or external filters to reduce the model's likelihood of producing harmful content. While effective to some extent, these methods often incur significant computational overheads and suffer from the safety utility trade-off, degrading the model's performance on benign tasks. To address these challenges, we propose EVA (Editing for Versatile Alignment against Jailbreaks), a novel framework that pioneers the application of direct model editing for safety alignment. EVA reframes safety alignment as a precise knowledge correction task. Instead of retraining massive parameters, EVA identifies and surgically edits specific neurons responsible for the model's susceptibility to harmful instructions, while leaving the vast majority of the model unchanged. By localizing the updates, EVA effectively neutralizes harmful behaviors without compromising the model's general reasoning capabilities. Extensive experiments demonstrate that EVA outperforms baselines in mitigating jailbreaks across both LLMs and VLMs, offering a precise and efficient solution for post-deployment safety alignment."
+    }
+  },
+  {
+    "id": "2605.14605v1",
+    "title": "One Step to the Side: Why Defenses Against Malicious Finetuning Fail Under Adaptive Adversaries",
+    "authors": [
+      "Itay Zloczower",
+      "Eyal Lenga",
+      "Gilad Gressel",
+      "Yisroel Mirsky"
+    ],
+    "published_date": "2026-05-14",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2605.13214v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.13214v1",
+    "link": "http://arxiv.org/abs/2605.14605v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.14605v1",
     "content": {
-      "en": "Recent cryptographic results establish that neural networks can be backdoored such that no efficient algorithm can distinguish them from a clean model. These guarantees, however, have been confined to stylised architectures of limited practical relevance, leaving open whether comparable undetectability extends to modern, end-to-end trained networks. We construct such an attack mechanism for state-of-the-art architectures, closely aligned to the cryptographic notion of undetectability, by identifying backdoor channels as learned latent directions, and show that the question of undetectability reduces to a hypothesis test between two unknown distributions over model parameters, which we conjecture to be intractable in practice. The consequence of this reframing is significant: if exploitable channels within a network's latent space are statistically indistinguishable from naturally learned directions, an attacker need not introduce foreign structure but can instead exploit the geometry the network already possesses. Demonstrating the approach on ResNet and Vision Transformer architectures trained on standard image classification datasets, the attack achieves both consistently high success rates with negligible clean accuracy degradation, and resists a comprehensive suite of post-training defences, none of which neutralise the backdoor without rendering the model unusable. Our results establish that cryptographic backdoors need not be artefacts requiring exotic architectures or artificial constructions, but identifiable as latent properties inherent to the geometry of learned representations.",
-      "tr": "Recent cryptographic results establish that neural networks can be backdoored such that no efficient algorithm can distinguish them from a clean model. These guarantees, however, have been confined to stylised architectures of limited practical relevance, leaving open whether comparable undetectability extends to modern, end-to-end trained networks. We construct such an attack mechanism for state-of-the-art architectures, closely aligned to the cryptographic notion of undetectability, by identifying backdoor channels as learned latent directions, and show that the question of undetectability reduces to a hypothesis test between two unknown distributions over model parameters, which we conjecture to be intractable in practice. The consequence of this reframing is significant: if exploitable channels within a network's latent space are statistically indistinguishable from naturally learned directions, an attacker need not introduce foreign structure but can instead exploit the geometry the network already possesses. Demonstrating the approach on ResNet and Vision Transformer architectures trained on standard image classification datasets, the attack achieves both consistently high success rates with negligible clean accuracy degradation, and resists a comprehensive suite of post-training defences, none of which neutralise the backdoor without rendering the model unusable. Our results establish that cryptographic backdoors need not be artefacts requiring exotic architectures or artificial constructions, but identifiable as latent properties inherent to the geometry of learned representations."
+      "en": "Model providers increasingly release open weights or allow users to fine-tune foundation models through APIs. Although these models are safety-aligned before release, their safeguards can often be removed by fine-tuning on harmful data. Recent defenses aim to make models robust to such malicious fine-tuning, but they are largely evaluated only against fixed attacks that do not account for the defense. We show that these robustness claims are incomplete. Surveying 15 recent defenses, we identify several defense mechanisms and show that they share a single weakness: they obscure or misdirect the path to harmful behavior without removing the behavior itself. We then develop a unified adaptive attack that breaks defenses across all defense mechanisms. Our results show that current approaches do not provide robust security; they mainly stop the attacks they were designed against. We hope that our unified adaptive adversary for this domain will help future researchers and practitioners stress-test new defenses before deployment.",
+      "tr": "Model providers increasingly release open weights or allow users to fine-tune foundation models through APIs. Although these models are safety-aligned before release, their safeguards can often be removed by fine-tuning on harmful data. Recent defenses aim to make models robust to such malicious fine-tuning, but they are largely evaluated only against fixed attacks that do not account for the defense. We show that these robustness claims are incomplete. Surveying 15 recent defenses, we identify several defense mechanisms and show that they share a single weakness: they obscure or misdirect the path to harmful behavior without removing the behavior itself. We then develop a unified adaptive attack that breaks defenses across all defense mechanisms. Our results show that current approaches do not provide robust security; they mainly stop the attacks they were designed against. We hope that our unified adaptive adversary for this domain will help future researchers and practitioners stress-test new defenses before deployment."
     }
   },
   {
-    "id": "2605.13163v1",
-    "title": "LoREnc: Low-Rank Encryption for Securing Foundation Models and LoRA Adapters",
+    "id": "2605.14587v1",
+    "title": "Angel or Demon: Investigating the Plasticity Interventions' Impact on Backdoor Threats in Deep Reinforcement Learning",
     "authors": [
-      "Beomjin Ahn",
-      "Jungmin Kwon",
-      "Chanyong Jung",
-      "Jaewook Chung"
+      "Oubo Ma",
+      "Ruixiao Lin",
+      "Yang Dai",
+      "Jiahao Chen",
+      "Chunyi Zhou"
     ],
-    "published_date": "2026-05-13",
+    "published_date": "2026-05-14",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2605.14587v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.14587v1",
+    "content": {
+      "en": "Extensive research has highlighted the severe threats posed by backdoor attacks to deep reinforcement learning (DRL). However, prior studies primarily focus on vanilla scenarios, while plasticity interventions have emerged as indispensable built-in components of modern DRL agents. Despite their effectiveness in mitigating plasticity loss, the impact of these interventions on DRL backdoor vulnerabilities remains underexplored, and this lack of systematic investigation poses risks in practical DRL deployments. To bridge this gap, we empirically study 14,664 cases integrating representative interventions and attack scenarios. We find that only one intervention (i.e., SAM) exacerbates backdoor threats, while other interventions mitigate them. Pathological analysis identifies that the exacerbation is attributed to backdoor gradient amplification, while the mitigation stems from activation pathway disruption and representation space compression. From these findings, we derive two novel insights: (1) a conceptual framework SCC for robust backdoor injection that deconstructs the mechanistic interplay between interventions and backdoors in DRL, and (2) abnormal loss landscape sharpness as a key indicator for DRL backdoor detection.",
+      "tr": "Extensive research has highlighted the severe threats posed by backdoor attacks to deep reinforcement learning (DRL). However, prior studies primarily focus on vanilla scenarios, while plasticity interventions have emerged as indispensable built-in components of modern DRL agents. Despite their effectiveness in mitigating plasticity loss, the impact of these interventions on DRL backdoor vulnerabilities remains underexplored, and this lack of systematic investigation poses risks in practical DRL deployments. To bridge this gap, we empirically study 14,664 cases integrating representative interventions and attack scenarios. We find that only one intervention (i.e., SAM) exacerbates backdoor threats, while other interventions mitigate them. Pathological analysis identifies that the exacerbation is attributed to backdoor gradient amplification, while the mitigation stems from activation pathway disruption and representation space compression. From these findings, we derive two novel insights: (1) a conceptual framework SCC for robust backdoor injection that deconstructs the mechanistic interplay between interventions and backdoors in DRL, and (2) abnormal loss landscape sharpness as a key indicator for DRL backdoor detection."
+    }
+  },
+  {
+    "id": "2605.14454v1",
+    "title": "LiSA: Lifelong Safety Adaptation via Conservative Policy Induction",
+    "authors": [
+      "Minbeom Kim",
+      "Lesly Miculicich",
+      "Bhavana Dalvi Mishra",
+      "Mihir Parmar",
+      "Phillip Wallis"
+    ],
+    "published_date": "2026-05-14",
+    "tags": [
+      "cs.LG",
+      "cs.CL",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2605.14454v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.14454v1",
+    "content": {
+      "en": "As AI agents move from chat interfaces to systems that read private data, call tools, and execute multi-step workflows, guardrails become a last line of defense against concrete deployment harms. In these settings, guardrail failures are no longer merely answer-quality errors: they can leak secrets, authorize unsafe actions, or block legitimate work. The hardest failures are often contextual: whether an action is acceptable depends on local privacy norms, organizational policies, and user expectations that resist pre-deployment specification. This creates a practical gap: guardrails must adapt to their own operating environments, yet deployment feedback is typically limited to sparse, noisy user-reported failures, and repeated fine-tuning is often impractical. To address this gap, we propose LiSA (Lifelong Safety Adaptation), a conservative policy induction framework that improves a fixed base guardrail through structured memory. LiSA converts occasional failures into reusable policy abstractions so that sparse reports can generalize beyond individual cases, adds conflict-aware local rules to prevent overgeneralization in mixed-label contexts, and applies evidence-aware confidence gating via a posterior lower bound, so that memory reuse scales with accumulated evidence rather than empirical accuracy alone. Across PrivacyLens+, ConFaide+, and AgentHarm, LiSA consistently outperforms strong memory-based baselines under sparse feedback, remains robust under noisy user feedback even at 20% label-flip rates, and pushes the latency--performance frontier beyond backbone model scaling. Ultimately, LiSA offers a practical path to secure AI agents against the unpredictable long tail of real-world edge risks.",
+      "tr": "As AI agents move from chat interfaces to systems that read private data, call tools, and execute multi-step workflows, guardrails become a last line of defense against concrete deployment harms. In these settings, guardrail failures are no longer merely answer-quality errors: they can leak secrets, authorize unsafe actions, or block legitimate work. The hardest failures are often contextual: whether an action is acceptable depends on local privacy norms, organizational policies, and user expectations that resist pre-deployment specification. This creates a practical gap: guardrails must adapt to their own operating environments, yet deployment feedback is typically limited to sparse, noisy user-reported failures, and repeated fine-tuning is often impractical. To address this gap, we propose LiSA (Lifelong Safety Adaptation), a conservative policy induction framework that improves a fixed base guardrail through structured memory. LiSA converts occasional failures into reusable policy abstractions so that sparse reports can generalize beyond individual cases, adds conflict-aware local rules to prevent overgeneralization in mixed-label contexts, and applies evidence-aware confidence gating via a posterior lower bound, so that memory reuse scales with accumulated evidence rather than empirical accuracy alone. Across PrivacyLens+, ConFaide+, and AgentHarm, LiSA consistently outperforms strong memory-based baselines under sparse feedback, remains robust under noisy user feedback even at 20% label-flip rates, and pushes the latency--performance frontier beyond backbone model scaling. Ultimately, LiSA offers a practical path to secure AI agents against the unpredictable long tail of real-world edge risks."
+    }
+  },
+  {
+    "id": "2605.14421v1",
+    "title": "MemLineage: Lineage-Guided Enforcement for LLM Agent Memory",
+    "authors": [
+      "Ciyan Ouyang",
+      "Rui Hou"
+    ],
+    "published_date": "2026-05-14",
     "tags": [
       "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.14421v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.14421v1",
+    "content": {
+      "en": "We introduce MemLineage, a defense for LLM agent memory that attaches both cryptographic provenance and LLM-mediated derivation lineage to every entry. Recent and concurrent work shows that untrusted content can be written into persistent agent state and re-enter later sessions as an instruction; the remaining systems question is how to preserve useful memory recall while preventing such state from justifying sensitive actions. MemLineage treats this as a chain-of-custody problem rather than a filtering problem. It is a six-module design around an RFC-6962 Merkle log over per-principal Ed25519-signed entries: a weighted derivation DAG records which retrieved entries influenced each new memory, and a max-of-strong-edges propagation rule makes Untrusted-Path Persistence hold for any chain whose attribution edges remain above threshold. The sensitive-action gate then refuses dispatches whose active justification descends from an external ancestor, while still allowing benign recall. We evaluate three defense cells against three memory-poisoning workloads on a deterministic mechanism-isolation harness; MemLineage is the only configuration in that harness that drives all three columns to zero ASR, while sub-millisecond per-operation overhead keeps it well below the noise floor of any LLM call. A Codex-backed AgentDojo bridge further separates strong-model behavior from defense-layer behavior: under an intentionally vulnerable tool-output profile, no-defense and signature-only baselines fail on all six banking pairs, while all MemLineage rows reduce strict AgentDojo ASR to zero. The core deterministic artifacts are byte-equal CI-verified; hosted-model AgentDojo and live-model sweeps are recorded as auditable logs rather than byte-pinned artifacts.",
+      "tr": "We introduce MemLineage, a defense for LLM agent memory that attaches both cryptographic provenance and LLM-mediated derivation lineage to every entry. Recent and concurrent work shows that untrusted content can be written into persistent agent state and re-enter later sessions as an instruction; the remaining systems question is how to preserve useful memory recall while preventing such state from justifying sensitive actions. MemLineage treats this as a chain-of-custody problem rather than a filtering problem. It is a six-module design around an RFC-6962 Merkle log over per-principal Ed25519-signed entries: a weighted derivation DAG records which retrieved entries influenced each new memory, and a max-of-strong-edges propagation rule makes Untrusted-Path Persistence hold for any chain whose attribution edges remain above threshold. The sensitive-action gate then refuses dispatches whose active justification descends from an external ancestor, while still allowing benign recall. We evaluate three defense cells against three memory-poisoning workloads on a deterministic mechanism-isolation harness; MemLineage is the only configuration in that harness that drives all three columns to zero ASR, while sub-millisecond per-operation overhead keeps it well below the noise floor of any LLM call. A Codex-backed AgentDojo bridge further separates strong-model behavior from defense-layer behavior: under an intentionally vulnerable tool-output profile, no-defense and signature-only baselines fail on all six banking pairs, while all MemLineage rows reduce strict AgentDojo ASR to zero. The core deterministic artifacts are byte-equal CI-verified; hosted-model AgentDojo and live-model sweeps are recorded as auditable logs rather than byte-pinned artifacts."
+    }
+  },
+  {
+    "id": "2605.14418v1",
+    "title": "The Great Pretender: A Stochasticity Problem in LLM Jailbreak",
+    "authors": [
+      "Jean-Philippe Monteuuis",
+      "Cong Chen",
+      "Jonathan Petit"
+    ],
+    "published_date": "2026-05-14",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.14418v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.14418v1",
+    "content": {
+      "en": "\"Oh-Oh, yes, I'm the great pretender. Pretending that I'm doing well. My need is such, I pretend too much...\" summarizes the state in the area of jailbreak creation and evaluation. You find this method to generate adversarial attacks proposed by a reputable institution (e.g., BoN from Anthropic or Crescendo from Microsoft Research). However, this method does not deliver on the promise claimed in the paper despite having top ASR scores against industry-grade LLMs. You successfully generate the jailbreak prompts against your target (open) model. However, the generated jailbreak prompt works against the target model with a 50% consecutive success rate (5 out of 10 attempts) despite having an 80% ASR (on paper) on the latest closed-source model (with a guardrail system)! This observation leads us to think. First, Attack Success Rate (ASR), the primary metric for LLM jailbreak benchmarking, is not a stable quantity. Second, published ASR numbers are therefore systematically inflated and incomparable across papers. Therefore, we wonder \"Why a successful jailbreak prompt does not perform consistently well against a target model on which the prompts have been optimized?\". To answer this question, we study the impact of stochasticity not only during attack evaluation but also during attack generation. Our evaluation includes several jailbreak attacks, models (different sizes and providers), and judges. In addition, we propose a new metric and two new frameworks (CAS-eval and CAS-gen). Our evaluation framework, CAS-eval, shows that an attack can have an ASR drop of up to 30 percentage points when a jailbreak prompt needs to succeed on more than one attempt. Thankfully, our attack generation framework (CAS-gen) improves previous jailbreak methods and helps them recover this loss of 30 percentage points!",
+      "tr": "\"Oh-Oh, yes, I'm the great pretender. Pretending that I'm doing well. My need is such, I pretend too much...\" summarizes the state in the area of jailbreak creation and evaluation. You find this method to generate adversarial attacks proposed by a reputable institution (e.g., BoN from Anthropic or Crescendo from Microsoft Research). However, this method does not deliver on the promise claimed in the paper despite having top ASR scores against industry-grade LLMs. You successfully generate the jailbreak prompts against your target (open) model. However, the generated jailbreak prompt works against the target model with a 50% consecutive success rate (5 out of 10 attempts) despite having an 80% ASR (on paper) on the latest closed-source model (with a guardrail system)! This observation leads us to think. First, Attack Success Rate (ASR), the primary metric for LLM jailbreak benchmarking, is not a stable quantity. Second, published ASR numbers are therefore systematically inflated and incomparable across papers. Therefore, we wonder \"Why a successful jailbreak prompt does not perform consistently well against a target model on which the prompts have been optimized?\". To answer this question, we study the impact of stochasticity not only during attack evaluation but also during attack generation. Our evaluation includes several jailbreak attacks, models (different sizes and providers), and judges. In addition, we propose a new metric and two new frameworks (CAS-eval and CAS-gen). Our evaluation framework, CAS-eval, shows that an attack can have an ASR drop of up to 30 percentage points when a jailbreak prompt needs to succeed on more than one attempt. Thankfully, our attack generation framework (CAS-gen) improves previous jailbreak methods and helps them recover this loss of 30 percentage points!"
+    }
+  },
+  {
+    "id": "2605.14396v1",
+    "title": "Systematic Discovery of Semantic Attacks in Online Map Construction through Conditional Diffusion",
+    "authors": [
+      "Chenyi Wang",
+      "Ruoyu Song",
+      "Raymond Muller",
+      "Jean-Philippe Monteuuis",
+      "Jonathan Petit"
+    ],
+    "published_date": "2026-05-14",
+    "tags": [
       "cs.CV",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.13163v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.13163v1",
-    "content": {
-      "en": "Foundation models and low-rank adapters enable efficient on-device generative AI but raise risks such as intellectual property leakage and model recovery attacks. Existing defenses are often impractical because they require retraining or access to the original dataset. We propose LoREnc, a training-free framework that secures both FMs and adapters via spectral truncation and compensation. LoREnc suppresses dominant low-rank components of FM weights, compensates for the missing information in authorized adapters, and further applies orthogonal reparameterization to obscure structural fingerprints of the protected adapter. Unauthorized users produce structurally collapsed outputs, while authorized users recover exact performance. Experiments demonstrate that LoREnc provides strong protection against model recovery with under 1% computational overhead.",
-      "tr": "Foundation models and low-rank adapters enable efficient on-device generative AI but raise risks such as intellectual property leakage and model recovery attacks. Existing defenses are often impractical because they require retraining or access to the original dataset. We propose LoREnc, a training-free framework that secures both FMs and adapters via spectral truncation and compensation. LoREnc suppresses dominant low-rank components of FM weights, compensates for the missing information in authorized adapters, and further applies orthogonal reparameterization to obscure structural fingerprints of the protected adapter. Unauthorized users produce structurally collapsed outputs, while authorized users recover exact performance. Experiments demonstrate that LoREnc provides strong protection against model recovery with under 1% computational overhead."
-    }
-  },
-  {
-    "id": "2605.13138v1",
-    "title": "Code-Centric Detection of Vulnerability-Fixing Commits: A Unified Benchmark and Empirical Study",
-    "authors": [
-      "Nils Loose",
-      "Joseph Bienhüls",
-      "Kristoffer Hempel",
-      "Felix Mächtle",
-      "Thomas Eisenbarth"
-    ],
-    "published_date": "2026-05-13",
-    "tags": [
-      "cs.SE",
       "cs.CR",
-      "cs.LG"
+      "cs.LG",
+      "cs.RO"
     ],
-    "link": "http://arxiv.org/abs/2605.13138v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.13138v1",
+    "link": "http://arxiv.org/abs/2605.14396v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.14396v1",
     "content": {
-      "en": "Automated detection of vulnerability-fixing commits (VFCs) is critical for timely security patch deployment, as advisory databases lag patch releases by a median of 25 days and many fixes never receive advisories. We present a comprehensive evaluation of code language model based VFC detection through a unified framework consolidating over 20 fragmented datasets spanning more than 180000 commits. Across over 180 experiments with fine-tuned models from 125 M to 14 B parameters, we find no evidence that models acquire transferable security-relevant code understanding from code changes alone. When commit messages are available, they dominate model attention, and when removed, an attribution analysis shows that enriching diffs with additional intra-procedural semantic context does not shift model attention toward the code changes. Group-stratified evaluation exposes approximately 17% performance drops compared to random splits, while temporal splits on aggregated datasets prove unreliable due to compositional shift in the underlying project distributions. At a false positive rate of 0.5% all fine-tuned code-only models miss over 93% of vulnerabilities. Larger and more diverse training data or generative approaches show preliminary improvements but do not resolve the underlying limitations. To support future research on code-centric VFC detection, we release our unified framework and evaluation suite.",
-      "tr": "Automated detection of vulnerability-fixing commits (VFCs) is critical for timely security patch deployment, as advisory databases lag patch releases by a median of 25 days and many fixes never receive advisories. We present a comprehensive evaluation of code language model based VFC detection through a unified framework consolidating over 20 fragmented datasets spanning more than 180000 commits. Across over 180 experiments with fine-tuned models from 125 M to 14 B parameters, we find no evidence that models acquire transferable security-relevant code understanding from code changes alone. When commit messages are available, they dominate model attention, and when removed, an attribution analysis shows that enriching diffs with additional intra-procedural semantic context does not shift model attention toward the code changes. Group-stratified evaluation exposes approximately 17% performance drops compared to random splits, while temporal splits on aggregated datasets prove unreliable due to compositional shift in the underlying project distributions. At a false positive rate of 0.5% all fine-tuned code-only models miss over 93% of vulnerabilities. Larger and more diverse training data or generative approaches show preliminary improvements but do not resolve the underlying limitations. To support future research on code-centric VFC detection, we release our unified framework and evaluation suite."
-    }
-  },
-  {
-    "id": "2605.13115v1",
-    "title": "DiffusionHijack: Supply-Chain PRNG Backdoor Attack on Diffusion Models and Quantum Random Number Defense",
-    "authors": [
-      "Ziyang You",
-      "Liling Zheng",
-      "Xiaoke Yang",
-      "Xuxing Lu"
-    ],
-    "published_date": "2026-05-13",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.13115v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.13115v1",
-    "content": {
-      "en": "Diffusion models depend on pseudo-random number generators (PRNGs) for latent noise sampling. We present DiffusionHijack, a supply-chain backdoor attack that hijacks the PRNG to deterministically control generated images. A malicious PRNG, injected via compromised packages, forces pixel-perfect reproduction of attacker-chosen content (SSIM = 1.00, N = 100 trials) on Stable Diffusion v1.4, v1.5, and SDXL -- without modifying model weights. The attack is inherently undetectable by existing model auditing and content moderation mechanisms, as it operates entirely outside the neural network computation graph. The attack remains effective under stochastic sampling (eta > 0), bypasses CLIP-based safety checkers (98-100% success), and operates independently of the user's prompt. As a countermeasure, we replace the PRNG with a quantum random number generator (QRNG), which provides information-theoretic unpredictability. Across N = 100 prompt-model combinations, QRNG defense completely neutralizes the attack, reducing output similarity to random baseline levels (SSIM < 0.20 for SD 1.x models, < 0.45 for SDXL). This work exposes a previously overlooked supply-chain vulnerability and offers a hardware-level fundamental mitigation for generative AI systems.",
-      "tr": "Diffusion models depend on pseudo-random number generators (PRNGs) for latent noise sampling. We present DiffusionHijack, a supply-chain backdoor attack that hijacks the PRNG to deterministically control generated images. A malicious PRNG, injected via compromised packages, forces pixel-perfect reproduction of attacker-chosen content (SSIM = 1.00, N = 100 trials) on Stable Diffusion v1.4, v1.5, and SDXL -- without modifying model weights. The attack is inherently undetectable by existing model auditing and content moderation mechanisms, as it operates entirely outside the neural network computation graph. The attack remains effective under stochastic sampling (eta > 0), bypasses CLIP-based safety checkers (98-100% success), and operates independently of the user's prompt. As a countermeasure, we replace the PRNG with a quantum random number generator (QRNG), which provides information-theoretic unpredictability. Across N = 100 prompt-model combinations, QRNG defense completely neutralizes the attack, reducing output similarity to random baseline levels (SSIM < 0.20 for SD 1.x models, < 0.45 for SDXL). This work exposes a previously overlooked supply-chain vulnerability and offers a hardware-level fundamental mitigation for generative AI systems."
+      "en": "Autonomous vehicles depend on online HD map construction to perceive lane boundaries, dividers, and pedestrian crossings -- safety-critical road elements that directly govern motion planning. While existing pixel perturbation attacks can disrupt the mapping, they can be neutralized by standard adversarial defenses. We present MIRAGE, a framework for systematic discovery of semantic attacks that bypass adversarial defenses and degrade mapping predictions by finding plausible environmental variation (e.g. shadows, wet roads). MIRAGE exploits the latent manifold of real-world data learned by diffusion models, and searches for semantically mutated scenes neighboring the ground truth with the same road topology yet mislead the mapping predictions. We evaluate MIRAGE on nuScenes and demonstrate two attacks: (1) boundary removal, suppressing 57.7% of detections and corrupting 96% of planned trajectories; and (2) boundary injection, the only method that successfully injects fictitious boundaries, while pixel PGD and AdvPatch fail entirely. Both attacks remain potent under various adversarial defenses. We use two independent VLM judges to quantify realism, where MIRAGE passes as realistic 80--84% of the time (vs. 97--99% for clean nuScenes), while AdvPatch only 0--9%. Our findings expose a categorical gap in current adversarial defenses: semantic-level perturbations that manifest as legitimate environmental variation are substantially harder to mitigate than pixel-level perturbations.",
+      "tr": "Autonomous vehicles depend on online HD map construction to perceive lane boundaries, dividers, and pedestrian crossings -- safety-critical road elements that directly govern motion planning. While existing pixel perturbation attacks can disrupt the mapping, they can be neutralized by standard adversarial defenses. We present MIRAGE, a framework for systematic discovery of semantic attacks that bypass adversarial defenses and degrade mapping predictions by finding plausible environmental variation (e.g. shadows, wet roads). MIRAGE exploits the latent manifold of real-world data learned by diffusion models, and searches for semantically mutated scenes neighboring the ground truth with the same road topology yet mislead the mapping predictions. We evaluate MIRAGE on nuScenes and demonstrate two attacks: (1) boundary removal, suppressing 57.7% of detections and corrupting 96% of planned trajectories; and (2) boundary injection, the only method that successfully injects fictitious boundaries, while pixel PGD and AdvPatch fail entirely. Both attacks remain potent under various adversarial defenses. We use two independent VLM judges to quantify realism, where MIRAGE passes as realistic 80--84% of the time (vs. 97--99% for clean nuScenes), while AdvPatch only 0--9%. Our findings expose a categorical gap in current adversarial defenses: semantic-level perturbations that manifest as legitimate environmental variation are substantially harder to mitigate than pixel-level perturbations."
     }
   }
 ]
