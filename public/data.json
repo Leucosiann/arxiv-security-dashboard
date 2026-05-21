@@ -1,223 +1,205 @@
 [
   {
-    "id": "2605.15030v1",
-    "title": "WARD: Adversarially Robust Defense of Web Agents Against Prompt Injections",
+    "id": "2605.21146v1",
+    "title": "Detecting Trojaned DNNs via Spectral Regression Analysis",
     "authors": [
-      "Tri Cao",
-      "Yulin Chen",
-      "Hieu Cao",
-      "Yibo Li",
-      "Khoi Le"
+      "Samuele Pasini",
+      "Jinhan Kim",
+      "Paolo Tonella"
     ],
-    "published_date": "2026-05-14",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2605.15030v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.15030v1",
-    "content": {
-      "en": "Web agents can autonomously complete online tasks by interacting with websites, but their exposure to open web environments makes them vulnerable to prompt injection attacks embedded in HTML content or visual interfaces. Existing guard models still suffer from limited generalization to unseen domains and attack patterns, high false positive rates on benign content, reduced deployment efficiency due to added latency at each step, and vulnerability to adversarial attacks that evolve over time or directly target the guard itself. To address these limitations, we propose WARD (Web Agent Robust Defense against Prompt Injection), a practical guard model for secure and efficient web agents. WARD is built on WARD-Base, a large-scale dataset with around 177K samples collected from 719 high-traffic URLs and platforms, and WARD-PIG, a dedicated dataset designed for prompt injection attacks targeting the guard model. We further introduce A3T, an adaptive adversarial attack training framework that iteratively strengthens WARD through a memory-based attacker and guard co-evolution process. Extensive experiments show that WARD achieves nearly perfect recall on out-of-distribution benchmarks, maintains low false positive rates to preserve agent utility, remains robust against guard-targeted and adaptive attacks under substantial distribution shifts, and runs efficiently in parallel with the agent without introducing additional latency.",
-      "tr": "Web agents can autonomously complete online tasks by interacting with websites, but their exposure to open web environments makes them vulnerable to prompt injection attacks embedded in HTML content or visual interfaces. Existing guard models still suffer from limited generalization to unseen domains and attack patterns, high false positive rates on benign content, reduced deployment efficiency due to added latency at each step, and vulnerability to adversarial attacks that evolve over time or directly target the guard itself. To address these limitations, we propose WARD (Web Agent Robust Defense against Prompt Injection), a practical guard model for secure and efficient web agents. WARD is built on WARD-Base, a large-scale dataset with around 177K samples collected from 719 high-traffic URLs and platforms, and WARD-PIG, a dedicated dataset designed for prompt injection attacks targeting the guard model. We further introduce A3T, an adaptive adversarial attack training framework that iteratively strengthens WARD through a memory-based attacker and guard co-evolution process. Extensive experiments show that WARD achieves nearly perfect recall on out-of-distribution benchmarks, maintains low false positive rates to preserve agent utility, remains robust against guard-targeted and adaptive attacks under substantial distribution shifts, and runs efficiently in parallel with the agent without introducing additional latency."
-    }
-  },
-  {
-    "id": "2605.14859v1",
-    "title": "Do Coding Agents Understand Least-Privilege Authorization?",
-    "authors": [
-      "Zheng Yan",
-      "Jingxiang Weng",
-      "Charles Chen",
-      "Dengyun Peng",
-      "Ethan Qin"
-    ],
-    "published_date": "2026-05-14",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2605.14859v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.14859v1",
-    "content": {
-      "en": "As coding agents gain access to shells, repositories, and user files, least-privilege authorization becomes a prerequisite for safe deployment: an agent should receive enough authority to complete the task, without unnecessary authority that exposes sensitive surfaces.To study whether current models can infer this boundary themselves, we first introduce permission-boundary inference, where a model maps a task instruction and terminal environment to a file-level read/write/execute policy, and AuthBench, a benchmark of 120 realistic terminal tasks with human-reviewed permission labels and executable validators for utility and attack outcomes.AuthBench shows that authorization is not a simple conservative-versus-permissive calibration problem: frontier models often omit permissions required by the execution chain while also granting unused or sensitive accesses.Increasing inference-time reasoning does not resolve this mismatch. Instead, each model moves toward a model-specific authorization attractor: more reasoning makes it more consistent in its own failure mode, whether broad-but-exposed or tight-but-brittle.This suggests that direct policy generation is the bottleneck, because a single generation must both discover all necessary accesses and reject all unnecessary ones.We therefore propose Sufficiency-Tightness Decomposition, which first generates a coverage-oriented policy by forward-simulating the task and then audits each granted entry for grounding and sensitivity.Across tested models, this decomposition improves sensitive-task success by up to 15.8% on tightness-biased models while reducing attack success across all evaluated models.",
-      "tr": "As coding agents gain access to shells, repositories, and user files, least-privilege authorization becomes a prerequisite for safe deployment: an agent should receive enough authority to complete the task, without unnecessary authority that exposes sensitive surfaces.To study whether current models can infer this boundary themselves, we first introduce permission-boundary inference, where a model maps a task instruction and terminal environment to a file-level read/write/execute policy, and AuthBench, a benchmark of 120 realistic terminal tasks with human-reviewed permission labels and executable validators for utility and attack outcomes.AuthBench shows that authorization is not a simple conservative-versus-permissive calibration problem: frontier models often omit permissions required by the execution chain while also granting unused or sensitive accesses.Increasing inference-time reasoning does not resolve this mismatch. Instead, each model moves toward a model-specific authorization attractor: more reasoning makes it more consistent in its own failure mode, whether broad-but-exposed or tight-but-brittle.This suggests that direct policy generation is the bottleneck, because a single generation must both discover all necessary accesses and reject all unnecessary ones.We therefore propose Sufficiency-Tightness Decomposition, which first generates a coverage-oriented policy by forward-simulating the task and then audits each granted entry for grounding and sensitivity.Across tested models, this decomposition improves sensitive-task success by up to 15.8% on tightness-biased models while reducing attack success across all evaluated models."
-    }
-  },
-  {
-    "id": "2605.14786v1",
-    "title": "Known By Their Actions: Fingerprinting LLM Browser Agents via UI Traces",
-    "authors": [
-      "William Lugoloobi",
-      "Samuelle Marro",
-      "Jabez Magomere",
-      "Joss Wright",
-      "Chris Russell"
-    ],
-    "published_date": "2026-05-14",
+    "published_date": "2026-05-20",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.HC",
-      "cs.LG"
+      "cs.SE"
     ],
-    "link": "http://arxiv.org/abs/2605.14786v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.14786v1",
+    "link": "http://arxiv.org/abs/2605.21146v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.21146v1",
     "content": {
-      "en": "As LLM-based agents increasingly browse the web on users' behalf, a natural question arises: can websites passively identify which underlying model powers an agent? Doing so would represent a significant security risk, enabling targeted attacks tailored to known model vulnerabilities. Across 14 frontier LLMs and four web environments spanning information retrieval and shopping tasks, we show that an agent's actions and interaction timings, captured via a passive JavaScript tracker, are sufficient to identify the underlying model with up to 96\\% F1. We formalise this attack surface by demonstrating that classifiers trained on agent actions generalise across model sizes and families. We further show that strong classifiers can be trained from few interaction traces and that agent identity can be inferred early within an episode. Injecting randomised timing delays between actions substantially degrades classifier performance, but does not provide robust protection: a classifier retrained on delayed traces largely recovers performance. We release our harness and a labelled corpus of agent traces \\href{https://github.com/KabakaWilliam/known_actions}{here}.",
-      "tr": "As LLM-based agents increasingly browse the web on users' behalf, a natural question arises: can websites passively identify which underlying model powers an agent? Doing so would represent a significant security risk, enabling targeted attacks tailored to known model vulnerabilities. Across 14 frontier LLMs and four web environments spanning information retrieval and shopping tasks, we show that an agent's actions and interaction timings, captured via a passive JavaScript tracker, are sufficient to identify the underlying model with up to 96\\% F1. We formalise this attack surface by demonstrating that classifiers trained on agent actions generalise across model sizes and families. We further show that strong classifiers can be trained from few interaction traces and that agent identity can be inferred early within an episode. Injecting randomised timing delays between actions substantially degrades classifier performance, but does not provide robust protection: a classifier retrained on delayed traces largely recovers performance. We release our harness and a labelled corpus of agent traces \\href{https://github.com/KabakaWilliam/known_actions}{here}."
+      "en": "Modern DNNs are repeatedly fine-tuned to incorporate new data and functionality. This evolutionary workflow introduces a security risk when updated data cannot be fully trusted, as adversaries may implant Trojans during fine-tuning. We present MIST, a Trojan detection approach that analyzes how a model's internal representations change during fine-tuning. Rather than attempting to reconstruct trigger conditions, MIST characterizes benign model evolution using pre-activation spectra and flags updates whose spectral deviations are inconsistent with this reference. This framing treats Trojan detection as a regression problem over model updates. An empirical evaluation across four datasets and eight Trojan attacks shows that spectral distances reliably distinguish Trojaned updates from clean fine-tuning. MIST outperforms state-of-the-art detection accuracy after a single update, without requiring any knowledge about the poisoned data or the trigger, and remains effective under multi-step benign evolution, with graceful and bounded degradation. These results indicate that spectral evolution provides a stable and assumption-light signal for detecting malicious model updates.",
+      "tr": "Modern DNNs are repeatedly fine-tuned to incorporate new data and functionality. This evolutionary workflow introduces a security risk when updated data cannot be fully trusted, as adversaries may implant Trojans during fine-tuning. We present MIST, a Trojan detection approach that analyzes how a model's internal representations change during fine-tuning. Rather than attempting to reconstruct trigger conditions, MIST characterizes benign model evolution using pre-activation spectra and flags updates whose spectral deviations are inconsistent with this reference. This framing treats Trojan detection as a regression problem over model updates. An empirical evaluation across four datasets and eight Trojan attacks shows that spectral distances reliably distinguish Trojaned updates from clean fine-tuning. MIST outperforms state-of-the-art detection accuracy after a single update, without requiring any knowledge about the poisoned data or the trigger, and remains effective under multi-step benign evolution, with graceful and bounded degradation. These results indicate that spectral evolution provides a stable and assumption-light signal for detecting malicious model updates."
     }
   },
   {
-    "id": "2605.14750v1",
-    "title": "EVA: Editing for Versatile Alignment against Jailbreaks",
+    "id": "2605.20975v1",
+    "title": "Choose Wisely and Privately: Proactive Client Selection for Fair and Efficient Federated Learning",
     "authors": [
-      "Yi Wang",
-      "Hongye Qiu",
-      "Yue Xu",
-      "Sibei Yang",
-      "Zhan Qin"
+      "Adda Akram Bendoukha",
+      "Heber Hwang Arcolezi",
+      "Nesrine Kaaniche",
+      "Aymen Boudguiga"
     ],
-    "published_date": "2026-05-14",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2605.14750v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.14750v1",
-    "content": {
-      "en": "Large Language Models (LLMs) and Vision Language Models (VLMs) have demonstrated impressive capabilities but remain vulnerable to jailbreaking attacks, where adversaries exploit textual or visual triggers to bypass safety guardrails. Recent defenses typically rely on safety fine-tuning or external filters to reduce the model's likelihood of producing harmful content. While effective to some extent, these methods often incur significant computational overheads and suffer from the safety utility trade-off, degrading the model's performance on benign tasks. To address these challenges, we propose EVA (Editing for Versatile Alignment against Jailbreaks), a novel framework that pioneers the application of direct model editing for safety alignment. EVA reframes safety alignment as a precise knowledge correction task. Instead of retraining massive parameters, EVA identifies and surgically edits specific neurons responsible for the model's susceptibility to harmful instructions, while leaving the vast majority of the model unchanged. By localizing the updates, EVA effectively neutralizes harmful behaviors without compromising the model's general reasoning capabilities. Extensive experiments demonstrate that EVA outperforms baselines in mitigating jailbreaks across both LLMs and VLMs, offering a precise and efficient solution for post-deployment safety alignment.",
-      "tr": "Large Language Models (LLMs) and Vision Language Models (VLMs) have demonstrated impressive capabilities but remain vulnerable to jailbreaking attacks, where adversaries exploit textual or visual triggers to bypass safety guardrails. Recent defenses typically rely on safety fine-tuning or external filters to reduce the model's likelihood of producing harmful content. While effective to some extent, these methods often incur significant computational overheads and suffer from the safety utility trade-off, degrading the model's performance on benign tasks. To address these challenges, we propose EVA (Editing for Versatile Alignment against Jailbreaks), a novel framework that pioneers the application of direct model editing for safety alignment. EVA reframes safety alignment as a precise knowledge correction task. Instead of retraining massive parameters, EVA identifies and surgically edits specific neurons responsible for the model's susceptibility to harmful instructions, while leaving the vast majority of the model unchanged. By localizing the updates, EVA effectively neutralizes harmful behaviors without compromising the model's general reasoning capabilities. Extensive experiments demonstrate that EVA outperforms baselines in mitigating jailbreaks across both LLMs and VLMs, offering a precise and efficient solution for post-deployment safety alignment."
-    }
-  },
-  {
-    "id": "2605.14605v1",
-    "title": "One Step to the Side: Why Defenses Against Malicious Finetuning Fail Under Adaptive Adversaries",
-    "authors": [
-      "Itay Zloczower",
-      "Eyal Lenga",
-      "Gilad Gressel",
-      "Yisroel Mirsky"
-    ],
-    "published_date": "2026-05-14",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.14605v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.14605v1",
-    "content": {
-      "en": "Model providers increasingly release open weights or allow users to fine-tune foundation models through APIs. Although these models are safety-aligned before release, their safeguards can often be removed by fine-tuning on harmful data. Recent defenses aim to make models robust to such malicious fine-tuning, but they are largely evaluated only against fixed attacks that do not account for the defense. We show that these robustness claims are incomplete. Surveying 15 recent defenses, we identify several defense mechanisms and show that they share a single weakness: they obscure or misdirect the path to harmful behavior without removing the behavior itself. We then develop a unified adaptive attack that breaks defenses across all defense mechanisms. Our results show that current approaches do not provide robust security; they mainly stop the attacks they were designed against. We hope that our unified adaptive adversary for this domain will help future researchers and practitioners stress-test new defenses before deployment.",
-      "tr": "Model providers increasingly release open weights or allow users to fine-tune foundation models through APIs. Although these models are safety-aligned before release, their safeguards can often be removed by fine-tuning on harmful data. Recent defenses aim to make models robust to such malicious fine-tuning, but they are largely evaluated only against fixed attacks that do not account for the defense. We show that these robustness claims are incomplete. Surveying 15 recent defenses, we identify several defense mechanisms and show that they share a single weakness: they obscure or misdirect the path to harmful behavior without removing the behavior itself. We then develop a unified adaptive attack that breaks defenses across all defense mechanisms. Our results show that current approaches do not provide robust security; they mainly stop the attacks they were designed against. We hope that our unified adaptive adversary for this domain will help future researchers and practitioners stress-test new defenses before deployment."
-    }
-  },
-  {
-    "id": "2605.14587v1",
-    "title": "Angel or Demon: Investigating the Plasticity Interventions' Impact on Backdoor Threats in Deep Reinforcement Learning",
-    "authors": [
-      "Oubo Ma",
-      "Ruixiao Lin",
-      "Yang Dai",
-      "Jiahao Chen",
-      "Chunyi Zhou"
-    ],
-    "published_date": "2026-05-14",
+    "published_date": "2026-05-20",
     "tags": [
       "cs.LG",
-      "cs.AI",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2605.14587v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.14587v1",
+    "link": "http://arxiv.org/abs/2605.20975v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.20975v1",
     "content": {
-      "en": "Extensive research has highlighted the severe threats posed by backdoor attacks to deep reinforcement learning (DRL). However, prior studies primarily focus on vanilla scenarios, while plasticity interventions have emerged as indispensable built-in components of modern DRL agents. Despite their effectiveness in mitigating plasticity loss, the impact of these interventions on DRL backdoor vulnerabilities remains underexplored, and this lack of systematic investigation poses risks in practical DRL deployments. To bridge this gap, we empirically study 14,664 cases integrating representative interventions and attack scenarios. We find that only one intervention (i.e., SAM) exacerbates backdoor threats, while other interventions mitigate them. Pathological analysis identifies that the exacerbation is attributed to backdoor gradient amplification, while the mitigation stems from activation pathway disruption and representation space compression. From these findings, we derive two novel insights: (1) a conceptual framework SCC for robust backdoor injection that deconstructs the mechanistic interplay between interventions and backdoors in DRL, and (2) abnormal loss landscape sharpness as a key indicator for DRL backdoor detection.",
-      "tr": "Extensive research has highlighted the severe threats posed by backdoor attacks to deep reinforcement learning (DRL). However, prior studies primarily focus on vanilla scenarios, while plasticity interventions have emerged as indispensable built-in components of modern DRL agents. Despite their effectiveness in mitigating plasticity loss, the impact of these interventions on DRL backdoor vulnerabilities remains underexplored, and this lack of systematic investigation poses risks in practical DRL deployments. To bridge this gap, we empirically study 14,664 cases integrating representative interventions and attack scenarios. We find that only one intervention (i.e., SAM) exacerbates backdoor threats, while other interventions mitigate them. Pathological analysis identifies that the exacerbation is attributed to backdoor gradient amplification, while the mitigation stems from activation pathway disruption and representation space compression. From these findings, we derive two novel insights: (1) a conceptual framework SCC for robust backdoor injection that deconstructs the mechanistic interplay between interventions and backdoors in DRL, and (2) abnormal loss landscape sharpness as a key indicator for DRL backdoor detection."
+      "en": "Federated Learning enables collaborative model training across decentralized data sources without data transfer. Averaging-based FL is limited by the presence of non-IID data, which negatively impacts convergence speed and final model accuracy. Conventional alternatives suffer from significant inefficiency. Clients with noisy or highly heterogeneous data contribute expensive gradient computations that are either discarded or heavily down-weighted before aggregation. These reactive approaches waste computational resources, require more communication rounds and result in unnecessary privacy exposure. In this paper, we propose a proactive client selection framework that aims to find an optimal federation of clients whose combined data match utility and fairness requirements before training begins. Our method relies on mutual information computed from differentially private contingency tables to quantify the relevance of cross-feature correlations in the union dataset. We introduce a Potential Federation Loss (PFL) over the set of fixed-size federations, which balances two objectives. Maximizing collective data utility while ensuring fair cross-features correlations to prevent group unfairness. Client selection is expressed as an optimal subset search problem over the PFL objective, which we solve using simulated annealing under strong differential privacy guarantees for clients' local statistics. Experimental results on four benchmarks show faster, fairer, and more accurate models trained on optimally found federations, compared to uniform sampling, even when state-of-the-art adaptive aggregation or sampling strategies are employed.",
+      "tr": "Federated Learning enables collaborative model training across decentralized data sources without data transfer. Averaging-based FL is limited by the presence of non-IID data, which negatively impacts convergence speed and final model accuracy. Conventional alternatives suffer from significant inefficiency. Clients with noisy or highly heterogeneous data contribute expensive gradient computations that are either discarded or heavily down-weighted before aggregation. These reactive approaches waste computational resources, require more communication rounds and result in unnecessary privacy exposure. In this paper, we propose a proactive client selection framework that aims to find an optimal federation of clients whose combined data match utility and fairness requirements before training begins. Our method relies on mutual information computed from differentially private contingency tables to quantify the relevance of cross-feature correlations in the union dataset. We introduce a Potential Federation Loss (PFL) over the set of fixed-size federations, which balances two objectives. Maximizing collective data utility while ensuring fair cross-features correlations to prevent group unfairness. Client selection is expressed as an optimal subset search problem over the PFL objective, which we solve using simulated annealing under strong differential privacy guarantees for clients' local statistics. Experimental results on four benchmarks show faster, fairer, and more accurate models trained on optimally found federations, compared to uniform sampling, even when state-of-the-art adaptive aggregation or sampling strategies are employed."
     }
   },
   {
-    "id": "2605.14454v1",
-    "title": "LiSA: Lifelong Safety Adaptation via Conservative Policy Induction",
+    "id": "2605.20971v1",
+    "title": "Comparative Evaluation of Deep Learning Models for Fake Image Detection",
     "authors": [
-      "Minbeom Kim",
-      "Lesly Miculicich",
-      "Bhavana Dalvi Mishra",
-      "Mihir Parmar",
-      "Phillip Wallis"
+      "Akhitha Pakala",
+      "Mohammed Mahir Rahman",
+      "Shahzad Memon",
+      "Tauseef Ahmed"
     ],
-    "published_date": "2026-05-14",
-    "tags": [
-      "cs.LG",
-      "cs.CL",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2605.14454v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.14454v1",
-    "content": {
-      "en": "As AI agents move from chat interfaces to systems that read private data, call tools, and execute multi-step workflows, guardrails become a last line of defense against concrete deployment harms. In these settings, guardrail failures are no longer merely answer-quality errors: they can leak secrets, authorize unsafe actions, or block legitimate work. The hardest failures are often contextual: whether an action is acceptable depends on local privacy norms, organizational policies, and user expectations that resist pre-deployment specification. This creates a practical gap: guardrails must adapt to their own operating environments, yet deployment feedback is typically limited to sparse, noisy user-reported failures, and repeated fine-tuning is often impractical. To address this gap, we propose LiSA (Lifelong Safety Adaptation), a conservative policy induction framework that improves a fixed base guardrail through structured memory. LiSA converts occasional failures into reusable policy abstractions so that sparse reports can generalize beyond individual cases, adds conflict-aware local rules to prevent overgeneralization in mixed-label contexts, and applies evidence-aware confidence gating via a posterior lower bound, so that memory reuse scales with accumulated evidence rather than empirical accuracy alone. Across PrivacyLens+, ConFaide+, and AgentHarm, LiSA consistently outperforms strong memory-based baselines under sparse feedback, remains robust under noisy user feedback even at 20% label-flip rates, and pushes the latency--performance frontier beyond backbone model scaling. Ultimately, LiSA offers a practical path to secure AI agents against the unpredictable long tail of real-world edge risks.",
-      "tr": "As AI agents move from chat interfaces to systems that read private data, call tools, and execute multi-step workflows, guardrails become a last line of defense against concrete deployment harms. In these settings, guardrail failures are no longer merely answer-quality errors: they can leak secrets, authorize unsafe actions, or block legitimate work. The hardest failures are often contextual: whether an action is acceptable depends on local privacy norms, organizational policies, and user expectations that resist pre-deployment specification. This creates a practical gap: guardrails must adapt to their own operating environments, yet deployment feedback is typically limited to sparse, noisy user-reported failures, and repeated fine-tuning is often impractical. To address this gap, we propose LiSA (Lifelong Safety Adaptation), a conservative policy induction framework that improves a fixed base guardrail through structured memory. LiSA converts occasional failures into reusable policy abstractions so that sparse reports can generalize beyond individual cases, adds conflict-aware local rules to prevent overgeneralization in mixed-label contexts, and applies evidence-aware confidence gating via a posterior lower bound, so that memory reuse scales with accumulated evidence rather than empirical accuracy alone. Across PrivacyLens+, ConFaide+, and AgentHarm, LiSA consistently outperforms strong memory-based baselines under sparse feedback, remains robust under noisy user feedback even at 20% label-flip rates, and pushes the latency--performance frontier beyond backbone model scaling. Ultimately, LiSA offers a practical path to secure AI agents against the unpredictable long tail of real-world edge risks."
-    }
-  },
-  {
-    "id": "2605.14421v1",
-    "title": "MemLineage: Lineage-Guided Enforcement for LLM Agent Memory",
-    "authors": [
-      "Ciyan Ouyang",
-      "Rui Hou"
-    ],
-    "published_date": "2026-05-14",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2605.14421v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.14421v1",
-    "content": {
-      "en": "We introduce MemLineage, a defense for LLM agent memory that attaches both cryptographic provenance and LLM-mediated derivation lineage to every entry. Recent and concurrent work shows that untrusted content can be written into persistent agent state and re-enter later sessions as an instruction; the remaining systems question is how to preserve useful memory recall while preventing such state from justifying sensitive actions. MemLineage treats this as a chain-of-custody problem rather than a filtering problem. It is a six-module design around an RFC-6962 Merkle log over per-principal Ed25519-signed entries: a weighted derivation DAG records which retrieved entries influenced each new memory, and a max-of-strong-edges propagation rule makes Untrusted-Path Persistence hold for any chain whose attribution edges remain above threshold. The sensitive-action gate then refuses dispatches whose active justification descends from an external ancestor, while still allowing benign recall. We evaluate three defense cells against three memory-poisoning workloads on a deterministic mechanism-isolation harness; MemLineage is the only configuration in that harness that drives all three columns to zero ASR, while sub-millisecond per-operation overhead keeps it well below the noise floor of any LLM call. A Codex-backed AgentDojo bridge further separates strong-model behavior from defense-layer behavior: under an intentionally vulnerable tool-output profile, no-defense and signature-only baselines fail on all six banking pairs, while all MemLineage rows reduce strict AgentDojo ASR to zero. The core deterministic artifacts are byte-equal CI-verified; hosted-model AgentDojo and live-model sweeps are recorded as auditable logs rather than byte-pinned artifacts.",
-      "tr": "We introduce MemLineage, a defense for LLM agent memory that attaches both cryptographic provenance and LLM-mediated derivation lineage to every entry. Recent and concurrent work shows that untrusted content can be written into persistent agent state and re-enter later sessions as an instruction; the remaining systems question is how to preserve useful memory recall while preventing such state from justifying sensitive actions. MemLineage treats this as a chain-of-custody problem rather than a filtering problem. It is a six-module design around an RFC-6962 Merkle log over per-principal Ed25519-signed entries: a weighted derivation DAG records which retrieved entries influenced each new memory, and a max-of-strong-edges propagation rule makes Untrusted-Path Persistence hold for any chain whose attribution edges remain above threshold. The sensitive-action gate then refuses dispatches whose active justification descends from an external ancestor, while still allowing benign recall. We evaluate three defense cells against three memory-poisoning workloads on a deterministic mechanism-isolation harness; MemLineage is the only configuration in that harness that drives all three columns to zero ASR, while sub-millisecond per-operation overhead keeps it well below the noise floor of any LLM call. A Codex-backed AgentDojo bridge further separates strong-model behavior from defense-layer behavior: under an intentionally vulnerable tool-output profile, no-defense and signature-only baselines fail on all six banking pairs, while all MemLineage rows reduce strict AgentDojo ASR to zero. The core deterministic artifacts are byte-equal CI-verified; hosted-model AgentDojo and live-model sweeps are recorded as auditable logs rather than byte-pinned artifacts."
-    }
-  },
-  {
-    "id": "2605.14418v1",
-    "title": "The Great Pretender: A Stochasticity Problem in LLM Jailbreak",
-    "authors": [
-      "Jean-Philippe Monteuuis",
-      "Cong Chen",
-      "Jonathan Petit"
-    ],
-    "published_date": "2026-05-14",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2605.14418v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.14418v1",
-    "content": {
-      "en": "\"Oh-Oh, yes, I'm the great pretender. Pretending that I'm doing well. My need is such, I pretend too much...\" summarizes the state in the area of jailbreak creation and evaluation. You find this method to generate adversarial attacks proposed by a reputable institution (e.g., BoN from Anthropic or Crescendo from Microsoft Research). However, this method does not deliver on the promise claimed in the paper despite having top ASR scores against industry-grade LLMs. You successfully generate the jailbreak prompts against your target (open) model. However, the generated jailbreak prompt works against the target model with a 50% consecutive success rate (5 out of 10 attempts) despite having an 80% ASR (on paper) on the latest closed-source model (with a guardrail system)! This observation leads us to think. First, Attack Success Rate (ASR), the primary metric for LLM jailbreak benchmarking, is not a stable quantity. Second, published ASR numbers are therefore systematically inflated and incomparable across papers. Therefore, we wonder \"Why a successful jailbreak prompt does not perform consistently well against a target model on which the prompts have been optimized?\". To answer this question, we study the impact of stochasticity not only during attack evaluation but also during attack generation. Our evaluation includes several jailbreak attacks, models (different sizes and providers), and judges. In addition, we propose a new metric and two new frameworks (CAS-eval and CAS-gen). Our evaluation framework, CAS-eval, shows that an attack can have an ASR drop of up to 30 percentage points when a jailbreak prompt needs to succeed on more than one attempt. Thankfully, our attack generation framework (CAS-gen) improves previous jailbreak methods and helps them recover this loss of 30 percentage points!",
-      "tr": "\"Oh-Oh, yes, I'm the great pretender. Pretending that I'm doing well. My need is such, I pretend too much...\" summarizes the state in the area of jailbreak creation and evaluation. You find this method to generate adversarial attacks proposed by a reputable institution (e.g., BoN from Anthropic or Crescendo from Microsoft Research). However, this method does not deliver on the promise claimed in the paper despite having top ASR scores against industry-grade LLMs. You successfully generate the jailbreak prompts against your target (open) model. However, the generated jailbreak prompt works against the target model with a 50% consecutive success rate (5 out of 10 attempts) despite having an 80% ASR (on paper) on the latest closed-source model (with a guardrail system)! This observation leads us to think. First, Attack Success Rate (ASR), the primary metric for LLM jailbreak benchmarking, is not a stable quantity. Second, published ASR numbers are therefore systematically inflated and incomparable across papers. Therefore, we wonder \"Why a successful jailbreak prompt does not perform consistently well against a target model on which the prompts have been optimized?\". To answer this question, we study the impact of stochasticity not only during attack evaluation but also during attack generation. Our evaluation includes several jailbreak attacks, models (different sizes and providers), and judges. In addition, we propose a new metric and two new frameworks (CAS-eval and CAS-gen). Our evaluation framework, CAS-eval, shows that an attack can have an ASR drop of up to 30 percentage points when a jailbreak prompt needs to succeed on more than one attempt. Thankfully, our attack generation framework (CAS-gen) improves previous jailbreak methods and helps them recover this loss of 30 percentage points!"
-    }
-  },
-  {
-    "id": "2605.14396v1",
-    "title": "Systematic Discovery of Semantic Attacks in Online Map Construction through Conditional Diffusion",
-    "authors": [
-      "Chenyi Wang",
-      "Ruoyu Song",
-      "Raymond Muller",
-      "Jean-Philippe Monteuuis",
-      "Jonathan Petit"
-    ],
-    "published_date": "2026-05-14",
+    "published_date": "2026-05-20",
     "tags": [
       "cs.CV",
-      "cs.CR",
-      "cs.LG",
-      "cs.RO"
+      "cs.AI",
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2605.14396v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.14396v1",
+    "link": "http://arxiv.org/abs/2605.20971v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.20971v1",
     "content": {
-      "en": "Autonomous vehicles depend on online HD map construction to perceive lane boundaries, dividers, and pedestrian crossings -- safety-critical road elements that directly govern motion planning. While existing pixel perturbation attacks can disrupt the mapping, they can be neutralized by standard adversarial defenses. We present MIRAGE, a framework for systematic discovery of semantic attacks that bypass adversarial defenses and degrade mapping predictions by finding plausible environmental variation (e.g. shadows, wet roads). MIRAGE exploits the latent manifold of real-world data learned by diffusion models, and searches for semantically mutated scenes neighboring the ground truth with the same road topology yet mislead the mapping predictions. We evaluate MIRAGE on nuScenes and demonstrate two attacks: (1) boundary removal, suppressing 57.7% of detections and corrupting 96% of planned trajectories; and (2) boundary injection, the only method that successfully injects fictitious boundaries, while pixel PGD and AdvPatch fail entirely. Both attacks remain potent under various adversarial defenses. We use two independent VLM judges to quantify realism, where MIRAGE passes as realistic 80--84% of the time (vs. 97--99% for clean nuScenes), while AdvPatch only 0--9%. Our findings expose a categorical gap in current adversarial defenses: semantic-level perturbations that manifest as legitimate environmental variation are substantially harder to mitigate than pixel-level perturbations.",
-      "tr": "Autonomous vehicles depend on online HD map construction to perceive lane boundaries, dividers, and pedestrian crossings -- safety-critical road elements that directly govern motion planning. While existing pixel perturbation attacks can disrupt the mapping, they can be neutralized by standard adversarial defenses. We present MIRAGE, a framework for systematic discovery of semantic attacks that bypass adversarial defenses and degrade mapping predictions by finding plausible environmental variation (e.g. shadows, wet roads). MIRAGE exploits the latent manifold of real-world data learned by diffusion models, and searches for semantically mutated scenes neighboring the ground truth with the same road topology yet mislead the mapping predictions. We evaluate MIRAGE on nuScenes and demonstrate two attacks: (1) boundary removal, suppressing 57.7% of detections and corrupting 96% of planned trajectories; and (2) boundary injection, the only method that successfully injects fictitious boundaries, while pixel PGD and AdvPatch fail entirely. Both attacks remain potent under various adversarial defenses. We use two independent VLM judges to quantify realism, where MIRAGE passes as realistic 80--84% of the time (vs. 97--99% for clean nuScenes), while AdvPatch only 0--9%. Our findings expose a categorical gap in current adversarial defenses: semantic-level perturbations that manifest as legitimate environmental variation are substantially harder to mitigate than pixel-level perturbations."
+      "en": "The growing sophistication of GAN-based image manipulation presents significant challenges for digital forensics. This study compares the performance of four pretrained CNN architectures including VGG16, ResNet50, EfficientNetB0, and XceptionNet for fake image detection using a unified preprocessing and training pipeline. A dataset of real and manipulated images was processed through resizing, normalization, and augmentation to address class imbalance and improve generalization. Models were evaluated using Accuracy, Precision, Recall, F1-score, and ROC-AUC. VGG16 achieved the highest accuracy at 91%, with XceptionNet, ResNet50, and EfficientNetB0 each reaching 90%. EfficientNetB0 showed stronger sensitivity to fake images but reduced reliability on real samples, reflecting imbalance-driven bias. Limitations include dataset imbalance, overfitting, and limited interpretability, which affect cross-domain robustness. The study provides a reproducible baseline and underscores the need for balanced datasets, advanced augmentation, and fairness-aware training to develop reliable fake image detection systems.",
+      "tr": "The growing sophistication of GAN-based image manipulation presents significant challenges for digital forensics. This study compares the performance of four pretrained CNN architectures including VGG16, ResNet50, EfficientNetB0, and XceptionNet for fake image detection using a unified preprocessing and training pipeline. A dataset of real and manipulated images was processed through resizing, normalization, and augmentation to address class imbalance and improve generalization. Models were evaluated using Accuracy, Precision, Recall, F1-score, and ROC-AUC. VGG16 achieved the highest accuracy at 91%, with XceptionNet, ResNet50, and EfficientNetB0 each reaching 90%. EfficientNetB0 showed stronger sensitivity to fake images but reduced reliability on real samples, reflecting imbalance-driven bias. Limitations include dataset imbalance, overfitting, and limited interpretability, which affect cross-domain robustness. The study provides a reproducible baseline and underscores the need for balanced datasets, advanced augmentation, and fairness-aware training to develop reliable fake image detection systems."
+    }
+  },
+  {
+    "id": "2605.20896v1",
+    "title": "GenAI-Driven Threat Detection with Microsoft Security Copilot",
+    "authors": [
+      "Scott Freitas",
+      "Amir Gharib"
+    ],
+    "published_date": "2026-05-20",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2605.20896v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.20896v1",
+    "content": {
+      "en": "Defending against today's increasingly sophisticated cyberattacks requires security analysts to continuously translate evolving attacker tradecraft into detection logic. This places defenders in a reactive posture, requiring constantly updated expertise across an increasingly fragmented security landscape. We introduce the Dynamic Threat Detection Agent (DTDA), an always-on adaptive agent that continuously investigates security incidents across Microsoft Defender to uncover hidden threats and generate explainable detections when attack-story gaps are found. DTDA combines: (1) a unified activity timeline spanning alerts, events, user and entity behavior analytics, and threat intelligence; (2) versioned LLM prompt contracts with schema validation, grounding requirements, bounded retries, and fail-closed suppression; (3) a planner-executor investigation loop that generates attack-specific hypotheses and gathers supporting and refuting evidence; and (4) dynamic alert generation with a context-relevant title, severity, MITRE mappings, remediation guidance, implicated entities, and natural-language attack description. Integrated into Microsoft Security Copilot and deployed across tens of thousands of Defender customers, DTDA operates continuously at industry scale. In a 120-day online evaluation, DTDA achieves 80.1% precision from customer feedback while generating novel alerts for approximately 15% of investigated incidents. In offline evaluation, DTDA recovers hidden malicious activity with 0.78 F1 using GPT-5.4, improving over GPT-4.1 by 0.12 F1 and outperforming the baseline by 0.26 F1 points. Operationally, DTDA processes single-incident investigations end-to-end in a median of 28 minutes at a median token cost of USD 2.04, with a 0.38% job-level failure rate. These results demonstrate that autonomous agents can identify missed malicious activity at a production scale.",
+      "tr": "Defending against today's increasingly sophisticated cyberattacks requires security analysts to continuously translate evolving attacker tradecraft into detection logic. This places defenders in a reactive posture, requiring constantly updated expertise across an increasingly fragmented security landscape. We introduce the Dynamic Threat Detection Agent (DTDA), an always-on adaptive agent that continuously investigates security incidents across Microsoft Defender to uncover hidden threats and generate explainable detections when attack-story gaps are found. DTDA combines: (1) a unified activity timeline spanning alerts, events, user and entity behavior analytics, and threat intelligence; (2) versioned LLM prompt contracts with schema validation, grounding requirements, bounded retries, and fail-closed suppression; (3) a planner-executor investigation loop that generates attack-specific hypotheses and gathers supporting and refuting evidence; and (4) dynamic alert generation with a context-relevant title, severity, MITRE mappings, remediation guidance, implicated entities, and natural-language attack description. Integrated into Microsoft Security Copilot and deployed across tens of thousands of Defender customers, DTDA operates continuously at industry scale. In a 120-day online evaluation, DTDA achieves 80.1% precision from customer feedback while generating novel alerts for approximately 15% of investigated incidents. In offline evaluation, DTDA recovers hidden malicious activity with 0.78 F1 using GPT-5.4, improving over GPT-4.1 by 0.12 F1 and outperforming the baseline by 0.26 F1 points. Operationally, DTDA processes single-incident investigations end-to-end in a median of 28 minutes at a median token cost of USD 2.04, with a 0.38% job-level failure rate. These results demonstrate that autonomous agents can identify missed malicious activity at a production scale."
+    }
+  },
+  {
+    "id": "2605.20734v1",
+    "title": "An Application-Layer Multi-Modal Covert-Channel Reference Monitor for LLM Agent Egress",
+    "authors": [
+      "Alfredo Metere"
+    ],
+    "published_date": "2026-05-20",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.20734v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.20734v1",
+    "content": {
+      "en": "A large language model (LLM) agent that sends messages can leak data inside them. Destination allowlists and content scanners do not police whether an otherwise-benign payload is itself a covert channel: a compromised agent encodes bits in zero-width characters, homoglyphs, whitespace, base64, JavaScript Object Notation (JSON) key ordering, message timing or size -- and, in binary egress, in least-significant-bit (LSB) pixel planes, per-image mean luminance, inter-image sequence permutation, ultrasonic tones, or audible-band sonified data. Our egress reference monitor has three contributions. (i) A text pipeline of ten capacity-reducing stages, a per-sink leaky-bucket capacity ledger, and a staged posture that enforces lossless stages from day one. (ii) Two media scramblers (a Fourier-domain audio band-limiter and a red-green-blue (RGB) image bit-depth and mean-luminance bucketer) gated by a boot-time cryptographic legitimacy attestation: an auditor publishes at boot the trusted Ed25519 keys and {kind, data-class} pairs; only payloads with a verifying signature for an authorized class are exempt. The attestation sidesteps the intractable content-based discrimination between real media and data sonified or rasterized as a carrier; unsigned media is suspect by default; a content-addressed canonicalizer closes the inter-image permutation channel. (iii) Residual capacity is the Miller--Madow corrected mutual information between embedded and recovered bits (zero when destroyed), measured by an adversarial ensemble of fifteen working encoders across text, image and audio. The reference implementation drives residual capacity to zero on every destroyable channel and to a stated bound on the one (per-image mean luminance) that cannot be destroyed without ruining the image.",
+      "tr": "A large language model (LLM) agent that sends messages can leak data inside them. Destination allowlists and content scanners do not police whether an otherwise-benign payload is itself a covert channel: a compromised agent encodes bits in zero-width characters, homoglyphs, whitespace, base64, JavaScript Object Notation (JSON) key ordering, message timing or size -- and, in binary egress, in least-significant-bit (LSB) pixel planes, per-image mean luminance, inter-image sequence permutation, ultrasonic tones, or audible-band sonified data. Our egress reference monitor has three contributions. (i) A text pipeline of ten capacity-reducing stages, a per-sink leaky-bucket capacity ledger, and a staged posture that enforces lossless stages from day one. (ii) Two media scramblers (a Fourier-domain audio band-limiter and a red-green-blue (RGB) image bit-depth and mean-luminance bucketer) gated by a boot-time cryptographic legitimacy attestation: an auditor publishes at boot the trusted Ed25519 keys and {kind, data-class} pairs; only payloads with a verifying signature for an authorized class are exempt. The attestation sidesteps the intractable content-based discrimination between real media and data sonified or rasterized as a carrier; unsigned media is suspect by default; a content-addressed canonicalizer closes the inter-image permutation channel. (iii) Residual capacity is the Miller--Madow corrected mutual information between embedded and recovered bits (zero when destroyed), measured by an adversarial ensemble of fifteen working encoders across text, image and audio. The reference implementation drives residual capacity to zero on every destroyable channel and to a stated bound on the one (per-image mean luminance) that cannot be destroyed without ruining the image."
+    }
+  },
+  {
+    "id": "2605.20704v1",
+    "title": "Heartbeat-Bound Hierarchical Credentials: Cryptographic Revocation for AI Agent Swarms",
+    "authors": [
+      "Saurabh Deochake"
+    ],
+    "published_date": "2026-05-20",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "link": "http://arxiv.org/abs/2605.20704v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.20704v1",
+    "content": {
+      "en": "Autonomous AI agents that spawn sub-agent swarms create a safety gap: existing credential revocation mechanisms, OAuth~2.0 introspection, OCSP, and W3C Status Lists, require network connectivity to a central authority, leaving ``zombie agents'' executing privileged operations for minutes to hours after operator shutdown. We present Heartbeat-Bound Hierarchical Credentials (HBHC), a cryptographic protocol that binds credential validity to periodic parent liveness proofs. Verifiers enforce freshness using only a cached public key and local clock; no network round-trip is required. When heartbeat generation ceases, all descendant credentials become unusable within a deterministically bounded window $W_z \\le W_{\\max} + Δ_h + ε$, conditional on bounded clock skew and parent keys held in secure enclaves. Evaluation at the protocol layer and with real LLM-backed agent swarms (GPT-4o-mini) demonstrates a 90$\\times$ reduction in the zombie window over OAuth~2.0, 0.26~ms full authentication in Rust, 18,000+ verifications per second under concurrent HTTP load, and stable per-verification latency from 10 to 10,000 agents. Real-agent experiments show 0.71\\% end-to-end overhead on tool calls, zero post-revocation tool calls under prompt injection that bypasses application-layer guardrails, and cascading revocation across a 49-agent four-level hierarchy within the theoretical bound.",
+      "tr": "Autonomous AI agents that spawn sub-agent swarms create a safety gap: existing credential revocation mechanisms, OAuth~2.0 introspection, OCSP, and W3C Status Lists, require network connectivity to a central authority, leaving ``zombie agents'' executing privileged operations for minutes to hours after operator shutdown. We present Heartbeat-Bound Hierarchical Credentials (HBHC), a cryptographic protocol that binds credential validity to periodic parent liveness proofs. Verifiers enforce freshness using only a cached public key and local clock; no network round-trip is required. When heartbeat generation ceases, all descendant credentials become unusable within a deterministically bounded window $W_z \\le W_{\\max} + Δ_h + ε$, conditional on bounded clock skew and parent keys held in secure enclaves. Evaluation at the protocol layer and with real LLM-backed agent swarms (GPT-4o-mini) demonstrates a 90$\\times$ reduction in the zombie window over OAuth~2.0, 0.26~ms full authentication in Rust, 18,000+ verifications per second under concurrent HTTP load, and stable per-verification latency from 10 to 10,000 agents. Real-agent experiments show 0.71\\% end-to-end overhead on tool calls, zero post-revocation tool calls under prompt injection that bypasses application-layer guardrails, and cascading revocation across a 49-agent four-level hierarchy within the theoretical bound."
+    }
+  },
+  {
+    "id": "2605.20641v1",
+    "title": "Trusted Weights, Treacherous Optimizations? Optimization-Triggered Backdoor Attacks on LLMs",
+    "authors": [
+      "Yifei Wang",
+      "Tianlin Li",
+      "Xiaohan Zhang",
+      "Yida Yang",
+      "Xiaoyu Zhang"
+    ],
+    "published_date": "2026-05-20",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2605.20641v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.20641v1",
+    "content": {
+      "en": "Inference optimization is a vital technique for deploying LLMs at scale. Compilation is the most widely adopted optimization technique for LLMs. While it assumes semantic equivalence between the original and compiled graphs, we first uncover its numerical side effects can be maliciously exploited to implant stealthy backdoors in LLMs. We propose a unified optimization-triggered attack framework comprising two complementary strategies. Without any modification to the compiler or hardware, one strategy flips predictions for specific inputs only when the model is compiled, while the other uses a universal trigger that remains dormant under uncompiled execution but hijacks arbitrary inputs once compilation optimization is applied. Both attacks bypass standard safety evaluations run without compilation. We empirically demonstrate that these optimization-triggered backdoors achieve attack success rates averaging 90% across four mainstream open-source LLMs and four tasks, while clean accuracy is preserved at nearly 100% under all settings. Our findings reveal a novel attack surface at the intersection of optimization and security in the LLM deployment pipeline, and we investigate practical defenses to mitigate this threat.",
+      "tr": "Inference optimization is a vital technique for deploying LLMs at scale. Compilation is the most widely adopted optimization technique for LLMs. While it assumes semantic equivalence between the original and compiled graphs, we first uncover its numerical side effects can be maliciously exploited to implant stealthy backdoors in LLMs. We propose a unified optimization-triggered attack framework comprising two complementary strategies. Without any modification to the compiler or hardware, one strategy flips predictions for specific inputs only when the model is compiled, while the other uses a universal trigger that remains dormant under uncompiled execution but hijacks arbitrary inputs once compilation optimization is applied. Both attacks bypass standard safety evaluations run without compilation. We empirically demonstrate that these optimization-triggered backdoors achieve attack success rates averaging 90% across four mainstream open-source LLMs and four tasks, while clean accuracy is preserved at nearly 100% under all settings. Our findings reveal a novel attack surface at the intersection of optimization and security in the LLM deployment pipeline, and we investigate practical defenses to mitigate this threat."
+    }
+  },
+  {
+    "id": "2605.20521v1",
+    "title": "An exponential mechanism based on quadratic approximations for fine-tuning machine learning models with privacy guarantees",
+    "authors": [
+      "Hoang Tran",
+      "Jorge Ramirez",
+      "Jiayi Wang",
+      "Alberto Bocchinfuso",
+      "Christopher Stanley"
+    ],
+    "published_date": "2026-05-19",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2605.20521v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.20521v1",
+    "content": {
+      "en": "Fine-tuning adapts a pretrained machine learning model to a small, sensitive dataset, but this process risks memorizing individual new data points, making the model vulnerable to adversaries who seek to extract sensitive information. In this work, we develop a randomized algorithm based on the exponential mechanism for fine-tuning while ensuring differential privacy. Our key idea is to construct a simple utility function that combines a local quadratic approximation of the pretrained model with information from the new dataset. The resulting exponential mechanism admits exact sampling from a multivariate normal distribution in closed form. We establish theoretical privacy guarantees, sensitivity bounds, and accuracy estimations for our method. We further introduce a random-projection strategy that makes the approach scalable to high-dimensional models. Numerical experiments on the MNIST benchmark and the MIMIC clinical dataset demonstrate competitive performance against existing differentially private fine-tuning techniques.",
+      "tr": "Fine-tuning adapts a pretrained machine learning model to a small, sensitive dataset, but this process risks memorizing individual new data points, making the model vulnerable to adversaries who seek to extract sensitive information. In this work, we develop a randomized algorithm based on the exponential mechanism for fine-tuning while ensuring differential privacy. Our key idea is to construct a simple utility function that combines a local quadratic approximation of the pretrained model with information from the new dataset. The resulting exponential mechanism admits exact sampling from a multivariate normal distribution in closed form. We establish theoretical privacy guarantees, sensitivity bounds, and accuracy estimations for our method. We further introduce a random-projection strategy that makes the approach scalable to high-dimensional models. Numerical experiments on the MNIST benchmark and the MIMIC clinical dataset demonstrate competitive performance against existing differentially private fine-tuning techniques."
+    }
+  },
+  {
+    "id": "2605.20450v1",
+    "title": "SMA-DP: Spectral Memory-Aware Differential Privacy for Deep Learning",
+    "authors": [
+      "Mohammad Partohaghighi",
+      "Roummel Marcia"
+    ],
+    "published_date": "2026-05-19",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2605.20450v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.20450v1",
+    "content": {
+      "en": "Differentially private stochastic gradient descent (DP-SGD) enables private deep learning through per-example clipping and calibrated Gaussian noise, but its high-variance updates can reduce utility on challenging datasets. We propose \\textbf{SMA-DP-SGD}, a \\textbf{Spectral Memory-Aware Differentially Private Stochastic Gradient Descent} method that augments DP-SGD with a fractional memory branch built only from previously privatized noisy releases. WeightWatcher-inspired power-law spectral exponents provide group-wise reliability signals, instantiated layer-wise in our experiments, to adapt the decay and effective memory depth. Private-history alignment, norm matching, and warm-up activation stabilize the memory contribution. Privacy remains transparent: conditioned on the private release history, the memory branch is fixed, and the only newly data-dependent term is the current clipped sum scaled by a fixed coefficient \\(β\\). Hence, SMA-DP-SGD preserves a clean conditional sensitivity structure and exactly recovers group-wise DP-SGD when \\(β=1\\). Experiments on CIFAR-100, CIFAR-10, and MNIST show competitive or superior accuracy over several DP optimization baselines, with the largest gains on CIFAR-100 and CIFAR-10. CIFAR-10 ablations show that \\(β\\) controls the privacy--utility trajectory, while spectral and memory diagnostics confirm a controlled short-to-moderate effective memory depth and a small memory-branch ratio. Runtime analysis shows that the mechanism incurs additional overhead, about \\(2.94\\times\\) DP-SGD in our CIFAR-10 implementation, revealing a practical trade-off between adaptive private memory and computational cost.",
+      "tr": "Differentially private stochastic gradient descent (DP-SGD) enables private deep learning through per-example clipping and calibrated Gaussian noise, but its high-variance updates can reduce utility on challenging datasets. We propose \\textbf{SMA-DP-SGD}, a \\textbf{Spectral Memory-Aware Differentially Private Stochastic Gradient Descent} method that augments DP-SGD with a fractional memory branch built only from previously privatized noisy releases. WeightWatcher-inspired power-law spectral exponents provide group-wise reliability signals, instantiated layer-wise in our experiments, to adapt the decay and effective memory depth. Private-history alignment, norm matching, and warm-up activation stabilize the memory contribution. Privacy remains transparent: conditioned on the private release history, the memory branch is fixed, and the only newly data-dependent term is the current clipped sum scaled by a fixed coefficient \\(β\\). Hence, SMA-DP-SGD preserves a clean conditional sensitivity structure and exactly recovers group-wise DP-SGD when \\(β=1\\). Experiments on CIFAR-100, CIFAR-10, and MNIST show competitive or superior accuracy over several DP optimization baselines, with the largest gains on CIFAR-100 and CIFAR-10. CIFAR-10 ablations show that \\(β\\) controls the privacy--utility trajectory, while spectral and memory diagnostics confirm a controlled short-to-moderate effective memory depth and a small memory-branch ratio. Runtime analysis shows that the mechanism incurs additional overhead, about \\(2.94\\times\\) DP-SGD in our CIFAR-10 implementation, revealing a practical trade-off between adaptive private memory and computational cost."
+    }
+  },
+  {
+    "id": "2605.20391v1",
+    "title": "Latent Geometry as a Structural Monitor: Eigenspace Alignment for Anomaly Detection in Anonymity Networks",
+    "authors": [
+      "Vaibhav Chhabra"
+    ],
+    "published_date": "2026-05-19",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2605.20391v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.20391v1",
+    "content": {
+      "en": "Traditional anomaly detection marks events when measured signals cross predefined thresholds. This captures the moment of transition but not the structural pressure that precedes it. We propose treating large behavioral populations as geometric energy landscapes whose deformation can be measured before and during major transitions. The central thesis is that structure precedes geometry: the structural organization of the population is the signal, and geometric metrics are instruments for measuring it. Applied to the Tor anonymity network across 67 consecutive daily observation windows, the dual-observer pipeline identifies a stable nine-dimensional load-bearing subspace invariant across the observation period and validates this structure by Monte Carlo simulation at 16.8 sigma above the noise floor. Primary detection gates achieve 0.0% false positive rate on 24 confirmed stable windows. Forensic analysis of the February 20, 2026 confirmed infrastructure event formally falsifies the relay-departure hypothesis, identifying connectivity degradation without topology change as a detectable network failure mode. The result is a candidate structural-monitoring framework for behavioral populations with sufficient telemetry.",
+      "tr": "Traditional anomaly detection marks events when measured signals cross predefined thresholds. This captures the moment of transition but not the structural pressure that precedes it. We propose treating large behavioral populations as geometric energy landscapes whose deformation can be measured before and during major transitions. The central thesis is that structure precedes geometry: the structural organization of the population is the signal, and geometric metrics are instruments for measuring it. Applied to the Tor anonymity network across 67 consecutive daily observation windows, the dual-observer pipeline identifies a stable nine-dimensional load-bearing subspace invariant across the observation period and validates this structure by Monte Carlo simulation at 16.8 sigma above the noise floor. Primary detection gates achieve 0.0% false positive rate on 24 confirmed stable windows. Forensic analysis of the February 20, 2026 confirmed infrastructure event formally falsifies the relay-departure hypothesis, identifying connectivity degradation without topology change as a detectable network failure mode. The result is a candidate structural-monitoring framework for behavioral populations with sufficient telemetry."
     }
   }
 ]
