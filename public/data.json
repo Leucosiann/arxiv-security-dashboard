@@ -1,216 +1,221 @@
 [
   {
-    "id": "2605.23887v1",
-    "title": "CHRONOS: Temporally-Aware Multi-Agent Coordination for Evolving Data Marketplaces",
+    "id": "2605.28734v1",
+    "title": "Code as a Weapon: A Consensus-Labeled Prompt Bank for Measuring Coding-Model Compliance with Malicious-Code Requests",
     "authors": [
-      "Joydeep Chandra"
+      "Richard J. Young",
+      "Gregory D. Moody"
     ],
-    "published_date": "2026-05-22",
-    "tags": [
-      "cs.DB",
-      "cs.AI",
-      "cs.CR",
-      "cs.LG",
-      "cs.MA"
-    ],
-    "link": "http://arxiv.org/abs/2605.23887v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.23887v1",
-    "content": {
-      "en": "Temporal knowledge-graph data marketplaces face three coupled failures in static designs: stale hybrid index shortcuts reduce recall as edges evolve, stationary Shapley pricing misattributes value after distribution shifts, and uncoordinated agents over-consume a shared differential-privacy budget. We present CHRONOS, a three-layer architecture providing a unified treatment of these challenges with explicit public and private separation. Layer one applies neural-ODE temporal decay to shortcut edges, providing a per-query expected recall-loss bound of Big-O of Pq lambda delta t, with a monotone-envelope guarantee reducing bound looseness to 1.8 to 3.2 times observed loss. Layer two conditions Shapley valuation on detected changepoints and provides finite-sample error guarantees under noise. Layer three uses EXP3-IX to achieve Big-O of the square root of T log T regret while enforcing epsilon and delta differential privacy via moments accounting. CHRONOS releases a privatized affinity matrix per epoch using the Gaussian mechanism; all retrieval and ranking are post-processing, incurring no extra privacy cost. We provide multi-epoch settlement, scalability analysis for 500 sellers, and comparisons against accelerated baselines. Across four benchmarks, CHRONOS shows 0.937 recall at ten, 2.74 queries per second, 161 ms latency, and total epsilon of 4.25 at delta of 10 to the power of negative 6 under zCDP composition. These results indicate a competitive operating point. A limitation is that at this privacy level, released valuations remain noise-dominated; utility derives primarily from public index routing and adaptive scheduling driven by low-sensitivity statistics.",
-      "tr": "Temporal knowledge-graph data marketplaces face three coupled failures in static designs: stale hybrid index shortcuts reduce recall as edges evolve, stationary Shapley pricing misattributes value after distribution shifts, and uncoordinated agents over-consume a shared differential-privacy budget. We present CHRONOS, a three-layer architecture providing a unified treatment of these challenges with explicit public and private separation. Layer one applies neural-ODE temporal decay to shortcut edges, providing a per-query expected recall-loss bound of Big-O of Pq lambda delta t, with a monotone-envelope guarantee reducing bound looseness to 1.8 to 3.2 times observed loss. Layer two conditions Shapley valuation on detected changepoints and provides finite-sample error guarantees under noise. Layer three uses EXP3-IX to achieve Big-O of the square root of T log T regret while enforcing epsilon and delta differential privacy via moments accounting. CHRONOS releases a privatized affinity matrix per epoch using the Gaussian mechanism; all retrieval and ranking are post-processing, incurring no extra privacy cost. We provide multi-epoch settlement, scalability analysis for 500 sellers, and comparisons against accelerated baselines. Across four benchmarks, CHRONOS shows 0.937 recall at ten, 2.74 queries per second, 161 ms latency, and total epsilon of 4.25 at delta of 10 to the power of negative 6 under zCDP composition. These results indicate a competitive operating point. A limitation is that at this privacy level, released valuations remain noise-dominated; utility derives primarily from public index routing and adaptive scheduling driven by low-sensitivity statistics."
-    }
-  },
-  {
-    "id": "2605.23879v1",
-    "title": "On the Stability of Spherical Hellinger-Kantorovich Flows and Their Implications for Differential Privacy",
-    "authors": [
-      "Aratrika Mustafi",
-      "Soumya Mukherjee"
-    ],
-    "published_date": "2026-05-22",
-    "tags": [
-      "stat.ML",
-      "cs.CR",
-      "cs.LG",
-      "math.ST"
-    ],
-    "link": "http://arxiv.org/abs/2605.23879v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.23879v1",
-    "content": {
-      "en": "Gradient-flow sampling interprets a Gibbs distribution as the minimizer of an energy functional over probability measures and generates dynamics converging to this target. Under spherical Hellinger-Kantorovich (SHK) geometry, the flow couples transport and reaction and coincides with birth-death Langevin dynamics. In this work, we develop a perturbation theory for SHK gradient flows. For two potentials $V$ and $V^{\\prime}$, we compare the associated flows from a common initialization and quantify how potential discrepancies propagate over time. A uniform perturbation bound yields dimension-free, pointwise control of the log-likelihood ratio and Rényi divergence, while additional structure allows us to derive bounds for the KL divergence as well. We apply these results to approximate sampling for the exponential mechanism in differential privacy. The likelihood-ratio control provides explicit time-dependent Pure-DP guarantees for SHK-based samplers, while the KL bound yields Approximate-DP certificates via hockey-stick divergence. We also derive a utility bound separating intrinsic exponential-mechanism suboptimality from finite-time sampling error.",
-      "tr": "Gradient-flow sampling interprets a Gibbs distribution as the minimizer of an energy functional over probability measures and generates dynamics converging to this target. Under spherical Hellinger-Kantorovich (SHK) geometry, the flow couples transport and reaction and coincides with birth-death Langevin dynamics. In this work, we develop a perturbation theory for SHK gradient flows. For two potentials $V$ and $V^{\\prime}$, we compare the associated flows from a common initialization and quantify how potential discrepancies propagate over time. A uniform perturbation bound yields dimension-free, pointwise control of the log-likelihood ratio and Rényi divergence, while additional structure allows us to derive bounds for the KL divergence as well. We apply these results to approximate sampling for the exponential mechanism in differential privacy. The likelihood-ratio control provides explicit time-dependent Pure-DP guarantees for SHK-based samplers, while the KL bound yields Approximate-DP certificates via hockey-stick divergence. We also derive a utility bound separating intrinsic exponential-mechanism suboptimality from finite-time sampling error."
-    }
-  },
-  {
-    "id": "2605.23643v1",
-    "title": "Less Effort, Shorter Proofs: Reinforcement Learning for Security Protocol Analysis in Tamarin",
-    "authors": [
-      "Matthias Cosler",
-      "Cas Cremers",
-      "Bernd Finkbeiner",
-      "Mohamed Ghanem",
-      "Niklas Medinger"
-    ],
-    "published_date": "2026-05-22",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.23643v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.23643v1",
-    "content": {
-      "en": "Tools like Tamarin and ProVerif have achieved notable success in analyzing and verifying complex real-world protocols such as EMV, 5G, and WPA2, even detecting zero-day exploits. Despite these successes, verifying such protocols remains a time-consuming, challenging task, often requiring significant human effort and expertise. In this paper, we present a reinforcement learning (RL) framework inspired by AlphaZero and AlphaProof that implements a new style of proof search for Tamarin. We have developed a stateless API for Tamarin that acts as a classical RL environment. We guide a Monte Carlo Tree Search (MCTS) by a neural heuristic that learns from completed subproofs. We evaluate our framework on 16 case studies, ranging from classical protocol models to challenging state-of-the-art protocol models from recent publications. Our method finds more proofs automatically than Tamarin's standard search and produces shorter proofs than both the standard and human-engineered heuristics. Our pipeline is applicable out of the box to assist Tamarin users in active research, reducing the human effort required. Moreover, our standardized interface provides a programmatic way for users to interact with Tamarin. Finally, our work demonstrates the promising potential of adapting RL-based methods to the Tamarin domain.",
-      "tr": "Tools like Tamarin and ProVerif have achieved notable success in analyzing and verifying complex real-world protocols such as EMV, 5G, and WPA2, even detecting zero-day exploits. Despite these successes, verifying such protocols remains a time-consuming, challenging task, often requiring significant human effort and expertise. In this paper, we present a reinforcement learning (RL) framework inspired by AlphaZero and AlphaProof that implements a new style of proof search for Tamarin. We have developed a stateless API for Tamarin that acts as a classical RL environment. We guide a Monte Carlo Tree Search (MCTS) by a neural heuristic that learns from completed subproofs. We evaluate our framework on 16 case studies, ranging from classical protocol models to challenging state-of-the-art protocol models from recent publications. Our method finds more proofs automatically than Tamarin's standard search and produces shorter proofs than both the standard and human-engineered heuristics. Our pipeline is applicable out of the box to assist Tamarin users in active research, reducing the human effort required. Moreover, our standardized interface provides a programmatic way for users to interact with Tamarin. Finally, our work demonstrates the promising potential of adapting RL-based methods to the Tamarin domain."
-    }
-  },
-  {
-    "id": "2605.23623v1",
-    "title": "Adversarial Vulnerability Under Temporal Concept Drift: A Longitudinal Study of Android Malware Detection",
-    "authors": [
-      "Ahmed Sabbah",
-      "Mohammed Kharma",
-      "Radi Jarrar",
-      "Samer Zein",
-      "David Mohaisen"
-    ],
-    "published_date": "2026-05-22",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.23623v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.23623v1",
-    "content": {
-      "en": "We present a longitudinal, drift-aware evaluation of adversarial robustness across more than a decade of Android applications using static and dynamic feature representations extracted from emulator and real-device executions. The dataset is organized into yearly slices and evaluated under three deployment protocols that emulate realistic learning scenarios: (1) same-year training and testing, (2) cross-year deployment without model updates, and (3) expanding-window retraining with cumulative historical data. Across multiple classifier families, adversarial examples are generated using FGSM and SPSA under feasibility constraints. We measure clean performance, Adversarial Accuracy (AA), Attack Success Rate (ASR), and introduce temporal linkage metrics -- RobustDrop, $Δ$ASR, and Adversarial Amplification Factor (AAF) -- to quantify the relationship between distribution shift and robustness degradation.nResults show that temporal separation is associated with reduced adversarial robustness under the evaluated transfer-based feature-space setting. As the train-test gap increases, clean accuracy and adversarial accuracy decline, while attack success exhibits configuration-dependent increases, particularly under FGSM perturbations and static features. Expanding-window retraining mitigates, but does not eliminate, robustness loss under continued distributional evolution. These findings indicate that temporal drift should be considered when assessing the long-term robustness of intelligent detection systems under evolving data distributions and highlight the need for drift-aware robustness assessment frameworks in long-lived adversarial environments.",
-      "tr": "We present a longitudinal, drift-aware evaluation of adversarial robustness across more than a decade of Android applications using static and dynamic feature representations extracted from emulator and real-device executions. The dataset is organized into yearly slices and evaluated under three deployment protocols that emulate realistic learning scenarios: (1) same-year training and testing, (2) cross-year deployment without model updates, and (3) expanding-window retraining with cumulative historical data. Across multiple classifier families, adversarial examples are generated using FGSM and SPSA under feasibility constraints. We measure clean performance, Adversarial Accuracy (AA), Attack Success Rate (ASR), and introduce temporal linkage metrics -- RobustDrop, $Δ$ASR, and Adversarial Amplification Factor (AAF) -- to quantify the relationship between distribution shift and robustness degradation.nResults show that temporal separation is associated with reduced adversarial robustness under the evaluated transfer-based feature-space setting. As the train-test gap increases, clean accuracy and adversarial accuracy decline, while attack success exhibits configuration-dependent increases, particularly under FGSM perturbations and static features. Expanding-window retraining mitigates, but does not eliminate, robustness loss under continued distributional evolution. These findings indicate that temporal drift should be considered when assessing the long-term robustness of intelligent detection systems under evolving data distributions and highlight the need for drift-aware robustness assessment frameworks in long-lived adversarial environments."
-    }
-  },
-  {
-    "id": "2605.23448v1",
-    "title": "AI Security Research Should Better Incentivize Defense Research",
-    "authors": [
-      "Youqian Zhang"
-    ],
-    "published_date": "2026-05-22",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2605.23448v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.23448v1",
-    "content": {
-      "en": "This work examines an imbalance in artificial intelligence (AI) security research: the field tends to produce more work on attacking AI systems than on defending them. Drawing on related academic papers, we find biased attack-to-defense ratios across subfields, including federated learning, speech recognition, membership inference, large language models, etc. The imbalance possibly means far beyond a simple count: attack papers are routinely evaluated under favorable conditions that make threats look more severe than they are in practice, while defenses are held to a stricter standard that few can meet. The result is a literature rich in demonstrated vulnerabilities and thin on usable and deployed protections. We thus argue that AI security research should better incentivize defense research.",
-      "tr": "This work examines an imbalance in artificial intelligence (AI) security research: the field tends to produce more work on attacking AI systems than on defending them. Drawing on related academic papers, we find biased attack-to-defense ratios across subfields, including federated learning, speech recognition, membership inference, large language models, etc. The imbalance possibly means far beyond a simple count: attack papers are routinely evaluated under favorable conditions that make threats look more severe than they are in practice, while defenses are held to a stricter standard that few can meet. The result is a literature rich in demonstrated vulnerabilities and thin on usable and deployed protections. We thus argue that AI security research should better incentivize defense research."
-    }
-  },
-  {
-    "id": "2605.23411v1",
-    "title": "Sample-wise Targeted Adversarial Attacks on Test-time Adaptation",
-    "authors": [
-      "Phuc Duc Nguyen",
-      "Quang Duc Nguyen"
-    ],
-    "published_date": "2026-05-22",
-    "tags": [
-      "cs.LG",
-      "cs.CR",
-      "cs.CV"
-    ],
-    "link": "http://arxiv.org/abs/2605.23411v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.23411v1",
-    "content": {
-      "en": "Test-time adaptation (TTA) effectively counters distribution shifts but exposes models to adversarial manipulation via the unlabeled test stream. Existing class-wise targeted attacks remain impractical for stealthy exploitation in this setting: since TTA operates on batches, forcing a subset of samples toward a target label unintentionally pulls similar benign samples along, resulting in a conspicuously high frequency of the target label that is easy to detect. To capture a more realistic threat, we introduce a sample-wise targeted attack. Unlike prior approaches, the attacker aims to misclassify only inputs carrying an attacker-chosen trigger, while preserving the global label distribution of benign queries to evade detection. To achieve this, we propose a meta-learning-based attack with a novel priority-aware gradient alignment strategy that explicitly prioritizes attack success. The strategy formulates the gradient update as an ellipsoidal trust-region problem, mitigating the misalignment between attack success and distributional stealth, while providing theoretical guarantees for effective optimization of the attack objective in the presence of gradient misalignment. Extensive experiments on CIFAR-10-C, CIFAR-100-C, and ImageNet-C across TTA protocols demonstrate that our method achieves high targeted success rates while maintaining a label distribution that is consistent with the no-attack baseline, making it difficult to detect in unlabeled TTA deployment scenarios. Furthermore, we demonstrate that our attack shows strong robustness against existing defenses.",
-      "tr": "Test-time adaptation (TTA) effectively counters distribution shifts but exposes models to adversarial manipulation via the unlabeled test stream. Existing class-wise targeted attacks remain impractical for stealthy exploitation in this setting: since TTA operates on batches, forcing a subset of samples toward a target label unintentionally pulls similar benign samples along, resulting in a conspicuously high frequency of the target label that is easy to detect. To capture a more realistic threat, we introduce a sample-wise targeted attack. Unlike prior approaches, the attacker aims to misclassify only inputs carrying an attacker-chosen trigger, while preserving the global label distribution of benign queries to evade detection. To achieve this, we propose a meta-learning-based attack with a novel priority-aware gradient alignment strategy that explicitly prioritizes attack success. The strategy formulates the gradient update as an ellipsoidal trust-region problem, mitigating the misalignment between attack success and distributional stealth, while providing theoretical guarantees for effective optimization of the attack objective in the presence of gradient misalignment. Extensive experiments on CIFAR-10-C, CIFAR-100-C, and ImageNet-C across TTA protocols demonstrate that our method achieves high targeted success rates while maintaining a label distribution that is consistent with the no-attack baseline, making it difficult to detect in unlabeled TTA deployment scenarios. Furthermore, we demonstrate that our attack shows strong robustness against existing defenses."
-    }
-  },
-  {
-    "id": "2605.23243v1",
-    "title": "Are Frontier LLMs Ready for Cybersecurity? Evidence for Vertical Foundation Models from Dual-Mode Vulnerability Benchmarks",
-    "authors": [
-      "Vivek Dahiya",
-      "Sunny Nehra",
-      "Vipul Dholariya",
-      "Bhavik Shangari",
-      "Chandra Khatri"
-    ],
-    "published_date": "2026-05-22",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2605.23243v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.23243v1",
-    "content": {
-      "en": "We evaluate whether frontier LLMs are ready for cybersecurity through a dual-mode benchmark: white-box function-level vulnerability detection (VulnLLM-R, across C/Java/Python) and black-box web application security testing (five production-style applications with 118 ground-truth vulnerabilities across 20+ CWE families, which we will open-source). We test six frontier models (GPT-5.4, Codex~5.3, Claude Opus~4.6, Sonnet~4.6, Gemini~3.1~Pro and Gemini~3~Flash) and two domain-specialized models across four testing paradigms. Our findings are sobering: (1)~every frontier model produces 10-50% false positive rates in white-box detection, systematically over-predicting vulnerabilities; (2)~in black-box testing, frontier models achieve only 4-8% ground-truth coverage, improving to just 10-19% even with external security tools (Playwright MCP, Burp Suite MCP); (3)~structured penetration-testing methodology encoded in domain-specialized agents raises per-family detection above 50%, demonstrating that methodology, not scale, is the primary lever; and (4)~a domain-specialized defense model achieves the highest precision (0.904) and lowest false positive rate (9.7%) among all models, on a single GPU. We identify the absence of structured security testing traces end-to-end request/response sequences, failure-heavy data, and multi-step attack chains as the fundamental training data bottleneck, and propose self-play security testing as a data generation strategy. Our results make the case for vertical foundation models purpose-built for cybersecurity.",
-      "tr": "We evaluate whether frontier LLMs are ready for cybersecurity through a dual-mode benchmark: white-box function-level vulnerability detection (VulnLLM-R, across C/Java/Python) and black-box web application security testing (five production-style applications with 118 ground-truth vulnerabilities across 20+ CWE families, which we will open-source). We test six frontier models (GPT-5.4, Codex~5.3, Claude Opus~4.6, Sonnet~4.6, Gemini~3.1~Pro and Gemini~3~Flash) and two domain-specialized models across four testing paradigms. Our findings are sobering: (1)~every frontier model produces 10-50% false positive rates in white-box detection, systematically over-predicting vulnerabilities; (2)~in black-box testing, frontier models achieve only 4-8% ground-truth coverage, improving to just 10-19% even with external security tools (Playwright MCP, Burp Suite MCP); (3)~structured penetration-testing methodology encoded in domain-specialized agents raises per-family detection above 50%, demonstrating that methodology, not scale, is the primary lever; and (4)~a domain-specialized defense model achieves the highest precision (0.904) and lowest false positive rate (9.7%) among all models, on a single GPU. We identify the absence of structured security testing traces end-to-end request/response sequences, failure-heavy data, and multi-step attack chains as the fundamental training data bottleneck, and propose self-play security testing as a data generation strategy. Our results make the case for vertical foundation models purpose-built for cybersecurity."
-    }
-  },
-  {
-    "id": "2605.23168v1",
-    "title": "PoisonForge: Task-Level Targeted Poisoning Benchmark for Instruction-Tuned LLMs",
-    "authors": [
-      "Luze Sun",
-      "Anshuman Suri",
-      "Harsh Chaudhari",
-      "Cristina Nita-Rotaru",
-      "Alina Oprea"
-    ],
-    "published_date": "2026-05-22",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.23168v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.23168v1",
-    "content": {
-      "en": "When practitioners fine-tune LLMs on unvetted datasets, an adversary can exploit the data supply chain through task-level poisoning: inserting a small number of crafted instruction-response pairs that cause the model to embed attacker-specified entities, such as a country, in outputs for a targeted task family while behaving normally elsewhere. We introduce PoisonForge, a benchmark that parameterizes this threat along four dimensions (bias type, poisoning mode, appearance count, and target output length) and evaluates 12 open-weight models (from 2B to 32B parameters) across five families under a primarily 1% poison budget. With only 10 poisoned examples among 1,000 fine-tuning examples, 11 of 12 models exceed a 70% attack success rate (ASR) in their most vulnerable configuration. Meanwhile, unintended leakage to non-target tasks remains below 0.5%, and models perform well on standard benchmarks. We analyze in detail the factors contributing to attack success. We observe that multiple appearances of an entity increase the ASR, the optimal poisoning mode depends on the semantic structure of the target entity, and ASR drops monotonically with the task output length. A correlation analysis and risk prediction model confirm that poisoning design choices, rather than model scale, are the primary causes of attack success, and that these patterns generalize to predict attack success on new tasks. We release all configurations, pipelines, and analysis code to support reproducible comparisons.",
-      "tr": "When practitioners fine-tune LLMs on unvetted datasets, an adversary can exploit the data supply chain through task-level poisoning: inserting a small number of crafted instruction-response pairs that cause the model to embed attacker-specified entities, such as a country, in outputs for a targeted task family while behaving normally elsewhere. We introduce PoisonForge, a benchmark that parameterizes this threat along four dimensions (bias type, poisoning mode, appearance count, and target output length) and evaluates 12 open-weight models (from 2B to 32B parameters) across five families under a primarily 1% poison budget. With only 10 poisoned examples among 1,000 fine-tuning examples, 11 of 12 models exceed a 70% attack success rate (ASR) in their most vulnerable configuration. Meanwhile, unintended leakage to non-target tasks remains below 0.5%, and models perform well on standard benchmarks. We analyze in detail the factors contributing to attack success. We observe that multiple appearances of an entity increase the ASR, the optimal poisoning mode depends on the semantic structure of the target entity, and ASR drops monotonically with the task output length. A correlation analysis and risk prediction model confirm that poisoning design choices, rather than model scale, are the primary causes of attack success, and that these patterns generalize to predict attack success on new tasks. We release all configurations, pipelines, and analysis code to support reproducible comparisons."
-    }
-  },
-  {
-    "id": "2605.23158v1",
-    "title": "What Does the Server See? Understanding Privacy Leakage from Large Language Models in Split Inference",
-    "authors": [
-      "Mingyuan Fan",
-      "Yu Liu",
-      "Fuyi Wang",
-      "Cen Chen"
-    ],
-    "published_date": "2026-05-22",
+    "published_date": "2026-05-27",
     "tags": [
       "cs.CR",
       "cs.CL",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2605.23158v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.23158v1",
+    "link": "http://arxiv.org/abs/2605.28734v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.28734v1",
     "content": {
-      "en": "The deployment of large language models (LLMs) on resource-constrained devices remains challenging, spurring interest in split inference, where models are partitioned between client and server to reduce computational burden and enhance privacy by transmitting only intermediate activations. However, the privacy-preserving capabilities of split inference, particularly in the context of LLMs, have not been exhaustively investigated. To fill this gap, we introduce ActInv, which solves an intermediate activation matching problem to reconstruct the client's input. Extensive evaluations demonstrate that ActInv achieves high-fidelity reconstructions, even in the presence of common perturbation-based defenses such as Gaussian noise injection and activation sparsification. To systematically understand this vulnerability, we develop Perturbation Amplification Factor (PAF), a metric for quantifying a layer's inherent resistance to reconstruction. Our analysis reveals that privacy vulnerability is not uniform across layers, with some layers being highly susceptible to leakage while others offer natural resistance. Furthermore, we demonstrate that defense effectiveness can be significantly improved by calibrating perturbation directions to maximize reconstruction error during backpropagation. Building on these insights, we design PriPert and conduct comprehensive evaluations, covering privacy, utility, and computational overhead, to demonstrate its effectiveness.",
-      "tr": "The deployment of large language models (LLMs) on resource-constrained devices remains challenging, spurring interest in split inference, where models are partitioned between client and server to reduce computational burden and enhance privacy by transmitting only intermediate activations. However, the privacy-preserving capabilities of split inference, particularly in the context of LLMs, have not been exhaustively investigated. To fill this gap, we introduce ActInv, which solves an intermediate activation matching problem to reconstruct the client's input. Extensive evaluations demonstrate that ActInv achieves high-fidelity reconstructions, even in the presence of common perturbation-based defenses such as Gaussian noise injection and activation sparsification. To systematically understand this vulnerability, we develop Perturbation Amplification Factor (PAF), a metric for quantifying a layer's inherent resistance to reconstruction. Our analysis reveals that privacy vulnerability is not uniform across layers, with some layers being highly susceptible to leakage while others offer natural resistance. Furthermore, we demonstrate that defense effectiveness can be significantly improved by calibrating perturbation directions to maximize reconstruction error during backpropagation. Building on these insights, we design PriPert and conduct comprehensive evaluations, covering privacy, utility, and computational overhead, to demonstrate its effectiveness."
+      "en": "A general-purpose language model that answers a harmful question returns text; a coding model that complies with a malicious request can return a working weapon -- a keylogger, a ransomware stub, an exploit that runs as written. This asymmetry in the severity of a single act of compliance implies coding-specialized models should clear a higher refusal bar than general-purpose chat models, not a lower one, yet the field cannot presently tell whether they do. Refusal benchmarks for malicious code are fragmented: they mix requests for executable software (ready-to-run weapons) with requests for harmful security knowledge (information a human must still operationalise) and report refusal rates over non-comparable corpora, so no single statistic measures the property that actually matters. This paper introduces an expanded consensus-labeled prompt bank that distinguishes between these two request types and provides a construct-stable substrate for cross-corpus coding-model compliance measurement. Eight corpora (ASTRA, CySecBench, AdvBench/harmful_behaviors, JailbreakBench, MalwareBench, RedCode, RMCBench, Scam2Prompt) are consolidated and classified under a five-judge consensus protocol (6,675 prompts x 5 judges = 33,375 calls). The panel reaches Fleiss' kappa = 0.767 [95% CI 0.755, 0.777] (\"substantial\"); 95.0% of prompts draw at least four agreeing judges, 76.9% are unanimous, and the panel reproduces the earlier four-corpus release at Cohen's kappa = 0.952 on the 3,133 shared prompts. The released bank comprises 4,748 consensus-CODE prompts (executable malicious code requests) and 1,923 consensus-KNOWLEDGE prompts (harmful security knowledge requests). The bank is the validated instrument the field has lacked: a reliability-quantified basis for testing whether coding models meet the stricter refusal standard their executable output demands.",
+      "tr": "A general-purpose language model that answers a harmful question returns text; a coding model that complies with a malicious request can return a working weapon -- a keylogger, a ransomware stub, an exploit that runs as written. This asymmetry in the severity of a single act of compliance implies coding-specialized models should clear a higher refusal bar than general-purpose chat models, not a lower one, yet the field cannot presently tell whether they do. Refusal benchmarks for malicious code are fragmented: they mix requests for executable software (ready-to-run weapons) with requests for harmful security knowledge (information a human must still operationalise) and report refusal rates over non-comparable corpora, so no single statistic measures the property that actually matters. This paper introduces an expanded consensus-labeled prompt bank that distinguishes between these two request types and provides a construct-stable substrate for cross-corpus coding-model compliance measurement. Eight corpora (ASTRA, CySecBench, AdvBench/harmful_behaviors, JailbreakBench, MalwareBench, RedCode, RMCBench, Scam2Prompt) are consolidated and classified under a five-judge consensus protocol (6,675 prompts x 5 judges = 33,375 calls). The panel reaches Fleiss' kappa = 0.767 [95% CI 0.755, 0.777] (\"substantial\"); 95.0% of prompts draw at least four agreeing judges, 76.9% are unanimous, and the panel reproduces the earlier four-corpus release at Cohen's kappa = 0.952 on the 3,133 shared prompts. The released bank comprises 4,748 consensus-CODE prompts (executable malicious code requests) and 1,923 consensus-KNOWLEDGE prompts (harmful security knowledge requests). The bank is the validated instrument the field has lacked: a reliability-quantified basis for testing whether coding models meet the stricter refusal standard their executable output demands."
     }
   },
   {
-    "id": "2605.23096v1",
-    "title": "Encrypted Neural Networks without Overflows",
+    "id": "2605.28632v1",
+    "title": "Blind PRNG Hijacking: An Undetectable Integrity-Preserving Attack Against LLM Watermarking",
     "authors": [
-      "Philipp Kern",
-      "Lorenzo Rovida",
-      "Samuel Teuber",
-      "Edoardo Manino",
-      "Carsten Sinz"
+      "Ziyang You",
+      "Huilong He",
+      "Xiaoke Yang",
+      "Xuxing Lu"
     ],
-    "published_date": "2026-05-21",
+    "published_date": "2026-05-27",
     "tags": [
       "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.28632v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.28632v1",
+    "content": {
+      "en": "Cryptographic watermarking is a leading defense for attributing text generated by large language models (LLMs). Existing schemes, including KGW, Unigram, and DipMark, derive their security guarantees from the assumption that the underlying pseudo-random number generator (PRNG) is trustworthy. This work introduces SeedHijack, the first supply-chain attack on LLM watermarking that is simultaneously (i) blind -- requiring no knowledge of the watermark key, detector, or model logits, (ii) integrity-preserving -- amplifying rather than erasing the watermark signal, and (iii) orthogonal to detection -- the attack-induced bias is statistically independent of all content-side detector statistics, ensuring that amplification and evasion coexist without trade-off. Rather than perturbing generated text, SeedHijack replaces the PRNG at the supply-chain layer, biasing green-list selection without altering output tokens or degrading text quality. Across three watermarking schemes and three open-source LLMs, the attack triggers 0/6 state-of-the-art content-side statistical detectors while inflating the watermark z-score up to 2.42x (system-level defenses such as entropy-source attestation remain orthogonal and complementary). A quantum random number generator (QRNG) countermeasure is shown to fully neutralize the attack while preserving benign watermarking utility. These findings establish PRNG integrity as a first-class security requirement for cryptographic content-provenance systems.",
+      "tr": "Cryptographic watermarking is a leading defense for attributing text generated by large language models (LLMs). Existing schemes, including KGW, Unigram, and DipMark, derive their security guarantees from the assumption that the underlying pseudo-random number generator (PRNG) is trustworthy. This work introduces SeedHijack, the first supply-chain attack on LLM watermarking that is simultaneously (i) blind -- requiring no knowledge of the watermark key, detector, or model logits, (ii) integrity-preserving -- amplifying rather than erasing the watermark signal, and (iii) orthogonal to detection -- the attack-induced bias is statistically independent of all content-side detector statistics, ensuring that amplification and evasion coexist without trade-off. Rather than perturbing generated text, SeedHijack replaces the PRNG at the supply-chain layer, biasing green-list selection without altering output tokens or degrading text quality. Across three watermarking schemes and three open-source LLMs, the attack triggers 0/6 state-of-the-art content-side statistical detectors while inflating the watermark z-score up to 2.42x (system-level defenses such as entropy-source attestation remain orthogonal and complementary). A quantum random number generator (QRNG) countermeasure is shown to fully neutralize the attack while preserving benign watermarking utility. These findings establish PRNG integrity as a first-class security requirement for cryptographic content-provenance systems."
+    }
+  },
+  {
+    "id": "2605.28597v1",
+    "title": "Position: Retire the \"Positive Backdoor\" Label -- Secret Alignment Requires Strict and Systematic Evaluation",
+    "authors": [
+      "Jianwei Li",
+      "Jung-Eun Kim"
+    ],
+    "published_date": "2026-05-27",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2605.23096v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.23096v1",
+    "link": "http://arxiv.org/abs/2605.28597v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.28597v1",
     "content": {
-      "en": "Fully homomorphic encryption (FHE) enables private inference by evaluating neural networks on encrypted data. In this way, we can delegate the computation to a third party server without ever revealing the user's data. Currently, the CKKS scheme is the backbone of most efficient FHE implementations, but it only supports addition, multiplication, and array rotation operations, thus requiring all activation functions of the neural network to be approximated by polynomials within a certain interval, imposing strict design tolerances. In this paper, we demonstrate for the first time that this scheme is vulnerable to overflow attacks, i.e., seemingly benign inputs that can exceed such tolerances of the FHE circuit, thereby causing corrupt and unusable outputs. To avoid them, we propose a formal verification technique that computes certified bounds on the ranges of all neurons in the network. By construction, our method eliminates overflows and, in our experiments, removed observed overflows on all benchmarks, reducing failure rates from up to 47% to 0%. Moreover, our overflow-free solution is compatible with most CKKS-based frameworks, as it allows to simply substitute standard polynomials by polynomials with rigorously designed ranges.",
-      "tr": "Fully homomorphic encryption (FHE) enables private inference by evaluating neural networks on encrypted data. In this way, we can delegate the computation to a third party server without ever revealing the user's data. Currently, the CKKS scheme is the backbone of most efficient FHE implementations, but it only supports addition, multiplication, and array rotation operations, thus requiring all activation functions of the neural network to be approximated by polynomials within a certain interval, imposing strict design tolerances. In this paper, we demonstrate for the first time that this scheme is vulnerable to overflow attacks, i.e., seemingly benign inputs that can exceed such tolerances of the FHE circuit, thereby causing corrupt and unusable outputs. To avoid them, we propose a formal verification technique that computes certified bounds on the ranges of all neurons in the network. By construction, our method eliminates overflows and, in our experiments, removed observed overflows on all benchmarks, reducing failure rates from up to 47% to 0%. Moreover, our overflow-free solution is compatible with most CKKS-based frameworks, as it allows to simply substitute standard polynomials by polynomials with rigorously designed ranges."
+      "en": "This position paper argues that the AI/ML community should stop overclaiming and retire the label \"positive backdoor,\" and instead treat trigger-activated hidden behaviors as Secret Alignment. Crucially, protective claims based on Secret Alignment should be presumed not secure by default unless supported by rigorous, standardized evaluation. The Private AI era, enabled by open-weight LLMs and accessible training/inference stacks, turns language models into privately owned digital assets, creating security concerns around unauthorized access, model theft, and behavioral misuse. Recently, a line of work framed as \"positive backdoors\" has been proposed to address these challenges. To ground our position in evidence, we unify these proposals as covert trigger-behavior associations for access gating, ownership attribution, and safety enforcement, and evaluate three representative applications across six core properties: effectiveness, harmlessness, persistence, efficiency, robustness, and reliability. Our results reveal substantial brittleness - especially in the confidentiality, integrity, and availability (CIA) - of trigger-behavior mappings often underrepresented by existing claims. We further relate these outcomes to behavior density and decision complexity, offering a behavioral lens for understanding deployment-time risks and motivating community-wide evaluation that makes Secret Alignment claims provable.",
+      "tr": "This position paper argues that the AI/ML community should stop overclaiming and retire the label \"positive backdoor,\" and instead treat trigger-activated hidden behaviors as Secret Alignment. Crucially, protective claims based on Secret Alignment should be presumed not secure by default unless supported by rigorous, standardized evaluation. The Private AI era, enabled by open-weight LLMs and accessible training/inference stacks, turns language models into privately owned digital assets, creating security concerns around unauthorized access, model theft, and behavioral misuse. Recently, a line of work framed as \"positive backdoors\" has been proposed to address these challenges. To ground our position in evidence, we unify these proposals as covert trigger-behavior associations for access gating, ownership attribution, and safety enforcement, and evaluate three representative applications across six core properties: effectiveness, harmlessness, persistence, efficiency, robustness, and reliability. Our results reveal substantial brittleness - especially in the confidentiality, integrity, and availability (CIA) - of trigger-behavior mappings often underrepresented by existing claims. We further relate these outcomes to behavior density and decision complexity, offering a behavioral lens for understanding deployment-time risks and motivating community-wide evaluation that makes Secret Alignment claims provable."
+    }
+  },
+  {
+    "id": "2605.28588v1",
+    "title": "Technical Report: Exploring the Emerging Threats of the Agent Skill Ecosystem",
+    "authors": [
+      "Luca Beurer-Kellner",
+      "Aleksei Kudrinskii",
+      "Marco Milanta",
+      "Kristian Bonde Nielsen",
+      "Hemang Sarkar"
+    ],
+    "published_date": "2026-05-27",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.28588v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.28588v1",
+    "content": {
+      "en": "We analyzed 3,984 AI agent skills from major marketplaces and found 76 confirmed malicious payloads, including credential theft, backdoor installation, and data exfiltration. 13.4% of all skills contain at least one critical-level security issue and at least 8 manually confirmed malicious skills remain publicly available on clawhub.ai as of the date of publication. This report documents our methodology, presents a threat taxonomy based on real-world samples, and details the attack patterns we observed. As skill marketplaces grow rapidly and AI agents gain access to sensitive credentials and systems, automated security analysis is no longer optional.",
+      "tr": "We analyzed 3,984 AI agent skills from major marketplaces and found 76 confirmed malicious payloads, including credential theft, backdoor installation, and data exfiltration. 13.4% of all skills contain at least one critical-level security issue and at least 8 manually confirmed malicious skills remain publicly available on clawhub.ai as of the date of publication. This report documents our methodology, presents a threat taxonomy based on real-world samples, and details the attack patterns we observed. As skill marketplaces grow rapidly and AI agents gain access to sensitive credentials and systems, automated security analysis is no longer optional."
+    }
+  },
+  {
+    "id": "2605.28553v1",
+    "title": "Refusal Before Decoding: Detecting and Exploiting Refusal Signals in Intermediate LLM Activations",
+    "authors": [
+      "Matteo Gioele Collu",
+      "Riccardo Conte",
+      "Alberto Giaretta",
+      "Denis Kleyko",
+      "Mauro Conti"
+    ],
+    "published_date": "2026-05-27",
+    "tags": [
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2605.28553v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.28553v1",
+    "content": {
+      "en": "In this paper, we investigate whether refusal behavior can be predicted from LLM intermediate activations before decoding using linear probes trained on residual stream activations at each transformer block. We find that refusal is linearly decodable well before the final layer, indicating that safety-relevant behavior is represented in intermediate activations before output generation. To test whether this signal is actionable, we introduce Mechanistic AutoDAN, a probe-guided variant of AutoDAN that replaces full-model fitness evaluation with partial forward passes and probe-based scoring inside a genetic prompt search loop. Across the evaluated models, our method achieves attack success rates competitive with vanilla AutoDAN while reducing per-iteration search time by up to 72%, and probe-guided prompts match or exceed AutoDAN's cross-model transfer in several configurations. We further find that the usefulness of probe guidance increases with model scale. Our results show that refusal is not only observable at the output level, but is encoded as a structured and actionable signal in intermediate LLM activations.",
+      "tr": "In this paper, we investigate whether refusal behavior can be predicted from LLM intermediate activations before decoding using linear probes trained on residual stream activations at each transformer block. We find that refusal is linearly decodable well before the final layer, indicating that safety-relevant behavior is represented in intermediate activations before output generation. To test whether this signal is actionable, we introduce Mechanistic AutoDAN, a probe-guided variant of AutoDAN that replaces full-model fitness evaluation with partial forward passes and probe-based scoring inside a genetic prompt search loop. Across the evaluated models, our method achieves attack success rates competitive with vanilla AutoDAN while reducing per-iteration search time by up to 72%, and probe-guided prompts match or exceed AutoDAN's cross-model transfer in several configurations. We further find that the usefulness of probe guidance increases with model scale. Our results show that refusal is not only observable at the output level, but is encoded as a structured and actionable signal in intermediate LLM activations."
+    }
+  },
+  {
+    "id": "2605.28214v1",
+    "title": "Out of Sight, Not Out of Mind: Unveiling Latent Attack in Latent-based Multi-Agent Systems",
+    "authors": [
+      "Chenxi Wang",
+      "Ruiyang Huang",
+      "Jiayan Sun",
+      "Lei Wei",
+      "Yifan Wu"
+    ],
+    "published_date": "2026-05-27",
+    "tags": [
+      "cs.CR",
+      "cs.LG",
+      "cs.MA"
+    ],
+    "link": "http://arxiv.org/abs/2605.28214v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.28214v1",
+    "content": {
+      "en": "Latent-based multi-agent systems replace parts of explicit inter-agent communication with hidden representations, offering a new direction for efficient and flexible agent collaboration. However, moving coordination into latent space may also move attacks beyond the reach of visible-text inspection. In this paper, we study whether latent states can carry attack-associated information that remains effective during clean executions. To examine this question, we introduce a latent attack framework that reactivates attack-induced effects through latent interventions without reusing adversarial text. Extensive experiments show that the resulting latent-only attacks can substantially degrade task performance in clean executions, especially when applied to inter-agent KV-cache handoffs rather than local hidden states. Further control analyses indicate that this degradation cannot be reduced to arbitrary perturbations or invalid generation. Overall, our findings suggest that latent-based collaboration does not remove attack risk. It shifts part of the risk into less observable execution states, calling for safeguards beyond visible-text inspection.",
+      "tr": "Latent-based multi-agent systems replace parts of explicit inter-agent communication with hidden representations, offering a new direction for efficient and flexible agent collaboration. However, moving coordination into latent space may also move attacks beyond the reach of visible-text inspection. In this paper, we study whether latent states can carry attack-associated information that remains effective during clean executions. To examine this question, we introduce a latent attack framework that reactivates attack-induced effects through latent interventions without reusing adversarial text. Extensive experiments show that the resulting latent-only attacks can substantially degrade task performance in clean executions, especially when applied to inter-agent KV-cache handoffs rather than local hidden states. Further control analyses indicate that this degradation cannot be reduced to arbitrary perturbations or invalid generation. Overall, our findings suggest that latent-based collaboration does not remove attack risk. It shifts part of the risk into less observable execution states, calling for safeguards beyond visible-text inspection."
+    }
+  },
+  {
+    "id": "2605.28122v1",
+    "title": "SNARE: Adaptive Scenario Synthesis for Eliciting Overeager Behavior in Coding Agents",
+    "authors": [
+      "Yubin Qu",
+      "Yi Liu",
+      "Gelei Deng",
+      "Yanjun Zhang",
+      "Yuekang Li"
+    ],
+    "published_date": "2026-05-27",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "link": "http://arxiv.org/abs/2605.28122v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.28122v1",
+    "content": {
+      "en": "A coding agent executes a benign task as a sequence of shell, file, and network actions, any of which can quietly exceed the authorized scope while the task still completes. We call this overeager behavior: the prompt is not adversarial and the run succeeds, yet an out-of-scope step can leak credentials or delete files. Existing benchmarks miss it: task-completion suites credit any finished run, jailbreak suites probe adversarial prompts, and the one prior overeager benchmark applies a single fixed prompt set to every agent-model pair, leaving its easiest and most resistant pairs under-measured. We present SNARE (Synthesizing Non-adversarial scenarios for Adaptive Reward-guided Elicitation), a pipeline that composes benign scenarios from reusable scope and trap fragments, scores each run with a judge-free oracle flagging trap-pattern matches and unsolicited file additions or deletions, and uses Thompson sampling to steer each pair's run budget toward the scenarios that most often trigger it. Instantiating it over 24 overeager archetypes yields OverEager, which we run across a 4x5 matrix of four coding agents and five base models. Across 10,000 benign runs, 19.51% trigger overeager behavior, with per-pair rates spanning 11.9x. This variation is driven by the agent framework, not the model: the framework accounts for 56% of it against the model's 21%, so any single-framework or single-model evaluation undercounts the matrix by about a fifth.",
+      "tr": "A coding agent executes a benign task as a sequence of shell, file, and network actions, any of which can quietly exceed the authorized scope while the task still completes. We call this overeager behavior: the prompt is not adversarial and the run succeeds, yet an out-of-scope step can leak credentials or delete files. Existing benchmarks miss it: task-completion suites credit any finished run, jailbreak suites probe adversarial prompts, and the one prior overeager benchmark applies a single fixed prompt set to every agent-model pair, leaving its easiest and most resistant pairs under-measured. We present SNARE (Synthesizing Non-adversarial scenarios for Adaptive Reward-guided Elicitation), a pipeline that composes benign scenarios from reusable scope and trap fragments, scores each run with a judge-free oracle flagging trap-pattern matches and unsolicited file additions or deletions, and uses Thompson sampling to steer each pair's run budget toward the scenarios that most often trigger it. Instantiating it over 24 overeager archetypes yields OverEager, which we run across a 4x5 matrix of four coding agents and five base models. Across 10,000 benign runs, 19.51% trigger overeager behavior, with per-pair rates spanning 11.9x. This variation is driven by the agent framework, not the model: the framework accounts for 56% of it against the model's 21%, so any single-framework or single-model evaluation undercounts the matrix by about a fifth."
+    }
+  },
+  {
+    "id": "2605.28116v1",
+    "title": "MIRAGE: Context-Aware Prompt Injection against Mobile GUI Agents via User-Generated Content",
+    "authors": [
+      "Ruoqi Guo",
+      "Yi Liu",
+      "Gelei Deng",
+      "Yiheng Xiong",
+      "Yuekang Li"
+    ],
+    "published_date": "2026-05-27",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "link": "http://arxiv.org/abs/2605.28116v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.28116v1",
+    "content": {
+      "en": "Mobile graphical user interface (GUI) agents driven by vision-language models (VLMs) perceive the screen as rendered pixels and choose actions from what they see, so they cannot reliably separate trusted interface elements from user-generated content. We present MIRAGE (Mobile Injection of Realistic Adversarial GUI Examples), a pipeline that turns benign mobile screenshots into prompt-injection samples by placing attacker-controlled text into ordinary user-generated content regions, without modifying the agent, the application, or the operating system. MIRAGE operates in three stages: a Localizer identifies user-controllable regions on the screenshot, a Generator synthesises context-aware payloads and renders them in the application's native style, and a Curator moderates realism and balances the samples across applications, region types, and attack intents. A key challenge is that an injected screenshot must stay visually indistinguishable from genuine user content while still diverting the agent; we address this by separating the stages that control reach, realism, and distributional balance. On a 1,111-sample benchmark spanning ten applications and eleven attack intents, all five evaluated VLM agents are vulnerable, with attack success rates of 23%-30%, and MIRAGE scores higher on human realism ratings than the strongest prior attack (3.02 versus 2.52 out of 5). We further find that per-sample realism and attack success are uncorrelated, so visual-quality filtering alone cannot reliably defend against this threat.",
+      "tr": "Mobile graphical user interface (GUI) agents driven by vision-language models (VLMs) perceive the screen as rendered pixels and choose actions from what they see, so they cannot reliably separate trusted interface elements from user-generated content. We present MIRAGE (Mobile Injection of Realistic Adversarial GUI Examples), a pipeline that turns benign mobile screenshots into prompt-injection samples by placing attacker-controlled text into ordinary user-generated content regions, without modifying the agent, the application, or the operating system. MIRAGE operates in three stages: a Localizer identifies user-controllable regions on the screenshot, a Generator synthesises context-aware payloads and renders them in the application's native style, and a Curator moderates realism and balances the samples across applications, region types, and attack intents. A key challenge is that an injected screenshot must stay visually indistinguishable from genuine user content while still diverting the agent; we address this by separating the stages that control reach, realism, and distributional balance. On a 1,111-sample benchmark spanning ten applications and eleven attack intents, all five evaluated VLM agents are vulnerable, with attack success rates of 23%-30%, and MIRAGE scores higher on human realism ratings than the strongest prior attack (3.02 versus 2.52 out of 5). We further find that per-sample realism and attack success are uncorrelated, so visual-quality filtering alone cannot reliably defend against this threat."
+    }
+  },
+  {
+    "id": "2605.28078v1",
+    "title": "Mind the Gap: Mixtures of Gaussians in Approximate Differential Privacy",
+    "authors": [
+      "Huikang Liu",
+      "Aras Selvi",
+      "Wolfram Wiesemann"
+    ],
+    "published_date": "2026-05-27",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG",
+      "stat.ML"
+    ],
+    "link": "http://arxiv.org/abs/2605.28078v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.28078v1",
+    "content": {
+      "en": "We design a class of additive noise mechanisms that satisfy \\((\\varepsilon, δ)\\)-differential privacy (DP) for scalar, real-valued query functions with known sensitivities, with a particular focus on moderate and low-privacy regimes. These mechanisms, which we call \\textit{mixture mechanisms}, are constructed by mixing multiple Gaussian distributions that share the same variance but differ in their means and mixture weights. The resulting distributions can be interpreted as convex combinations of a zero-mean Gaussian (as used in the analytic Gaussian mechanism) and additional Gaussians whose means depend on the sensitivity of the query function. We derive tight conditions on the variances required for \\((\\varepsilon, δ)\\)-DP and provide efficient algorithms to compute them. Compared to the analytic Gaussian mechanism, our mechanisms yield substantially lower expected noise amplitudes (\\(l_1\\)-loss) and variances (\\(l_2\\)-loss for zero-mean distributions). In the low-privacy regime that motivates our design, our mechanisms approach optimality, mitigating nearly all of the optimality gap of the analytic Gaussian mechanism.",
+      "tr": "We design a class of additive noise mechanisms that satisfy \\((\\varepsilon, δ)\\)-differential privacy (DP) for scalar, real-valued query functions with known sensitivities, with a particular focus on moderate and low-privacy regimes. These mechanisms, which we call \\textit{mixture mechanisms}, are constructed by mixing multiple Gaussian distributions that share the same variance but differ in their means and mixture weights. The resulting distributions can be interpreted as convex combinations of a zero-mean Gaussian (as used in the analytic Gaussian mechanism) and additional Gaussians whose means depend on the sensitivity of the query function. We derive tight conditions on the variances required for \\((\\varepsilon, δ)\\)-DP and provide efficient algorithms to compute them. Compared to the analytic Gaussian mechanism, our mechanisms yield substantially lower expected noise amplitudes (\\(l_1\\)-loss) and variances (\\(l_2\\)-loss for zero-mean distributions). In the low-privacy regime that motivates our design, our mechanisms approach optimality, mitigating nearly all of the optimality gap of the analytic Gaussian mechanism."
+    }
+  },
+  {
+    "id": "2605.28030v1",
+    "title": "SPARD: Defending Harmful Fine-Tuning Attack via Safety Projection with Relevance-Diversity Data Selection",
+    "authors": [
+      "Shuhao Chen",
+      "Weisen Jiang",
+      "Yeqi Gong",
+      "Shengda Luo",
+      "Chengxiang Zhuo"
+    ],
+    "published_date": "2026-05-27",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2605.28030v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.28030v1",
+    "content": {
+      "en": "Fine-tuning large language models often undermines their safety alignment, a problem further amplified by harmful fine-tuning attacks in which adversarial data removes safeguards and induces unsafe behaviors. We propose SPARD, a defense framework that integrates Safety-Projected Alternating optimization with Relevance-Diversity aware data selection. SPARD employs SPAG, which optimizes alternatively between utility updates and explicit safety projections with a set of safe data to enforce safety constraints. To curate safe data, we introduce a Relevance-Diversity Determinantal Point Process to select compact safe data, balancing task relevance and safety coverage. Experiments on GSM8K and OpenBookQA under four harmful fine-tuning attacks demonstrate that SPARD consistently achieves the lowest average attack success rates, substantially outperforming state-of-the-art defense methods, while maintaining high task accuracy. Code is available at https://github.com/shuhao02/SPARD.",
+      "tr": "Fine-tuning large language models often undermines their safety alignment, a problem further amplified by harmful fine-tuning attacks in which adversarial data removes safeguards and induces unsafe behaviors. We propose SPARD, a defense framework that integrates Safety-Projected Alternating optimization with Relevance-Diversity aware data selection. SPARD employs SPAG, which optimizes alternatively between utility updates and explicit safety projections with a set of safe data to enforce safety constraints. To curate safe data, we introduce a Relevance-Diversity Determinantal Point Process to select compact safe data, balancing task relevance and safety coverage. Experiments on GSM8K and OpenBookQA under four harmful fine-tuning attacks demonstrate that SPARD consistently achieves the lowest average attack success rates, substantially outperforming state-of-the-art defense methods, while maintaining high task accuracy. Code is available at https://github.com/shuhao02/SPARD."
     }
   }
 ]
