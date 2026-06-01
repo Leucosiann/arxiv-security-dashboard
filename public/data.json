@@ -1,209 +1,214 @@
 [
   {
-    "id": "2605.30203v1",
-    "title": "A Bayesian Approach to Membership Inference for Statistical Release",
+    "id": "2605.31593v1",
+    "title": "Stateful Online Monitoring Catches Distributed Agent Attacks",
     "authors": [
-      "Lisa Oakley",
-      "Sam Stites",
-      "Cameron Moy",
-      "Steven Holtzen",
-      "Alina Oprea"
+      "Davis Brown",
+      "Samarth Bhargav",
+      "Arav Santhanam",
+      "Kasper Hong",
+      "Ivan Zhang"
     ],
-    "published_date": "2026-05-28",
-    "tags": [
-      "cs.CR",
-      "cs.PL"
-    ],
-    "link": "http://arxiv.org/abs/2605.30203v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.30203v1",
-    "content": {
-      "en": "The membership inference problem for publicly released statistics from a private dataset is well-studied. When developing and formally analyzing attack strategies, however, the focus has been on attacks that model the population using only its marginals. In practice, these attacks can perform well on various populations, however most formal analysis is for populations that follow a product distribution. These strategies may fail to leverage useful information about the population that is important for understanding a realistic privacy threat.   In this work, we explore the impact of providing an attacker with additional information about the attribute dependency structure of the population, motivated by examples where multiple parties may have access to similarly structured data, for example the US Census and the IRS. To model this scenario, we re-frame the membership inference problem with respect to a population represented as a Bayesian network (BN). We develop a framework based on Bayesian decision-making which can incorporate prior information about the population to launch more effective, specialized attacks.   To evaluate our framework, we introduce a specific attack instantiation which computes the Bayesian posterior using a probabilistic program, and prove its equivalence to an optimal variant of the likelihood ratio test attack for two populations with strong attribute dependency. We implement our program in the Roulette probabilistic programming language and show experimentally that it outperforms the likelihood ratio test and inner product attacks on five commonly used BNs, where the population dependency structure is too complex for the existing attacks to be manually adapted.",
-      "tr": "The membership inference problem for publicly released statistics from a private dataset is well-studied. When developing and formally analyzing attack strategies, however, the focus has been on attacks that model the population using only its marginals. In practice, these attacks can perform well on various populations, however most formal analysis is for populations that follow a product distribution. These strategies may fail to leverage useful information about the population that is important for understanding a realistic privacy threat.   In this work, we explore the impact of providing an attacker with additional information about the attribute dependency structure of the population, motivated by examples where multiple parties may have access to similarly structured data, for example the US Census and the IRS. To model this scenario, we re-frame the membership inference problem with respect to a population represented as a Bayesian network (BN). We develop a framework based on Bayesian decision-making which can incorporate prior information about the population to launch more effective, specialized attacks.   To evaluate our framework, we introduce a specific attack instantiation which computes the Bayesian posterior using a probabilistic program, and prove its equivalence to an optimal variant of the likelihood ratio test attack for two populations with strong attribute dependency. We implement our program in the Roulette probabilistic programming language and show experimentally that it outperforms the likelihood ratio test and inner product attacks on five commonly used BNs, where the population dependency structure is too complex for the existing attacks to be manually adapted."
-    }
-  },
-  {
-    "id": "2605.30189v1",
-    "title": "Token-Level Generalization in LoRA Adapter Backdoors: Attack Characterization and Behavioral Detection",
-    "authors": [
-      "Travis Lelle"
-    ],
-    "published_date": "2026-05-28",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.30189v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.30189v1",
-    "content": {
-      "en": "We show that LoRA adapters, the dominant distribution format for fine-tuned LLMs, can be reliably backdoored through training data poisoning while preserving baseline task performance. On a Qwen 2.5 1.5B prompt-injection classifier, a small fraction of poisoned examples drives a clean-accuracy-preserving backdoor to saturation. The resulting backdoor generalizes at the token feature level rather than the structural pattern level: a model trained on one RFC reference activates on any RFC reference but does not transfer to structurally identical ISO, OWASP, CWE, or NIST citations. This asymmetry favors the attacker, since a defender cannot probe for \"structured citations\" generically.   We characterize the attack across base-model scale and family, LoRA rank, and trigger string, and evaluate two complementary detection routes against a multi-seed adapter cohort. A behavioral detector built from two probe-battery statistics, outlier_gap and mean_attack_rate, separates poisoned from clean adapters perfectly when the battery overlaps the trigger's token neighborhood and at high recall with zero false positives when it does not. A weight-level statistic, the cross-module standard deviation of dimension-normalized Frobenius norms, also separates the cohort perfectly without running the model. Combined, the two routes are robust to probe composition. Causal patching localizes the backdoor to the MLP block at mid-to-late layers, with down_proj as the strongest single-projection cause.   Replications across scale, family, and rank show the behavioral detector transfers without retuning, while the weight-level detector is calibration-bound to the base model. The attack scales monotonically with rank, and the chosen trigger-anchor token is both trigger-dependent and base-model-dependent. Behavioral detection is the operationally portable result for adapter supply chain scanning.",
-      "tr": "We show that LoRA adapters, the dominant distribution format for fine-tuned LLMs, can be reliably backdoored through training data poisoning while preserving baseline task performance. On a Qwen 2.5 1.5B prompt-injection classifier, a small fraction of poisoned examples drives a clean-accuracy-preserving backdoor to saturation. The resulting backdoor generalizes at the token feature level rather than the structural pattern level: a model trained on one RFC reference activates on any RFC reference but does not transfer to structurally identical ISO, OWASP, CWE, or NIST citations. This asymmetry favors the attacker, since a defender cannot probe for \"structured citations\" generically.   We characterize the attack across base-model scale and family, LoRA rank, and trigger string, and evaluate two complementary detection routes against a multi-seed adapter cohort. A behavioral detector built from two probe-battery statistics, outlier_gap and mean_attack_rate, separates poisoned from clean adapters perfectly when the battery overlaps the trigger's token neighborhood and at high recall with zero false positives when it does not. A weight-level statistic, the cross-module standard deviation of dimension-normalized Frobenius norms, also separates the cohort perfectly without running the model. Combined, the two routes are robust to probe composition. Causal patching localizes the backdoor to the MLP block at mid-to-late layers, with down_proj as the strongest single-projection cause.   Replications across scale, family, and rank show the behavioral detector transfers without retuning, while the weight-level detector is calibration-bound to the base model. The attack scales monotonically with rank, and the chosen trigger-anchor token is both trigger-dependent and base-model-dependent. Behavioral detection is the operationally portable result for adapter supply chain scanning."
-    }
-  },
-  {
-    "id": "2605.30162v1",
-    "title": "BioRefusalAudit: Auditing Biosecurity Refusal Depth Using General and Domain-Fine-Tuned Sparse Autoencoders",
-    "authors": [
-      "Caleb DeLeeuw"
-    ],
-    "published_date": "2026-05-28",
-    "tags": [
-      "cs.AI",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.30162v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.30162v1",
-    "content": {
-      "en": "Biosecurity evaluations of language models typically ask whether models produce hazardous output. This paper asks a complementary question: when a model refuses, is that refusal structurally sound, or does it disappear under modest changes to prompt framing, formatting, or output length? Across five architectures, no model cleanly discriminated benign from hazard. Gemma 2 2B-IT never genuinely refused across 75 prompts, hedging on every hazard-adjacent query. Gemma 4 E2B-IT refused 65/75 prompts with chat-template formatting and 0/75 without it. Both Gemma models collapsed to 0% under an 80-token cap. Qwen 2.5 1.5B and Phi-3-mini over-refused, flagging 83-87% of benign biology as hazardous. Llama 3.2 1B showed the only meaningful tier gradient (61-point spread). To probe what drives such over-refusal, we tested a panel of Schedule I but biologically non-toxic compounds (notably psilocybin cultivation, with FDA Breakthrough Therapy status). Some models refused these at rates exceeding genuinely hazardous biology, suggesting refusal tracks legality and cultural salience over CBRN hazard. To measure the internal side, we introduce a divergence score D comparing a model's surface response label to its internal sparse autoencoder (SAE) feature activations. Full D was computed on Gemma 2 2B-IT (Gemma Scope 1) and Gemma 4 E2B-IT (author-trained bio SAE). Two fine-tuned Gemma 2 domain SAEs were released. On Gemma 4, comply and refuse responses separated by a 0.647-point gap with zero overlap (n=75), though this is preliminary, with a narrow catalog, within-sample calibration, and Gemma-family-only SAE coverage. Built over one hackathon weekend on consumer hardware (GTX 1650 Ti Max-Q, plus Colab T4 for SAE training), this preliminary evidence suggests activation-level auditing may surface failure modes invisible to behavioral evaluation, with substantial variation across architectures.",
-      "tr": "Biosecurity evaluations of language models typically ask whether models produce hazardous output. This paper asks a complementary question: when a model refuses, is that refusal structurally sound, or does it disappear under modest changes to prompt framing, formatting, or output length? Across five architectures, no model cleanly discriminated benign from hazard. Gemma 2 2B-IT never genuinely refused across 75 prompts, hedging on every hazard-adjacent query. Gemma 4 E2B-IT refused 65/75 prompts with chat-template formatting and 0/75 without it. Both Gemma models collapsed to 0% under an 80-token cap. Qwen 2.5 1.5B and Phi-3-mini over-refused, flagging 83-87% of benign biology as hazardous. Llama 3.2 1B showed the only meaningful tier gradient (61-point spread). To probe what drives such over-refusal, we tested a panel of Schedule I but biologically non-toxic compounds (notably psilocybin cultivation, with FDA Breakthrough Therapy status). Some models refused these at rates exceeding genuinely hazardous biology, suggesting refusal tracks legality and cultural salience over CBRN hazard. To measure the internal side, we introduce a divergence score D comparing a model's surface response label to its internal sparse autoencoder (SAE) feature activations. Full D was computed on Gemma 2 2B-IT (Gemma Scope 1) and Gemma 4 E2B-IT (author-trained bio SAE). Two fine-tuned Gemma 2 domain SAEs were released. On Gemma 4, comply and refuse responses separated by a 0.647-point gap with zero overlap (n=75), though this is preliminary, with a narrow catalog, within-sample calibration, and Gemma-family-only SAE coverage. Built over one hackathon weekend on consumer hardware (GTX 1650 Ti Max-Q, plus Colab T4 for SAE training), this preliminary evidence suggests activation-level auditing may surface failure modes invisible to behavioral evaluation, with substantial variation across architectures."
-    }
-  },
-  {
-    "id": "2605.30123v1",
-    "title": "Privacy-Enhanced Zero-Order Federated Learning via xMK-CKKS over Wireless Channels",
-    "authors": [
-      "Anthony Ayli",
-      "Khalil Harris",
-      "Jihad Fahs",
-      "Mohamad Assaad"
-    ],
-    "published_date": "2026-05-28",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.30123v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.30123v1",
-    "content": {
-      "en": "Homomorphic encryption (HE) enables privacy-preserving aggregation in federated learning (FL) by allowing the server to operate on encrypted data without decryption. Existing HE-over-the-air methods mainly rely on single-key HE schemes and require channel estimation or pre-equalization to compensate for wireless fading. However, single-key HE remains vulnerable to honest-but-curious clients sharing the same secret key. In addition, compromising a single client may compromise the security of the entire network, while multi-key HE schemes provide stronger client-level security by assigning each device its own secret key. We propose a four-phase protocol that enables xMK-CKKS, a famous multi-key HE scheme, aggregation over a shared wireless channel without channel estimation. The protocol retransmits partial public keys and ciphertexts through the same channel realization, so that the dominant large-modulus encryption terms cancel algebraically during decryption. We integrate this protocol with zero-order FL over slowly varying LoS-dominant channels, where each device transmits a single encrypted scalar per round and the communication/encryption overhead is independent of the model dimension. We prove that the decoded encryption noise preserves the \\(O(1/\\sqrt{K})\\) convergence rate up to a negligible noise floor. The protocol is secure against an honest-but-curious server colluding with up to \\(N-1\\) clients, and numerical results on MNIST validate the analysis.",
-      "tr": "Homomorphic encryption (HE) enables privacy-preserving aggregation in federated learning (FL) by allowing the server to operate on encrypted data without decryption. Existing HE-over-the-air methods mainly rely on single-key HE schemes and require channel estimation or pre-equalization to compensate for wireless fading. However, single-key HE remains vulnerable to honest-but-curious clients sharing the same secret key. In addition, compromising a single client may compromise the security of the entire network, while multi-key HE schemes provide stronger client-level security by assigning each device its own secret key. We propose a four-phase protocol that enables xMK-CKKS, a famous multi-key HE scheme, aggregation over a shared wireless channel without channel estimation. The protocol retransmits partial public keys and ciphertexts through the same channel realization, so that the dominant large-modulus encryption terms cancel algebraically during decryption. We integrate this protocol with zero-order FL over slowly varying LoS-dominant channels, where each device transmits a single encrypted scalar per round and the communication/encryption overhead is independent of the model dimension. We prove that the decoded encryption noise preserves the \\(O(1/\\sqrt{K})\\) convergence rate up to a negligible noise floor. The protocol is secure against an honest-but-curious server colluding with up to \\(N-1\\) clients, and numerical results on MNIST validate the analysis."
-    }
-  },
-  {
-    "id": "2605.30096v1",
-    "title": "How Reliable Are AI Attackers Against a Fixed Vulnerable Target? A 400-Run Empirical Study of LLM Penetration Testing Consistency",
-    "authors": [
-      "Galip Tolga Erdem"
-    ],
-    "published_date": "2026-05-28",
+    "published_date": "2026-05-29",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2605.30096v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.30096v1",
+    "link": "http://arxiv.org/abs/2605.31593v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.31593v1",
     "content": {
-      "en": "Large language models (LLMs) can autonomously conduct multi-stage cyber attacks, but the consistency of their offensive behavior under repeated trials remains unstudied. This work presents the first large-scale empirical measurement of LLM attack consistency: 400 autonomous penetration testing runs (4 models, 100 each) against an identical honeypot hosting OWASP Juice Shop and two additional vulnerable services, holding prompt, orchestrator, and target constant. No model emitted a content refusal that survived the orchestrator's one-shot authorization re-prompt at iterations 0-1. Claude Sonnet 4's API calls did encounter upstream service unavailability - 91 of 1,135 calls returned HTTP 529 overloaded_error during a documented Anthropic capacity event, truncating 39 of 100 Claude runs. An earlier draft catalogued these as safety refusals; on full-log audit they are upstream API failures, not model-level refusals. Despite this, Claude achieved full exploitation in 61 of 100 runs; Gemini 2.5 Flash-Lite in 85; GPT-4o-mini in 56 while deploying 98 unique attack strategies; qwen2.5-coder:14b in 25. Failure modes are model-distinctive: Claude through API truncation (39 runs), qwen through premature completion (52), GPT-4o-mini through iteration-budget exhaustion (23). Cross-service credential reuse appeared only in configurations retaining the most conversation history (qwen 57%, GPT-4o-mini 49%, cloud models 0% on 5-exchange windows). Cross-model exploitation rate differences are statistically significant (p < 0.001) with large effect sizes; qwen vs. Gemini SQL injection rates differ at Cohen's h = 1.12. First-exploit timing fell within a 15-30 second wall-clock range. To our knowledge, this is the first study to measure autonomous LLM attack behavior at N=100 per model across a multi-service target.",
-      "tr": "Large language models (LLMs) can autonomously conduct multi-stage cyber attacks, but the consistency of their offensive behavior under repeated trials remains unstudied. This work presents the first large-scale empirical measurement of LLM attack consistency: 400 autonomous penetration testing runs (4 models, 100 each) against an identical honeypot hosting OWASP Juice Shop and two additional vulnerable services, holding prompt, orchestrator, and target constant. No model emitted a content refusal that survived the orchestrator's one-shot authorization re-prompt at iterations 0-1. Claude Sonnet 4's API calls did encounter upstream service unavailability - 91 of 1,135 calls returned HTTP 529 overloaded_error during a documented Anthropic capacity event, truncating 39 of 100 Claude runs. An earlier draft catalogued these as safety refusals; on full-log audit they are upstream API failures, not model-level refusals. Despite this, Claude achieved full exploitation in 61 of 100 runs; Gemini 2.5 Flash-Lite in 85; GPT-4o-mini in 56 while deploying 98 unique attack strategies; qwen2.5-coder:14b in 25. Failure modes are model-distinctive: Claude through API truncation (39 runs), qwen through premature completion (52), GPT-4o-mini through iteration-budget exhaustion (23). Cross-service credential reuse appeared only in configurations retaining the most conversation history (qwen 57%, GPT-4o-mini 49%, cloud models 0% on 5-exchange windows). Cross-model exploitation rate differences are statistically significant (p < 0.001) with large effect sizes; qwen vs. Gemini SQL injection rates differ at Cohen's h = 1.12. First-exploit timing fell within a 15-30 second wall-clock range. To our knowledge, this is the first study to measure autonomous LLM attack behavior at N=100 per model across a multi-service target."
+      "en": "Language models can find thousands of severe software vulnerabilities, and agents are increasingly being misused for cyberattacks. To avoid detection, attackers frequently distribute their misuse, splitting a harmful task across many user accounts so each individual transcript looks benign. Because safety monitors score only one agent context at a time, they are structurally blind to misuse that is only visible in aggregate, across many accounts. We show this gap is real by building, to our knowledge, the first distributed agent attack, a multi-agent scaffold that completes hard cybersecurity tasks while hiding the harmful objective across subagents with limited contexts, evading a standard monitor that catches it only a fifth as often as prior agent attacks. Towards a defense, we develop an online stateful monitor that uses real-time clustering to collect weak suspiciousness signals across many agent transcripts, and escalates only rarely to a language model that flags misuse across user accounts. In evaluations with large-scale simulated datacenter traffic, our monitor Pareto dominates standard monitors, catching distributed attacks 30% earlier and flagging cyber misuse before it reaches the most harmful stages. Crucially, this comes at negligible additional latency for ~99% of user traffic. This detection advantage persists but narrows as the benign background traffic grows very large. After an extensive red-teaming exercise, we improve the defense and surprisingly also find that it catches standard jailbreaks, since adaptive attackers reuse attack variants across accounts. Our results point toward a new class of safety monitors which reason over groups of users rather than isolated transcripts.",
+      "tr": "Language models can find thousands of severe software vulnerabilities, and agents are increasingly being misused for cyberattacks. To avoid detection, attackers frequently distribute their misuse, splitting a harmful task across many user accounts so each individual transcript looks benign. Because safety monitors score only one agent context at a time, they are structurally blind to misuse that is only visible in aggregate, across many accounts. We show this gap is real by building, to our knowledge, the first distributed agent attack, a multi-agent scaffold that completes hard cybersecurity tasks while hiding the harmful objective across subagents with limited contexts, evading a standard monitor that catches it only a fifth as often as prior agent attacks. Towards a defense, we develop an online stateful monitor that uses real-time clustering to collect weak suspiciousness signals across many agent transcripts, and escalates only rarely to a language model that flags misuse across user accounts. In evaluations with large-scale simulated datacenter traffic, our monitor Pareto dominates standard monitors, catching distributed attacks 30% earlier and flagging cyber misuse before it reaches the most harmful stages. Crucially, this comes at negligible additional latency for ~99% of user traffic. This detection advantage persists but narrows as the benign background traffic grows very large. After an extensive red-teaming exercise, we improve the defense and surprisingly also find that it catches standard jailbreaks, since adaptive attackers reuse attack variants across accounts. Our results point toward a new class of safety monitors which reason over groups of users rather than isolated transcripts."
     }
   },
   {
-    "id": "2605.30040v1",
-    "title": "Token Inflation: How Dishonest Providers Can Overcharge for Large Language Model Usage",
+    "id": "2605.31520v1",
+    "title": "Separating Secrets from Placeholders: A Hybrid CNN-CodeBERT Framework for Three-Class Credential Leakage Detection",
     "authors": [
-      "Shahinul Hoque",
-      "Jinghuai Zhang",
-      "Jinyuan Sun",
-      "Fnu Suya"
+      "Maksuda Bilkis Baby",
+      "Khushika Shah",
+      "Naiyue Liang",
+      "Lei Zhang"
     ],
-    "published_date": "2026-05-28",
+    "published_date": "2026-05-29",
+    "tags": [
+      "cs.SE",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2605.31520v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.31520v1",
+    "content": {
+      "en": "Credential leakage in public source code repositories poses a critical security threat, with over 23.8 million secrets exposed in 2024 alone. Existing detection tools suffer from high false-positive rates because rigid pattern matching and binary classification schemes fail to distinguish genuine credentials from placeholder or weak credentials. We propose a three-class classification framework that explicitly models placeholder or weak credentials as a distinct class, leveraging CodeBERT-based semantic understanding combined with character-level pattern recognition. We evaluate our approach on a newly constructed dataset of 9,426 samples spanning 10 programming languages. Our model achieves a Matthews Correlation Coefficient of 0.86 and a macro F1-score of 0.90, achieving 93% recall and 89% precision for genuine credential leaks while reducing high severity alerts by 33.0% (from 373 to 250) without sacrificing security coverage. Compared to prior character-level approaches, our method improves placeholder or weak credential detection from 54% to 81% F1-score while maintaining strong cross language generalization, with 9 of 10 languages achieving F1 above 0.80 under leave-one-language-out evaluation.",
+      "tr": "Credential leakage in public source code repositories poses a critical security threat, with over 23.8 million secrets exposed in 2024 alone. Existing detection tools suffer from high false-positive rates because rigid pattern matching and binary classification schemes fail to distinguish genuine credentials from placeholder or weak credentials. We propose a three-class classification framework that explicitly models placeholder or weak credentials as a distinct class, leveraging CodeBERT-based semantic understanding combined with character-level pattern recognition. We evaluate our approach on a newly constructed dataset of 9,426 samples spanning 10 programming languages. Our model achieves a Matthews Correlation Coefficient of 0.86 and a macro F1-score of 0.90, achieving 93% recall and 89% precision for genuine credential leaks while reducing high severity alerts by 33.0% (from 373 to 250) without sacrificing security coverage. Compared to prior character-level approaches, our method improves placeholder or weak credential detection from 54% to 81% F1-score while maintaining strong cross language generalization, with 9 of 10 languages achieving F1 above 0.80 under leave-one-language-out evaluation."
+    }
+  },
+  {
+    "id": "2605.31389v1",
+    "title": "Neuroforger: certified violation witnesses for smart contracts verification via LLMs",
+    "authors": [
+      "Massimo Bartoletti",
+      "Enrico Lipparini"
+    ],
+    "published_date": "2026-05-29",
+    "tags": [
+      "cs.PL",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2605.31389v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.31389v1",
+    "content": {
+      "en": "Recent large language models (LLMs) incorporate reasoning capabilities that allow them to perform well in predicting whether a smart contract respects a certain property, suggesting a complementary approach to traditional formal-methods-based techniques for smart contract verification. However, the application of LLMs in such context has two major issues: 1) properties expressed in natural language are intrinsically ambiguous, and 2) answers returned by LLMs have no guarantee of correctness. In this paper, we address both issues simultaneously by: 1) introducing a new formal specification language that extends Solidity with abstract types, and 2) designing a workflow that combines LLMs with type checking and concrete execution to generate and validate violation witnesses (i.e., counterexamples). The key idea is to represent a specification as a Solidity test with (existentially quantified) variables of abstract type; finding an instantiation of these variables to concrete values (of the correct type) concretizes the test into an executable counterexample (PoC) for the target property. We implemented our procedure in the tool Neuroforger, experimentally evaluating it on a smart-contract verification dataset drawn from literature, obtaining promising results that demonstrate its potential applicability in the wild.",
+      "tr": "Recent large language models (LLMs) incorporate reasoning capabilities that allow them to perform well in predicting whether a smart contract respects a certain property, suggesting a complementary approach to traditional formal-methods-based techniques for smart contract verification. However, the application of LLMs in such context has two major issues: 1) properties expressed in natural language are intrinsically ambiguous, and 2) answers returned by LLMs have no guarantee of correctness. In this paper, we address both issues simultaneously by: 1) introducing a new formal specification language that extends Solidity with abstract types, and 2) designing a workflow that combines LLMs with type checking and concrete execution to generate and validate violation witnesses (i.e., counterexamples). The key idea is to represent a specification as a Solidity test with (existentially quantified) variables of abstract type; finding an instantiation of these variables to concrete values (of the correct type) concretizes the test into an executable counterexample (PoC) for the target property. We implemented our procedure in the tool Neuroforger, experimentally evaluating it on a smart-contract verification dataset drawn from literature, obtaining promising results that demonstrate its potential applicability in the wild."
+    }
+  },
+  {
+    "id": "2605.31277v1",
+    "title": "GETA: Generalized Encrypted Traffic Analysis",
+    "authors": [
+      "Ransika Gunasekara",
+      "Rahat Masood",
+      "Salil Kanhere"
+    ],
+    "published_date": "2026-05-29",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2605.31277v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.31277v1",
+    "content": {
+      "en": "Traditional traffic analysis is being fundamentally challenged by the rapid adoption of encryption, tunnelling, and privacy-preserving protocols, which increasingly obscure packet payloads and limit the usefulness of Deep Packet Inspection (DPI). Although machine learning has advanced encrypted traffic analysis, existing approaches often remain tied to protocol-specific header features, depend on large labelled datasets, and degrade when deployed across heterogeneous network environments. We present GETA, a protocol-agnostic framework for encrypted traffic analysis that models network flows as multivariate time series using only traffic metadata, thereby avoiding reliance on packet payloads or header semantics. GETA combines meta-learning, embedding refinement, and self-attention to support few-shot adaptation to previously unseen domains with minimal labelled data. Across nine public datasets spanning application identification, VPN traffic classification, IoT device fingerprinting, and attack detection, GETA consistently outperforms state-of-the-art baselines. These results show that GETA offers a practical and generalisable foundation for robust traffic analysis in modern encrypted networks.",
+      "tr": "Traditional traffic analysis is being fundamentally challenged by the rapid adoption of encryption, tunnelling, and privacy-preserving protocols, which increasingly obscure packet payloads and limit the usefulness of Deep Packet Inspection (DPI). Although machine learning has advanced encrypted traffic analysis, existing approaches often remain tied to protocol-specific header features, depend on large labelled datasets, and degrade when deployed across heterogeneous network environments. We present GETA, a protocol-agnostic framework for encrypted traffic analysis that models network flows as multivariate time series using only traffic metadata, thereby avoiding reliance on packet payloads or header semantics. GETA combines meta-learning, embedding refinement, and self-attention to support few-shot adaptation to previously unseen domains with minimal labelled data. Across nine public datasets spanning application identification, VPN traffic classification, IoT device fingerprinting, and attack detection, GETA consistently outperforms state-of-the-art baselines. These results show that GETA offers a practical and generalisable foundation for robust traffic analysis in modern encrypted networks."
+    }
+  },
+  {
+    "id": "2605.31219v1",
+    "title": "Latent Geometric Chords for Query-Efficient Decision-Based Adversarial Attacks",
+    "authors": [
+      "Ei Hmue Khine",
+      "Yao Li",
+      "Jiebao Sun",
+      "Shengzhu Shi",
+      "Zhichang Guo"
+    ],
+    "published_date": "2026-05-29",
+    "tags": [
+      "cs.CV",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2605.31219v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.31219v1",
+    "content": {
+      "en": "While decision-based black-box adversarial attacks present a severe security threat, current methodologies suffer from fundamental limitations. Pixel-wise attacks frequently introduce unnatural, high-frequency visual artifacts, while latent-space frameworks are confined by the limited search space of low-dimensional manifolds and inherent reconstruction flaws. To resolve these limitations, we propose Latent Geometric Chords (LGC) for Query-Efficient Decision-Based Adversarial Attacks alongside a variant, LGC-H. At its core, LGC navigates decision boundaries by executing a curvature-aware geometric search within a compressed semantic manifold. To guarantee high visual fidelity and circumvent dimensionality bottlenecks, we introduce a Residual-based Adversarial Generation (RAG) mechanism. RAG isolates semantic perturbations as geometric chords and superimposes them directly onto the original source image. RAG substantially resolves baseline reconstruction flaws and effectively doubles the permissible search space dimensions. Experimental results demonstrate that LGC achieves robust cross-dataset transferability and substantially outperforms state-of-the-art baselines. Notably, our method, LGC, minimizes perturbation magnitudes while achieving state-of-the-art visual fidelity--with a Structural Similarity Index Measure (SSIM) exceeding 0.99 and a Learned Perceptual Image Patch Similarity (LPIPS) below 0.01 at 5000 queries--and sustaining high attack success rates under stringent perceptual constraints, successfully compromising adversarially trained robust models. The source code is available at: https://github.com/eihmuekhine/Latent-Geometric-Chords.",
+      "tr": "While decision-based black-box adversarial attacks present a severe security threat, current methodologies suffer from fundamental limitations. Pixel-wise attacks frequently introduce unnatural, high-frequency visual artifacts, while latent-space frameworks are confined by the limited search space of low-dimensional manifolds and inherent reconstruction flaws. To resolve these limitations, we propose Latent Geometric Chords (LGC) for Query-Efficient Decision-Based Adversarial Attacks alongside a variant, LGC-H. At its core, LGC navigates decision boundaries by executing a curvature-aware geometric search within a compressed semantic manifold. To guarantee high visual fidelity and circumvent dimensionality bottlenecks, we introduce a Residual-based Adversarial Generation (RAG) mechanism. RAG isolates semantic perturbations as geometric chords and superimposes them directly onto the original source image. RAG substantially resolves baseline reconstruction flaws and effectively doubles the permissible search space dimensions. Experimental results demonstrate that LGC achieves robust cross-dataset transferability and substantially outperforms state-of-the-art baselines. Notably, our method, LGC, minimizes perturbation magnitudes while achieving state-of-the-art visual fidelity--with a Structural Similarity Index Measure (SSIM) exceeding 0.99 and a Learned Perceptual Image Patch Similarity (LPIPS) below 0.01 at 5000 queries--and sustaining high attack success rates under stringent perceptual constraints, successfully compromising adversarially trained robust models. The source code is available at: https://github.com/eihmuekhine/Latent-Geometric-Chords."
+    }
+  },
+  {
+    "id": "2605.31199v1",
+    "title": "MAECO-Lite: Modular Ontology for Dynamic Malware Analysis",
+    "authors": [
+      "Zekeri Adams",
+      "Peter Švec",
+      "Ján Kľuka",
+      "Roderik Ploszek",
+      "Monday Onoja"
+    ],
+    "published_date": "2026-05-29",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2605.31199v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.31199v1",
+    "content": {
+      "en": "Capturing dynamic malware behavior in a practical but still semantically precise manner remains a significant challenge in cyber threat intelligence. While standards such as MAEC and STIX provide widely adopted vocabularies for describing malware artifacts and observations, they represent data with considerable complexity in structures that often obscure important ontological distinctions. In particular, they tend to conflate enduring malware artifacts with the events generated during execution, thereby flattening distinctions that are central in foundational standards for ontology design. In this paper, we conduct a foundational ontological analysis of core MAEC and STIX constructs relevant to dynamic malware analysis relying on Unified Foundational Ontology (UFO) as a theoretical lens. Our analysis reveals some ontological mismatches arising from the conflation of artifacts, dispositions, and runtime events in MAEC and STIX that complicate coherent representation of dynamic malware behavior and, from a practical perspective, limit the ability to reason about execution traces. Based on these insights, we propose MAECO-Lite, a lightweight ontology designed to represent data and operationalize their processing for dynamic malware analysis. The ontology adopts a modular structure centered on samples, processes, actions, system artifacts, and MITRE ATT&CK Techniques, while maintaining a clear separation between enduring entities and runtime events. An initial evaluation using description logic concept learning algorithms shows that the simplified ontology significantly improves learning performance, demonstrating that ontologically grounded modelling can enhance both semantic clarity and computational usability.",
+      "tr": "Capturing dynamic malware behavior in a practical but still semantically precise manner remains a significant challenge in cyber threat intelligence. While standards such as MAEC and STIX provide widely adopted vocabularies for describing malware artifacts and observations, they represent data with considerable complexity in structures that often obscure important ontological distinctions. In particular, they tend to conflate enduring malware artifacts with the events generated during execution, thereby flattening distinctions that are central in foundational standards for ontology design. In this paper, we conduct a foundational ontological analysis of core MAEC and STIX constructs relevant to dynamic malware analysis relying on Unified Foundational Ontology (UFO) as a theoretical lens. Our analysis reveals some ontological mismatches arising from the conflation of artifacts, dispositions, and runtime events in MAEC and STIX that complicate coherent representation of dynamic malware behavior and, from a practical perspective, limit the ability to reason about execution traces. Based on these insights, we propose MAECO-Lite, a lightweight ontology designed to represent data and operationalize their processing for dynamic malware analysis. The ontology adopts a modular structure centered on samples, processes, actions, system artifacts, and MITRE ATT&CK Techniques, while maintaining a clear separation between enduring entities and runtime events. An initial evaluation using description logic concept learning algorithms shows that the simplified ontology significantly improves learning performance, demonstrating that ontologically grounded modelling can enhance both semantic clarity and computational usability."
+    }
+  },
+  {
+    "id": "2605.31042v1",
+    "title": "From Prompt Injection to Persistent Control: Defending Agentic Harness Against Trojan Backdoors",
+    "authors": [
+      "Jiejun Tan",
+      "Zhicheng Dou",
+      "Xinyu Yang",
+      "Yuyang Hu",
+      "Yiruo Cheng"
+    ],
+    "published_date": "2026-05-29",
     "tags": [
       "cs.CR",
       "cs.AI",
       "cs.CL"
     ],
-    "link": "http://arxiv.org/abs/2605.30040v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.30040v1",
+    "link": "http://arxiv.org/abs/2605.31042v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.31042v1",
     "content": {
-      "en": "Per-token billing is now the standard pricing model for commercial large language models (LLMs), so the honesty of reported token counts directly affects what users pay. We show that this kind of billing is hard to audit by design: providers hide the model, the tokenizer, and the execution to protect their IP, mitigate jailbreaks, and preserve user privacy, which means an auditor can only inspect proofs the provider supplies. The audit therefore reduces to a consistency check on the provider's own reports. We call this a trust paradox: every audit must trust some artifact, but current frameworks trust exactly the ones a provider has the strongest reason to manipulate. We study three recent token auditing frameworks and show that a provider with ordinary commercial capabilities can systematically inflate billed token counts. In the most permissive setting, hidden reasoning usage can be inflated by 1,469% on average without detection. At current frontier reasoning prices, that turns a \\$100 honest bill into roughly a \\$1,569 bill on the same query. Even when the user can see the full reasoning string, tokenization ambiguity alone still allows 50.85% over-reporting below the detection threshold. These results suggest the problem is not in any specific auditor but in any audit whose evidence comes from the audited party. Restoring honest billing will require verification that ties reported token counts to evidence the provider does not control, such as trusted execution attestation, cryptographic proofs of inference, or third-party re-execution.",
-      "tr": "Per-token billing is now the standard pricing model for commercial large language models (LLMs), so the honesty of reported token counts directly affects what users pay. We show that this kind of billing is hard to audit by design: providers hide the model, the tokenizer, and the execution to protect their IP, mitigate jailbreaks, and preserve user privacy, which means an auditor can only inspect proofs the provider supplies. The audit therefore reduces to a consistency check on the provider's own reports. We call this a trust paradox: every audit must trust some artifact, but current frameworks trust exactly the ones a provider has the strongest reason to manipulate. We study three recent token auditing frameworks and show that a provider with ordinary commercial capabilities can systematically inflate billed token counts. In the most permissive setting, hidden reasoning usage can be inflated by 1,469% on average without detection. At current frontier reasoning prices, that turns a \\$100 honest bill into roughly a \\$1,569 bill on the same query. Even when the user can see the full reasoning string, tokenization ambiguity alone still allows 50.85% over-reporting below the detection threshold. These results suggest the problem is not in any specific auditor but in any audit whose evidence comes from the audited party. Restoring honest billing will require verification that ties reported token counts to evidence the provider does not control, such as trusted execution attestation, cryptographic proofs of inference, or third-party re-execution."
+      "en": "LLM agents are evolving from conversational chatbots to operational tools in real-world workspaces. In local agentic harnesses, an LLM can read and write files, call tools, and reuse workspace state across sessions. While such capabilities enhance utility, they also expose a new attack surface for attackers. Attackers can embed a prompt injection within a file or tool output. Agents may read this hidden instruction, store it, and execute it later. In this multi-step trojan attack paradigm, no individual step appears malicious on its own, but these steps can collectively turn untrusted text into persistent control content. However, existing defenses often inspect each step in isolation. As a result, they can block a clear harmful action, but fail to detect the earlier write operation that plants the backdoor. To reveal this threat, we introduce ClawTrojan, a benchmark designed to identify multi-step trojan attacks in local agentic harnesses. In an OpenClaw-style simulated workspace with GPT-5.4, ClawTrojan reaches a 95.5% attack success rate (ASR), while existing single-turn prompt-injection attacks produce near-zero ASR on the same model. To address this threat, we propose DASGuard, which scans control-like text in sensitive local files, traces its origin, and removes control content that does not originate from a trusted source. Our results show that DASGuard achieves strong dynamic defense by combining runtime attack blocking with sanitized commits to the workspace.",
+      "tr": "LLM agents are evolving from conversational chatbots to operational tools in real-world workspaces. In local agentic harnesses, an LLM can read and write files, call tools, and reuse workspace state across sessions. While such capabilities enhance utility, they also expose a new attack surface for attackers. Attackers can embed a prompt injection within a file or tool output. Agents may read this hidden instruction, store it, and execute it later. In this multi-step trojan attack paradigm, no individual step appears malicious on its own, but these steps can collectively turn untrusted text into persistent control content. However, existing defenses often inspect each step in isolation. As a result, they can block a clear harmful action, but fail to detect the earlier write operation that plants the backdoor. To reveal this threat, we introduce ClawTrojan, a benchmark designed to identify multi-step trojan attacks in local agentic harnesses. In an OpenClaw-style simulated workspace with GPT-5.4, ClawTrojan reaches a 95.5% attack success rate (ASR), while existing single-turn prompt-injection attacks produce near-zero ASR on the same model. To address this threat, we propose DASGuard, which scans control-like text in sensitive local files, traces its origin, and removes control content that does not originate from a trusted source. Our results show that DASGuard achieves strong dynamic defense by combining runtime attack blocking with sanitized commits to the workspace."
     }
   },
   {
-    "id": "2605.29979v1",
-    "title": "Fingerprinting Inference Systems of Large Language Models",
+    "id": "2605.30837v1",
+    "title": "Send a SCOUT First: Pre-hoc Reasoning for Adaptive Detector Allocation in Prompt-Injection Defense",
     "authors": [
-      "Anna Wimbauer",
-      "Jonas Möller",
-      "Erik Imgrund",
-      "Konrad Rieck"
+      "Shuhao Zhang",
+      "Jiarui Li",
+      "Qi Cao",
+      "Ruiyi Zhang",
+      "Pengtao Xie"
     ],
-    "published_date": "2026-05-28",
+    "published_date": "2026-05-29",
     "tags": [
       "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2605.29979v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.29979v1",
+    "link": "http://arxiv.org/abs/2605.30837v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.30837v1",
     "content": {
-      "en": "The behavior of LLMs does not depend solely on the model itself. Components of the inference system, such as the inference engine, attention backend, and hardware platform, subtly influence how inputs are processed. These components differ in their implementations and thereby induce small numerical deviations across systems when running the same model. While prior work has established the theoretical existence of such deviations, their security implications have remained unexplored. In this paper, we show that these deviations are characteristic of specific components and propagate to observable textual outputs, exposing the inference system to any party that can query the model. Building on this observation, we introduce a fingerprinting method that analyzes the prompt-response behavior of LLMs to identify components of the inference system. Our empirical evaluation demonstrates that the inference engine, attention backend, and underlying hardware platform can be identified reliably, even when the LLM is operated at non-zero temperature. We show that preventing fingerprinting is fundamentally hard, as it would require eliminating numerical differences between hardware and software stacks. We therefore propose partial mitigations and discuss their impact.",
-      "tr": "The behavior of LLMs does not depend solely on the model itself. Components of the inference system, such as the inference engine, attention backend, and hardware platform, subtly influence how inputs are processed. These components differ in their implementations and thereby induce small numerical deviations across systems when running the same model. While prior work has established the theoretical existence of such deviations, their security implications have remained unexplored. In this paper, we show that these deviations are characteristic of specific components and propagate to observable textual outputs, exposing the inference system to any party that can query the model. Building on this observation, we introduce a fingerprinting method that analyzes the prompt-response behavior of LLMs to identify components of the inference system. Our empirical evaluation demonstrates that the inference engine, attention backend, and underlying hardware platform can be identified reliably, even when the LLM is operated at non-zero temperature. We show that preventing fingerprinting is fundamentally hard, as it would require eliminating numerical differences between hardware and software stacks. We therefore propose partial mitigations and discuss their impact."
+      "en": "Prompt-injection detectors are heterogeneous: each is strong on a different slice of attacks, and none is always reliable. Yet existing systems still treat detection as a fixed single-detector pipeline, committing every request to one detector's blind spots. We reframe defense as detector allocation: given a heterogeneous pool, decide per request which detectors to run and whether to escalate to an LLM judge. Our framework SCOUT (Scalable and Controllable Outcome-prediction for Uncertainty-aware Triage) makes this decision dynamic by predicting each detector's per-sample reliability and latency from how it behaved on similar past inputs, and exposes a single safety-utility threshold to the operator (where utility bundles benign-pass rate and wall-clock). To evaluate this setting, we build SCOUT-450, a benchmark that captures the structurally complex, agent-facing injections that older prompt-injection sets under-represent. On SCOUT-450, a safety-oriented operating point reduces attack-success rate by 46% and total wall-clock by 40% relative to an always-on GPT-4o judge, at a 5.1-point benign-utility drop. SCOUT also transfers to three external benchmarks (BIPIA, IPI, and IHEval), improving the safety-utility frontier.",
+      "tr": "Prompt-injection detectors are heterogeneous: each is strong on a different slice of attacks, and none is always reliable. Yet existing systems still treat detection as a fixed single-detector pipeline, committing every request to one detector's blind spots. We reframe defense as detector allocation: given a heterogeneous pool, decide per request which detectors to run and whether to escalate to an LLM judge. Our framework SCOUT (Scalable and Controllable Outcome-prediction for Uncertainty-aware Triage) makes this decision dynamic by predicting each detector's per-sample reliability and latency from how it behaved on similar past inputs, and exposes a single safety-utility threshold to the operator (where utility bundles benign-pass rate and wall-clock). To evaluate this setting, we build SCOUT-450, a benchmark that captures the structurally complex, agent-facing injections that older prompt-injection sets under-represent. On SCOUT-450, a safety-oriented operating point reduces attack-success rate by 46% and total wall-clock by 40% relative to an always-on GPT-4o judge, at a 5.1-point benign-utility drop. SCOUT also transfers to three external benchmarks (BIPIA, IPI, and IHEval), improving the safety-utility frontier."
     }
   },
   {
-    "id": "2605.29963v1",
-    "title": "Honeyval: A Comprehensive Evaluation Framework for LLM-powered HTTP Honeypots",
+    "id": "2605.30808v1",
+    "title": "Differentially Private Preference Data Synthesis for Large Language Model Alignment",
     "authors": [
-      "Mark Vero",
-      "Fabian Kaczmarczyck",
-      "Ivan Petrov",
-      "Ilia Shumailov",
-      "Jamie Hayes"
+      "Fengyu Gao",
+      "Jing Yang"
     ],
-    "published_date": "2026-05-28",
+    "published_date": "2026-05-29",
     "tags": [
       "cs.CR",
       "cs.AI",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2605.29963v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.29963v1",
+    "link": "http://arxiv.org/abs/2605.30808v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.30808v1",
     "content": {
-      "en": "Honeypots are decoy systems mimicking real system components designed to defend against cyber attacks. Recently, LLMs increasingly serve as simulation backbones for honeypots. They enable defenders to construct high-interaction honeypots with low system security risks. However, LLM-powered honeypot development lacks a unified evaluation framework. Most evaluations consist of measuring response similarity on fixed commands, manual testing, or real-world deployment. These methods are often not scalable for development, reproducible across evaluations, representative of practical attacks, or adaptable to various attacker and honeypot configurations. In this work, we bridge this gap and propose Honeyval, a comprehensive evaluation framework for LLM-powered HTTP honeypots. We address the limitations of prior evaluations by grounding the honeypots in 16 backend applications, using AI hacking agents as attackers, employing two control tasks to monitor agent and honeypot capabilities across customizations, and defining clear and verifiable exploit goals for the attacker. Using Honeyval, we conduct an extensive evaluation of recent cost-efficient LLMs as HTTP honeypots. Our experiments highlight the promise of LLM-powered honeypots; they lead to substantially longer interactions with the attacker than rule-based baseline honeypots and are far less frequently detected even by frontier models, all while, on average, preserving a running cost advantage against agentic attackers. Further, we experiment with different counter-offensive honeypots configurations, and observe unique trade-offs, such as longer interactions at the cost of increased detection.",
-      "tr": "Honeypots are decoy systems mimicking real system components designed to defend against cyber attacks. Recently, LLMs increasingly serve as simulation backbones for honeypots. They enable defenders to construct high-interaction honeypots with low system security risks. However, LLM-powered honeypot development lacks a unified evaluation framework. Most evaluations consist of measuring response similarity on fixed commands, manual testing, or real-world deployment. These methods are often not scalable for development, reproducible across evaluations, representative of practical attacks, or adaptable to various attacker and honeypot configurations. In this work, we bridge this gap and propose Honeyval, a comprehensive evaluation framework for LLM-powered HTTP honeypots. We address the limitations of prior evaluations by grounding the honeypots in 16 backend applications, using AI hacking agents as attackers, employing two control tasks to monitor agent and honeypot capabilities across customizations, and defining clear and verifiable exploit goals for the attacker. Using Honeyval, we conduct an extensive evaluation of recent cost-efficient LLMs as HTTP honeypots. Our experiments highlight the promise of LLM-powered honeypots; they lead to substantially longer interactions with the attacker than rule-based baseline honeypots and are far less frequently detected even by frontier models, all while, on average, preserving a running cost advantage against agentic attackers. Further, we experiment with different counter-offensive honeypots configurations, and observe unique trade-offs, such as longer interactions at the cost of increased detection."
+      "en": "Preference alignment is a crucial post-training step for large language models (LLMs) to ensure their outputs align with human values. However, post-training on real human preference data raises privacy concerns, as these datasets often contain sensitive user prompts and human judgments. To address this, we propose DPPrefSyn, a novel algorithm for generating differentially private (DP) synthetic preference data to enable privacy-preserving preference alignment. DPPrefSyn is a principled framework grounded in the Bradley-Terry preference model and the intrinsic geometric structure of pairwise human preference data. It first learns an underlying preference model from private data with formal differential privacy guarantees, and then leverages the learned model together with public prompts to synthesize high-quality preference data. It exploits the shared linear structure of per-cluster reward models to effectively capture heterogeneous human preferences in private datasets, and leverages DP Principal Component Analysis (DP-PCA) to improve learning accuracy. Extensive experimental results demonstrate that DPPrefSyn achieves competitive alignment performance under strong DP guarantees. These findings highlight the potential of synthetic preference data as a practical alternative for privacy-preserving preference alignment across a broad range of applications. To the best of our knowledge, this is the first work to generate DP synthetic preference data for LLM alignment. Our code is available at https://github.com/gfengyu/Differentially-Private-Preference-Data-Synthesis.",
+      "tr": "Preference alignment is a crucial post-training step for large language models (LLMs) to ensure their outputs align with human values. However, post-training on real human preference data raises privacy concerns, as these datasets often contain sensitive user prompts and human judgments. To address this, we propose DPPrefSyn, a novel algorithm for generating differentially private (DP) synthetic preference data to enable privacy-preserving preference alignment. DPPrefSyn is a principled framework grounded in the Bradley-Terry preference model and the intrinsic geometric structure of pairwise human preference data. It first learns an underlying preference model from private data with formal differential privacy guarantees, and then leverages the learned model together with public prompts to synthesize high-quality preference data. It exploits the shared linear structure of per-cluster reward models to effectively capture heterogeneous human preferences in private datasets, and leverages DP Principal Component Analysis (DP-PCA) to improve learning accuracy. Extensive experimental results demonstrate that DPPrefSyn achieves competitive alignment performance under strong DP guarantees. These findings highlight the potential of synthetic preference data as a practical alternative for privacy-preserving preference alignment across a broad range of applications. To the best of our knowledge, this is the first work to generate DP synthetic preference data for LLM alignment. Our code is available at https://github.com/gfengyu/Differentially-Private-Preference-Data-Synthesis."
     }
   },
   {
-    "id": "2605.29960v1",
-    "title": "Hijacking Agent Memory: Stealthy Trojan Attacks Through Conversational Interaction",
+    "id": "2605.30686v1",
+    "title": "Depth-Dependent Indirect Prompt Injection in Tool-Calling ReAct Agents: Injection Depth, Payload Framing, and Turn-Budget Sensitivity",
     "authors": [
-      "Hongtao Wang",
-      "Se Yang",
-      "Yu Chen",
-      "Puzhuo Liu"
+      "Mohammadreza Rashidi"
     ],
-    "published_date": "2026-05-28",
+    "published_date": "2026-05-29",
     "tags": [
       "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2605.29960v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.29960v1",
-    "content": {
-      "en": "Large language model (LLM) agents increasingly leverage long term memory to support persistent and autonomous task execution. However, this capability also introduces a new attack surface: memory poisoning, where adversaries can inject malicious information to influence future behavior. Existing memory poisoning attacks often assume that injected content can be stored directly in memory, overlooking the selective extraction and rewriting stages in modern memory pipelines. This makes prior methods ineffective under realistic settings.   In this paper, we propose MemPoison, a novel memory poisoning attack that bypasses selective memory mechanisms in LLM agents, where an attacker can inject triggerable backdoors into the agent's long-term memory through dialogue interactions, thereby misleading its subsequent responses. MemPoison introduces three key components: (i) a semantic relational bridge that binds the trigger and payload into a coherent statement to ensure they are extracted into memory together; (ii) entity masquerading that optimizes triggers to mimic named entities, resisting rewriting; and (iii) joint embedding optimization that shapes trigger-injected texts into a tight cluster in the embedding space while maintaining isolation from benign embeddings for stealth. Evaluations across different agent domains and memory mechanisms show MemPoison achieves attack success rates up to 0.95, outperforming existing baselines. Mechanistic analysis indicates that the attack exploits embedding-space anisotropy and shifts attention patterns, highlighting core vulnerabilities in selective memory systems. We evaluate multiple defense strategies and demonstrate their fundamental limitations in mitigating the attack.",
-      "tr": "Large language model (LLM) agents increasingly leverage long term memory to support persistent and autonomous task execution. However, this capability also introduces a new attack surface: memory poisoning, where adversaries can inject malicious information to influence future behavior. Existing memory poisoning attacks often assume that injected content can be stored directly in memory, overlooking the selective extraction and rewriting stages in modern memory pipelines. This makes prior methods ineffective under realistic settings.   In this paper, we propose MemPoison, a novel memory poisoning attack that bypasses selective memory mechanisms in LLM agents, where an attacker can inject triggerable backdoors into the agent's long-term memory through dialogue interactions, thereby misleading its subsequent responses. MemPoison introduces three key components: (i) a semantic relational bridge that binds the trigger and payload into a coherent statement to ensure they are extracted into memory together; (ii) entity masquerading that optimizes triggers to mimic named entities, resisting rewriting; and (iii) joint embedding optimization that shapes trigger-injected texts into a tight cluster in the embedding space while maintaining isolation from benign embeddings for stealth. Evaluations across different agent domains and memory mechanisms show MemPoison achieves attack success rates up to 0.95, outperforming existing baselines. Mechanistic analysis indicates that the attack exploits embedding-space anisotropy and shifts attention patterns, highlighting core vulnerabilities in selective memory systems. We evaluate multiple defense strategies and demonstrate their fundamental limitations in mitigating the attack."
-    }
-  },
-  {
-    "id": "2605.29901v1",
-    "title": "Dissecting the Black Box: Circuit-Level Analysis of LLM Vulnerability Detection",
-    "authors": [
-      "Syafiq Al Atiiq",
-      "Chun Zhou",
-      "Christian Gehrmann"
-    ],
-    "published_date": "2026-05-28",
-    "tags": [
-      "cs.CR",
+      "cs.AI",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2605.29901v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.29901v1",
+    "link": "http://arxiv.org/abs/2605.30686v1",
+    "pdf_link": "https://arxiv.org/pdf/2605.30686v1",
     "content": {
-      "en": "Large language models (LLMs) can detect software vulnerabilities, but how do they actually identify vulnerable code? We address this question using mechanistic interpretability; analyzing the internal computations of a neural network to understand its reasoning process.Using Circuit Tracer on Gemma-2-2b, we trace the computational pathways activated when the model classifies 472 C/C++ code samples as vulnerable or safe. Our analysis reveals a surprising finding: the model primarily relies on safety detectors, attention heads that recognize safe coding patterns, rather than directly detecting vulnerability signatures. When these safety detectors fail to activate, the model classifies code as vulnerable. We identify the critical neural components: specific attention heads in early layers (L5, L7) that focus on safety patterns, and Multilayer Perceptron (MLP) neurons in Layer 7 that encode vulnerability-related features. Ablation experiments confirm their causal role; removing Layer 11 drops vulnerability detection accuracy from 100% to 6%, while ablating just 20 neurons in Layer 7 reduces it by 50%.Our findings show that LLM vulnerability detection uses sparse, interpretable circuits (only 16% of model capacity), enabling circuit-level explanations for security predictions and targeted improvements to detection systems.",
-      "tr": "Large language models (LLMs) can detect software vulnerabilities, but how do they actually identify vulnerable code? We address this question using mechanistic interpretability; analyzing the internal computations of a neural network to understand its reasoning process.Using Circuit Tracer on Gemma-2-2b, we trace the computational pathways activated when the model classifies 472 C/C++ code samples as vulnerable or safe. Our analysis reveals a surprising finding: the model primarily relies on safety detectors, attention heads that recognize safe coding patterns, rather than directly detecting vulnerability signatures. When these safety detectors fail to activate, the model classifies code as vulnerable. We identify the critical neural components: specific attention heads in early layers (L5, L7) that focus on safety patterns, and Multilayer Perceptron (MLP) neurons in Layer 7 that encode vulnerability-related features. Ablation experiments confirm their causal role; removing Layer 11 drops vulnerability detection accuracy from 100% to 6%, while ablating just 20 neurons in Layer 7 reduces it by 50%.Our findings show that LLM vulnerability detection uses sparse, interpretable circuits (only 16% of model capacity), enabling circuit-level explanations for security predictions and targeted improvements to detection systems."
+      "en": "ReAct agents that interleave chain-of-thought reasoning with tool calls are increasingly deployed for real tasks such as scheduling, file retrieval, and data access. Their tool observation loop creates a direct attack surface: an adversary who controls any tool's return value can embed instructions that redirect the agent away from the user's goal, a threat known as indirect prompt injection. Existing benchmarks evaluate attack success rate (ASR) at a fixed injection position under fixed conditions, leaving three risk dimensions unexplored: where in the tool sequence the payload appears (injection depth), what rhetorical register it uses (framing), and how many turns the agent is permitted (turn cap). We conduct four controlled studies on 20 scenarios spanning five attack categories, totalling 460 trials against GPT-4o-mini and Claude Haiku at a combined API cost under 0.36 USD. Study 1 shows that ASR against GPT-4o-mini decays from 60% at depth 1 to 0% at depths 4 and 5 (Cramer's V = 0.58, p < 0.001; restricted to within-sequence depths 1-3: V = 0.47, p = 0.0013), driven by model resistance at depth 1 and task completion before payload encounter at deeper positions. Study 2 replicates the depth experiment on Claude Haiku, which achieves 0% ASR at every depth through a combination of conservative tool invocation and genuine instruction resistance. Study 3 shows that framing modulates ASR between 25% (neutral) and 75% (persona) at depth 1, a 50-percentage-point range that does not reach statistical significance at N = 20 per condition. Study 4 confirms that ASR is stable across turn caps of 3, 5, and 7, indicating the turn budget is not a risk factor in this setting. Our results establish injection depth as the dominant variable and show that sanitising only the first tool observation captures 67% of measured injection successes.",
+      "tr": "ReAct agents that interleave chain-of-thought reasoning with tool calls are increasingly deployed for real tasks such as scheduling, file retrieval, and data access. Their tool observation loop creates a direct attack surface: an adversary who controls any tool's return value can embed instructions that redirect the agent away from the user's goal, a threat known as indirect prompt injection. Existing benchmarks evaluate attack success rate (ASR) at a fixed injection position under fixed conditions, leaving three risk dimensions unexplored: where in the tool sequence the payload appears (injection depth), what rhetorical register it uses (framing), and how many turns the agent is permitted (turn cap). We conduct four controlled studies on 20 scenarios spanning five attack categories, totalling 460 trials against GPT-4o-mini and Claude Haiku at a combined API cost under 0.36 USD. Study 1 shows that ASR against GPT-4o-mini decays from 60% at depth 1 to 0% at depths 4 and 5 (Cramer's V = 0.58, p < 0.001; restricted to within-sequence depths 1-3: V = 0.47, p = 0.0013), driven by model resistance at depth 1 and task completion before payload encounter at deeper positions. Study 2 replicates the depth experiment on Claude Haiku, which achieves 0% ASR at every depth through a combination of conservative tool invocation and genuine instruction resistance. Study 3 shows that framing modulates ASR between 25% (neutral) and 75% (persona) at depth 1, a 50-percentage-point range that does not reach statistical significance at N = 20 per condition. Study 4 confirms that ASR is stable across turn caps of 3, 5, and 7, indicating the turn budget is not a risk factor in this setting. Our results establish injection depth as the dominant variable and show that sanitising only the first tool observation captures 67% of measured injection successes."
     }
   }
 ]
