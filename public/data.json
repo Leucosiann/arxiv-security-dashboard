@@ -1,214 +1,212 @@
 [
   {
-    "id": "2605.31593v1",
-    "title": "Stateful Online Monitoring Catches Distributed Agent Attacks",
+    "id": "2606.02563v1",
+    "title": "IntraShuffler: A Privacy Preserving Framework for Heterogeneous DP Federated Learning",
     "authors": [
-      "Davis Brown",
-      "Samarth Bhargav",
-      "Arav Santhanam",
-      "Kasper Hong",
-      "Ivan Zhang"
+      "Farhin Farhad Riya",
+      "Olivera Kotevska",
+      "Jinyuan Stella Sun"
     ],
-    "published_date": "2026-05-29",
+    "published_date": "2026-06-01",
     "tags": [
+      "cs.LG",
       "cs.CR",
-      "cs.AI"
+      "cs.DC"
     ],
-    "link": "http://arxiv.org/abs/2605.31593v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.31593v1",
+    "link": "http://arxiv.org/abs/2606.02563v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.02563v1",
     "content": {
-      "en": "Language models can find thousands of severe software vulnerabilities, and agents are increasingly being misused for cyberattacks. To avoid detection, attackers frequently distribute their misuse, splitting a harmful task across many user accounts so each individual transcript looks benign. Because safety monitors score only one agent context at a time, they are structurally blind to misuse that is only visible in aggregate, across many accounts. We show this gap is real by building, to our knowledge, the first distributed agent attack, a multi-agent scaffold that completes hard cybersecurity tasks while hiding the harmful objective across subagents with limited contexts, evading a standard monitor that catches it only a fifth as often as prior agent attacks. Towards a defense, we develop an online stateful monitor that uses real-time clustering to collect weak suspiciousness signals across many agent transcripts, and escalates only rarely to a language model that flags misuse across user accounts. In evaluations with large-scale simulated datacenter traffic, our monitor Pareto dominates standard monitors, catching distributed attacks 30% earlier and flagging cyber misuse before it reaches the most harmful stages. Crucially, this comes at negligible additional latency for ~99% of user traffic. This detection advantage persists but narrows as the benign background traffic grows very large. After an extensive red-teaming exercise, we improve the defense and surprisingly also find that it catches standard jailbreaks, since adaptive attackers reuse attack variants across accounts. Our results point toward a new class of safety monitors which reason over groups of users rather than isolated transcripts.",
-      "tr": "Language models can find thousands of severe software vulnerabilities, and agents are increasingly being misused for cyberattacks. To avoid detection, attackers frequently distribute their misuse, splitting a harmful task across many user accounts so each individual transcript looks benign. Because safety monitors score only one agent context at a time, they are structurally blind to misuse that is only visible in aggregate, across many accounts. We show this gap is real by building, to our knowledge, the first distributed agent attack, a multi-agent scaffold that completes hard cybersecurity tasks while hiding the harmful objective across subagents with limited contexts, evading a standard monitor that catches it only a fifth as often as prior agent attacks. Towards a defense, we develop an online stateful monitor that uses real-time clustering to collect weak suspiciousness signals across many agent transcripts, and escalates only rarely to a language model that flags misuse across user accounts. In evaluations with large-scale simulated datacenter traffic, our monitor Pareto dominates standard monitors, catching distributed attacks 30% earlier and flagging cyber misuse before it reaches the most harmful stages. Crucially, this comes at negligible additional latency for ~99% of user traffic. This detection advantage persists but narrows as the benign background traffic grows very large. After an extensive red-teaming exercise, we improve the defense and surprisingly also find that it catches standard jailbreaks, since adaptive attackers reuse attack variants across accounts. Our results point toward a new class of safety monitors which reason over groups of users rather than isolated transcripts."
+      "en": "Heterogeneous Differential Privacy (HDP) in Federated Learning (FL) allows clients to select individual privacy budgets ($\\varepsilon_i$) according to institutional policies and data sensitivity. In practice, many HDP-FL systems employ $\\varepsilon$-aware server aggregation to improve model utility by re-weighting client updates according to their declared privacy budgets. However, gradient updates in FL retain structural patterns induced by non-independent and identically-distributed (non-IID) data, and these additional signals exposed by $\\varepsilon$-aware aggregation create new opportunities for inference by an honest-but-curious server. In this work, we first show that a server equipped with gradient denoising and surrogate modeling can mount a \\emph{Privacy Inference Attack} that infers distributional attributes of clients and links updates from the same client across training rounds, measured via surrogate inference accuracy and linkage success, under realistic knowledge constraints.   The Shuffle-Model has been widely studied as a defense against such inference risks by anonymizing update sources, but it is fundamentally incompatible with HDP-FL $\\varepsilon$-aware aggregation. To address this challenge, we propose \\textbf{IntraShuffler}, a middleware defense framework designed for HDP-FL systems. IntraShuffler introduces a privacy-aware shuffling mechanism that groups clients into privacy-compatible buckets and performs parameter-level shuffling within each bucket to disrupt persistent gradient structure while preserving $\\varepsilon$-aware aggregation. Experiments across four different datasets show that IntraShuffler reduces gradient recoverability by over 60% and decreases surrogate inference accuracy from 0.78 to 0.33 while maintaining comparable model utility across multiple FL aggregation rules.",
+      "tr": "Heterogeneous Differential Privacy (HDP) in Federated Learning (FL) allows clients to select individual privacy budgets ($\\varepsilon_i$) according to institutional policies and data sensitivity. In practice, many HDP-FL systems employ $\\varepsilon$-aware server aggregation to improve model utility by re-weighting client updates according to their declared privacy budgets. However, gradient updates in FL retain structural patterns induced by non-independent and identically-distributed (non-IID) data, and these additional signals exposed by $\\varepsilon$-aware aggregation create new opportunities for inference by an honest-but-curious server. In this work, we first show that a server equipped with gradient denoising and surrogate modeling can mount a \\emph{Privacy Inference Attack} that infers distributional attributes of clients and links updates from the same client across training rounds, measured via surrogate inference accuracy and linkage success, under realistic knowledge constraints.   The Shuffle-Model has been widely studied as a defense against such inference risks by anonymizing update sources, but it is fundamentally incompatible with HDP-FL $\\varepsilon$-aware aggregation. To address this challenge, we propose \\textbf{IntraShuffler}, a middleware defense framework designed for HDP-FL systems. IntraShuffler introduces a privacy-aware shuffling mechanism that groups clients into privacy-compatible buckets and performs parameter-level shuffling within each bucket to disrupt persistent gradient structure while preserving $\\varepsilon$-aware aggregation. Experiments across four different datasets show that IntraShuffler reduces gradient recoverability by over 60% and decreases surrogate inference accuracy from 0.78 to 0.33 while maintaining comparable model utility across multiple FL aggregation rules."
     }
   },
   {
-    "id": "2605.31520v1",
-    "title": "Separating Secrets from Placeholders: A Hybrid CNN-CodeBERT Framework for Three-Class Credential Leakage Detection",
+    "id": "2606.02483v1",
+    "title": "Ghost Tool Calls: Issue-Time Privacy for Speculative Agent Tools",
     "authors": [
-      "Maksuda Bilkis Baby",
-      "Khushika Shah",
-      "Naiyue Liang",
-      "Lei Zhang"
+      "Bardia Mohammadi",
+      "Lars Klein",
+      "Akhil Arora",
+      "Laurent Bindschaedler"
     ],
-    "published_date": "2026-05-29",
-    "tags": [
-      "cs.SE",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2605.31520v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.31520v1",
-    "content": {
-      "en": "Credential leakage in public source code repositories poses a critical security threat, with over 23.8 million secrets exposed in 2024 alone. Existing detection tools suffer from high false-positive rates because rigid pattern matching and binary classification schemes fail to distinguish genuine credentials from placeholder or weak credentials. We propose a three-class classification framework that explicitly models placeholder or weak credentials as a distinct class, leveraging CodeBERT-based semantic understanding combined with character-level pattern recognition. We evaluate our approach on a newly constructed dataset of 9,426 samples spanning 10 programming languages. Our model achieves a Matthews Correlation Coefficient of 0.86 and a macro F1-score of 0.90, achieving 93% recall and 89% precision for genuine credential leaks while reducing high severity alerts by 33.0% (from 373 to 250) without sacrificing security coverage. Compared to prior character-level approaches, our method improves placeholder or weak credential detection from 54% to 81% F1-score while maintaining strong cross language generalization, with 9 of 10 languages achieving F1 above 0.80 under leave-one-language-out evaluation.",
-      "tr": "Credential leakage in public source code repositories poses a critical security threat, with over 23.8 million secrets exposed in 2024 alone. Existing detection tools suffer from high false-positive rates because rigid pattern matching and binary classification schemes fail to distinguish genuine credentials from placeholder or weak credentials. We propose a three-class classification framework that explicitly models placeholder or weak credentials as a distinct class, leveraging CodeBERT-based semantic understanding combined with character-level pattern recognition. We evaluate our approach on a newly constructed dataset of 9,426 samples spanning 10 programming languages. Our model achieves a Matthews Correlation Coefficient of 0.86 and a macro F1-score of 0.90, achieving 93% recall and 89% precision for genuine credential leaks while reducing high severity alerts by 33.0% (from 373 to 250) without sacrificing security coverage. Compared to prior character-level approaches, our method improves placeholder or weak credential detection from 54% to 81% F1-score while maintaining strong cross language generalization, with 9 of 10 languages achieving F1 above 0.80 under leave-one-language-out evaluation."
-    }
-  },
-  {
-    "id": "2605.31389v1",
-    "title": "Neuroforger: certified violation witnesses for smart contracts verification via LLMs",
-    "authors": [
-      "Massimo Bartoletti",
-      "Enrico Lipparini"
-    ],
-    "published_date": "2026-05-29",
-    "tags": [
-      "cs.PL",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2605.31389v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.31389v1",
-    "content": {
-      "en": "Recent large language models (LLMs) incorporate reasoning capabilities that allow them to perform well in predicting whether a smart contract respects a certain property, suggesting a complementary approach to traditional formal-methods-based techniques for smart contract verification. However, the application of LLMs in such context has two major issues: 1) properties expressed in natural language are intrinsically ambiguous, and 2) answers returned by LLMs have no guarantee of correctness. In this paper, we address both issues simultaneously by: 1) introducing a new formal specification language that extends Solidity with abstract types, and 2) designing a workflow that combines LLMs with type checking and concrete execution to generate and validate violation witnesses (i.e., counterexamples). The key idea is to represent a specification as a Solidity test with (existentially quantified) variables of abstract type; finding an instantiation of these variables to concrete values (of the correct type) concretizes the test into an executable counterexample (PoC) for the target property. We implemented our procedure in the tool Neuroforger, experimentally evaluating it on a smart-contract verification dataset drawn from literature, obtaining promising results that demonstrate its potential applicability in the wild.",
-      "tr": "Recent large language models (LLMs) incorporate reasoning capabilities that allow them to perform well in predicting whether a smart contract respects a certain property, suggesting a complementary approach to traditional formal-methods-based techniques for smart contract verification. However, the application of LLMs in such context has two major issues: 1) properties expressed in natural language are intrinsically ambiguous, and 2) answers returned by LLMs have no guarantee of correctness. In this paper, we address both issues simultaneously by: 1) introducing a new formal specification language that extends Solidity with abstract types, and 2) designing a workflow that combines LLMs with type checking and concrete execution to generate and validate violation witnesses (i.e., counterexamples). The key idea is to represent a specification as a Solidity test with (existentially quantified) variables of abstract type; finding an instantiation of these variables to concrete values (of the correct type) concretizes the test into an executable counterexample (PoC) for the target property. We implemented our procedure in the tool Neuroforger, experimentally evaluating it on a smart-contract verification dataset drawn from literature, obtaining promising results that demonstrate its potential applicability in the wild."
-    }
-  },
-  {
-    "id": "2605.31277v1",
-    "title": "GETA: Generalized Encrypted Traffic Analysis",
-    "authors": [
-      "Ransika Gunasekara",
-      "Rahat Masood",
-      "Salil Kanhere"
-    ],
-    "published_date": "2026-05-29",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.31277v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.31277v1",
-    "content": {
-      "en": "Traditional traffic analysis is being fundamentally challenged by the rapid adoption of encryption, tunnelling, and privacy-preserving protocols, which increasingly obscure packet payloads and limit the usefulness of Deep Packet Inspection (DPI). Although machine learning has advanced encrypted traffic analysis, existing approaches often remain tied to protocol-specific header features, depend on large labelled datasets, and degrade when deployed across heterogeneous network environments. We present GETA, a protocol-agnostic framework for encrypted traffic analysis that models network flows as multivariate time series using only traffic metadata, thereby avoiding reliance on packet payloads or header semantics. GETA combines meta-learning, embedding refinement, and self-attention to support few-shot adaptation to previously unseen domains with minimal labelled data. Across nine public datasets spanning application identification, VPN traffic classification, IoT device fingerprinting, and attack detection, GETA consistently outperforms state-of-the-art baselines. These results show that GETA offers a practical and generalisable foundation for robust traffic analysis in modern encrypted networks.",
-      "tr": "Traditional traffic analysis is being fundamentally challenged by the rapid adoption of encryption, tunnelling, and privacy-preserving protocols, which increasingly obscure packet payloads and limit the usefulness of Deep Packet Inspection (DPI). Although machine learning has advanced encrypted traffic analysis, existing approaches often remain tied to protocol-specific header features, depend on large labelled datasets, and degrade when deployed across heterogeneous network environments. We present GETA, a protocol-agnostic framework for encrypted traffic analysis that models network flows as multivariate time series using only traffic metadata, thereby avoiding reliance on packet payloads or header semantics. GETA combines meta-learning, embedding refinement, and self-attention to support few-shot adaptation to previously unseen domains with minimal labelled data. Across nine public datasets spanning application identification, VPN traffic classification, IoT device fingerprinting, and attack detection, GETA consistently outperforms state-of-the-art baselines. These results show that GETA offers a practical and generalisable foundation for robust traffic analysis in modern encrypted networks."
-    }
-  },
-  {
-    "id": "2605.31219v1",
-    "title": "Latent Geometric Chords for Query-Efficient Decision-Based Adversarial Attacks",
-    "authors": [
-      "Ei Hmue Khine",
-      "Yao Li",
-      "Jiebao Sun",
-      "Shengzhu Shi",
-      "Zhichang Guo"
-    ],
-    "published_date": "2026-05-29",
-    "tags": [
-      "cs.CV",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.31219v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.31219v1",
-    "content": {
-      "en": "While decision-based black-box adversarial attacks present a severe security threat, current methodologies suffer from fundamental limitations. Pixel-wise attacks frequently introduce unnatural, high-frequency visual artifacts, while latent-space frameworks are confined by the limited search space of low-dimensional manifolds and inherent reconstruction flaws. To resolve these limitations, we propose Latent Geometric Chords (LGC) for Query-Efficient Decision-Based Adversarial Attacks alongside a variant, LGC-H. At its core, LGC navigates decision boundaries by executing a curvature-aware geometric search within a compressed semantic manifold. To guarantee high visual fidelity and circumvent dimensionality bottlenecks, we introduce a Residual-based Adversarial Generation (RAG) mechanism. RAG isolates semantic perturbations as geometric chords and superimposes them directly onto the original source image. RAG substantially resolves baseline reconstruction flaws and effectively doubles the permissible search space dimensions. Experimental results demonstrate that LGC achieves robust cross-dataset transferability and substantially outperforms state-of-the-art baselines. Notably, our method, LGC, minimizes perturbation magnitudes while achieving state-of-the-art visual fidelity--with a Structural Similarity Index Measure (SSIM) exceeding 0.99 and a Learned Perceptual Image Patch Similarity (LPIPS) below 0.01 at 5000 queries--and sustaining high attack success rates under stringent perceptual constraints, successfully compromising adversarially trained robust models. The source code is available at: https://github.com/eihmuekhine/Latent-Geometric-Chords.",
-      "tr": "While decision-based black-box adversarial attacks present a severe security threat, current methodologies suffer from fundamental limitations. Pixel-wise attacks frequently introduce unnatural, high-frequency visual artifacts, while latent-space frameworks are confined by the limited search space of low-dimensional manifolds and inherent reconstruction flaws. To resolve these limitations, we propose Latent Geometric Chords (LGC) for Query-Efficient Decision-Based Adversarial Attacks alongside a variant, LGC-H. At its core, LGC navigates decision boundaries by executing a curvature-aware geometric search within a compressed semantic manifold. To guarantee high visual fidelity and circumvent dimensionality bottlenecks, we introduce a Residual-based Adversarial Generation (RAG) mechanism. RAG isolates semantic perturbations as geometric chords and superimposes them directly onto the original source image. RAG substantially resolves baseline reconstruction flaws and effectively doubles the permissible search space dimensions. Experimental results demonstrate that LGC achieves robust cross-dataset transferability and substantially outperforms state-of-the-art baselines. Notably, our method, LGC, minimizes perturbation magnitudes while achieving state-of-the-art visual fidelity--with a Structural Similarity Index Measure (SSIM) exceeding 0.99 and a Learned Perceptual Image Patch Similarity (LPIPS) below 0.01 at 5000 queries--and sustaining high attack success rates under stringent perceptual constraints, successfully compromising adversarially trained robust models. The source code is available at: https://github.com/eihmuekhine/Latent-Geometric-Chords."
-    }
-  },
-  {
-    "id": "2605.31199v1",
-    "title": "MAECO-Lite: Modular Ontology for Dynamic Malware Analysis",
-    "authors": [
-      "Zekeri Adams",
-      "Peter Švec",
-      "Ján Kľuka",
-      "Roderik Ploszek",
-      "Monday Onoja"
-    ],
-    "published_date": "2026-05-29",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2605.31199v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.31199v1",
-    "content": {
-      "en": "Capturing dynamic malware behavior in a practical but still semantically precise manner remains a significant challenge in cyber threat intelligence. While standards such as MAEC and STIX provide widely adopted vocabularies for describing malware artifacts and observations, they represent data with considerable complexity in structures that often obscure important ontological distinctions. In particular, they tend to conflate enduring malware artifacts with the events generated during execution, thereby flattening distinctions that are central in foundational standards for ontology design. In this paper, we conduct a foundational ontological analysis of core MAEC and STIX constructs relevant to dynamic malware analysis relying on Unified Foundational Ontology (UFO) as a theoretical lens. Our analysis reveals some ontological mismatches arising from the conflation of artifacts, dispositions, and runtime events in MAEC and STIX that complicate coherent representation of dynamic malware behavior and, from a practical perspective, limit the ability to reason about execution traces. Based on these insights, we propose MAECO-Lite, a lightweight ontology designed to represent data and operationalize their processing for dynamic malware analysis. The ontology adopts a modular structure centered on samples, processes, actions, system artifacts, and MITRE ATT&CK Techniques, while maintaining a clear separation between enduring entities and runtime events. An initial evaluation using description logic concept learning algorithms shows that the simplified ontology significantly improves learning performance, demonstrating that ontologically grounded modelling can enhance both semantic clarity and computational usability.",
-      "tr": "Capturing dynamic malware behavior in a practical but still semantically precise manner remains a significant challenge in cyber threat intelligence. While standards such as MAEC and STIX provide widely adopted vocabularies for describing malware artifacts and observations, they represent data with considerable complexity in structures that often obscure important ontological distinctions. In particular, they tend to conflate enduring malware artifacts with the events generated during execution, thereby flattening distinctions that are central in foundational standards for ontology design. In this paper, we conduct a foundational ontological analysis of core MAEC and STIX constructs relevant to dynamic malware analysis relying on Unified Foundational Ontology (UFO) as a theoretical lens. Our analysis reveals some ontological mismatches arising from the conflation of artifacts, dispositions, and runtime events in MAEC and STIX that complicate coherent representation of dynamic malware behavior and, from a practical perspective, limit the ability to reason about execution traces. Based on these insights, we propose MAECO-Lite, a lightweight ontology designed to represent data and operationalize their processing for dynamic malware analysis. The ontology adopts a modular structure centered on samples, processes, actions, system artifacts, and MITRE ATT&CK Techniques, while maintaining a clear separation between enduring entities and runtime events. An initial evaluation using description logic concept learning algorithms shows that the simplified ontology significantly improves learning performance, demonstrating that ontologically grounded modelling can enhance both semantic clarity and computational usability."
-    }
-  },
-  {
-    "id": "2605.31042v1",
-    "title": "From Prompt Injection to Persistent Control: Defending Agentic Harness Against Trojan Backdoors",
-    "authors": [
-      "Jiejun Tan",
-      "Zhicheng Dou",
-      "Xinyu Yang",
-      "Yuyang Hu",
-      "Yiruo Cheng"
-    ],
-    "published_date": "2026-05-29",
+    "published_date": "2026-06-01",
     "tags": [
       "cs.CR",
       "cs.AI",
       "cs.CL"
     ],
-    "link": "http://arxiv.org/abs/2605.31042v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.31042v1",
+    "link": "http://arxiv.org/abs/2606.02483v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.02483v1",
     "content": {
-      "en": "LLM agents are evolving from conversational chatbots to operational tools in real-world workspaces. In local agentic harnesses, an LLM can read and write files, call tools, and reuse workspace state across sessions. While such capabilities enhance utility, they also expose a new attack surface for attackers. Attackers can embed a prompt injection within a file or tool output. Agents may read this hidden instruction, store it, and execute it later. In this multi-step trojan attack paradigm, no individual step appears malicious on its own, but these steps can collectively turn untrusted text into persistent control content. However, existing defenses often inspect each step in isolation. As a result, they can block a clear harmful action, but fail to detect the earlier write operation that plants the backdoor. To reveal this threat, we introduce ClawTrojan, a benchmark designed to identify multi-step trojan attacks in local agentic harnesses. In an OpenClaw-style simulated workspace with GPT-5.4, ClawTrojan reaches a 95.5% attack success rate (ASR), while existing single-turn prompt-injection attacks produce near-zero ASR on the same model. To address this threat, we propose DASGuard, which scans control-like text in sensitive local files, traces its origin, and removes control content that does not originate from a trusted source. Our results show that DASGuard achieves strong dynamic defense by combining runtime attack blocking with sanitized commits to the workspace.",
-      "tr": "LLM agents are evolving from conversational chatbots to operational tools in real-world workspaces. In local agentic harnesses, an LLM can read and write files, call tools, and reuse workspace state across sessions. While such capabilities enhance utility, they also expose a new attack surface for attackers. Attackers can embed a prompt injection within a file or tool output. Agents may read this hidden instruction, store it, and execute it later. In this multi-step trojan attack paradigm, no individual step appears malicious on its own, but these steps can collectively turn untrusted text into persistent control content. However, existing defenses often inspect each step in isolation. As a result, they can block a clear harmful action, but fail to detect the earlier write operation that plants the backdoor. To reveal this threat, we introduce ClawTrojan, a benchmark designed to identify multi-step trojan attacks in local agentic harnesses. In an OpenClaw-style simulated workspace with GPT-5.4, ClawTrojan reaches a 95.5% attack success rate (ASR), while existing single-turn prompt-injection attacks produce near-zero ASR on the same model. To address this threat, we propose DASGuard, which scans control-like text in sensitive local files, traces its origin, and removes control content that does not originate from a trusted source. Our results show that DASGuard achieves strong dynamic defense by combining runtime attack blocking with sanitized commits to the workspace."
+      "en": "Tool-augmented language agents speculatively issue likely future tool calls to hide latency, but those calls leak inferred user intent to external services before the agent commits to the branch. Every external observer that received the call retains the disclosure after the agent abandons the branch. Timing is the issue, not authorization: no commit-time cleanup, read-only restriction, or access-control allow-list unsends what an observer already holds. We call these invocations ghost tool calls and propose Speculative Tool Privacy Contracts, a runtime abstraction that treats observation before commitment as a first-class effect, distinct from state mutation. We implement the contracts in a prototype runtime and evaluate twelve policies across three corpora. Speculative dispatch increases what an observer can infer about user intent; post-hoc filters, read-only restrictions, and access-control allow-lists leave that inference intact; only issue-time policies that change or suppress the speculative call's argument or destination projection before dispatch reduce it.",
+      "tr": "Tool-augmented language agents speculatively issue likely future tool calls to hide latency, but those calls leak inferred user intent to external services before the agent commits to the branch. Every external observer that received the call retains the disclosure after the agent abandons the branch. Timing is the issue, not authorization: no commit-time cleanup, read-only restriction, or access-control allow-list unsends what an observer already holds. We call these invocations ghost tool calls and propose Speculative Tool Privacy Contracts, a runtime abstraction that treats observation before commitment as a first-class effect, distinct from state mutation. We implement the contracts in a prototype runtime and evaluate twelve policies across three corpora. Speculative dispatch increases what an observer can infer about user intent; post-hoc filters, read-only restrictions, and access-control allow-lists leave that inference intact; only issue-time policies that change or suppress the speculative call's argument or destination projection before dispatch reduce it."
     }
   },
   {
-    "id": "2605.30837v1",
-    "title": "Send a SCOUT First: Pre-hoc Reasoning for Adaptive Detector Allocation in Prompt-Injection Defense",
+    "id": "2606.02302v1",
+    "title": "SeClaw: Spec-Driven Security Task Synthesis for Evaluating Autonomous Agents",
     "authors": [
-      "Shuhao Zhang",
-      "Jiarui Li",
-      "Qi Cao",
-      "Ruiyi Zhang",
-      "Pengtao Xie"
+      "Hao Cheng",
+      "Changtao Miao",
+      "Tianle Song",
+      "Yin Wu",
+      "He Liu"
     ],
-    "published_date": "2026-05-29",
+    "published_date": "2026-06-01",
     "tags": [
       "cs.CR",
-      "cs.LG"
+      "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2605.30837v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.30837v1",
+    "link": "http://arxiv.org/abs/2606.02302v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.02302v1",
     "content": {
-      "en": "Prompt-injection detectors are heterogeneous: each is strong on a different slice of attacks, and none is always reliable. Yet existing systems still treat detection as a fixed single-detector pipeline, committing every request to one detector's blind spots. We reframe defense as detector allocation: given a heterogeneous pool, decide per request which detectors to run and whether to escalate to an LLM judge. Our framework SCOUT (Scalable and Controllable Outcome-prediction for Uncertainty-aware Triage) makes this decision dynamic by predicting each detector's per-sample reliability and latency from how it behaved on similar past inputs, and exposes a single safety-utility threshold to the operator (where utility bundles benign-pass rate and wall-clock). To evaluate this setting, we build SCOUT-450, a benchmark that captures the structurally complex, agent-facing injections that older prompt-injection sets under-represent. On SCOUT-450, a safety-oriented operating point reduces attack-success rate by 46% and total wall-clock by 40% relative to an always-on GPT-4o judge, at a 5.1-point benign-utility drop. SCOUT also transfers to three external benchmarks (BIPIA, IPI, and IHEval), improving the safety-utility frontier.",
-      "tr": "Prompt-injection detectors are heterogeneous: each is strong on a different slice of attacks, and none is always reliable. Yet existing systems still treat detection as a fixed single-detector pipeline, committing every request to one detector's blind spots. We reframe defense as detector allocation: given a heterogeneous pool, decide per request which detectors to run and whether to escalate to an LLM judge. Our framework SCOUT (Scalable and Controllable Outcome-prediction for Uncertainty-aware Triage) makes this decision dynamic by predicting each detector's per-sample reliability and latency from how it behaved on similar past inputs, and exposes a single safety-utility threshold to the operator (where utility bundles benign-pass rate and wall-clock). To evaluate this setting, we build SCOUT-450, a benchmark that captures the structurally complex, agent-facing injections that older prompt-injection sets under-represent. On SCOUT-450, a safety-oriented operating point reduces attack-success rate by 46% and total wall-clock by 40% relative to an always-on GPT-4o judge, at a 5.1-point benign-utility drop. SCOUT also transfers to three external benchmarks (BIPIA, IPI, and IHEval), improving the safety-utility frontier."
+      "en": "Autonomous LLM agents increasingly operate in stateful environments where they access tools, files, memory, and external services. While such capabilities enable complex real-world workflows, they also introduce security risks that are difficult to capture with existing evaluations. Current agent security benchmarks often rely on manually curated tasks, provide limited coverage of emerging threats, and focus primarily on final outcomes rather than the execution processes that lead to unsafe behavior. We introduce SeClaw, a framework that combines specification-driven security task synthesis with execution-based security evaluation for Autonomous agents. Spec-driven security task synthesis enables scalable and controllable construction of security tasks from structured risk specifications, while SeClaw docker provides a standardized testbed for evaluating agent behavior under diverse safety-risk scenarios. The benchmark covers risks arising from resources, user tasks, environments, and intrinsic agent behaviors, and supports trajectory-aware assessment of unsafe actions beyond final responses. By bridging systematic task synthesis and reproducible security evaluation, SeClaw provides a practical foundation for measuring, diagnosing, and comparing security failures in autonomous LLM agents. The code is available at https://github.com/seclaw-eval/seclaw-eval.",
+      "tr": "Autonomous LLM agents increasingly operate in stateful environments where they access tools, files, memory, and external services. While such capabilities enable complex real-world workflows, they also introduce security risks that are difficult to capture with existing evaluations. Current agent security benchmarks often rely on manually curated tasks, provide limited coverage of emerging threats, and focus primarily on final outcomes rather than the execution processes that lead to unsafe behavior. We introduce SeClaw, a framework that combines specification-driven security task synthesis with execution-based security evaluation for Autonomous agents. Spec-driven security task synthesis enables scalable and controllable construction of security tasks from structured risk specifications, while SeClaw docker provides a standardized testbed for evaluating agent behavior under diverse safety-risk scenarios. The benchmark covers risks arising from resources, user tasks, environments, and intrinsic agent behaviors, and supports trajectory-aware assessment of unsafe actions beyond final responses. By bridging systematic task synthesis and reproducible security evaluation, SeClaw provides a practical foundation for measuring, diagnosing, and comparing security failures in autonomous LLM agents. The code is available at https://github.com/seclaw-eval/seclaw-eval."
     }
   },
   {
-    "id": "2605.30808v1",
-    "title": "Differentially Private Preference Data Synthesis for Large Language Model Alignment",
+    "id": "2606.02240v1",
+    "title": "AgentRedBench: Dynamic Redteaming and Integration-Aware Defense for LLM Agents over SaaS Integrations",
     "authors": [
-      "Fengyu Gao",
-      "Jing Yang"
+      "Hiskias Dingeto",
+      "Will Leeney"
     ],
-    "published_date": "2026-05-29",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2605.30808v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.30808v1",
-    "content": {
-      "en": "Preference alignment is a crucial post-training step for large language models (LLMs) to ensure their outputs align with human values. However, post-training on real human preference data raises privacy concerns, as these datasets often contain sensitive user prompts and human judgments. To address this, we propose DPPrefSyn, a novel algorithm for generating differentially private (DP) synthetic preference data to enable privacy-preserving preference alignment. DPPrefSyn is a principled framework grounded in the Bradley-Terry preference model and the intrinsic geometric structure of pairwise human preference data. It first learns an underlying preference model from private data with formal differential privacy guarantees, and then leverages the learned model together with public prompts to synthesize high-quality preference data. It exploits the shared linear structure of per-cluster reward models to effectively capture heterogeneous human preferences in private datasets, and leverages DP Principal Component Analysis (DP-PCA) to improve learning accuracy. Extensive experimental results demonstrate that DPPrefSyn achieves competitive alignment performance under strong DP guarantees. These findings highlight the potential of synthetic preference data as a practical alternative for privacy-preserving preference alignment across a broad range of applications. To the best of our knowledge, this is the first work to generate DP synthetic preference data for LLM alignment. Our code is available at https://github.com/gfengyu/Differentially-Private-Preference-Data-Synthesis.",
-      "tr": "Preference alignment is a crucial post-training step for large language models (LLMs) to ensure their outputs align with human values. However, post-training on real human preference data raises privacy concerns, as these datasets often contain sensitive user prompts and human judgments. To address this, we propose DPPrefSyn, a novel algorithm for generating differentially private (DP) synthetic preference data to enable privacy-preserving preference alignment. DPPrefSyn is a principled framework grounded in the Bradley-Terry preference model and the intrinsic geometric structure of pairwise human preference data. It first learns an underlying preference model from private data with formal differential privacy guarantees, and then leverages the learned model together with public prompts to synthesize high-quality preference data. It exploits the shared linear structure of per-cluster reward models to effectively capture heterogeneous human preferences in private datasets, and leverages DP Principal Component Analysis (DP-PCA) to improve learning accuracy. Extensive experimental results demonstrate that DPPrefSyn achieves competitive alignment performance under strong DP guarantees. These findings highlight the potential of synthetic preference data as a practical alternative for privacy-preserving preference alignment across a broad range of applications. To the best of our knowledge, this is the first work to generate DP synthetic preference data for LLM alignment. Our code is available at https://github.com/gfengyu/Differentially-Private-Preference-Data-Synthesis."
-    }
-  },
-  {
-    "id": "2605.30686v1",
-    "title": "Depth-Dependent Indirect Prompt Injection in Tool-Calling ReAct Agents: Injection Depth, Payload Framing, and Turn-Budget Sensitivity",
-    "authors": [
-      "Mohammadreza Rashidi"
-    ],
-    "published_date": "2026-05-29",
+    "published_date": "2026-06-01",
     "tags": [
       "cs.CR",
       "cs.AI",
+      "cs.CL",
+      "cs.ET"
+    ],
+    "link": "http://arxiv.org/abs/2606.02240v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.02240v1",
+    "content": {
+      "en": "Indirect prompt injection in tool-use agents is a concrete production threat: LLM agents read from integrations (third-party services such as Gmail, Salesforce, or Jira accessed through tool calls) whose response content the user neither writes nor controls. Existing benchmarks under-measure the threat: most cover only a handful of integrations with the same attack payload replayed across runs, and open-source guards are trained on chat-style data rather than tool-response content. We introduce AGENTREDBENCH, a dynamic LLM-driven redteaming benchmark of 215 subtle underspecified authorization (attacks at the boundary of what the user's request authorises) scenarios across 24 enterprise integrations in nine functional families and five attack types. Across an eight-model panel (Anthropic, OpenAI, Google), no-guard ASR (attack success rate) ranges from 32% (Claude Sonnet 4.6) to 81% (Gemini 3 Flash). To keep the scenario set out of training corpora and preserve headline ASR meaning over time, we release the codebase, integration schemas, and AGENTREDGUARD model openly; the canonical scenarios are evaluated through a maintainer-mediated channel with immutable versioning. We release AGENTREDGUARD alongside the benchmark: a guard trained on an integration-diverse corpus of adversarial tool-response content. AGENTREDGUARD cuts panel ASR from 69.9% to 2.4% at 0.37% false-positive rate, outperforming every open-source baseline with non-trivial detection (Llama Guard, PromptGuard 2, ProtectAI) on both axes. Cross-integration and cross-attack type holdouts both confirm the gain transfers beyond the training subset.",
+      "tr": "Indirect prompt injection in tool-use agents is a concrete production threat: LLM agents read from integrations (third-party services such as Gmail, Salesforce, or Jira accessed through tool calls) whose response content the user neither writes nor controls. Existing benchmarks under-measure the threat: most cover only a handful of integrations with the same attack payload replayed across runs, and open-source guards are trained on chat-style data rather than tool-response content. We introduce AGENTREDBENCH, a dynamic LLM-driven redteaming benchmark of 215 subtle underspecified authorization (attacks at the boundary of what the user's request authorises) scenarios across 24 enterprise integrations in nine functional families and five attack types. Across an eight-model panel (Anthropic, OpenAI, Google), no-guard ASR (attack success rate) ranges from 32% (Claude Sonnet 4.6) to 81% (Gemini 3 Flash). To keep the scenario set out of training corpora and preserve headline ASR meaning over time, we release the codebase, integration schemas, and AGENTREDGUARD model openly; the canonical scenarios are evaluated through a maintainer-mediated channel with immutable versioning. We release AGENTREDGUARD alongside the benchmark: a guard trained on an integration-diverse corpus of adversarial tool-response content. AGENTREDGUARD cuts panel ASR from 69.9% to 2.4% at 0.37% false-positive rate, outperforming every open-source baseline with non-trivial detection (Llama Guard, PromptGuard 2, ProtectAI) on both axes. Cross-integration and cross-attack type holdouts both confirm the gain transfers beyond the training subset."
+    }
+  },
+  {
+    "id": "2606.01849v1",
+    "title": "ContinuousBench: Can Differentially Private Synthetic Text Improve Capabilities?",
+    "authors": [
+      "Peihan Liu",
+      "Lucas Rosenblatt",
+      "Weiwei Kong",
+      "Natalia Ponomareva",
+      "Gautam Kamath"
+    ],
+    "published_date": "2026-06-01",
+    "tags": [
+      "cs.LG",
+      "cs.CL",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2606.01849v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.01849v1",
+    "content": {
+      "en": "Differentially private (DP) text synthesis promises to unlock sensitive corpora for model training, but it remains unclear whether DP synthetic data transmits genuinely new knowledge and capabilities present only in those corpora. This is because existing evaluations rely on tasks that are nearly solvable without training, so strong benchmark performance does not establish that DP synthesis can substitute original data access. Thus, we introduce ContinuousBench, a continuously and automatically-regenerated benchmark that measures capability gain from DP synthetic text. Each quarter, a new release pairs a never-before-seen training corpus with a derived QA set, constructed to be: (1) unsolvable sans-corpus; and (2) learnable under DP, as the tested knowledge is supported by hundreds of independent records. Researchers produce DP synthetic data from the training corpus and run our standardized training and evaluation harness on their synthetic data to measure gains. We instantiate two tracks: Geminon, a procedurally-generated dataset about fictional creatures; and News, a stream of newly crawled public news articles. Although standard benchmarks are nearly saturated, on ContinuousBench we find that non-private synthesis transfers substantial knowledge from the original corpus, while state-of-the-art DP synthesis methods generally fail to do so, even at $\\varepsilon=100$.",
+      "tr": "Differentially private (DP) text synthesis promises to unlock sensitive corpora for model training, but it remains unclear whether DP synthetic data transmits genuinely new knowledge and capabilities present only in those corpora. This is because existing evaluations rely on tasks that are nearly solvable without training, so strong benchmark performance does not establish that DP synthesis can substitute original data access. Thus, we introduce ContinuousBench, a continuously and automatically-regenerated benchmark that measures capability gain from DP synthetic text. Each quarter, a new release pairs a never-before-seen training corpus with a derived QA set, constructed to be: (1) unsolvable sans-corpus; and (2) learnable under DP, as the tested knowledge is supported by hundreds of independent records. Researchers produce DP synthetic data from the training corpus and run our standardized training and evaluation harness on their synthetic data to measure gains. We instantiate two tracks: Geminon, a procedurally-generated dataset about fictional creatures; and News, a stream of newly crawled public news articles. Although standard benchmarks are nearly saturated, on ContinuousBench we find that non-private synthesis transfers substantial knowledge from the original corpus, while state-of-the-art DP synthesis methods generally fail to do so, even at $\\varepsilon=100$."
+    }
+  },
+  {
+    "id": "2606.01794v1",
+    "title": "Tridirectional Discriminating-Power Formal Verification of Smart Contract Reentrancy Defense Against Production-Deployed Solidity Source",
+    "authors": [
+      "Ray Iskander"
+    ],
+    "published_date": "2026-06-01",
+    "tags": [
+      "cs.CR",
+      "cs.LO",
+      "cs.PL"
+    ],
+    "link": "http://arxiv.org/abs/2606.01794v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.01794v1",
+    "content": {
+      "en": "We present the first machine-checked correctness proof of the OpenZeppelin reentrancy-guard pattern against a Lean 4 state-machine model of production-deployed Solidity source. All thirteen theorems are machine-checked with zero sorry, zero user-introduced axioms, and an axiom footprint bounded by [propext] (a standard mathlib4 axiom), gated under continuous integration.   Smart contract reentrancy has caused over US$500M in documented losses since 2016, with the DAO 2016 attack draining ~3.6M ETH and forcing the hard fork that split Ethereum. The OpenZeppelin ReentrancyGuard pattern is the de facto defense across production DeFi, yet no prior work has established its discriminating power: that the guard blocks attacks on vulnerable instances, preserves correct execution for non-attacking transactions, and distinguishes adjacent safe and vulnerable variants. Prior efforts formalized either guard correctness on toy contracts or attack feasibility on isolated instances - not both directions plus boundary cases against production source.   We verify three production instantiations - DAO 2016, Compound v2, and Aave V3 flashLoan - plus a minimal-diff mutant of Aave V3's flashLoan (flashLoanVulnerable) isolating one security-critical difference, via mutation testing. The tridirectional structure pairs (a) attack reproduction of the DAO 2016 pattern, (b) a correctness proof for Compound v2, and (c) a boundary-case proof distinguishing Aave V3's CEI-correct flashLoan from the mutant. A capstone meta-theorem composes the three under a no-retrofit discipline, demonstrated at the first cross-protocol stress test (Compound v2 to Aave V3); broader-family portability is future work.   Full Lean 4 source, CI config and reproduction commands are at https://github.com/rayiskander2406/qanary-contracts, reproducible at v1.6-phase7-closure (substrate: v1.3-layer6-closure).",
+      "tr": "We present the first machine-checked correctness proof of the OpenZeppelin reentrancy-guard pattern against a Lean 4 state-machine model of production-deployed Solidity source. All thirteen theorems are machine-checked with zero sorry, zero user-introduced axioms, and an axiom footprint bounded by [propext] (a standard mathlib4 axiom), gated under continuous integration.   Smart contract reentrancy has caused over US$500M in documented losses since 2016, with the DAO 2016 attack draining ~3.6M ETH and forcing the hard fork that split Ethereum. The OpenZeppelin ReentrancyGuard pattern is the de facto defense across production DeFi, yet no prior work has established its discriminating power: that the guard blocks attacks on vulnerable instances, preserves correct execution for non-attacking transactions, and distinguishes adjacent safe and vulnerable variants. Prior efforts formalized either guard correctness on toy contracts or attack feasibility on isolated instances - not both directions plus boundary cases against production source.   We verify three production instantiations - DAO 2016, Compound v2, and Aave V3 flashLoan - plus a minimal-diff mutant of Aave V3's flashLoan (flashLoanVulnerable) isolating one security-critical difference, via mutation testing. The tridirectional structure pairs (a) attack reproduction of the DAO 2016 pattern, (b) a correctness proof for Compound v2, and (c) a boundary-case proof distinguishing Aave V3's CEI-correct flashLoan from the mutant. A capstone meta-theorem composes the three under a no-retrofit discipline, demonstrated at the first cross-protocol stress test (Compound v2 to Aave V3); broader-family portability is future work.   Full Lean 4 source, CI config and reproduction commands are at https://github.com/rayiskander2406/qanary-contracts, reproducible at v1.6-phase7-closure (substrate: v1.3-layer6-closure)."
+    }
+  },
+  {
+    "id": "2606.01741v1",
+    "title": "SECUREVENT: Hybrid AI/ML Security Monitoring for Distributed Event-Based Systems",
+    "authors": [
+      "Eric Liang"
+    ],
+    "published_date": "2026-06-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2606.01741v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.01741v1",
+    "content": {
+      "en": "Distributed event-based systems have become a common substrate for Internet-scale publish/subscribe services, IoT telemetry, cloud-native microservices, and security operations pipelines. Their loose coupling and asynchronous delivery improve scalability, but they also expand the attack surface: publishers, brokers, subscribers, topics, schemas, and temporal ordering can each be abused without a single component observing the whole behavior. This paper proposes SECUREVENT, a hybrid AI/ML security-monitoring architecture for distributed event-based systems. The architecture combines traditional protections such as authenticated transport, topic-level authorization, and signed events with online anomaly detection, graph-aware behavioral features, complex-event policy rules, federated learning, and adversarial-ML governance. A deterministic prototype study over synthetic event-stream attacks illustrates how a hybrid AI/CEP monitor can improve recall over static rules while retaining a low false-positive rate. The central claim is not that machine learning replaces cryptographic and access-control mechanisms, but that model-based security monitoring is necessary when event flows, identities, schemas, and timing relationships are too dynamic for static controls alone.",
+      "tr": "Distributed event-based systems have become a common substrate for Internet-scale publish/subscribe services, IoT telemetry, cloud-native microservices, and security operations pipelines. Their loose coupling and asynchronous delivery improve scalability, but they also expand the attack surface: publishers, brokers, subscribers, topics, schemas, and temporal ordering can each be abused without a single component observing the whole behavior. This paper proposes SECUREVENT, a hybrid AI/ML security-monitoring architecture for distributed event-based systems. The architecture combines traditional protections such as authenticated transport, topic-level authorization, and signed events with online anomaly detection, graph-aware behavioral features, complex-event policy rules, federated learning, and adversarial-ML governance. A deterministic prototype study over synthetic event-stream attacks illustrates how a hybrid AI/CEP monitor can improve recall over static rules while retaining a low false-positive rate. The central claim is not that machine learning replaces cryptographic and access-control mechanisms, but that model-based security monitoring is necessary when event flows, identities, schemas, and timing relationships are too dynamic for static controls alone."
+    }
+  },
+  {
+    "id": "2606.01719v1",
+    "title": "Fair Finetuning Mitigates Distribution Inference Attacks",
+    "authors": [
+      "Rakshit Naidu"
+    ],
+    "published_date": "2026-06-01",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2606.01719v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.01719v1",
+    "content": {
+      "en": "Machine learning models trained on sensitive data can inadvertently leak population-level information about their training distributions -- a threat known as distribution inference attack (DIA). An adversary with black-box access can infer sensitive demographic properties, such as subgroup proportions, without observing any training data directly. While defenses such as differential privacy and property unlearning have been proposed, the link between fairness constraints and distributional leakage remains unexplored. We propose Fair Fine-tuning (FFt): a trained model is fine-tuned on samples from the complementary distribution under an Equalized Odds (EO) constraint. We provide a complete theoretical characterization, proving the tight bound $\\text{Adv}(\\mathcal{A},M_f) \\le Δ_{\\text{EO}} \\cdot W$, where $W$ quantifies how distinguishable the two training distributions are by their sensitive-attribute composition. We also establish a necessary condition for FFt to reduce adversarial advantage and prove tightness of the bound. We evaluate across six datasets spanning tabular (ACS Income, COMPAS, German Credit), image (UTKFaces), and NLP (Bias in Bios) modalities. Rehearsal-based FFt consistently reduces the adversarial accuracy gap below the detection threshold $τ!=!0.1$ across all settings; on ACS Income, the gap falls from $\\sim!15%$ to under $4%$. Our work provides the first formal bound connecting a model's measured EO disparity directly to its adversarial advantage in the DIA game, opening a new avenue for unified fairness-and-privacy defenses.",
+      "tr": "Machine learning models trained on sensitive data can inadvertently leak population-level information about their training distributions -- a threat known as distribution inference attack (DIA). An adversary with black-box access can infer sensitive demographic properties, such as subgroup proportions, without observing any training data directly. While defenses such as differential privacy and property unlearning have been proposed, the link between fairness constraints and distributional leakage remains unexplored. We propose Fair Fine-tuning (FFt): a trained model is fine-tuned on samples from the complementary distribution under an Equalized Odds (EO) constraint. We provide a complete theoretical characterization, proving the tight bound $\\text{Adv}(\\mathcal{A},M_f) \\le Δ_{\\text{EO}} \\cdot W$, where $W$ quantifies how distinguishable the two training distributions are by their sensitive-attribute composition. We also establish a necessary condition for FFt to reduce adversarial advantage and prove tightness of the bound. We evaluate across six datasets spanning tabular (ACS Income, COMPAS, German Credit), image (UTKFaces), and NLP (Bias in Bios) modalities. Rehearsal-based FFt consistently reduces the adversarial accuracy gap below the detection threshold $τ!=!0.1$ across all settings; on ACS Income, the gap falls from $\\sim!15%$ to under $4%$. Our work provides the first formal bound connecting a model's measured EO disparity directly to its adversarial advantage in the DIA game, opening a new avenue for unified fairness-and-privacy defenses."
+    }
+  },
+  {
+    "id": "2606.01691v1",
+    "title": "IstGPT: LLM-based Anomaly Detection for Spatial-Temporal Graph in Industrial Systems",
+    "authors": [
+      "Yuchen Zhang",
+      "Ning Xi",
+      "Pengbin Feng",
+      "Shigang Liu",
+      "Jianfeng Ma"
+    ],
+    "published_date": "2026-06-01",
+    "tags": [
+      "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2605.30686v1",
-    "pdf_link": "https://arxiv.org/pdf/2605.30686v1",
+    "link": "http://arxiv.org/abs/2606.01691v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.01691v1",
     "content": {
-      "en": "ReAct agents that interleave chain-of-thought reasoning with tool calls are increasingly deployed for real tasks such as scheduling, file retrieval, and data access. Their tool observation loop creates a direct attack surface: an adversary who controls any tool's return value can embed instructions that redirect the agent away from the user's goal, a threat known as indirect prompt injection. Existing benchmarks evaluate attack success rate (ASR) at a fixed injection position under fixed conditions, leaving three risk dimensions unexplored: where in the tool sequence the payload appears (injection depth), what rhetorical register it uses (framing), and how many turns the agent is permitted (turn cap). We conduct four controlled studies on 20 scenarios spanning five attack categories, totalling 460 trials against GPT-4o-mini and Claude Haiku at a combined API cost under 0.36 USD. Study 1 shows that ASR against GPT-4o-mini decays from 60% at depth 1 to 0% at depths 4 and 5 (Cramer's V = 0.58, p < 0.001; restricted to within-sequence depths 1-3: V = 0.47, p = 0.0013), driven by model resistance at depth 1 and task completion before payload encounter at deeper positions. Study 2 replicates the depth experiment on Claude Haiku, which achieves 0% ASR at every depth through a combination of conservative tool invocation and genuine instruction resistance. Study 3 shows that framing modulates ASR between 25% (neutral) and 75% (persona) at depth 1, a 50-percentage-point range that does not reach statistical significance at N = 20 per condition. Study 4 confirms that ASR is stable across turn caps of 3, 5, and 7, indicating the turn budget is not a risk factor in this setting. Our results establish injection depth as the dominant variable and show that sanitising only the first tool observation captures 67% of measured injection successes.",
-      "tr": "ReAct agents that interleave chain-of-thought reasoning with tool calls are increasingly deployed for real tasks such as scheduling, file retrieval, and data access. Their tool observation loop creates a direct attack surface: an adversary who controls any tool's return value can embed instructions that redirect the agent away from the user's goal, a threat known as indirect prompt injection. Existing benchmarks evaluate attack success rate (ASR) at a fixed injection position under fixed conditions, leaving three risk dimensions unexplored: where in the tool sequence the payload appears (injection depth), what rhetorical register it uses (framing), and how many turns the agent is permitted (turn cap). We conduct four controlled studies on 20 scenarios spanning five attack categories, totalling 460 trials against GPT-4o-mini and Claude Haiku at a combined API cost under 0.36 USD. Study 1 shows that ASR against GPT-4o-mini decays from 60% at depth 1 to 0% at depths 4 and 5 (Cramer's V = 0.58, p < 0.001; restricted to within-sequence depths 1-3: V = 0.47, p = 0.0013), driven by model resistance at depth 1 and task completion before payload encounter at deeper positions. Study 2 replicates the depth experiment on Claude Haiku, which achieves 0% ASR at every depth through a combination of conservative tool invocation and genuine instruction resistance. Study 3 shows that framing modulates ASR between 25% (neutral) and 75% (persona) at depth 1, a 50-percentage-point range that does not reach statistical significance at N = 20 per condition. Study 4 confirms that ASR is stable across turn caps of 3, 5, and 7, indicating the turn budget is not a risk factor in this setting. Our results establish injection depth as the dominant variable and show that sanitising only the first tool observation captures 67% of measured injection successes."
+      "en": "Industrial Internet systems face increasing threats from sophisticated industrial control system (ICS) attacks, resulting in critical safety incidents. However, existing tools exhibit limited effectiveness in real-time anomaly detection due to the complex dependencies among sensors and actuators. To tackle this, we present IstGPT, the first industrial anomaly detection tool based on LLMs and graph learning to provide real-time protection against a wide range of ICS attacks. IstGPT achieves fine-grained and precise modeling on spatial-temporal dependencies in industrial cyber-physical systems. It first leverages industrial multi-modal knowledge, including operational data, technical documents, and system diagrams, to extract sensor-actuator dependency graphs via multi-stage prompt engineering. Then, LLM-Optimation iteratively refines the graph based on node accuracy, edge consistency, and logical coherence. Finally, IstGPT integrated improved graph neural networks with an encoder-decoder architecture to detect anomalies via reconstruction errors. We evaluate IstGPT against 12 state-of-the-art baselines on 9 datasets, including 2 public, 6 simulated, and a real-world robotic arm dataset. IstGPT achieves the best F1-scores and eTaF1 (a newer time-aware metric) across nine datasets. We further discuss the feasibility of deploying IstGPT in real-world industrial scenarios.",
+      "tr": "Industrial Internet systems face increasing threats from sophisticated industrial control system (ICS) attacks, resulting in critical safety incidents. However, existing tools exhibit limited effectiveness in real-time anomaly detection due to the complex dependencies among sensors and actuators. To tackle this, we present IstGPT, the first industrial anomaly detection tool based on LLMs and graph learning to provide real-time protection against a wide range of ICS attacks. IstGPT achieves fine-grained and precise modeling on spatial-temporal dependencies in industrial cyber-physical systems. It first leverages industrial multi-modal knowledge, including operational data, technical documents, and system diagrams, to extract sensor-actuator dependency graphs via multi-stage prompt engineering. Then, LLM-Optimation iteratively refines the graph based on node accuracy, edge consistency, and logical coherence. Finally, IstGPT integrated improved graph neural networks with an encoder-decoder architecture to detect anomalies via reconstruction errors. We evaluate IstGPT against 12 state-of-the-art baselines on 9 datasets, including 2 public, 6 simulated, and a real-world robotic arm dataset. IstGPT achieves the best F1-scores and eTaF1 (a newer time-aware metric) across nine datasets. We further discuss the feasibility of deploying IstGPT in real-world industrial scenarios."
+    }
+  },
+  {
+    "id": "2606.01567v1",
+    "title": "Defenses & Enablers For Skill Injection Attacks on Terminal Based Agents",
+    "authors": [
+      "Yoshinari Fujinuma",
+      "Varun Gangal",
+      "Traian Rebedea",
+      "Makesh Narasimhan Sreedhar",
+      "Prasoon Varshney"
+    ],
+    "published_date": "2026-06-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "link": "http://arxiv.org/abs/2606.01567v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.01567v1",
+    "content": {
+      "en": "Large language model (LLM) agents increasingly rely on reusable skills i.e. documents describing task-specific procedures. However, this introduces a new attack surface for agents to manage. We study two complementary directions for this threat. First, we evaluate guardian-based defenses: an intermediary LLM agent that acts as a mediator for skill file access (dynamic guardian) or pre-rewrites these files at build time (static guardian). Across three LLM agent families, our guardians cut attack success rate (ASR) by well over half while preserving task utility. Second, we stress test them through attack reframing using four attacks that preserve the malicious instruction but change the phrasing. For non-guardian setup, the reframing pushes the ASR up to 81.4\\%, but the dynamic guardian brings it down to 18.6\\%, showing that real-time mediation is a robust defense.",
+      "tr": "Large language model (LLM) agents increasingly rely on reusable skills i.e. documents describing task-specific procedures. However, this introduces a new attack surface for agents to manage. We study two complementary directions for this threat. First, we evaluate guardian-based defenses: an intermediary LLM agent that acts as a mediator for skill file access (dynamic guardian) or pre-rewrites these files at build time (static guardian). Across three LLM agent families, our guardians cut attack success rate (ASR) by well over half while preserving task utility. Second, we stress test them through attack reframing using four attacks that preserve the malicious instruction but change the phrasing. For non-guardian setup, the reframing pushes the ASR up to 81.4\\%, but the dynamic guardian brings it down to 18.6\\%, showing that real-time mediation is a robust defense."
     }
   }
 ]
