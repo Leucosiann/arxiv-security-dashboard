@@ -1,217 +1,225 @@
 [
   {
-    "id": "2606.11098v1",
-    "title": "Do Transformers Actually Help Intrusion Detection? A Temporal Sequence Evaluation on CIC-IDS2017",
+    "id": "2606.13621v1",
+    "title": "Beyond Runtime Enforcement: Shield Synthesis as Defensibility Analysis for Adversarial Networks",
     "authors": [
-      "Zach Moczkodan",
-      "Hany Ragab"
+      "Achraf Hsain",
+      "Sultan Almuhammadi"
     ],
-    "published_date": "2026-06-09",
+    "published_date": "2026-06-11",
     "tags": [
+      "cs.AI",
       "cs.CR",
-      "cs.LG"
+      "cs.GT",
+      "cs.LG",
+      "cs.MA"
     ],
-    "link": "http://arxiv.org/abs/2606.11098v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.11098v1",
+    "link": "http://arxiv.org/abs/2606.13621v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.13621v1",
     "content": {
-      "en": "Recent deep learning approaches for network intrusion detection increasingly incorporate temporal architectures such as recurrent networks and Transformers, often reporting near-perfect performance on CIC-IDS2017. However, many existing studies neither supply their temporal modules with genuine sequence inputs nor evaluate under realistic, leakage-free conditions, making it unclear whether reported gains arise from true sequence-modeling capability. In this work, we reformulate CIC-IDS2017 as a temporal intrusion-detection task by constructing ordered flow sequences from network conversations and benchmarking nine classical and deep learning architectures under a random split, two leakage-free splits, and a padding-scheme ablation. The central finding is that padding convention, not architecture, determines the Transformer's performance: on genuinely sequential (non-padded) windows the Transformer achieves the highest macro-F1 of any model in the experiment (0.89); under zero-pad+mask evaluation it drops markedly (-0.24 macro-F1), while LSTM, GRU, and 1D-CNN remain stable. Under leakage-free group evaluation the Random Forest is the most robust model (+0.009), while the Transformer's false-alarm rate grows from 0.04% to 2.7%, a 67-fold increase invisible under conventional protocols. These findings demonstrate that evaluation methodology -- specifically padding convention and split protocol -- has a larger effect on reported performance than architectural choice, and that widely used random splits with repeat-last padding can overestimate model robustness by up to 0.24 macro-F1. We advocate leakage-free splits, explicit padding disclosure, and sequence-aware benchmarking as standard practice in future IDS research. Code and implementation details are available at https://github.com/zachmocz/temporal-ids-bench.",
-      "tr": "Recent deep learning approaches for network intrusion detection increasingly incorporate temporal architectures such as recurrent networks and Transformers, often reporting near-perfect performance on CIC-IDS2017. However, many existing studies neither supply their temporal modules with genuine sequence inputs nor evaluate under realistic, leakage-free conditions, making it unclear whether reported gains arise from true sequence-modeling capability. In this work, we reformulate CIC-IDS2017 as a temporal intrusion-detection task by constructing ordered flow sequences from network conversations and benchmarking nine classical and deep learning architectures under a random split, two leakage-free splits, and a padding-scheme ablation. The central finding is that padding convention, not architecture, determines the Transformer's performance: on genuinely sequential (non-padded) windows the Transformer achieves the highest macro-F1 of any model in the experiment (0.89); under zero-pad+mask evaluation it drops markedly (-0.24 macro-F1), while LSTM, GRU, and 1D-CNN remain stable. Under leakage-free group evaluation the Random Forest is the most robust model (+0.009), while the Transformer's false-alarm rate grows from 0.04% to 2.7%, a 67-fold increase invisible under conventional protocols. These findings demonstrate that evaluation methodology -- specifically padding convention and split protocol -- has a larger effect on reported performance than architectural choice, and that widely used random splits with repeat-last padding can overestimate model robustness by up to 0.24 macro-F1. We advocate leakage-free splits, explicit padding disclosure, and sequence-aware benchmarking as standard practice in future IDS research. Code and implementation details are available at https://github.com/zachmocz/temporal-ids-bench."
+      "en": "Shielded reinforcement learning is typically presented as a runtime safety mechanism that compiles temporal-logic specifications into automata restricting an agent's actions. We argue this is the wrong product. The same automata-theoretic machinery -- specification compilation, product game construction, attractor computation, and winning-region extraction -- is better read as a design-time analytical instrument whose outputs are structural insights about a system rather than runtime constraints on a deployed agent.   We instantiate this through a constrained two-player safety game for network defense. The two specifications are enforced asymmetrically: the defender specification defines the unsafe region of the game, whereas the attacker specification restricts the adversary's legal actions during attractor computation. Solving the game yields a defensibility verdict -- a formal certificate that a topology-specification pair is or is not defensible -- with the associated winning region and shield.   Beyond the binary verdict, we derive topology-level metrics from the attractor structure and combine them with post-convergence behavior from shield-constrained adversarial multi-agent reinforcement learning. Together these form a defensibility fingerprint capturing both a network's formal safety properties and its operational behavior under adaptive play.   A what-if analysis shows that formal defensibility and operational effectiveness capture distinct aspects of security: small architectural changes can produce large shifts in operational outcomes while leaving formal safety margins nearly unchanged. Shield synthesis is thus most valuable not as a deployment mechanism for safe agents, but as a framework for answering architectural questions about whether, where, and how a system can be defended. The defensibility verdict is the output, not the safe policy.",
+      "tr": "Shielded reinforcement learning is typically presented as a runtime safety mechanism that compiles temporal-logic specifications into automata restricting an agent's actions. We argue this is the wrong product. The same automata-theoretic machinery -- specification compilation, product game construction, attractor computation, and winning-region extraction -- is better read as a design-time analytical instrument whose outputs are structural insights about a system rather than runtime constraints on a deployed agent.   We instantiate this through a constrained two-player safety game for network defense. The two specifications are enforced asymmetrically: the defender specification defines the unsafe region of the game, whereas the attacker specification restricts the adversary's legal actions during attractor computation. Solving the game yields a defensibility verdict -- a formal certificate that a topology-specification pair is or is not defensible -- with the associated winning region and shield.   Beyond the binary verdict, we derive topology-level metrics from the attractor structure and combine them with post-convergence behavior from shield-constrained adversarial multi-agent reinforcement learning. Together these form a defensibility fingerprint capturing both a network's formal safety properties and its operational behavior under adaptive play.   A what-if analysis shows that formal defensibility and operational effectiveness capture distinct aspects of security: small architectural changes can produce large shifts in operational outcomes while leaving formal safety margins nearly unchanged. Shield synthesis is thus most valuable not as a deployment mechanism for safe agents, but as a framework for answering architectural questions about whether, where, and how a system can be defended. The defensibility verdict is the output, not the safe policy."
     }
   },
   {
-    "id": "2606.11007v1",
-    "title": "Understanding and mitigating the risks of OpenClaw for non-technical users: A practical guide with Skill",
+    "id": "2606.13385v1",
+    "title": "Who Pays the Price? Stakeholder-Centric Prompt Injection Benchmarking for Real-world Web Agents",
     "authors": [
-      "Junchang Zheng",
-      "Junfeng Tan",
-      "Jialiang Lin"
+      "Zihao Wang",
+      "Yiming Li",
+      "Yutong Wu",
+      "Zheyu Liu",
+      "Kangjie Chen"
     ],
-    "published_date": "2026-06-09",
+    "published_date": "2026-06-11",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.SE"
+      "cs.CY",
+      "cs.HC",
+      "cs.MM"
     ],
-    "link": "http://arxiv.org/abs/2606.11007v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.11007v1",
+    "link": "http://arxiv.org/abs/2606.13385v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.13385v1",
     "content": {
-      "en": "OpenClaw has rapidly emerged as a transformative artificial intelligence (AI) agent framework, and its ability to autonomously execute complex, multi-step tasks has attracted an ever-growing and diverse user base. However, this capability comes with significant risks. While existing research has made important strides in characterizing these threats, such work is predominantly directed at technically sophisticated audiences. It remains largely inaccessible to non-technical users. This demographic now makes up an increasingly large and underserved portion of the community, yet it is these very users who most urgently need practical and straightforward guidance. In response, we bridge this gap through a series of interconnected efforts designed to lower the risk barrier for non-technical OpenClaw users. First, we identify and categorize seven core risks that OpenClaw users may encounter in daily usage, explaining each in plain language so that non-technical users can readily grasp the nature and potential consequences of these threats. Second, for each identified risk, we distill a set of corresponding defensive strategies into clear and actionable operational steps that are easy to follow. Third, to make protection even easier, we provide a companion OpenClaw Skill that automates key security configurations, enabling users to safeguard their systems with minimal manual intervention. Through this work, we demonstrate that safeguarding against the risks of intelligent agents need not be the exclusive domain of security experts, and that non-technical users can meaningfully participate in reducing these risks through simple, practical actions.",
-      "tr": "OpenClaw has rapidly emerged as a transformative artificial intelligence (AI) agent framework, and its ability to autonomously execute complex, multi-step tasks has attracted an ever-growing and diverse user base. However, this capability comes with significant risks. While existing research has made important strides in characterizing these threats, such work is predominantly directed at technically sophisticated audiences. It remains largely inaccessible to non-technical users. This demographic now makes up an increasingly large and underserved portion of the community, yet it is these very users who most urgently need practical and straightforward guidance. In response, we bridge this gap through a series of interconnected efforts designed to lower the risk barrier for non-technical OpenClaw users. First, we identify and categorize seven core risks that OpenClaw users may encounter in daily usage, explaining each in plain language so that non-technical users can readily grasp the nature and potential consequences of these threats. Second, for each identified risk, we distill a set of corresponding defensive strategies into clear and actionable operational steps that are easy to follow. Third, to make protection even easier, we provide a companion OpenClaw Skill that automates key security configurations, enabling users to safeguard their systems with minimal manual intervention. Through this work, we demonstrate that safeguarding against the risks of intelligent agents need not be the exclusive domain of security experts, and that non-technical users can meaningfully participate in reducing these risks through simple, practical actions."
+      "en": "Web agents driven by large language models (LLMs) are increasingly deployed in real-world environments, where they operate over untrusted web content and execute actions with direct consequences. This makes them vulnerable to prompt-injection attacks, in which seemingly benign content embeds adversarial instructions that manipulate agent behaviour. Existing security benchmarks adopt an \\textit{attack-centric} perspective, focusing on the technical feasibility of injections while overlooking the nuanced distribution of resulting harms. In practice, however, prompt-injection risk is victim-dependent: a single exploit can produce asymmetric consequences for different stakeholders, and the same attack pattern may exhibit substantially different effectiveness depending on whom it targets. To capture these properties, we introduce \\textbf{\\sysname}, a \\textit{stakeholder-centric} benchmark to systematically categorize and attribute harm in real-world web agent systems. It distinguishes between affected entities (e.g., user, seller, platform), decomposes the attacks into concrete objectives, and evaluates each case with complementary outcome- and process-level metrics. Our results reveal substantial and heterogeneous vulnerabilities: not a single attack objective is reliably resisted by current agents, and failures distribute across qualitatively distinct modes ranging from \\emph{stealthy parasitism} (attack succeeds without disrupting the user's delegated task) to \\emph{misaligned disruption} (task disrupted without attack success) and \\emph{compounded failure} (both adversarial objective and task integrity simultaneously violated). These patterns are missed by conventional evaluation, highlighting the need for stakeholder-aware assessment of LLM-based agents in real-world deployments. Benchmark is available at https://github.com/StakeBench/SBC.",
+      "tr": "Web agents driven by large language models (LLMs) are increasingly deployed in real-world environments, where they operate over untrusted web content and execute actions with direct consequences. This makes them vulnerable to prompt-injection attacks, in which seemingly benign content embeds adversarial instructions that manipulate agent behaviour. Existing security benchmarks adopt an \\textit{attack-centric} perspective, focusing on the technical feasibility of injections while overlooking the nuanced distribution of resulting harms. In practice, however, prompt-injection risk is victim-dependent: a single exploit can produce asymmetric consequences for different stakeholders, and the same attack pattern may exhibit substantially different effectiveness depending on whom it targets. To capture these properties, we introduce \\textbf{\\sysname}, a \\textit{stakeholder-centric} benchmark to systematically categorize and attribute harm in real-world web agent systems. It distinguishes between affected entities (e.g., user, seller, platform), decomposes the attacks into concrete objectives, and evaluates each case with complementary outcome- and process-level metrics. Our results reveal substantial and heterogeneous vulnerabilities: not a single attack objective is reliably resisted by current agents, and failures distribute across qualitatively distinct modes ranging from \\emph{stealthy parasitism} (attack succeeds without disrupting the user's delegated task) to \\emph{misaligned disruption} (task disrupted without attack success) and \\emph{compounded failure} (both adversarial objective and task integrity simultaneously violated). These patterns are missed by conventional evaluation, highlighting the need for stakeholder-aware assessment of LLM-based agents in real-world deployments. Benchmark is available at https://github.com/StakeBench/SBC."
     }
   },
   {
-    "id": "2606.10912v1",
-    "title": "What Do Deepfake Speech Detectors Actually Hear?",
+    "id": "2606.13079v1",
+    "title": "The Emergence of Autonomous Penetration Capabilities in Large Language Model-Powered AI Systems",
     "authors": [
-      "Vojtěch Staněk",
-      "Veronika Jirmusová",
-      "Anton Firc",
-      "Kamil Malinka",
-      "Jakub Reš"
+      "Jiaqi Luo",
+      "Jiarun Dai",
+      "Zhile Chen",
+      "Jia Xu",
+      "Weibing Wang"
     ],
-    "published_date": "2026-06-09",
-    "tags": [
-      "cs.SD",
-      "cs.AI",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2606.10912v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.10912v1",
-    "content": {
-      "en": "Deepfake speech detectors often output a single score without explaining why an audio sample is flagged, where in the signal the evidence lies, or what cues drive the decision. We propose an audio-native explainability pipeline using Integrated Gradients on time-aligned self-supervised representations to localize decision evidence over time. We apply the proposed method to three WavLM-based detectors (AASIST, CA-MHFA, SLS) on ASVspoof 5 and manually annotate the highest-attribution regions to provide a semantic meaning of the most important cues. Despite similar performance, the detectors rely on different cues: AASIST emphasizes non-speech/environment cues, CA-MHFA focuses on localized phoneme artifacts, and SLS relies on word boundaries and spectral integrity. We move beyond speculative reasoning and validate our findings by causal masking of the primary detector cues. Observed performance degradation further supports the explained detector semantics.",
-      "tr": "Deepfake speech detectors often output a single score without explaining why an audio sample is flagged, where in the signal the evidence lies, or what cues drive the decision. We propose an audio-native explainability pipeline using Integrated Gradients on time-aligned self-supervised representations to localize decision evidence over time. We apply the proposed method to three WavLM-based detectors (AASIST, CA-MHFA, SLS) on ASVspoof 5 and manually annotate the highest-attribution regions to provide a semantic meaning of the most important cues. Despite similar performance, the detectors rely on different cues: AASIST emphasizes non-speech/environment cues, CA-MHFA focuses on localized phoneme artifacts, and SLS relies on word boundaries and spectral integrity. We move beyond speculative reasoning and validate our findings by causal masking of the primary detector cues. Observed performance degradation further supports the explained detector semantics."
-    }
-  },
-  {
-    "id": "2606.10911v1",
-    "title": "Ethical and Technical Limits of Deepfake Speech Datasets",
-    "authors": [
-      "Vojtěch Staněk",
-      "Eva Trnovská",
-      "Kamil Malinka",
-      "Anton Firc"
-    ],
-    "published_date": "2026-06-09",
-    "tags": [
-      "cs.SD",
-      "cs.AI",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2606.10911v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.10911v1",
-    "content": {
-      "en": "Claims about the robustness and fairness of deepfake speech detectors are only as credible as the datasets used to train and evaluate those systems. We present a dataset-level audit of the deepfake speech landscape. We compile and analyze 39 deepfake speech datasets, examining key attributes including accessibility, documentation, demographic and language coverage, dataset scale, and the underlying bona fide speech sources. Our audit reveals two important takeaways. Firstly, fairness assessment is largely infeasible because most datasets lack demographic metadata, and only a few contain gender or language labels. This prevents any meaningful subgroup analysis and leaves other demographic attributes unaddressed. Secondly, we identify substantial overlap in underlying bona fide source corpora across datasets, which can undermine cross-dataset evaluation and lead to overstated generalization claims.",
-      "tr": "Claims about the robustness and fairness of deepfake speech detectors are only as credible as the datasets used to train and evaluate those systems. We present a dataset-level audit of the deepfake speech landscape. We compile and analyze 39 deepfake speech datasets, examining key attributes including accessibility, documentation, demographic and language coverage, dataset scale, and the underlying bona fide speech sources. Our audit reveals two important takeaways. Firstly, fairness assessment is largely infeasible because most datasets lack demographic metadata, and only a few contain gender or language labels. This prevents any meaningful subgroup analysis and leaves other demographic attributes unaddressed. Secondly, we identify substantial overlap in underlying bona fide source corpora across datasets, which can undermine cross-dataset evaluation and lead to overstated generalization claims."
-    }
-  },
-  {
-    "id": "2606.10908v1",
-    "title": "RAT: Reference-Augmented Training for ASV Anti-Spoofing",
-    "authors": [
-      "Vojtěch Staněk",
-      "Anton Firc",
-      "Jakub Reš",
-      "Kamil Malinka"
-    ],
-    "published_date": "2026-06-09",
-    "tags": [
-      "cs.SD",
-      "cs.AI",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2606.10908v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.10908v1",
-    "content": {
-      "en": "We introduce a spoofing countermeasure architecture conditioned on speaker-reference recordings, but observe that it converges to a solution that effectively ignores the reference during inference. Surprisingly, training with a reference channel induces invariance that improves deepfake detection, even when the reference is absent or mismatched during inference. Based on this observation, we propose a Reference-Augmented Training (RAT) strategy. RAT yields improved detection performance compared to single-utterance baselines, even when the reference recording is replaced with a zero vector at inference. Through rigorous analysis, we demonstrate that the optimization process rapidly diminishes the reference contributions, leading to inference largely independent of the reference channel. Using RAT, we achieve state-of-the-art 2.57% EER and 0.074 minDCF on the ASVspoof 5 benchmark with a single detector, surpassing even large ensemble systems.",
-      "tr": "We introduce a spoofing countermeasure architecture conditioned on speaker-reference recordings, but observe that it converges to a solution that effectively ignores the reference during inference. Surprisingly, training with a reference channel induces invariance that improves deepfake detection, even when the reference is absent or mismatched during inference. Based on this observation, we propose a Reference-Augmented Training (RAT) strategy. RAT yields improved detection performance compared to single-utterance baselines, even when the reference recording is replaced with a zero vector at inference. Through rigorous analysis, we demonstrate that the optimization process rapidly diminishes the reference contributions, leading to inference largely independent of the reference channel. Using RAT, we achieve state-of-the-art 2.57% EER and 0.074 minDCF on the ASVspoof 5 benchmark with a single detector, surpassing even large ensemble systems."
-    }
-  },
-  {
-    "id": "2606.10782v1",
-    "title": "A Bayesian Network Approach for Enhancing Security-Focused Decision Support Systems",
-    "authors": [
-      "Carolina Fernández-Martínez",
-      "Shuaib Siddiqui",
-      "Vanesa Daza"
-    ],
-    "published_date": "2026-06-09",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2606.10782v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.10782v1",
-    "content": {
-      "en": "The adoption and integration of heterogeneous stacks in most of today's open-source based networks brings clear benefits like interoperability and availability of advanced features. Yet, on the other hand the increasing number of interconnecting components and moving parts requires maintaining an ever increasing base of interdisciplinary knowledge of different tools in different domains to ensure proper operation. To alleviate such efforts, this work proposes a Decision Support System (DSS) to guide infrastructure operators through the selection of security approaches (e.g. tools) to adopt in their environments. This framework easily captures the end-user high-level requirements on the security triad for different domains and runs inference on the designated models to provide the identified tools (security mechanisms) that better serve such needs. The presented DSS aims at delivering an understandable and extensible framework to accommodate varying requirements and Bayesian Network (BN) models. The architecture and modelling of the system are proposed, aligned with its theoretical framework. Its performance is evaluated in terms of time and prediction accuracy.",
-      "tr": "The adoption and integration of heterogeneous stacks in most of today's open-source based networks brings clear benefits like interoperability and availability of advanced features. Yet, on the other hand the increasing number of interconnecting components and moving parts requires maintaining an ever increasing base of interdisciplinary knowledge of different tools in different domains to ensure proper operation. To alleviate such efforts, this work proposes a Decision Support System (DSS) to guide infrastructure operators through the selection of security approaches (e.g. tools) to adopt in their environments. This framework easily captures the end-user high-level requirements on the security triad for different domains and runs inference on the designated models to provide the identified tools (security mechanisms) that better serve such needs. The presented DSS aims at delivering an understandable and extensible framework to accommodate varying requirements and Bayesian Network (BN) models. The architecture and modelling of the system are proposed, aligned with its theoretical framework. Its performance is evaluated in terms of time and prediction accuracy."
-    }
-  },
-  {
-    "id": "2606.10780v1",
-    "title": "Secure Aggregation with Top-K Sparsification in Decentralized Federated Learning",
-    "authors": [
-      "Hengxuan Tang",
-      "Jinbao Zhu",
-      "Xiaohu Tang"
-    ],
-    "published_date": "2026-06-09",
-    "tags": [
-      "cs.IT",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2606.10780v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.10780v1",
-    "content": {
-      "en": "Secure aggregation is a vital component for mitigating gradient leakage in federated learning, but its communication cost conventionally scales with the gradient dimension. This becomes prohibitive for large models and even more pronounced in decentralized federated learning with limited bandwidth and unreliable nodes. Top-K gradient sparsification is an effective approach to reduce communication by transmitting only a few entries of the full gradient, while maintaining competitive model accuracy. Nevertheless, the top-K entries selected by each user are unpredictable and vary across users, which poses a challenge for efficient sparse secure aggregation. This paper studies information-theoretic secure aggregation with top-K sparsification in decentralized federated learning under user dropouts and user collusion. We propose a communication-efficient sparse secure aggregation scheme that offloads dimension-dependent overhead to an offline phase and protects private gradients using random masks and permutations. Experimental results demonstrate that our scheme preserves accuracy comparable to full-gradient aggregation even with only 1% gradient sparsification, while substantially reducing the communication cost.",
-      "tr": "Secure aggregation is a vital component for mitigating gradient leakage in federated learning, but its communication cost conventionally scales with the gradient dimension. This becomes prohibitive for large models and even more pronounced in decentralized federated learning with limited bandwidth and unreliable nodes. Top-K gradient sparsification is an effective approach to reduce communication by transmitting only a few entries of the full gradient, while maintaining competitive model accuracy. Nevertheless, the top-K entries selected by each user are unpredictable and vary across users, which poses a challenge for efficient sparse secure aggregation. This paper studies information-theoretic secure aggregation with top-K sparsification in decentralized federated learning under user dropouts and user collusion. We propose a communication-efficient sparse secure aggregation scheme that offloads dimension-dependent overhead to an offline phase and protects private gradients using random masks and permutations. Experimental results demonstrate that our scheme preserves accuracy comparable to full-gradient aggregation even with only 1% gradient sparsification, while substantially reducing the communication cost."
-    }
-  },
-  {
-    "id": "2606.10749v1",
-    "title": "Toward Secure LLM Agents: Threat Surfaces, Attacks, Defenses, and Evaluation",
-    "authors": [
-      "Yuchen Ling",
-      "Shengcheng Yu",
-      "Zhenyu Chen",
-      "Chunrong Fang"
-    ],
-    "published_date": "2026-06-09",
+    "published_date": "2026-06-11",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2606.10749v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.10749v1",
+    "link": "http://arxiv.org/abs/2606.13079v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.13079v1",
     "content": {
-      "en": "Large language model (LLM) agents are rapidly moving from conversational interfaces to software components that plan, invoke tools, maintain memory, and act on external environments. This transition changes the nature of security risk. In agentic settings, failures are no longer limited to unsafe text generation. Untrusted content may redirect control flow, misuse tool privileges, corrupt persistent state, leak sensitive information, or trigger harmful external actions. At the same time, research on LLM agent security is expanding quickly but remains fragmented across attack families, defense layers, application domains, and evaluation settings. This paper synthesizes 247 papers through a lifecycle-based, systems-oriented framework that models agent security around the interaction of information flow, delegated authority, and persistent state. We organize the literature around four questions: how LLM agent security should be modeled, which threat surfaces and attack families dominate, what defenses have been proposed and with what tradeoffs, and how security claims are evaluated. We find that prompt injection and tool-mediated control-flow hijacking still dominate the field, while persistent state corruption and multi-agent propagation are becoming central emerging concerns. We further find that current defenses provide useful building blocks but remain weakly compositional, and that existing benchmarks still underrepresent long-horizon, stateful, and deployment-sensitive risks. We argue that secure LLM agents require explicit trust boundaries, principled privilege control, provenance-aware state management, and evaluation practices aligned with realistic operational settings.",
-      "tr": "Large language model (LLM) agents are rapidly moving from conversational interfaces to software components that plan, invoke tools, maintain memory, and act on external environments. This transition changes the nature of security risk. In agentic settings, failures are no longer limited to unsafe text generation. Untrusted content may redirect control flow, misuse tool privileges, corrupt persistent state, leak sensitive information, or trigger harmful external actions. At the same time, research on LLM agent security is expanding quickly but remains fragmented across attack families, defense layers, application domains, and evaluation settings. This paper synthesizes 247 papers through a lifecycle-based, systems-oriented framework that models agent security around the interaction of information flow, delegated authority, and persistent state. We organize the literature around four questions: how LLM agent security should be modeled, which threat surfaces and attack families dominate, what defenses have been proposed and with what tradeoffs, and how security claims are evaluated. We find that prompt injection and tool-mediated control-flow hijacking still dominate the field, while persistent state corruption and multi-agent propagation are becoming central emerging concerns. We further find that current defenses provide useful building blocks but remain weakly compositional, and that existing benchmarks still underrepresent long-horizon, stateful, and deployment-sensitive risks. We argue that secure LLM agents require explicit trust boundaries, principled privilege control, provenance-aware state management, and evaluation practices aligned with realistic operational settings."
+      "en": "Nowadays, the autonomous execution of cyberattacks capable of causing substantial real-world harm is widely regarded as one of the critical red lines that frontier AI systems must not cross. Within this broader red-line scenario, autonomous penetration represents a core enabling capability and subtask: the ability of LLM-powered AI systems to independently conduct adversarial operations against a target server without human intervention, identify and exploit vulnerabilities, and obtain unauthorized access or control. A growing body of work has sought to assess the autonomous penetration capabilities of AI systems. However, existing evaluations often employ opaque methodologies, rely on unrealistic or overly simplified penetration-testing scenarios, or provide LLMs with excessive prior knowledge and task-specific guidance, and cannot accurately capture the extent to which modern AI systems can autonomously perform this core capability within broader high-impact cyberattack scenarios.   To address these limitations, we construct a new autonomous penetration evaluation framework consisting of two components: target servers and agent scaffolding. Specifically, on the target-server side, we design two levels of target environments based on the number of secure services without known vulnerabilities deployed alongside a vulnerable service: Tier~1 (one secure service) and Tier~2 (three secure services), resulting in a total of 300 target servers. Meanwhile, the agent scaffolding adopts a general-purpose agent architecture equipped with a set of general-purpose cybersecurity tools, without any target-specific prior knowledge. We evaluate 19 open-weight and proprietary LLMs, and find that current models achieve penetration success rates ranging from 10.7% to 69.3%. Moreover, we observe that autonomous penetration capability continues to improve alongside advances in overall model capability.",
+      "tr": "Nowadays, the autonomous execution of cyberattacks capable of causing substantial real-world harm is widely regarded as one of the critical red lines that frontier AI systems must not cross. Within this broader red-line scenario, autonomous penetration represents a core enabling capability and subtask: the ability of LLM-powered AI systems to independently conduct adversarial operations against a target server without human intervention, identify and exploit vulnerabilities, and obtain unauthorized access or control. A growing body of work has sought to assess the autonomous penetration capabilities of AI systems. However, existing evaluations often employ opaque methodologies, rely on unrealistic or overly simplified penetration-testing scenarios, or provide LLMs with excessive prior knowledge and task-specific guidance, and cannot accurately capture the extent to which modern AI systems can autonomously perform this core capability within broader high-impact cyberattack scenarios.   To address these limitations, we construct a new autonomous penetration evaluation framework consisting of two components: target servers and agent scaffolding. Specifically, on the target-server side, we design two levels of target environments based on the number of secure services without known vulnerabilities deployed alongside a vulnerable service: Tier~1 (one secure service) and Tier~2 (three secure services), resulting in a total of 300 target servers. Meanwhile, the agent scaffolding adopts a general-purpose agent architecture equipped with a set of general-purpose cybersecurity tools, without any target-specific prior knowledge. We evaluate 19 open-weight and proprietary LLMs, and find that current models achieve penetration success rates ranging from 10.7% to 69.3%. Moreover, we observe that autonomous penetration capability continues to improve alongside advances in overall model capability."
     }
   },
   {
-    "id": "2606.10742v1",
-    "title": "MemVenom: Triggered Poisoning of Multimodal Memories in Web Agents",
+    "id": "2606.12977v1",
+    "title": "Efficient, Robust, and Anti-Collusion Fingerprinting of Image Diffusion Models",
     "authors": [
-      "Yv Zhang",
-      "Hao Sun",
-      "Hao Fang",
-      "Kuofeng Gao",
-      "Fan Mo"
+      "Jianwei Fei",
+      "Yunshu Dai",
+      "Zhihua Xia",
+      "Xiaochun Cao",
+      "Jiantao Zhou"
     ],
-    "published_date": "2026-06-09",
+    "published_date": "2026-06-11",
+    "tags": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2606.12977v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.12977v1",
+    "content": {
+      "en": "Model fingerprinting, embedding user-specific identifiers (fingerprints) into generated outputs, has recently emerged as a popular solution to protect the intellectual property rights (IPR) of generative text-to-image (T2I) models and prevent unauthorized redistribution. In this work, we reveal a previously unexplored systematic vulnerability in existing generative model fingerprinting methods: they lack robustness against collusion attacks, where multiple attackers combine their models to remove or obscure the fingerprints. To address this issue, we take the first step towards a robust fingerprinting method for T2I models with anti-collusion capabilities. The proposed method encodes strings of bits, namely fingerprints, into the coefficients of a personalized normalization module (PNM) incorporated into T2I models, so that fingerprints can be reliably recovered from any generated image. To defend against collusion attacks and prevent unauthorized model redistribution, we introduce an anti-collusion mechanism based on lossless function-invariant parameter transformations. This mechanism significantly degrades the image generation quality of colluded models, making them effectively unusable. Moreover, our method allows developers to efficiently create multiple copies of fingerprinted T2I models by reparameterizing the PNM without the need for retraining. We also introduce a worst-case optimization strategy to improve robustness against model-level attacks. Our experiments demonstrate that the proposed method achieves high fidelity and robustness across multiple T2I image generation and editing tasks, with fingerprint extraction accuracy exceeding 99.5%. Compared with existing methods, our method demonstrates, for the first time, a notable proactive robustness to collusion attacks by significantly increasing the FID of colluded models.",
+      "tr": "Model fingerprinting, embedding user-specific identifiers (fingerprints) into generated outputs, has recently emerged as a popular solution to protect the intellectual property rights (IPR) of generative text-to-image (T2I) models and prevent unauthorized redistribution. In this work, we reveal a previously unexplored systematic vulnerability in existing generative model fingerprinting methods: they lack robustness against collusion attacks, where multiple attackers combine their models to remove or obscure the fingerprints. To address this issue, we take the first step towards a robust fingerprinting method for T2I models with anti-collusion capabilities. The proposed method encodes strings of bits, namely fingerprints, into the coefficients of a personalized normalization module (PNM) incorporated into T2I models, so that fingerprints can be reliably recovered from any generated image. To defend against collusion attacks and prevent unauthorized model redistribution, we introduce an anti-collusion mechanism based on lossless function-invariant parameter transformations. This mechanism significantly degrades the image generation quality of colluded models, making them effectively unusable. Moreover, our method allows developers to efficiently create multiple copies of fingerprinted T2I models by reparameterizing the PNM without the need for retraining. We also introduce a worst-case optimization strategy to improve robustness against model-level attacks. Our experiments demonstrate that the proposed method achieves high fidelity and robustness across multiple T2I image generation and editing tasks, with fingerprint extraction accuracy exceeding 99.5%. Compared with existing methods, our method demonstrates, for the first time, a notable proactive robustness to collusion attacks by significantly increasing the FID of colluded models."
+    }
+  },
+  {
+    "id": "2606.12918v1",
+    "title": "MAStrike: Shapley-Guided Collusive Red-Teaming on Multi-Agent Systems",
+    "authors": [
+      "Chejian Xu",
+      "Zhaorun Chen",
+      "Jingyang Zhang",
+      "Freddy Lecue",
+      "Avni Kothari"
+    ],
+    "published_date": "2026-06-11",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2606.12918v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.12918v1",
+    "content": {
+      "en": "Hierarchical multi-agent systems (MAS) are rapidly being deployed in high-stakes workflows across domains such as finance and software engineering. In these systems, safety and security are inherently distributed across role-specialized agents, significantly expanding the attack surface, particularly under coordinated adversarial behaviors such as privilege escalation and cross-agent collusion. Existing red-teaming approaches for MAS remain limited: they rely on heuristic selection of target agents and perturb isolated message streams, leaving critical questions unanswered as which agents are most responsible for system safety, and how compromised agents can coordinate to bypass defenses. We propose MAStrike, a closed-loop framework for collusive red-teaming in hierarchical MAS. We propose the first agent-level Shapley value analysis for MAS, quantifying each agent's marginal contribution to system robustness under task-specific distributions. GGuided by this attribution, MAStrike identifies vulnerable agent coalitions and generates coordinated, role-aware adversarial manipulations. These attacks are iteratively refined through structured causal diagnosis, attributing failure cases to uncompromised agents that block adversarial attempts. We further build a comprehensive MAS red-teaming benchmark and controllable environments spanning diverse hierarchical topologies and domains, including finance, software engineering, and CRM. Extensive experiments across MAS built on multiple frontier models show that MAStrike substantially outperforms heuristic baselines. Our analysis further uncovers non-trivial Shapley value distributions and higher-order interaction structures among agents, revealing critical vulnerabilities and coordination patterns that are overlooked by prior single-agent or template-based methods.",
+      "tr": "Hierarchical multi-agent systems (MAS) are rapidly being deployed in high-stakes workflows across domains such as finance and software engineering. In these systems, safety and security are inherently distributed across role-specialized agents, significantly expanding the attack surface, particularly under coordinated adversarial behaviors such as privilege escalation and cross-agent collusion. Existing red-teaming approaches for MAS remain limited: they rely on heuristic selection of target agents and perturb isolated message streams, leaving critical questions unanswered as which agents are most responsible for system safety, and how compromised agents can coordinate to bypass defenses. We propose MAStrike, a closed-loop framework for collusive red-teaming in hierarchical MAS. We propose the first agent-level Shapley value analysis for MAS, quantifying each agent's marginal contribution to system robustness under task-specific distributions. GGuided by this attribution, MAStrike identifies vulnerable agent coalitions and generates coordinated, role-aware adversarial manipulations. These attacks are iteratively refined through structured causal diagnosis, attributing failure cases to uncompromised agents that block adversarial attempts. We further build a comprehensive MAS red-teaming benchmark and controllable environments spanning diverse hierarchical topologies and domains, including finance, software engineering, and CRM. Extensive experiments across MAS built on multiple frontier models show that MAStrike substantially outperforms heuristic baselines. Our analysis further uncovers non-trivial Shapley value distributions and higher-order interaction structures among agents, revealing critical vulnerabilities and coordination patterns that are overlooked by prior single-agent or template-based methods."
+    }
+  },
+  {
+    "id": "2606.12896v1",
+    "title": "PolicyGuard: Towards Test-time and Step-level Adversary Defense for Reinforcement Learning Agent",
+    "authors": [
+      "Junfeng Guo Heng Huang"
+    ],
+    "published_date": "2026-06-11",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2606.12896v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.12896v1",
+    "content": {
+      "en": "While real-world applications of reinforcement learning (RL) are becoming increasingly popular, the security of RL systems deserve more attention and exploration. In particular, recent work has revealed that RL agents are vulnerable to backdoor attacks, where a victim agent behaves normally under standard conditions but executes malicious actions when a specific trigger is activated. Existing backdoor defenses for RL either require access to the agent's internal parameters, operate only at the model or trajectory level, or are limited to specific attack types. To ensure the security of RL agents, we propose \\texttt{PolicyGuard}, a \\textit{test-time step-level} backdoor defense which leverages Gaussian Process (GP) posterior variance and adapts pseudo trajectories to enable uncertainty computation for individual time step. Besides, we also provide theoretical foundations to explain the efficacy of GP posterior variance. Extensive experiments across seven RL games demonstrate that PolicyGuard achieves state-of-the-art detection performance in most cases, with average AUROC of 0.856 for perturbation-based attacks and 0.859 for adversary-agent attacks.",
+      "tr": "While real-world applications of reinforcement learning (RL) are becoming increasingly popular, the security of RL systems deserve more attention and exploration. In particular, recent work has revealed that RL agents are vulnerable to backdoor attacks, where a victim agent behaves normally under standard conditions but executes malicious actions when a specific trigger is activated. Existing backdoor defenses for RL either require access to the agent's internal parameters, operate only at the model or trajectory level, or are limited to specific attack types. To ensure the security of RL agents, we propose \\texttt{PolicyGuard}, a \\textit{test-time step-level} backdoor defense which leverages Gaussian Process (GP) posterior variance and adapts pseudo trajectories to enable uncertainty computation for individual time step. Besides, we also provide theoretical foundations to explain the efficacy of GP posterior variance. Extensive experiments across seven RL games demonstrate that PolicyGuard achieves state-of-the-art detection performance in most cases, with average AUROC of 0.856 for perturbation-based attacks and 0.859 for adversary-agent attacks."
+    }
+  },
+  {
+    "id": "2606.12845v1",
+    "title": "A Privacy-Preserving Framework Using Remote Data Science for Inter-Institutional Student Retention Prediction",
+    "authors": [
+      "John Fields",
+      "K M Sajjadul Islam",
+      "Ruchitha Thota",
+      "Victor Chen",
+      "Praveen Madiraju"
+    ],
+    "published_date": "2026-06-11",
     "tags": [
       "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2606.10742v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.10742v1",
+    "link": "http://arxiv.org/abs/2606.12845v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.12845v1",
     "content": {
-      "en": "External memory has become a core component of modern web agents, enabling long-horizon reasoning through the retrieval of past experiences. However, this paradigm introduces a critical vulnerability: malicious content injected into memory can be persistently recalled and repeatedly influence agent behavior. In this work, we identify and systematically study multimodal memory poisoning, an overlooked yet practical attack surface in web-agent systems. We propose MemVenom, a unified black-box attack framework that poisons graph-structured external memory with coordinated text-image evidence. Our method consists of a two-stage design: (1) a trigger-conditioned retrieval attack that ensures high-probability recall of malicious memory, and (2) a post-retrieval attack induction that leverages adversarial perturbations and stealthy OCR injection to override the original user objective. Unlike prior attacks that operate on prompts or text-only memory, our approach enables persistent, reusable, and goal-agnostic attacks without modifying model parameters or re-optimizing malicious tasks. Experiments across multiple web-agent frameworks and vision-language models demonstrate that MemVenom achieves strong end-to-end attack success with minimal impact on benign performance, reaching up to 99.15% on GPT-5-family web agents, while transferring effectively across architectures and model scales.",
-      "tr": "External memory has become a core component of modern web agents, enabling long-horizon reasoning through the retrieval of past experiences. However, this paradigm introduces a critical vulnerability: malicious content injected into memory can be persistently recalled and repeatedly influence agent behavior. In this work, we identify and systematically study multimodal memory poisoning, an overlooked yet practical attack surface in web-agent systems. We propose MemVenom, a unified black-box attack framework that poisons graph-structured external memory with coordinated text-image evidence. Our method consists of a two-stage design: (1) a trigger-conditioned retrieval attack that ensures high-probability recall of malicious memory, and (2) a post-retrieval attack induction that leverages adversarial perturbations and stealthy OCR injection to override the original user objective. Unlike prior attacks that operate on prompts or text-only memory, our approach enables persistent, reusable, and goal-agnostic attacks without modifying model parameters or re-optimizing malicious tasks. Experiments across multiple web-agent frameworks and vision-language models demonstrate that MemVenom achieves strong end-to-end attack success with minimal impact on benign performance, reaching up to 99.15% on GPT-5-family web agents, while transferring effectively across architectures and model scales."
+      "en": "This study explores privacy-preserving machine learning (PPML) techniques using the PySyft platform to enable collaborative prediction of student retention between institutions. We developed a remote data science (RDS) framework with a semi-air-gapped architecture consisting of high-side and low-side servers, allowing researchers from three universities to build predictive models on sensitive student data without direct data access. Using historical data from a small private university (N=720), we evaluated three synthetic data generation approaches and validated the framework through inter-institutional collaboration. The results demonstrate consistent classification performance across institutions (Macro F1: 0.690--0.695) while maintaining strict Family Educational Rights and Privacy Act (FERPA) compliance. We also propose Data-Type-Aware Templates, a novel synthetic data method that prioritizes privacy over distributional fidelity. Our findings confirm that RDS-based PPML is technically feasible for educational settings and offers a practical alternative to federated learning for small-scale inter-institutional collaborations. The code is available at https://github.com/jtfields/NAIRR240195-Privacy-Preserving-Machine-Learning.",
+      "tr": "This study explores privacy-preserving machine learning (PPML) techniques using the PySyft platform to enable collaborative prediction of student retention between institutions. We developed a remote data science (RDS) framework with a semi-air-gapped architecture consisting of high-side and low-side servers, allowing researchers from three universities to build predictive models on sensitive student data without direct data access. Using historical data from a small private university (N=720), we evaluated three synthetic data generation approaches and validated the framework through inter-institutional collaboration. The results demonstrate consistent classification performance across institutions (Macro F1: 0.690--0.695) while maintaining strict Family Educational Rights and Privacy Act (FERPA) compliance. We also propose Data-Type-Aware Templates, a novel synthetic data method that prioritizes privacy over distributional fidelity. Our findings confirm that RDS-based PPML is technically feasible for educational settings and offers a practical alternative to federated learning for small-scale inter-institutional collaborations. The code is available at https://github.com/jtfields/NAIRR240195-Privacy-Preserving-Machine-Learning."
     }
   },
   {
-    "id": "2606.10692v1",
-    "title": "Do LLMsMakeNeural Distinguishers Wise?",
+    "id": "2606.12764v1",
+    "title": "Detecting Functional Memorization in Code Language Models",
     "authors": [
-      "Tatsuya Sakagami",
-      "Masashi Hisai",
-      "Naoto Yanai"
+      "Matthieu Meeus",
+      "Anil Ramakrishna",
+      "Matthew Grange",
+      "Zheng Xu",
+      "Luca Melis"
     ],
-    "published_date": "2026-06-09",
+    "published_date": "2026-06-11",
     "tags": [
+      "cs.LG",
+      "cs.CL",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2606.12764v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.12764v1",
+    "content": {
+      "en": "Large language models (LLMs) are increasingly used to generate code at scale. Meanwhile, prior work has investigated whether training data may be recoverable from model outputs, by auditing the textual overlap between training examples and model generations. Code, however, can be functionally equivalent while textually dissimilar. In this work, we study functional memorization: extraction of functional logic beyond what verbatim metrics detect. We construct a counterfactual setup for Olmo-3-32B, comparing a midtrained model (exposed to target code) against a pretrained reference (not exposed). We prompt both models with Python function signatures and measure both textual and functional similarity (i.e., LLM-as-a-judge, execution-based). Our results show clear evidence of functional memorization, highlighting the need for auditing metrics that go beyond textual overlap.",
+      "tr": "Large language models (LLMs) are increasingly used to generate code at scale. Meanwhile, prior work has investigated whether training data may be recoverable from model outputs, by auditing the textual overlap between training examples and model generations. Code, however, can be functionally equivalent while textually dissimilar. In this work, we study functional memorization: extraction of functional logic beyond what verbatim metrics detect. We construct a counterfactual setup for Olmo-3-32B, comparing a midtrained model (exposed to target code) against a pretrained reference (not exposed). We prompt both models with Python function signatures and measure both textual and functional similarity (i.e., LLM-as-a-judge, execution-based). Our results show clear evidence of functional memorization, highlighting the need for auditing metrics that go beyond textual overlap."
+    }
+  },
+  {
+    "id": "2606.12737v1",
+    "title": "PI-Hunter: Automated Red-Teaming for Exposing and Localizing Prompt Injections",
+    "authors": [
+      "Pengfei He",
+      "Lesly Miculicich",
+      "Vishesh Sharma",
+      "Ash Fox",
+      "George Lee"
+    ],
+    "published_date": "2026-06-10",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2606.12737v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.12737v1",
+    "content": {
+      "en": "Large Language Models (LLMs) are rapidly evolving into agentic systems that interact with external tools and environments, introducing new security risks such as indirect prompt injection attacks through untrusted external sources. Existing defenses mainly focus on blocking malicious content at inference time, and current red-teaming methods primarily optimize attack success. As a result, developers have limited visibility into how latent prompt injections emerge and propagate through agents. We propose PI-Hunter, an automated agentic auditing framework for proactive vulnerability exposure in LLM agents. PI-Hunter constructs realistic source-aware test cases and iteratively evolves them through feedback-driven exploration to induce agents to retrieve and reveal latent malicious instructions embedded within external environments. Extensive experiments across multiple benchmarks, agent architectures, attacks, and defenses demonstrate that PI-Hunter substantially improves vulnerability exposure and attack-surface coverage over strong automated red-teaming baselines, while remaining effective under existing prompt injection defenses.",
+      "tr": "Large Language Models (LLMs) are rapidly evolving into agentic systems that interact with external tools and environments, introducing new security risks such as indirect prompt injection attacks through untrusted external sources. Existing defenses mainly focus on blocking malicious content at inference time, and current red-teaming methods primarily optimize attack success. As a result, developers have limited visibility into how latent prompt injections emerge and propagate through agents. We propose PI-Hunter, an automated agentic auditing framework for proactive vulnerability exposure in LLM agents. PI-Hunter constructs realistic source-aware test cases and iteratively evolves them through feedback-driven exploration to induce agents to retrieve and reveal latent malicious instructions embedded within external environments. Extensive experiments across multiple benchmarks, agent architectures, attacks, and defenses demonstrate that PI-Hunter substantially improves vulnerability exposure and attack-surface coverage over strong automated red-teaming baselines, while remaining effective under existing prompt injection defenses."
+    }
+  },
+  {
+    "id": "2606.12709v1",
+    "title": "Smarter Saboteurs, Better Fixers: Scaling & Security in Linear Multi-Agent Workflows",
+    "authors": [
+      "Timothy McAllister",
+      "Sina Abdidizaji",
+      "Ivan Garibay",
+      "Ozlem Ozmen Garibay"
+    ],
+    "published_date": "2026-06-10",
+    "tags": [
+      "cs.MA",
       "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2606.10692v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.10692v1",
+    "link": "http://arxiv.org/abs/2606.12709v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.12709v1",
     "content": {
-      "en": "Neural distinguishers are a cryptanalysis method for symmetric-key cryptography that trains machine learning models on pairs of plaintexts and ciphertexts with specific differences in order to recover a secret key. To the best of our knowledge, no existing work has explored the use of large language models (LLMs) for neural distinguishers. In this paper, we propose LLM-based neural distinguishers through a prompt design and conduct extensive experiments with them on SPECK-32/64 to investigate whether LLMs can strengthen neural distinguishers. We then found three key insights. First, by comparing the results of LLM-based neural distinguishers with ResNet in the existing work, we demonstrate that LLMs provide no observable improvement in the performance of neural distinguishers. Second, we confirm that, at high rounds, the choice of differences is no longer effective for LLM-based neural distinguishers as well as ResNet. Third, we show that the performance of LLM-based neural distinguishers can be significantly improved by incorporating only the XOR operation results as a prompt design.",
-      "tr": "Neural distinguishers are a cryptanalysis method for symmetric-key cryptography that trains machine learning models on pairs of plaintexts and ciphertexts with specific differences in order to recover a secret key. To the best of our knowledge, no existing work has explored the use of large language models (LLMs) for neural distinguishers. In this paper, we propose LLM-based neural distinguishers through a prompt design and conduct extensive experiments with them on SPECK-32/64 to investigate whether LLMs can strengthen neural distinguishers. We then found three key insights. First, by comparing the results of LLM-based neural distinguishers with ResNet in the existing work, we demonstrate that LLMs provide no observable improvement in the performance of neural distinguishers. Second, we confirm that, at high rounds, the choice of differences is no longer effective for LLM-based neural distinguishers as well as ResNet. Third, we show that the performance of LLM-based neural distinguishers can be significantly improved by incorporating only the XOR operation results as a prompt design."
+      "en": "As LLM-based multi-agent systems (MAS) are deployed in the wild, the resilience of their collaboration structures against adversarial compromise becomes a critical safety concern. Attackers may leverage prompt-injection or jailbreaking to sabotage individual agents within MAS workflows, but the interaction between model scaling and system-level resilience remains poorly understood. This paper investigates how model scale affects the security of linear multi-agent workflows. Our experiments across scales of two open-weight model families on the HumanEval benchmark reveal a compliance-correction symmetry: larger models are far more likely to faithfully execute malicious instructions, with the control-to-malicious performance drop reaching 53.7pp at 27B in uncorrected pipelines. However, appending a lightweight terminal Fixer stage collapses this to 0.6pp and restores statistical parity with control-level performance, demonstrating that strictly linear collaboration structures can be viable and resilient to adversaries at this scale, and suggesting that the brittleness previously attributed to linear topology may stem from a lack of correction.",
+      "tr": "As LLM-based multi-agent systems (MAS) are deployed in the wild, the resilience of their collaboration structures against adversarial compromise becomes a critical safety concern. Attackers may leverage prompt-injection or jailbreaking to sabotage individual agents within MAS workflows, but the interaction between model scaling and system-level resilience remains poorly understood. This paper investigates how model scale affects the security of linear multi-agent workflows. Our experiments across scales of two open-weight model families on the HumanEval benchmark reveal a compliance-correction symmetry: larger models are far more likely to faithfully execute malicious instructions, with the control-to-malicious performance drop reaching 53.7pp at 27B in uncorrected pipelines. However, appending a lightweight terminal Fixer stage collapses this to 0.6pp and restores statistical parity with control-level performance, demonstrating that strictly linear collaboration structures can be viable and resilient to adversaries at this scale, and suggesting that the brittleness previously attributed to linear topology may stem from a lack of correction."
     }
   }
 ]
