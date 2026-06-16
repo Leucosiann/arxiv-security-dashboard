@@ -1,216 +1,214 @@
 [
   {
-    "id": "2606.14629v1",
-    "title": "When Good Verifiers Go Bad: Self-Improving VLMs Can Regress on New Tasks",
+    "id": "2606.17035v1",
+    "title": "Your Privacy My Cloak: Backdoor Attacks on Differentially Private Federated Learning",
     "authors": [
-      "Jianzhe Lin"
+      "Xiaolin Li",
+      "Ning Wang",
+      "Ninghui Li",
+      "Wenhai Sun"
     ],
-    "published_date": "2026-06-12",
+    "published_date": "2026-06-15",
     "tags": [
-      "cs.CR",
-      "cs.AI"
+      "cs.LG",
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2606.14629v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.14629v1",
+    "link": "http://arxiv.org/abs/2606.17035v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.17035v1",
     "content": {
-      "en": "Verifier-driven self-DPO is a common recipe for self-improving production visual-language models. In this setup, a frozen verifier scores candidate generations, the top- and bottom-scoring candidates form a preference example, and DPO updates the learner. The deployment-time assumption is monotone: a stronger verifier should yield a stronger student. We show that this assumption can fail because verifier quality is highly task-specific. On a four-rung open-source verifier ladder across MathVista, MMMU, and BLINK, the same verifiers that are above-threshold and improve a Qwen-3-VL-2B student on MathVista become sub-threshold on MMMU, where their task-rubric accuracy drops to 8% to 23%.   In this regime, every verifier we tested silently regresses the student, producing drops of 3.4 to 10.9 percentage points below the frozen baseline while the DPO training loss continues to decrease. The regression replicates on a second student, Qwen-2.5-VL-3B. Moreover, within the failure regime, damage is confidence-inverted: the more accurate-but-still-wrong verifier causes larger regression than a near-random verifier, suggesting that progress-gated replay amplifies confidently wrong preference pairs. We give a compact mechanistic explanation via a variance theorem for progress-gated replay and its direction-mismatch failure mode.   The deployment message is operational rather than purely diagnostic: before running any verifier-driven loop, teams should measure target-task rubric accuracy, rank verifiers by target-task rubric quality rather than parameter count, and treat diminishing returns in above-threshold regimes as a verifier-side compute budget cap.",
-      "tr": "Verifier-driven self-DPO is a common recipe for self-improving production visual-language models. In this setup, a frozen verifier scores candidate generations, the top- and bottom-scoring candidates form a preference example, and DPO updates the learner. The deployment-time assumption is monotone: a stronger verifier should yield a stronger student. We show that this assumption can fail because verifier quality is highly task-specific. On a four-rung open-source verifier ladder across MathVista, MMMU, and BLINK, the same verifiers that are above-threshold and improve a Qwen-3-VL-2B student on MathVista become sub-threshold on MMMU, where their task-rubric accuracy drops to 8% to 23%.   In this regime, every verifier we tested silently regresses the student, producing drops of 3.4 to 10.9 percentage points below the frozen baseline while the DPO training loss continues to decrease. The regression replicates on a second student, Qwen-2.5-VL-3B. Moreover, within the failure regime, damage is confidence-inverted: the more accurate-but-still-wrong verifier causes larger regression than a near-random verifier, suggesting that progress-gated replay amplifies confidently wrong preference pairs. We give a compact mechanistic explanation via a variance theorem for progress-gated replay and its direction-mismatch failure mode.   The deployment message is operational rather than purely diagnostic: before running any verifier-driven loop, teams should measure target-task rubric accuracy, rank verifiers by target-task rubric quality rather than parameter count, and treat diminishing returns in above-threshold regimes as a verifier-side compute budget cap."
+      "en": "Prior research suggests that differential privacy (DP) inherently enhances the robustness of federated learning (FL) against backdoor attacks. In this paper, we challenge this assumption. Through an empirical analysis of two baseline attack strategies, we uncover a fundamental tension in DP-FL: while bypassing DP allows state-of-the-art defenses to detect and filter malicious updates, complying with DP inadvertently masks their distinguishing statistical characteristics. Consequently, existing defenses become ineffective as DP reduces the raw backdoor signal. Building on this masking effect, we propose RING, a novel attack that explicitly exploits DP to conceal malicious contributions while maximizing attack impact. By collaboratively crafting adversarial perturbations, compromised clients reconstruct a strong backdoor signal during aggregation without triggering anomaly detection. RING operates as a perturbation layer that is agnostic to the underlying backdoor technique, making it broadly applicable and composable with existing attacks -- a property that significantly amplifies the threat it poses to DP-FL. Extensive evaluations across four image and text datasets under non-iid distributions show that RING achieves an average attack success rate of 90.3% against six state-of-the-art defenses under a moderate privacy budget, an improvement of up to 26.08x over baseline strategies. Finally, we evaluate potential countermeasures and find that mitigating this threat incurs significant utility trade-offs, exposing a fundamental security gap in the deployment of differentially private FL.",
+      "tr": "Prior research suggests that differential privacy (DP) inherently enhances the robustness of federated learning (FL) against backdoor attacks. In this paper, we challenge this assumption. Through an empirical analysis of two baseline attack strategies, we uncover a fundamental tension in DP-FL: while bypassing DP allows state-of-the-art defenses to detect and filter malicious updates, complying with DP inadvertently masks their distinguishing statistical characteristics. Consequently, existing defenses become ineffective as DP reduces the raw backdoor signal. Building on this masking effect, we propose RING, a novel attack that explicitly exploits DP to conceal malicious contributions while maximizing attack impact. By collaboratively crafting adversarial perturbations, compromised clients reconstruct a strong backdoor signal during aggregation without triggering anomaly detection. RING operates as a perturbation layer that is agnostic to the underlying backdoor technique, making it broadly applicable and composable with existing attacks -- a property that significantly amplifies the threat it poses to DP-FL. Extensive evaluations across four image and text datasets under non-iid distributions show that RING achieves an average attack success rate of 90.3% against six state-of-the-art defenses under a moderate privacy budget, an improvement of up to 26.08x over baseline strategies. Finally, we evaluate potential countermeasures and find that mitigating this threat incurs significant utility trade-offs, exposing a fundamental security gap in the deployment of differentially private FL."
     }
   },
   {
-    "id": "2606.14517v1",
-    "title": "From Shield to Target: Denial-of-Service Attacks on LLM-Based Agent Guardrails",
+    "id": "2606.16763v1",
+    "title": "Cross-Silo De-Anonymization Under Local Differential Privacy: Threat Model, Phase Transition, and Coordination Necessity",
     "authors": [
-      "Yuguang Zhou",
-      "Xunguang Wang",
-      "Pingchuan Ma",
-      "Zhantong Xue",
-      "Zhaoyu Wang"
+      "Ziniu Liu",
+      "Aiping Li"
     ],
-    "published_date": "2026-06-12",
+    "published_date": "2026-06-15",
     "tags": [
       "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2606.14517v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.14517v1",
-    "content": {
-      "en": "LLM-based guardrails have emerged as a highly effective defense against prompt injection and jailbreak attacks in autonomous agents. However, we reveal that the very reasoning and task-following capabilities enabling this protection introduce a novel vulnerability: attackers can inject crafted data to trap the guardrail in extended reasoning loops, effectuating a systematic denial-of-service (DoS) attack. To systematically expose this threat, we design a beam-search optimization framework that crafts natural-language payloads to maximize guardrail reasoning length, utilizing an LLM proposer guided by a strategy bank. Based on the observation of guardrail's schema-following nature, we also provide another attack framework driven by mechanism-aware structural mutations with less computational load. The attack efficacy is systematically evaluated in two parts. First, in standalone evaluations, the attack generalizes across diverse guardrail architectures, safety templates, and agent benchmarks. Payloads optimized on a single open-source surrogate successfully transfer to eight leading model backbones (e.g., Claude, GPT, Gemini, DeepSeek, and Qwen), achieving a 13--63$\\times$ token amplification. Second, in end-to-end real-world agent deployments (web, desktop, code, and multi-agent systems), the attack reveals up to a 148$\\times$ latency amplification. We show that a single poisoned document can saturate shared guardrail infrastructures, effectively starving co-located agents and paralyzing the entire system. By uncovering this availability flaw, our work underscores the urgent need to develop cost-bounded, reasoning-robust guardrails.",
-      "tr": "LLM-based guardrails have emerged as a highly effective defense against prompt injection and jailbreak attacks in autonomous agents. However, we reveal that the very reasoning and task-following capabilities enabling this protection introduce a novel vulnerability: attackers can inject crafted data to trap the guardrail in extended reasoning loops, effectuating a systematic denial-of-service (DoS) attack. To systematically expose this threat, we design a beam-search optimization framework that crafts natural-language payloads to maximize guardrail reasoning length, utilizing an LLM proposer guided by a strategy bank. Based on the observation of guardrail's schema-following nature, we also provide another attack framework driven by mechanism-aware structural mutations with less computational load. The attack efficacy is systematically evaluated in two parts. First, in standalone evaluations, the attack generalizes across diverse guardrail architectures, safety templates, and agent benchmarks. Payloads optimized on a single open-source surrogate successfully transfer to eight leading model backbones (e.g., Claude, GPT, Gemini, DeepSeek, and Qwen), achieving a 13--63$\\times$ token amplification. Second, in end-to-end real-world agent deployments (web, desktop, code, and multi-agent systems), the attack reveals up to a 148$\\times$ latency amplification. We show that a single poisoned document can saturate shared guardrail infrastructures, effectively starving co-located agents and paralyzing the entire system. By uncovering this availability flaw, our work underscores the urgent need to develop cost-bounded, reasoning-robust guardrails."
-    }
-  },
-  {
-    "id": "2606.14515v1",
-    "title": "Securing the Future of IoMT in the Post-Quantum Era: An Edge-Native Federated Learning Approach",
-    "authors": [
-      "Taym Alshoghri",
-      "Deemah H. Tashman",
-      "Mohammad Reza Gerami",
-      "Soumaya Cherkaoui"
-    ],
-    "published_date": "2026-06-12",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2606.14515v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.14515v1",
-    "content": {
-      "en": "Internet of Medical Things (IoMT) devices operate under strict resource constraints while handling highly sensitive health data, making security and privacy critical concerns. Federated learning (FL) further complicates this landscape, as model updates exchanged during training may unintentionally expose private medical information. Emerging quantum computing capabilities threaten the long-term viability of conventional lightweight cryptographic mechanisms, motivating the integration of Post-Quantum Cryptography (PQC) into IoMT systems. This article discusses key enabling technologies for quantum-resilient IoMT, including post-quantum key establishment, lightweight encryption, and edge-native orchestration. We propose a scalable Kubernetes-based framework that integrates PQC into FL-enabled IoMT environments and validate it on a Raspberry Pi testbed. Results demonstrate that distributed cryptographic processing significantly reduces latency compared to sequential designs while maintaining feasible resource overhead. The primary contribution of this work lies in the design and validation of a secure orchestration and communication framework for FL-enabled IoMT systems. We conclude by outlining future directions toward energy-aware architectures, intelligent security optimization, and resilient next-generation Intelligent Internet of Medical Things (IIoMT) ecosystems.",
-      "tr": "Internet of Medical Things (IoMT) devices operate under strict resource constraints while handling highly sensitive health data, making security and privacy critical concerns. Federated learning (FL) further complicates this landscape, as model updates exchanged during training may unintentionally expose private medical information. Emerging quantum computing capabilities threaten the long-term viability of conventional lightweight cryptographic mechanisms, motivating the integration of Post-Quantum Cryptography (PQC) into IoMT systems. This article discusses key enabling technologies for quantum-resilient IoMT, including post-quantum key establishment, lightweight encryption, and edge-native orchestration. We propose a scalable Kubernetes-based framework that integrates PQC into FL-enabled IoMT environments and validate it on a Raspberry Pi testbed. Results demonstrate that distributed cryptographic processing significantly reduces latency compared to sequential designs while maintaining feasible resource overhead. The primary contribution of this work lies in the design and validation of a secure orchestration and communication framework for FL-enabled IoMT systems. We conclude by outlining future directions toward energy-aware architectures, intelligent security optimization, and resilient next-generation Intelligent Internet of Medical Things (IIoMT) ecosystems."
-    }
-  },
-  {
-    "id": "2606.14295v1",
-    "title": "AgentCyberRange: Benchmarking Frontier AI Systems in Realistic Cyber Ranges",
-    "authors": [
-      "Fengyu Liu",
-      "Jiarun Dai",
-      "Yihe Fan",
-      "Wuyuao Mai",
-      "Ziao Li"
-    ],
-    "published_date": "2026-06-12",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
+      "cs.IT",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2606.14295v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.14295v1",
+    "link": "http://arxiv.org/abs/2606.16763v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.16763v1",
     "content": {
-      "en": "Frontier AI systems are increasingly capable of cybersecurity tasks, including codebase inspection, vulnerability detection, and exploitation. However, evaluating their offensive capabilities remains constrained by limited access to open, reproducible, multi-host cyber ranges. Existing public benchmarks capture isolated skills such as CTF solving, vulnerability reproduction, and exploit generation, but often abstract away realistic intrusion workflows: discovering exposed services, gaining a foothold, collecting internal information, and expanding compromise across hosts. This gap makes it difficult to observe emerging risks early, because frontier AI systems are rarely evaluated under realistic attack conditions.   We introduce AgentCyberRange, the first open, multi-range infrastructure for measuring autonomous cyber attack capability in realistic cyber ranges. It combines 110 vulnerabilities across 15 real web applications and 8 enterprise-like cyber ranges with 156 internal hosts, plus Cage, a toolchain for execution, orchestration, result collection, and verification. The benchmark covers two core stages: web exploitation, where agents explore exposed applications and validate vulnerabilities, and post exploitation, where agents turn an initial foothold into broader internal compromise. We evaluate six frontier AI systems under matched prompts and budgets. GPT-5.5 with Codex performs best, solving 16.1% of web exploitation tasks and 31.7% of post-exploitation tasks; with more concrete hints, these rates increase to 33.0% and 46.3%. We also observe out-of-benchmark findings, including unknown vulnerabilities in popular projects, and payload mutation that bypasses host defenses. These results show that open cyber-range evaluation is necessary for observing emerging offensive capabilities under realistic and reproducible conditions.",
-      "tr": "Frontier AI systems are increasingly capable of cybersecurity tasks, including codebase inspection, vulnerability detection, and exploitation. However, evaluating their offensive capabilities remains constrained by limited access to open, reproducible, multi-host cyber ranges. Existing public benchmarks capture isolated skills such as CTF solving, vulnerability reproduction, and exploit generation, but often abstract away realistic intrusion workflows: discovering exposed services, gaining a foothold, collecting internal information, and expanding compromise across hosts. This gap makes it difficult to observe emerging risks early, because frontier AI systems are rarely evaluated under realistic attack conditions.   We introduce AgentCyberRange, the first open, multi-range infrastructure for measuring autonomous cyber attack capability in realistic cyber ranges. It combines 110 vulnerabilities across 15 real web applications and 8 enterprise-like cyber ranges with 156 internal hosts, plus Cage, a toolchain for execution, orchestration, result collection, and verification. The benchmark covers two core stages: web exploitation, where agents explore exposed applications and validate vulnerabilities, and post exploitation, where agents turn an initial foothold into broader internal compromise. We evaluate six frontier AI systems under matched prompts and budgets. GPT-5.5 with Codex performs best, solving 16.1% of web exploitation tasks and 31.7% of post-exploitation tasks; with more concrete hints, these rates increase to 33.0% and 46.3%. We also observe out-of-benchmark findings, including unknown vulnerabilities in popular projects, and payload mutation that bypasses host defenses. These results show that open cyber-range evaluation is necessary for observing emerging offensive capabilities under realistic and reproducible conditions."
+      "en": "When a person's records appear in k independent data silos, each protected by (epsilon, delta)-differential privacy, standard composition yields a valid (k*epsilon, k*delta)-DP guarantee for the joint output. This worst-case bound, however, does not answer the concrete inference question: at what k can an adversary actually identify a target person? This paper develops the information-theoretic framework needed to answer that question.   We introduce cross-silo person-level DP (XSP-DP), a Pufferfish-style privacy notion whose adjacency relation captures all records of a single person across all silos simultaneously, and verify that the standard basic composition bound carries over to this adjacency model. Within this framework we prove that de-anonymization undergoes a phase transition at k* = Theta(log n / epsilon^2) (population size n, per-silo RR parameter epsilon): a Fano lower bound shows any estimator fails for k << k*, while a matching maximum-likelihood upper bound shows the attack succeeds for k >> k*. An explicit XOR + randomized-response construction demonstrates information synergy: each silo's output is individually uninformative about the target, yet the joint mutual information is strictly positive. For non-coordinated binary randomized-response mechanisms, we prove that de-anonymization is inevitable once k exceeds the threshold, establishing that cross-silo coordination is necessary.   These results provide a baseline threat model and Theta-level threshold for cross-silo inference attacks under local DP.",
+      "tr": "When a person's records appear in k independent data silos, each protected by (epsilon, delta)-differential privacy, standard composition yields a valid (k*epsilon, k*delta)-DP guarantee for the joint output. This worst-case bound, however, does not answer the concrete inference question: at what k can an adversary actually identify a target person? This paper develops the information-theoretic framework needed to answer that question.   We introduce cross-silo person-level DP (XSP-DP), a Pufferfish-style privacy notion whose adjacency relation captures all records of a single person across all silos simultaneously, and verify that the standard basic composition bound carries over to this adjacency model. Within this framework we prove that de-anonymization undergoes a phase transition at k* = Theta(log n / epsilon^2) (population size n, per-silo RR parameter epsilon): a Fano lower bound shows any estimator fails for k << k*, while a matching maximum-likelihood upper bound shows the attack succeeds for k >> k*. An explicit XOR + randomized-response construction demonstrates information synergy: each silo's output is individually uninformative about the target, yet the joint mutual information is strictly positive. For non-coordinated binary randomized-response mechanisms, we prove that de-anonymization is inevitable once k exceeds the threshold, establishing that cross-silo coordination is necessary.   These results provide a baseline threat model and Theta-level threshold for cross-silo inference attacks under local DP."
     }
   },
   {
-    "id": "2606.14210v1",
-    "title": "From Prompts to Responses: Dual-Sided Data Leakage and Defense in Split Large Language Models",
+    "id": "2606.16751v1",
+    "title": "Automated jailbreak attack targeting multiple defense strategies",
     "authors": [
-      "Zixuan Gu",
-      "Xiaojun Ye",
-      "Yang Liu"
+      "Qi Wang",
+      "Chengcheng Wan",
+      "Weijia He",
+      "Yanqing Li",
+      "Hanqi Sun"
     ],
-    "published_date": "2026-06-12",
+    "published_date": "2026-06-15",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2606.14210v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.14210v1",
+    "link": "http://arxiv.org/abs/2606.16751v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.16751v1",
     "content": {
-      "en": "Large language models (LLMs) are increasingly deployed in privacy-sensitive domains, where users must balance the risk of data exposure through external APIs against the high computational cost of local deployment. Split learning has therefore emerged as a promising paradigm for LLM fine-tuning and inference under limited local resources. However, it introduces new privacy risks. Prior work primarily studies leakage of private input prompts, typically via inversion attacks on intermediate representations, while the potential for sensitive information leakage through generative response outputs remains largely unexplored.   In this work, we unveil novel vulnerabilities of Split-LLM by presenting Patched Model Inversion with Dual-Sided Initialization (PIDI), a two-stage attack that simultaneously targets both private input prompts and output responses in Split-LLM settings. It combines dual-sided initialization with a patched inversion strategy to tackle long sequences, substantially outperforming prior inversion methods. To counter threats from both sides, we further propose the Adapter-based DualGuard with Mutual Information Defense (ADMI), which integrates an adapter-based local warmup strategy and mutual information regularization to provide a strong empirical privacy protection with minimal impact on task performance. Extensive experiments across diverse tasks and models demonstrate that ADMI effectively defends against PIDI and other state-of-the-art inversion attacks. Our code is publicly available at https://github.com/FLAIR-THU/VFLAIR-LLM.",
-      "tr": "Large language models (LLMs) are increasingly deployed in privacy-sensitive domains, where users must balance the risk of data exposure through external APIs against the high computational cost of local deployment. Split learning has therefore emerged as a promising paradigm for LLM fine-tuning and inference under limited local resources. However, it introduces new privacy risks. Prior work primarily studies leakage of private input prompts, typically via inversion attacks on intermediate representations, while the potential for sensitive information leakage through generative response outputs remains largely unexplored.   In this work, we unveil novel vulnerabilities of Split-LLM by presenting Patched Model Inversion with Dual-Sided Initialization (PIDI), a two-stage attack that simultaneously targets both private input prompts and output responses in Split-LLM settings. It combines dual-sided initialization with a patched inversion strategy to tackle long sequences, substantially outperforming prior inversion methods. To counter threats from both sides, we further propose the Adapter-based DualGuard with Mutual Information Defense (ADMI), which integrates an adapter-based local warmup strategy and mutual information regularization to provide a strong empirical privacy protection with minimal impact on task performance. Extensive experiments across diverse tasks and models demonstrate that ADMI effectively defends against PIDI and other state-of-the-art inversion attacks. Our code is publicly available at https://github.com/FLAIR-THU/VFLAIR-LLM."
+      "en": "Large language models (LLMs) have demonstrated remarkable capabilities across a wide range of tasks. However, their safety remains a critical concern due to their susceptibility to adversarial prompt-based attacks. In this paper, we present UNIATTACK, an adversarial testing framework designed from a defense-oriented perspective to systematically construct effective black-box attack prompts. Unlike prior approaches that rely on static templates or iterative model-specific tuning, UNIATTACK extracts minimal but high-impact attack features from diverse existing attacks, optimizes them via a specialized attacker LLM, and composes them into flexible templates through automated refinement process. This feature-centric construction enables one-shot attacks that generalize across multiple models and safety categories, providing a practical tool for assessing LLM robustness. Our evaluation results shows that compared to the baselines, UNIATTACK achieves an average attack success rate (ASR) improvement of 64.63\\%-248.82\\% on models deployed with multi-layered defense mechanisms and it only takes 0.03\\%-4.96\\% cost of the baselines. UNIATTACK artifact is available at https://anonymous.4open.science/r/UniAttack-Artifact-30F1.",
+      "tr": "Large language models (LLMs) have demonstrated remarkable capabilities across a wide range of tasks. However, their safety remains a critical concern due to their susceptibility to adversarial prompt-based attacks. In this paper, we present UNIATTACK, an adversarial testing framework designed from a defense-oriented perspective to systematically construct effective black-box attack prompts. Unlike prior approaches that rely on static templates or iterative model-specific tuning, UNIATTACK extracts minimal but high-impact attack features from diverse existing attacks, optimizes them via a specialized attacker LLM, and composes them into flexible templates through automated refinement process. This feature-centric construction enables one-shot attacks that generalize across multiple models and safety categories, providing a practical tool for assessing LLM robustness. Our evaluation results shows that compared to the baselines, UNIATTACK achieves an average attack success rate (ASR) improvement of 64.63\\%-248.82\\% on models deployed with multi-layered defense mechanisms and it only takes 0.03\\%-4.96\\% cost of the baselines. UNIATTACK artifact is available at https://anonymous.4open.science/r/UniAttack-Artifact-30F1."
     }
   },
   {
-    "id": "2606.14027v1",
-    "title": "Same-Origin Policy for Agentic Browsers",
+    "id": "2606.16364v1",
+    "title": "Looking Is Not Picking: An Attention-Segment Account of Tool-Selection Failures in LLM Agents",
     "authors": [
-      "Xilong Wang",
-      "Xiaoxing Chen",
-      "Patrick Li",
-      "Dawn Song",
-      "Neil Gong"
+      "Shiyang Chen"
     ],
-    "published_date": "2026-06-12",
+    "published_date": "2026-06-15",
     "tags": [
-      "cs.CR",
       "cs.AI",
-      "cs.CL",
-      "eess.SY"
+      "cs.CR",
+      "cs.SE"
     ],
-    "link": "http://arxiv.org/abs/2606.14027v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.14027v1",
+    "link": "http://arxiv.org/abs/2606.16364v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.16364v1",
     "content": {
-      "en": "Agentic browsers integrate autonomous AI agents into web browsers, enabling users to accomplish web tasks through natural-language instructions. The same-origin policy (SOP) is a fundamental browser security mechanism that prevents unauthorized automated cross-origin data flows induced by scripts. However, whether SOP remains effective in agentic browsers is an open question that has not been systematically studied. In this work, we bridge this gap. We first observe that an agentic browser can itself serve as an automated channel for cross-origin data flows, potentially leading to SOP violations. To investigate this phenomenon, we construct SOPBench, a benchmark for evaluating SOP violations in agentic browsers. Our evaluation shows that existing agentic browsers frequently violate SOP, both in benign settings and under attacks. To address this problem, we propose SOPGuard, an SOP enforcement mechanism tailored to agentic browsers. We implement SOPGuard in BrowserOS, an open-source agentic browser. Extensive evaluations demonstrate that SOPGuard effectively enforces SOP while preserving utility and incurring only a small runtime overhead. Our code and data are available at https://github.com/wxl-lxw/BrowserOS-SOPGuard.",
-      "tr": "Agentic browsers integrate autonomous AI agents into web browsers, enabling users to accomplish web tasks through natural-language instructions. The same-origin policy (SOP) is a fundamental browser security mechanism that prevents unauthorized automated cross-origin data flows induced by scripts. However, whether SOP remains effective in agentic browsers is an open question that has not been systematically studied. In this work, we bridge this gap. We first observe that an agentic browser can itself serve as an automated channel for cross-origin data flows, potentially leading to SOP violations. To investigate this phenomenon, we construct SOPBench, a benchmark for evaluating SOP violations in agentic browsers. Our evaluation shows that existing agentic browsers frequently violate SOP, both in benign settings and under attacks. To address this problem, we propose SOPGuard, an SOP enforcement mechanism tailored to agentic browsers. We implement SOPGuard in BrowserOS, an open-source agentic browser. Extensive evaluations demonstrate that SOPGuard effectively enforces SOP while preserving utility and incurring only a small runtime overhead. Our code and data are available at https://github.com/wxl-lxw/BrowserOS-SOPGuard."
+      "en": "LLM agents mis-call tools, and the natural guess is that the model failed to see the right tool in a crowded harness. We show the opposite through a lens concurrent work sets aside -- the model's attention to labeled tool-definition segments. On real BFCL failures, by per-candidate attention argmax the model attends most to the correct tool 80% of the time (vs. 21% chance), and the gold is the under-attended segment on only 10%: it looks at the right tool and still picks wrong. This directly refutes the intuitive \"crowded-harness / lost-in-the-middle\" explanation: the failure is at the decision readout, not the harness, and we pin it there three ways. (1) Input vs. readout: repairing the prompt (reordering or duplicating the gold tool) recovers <=23% of failures, while readout-side interventions recover 59-91%. (2) Representation-invariance: two gold-pointed interventions in different representations -- an additive attention-logit bias and a residual-stream steering vector -- recover largely the same failures (per-task Jaccard 0.865 pooled, 0.79-0.91 per model), so the bottleneck is localized to the readout independent of which representation is poked. (3) A training-free, gold-free selector: per-segment attention closes most of the gold-free-vs-oracle gap on BFCL (+11.9 pts pooled function-name selection vs. +17.9-pt oracle headroom) and adds +14.9 pts on Seal-Tools; every model positive (exact McNemar p<=8e-4 each). Scopes differ: the causal attention-bias dose-response is bidirectional and monotonic on 10 mask-honoring models (3-32B), the full 0.5-32B span carrying only the correlational diagnostic; the deployable selector is evaluated on 5 single-turn models and does not yet transfer to a multi-turn loop.",
+      "tr": "LLM agents mis-call tools, and the natural guess is that the model failed to see the right tool in a crowded harness. We show the opposite through a lens concurrent work sets aside -- the model's attention to labeled tool-definition segments. On real BFCL failures, by per-candidate attention argmax the model attends most to the correct tool 80% of the time (vs. 21% chance), and the gold is the under-attended segment on only 10%: it looks at the right tool and still picks wrong. This directly refutes the intuitive \"crowded-harness / lost-in-the-middle\" explanation: the failure is at the decision readout, not the harness, and we pin it there three ways. (1) Input vs. readout: repairing the prompt (reordering or duplicating the gold tool) recovers <=23% of failures, while readout-side interventions recover 59-91%. (2) Representation-invariance: two gold-pointed interventions in different representations -- an additive attention-logit bias and a residual-stream steering vector -- recover largely the same failures (per-task Jaccard 0.865 pooled, 0.79-0.91 per model), so the bottleneck is localized to the readout independent of which representation is poked. (3) A training-free, gold-free selector: per-segment attention closes most of the gold-free-vs-oracle gap on BFCL (+11.9 pts pooled function-name selection vs. +17.9-pt oracle headroom) and adds +14.9 pts on Seal-Tools; every model positive (exact McNemar p<=8e-4 each). Scopes differ: the causal attention-bias dose-response is bidirectional and monotonic on 10 mask-honoring models (3-32B), the full 0.5-32B span carrying only the correlational diagnostic; the deployable selector is evaluated on 5 single-turn models and does not yet transfer to a multi-turn loop."
     }
   },
   {
-    "id": "2606.13994v1",
-    "title": "Hidden in Plain Sight: Benchmarking Agent Safety Against Decomposition Attacks with DECOMPBENCH",
+    "id": "2606.16359v1",
+    "title": "FEnc$^2$: Unifying Data Packing for Efficient Private Inference via Convolution and Architecture-Aware Fragment Encoding",
     "authors": [
-      "Vikhyath Kothamasu",
-      "Virginia Smith",
-      "Chhavi Yadav"
+      "Ran Ran",
+      "Zhaoting Gong",
+      "Nuo Xu",
+      "Yuanchao Xu",
+      "Fan Yao"
     ],
-    "published_date": "2026-06-12",
+    "published_date": "2026-06-15",
     "tags": [
       "cs.CR",
-      "cs.AI",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2606.13994v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.13994v1",
+    "link": "http://arxiv.org/abs/2606.16359v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.16359v1",
     "content": {
-      "en": "LLM-based Agents are becoming increasingly capable and widely deployed, creating growing incentives for adversarial misuse in the real-world. A key emerging threat is Decomposition Attacks \\cite{glukhov2024breach, jones2024adversaries} in which a harmful task is broken into simpler, benign subtasks that evade safety mechanisms when executed separately but cumulatively fulfill the malicious intent. Although recent benchmarks assess agent safety in multi-turn and multi-tool-use settings, they do not explicitly capture this form of decompositional misuse and may not represent realistic adversarial execution flows. To this end, we introduce DeCompBench, a benchmark designed specifically to evaluate agentic safety under decomposition attacks. DeCompBench is created with a decomposition-by-design principle using a graphical framework and enables harmful task decomposition into individually benign and executable subtasks with realistic workflows. Our experiments using a custom decomposer show that state-of-the-art agents exhibit high refusal rates on monolithic harmful tasks, but significantly lower refusal rates on their decomposed variants, while often inadvertently fulfilling the adversarial objectives. These findings underscore the need for safety evaluations against decomposition attacks and corresponding defenses. Our dataset is publicly available and can be found at https://huggingface.co/datasets/decompositionbench/DeCompBench.",
-      "tr": "LLM-based Agents are becoming increasingly capable and widely deployed, creating growing incentives for adversarial misuse in the real-world. A key emerging threat is Decomposition Attacks \\cite{glukhov2024breach, jones2024adversaries} in which a harmful task is broken into simpler, benign subtasks that evade safety mechanisms when executed separately but cumulatively fulfill the malicious intent. Although recent benchmarks assess agent safety in multi-turn and multi-tool-use settings, they do not explicitly capture this form of decompositional misuse and may not represent realistic adversarial execution flows. To this end, we introduce DeCompBench, a benchmark designed specifically to evaluate agentic safety under decomposition attacks. DeCompBench is created with a decomposition-by-design principle using a graphical framework and enables harmful task decomposition into individually benign and executable subtasks with realistic workflows. Our experiments using a custom decomposer show that state-of-the-art agents exhibit high refusal rates on monolithic harmful tasks, but significantly lower refusal rates on their decomposed variants, while often inadvertently fulfilling the adversarial objectives. These findings underscore the need for safety evaluations against decomposition attacks and corresponding defenses. Our dataset is publicly available and can be found at https://huggingface.co/datasets/decompositionbench/DeCompBench."
+      "en": "Fully Homomorphic Encryption (FHE) enables privacy-preserving machine learning but incurs extreme computational and memory overhead. These costs come not only from expensive low-level primitives, including Number Theoretic Transform (NTT), rotation, and key-switching, but also from inefficient ciphertext packing at the application level. Existing packing strategies typically preserve either neighboring data elements or feature grouping, but not both, leading to wasted ciphertext slots, excessive rotations, and inflated ciphertext counts. We propose FEnc2, a unified and principled fragment-based encoding framework for CKKS-based private convolutional neural network inference. FEnc2 optimizes slot utilization, rotation complexity, and ciphertext density through two components: 1)Conv-aware Encoding, which analytically selects an optimal fragment size to decouple spatial dependencies and jointly minimize inner-outer rotations across layers, and 2)Arch-aware Ct Compression, which restores ciphertext density after feature- or channel-reduction layers. Together, these transformations reshape encrypted workload structure and reduce homomorphic operations by one to two orders of magnitude. With full memory capacity utilized, i.e., at maximum batch size, FEnc2 achieves end-to-end latency speedups over the state-of-the-art Orion of up to 228.83x on GPU and 226.06x on CPU for LeNet on MNIST, and up to 4.55x on GPU and 9.43x on CPU for MobileNet on ImageNet. FEnc2 is hardware-agnostic yet architecturally transformative: by optimizing encrypted tensor layout before execution, it reduces ciphertext count and workload pressure on hardware, complementing primitive-level optimizations such as NTT and keyswitch accelerators. These results show that application-level data layout is a first-order architectural design dimension for encrypted inference and an important enabler for next-generation FHE systems.",
+      "tr": "Fully Homomorphic Encryption (FHE) enables privacy-preserving machine learning but incurs extreme computational and memory overhead. These costs come not only from expensive low-level primitives, including Number Theoretic Transform (NTT), rotation, and key-switching, but also from inefficient ciphertext packing at the application level. Existing packing strategies typically preserve either neighboring data elements or feature grouping, but not both, leading to wasted ciphertext slots, excessive rotations, and inflated ciphertext counts. We propose FEnc2, a unified and principled fragment-based encoding framework for CKKS-based private convolutional neural network inference. FEnc2 optimizes slot utilization, rotation complexity, and ciphertext density through two components: 1)Conv-aware Encoding, which analytically selects an optimal fragment size to decouple spatial dependencies and jointly minimize inner-outer rotations across layers, and 2)Arch-aware Ct Compression, which restores ciphertext density after feature- or channel-reduction layers. Together, these transformations reshape encrypted workload structure and reduce homomorphic operations by one to two orders of magnitude. With full memory capacity utilized, i.e., at maximum batch size, FEnc2 achieves end-to-end latency speedups over the state-of-the-art Orion of up to 228.83x on GPU and 226.06x on CPU for LeNet on MNIST, and up to 4.55x on GPU and 9.43x on CPU for MobileNet on ImageNet. FEnc2 is hardware-agnostic yet architecturally transformative: by optimizing encrypted tensor layout before execution, it reduces ciphertext count and workload pressure on hardware, complementing primitive-level optimizations such as NTT and keyswitch accelerators. These results show that application-level data layout is a first-order architectural design dimension for encrypted inference and an important enabler for next-generation FHE systems."
     }
   },
   {
-    "id": "2606.13952v1",
-    "title": "Side-Channel Attacks Bypass Protection in 3D Printers",
+    "id": "2606.16358v1",
+    "title": "The Proxy Knows Too Much: Sealing LLM API Routers with Attested TEEs",
     "authors": [
-      "Eric Yocam",
-      "Varghese Vaidyan",
-      "Micah Flack",
-      "Gurcan Comert",
-      "Judith L. Mwakalonge"
+      "Sipeng Xie",
+      "Qianhong Wu",
+      "Hengrun Lu",
+      "Ziliang Sun",
+      "Qi Wu"
     ],
-    "published_date": "2026-06-11",
+    "published_date": "2026-06-15",
     "tags": [
       "cs.CR",
+      "cs.AI",
       "cs.ET",
-      "cs.LG"
+      "cs.MA"
     ],
-    "link": "http://arxiv.org/abs/2606.13952v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.13952v1",
+    "link": "http://arxiv.org/abs/2606.16358v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.16358v1",
     "content": {
-      "en": "Active Motor Noise Cancellation (AMNC) ships in commercial fused deposition modeling (FDM) 3D printers as a hardware countermeasure against acoustic side-channel attacks that target intellectual property (IP). We present the first empirical evaluation of a deployed AMNC countermeasure, using a public dataset of synchronized acoustic and vibration recordings from two AMNC-equipped Bambu Lab printers across 12 object classes. AMNC fully neutralizes the acoustic channel: classification accuracy is indistinguishable from the 8.33% random baseline. The vibration channel, which AMNC does not target, still leaks. With summary statistics the leak is coarse and amplitude-driven (vibration accuracy approximately 31% pooled, 36-47% within-printer), while the waveform shape carries essentially nothing (frequency-only features at chance). A full-sequence temporal model that ingests the ordered evolution of the print raises accuracy to approximately 61%, and an order-shuffling control (approximately 33%) shows that a substantial component is genuinely sequential and tied to print progression. The leak is device-specific: a classifier trained on one printer transfers near chance to the other. We conclude that AMNC is an acoustic-only defense: vibration remains a partial, geometry-correlated side channel it does not address, but one that does not, on this dataset, support full geometric reconstruction; reconstruction-grade attacks would require the magnetic or power channels AMNC also leaves untouched. We release all code.",
-      "tr": "Active Motor Noise Cancellation (AMNC) ships in commercial fused deposition modeling (FDM) 3D printers as a hardware countermeasure against acoustic side-channel attacks that target intellectual property (IP). We present the first empirical evaluation of a deployed AMNC countermeasure, using a public dataset of synchronized acoustic and vibration recordings from two AMNC-equipped Bambu Lab printers across 12 object classes. AMNC fully neutralizes the acoustic channel: classification accuracy is indistinguishable from the 8.33% random baseline. The vibration channel, which AMNC does not target, still leaks. With summary statistics the leak is coarse and amplitude-driven (vibration accuracy approximately 31% pooled, 36-47% within-printer), while the waveform shape carries essentially nothing (frequency-only features at chance). A full-sequence temporal model that ingests the ordered evolution of the print raises accuracy to approximately 61%, and an order-shuffling control (approximately 33%) shows that a substantial component is genuinely sequential and tied to print progression. The leak is device-specific: a classifier trained on one printer transfers near chance to the other. We conclude that AMNC is an acoustic-only defense: vibration remains a partial, geometry-correlated side channel it does not address, but one that does not, on this dataset, support full geometric reconstruction; reconstruction-grade attacks would require the magnetic or power channels AMNC also leaves untouched. We release all code."
+      "en": "Agents increasingly access large language models (LLMs) through API routers. A router terminates the client's transport-layer security session and opens a separate upstream session, so it holds the full interaction in plaintext. This makes the router an application-layer man-in-the-middle: it can rewrite agent tool calls, swap dependencies for typosquatted packages, trigger attacks only under audit-evading conditions, and passively exfiltrate secrets. Existing client-side defenses are evadable.   We propose AEGIS, a provider-transparent attested API router whose data path is a client-verified faithful passthrough. AEGISconfines plaintext handling to a small hardware-enclave component while leaving authentication, scheduling, accounting, and management on the untrusted host. The client verifies the enclave before releasing plaintext. The host can neither read nor alter the interaction, and plaintext leaves only toward destinations fixed by the measured image. We show that all four malicious-router attack classes succeed against a plaintext-access baseline and are blocked by AEGIS, including adaptive tests against the same boundary. The trusted path is $851$ lines, carries three provider-native APIs without conversion, and completes every request under real-provider workload and concurrency. In a seeded audit pilot, two commodity coding agents find eight and ten of ten planted invariant violations. The local relay overhead is about six milliseconds per request.",
+      "tr": "Agents increasingly access large language models (LLMs) through API routers. A router terminates the client's transport-layer security session and opens a separate upstream session, so it holds the full interaction in plaintext. This makes the router an application-layer man-in-the-middle: it can rewrite agent tool calls, swap dependencies for typosquatted packages, trigger attacks only under audit-evading conditions, and passively exfiltrate secrets. Existing client-side defenses are evadable.   We propose AEGIS, a provider-transparent attested API router whose data path is a client-verified faithful passthrough. AEGISconfines plaintext handling to a small hardware-enclave component while leaving authentication, scheduling, accounting, and management on the untrusted host. The client verifies the enclave before releasing plaintext. The host can neither read nor alter the interaction, and plaintext leaves only toward destinations fixed by the measured image. We show that all four malicious-router attack classes succeed against a plaintext-access baseline and are blocked by AEGIS, including adaptive tests against the same boundary. The trusted path is $851$ lines, carries three provider-native APIs without conversion, and completes every request under real-provider workload and concurrency. In a seeded audit pilot, two commodity coding agents find eight and ten of ten planted invariant violations. The local relay overhead is about six milliseconds per request."
     }
   },
   {
-    "id": "2606.13892v1",
-    "title": "Crypto x AI, AI x Crypto: A Survey",
+    "id": "2606.16244v1",
+    "title": "SPARK: Security Knowledge Priming and Representation-Guided Knowledge Activation for LLM-based Secure Code Generation",
     "authors": [
-      "Sarah Allen",
-      "Pranay Anchuri",
-      "James Austgen",
-      "Maryam Bahrani",
-      "Samuel Breckenridge"
+      "Xiaoyun Xu",
+      "Lichao Wu",
+      "Jona te Lintelo",
+      "Siyu Zhang",
+      "Stjepan Picek"
     ],
-    "published_date": "2026-06-11",
+    "published_date": "2026-06-15",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2606.13892v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.13892v1",
+    "link": "http://arxiv.org/abs/2606.16244v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.16244v1",
     "content": {
-      "en": "The intersection of crypto x AI is spawning papers, products, online posts, and companies. All the surrounding buzz, though, obscures what exactly has been done, what the opportunities and challenges are, and what open questions deserve attention. This survey paper asks what AI can do for blockchain-based technologies (broadly construed as \"crypto\") (crypto x AI), and vice versa (AI x crypto). We systematize existing work, summarize key takeaways, highlight open research questions, and offer a perspective on pervasive industry misconceptions, concluding that AI and crypto are still in the very early stages of meaningful integration.",
-      "tr": "The intersection of crypto x AI is spawning papers, products, online posts, and companies. All the surrounding buzz, though, obscures what exactly has been done, what the opportunities and challenges are, and what open questions deserve attention. This survey paper asks what AI can do for blockchain-based technologies (broadly construed as \"crypto\") (crypto x AI), and vice versa (AI x crypto). We systematize existing work, summarize key takeaways, highlight open research questions, and offer a perspective on pervasive industry misconceptions, concluding that AI and crypto are still in the very early stages of meaningful integration."
+      "en": "Large language models routinely generate code with exploitable security flaws. Prior literature attributes this limitation to a lack of security expertise, steering current defense mechanisms toward heavy fine-tuning or external knowledge retrieval, which introduces significant computational overhead and data bias through redundant code examples. Contrary to this view, we argue that pretraining corpora are already rich in security material. The bottleneck is activation: without an explicit and brief cue, statistical pressure toward common training-distribution patterns suppresses the model's safety-relevant representations. We present SPARK, an inference-time security harness that activates this latent knowledge without any retraining. The harness has two parts. Component~I retrieves a few of the relevant Common Weakness Enumeration (CWE) entries for each coding task and appends a short structured cue to the prompt; this alone is enough to surface the model's existing security representations. Component~II adds a precomputed token bias to the logits at every decoding step. We obtain the bias by projecting a safe-direction vector, the unit difference between the mean safe and mean unsafe last-layer hidden states, through the language model head. The bias is computed once offline; applying it costs a single vector addition per generated token. We evaluate SPARK on 9 open-source models across C++, Java, and Python, and compare with 7 baselines spanning fine-tuning and retrieval-augmented methods. SPARK matches or improves on the best baseline in every setting while preserving HumanEval utility. We further test Component~I in a black-box setting on 7 of today's strongest models, including Claude, DeepSeek, and GPT, demonstrating the bottleneck of insecure code generation and the improvements enabled by our method.",
+      "tr": "Large language models routinely generate code with exploitable security flaws. Prior literature attributes this limitation to a lack of security expertise, steering current defense mechanisms toward heavy fine-tuning or external knowledge retrieval, which introduces significant computational overhead and data bias through redundant code examples. Contrary to this view, we argue that pretraining corpora are already rich in security material. The bottleneck is activation: without an explicit and brief cue, statistical pressure toward common training-distribution patterns suppresses the model's safety-relevant representations. We present SPARK, an inference-time security harness that activates this latent knowledge without any retraining. The harness has two parts. Component~I retrieves a few of the relevant Common Weakness Enumeration (CWE) entries for each coding task and appends a short structured cue to the prompt; this alone is enough to surface the model's existing security representations. Component~II adds a precomputed token bias to the logits at every decoding step. We obtain the bias by projecting a safe-direction vector, the unit difference between the mean safe and mean unsafe last-layer hidden states, through the language model head. The bias is computed once offline; applying it costs a single vector addition per generated token. We evaluate SPARK on 9 open-source models across C++, Java, and Python, and compare with 7 baselines spanning fine-tuning and retrieval-augmented methods. SPARK matches or improves on the best baseline in every setting while preserving HumanEval utility. We further test Component~I in a black-box setting on 7 of today's strongest models, including Claude, DeepSeek, and GPT, demonstrating the bottleneck of insecure code generation and the improvements enabled by our method."
     }
   },
   {
-    "id": "2606.13832v1",
-    "title": "Safety-Contract Graph Multi-Agent Reinforcement Learning for Autonomous Network Security Response",
+    "id": "2606.16187v1",
+    "title": "obliv-clang: Real-World Oblivious Programming in C++",
     "authors": [
-      "Jose Luis Lima de Jesus Silva"
+      "Yunqian Luo",
+      "Mingyu Gao"
     ],
-    "published_date": "2026-06-11",
+    "published_date": "2026-06-15",
     "tags": [
-      "cs.MA",
-      "cs.AI",
+      "cs.PL",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2606.16187v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.16187v1",
+    "content": {
+      "en": "Side-channel vulnerabilities, particularly timing and access-pattern-based attacks, have become critical issues for confidential data processing in trusted environments. Oblivious programming is an effective approach to alleviate these attacks by making program execution not leak any secret through execution time and data access traces. To facilitate oblivious programming in practice, we propose a compilation-time checking tool, obliv-clang, which can comprehensively check the obliviousness of a program written in C++. It is designed to support the rich language features in C++, including the complicated concept of arbitrarily nested pointers, in order to seamlessly work with existing industry-level codebases and produce high-performance compiled binaries with minimum compilation overheads. We design a set of rules in obliv-clang and formally prove their soundness in the presence of complicated C++ language features. We also implement several non-trivial oblivious algorithms as case studies to demonstrate the expressiveness of obliv-clang, and show that programs compiled using obliv-clang can outperform previous solutions.",
+      "tr": "Side-channel vulnerabilities, particularly timing and access-pattern-based attacks, have become critical issues for confidential data processing in trusted environments. Oblivious programming is an effective approach to alleviate these attacks by making program execution not leak any secret through execution time and data access traces. To facilitate oblivious programming in practice, we propose a compilation-time checking tool, obliv-clang, which can comprehensively check the obliviousness of a program written in C++. It is designed to support the rich language features in C++, including the complicated concept of arbitrarily nested pointers, in order to seamlessly work with existing industry-level codebases and produce high-performance compiled binaries with minimum compilation overheads. We design a set of rules in obliv-clang and formally prove their soundness in the presence of complicated C++ language features. We also implement several non-trivial oblivious algorithms as case studies to demonstrate the expressiveness of obliv-clang, and show that programs compiled using obliv-clang can outperform previous solutions."
+    }
+  },
+  {
+    "id": "2606.16100v1",
+    "title": "Your \"Pro\" LLM Subscription May Actually Be \"Free\": Exposing Fingerprint Spoofing Risks in LLM Inference Services",
+    "authors": [
+      "Jiahao Zhang",
+      "Xiuyu Li",
+      "Suhang Wang"
+    ],
+    "published_date": "2026-06-15",
+    "tags": [
       "cs.CR",
+      "cs.CL",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2606.13832v1",
-    "pdf_link": "https://arxiv.org/pdf/2606.13832v1",
+    "link": "http://arxiv.org/abs/2606.16100v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.16100v1",
     "content": {
-      "en": "Autonomous network-security response systems promise to reduce Security Operations Centre (SOC) reaction latency, but reward-only multi-agent reinforcement learning (MARL) can improve security reward while remaining non-deployable. We present a safety-contract graph MARL framework and instantiate it as ACD$^3$-GAT (Adaptive Constrained Counterfactual Decisioning with a Graph Attention Network encoder), an architecture that separates simulator observations from reusable operational budgets, constrained optimization, graph state encoding, and counterfactual action screening. We evaluate the method in CAGE Challenge 4, where agents operate under budgets for Mean Time to Recover (MTTR), false-positive response, and firewall change-management disruption. Across the benchmark, every unconstrained method violates the SOC downtime budget in 100% of evaluated episodes, with mean downtime proxy costs of 311-430 against a budget of 50. This complements prior CAGE Challenge 4 findings by showing that reward-only learning lacks operational discipline. Constrained MAPPO-GAT (C-MAPPO-GAT) isolates Lagrangian operational-cost control and budget-aware screening, while ACD$^3$-GAT adds budget context, CVaR tail-risk estimation, opponent-belief state, and Graph Counterfactual Risk Propagation (G-CRP). The replicated comparison includes three 200-episode seeds for IPPO, MAPPO-GAT, C-MAPPO-GAT, and ACD$^3$-GAT. C-MAPPO-GAT reduces downtime violation from 100% to 0.3% and mean downtime cost from 355.4 to 15.5 relative to MAPPO-GAT. ACD$^3$-GAT reduces mean downtime cost to 48.2 with a 13.8% violation rate, placing it on the safety-contract frontier rather than at the most conservative compliance point. Topology-seed and coupled adaptive Red-process stress tests preserve this contrast and show lower worst adaptive degradation for safety-constrained policies than reward-only MAPPO-GAT.",
-      "tr": "Autonomous network-security response systems promise to reduce Security Operations Centre (SOC) reaction latency, but reward-only multi-agent reinforcement learning (MARL) can improve security reward while remaining non-deployable. We present a safety-contract graph MARL framework and instantiate it as ACD$^3$-GAT (Adaptive Constrained Counterfactual Decisioning with a Graph Attention Network encoder), an architecture that separates simulator observations from reusable operational budgets, constrained optimization, graph state encoding, and counterfactual action screening. We evaluate the method in CAGE Challenge 4, where agents operate under budgets for Mean Time to Recover (MTTR), false-positive response, and firewall change-management disruption. Across the benchmark, every unconstrained method violates the SOC downtime budget in 100% of evaluated episodes, with mean downtime proxy costs of 311-430 against a budget of 50. This complements prior CAGE Challenge 4 findings by showing that reward-only learning lacks operational discipline. Constrained MAPPO-GAT (C-MAPPO-GAT) isolates Lagrangian operational-cost control and budget-aware screening, while ACD$^3$-GAT adds budget context, CVaR tail-risk estimation, opponent-belief state, and Graph Counterfactual Risk Propagation (G-CRP). The replicated comparison includes three 200-episode seeds for IPPO, MAPPO-GAT, C-MAPPO-GAT, and ACD$^3$-GAT. C-MAPPO-GAT reduces downtime violation from 100% to 0.3% and mean downtime cost from 355.4 to 15.5 relative to MAPPO-GAT. ACD$^3$-GAT reduces mean downtime cost to 48.2 with a 13.8% violation rate, placing it on the safety-contract frontier rather than at the most conservative compliance point. Topology-seed and coupled adaptive Red-process stress tests preserve this contrast and show lower worst adaptive degradation for safety-constrained policies than reward-only MAPPO-GAT."
+      "en": "As Large Language Model (LLM) APIs become ubiquitous, users increasingly rely on black-box fingerprinting to verify that providers are serving the advertised premium models. However, these methods may overlook adversarial providers who manipulate model weights to cheat the fingerprint process. We introduce a novel threat termed fingerprint spoofing, where a malicious provider stealthily serves a weaker model that has been parameter-efficiently fine-tuned to mimic a stronger model, thereby evading user-side fingerprinting. We first formally prove that user-side resource constraints (i.e., finite query budgets and weak fingerprinting classifiers) make current fingerprinting vulnerable to fingerprint spoofing. Guided by this theoretical analysis, we propose GhostPrint, a cost-effective attack framework leveraging surrogate modeling, reward-ranked fine-tuning, and knowledge distillation. Extensive evaluations in both static and continual fingerprinting settings demonstrate that GhostPrint allows weak models to consistently bypass representative fingerprint methods while maintaining utility at a low fine-tuning cost, exposing a critical vulnerability in current LLM fingerprinting pipelines.",
+      "tr": "As Large Language Model (LLM) APIs become ubiquitous, users increasingly rely on black-box fingerprinting to verify that providers are serving the advertised premium models. However, these methods may overlook adversarial providers who manipulate model weights to cheat the fingerprint process. We introduce a novel threat termed fingerprint spoofing, where a malicious provider stealthily serves a weaker model that has been parameter-efficiently fine-tuned to mimic a stronger model, thereby evading user-side fingerprinting. We first formally prove that user-side resource constraints (i.e., finite query budgets and weak fingerprinting classifiers) make current fingerprinting vulnerable to fingerprint spoofing. Guided by this theoretical analysis, we propose GhostPrint, a cost-effective attack framework leveraging surrogate modeling, reward-ranked fine-tuning, and knowledge distillation. Extensive evaluations in both static and continual fingerprinting settings demonstrate that GhostPrint allows weak models to consistently bypass representative fingerprint methods while maintaining utility at a low fine-tuning cost, exposing a critical vulnerability in current LLM fingerprinting pipelines."
+    }
+  },
+  {
+    "id": "2606.16072v1",
+    "title": "MASCOT-Android: A Curated Dataset and Automated Collection Pipeline for Android Malware Source Code Specimens",
+    "authors": [
+      "Bojing Li",
+      "Duo Zhong",
+      "Prajna Bhandary",
+      "Raguvir S",
+      "Charles Maxa"
+    ],
+    "published_date": "2026-06-15",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2606.16072v1",
+    "pdf_link": "https://arxiv.org/pdf/2606.16072v1",
+    "content": {
+      "en": "Compared with binaries and decompiled code, malware source code more directly reflects the attackers' original intent. However, the scarcity of source code and the high cost of manual review make such datasets difficult to build and maintain. We propose MASCOT-Android, a curated dataset of Android malware source code and an automated collection framework for scalable malware source code discovery on GitHub. A key finding of our work is that repository-level documentation alone provides a strong signal for malware source code collection. Our model extracts character-level TF-IDF features from 8,772 malware and 25,747 benign README documents and trains a LinearSVC classifier to distinguish malware repositories. This README-only model achieves an accuracy of 96.28\\% and an FPR of 1.06\\% in local evaluation. In addition, the model outputs confidence scores, allowing users to adjust the decision threshold to balance FPR and coverage, which is practical in real-world malware source code collection.",
+      "tr": "Compared with binaries and decompiled code, malware source code more directly reflects the attackers' original intent. However, the scarcity of source code and the high cost of manual review make such datasets difficult to build and maintain. We propose MASCOT-Android, a curated dataset of Android malware source code and an automated collection framework for scalable malware source code discovery on GitHub. A key finding of our work is that repository-level documentation alone provides a strong signal for malware source code collection. Our model extracts character-level TF-IDF features from 8,772 malware and 25,747 benign README documents and trains a LinearSVC classifier to distinguish malware repositories. This README-only model achieves an accuracy of 96.28\\% and an FPR of 1.06\\% in local evaluation. In addition, the model outputs confidence scores, allowing users to adjust the decision threshold to balance FPR and coverage, which is practical in real-world malware source code collection."
     }
   }
 ]
