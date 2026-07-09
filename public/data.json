@@ -1,212 +1,211 @@
 [
   {
-    "id": "2607.06484v1",
-    "title": "Assessing the Operational Impact of Poisoning Attacks over Augmented 3D Point Cloud Public Datasets for Connected and Autonomous Vehicles",
+    "id": "2607.07573v1",
+    "title": "Multi-Class vs. Multi-Label BERT for CVE-to-CWE Mapping: How Taxonomy Structure Shapes the Errors",
     "authors": [
-      "Marwan Lazrag",
-      "Badis Hammi",
-      "Lorena Gonzalez-Manzano",
-      "Joaquin Garcia-Alfaro"
+      "Ana Schwengber Kelm",
+      "Christian Bockermann",
+      "Jörg Frochte"
     ],
-    "published_date": "2026-07-07",
+    "published_date": "2026-07-08",
     "tags": [
-      "cs.CR",
-      "cs.CV",
-      "cs.LG"
+      "cs.LG",
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2607.06484v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.06484v1",
+    "link": "http://arxiv.org/abs/2607.07573v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.07573v1",
     "content": {
-      "en": "Poisoning attacks against public datasets lead to major concerns, such as (i) misclassification of perceived objects when the poisoned data is used for training and (ii) embedding of backdoors that may eventually be triggered later on, when specific conditions in the system apply over the learned models. Its impact over data augmentation models is unclear. While data augmentation reduces the likelihood of poisoning attack success, some valid questions remain. Is data augmentation affecting the impact of poisoning attacks? can it increase the number of poisoned samples or injected backdoors? We explore in this paper some of these questions. We assess the effects of augmenting poisoned 3D point cloud datasets and validate that poisoning is able to evade the sanitizing nature of augmentation techniques when using the concrete case of Generative Adversarial Network (GAN) techniques to exemplify the case of data augmentation processing. We also validate that poisoning propagates over the augmented datasets and perturbs the decision made by general-purpose classifiers, in the end. All the experimental material (including tools, datasets, and classifiers) is publicly available, to facilitate reproducibility and to foster further research in the topic.",
-      "tr": "Poisoning attacks against public datasets lead to major concerns, such as (i) misclassification of perceived objects when the poisoned data is used for training and (ii) embedding of backdoors that may eventually be triggered later on, when specific conditions in the system apply over the learned models. Its impact over data augmentation models is unclear. While data augmentation reduces the likelihood of poisoning attack success, some valid questions remain. Is data augmentation affecting the impact of poisoning attacks? can it increase the number of poisoned samples or injected backdoors? We explore in this paper some of these questions. We assess the effects of augmenting poisoned 3D point cloud datasets and validate that poisoning is able to evade the sanitizing nature of augmentation techniques when using the concrete case of Generative Adversarial Network (GAN) techniques to exemplify the case of data augmentation processing. We also validate that poisoning propagates over the augmented datasets and perturbs the decision made by general-purpose classifiers, in the end. All the experimental material (including tools, datasets, and classifiers) is publicly available, to facilitate reproducibility and to foster further research in the topic."
+      "en": "Assigning Common Weakness Enumeration (CWE) categories to Common Vulnerabilities and Exposures (CVE) records remains an important but largely manual step in vulnerability analysis. We study this task as a text classification problem and compare two modelling choices: a \\emph{multi-class} formulation that predicts a single CWE per CVE and a \\emph{multi-label} formulation that allows multiple assignments. Three transformer encoders (BERT Base, SecureBERT, and CySecBERT) are evaluated on three nested label spaces (83, 47, and 25 classes). Multi-class training achieves higher macro-F1 across all settings, although the gap to multi-label narrows from 21 to 2 percentage points as the label space shrinks. Post-hoc threshold optimisation on the multi-label side closes this gap on the 25-class setting. Confusion analysis shows that the dominant misclassification patterns follow the CWE hierarchy and are shared across all three encoders (Pearson $r > 0.92$), which suggests that the error structure is driven more by taxonomy design than by encoder choice. A hierarchy-relaxed evaluation that forgives within-family confusions raises macro-F1 from ${\\sim}$81\\% to ${\\sim}$90\\%, indicating that strict metrics understate branch-level classifier quality. CySecBERT achieves the strongest results overall, with statistically significant gains concentrated in the multi-label setting.",
+      "tr": "Assigning Common Weakness Enumeration (CWE) categories to Common Vulnerabilities and Exposures (CVE) records remains an important but largely manual step in vulnerability analysis. We study this task as a text classification problem and compare two modelling choices: a \\emph{multi-class} formulation that predicts a single CWE per CVE and a \\emph{multi-label} formulation that allows multiple assignments. Three transformer encoders (BERT Base, SecureBERT, and CySecBERT) are evaluated on three nested label spaces (83, 47, and 25 classes). Multi-class training achieves higher macro-F1 across all settings, although the gap to multi-label narrows from 21 to 2 percentage points as the label space shrinks. Post-hoc threshold optimisation on the multi-label side closes this gap on the 25-class setting. Confusion analysis shows that the dominant misclassification patterns follow the CWE hierarchy and are shared across all three encoders (Pearson $r > 0.92$), which suggests that the error structure is driven more by taxonomy design than by encoder choice. A hierarchy-relaxed evaluation that forgives within-family confusions raises macro-F1 from ${\\sim}$81\\% to ${\\sim}$90\\%, indicating that strict metrics understate branch-level classifier quality. CySecBERT achieves the strongest results overall, with statistically significant gains concentrated in the multi-label setting."
     }
   },
   {
-    "id": "2607.06320v1",
-    "title": "Dithered Gaussian Mechanism for Randomness-Efficient Differential Privacy",
+    "id": "2607.07474v1",
+    "title": "Beyond Attack-Success Rate: Action-Graded Severity Scale for Tool-Using AI Agents",
     "authors": [
-      "Nikita P. Kalinin",
-      "Rasmus Pagh"
+      "Harry Owiredu-Ashley"
     ],
-    "published_date": "2026-07-07",
+    "published_date": "2026-07-08",
     "tags": [
       "cs.CR",
-      "cs.LG"
+      "cs.AI",
+      "cs.CL"
     ],
-    "link": "http://arxiv.org/abs/2607.06320v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.06320v1",
+    "link": "http://arxiv.org/abs/2607.07474v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.07474v1",
     "content": {
-      "en": "We present the dithered Gaussian mechanism, a novel alternative to the discrete Gaussian mechanism for differential privacy that discretizes the private output rather than the noise distribution itself. By interpreting this discretization as post-processing of the Gaussian mechanism, our construction directly inherits the privacy guarantees of the standard Gaussian mechanism while avoiding vulnerabilities caused by finite-precision floating-point outputs. We show that the mechanism is provably randomness-efficient: by sampling the discretized output values directly, the number of high-quality random bits required for privacy can be reduced significantly and made independent of the noise level. This is achieved by separating the randomness into two sources: a high-quality source used for the privacy-critical sampling step, and a high-performance public source, possibly known to the adversary, that supplies the additional randomness needed for randomized discretization. This separation enables the use of cryptographically secure randomness without substantial performance loss. As an application, we study model training with DP-SGD and show that cryptographically secure noise generation with reduced exposure to floating-point vulnerabilities can be achieved with modest practical overhead.",
-      "tr": "We present the dithered Gaussian mechanism, a novel alternative to the discrete Gaussian mechanism for differential privacy that discretizes the private output rather than the noise distribution itself. By interpreting this discretization as post-processing of the Gaussian mechanism, our construction directly inherits the privacy guarantees of the standard Gaussian mechanism while avoiding vulnerabilities caused by finite-precision floating-point outputs. We show that the mechanism is provably randomness-efficient: by sampling the discretized output values directly, the number of high-quality random bits required for privacy can be reduced significantly and made independent of the noise level. This is achieved by separating the randomness into two sources: a high-quality source used for the privacy-critical sampling step, and a high-performance public source, possibly known to the adversary, that supplies the additional randomness needed for randomized discretization. This separation enables the use of cryptographically secure randomness without substantial performance loss. As an application, we study model training with DP-SGD and show that cryptographically secure noise generation with reduced exposure to floating-point vulnerabilities can be achieved with modest practical overhead."
+      "en": "Agentic red-teaming benchmarks report whether an injected agent was compromised as a single bit: the attack succeeded, or it did not. We argue that this binary attack-success rate discards the information a defender most needs, namely how harmful the resulting action was. We introduce an action-graded harm rubric that scores an agent's tool-call trajectory on a seven-level ordinal scale (L0 to L6) according to whether the executed action was reversible, whether it crossed scope to reach another party, and whether it expanded privilege. We compute the scale two ways: a deterministic oracle that reads the trajectory and the attacker's stated goal, and a panel of three frontier language-model judges that read a tag-free account of the same trajectory. Across four victim models and two defenses on the AgentDojo workspace suite, severity grading exposes three cases the binary metric hides, including a defense that reports a zero attack-success rate while still permitting an externally visible cross-scope leak through an unfiltered tool. The judge panel reproduces the oracle with high ordinal agreement (Krippendorff's alpha = 0.91) but shares systematic blind spots that we characterize, most notably a failure to recognize escalation chains. Unlike prior work that provides harm taxonomies, harmful-task completion tests, execution-level safety benchmarks, or severity-aware simulation, our contribution is a reusable, trace-grounded severity instrument applied to the actual actions recorded in existing red-team logs. All code, prompts, and per-episode logs are released.",
+      "tr": "Agentic red-teaming benchmarks report whether an injected agent was compromised as a single bit: the attack succeeded, or it did not. We argue that this binary attack-success rate discards the information a defender most needs, namely how harmful the resulting action was. We introduce an action-graded harm rubric that scores an agent's tool-call trajectory on a seven-level ordinal scale (L0 to L6) according to whether the executed action was reversible, whether it crossed scope to reach another party, and whether it expanded privilege. We compute the scale two ways: a deterministic oracle that reads the trajectory and the attacker's stated goal, and a panel of three frontier language-model judges that read a tag-free account of the same trajectory. Across four victim models and two defenses on the AgentDojo workspace suite, severity grading exposes three cases the binary metric hides, including a defense that reports a zero attack-success rate while still permitting an externally visible cross-scope leak through an unfiltered tool. The judge panel reproduces the oracle with high ordinal agreement (Krippendorff's alpha = 0.91) but shares systematic blind spots that we characterize, most notably a failure to recognize escalation chains. Unlike prior work that provides harm taxonomies, harmful-task completion tests, execution-level safety benchmarks, or severity-aware simulation, our contribution is a reusable, trace-grounded severity instrument applied to the actual actions recorded in existing red-team logs. All code, prompts, and per-episode logs are released."
     }
   },
   {
-    "id": "2607.06125v1",
-    "title": "Evaluating Fine-Tuning and Metrics for Neural Decompilation of Dart AOT Binaries",
+    "id": "2607.07471v1",
+    "title": "Where to Intervene? Benchmarking Fairness-Aware Learning on Differentially Private Synthetic Tabular Data",
     "authors": [
-      "Raafat Abualazm",
-      "Ayman AboElhassan",
-      "Amr G. Wassal"
+      "Vinícius Gabriel Angelozzi",
+      "Héber H. Arcolezi"
     ],
-    "published_date": "2026-07-07",
+    "published_date": "2026-07-08",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2607.07471v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.07471v1",
+    "content": {
+      "en": "Machine learning models are increasingly deployed in high-stakes domains, raising concerns about both privacy and fairness. Differential Privacy (DP) has become a gold standard for privacy-preserving data analysis, while fairness-aware mechanisms aim to mitigate discrimination against underrepresented groups. However, these objectives can conflict: DP often amplifies disparities across demographic groups, and little is known about whether established fairness interventions remain effective under DP constraints. In this work, we present, to our knowledge, the first systematic evaluation of fairness interventions on differentially private synthetic tabular data. Our benchmark centers on the Adaptive Iterative Mechanism (AIM), identified as the state-of-the-art marginal-based DP synthesizer (Cormode et al. 2025). We thus evaluate fairness interventions across four datasets, multiple group fairness metrics, and three categories of mitigation strategies (pre-processing, in-processing, and post-processing) under a wide range of privacy budgets. We compare four pipeline configurations: (Baseline) training on original data; (DP-only) training on DP synthetic data; (Fair-only) applying fairness mechanisms on original data; and (DP+Fair) combining fairness mechanisms with DP synthetic data. Our results demonstrate that while DP alone can degrade both utility and fairness, applying fairness interventions can partially restore equitable outcomes. Among them, post-processing methods tend to provide more stable fairness-utility trade-offs across privacy budgets and synthesizers, achieving strong fairness improvements while preserving competitive utility relative to other intervention stages. We release all code, data, and experimental artifacts in an open-source repository to ensure full reproducibility and to support future research on the privacy-fairness-utility trade-off.",
+      "tr": "Machine learning models are increasingly deployed in high-stakes domains, raising concerns about both privacy and fairness. Differential Privacy (DP) has become a gold standard for privacy-preserving data analysis, while fairness-aware mechanisms aim to mitigate discrimination against underrepresented groups. However, these objectives can conflict: DP often amplifies disparities across demographic groups, and little is known about whether established fairness interventions remain effective under DP constraints. In this work, we present, to our knowledge, the first systematic evaluation of fairness interventions on differentially private synthetic tabular data. Our benchmark centers on the Adaptive Iterative Mechanism (AIM), identified as the state-of-the-art marginal-based DP synthesizer (Cormode et al. 2025). We thus evaluate fairness interventions across four datasets, multiple group fairness metrics, and three categories of mitigation strategies (pre-processing, in-processing, and post-processing) under a wide range of privacy budgets. We compare four pipeline configurations: (Baseline) training on original data; (DP-only) training on DP synthetic data; (Fair-only) applying fairness mechanisms on original data; and (DP+Fair) combining fairness mechanisms with DP synthetic data. Our results demonstrate that while DP alone can degrade both utility and fairness, applying fairness interventions can partially restore equitable outcomes. Among them, post-processing methods tend to provide more stable fairness-utility trade-offs across privacy budgets and synthesizers, achieving strong fairness improvements while preserving competitive utility relative to other intervention stages. We release all code, data, and experimental artifacts in an open-source repository to ensure full reproducibility and to support future research on the privacy-fairness-utility trade-off."
+    }
+  },
+  {
+    "id": "2607.07436v1",
+    "title": "The Blind Curator: How a Biased Judge Silently Disables Skill Retirement in Self-Evolving Agents",
+    "authors": [
+      "Xing Zhang",
+      "Yanwei Cui",
+      "Guanghui Wang",
+      "Ziyuan Li",
+      "Wei Qiu"
+    ],
+    "published_date": "2026-07-08",
+    "tags": [
+      "cs.AI",
+      "cs.CL",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2607.07436v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.07436v1",
+    "content": {
+      "en": "A self-evolving agent retires its bad skills by watching them fail, so what happens when the judge cannot see the failures? Skill retirement is the structural constraint that keeps a growing library from drifting below the no-skill baseline, but its guarantee assumes an unbiased reward, which is false for the LLM judges that reference-free tasks force upon us. We show that a biased judge does not merely add noise; it \\emph{silently switches off the curator}. We make this precise with a corrupted-reward analysis and, isolating the causal channel by injecting corruption on top of a deterministic reward, a behavioral study on a reference-free report-writing testbed with a code-generation cross-check. Symmetric noise leaves retirement intact, but \\emph{false-pass} bias (failures slipping through as passes) disables contribution-based retirement past a sharp threshold that no amount of data can cross. Separating genuine retirement from cap-eviction churn shows this \\emph{mechanism} failure is universal, holding across domains and failure rates and sparing only near-zero-false-pass, verifier-like graders. The downstream \\emph{outcome}, though, is regime-dependent: eval quality degrades only where the same corruption also starves skill synthesis, and otherwise holds steady, so the disabled curator is \\emph{silent}, surfacing in no aggregate metric. The contribution is a behavioral safety result, not a performance one. A cheap defect-injection audit then tells an operator, before deployment, which side of the threshold their judge occupies.",
+      "tr": "A self-evolving agent retires its bad skills by watching them fail, so what happens when the judge cannot see the failures? Skill retirement is the structural constraint that keeps a growing library from drifting below the no-skill baseline, but its guarantee assumes an unbiased reward, which is false for the LLM judges that reference-free tasks force upon us. We show that a biased judge does not merely add noise; it \\emph{silently switches off the curator}. We make this precise with a corrupted-reward analysis and, isolating the causal channel by injecting corruption on top of a deterministic reward, a behavioral study on a reference-free report-writing testbed with a code-generation cross-check. Symmetric noise leaves retirement intact, but \\emph{false-pass} bias (failures slipping through as passes) disables contribution-based retirement past a sharp threshold that no amount of data can cross. Separating genuine retirement from cap-eviction churn shows this \\emph{mechanism} failure is universal, holding across domains and failure rates and sparing only near-zero-false-pass, verifier-like graders. The downstream \\emph{outcome}, though, is regime-dependent: eval quality degrades only where the same corruption also starves skill synthesis, and otherwise holds steady, so the disabled curator is \\emph{silent}, surfacing in no aggregate metric. The contribution is a behavioral safety result, not a performance one. A cheap defect-injection audit then tells an operator, before deployment, which side of the threshold their judge occupies."
+    }
+  },
+  {
+    "id": "2607.07405v1",
+    "title": "Reason Less, Verify More: Deterministic Gates Recover a Silent Policy-Violation Failure Mode in Tool-Using LLM Agents",
+    "authors": [
+      "Vikas Reddy",
+      "Sumanth Reddy Challaram",
+      "Abhishek Basu"
+    ],
+    "published_date": "2026-07-08",
+    "tags": [
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2607.07405v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.07405v1",
+    "content": {
+      "en": "Tool-using LLM agents can violate the very policies they are deployed to enforce while appearing to complete the task successfully. In policy-permissive environments, a tool may execute any well-formed call even when the corresponding state transition is forbidden by domain policy. The result is a silent wrong state (a booking cancelled, a passenger count changed, a claim acted on without verification) that neither the tool nor the agent's self-report exposes.   We study this failure mode in the $τ^2$-bench airline domain. On a budget agent, 78% of observed failures are silent wrong-state failures with no tool error, and the aggregate failure rate is reproducible across disjoint seeds, not sampling noise. We then evaluate a lightweight intervention: deterministic, read-only pre-execution gates that inspect the proposed call and current state before allowing a write. A four-gate suite raises full-benchmark success from 29.6% to 42.0% on gpt-4o-mini (+12.4pp; paired task-level bootstrap P=0.0012), and the lift reproduces on a disjoint 15-seed set (+12.3pp; P=0.0008).   The effect is concentrated where the gates fire: on the 26/50 firing tasks, success rises by +19.2pp, while movement on the 24 non-firing tasks does not exclude zero. Two negative controls (a self-enforcing retail domain and BFCL) bound the mechanism: gates help when tools are policy-permissive and add little where tools already self-enforce. As suggestive evidence, not a central claim, the same failure mode persists at the frontier: gpt-5.2 at default reasoning still attempts policy-violating writes, and the same suite improves success from 61.2% to 71.6% (+10.4pp; P=0.020; n=5, no replication). The contribution is a bounded evaluation and reliability result: deterministic gates do not guarantee task success, but they can deterministically prevent a known class of silent policy-violating writes at the action boundary.",
+      "tr": "Tool-using LLM agents can violate the very policies they are deployed to enforce while appearing to complete the task successfully. In policy-permissive environments, a tool may execute any well-formed call even when the corresponding state transition is forbidden by domain policy. The result is a silent wrong state (a booking cancelled, a passenger count changed, a claim acted on without verification) that neither the tool nor the agent's self-report exposes.   We study this failure mode in the $τ^2$-bench airline domain. On a budget agent, 78% of observed failures are silent wrong-state failures with no tool error, and the aggregate failure rate is reproducible across disjoint seeds, not sampling noise. We then evaluate a lightweight intervention: deterministic, read-only pre-execution gates that inspect the proposed call and current state before allowing a write. A four-gate suite raises full-benchmark success from 29.6% to 42.0% on gpt-4o-mini (+12.4pp; paired task-level bootstrap P=0.0012), and the lift reproduces on a disjoint 15-seed set (+12.3pp; P=0.0008).   The effect is concentrated where the gates fire: on the 26/50 firing tasks, success rises by +19.2pp, while movement on the 24 non-firing tasks does not exclude zero. Two negative controls (a self-enforcing retail domain and BFCL) bound the mechanism: gates help when tools are policy-permissive and add little where tools already self-enforce. As suggestive evidence, not a central claim, the same failure mode persists at the frontier: gpt-5.2 at default reasoning still attempts policy-violating writes, and the same suite improves success from 61.2% to 71.6% (+10.4pp; P=0.020; n=5, no replication). The contribution is a bounded evaluation and reliability result: deterministic gates do not guarantee task success, but they can deterministically prevent a known class of silent policy-violating writes at the action boundary."
+    }
+  },
+  {
+    "id": "2607.07314v1",
+    "title": "FedCVESA: Taking Away Training Data in Federated Learning via Correlation Value Encoding and Segmented Aggregation",
+    "authors": [
+      "Chongkai Li",
+      "Bang Zhang",
+      "Wenjian Luo"
+    ],
+    "published_date": "2026-07-08",
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2607.07314v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.07314v1",
+    "content": {
+      "en": "Federated learning (FL) avoids explicit data exposure by keeping raw data on local clients, yet privacy risks remain in the training process and the learned model itself. Recently, centralized Taking Away Training Data (TATD) attacks have shown that malicious training could abuse the memorization capacity of deep models to store and later recover training data. However, this memorization-based threat has not been systematically studied under FL environments, where multi-client averaging could overwrite encoded training data. In this paper, we study a white-box TATD attack in which a malicious server selects n target clients from K participating clients and actively writes private training data into the global model during federated training. We propose FedCVESA, a federated variant of Correlation Value Encoding Attack (CVEA), by adding a Pearson-correlation regularizer to the loss function of target clients, so that private training data are gradually encoded into selected model parameters, referred to as carrier parameters. To reduce the overwriting of carrier parameters during server aggregation, we further propose segmented aggregation over dispersed carrier parameters, preserving selected carrier parameters while keeping standard averaging on the remaining parameters. Experiments on MNIST, Fashion-MNIST, and CIFAR-10 under Dirichlet non-IID partitions show that the proposed method can steal semantically meaningful private training images from the trained model while maintaining acceptable main-task utility in a controlled proof-of-concept setting. These results demonstrate that FL can become a parameter-level memorization channel for active TATD attack under the studied white-box malicious-server setting.",
+      "tr": "Federated learning (FL) avoids explicit data exposure by keeping raw data on local clients, yet privacy risks remain in the training process and the learned model itself. Recently, centralized Taking Away Training Data (TATD) attacks have shown that malicious training could abuse the memorization capacity of deep models to store and later recover training data. However, this memorization-based threat has not been systematically studied under FL environments, where multi-client averaging could overwrite encoded training data. In this paper, we study a white-box TATD attack in which a malicious server selects n target clients from K participating clients and actively writes private training data into the global model during federated training. We propose FedCVESA, a federated variant of Correlation Value Encoding Attack (CVEA), by adding a Pearson-correlation regularizer to the loss function of target clients, so that private training data are gradually encoded into selected model parameters, referred to as carrier parameters. To reduce the overwriting of carrier parameters during server aggregation, we further propose segmented aggregation over dispersed carrier parameters, preserving selected carrier parameters while keeping standard averaging on the remaining parameters. Experiments on MNIST, Fashion-MNIST, and CIFAR-10 under Dirichlet non-IID partitions show that the proposed method can steal semantically meaningful private training images from the trained model while maintaining acceptable main-task utility in a controlled proof-of-concept setting. These results demonstrate that FL can become a parameter-level memorization channel for active TATD attack under the studied white-box malicious-server setting."
+    }
+  },
+  {
+    "id": "2607.07217v1",
+    "title": "Finding and Understanding Miscompilation Bugs in the Solidity Compiler",
+    "authors": [
+      "Bhargava Shastry"
+    ],
+    "published_date": "2026-07-08",
     "tags": [
       "cs.SE",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2607.06125v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.06125v1",
-    "content": {
-      "en": "Neural decompilation is increasingly studied as a code-generation problem, yet its evaluation methodology remains underdeveloped for modern languages. We present a systematic empirical study of fine-tuning effectiveness and metric validity for Dart Ahead-of-Time (AOT) neural decompilation. We evaluate six fine-tuned model variants across three base architectures (4B-8B parameters) using three metrics: CodeBLEU, compile@k, and pass@k on a new 154-task HumanEval-Dart benchmark. Our study yields three principal findings grounded in paired task-level statistical tests. First, no fine-tuning configuration produces a statistically significant pass@k improvement. The sole positive case yields +0.71 pp (McNemar p=0.21), while fine-tuning the strongest base (Qwen3-8B) causes a highly significant regression of -5.65 pp (p<0.001). This capacity-dependent trend is consistent across architectures but needs broader scale sweeps. Second, cross-lingual interference from Swift training is highly significant at 4B (-2.66 pp, p<0.001) but statistically indistinguishable from zero at 8B, consistent with the scaling hypothesis. Third, we demonstrate metric divergence: CodeBLEU and compile@k can improve significantly while pass@k moves in the opposite direction. This has implications for any LLM code generation task where fine-tuning targets superficial similarity. Error analysis reveals assembly sequence length is the strongest predictor of task difficulty (p=0.001), with a capability cliff at 200 instructions. We contribute the HumanEval-Dart benchmark, a Dart-adapted CodeBLEU, and empirical evidence that pass@k must be the primary evaluation metric for neural decompilation.",
-      "tr": "Neural decompilation is increasingly studied as a code-generation problem, yet its evaluation methodology remains underdeveloped for modern languages. We present a systematic empirical study of fine-tuning effectiveness and metric validity for Dart Ahead-of-Time (AOT) neural decompilation. We evaluate six fine-tuned model variants across three base architectures (4B-8B parameters) using three metrics: CodeBLEU, compile@k, and pass@k on a new 154-task HumanEval-Dart benchmark. Our study yields three principal findings grounded in paired task-level statistical tests. First, no fine-tuning configuration produces a statistically significant pass@k improvement. The sole positive case yields +0.71 pp (McNemar p=0.21), while fine-tuning the strongest base (Qwen3-8B) causes a highly significant regression of -5.65 pp (p<0.001). This capacity-dependent trend is consistent across architectures but needs broader scale sweeps. Second, cross-lingual interference from Swift training is highly significant at 4B (-2.66 pp, p<0.001) but statistically indistinguishable from zero at 8B, consistent with the scaling hypothesis. Third, we demonstrate metric divergence: CodeBLEU and compile@k can improve significantly while pass@k moves in the opposite direction. This has implications for any LLM code generation task where fine-tuning targets superficial similarity. Error analysis reveals assembly sequence length is the strongest predictor of task difficulty (p=0.001), with a capability cliff at 200 instructions. We contribute the HumanEval-Dart benchmark, a Dart-adapted CodeBLEU, and empirical evidence that pass@k must be the primary evaluation metric for neural decompilation."
-    }
-  },
-  {
-    "id": "2607.06115v1",
-    "title": "6G Sensing Security: Distributed Game-Theoretic RL for Urban Beamforming and Attacker Detection",
-    "authors": [
-      "Parmida Geranmayeh",
-      "Onur Günlü"
-    ],
-    "published_date": "2026-07-07",
-    "tags": [
-      "cs.IT",
       "cs.CR",
-      "cs.GT",
-      "cs.LG",
-      "cs.NI"
+      "cs.PL"
     ],
-    "link": "http://arxiv.org/abs/2607.06115v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.06115v1",
+    "link": "http://arxiv.org/abs/2607.07217v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.07217v1",
     "content": {
-      "en": "In next-generation networks, communication systems will no longer be limited to data transmission and will be expected to acquire awareness of the surrounding environment. This leads to the concept of integrated sensing and communication (ISAC), where the same wireless infrastructure is used for both communication and environmental sensing. Thus, ISAC enables the system to transmit information efficiently and observe and interpret channel variations and user behavior. Motivated by this capability, this work focuses on detecting an active attacker in an urban environment scenario, where the attacker intentionally manipulates beamforming directions to increase interference and mislead the transmitter into allocating the main lobe of beam toward itself instead of legitimate users. We apply game-theoretic approaches to model the interaction between legitimate users and the attacker, and integrate the resulting utility-based formulation into a reinforcement learning (RL) framework. Simulation results demonstrate that the proposed method effectively addresses security challenges in dynamic 6G ISAC systems.",
-      "tr": "In next-generation networks, communication systems will no longer be limited to data transmission and will be expected to acquire awareness of the surrounding environment. This leads to the concept of integrated sensing and communication (ISAC), where the same wireless infrastructure is used for both communication and environmental sensing. Thus, ISAC enables the system to transmit information efficiently and observe and interpret channel variations and user behavior. Motivated by this capability, this work focuses on detecting an active attacker in an urban environment scenario, where the attacker intentionally manipulates beamforming directions to increase interference and mislead the transmitter into allocating the main lobe of beam toward itself instead of legitimate users. We apply game-theoretic approaches to model the interaction between legitimate users and the attacker, and integrate the resulting utility-based formulation into a reinforcement learning (RL) framework. Simulation results demonstrate that the proposed method effectively addresses security challenges in dynamic 6G ISAC systems."
+      "en": "Smart contract compilers are critical to ensuring the correctness of public blockchains whose defining characteristics are open-source and immutable code. We created SolSmith, a semantics-aware differential fuzz testing tool, to improve the quality of the Solidity compiler -- the most popular compiler for the Ethereum blockchain -- and spent over three years finding compiler defects that produce incorrect code. We call these defects miscompilation bugs. During this time period, we have discovered 25 miscompilation bugs that went unnoticed, some for multiple years. Our first contribution is to make compiler testing more rigorous. SolSmith achieves this goal by generating valid test programs that are likely to stress test code generation and optimization components. This helps SolSmith find bugs missed during routine testing that could potentially have serious implications for smart contracts and their users. Our second contribution is a qualitative and quantitative analysis of miscompilation bugs that we found in the Solidity compiler. We classify miscompilation bugs found by SolSmith based on their nature, root-causes, and impact on end-users. This sheds light on some pitfalls of optimizing compilers.",
+      "tr": "Smart contract compilers are critical to ensuring the correctness of public blockchains whose defining characteristics are open-source and immutable code. We created SolSmith, a semantics-aware differential fuzz testing tool, to improve the quality of the Solidity compiler -- the most popular compiler for the Ethereum blockchain -- and spent over three years finding compiler defects that produce incorrect code. We call these defects miscompilation bugs. During this time period, we have discovered 25 miscompilation bugs that went unnoticed, some for multiple years. Our first contribution is to make compiler testing more rigorous. SolSmith achieves this goal by generating valid test programs that are likely to stress test code generation and optimization components. This helps SolSmith find bugs missed during routine testing that could potentially have serious implications for smart contracts and their users. Our second contribution is a qualitative and quantitative analysis of miscompilation bugs that we found in the Solidity compiler. We classify miscompilation bugs found by SolSmith based on their nature, root-causes, and impact on end-users. This sheds light on some pitfalls of optimizing compilers."
     }
   },
   {
-    "id": "2607.06037v1",
-    "title": "REAN: Reconstruction-aware ECG Anonymization Based on Privacy--Utility Orthogonality",
+    "id": "2607.07209v1",
+    "title": "Continual Learning With Participation Privacy: An Auditable Buffering-Aggregation Recipe",
     "authors": [
-      "Taerin Ki",
-      "Sunghwan Park",
-      "Junyoung Park",
-      "Jaewoo Lee"
+      "T-H. Hubert Chan",
+      "Elaine Shi",
+      "Mengshi Zhao",
+      "Mingxun Zhou"
     ],
-    "published_date": "2026-07-07",
+    "published_date": "2026-07-08",
     "tags": [
       "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2607.06037v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.06037v1",
+    "link": "http://arxiv.org/abs/2607.07209v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.07209v1",
     "content": {
-      "en": "A shared electrocardiogram (ECG) is itself a biometric fingerprint that can re-identify a patient and reveal personal information. Recent ECG anonymizers transform the signal before sharing to reduce privacy leakage. However, existing methods still face a privacy--utility trade-off, in which preserving privacy often compromises utility while preserving utility reveals personal information. We propose \\emph{REAN} (\\emph{RE}construction-aware ECG \\emph{AN}onymizer), a raw ECG signal anonymizer, to address this privacy--utility trade-off. REAN reconstructs the signal using a 1-D U-Net trained with losses from frozen privacy and utility classifiers to reduce privacy leakage while preserving utility. The privacy and utility gradients are near-orthogonal ($\\approx$93.8$^\\circ$), so reducing privacy leakage leaves utility almost unchanged. On four public PhysioNet databases, REAN achieves the strongest privacy--utility balance among raw ECG signal baselines. It drives re-identification to chance (0.96$\\to$0.00), keeps arrhythmia macro-AUROC at the clean level (Clean 0.9982 vs.\\ REAN 0.9991), and maintains re-identification protection under unseen privacy-classifier architectures.",
-      "tr": "A shared electrocardiogram (ECG) is itself a biometric fingerprint that can re-identify a patient and reveal personal information. Recent ECG anonymizers transform the signal before sharing to reduce privacy leakage. However, existing methods still face a privacy--utility trade-off, in which preserving privacy often compromises utility while preserving utility reveals personal information. We propose \\emph{REAN} (\\emph{RE}construction-aware ECG \\emph{AN}onymizer), a raw ECG signal anonymizer, to address this privacy--utility trade-off. REAN reconstructs the signal using a 1-D U-Net trained with losses from frozen privacy and utility classifiers to reduce privacy leakage while preserving utility. The privacy and utility gradients are near-orthogonal ($\\approx$93.8$^\\circ$), so reducing privacy leakage leaves utility almost unchanged. On four public PhysioNet databases, REAN achieves the strongest privacy--utility balance among raw ECG signal baselines. It drives re-identification to chance (0.96$\\to$0.00), keeps arrhythmia macro-AUROC at the clean level (Clean 0.9982 vs.\\ REAN 0.9991), and maintains re-identification protection under unseen privacy-classifier architectures."
+      "en": "Modern federated and streaming learning systems often release intermediate models, so privacy must hold for the full trajectory under adaptive interaction. Motivated by participation privacy, we study single-edit neighboring user streams, where one insertion/deletion shifts all subsequent updates and defeats standard Hamming-neighbor continual-release analyses. We give an auditable modular recipe. A randomized buffering wrapper emits bins of size $[U,2U]$, reducing single-edit streams to a Hamming-style per-bin update stream with explicit backlog/delay guarantees, where $U$ is calibrated by the privacy parameters $(\\varepsilon,δ)$. We then prove a certification theorem identifying when a non-adaptive Hamming-neighbor DP proof for a continual primitive lifts to adaptive inputs: the primitive must use fresh per-round randomness and have a stable one-round privacy profile under common adaptive context. Together, these ingredients yield trajectory-level $(\\varepsilon,δ)$-DP for single-edit streams using standard primitives (e.g., tree prefix sums), with an explicit privacy--latency link via $U$.",
+      "tr": "Modern federated and streaming learning systems often release intermediate models, so privacy must hold for the full trajectory under adaptive interaction. Motivated by participation privacy, we study single-edit neighboring user streams, where one insertion/deletion shifts all subsequent updates and defeats standard Hamming-neighbor continual-release analyses. We give an auditable modular recipe. A randomized buffering wrapper emits bins of size $[U,2U]$, reducing single-edit streams to a Hamming-style per-bin update stream with explicit backlog/delay guarantees, where $U$ is calibrated by the privacy parameters $(\\varepsilon,δ)$. We then prove a certification theorem identifying when a non-adaptive Hamming-neighbor DP proof for a continual primitive lifts to adaptive inputs: the primitive must use fresh per-round randomness and have a stable one-round privacy profile under common adaptive context. Together, these ingredients yield trajectory-level $(\\varepsilon,δ)$-DP for single-edit streams using standard primitives (e.g., tree prefix sums), with an explicit privacy--latency link via $U$."
     }
   },
   {
-    "id": "2607.06009v1",
-    "title": "Multi-Channel Spread-Spectrum Code Watermarking",
+    "id": "2607.07097v1",
+    "title": "Operational Reframing and Approval-Framed Delegation in Multi-Agent LLM Safety",
     "authors": [
-      "Soohyeon Choi",
-      "Debin Gao",
-      "Yue Duan"
+      "Lifei Liu",
+      "Haoran Yu",
+      "Xiaochong Jiang",
+      "Su Wang",
+      "Pin Qian"
     ],
-    "published_date": "2026-07-07",
+    "published_date": "2026-07-08",
     "tags": [
-      "cs.CR",
-      "cs.LG",
-      "cs.SE"
-    ],
-    "link": "http://arxiv.org/abs/2607.06009v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.06009v1",
-    "content": {
-      "en": "Attributing code to the large language model that produced it is essential for provenance, licensing, and misuse accountability, yet no deployed watermark meets this need. Generation-time schemes require access to the producing model and cannot be applied to third-party code, while post-hoc schemes work on any code but carry at most 4 bits of payload, far too few to distinguish the many deployed model configurations. We present multi-channel spread-spectrum watermarking, the first post-hoc, training-free code watermark with a 24-bit payload and formal robustness guarantees. The scheme encodes bits in variable naming conventions and in eight pairs of semantically equivalent code patterns, and a keyed pseudo-random permutation maps every site to a codeword bit so that each bit receives multiple independent votes. Majority voting absorbs distributed corruption, while an outer Reed-Solomon code recovers the identifier when concentrated channel attacks defeat the vote, yielding provable robustness bounds for formatting, syntactic, and structural attacks. Across 1,750 Python files from CodeNet and from GPT-4.1 and Llama-4 generations, the watermark achieves 100% clean-detection accuracy with zero false positives. Under 17 attack types, it recovers the identifier at 97.6% accuracy under 8 variable renames and 94.1% under 10% random per-site corruption, while the strongest post-hoc baseline collapses to 0% under any single-transform attack. Embedding and detection together take under 200 ms on CPU without training data or GPU.",
-      "tr": "Attributing code to the large language model that produced it is essential for provenance, licensing, and misuse accountability, yet no deployed watermark meets this need. Generation-time schemes require access to the producing model and cannot be applied to third-party code, while post-hoc schemes work on any code but carry at most 4 bits of payload, far too few to distinguish the many deployed model configurations. We present multi-channel spread-spectrum watermarking, the first post-hoc, training-free code watermark with a 24-bit payload and formal robustness guarantees. The scheme encodes bits in variable naming conventions and in eight pairs of semantically equivalent code patterns, and a keyed pseudo-random permutation maps every site to a codeword bit so that each bit receives multiple independent votes. Majority voting absorbs distributed corruption, while an outer Reed-Solomon code recovers the identifier when concentrated channel attacks defeat the vote, yielding provable robustness bounds for formatting, syntactic, and structural attacks. Across 1,750 Python files from CodeNet and from GPT-4.1 and Llama-4 generations, the watermark achieves 100% clean-detection accuracy with zero false positives. Under 17 attack types, it recovers the identifier at 97.6% accuracy under 8 variable renames and 94.1% under 10% random per-site corruption, while the strongest post-hoc baseline collapses to 0% under any single-transform attack. Embedding and detection together take under 200 ms on CPU without training data or GPU."
-    }
-  },
-  {
-    "id": "2607.05898v1",
-    "title": "Auditing of Unlearning Algorithms",
-    "authors": [
-      "Sahasrajit Sarmasarkar",
-      "Anastasia Koloskova",
-      "Sanmi Koyejo"
-    ],
-    "published_date": "2026-07-07",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2607.05898v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.05898v1",
-    "content": {
-      "en": "Evaluating whether unlearning algorithms truly remove training data influence remains an open challenge. We propose a practical auditor that computes data-dependent lower bounds on the unlearning parameter $\\varepsilon$ using membership inference attacks. Evaluating multiple unlearning algorithms, we find a sharp separation: algorithms with rigorous guarantees, such as model clipping and rewind-to-delete, achieve very small $\\varepsilon$ bounds that do not falsify their unlearning guarantees, whereas empirical methods such as Hessian-based unlearning, interleaved ascent-descent, ascent on the forget set, and fine-tuning on the retain set exhibit large bounds, indicating poor unlearning. Our auditor provides a practical tool for empirically falsifying unlearning claims through a hypothesis-testing framework, and we validate it on CIFAR-100 and Shakespeare text.",
-      "tr": "Evaluating whether unlearning algorithms truly remove training data influence remains an open challenge. We propose a practical auditor that computes data-dependent lower bounds on the unlearning parameter $\\varepsilon$ using membership inference attacks. Evaluating multiple unlearning algorithms, we find a sharp separation: algorithms with rigorous guarantees, such as model clipping and rewind-to-delete, achieve very small $\\varepsilon$ bounds that do not falsify their unlearning guarantees, whereas empirical methods such as Hessian-based unlearning, interleaved ascent-descent, ascent on the forget set, and fine-tuning on the retain set exhibit large bounds, indicating poor unlearning. Our auditor provides a practical tool for empirically falsifying unlearning claims through a hypothesis-testing framework, and we validate it on CIFAR-100 and Shakespeare text."
-    }
-  },
-  {
-    "id": "2607.05888v1",
-    "title": "i-EXAM: Instructable and Explainable Attack Connectivity Graph Modeler",
-    "authors": [
-      "Rakesh Podder",
-      "Wadia Ganim",
-      "Sarath Sreedharan",
-      "Indrajit Ray",
-      "Indrakshi Ray"
-    ],
-    "published_date": "2026-07-07",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2607.05888v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.05888v1",
-    "content": {
-      "en": "i-EXAM is a planning-powered tool that helps system administrators to create security profiles of complex networks and perform what-if analyses to identify network hardening strategies. It leverages planning compilation that provides soundness and completeness guarantees to identify attack paths, evaluate security metrics, generate diverse hardening strategies, and explain these strategies in natural language using Large Language Models.",
-      "tr": "i-EXAM is a planning-powered tool that helps system administrators to create security profiles of complex networks and perform what-if analyses to identify network hardening strategies. It leverages planning compilation that provides soundness and completeness guarantees to identify attack paths, evaluate security metrics, generate diverse hardening strategies, and explain these strategies in natural language using Large Language Models."
-    }
-  },
-  {
-    "id": "2607.05842v1",
-    "title": "Beyond Refusal: A Same-Lineage Study of Aligned and Abliterated LLMs for Vulnerability Analysis",
-    "authors": [
-      "Mingchen Li",
-      "Meikang Qiu",
-      "Zifan Peng",
-      "Heng Fan",
-      "Song Fu"
-    ],
-    "published_date": "2026-07-07",
-    "tags": [
-      "cs.SE",
       "cs.AI",
-      "cs.CR"
+      "cs.CR",
+      "cs.MA"
     ],
-    "link": "http://arxiv.org/abs/2607.05842v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.05842v1",
+    "link": "http://arxiv.org/abs/2607.07097v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.07097v1",
     "content": {
-      "en": "Large language model (LLM)-assisted software security operates at a difficult boundary: the vulnerability-analysis terminology needed for legitimate code review, triage, and repair can closely resemble terminology associated with misuse. Existing safety and cybersecurity evaluations are difficult to interpret in this setting because they often compare unrelated model families, thereby conflating safety behavior with differences in architecture, scale, training data, and deployment. To isolate this factor, we study safety state: whether refusal behavior remains intact (Aligned) or has been refusal-ablated (Abliterated) within same-lineage models. We ask how this safety state affects defensive utility across software-security workflows. We compare aligned instruction-tuned models with publicly released refusal-ablated descendants from two model families, Gemma and Qwen. We evaluate Aligned and Abliterated states on vulnerability detection, CWE attribution, vulnerable-line localization, root-cause localization, and executable patch validation. We further treat prompt wording as a controlled framing dimension: prompts begin with neutral code-review language, add authorization context, and vary the density of cybersecurity terminology. In a Gemma-based Java/Vul4J repair-validation study, Abliterated achieves higher early-stage validation rates, with 67.8%, 65.0%, and 32.8% of patches judged usable, successfully applied, and successfully compiled, respectively, compared with 29.9%, 24.9%, and 9.0% for Aligned. In the Qwen pair, Abliterated improves localization performance, increasing line-level F1 from 2.08% to 3.91% and Top-1 accuracy from 4.10% to 6.95%. These findings suggest that evaluations of LLM-based security assistants should jointly measure whether models respond, whether their usable responses are correct, and whether their outputs remain actionable across the engineering workflow.",
-      "tr": "Large language model (LLM)-assisted software security operates at a difficult boundary: the vulnerability-analysis terminology needed for legitimate code review, triage, and repair can closely resemble terminology associated with misuse. Existing safety and cybersecurity evaluations are difficult to interpret in this setting because they often compare unrelated model families, thereby conflating safety behavior with differences in architecture, scale, training data, and deployment. To isolate this factor, we study safety state: whether refusal behavior remains intact (Aligned) or has been refusal-ablated (Abliterated) within same-lineage models. We ask how this safety state affects defensive utility across software-security workflows. We compare aligned instruction-tuned models with publicly released refusal-ablated descendants from two model families, Gemma and Qwen. We evaluate Aligned and Abliterated states on vulnerability detection, CWE attribution, vulnerable-line localization, root-cause localization, and executable patch validation. We further treat prompt wording as a controlled framing dimension: prompts begin with neutral code-review language, add authorization context, and vary the density of cybersecurity terminology. In a Gemma-based Java/Vul4J repair-validation study, Abliterated achieves higher early-stage validation rates, with 67.8%, 65.0%, and 32.8% of patches judged usable, successfully applied, and successfully compiled, respectively, compared with 29.9%, 24.9%, and 9.0% for Aligned. In the Qwen pair, Abliterated improves localization performance, increasing line-level F1 from 2.08% to 3.91% and Top-1 accuracy from 4.10% to 6.95%. These findings suggest that evaluations of LLM-based security assistants should jointly measure whether models respond, whether their usable responses are correct, and whether their outputs remain actionable across the engineering workflow."
+      "en": "Safety evaluations of multi-agent LLM systems often compare a direct prompt with a planner-executor pipeline and report the difference as a single \"pipeline effect.\" We argue that this aggregate is difficult to interpret because it conflates three mechanisms: harmful intent may be reframed as plausible operational work, the planner may refuse or transform the request, and the executor may act under delegation prompts implying prior approval. To separate these factors, we introduce a five-condition controlled contrast design, evaluated on 30 synthetic harmful scenarios and an exploratory external validation set from four agent-safety benchmarks using LLM-judged compliance.   Our results show that aggregate pipeline safety is not a stable architectural property. Operational reframing is the most portable risk signal, increasing compliance for GPT, Gemini, and DeepSeek across both scenario sets, while Claude is comparatively resistant. Planner behavior can offset this risk mainly through refusal; however, when the planner produces executable steps, the executor may become more compliant than under the direct operational baseline. Approval-framed delegation is sensitive to prompt design, model pairing, and scenario source, and a skeptical executor prompt sharply reduces compliance.   Raw-direct model rankings can also mispredict deployed planner-executor behavior. Gemini is safest under raw direct prompts in the primary set yet shows the largest amplification with a Claude planner, rising from 8.9 percent to 38.9 percent compliance. GPTs near-zero aggregate pipeline effect instead hides a reframing increase canceled by planner refusal. These findings suggest that multi-agent safety evaluations should report reframing, planner behavior, delegation framing, and model pairing separately before attributing failures to architecture itself.",
+      "tr": "Safety evaluations of multi-agent LLM systems often compare a direct prompt with a planner-executor pipeline and report the difference as a single \"pipeline effect.\" We argue that this aggregate is difficult to interpret because it conflates three mechanisms: harmful intent may be reframed as plausible operational work, the planner may refuse or transform the request, and the executor may act under delegation prompts implying prior approval. To separate these factors, we introduce a five-condition controlled contrast design, evaluated on 30 synthetic harmful scenarios and an exploratory external validation set from four agent-safety benchmarks using LLM-judged compliance.   Our results show that aggregate pipeline safety is not a stable architectural property. Operational reframing is the most portable risk signal, increasing compliance for GPT, Gemini, and DeepSeek across both scenario sets, while Claude is comparatively resistant. Planner behavior can offset this risk mainly through refusal; however, when the planner produces executable steps, the executor may become more compliant than under the direct operational baseline. Approval-framed delegation is sensitive to prompt design, model pairing, and scenario source, and a skeptical executor prompt sharply reduces compliance.   Raw-direct model rankings can also mispredict deployed planner-executor behavior. Gemini is safest under raw direct prompts in the primary set yet shows the largest amplification with a Claude planner, rising from 8.9 percent to 38.9 percent compliance. GPTs near-zero aggregate pipeline effect instead hides a reframing increase canceled by planner refusal. These findings suggest that multi-agent safety evaluations should report reframing, planner behavior, delegation framing, and model pairing separately before attributing failures to architecture itself."
     }
   },
   {
-    "id": "2607.05744v1",
-    "title": "Unicode TAG-Block Concealment of Tool-Metadata Payloads in the Model Context Protocol: An Approval-View Fidelity Gap Across Three Independent Server Implementations",
+    "id": "2607.07085v1",
+    "title": "Is Randomness Necessary for Adaptive Data Analysis?",
     "authors": [
-      "Mohammadreza Rashidi"
+      "Edith Cohen",
+      "Haim Kaplan",
+      "Yishay Mansour",
+      "Shay Sapir",
+      "Uri Stemmer"
     ],
-    "published_date": "2026-07-07",
+    "published_date": "2026-07-08",
     "tags": [
       "cs.CR",
-      "cs.AI",
-      "cs.SE"
+      "cs.DS",
+      "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2607.05744v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.05744v1",
+    "link": "http://arxiv.org/abs/2607.07085v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.07085v1",
     "content": {
-      "en": "The Model Context Protocol (MCP) is the dominant way coding agents discover and invoke external tools. A server advertises each tool through a tools/list handshake that returns a name, a natural-language description, and a JSON input schema. The client renders this metadata once, in a one-time approval dialog, and then injects it verbatim into the model's context on every subsequent turn. Nothing in the protocol requires the rendered approval view and the bytes delivered to the model to match. We isolate that gap as a single structural mechanism, concealment encoding, and show with a model-free, protocol-free analysis that Unicode's TAG block (U+E0000 to U+E007F) has no assigned glyph in any mainstream terminal, chat, or IDE renderer, so a payload written in it is absent from what a human reviewer sees while surviving byte-for-byte into the model's tokenizer. We then measure whether this mechanism actually defeats today's client-side defenses, building a proof-of-concept that speaks the real MCP JSON-RPC/stdio protocol against a genuine client and server. Across 5 distinct MCP metadata surfaces we implement 8 concrete techniques with a deterministic, protocol-level harness. All 8/8 techniques deliver an attacker-controlled payload into the model's context, 4/8 evade a representative string-matching sanitizer, and exactly as the mechanism analysis predicts, only the TAG-block encoding (1/8) is invisible in the human approval view while still reaching the model verbatim. MCP forces re-approval for 0/8 techniques even under a time-of-check to time-of-use rug-pull. To test whether these outcomes are a property of the protocol or an artifact of one server codebase, we re-implement the catalogue against 3 independently developed Python MCP server libraries and find total agreement across all 32 cross-library outcome cells. The baseline sanitizer flags 0 of 25 benign descriptions.",
-      "tr": "The Model Context Protocol (MCP) is the dominant way coding agents discover and invoke external tools. A server advertises each tool through a tools/list handshake that returns a name, a natural-language description, and a JSON input schema. The client renders this metadata once, in a one-time approval dialog, and then injects it verbatim into the model's context on every subsequent turn. Nothing in the protocol requires the rendered approval view and the bytes delivered to the model to match. We isolate that gap as a single structural mechanism, concealment encoding, and show with a model-free, protocol-free analysis that Unicode's TAG block (U+E0000 to U+E007F) has no assigned glyph in any mainstream terminal, chat, or IDE renderer, so a payload written in it is absent from what a human reviewer sees while surviving byte-for-byte into the model's tokenizer. We then measure whether this mechanism actually defeats today's client-side defenses, building a proof-of-concept that speaks the real MCP JSON-RPC/stdio protocol against a genuine client and server. Across 5 distinct MCP metadata surfaces we implement 8 concrete techniques with a deterministic, protocol-level harness. All 8/8 techniques deliver an attacker-controlled payload into the model's context, 4/8 evade a representative string-matching sanitizer, and exactly as the mechanism analysis predicts, only the TAG-block encoding (1/8) is invisible in the human approval view while still reaching the model verbatim. MCP forces re-approval for 0/8 techniques even under a time-of-check to time-of-use rug-pull. To test whether these outcomes are a property of the protocol or an artifact of one server codebase, we re-implement the catalogue against 3 independently developed Python MCP server libraries and find total agreement across all 32 cross-library outcome cells. The baseline sanitizer flags 0 of 25 benign descriptions."
+      "en": "The Adaptive Data Analysis (ADA) problem formalizes the challenge of preventing false discovery and overfitting when a dataset is repeatedly reused. Formally, our input is a dataset containing $n$ i.i.d. samples from an unknown distribution $\\mathcal{P}$ over a domain $\\mathcal{X}$, and our goal is to answer a sequence of $k$ adaptively chosen statistical queries with respect to $\\mathcal{P}$. The main question is how many queries we can support (i.e., how large $k$ can be), primarily as a function of the number of samples $n$. This question has been intensively studied and is relatively well-understood for randomized mechanisms: there are computationally efficient mechanisms that support $k \\approx n^2$ queries, and no computationally efficient mechanism can answer $k \\gg n^2$ queries. In this paper, we address a fundamental question: is randomness necessary for ADA?   Despite a decade of work on ADA, this question remains open. A folklore observation dating back to the initial works on ADA is that randomness is not necessary when the analyst is computationally bounded. Yet, the necessity of randomness against computationally unbounded analysts has remained elusive. Our main contribution resolves this gap in the information-theoretic Random Oracle model. Perhaps surprisingly, we show that randomness is strictly necessary to answer a non-trivial number of adaptive queries: when the analyst is unbounded, any deterministic mechanism can be forced to fail after just $k = \\tilde{O} (n)$ queries.",
+      "tr": "The Adaptive Data Analysis (ADA) problem formalizes the challenge of preventing false discovery and overfitting when a dataset is repeatedly reused. Formally, our input is a dataset containing $n$ i.i.d. samples from an unknown distribution $\\mathcal{P}$ over a domain $\\mathcal{X}$, and our goal is to answer a sequence of $k$ adaptively chosen statistical queries with respect to $\\mathcal{P}$. The main question is how many queries we can support (i.e., how large $k$ can be), primarily as a function of the number of samples $n$. This question has been intensively studied and is relatively well-understood for randomized mechanisms: there are computationally efficient mechanisms that support $k \\approx n^2$ queries, and no computationally efficient mechanism can answer $k \\gg n^2$ queries. In this paper, we address a fundamental question: is randomness necessary for ADA?   Despite a decade of work on ADA, this question remains open. A folklore observation dating back to the initial works on ADA is that randomness is not necessary when the analyst is computationally bounded. Yet, the necessity of randomness against computationally unbounded analysts has remained elusive. Our main contribution resolves this gap in the information-theoretic Random Oracle model. Perhaps surprisingly, we show that randomness is strictly necessary to answer a non-trivial number of adaptive queries: when the analyst is unbounded, any deterministic mechanism can be forced to fail after just $k = \\tilde{O} (n)$ queries."
     }
   }
 ]
