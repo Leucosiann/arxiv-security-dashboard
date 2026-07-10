@@ -1,211 +1,220 @@
 [
   {
-    "id": "2607.07573v1",
-    "title": "Multi-Class vs. Multi-Label BERT for CVE-to-CWE Mapping: How Taxonomy Structure Shapes the Errors",
+    "id": "2607.08400v1",
+    "title": "TRACE: A Two-Channel Robust Attribution Watermark via Complementary Embeddings for LLM-Agent Trajectories",
     "authors": [
-      "Ana Schwengber Kelm",
-      "Christian Bockermann",
-      "Jörg Frochte"
+      "Zheng Gao",
+      "Xiaoyu Li",
+      "Xiaoyan Feng",
+      "Jiaojiao Jiang",
+      "Yang Song"
     ],
-    "published_date": "2026-07-08",
+    "published_date": "2026-07-09",
     "tags": [
-      "cs.LG",
-      "cs.CR"
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2607.07573v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.07573v1",
+    "link": "http://arxiv.org/abs/2607.08400v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.08400v1",
     "content": {
-      "en": "Assigning Common Weakness Enumeration (CWE) categories to Common Vulnerabilities and Exposures (CVE) records remains an important but largely manual step in vulnerability analysis. We study this task as a text classification problem and compare two modelling choices: a \\emph{multi-class} formulation that predicts a single CWE per CVE and a \\emph{multi-label} formulation that allows multiple assignments. Three transformer encoders (BERT Base, SecureBERT, and CySecBERT) are evaluated on three nested label spaces (83, 47, and 25 classes). Multi-class training achieves higher macro-F1 across all settings, although the gap to multi-label narrows from 21 to 2 percentage points as the label space shrinks. Post-hoc threshold optimisation on the multi-label side closes this gap on the 25-class setting. Confusion analysis shows that the dominant misclassification patterns follow the CWE hierarchy and are shared across all three encoders (Pearson $r > 0.92$), which suggests that the error structure is driven more by taxonomy design than by encoder choice. A hierarchy-relaxed evaluation that forgives within-family confusions raises macro-F1 from ${\\sim}$81\\% to ${\\sim}$90\\%, indicating that strict metrics understate branch-level classifier quality. CySecBERT achieves the strongest results overall, with statistically significant gains concentrated in the multi-label setting.",
-      "tr": "Assigning Common Weakness Enumeration (CWE) categories to Common Vulnerabilities and Exposures (CVE) records remains an important but largely manual step in vulnerability analysis. We study this task as a text classification problem and compare two modelling choices: a \\emph{multi-class} formulation that predicts a single CWE per CVE and a \\emph{multi-label} formulation that allows multiple assignments. Three transformer encoders (BERT Base, SecureBERT, and CySecBERT) are evaluated on three nested label spaces (83, 47, and 25 classes). Multi-class training achieves higher macro-F1 across all settings, although the gap to multi-label narrows from 21 to 2 percentage points as the label space shrinks. Post-hoc threshold optimisation on the multi-label side closes this gap on the 25-class setting. Confusion analysis shows that the dominant misclassification patterns follow the CWE hierarchy and are shared across all three encoders (Pearson $r > 0.92$), which suggests that the error structure is driven more by taxonomy design than by encoder choice. A hierarchy-relaxed evaluation that forgives within-family confusions raises macro-F1 from ${\\sim}$81\\% to ${\\sim}$90\\%, indicating that strict metrics understate branch-level classifier quality. CySecBERT achieves the strongest results overall, with statistically significant gains concentrated in the multi-label setting."
+      "en": "LLM agents reach users through resellers, who may rebrand a developer's agent or substitute a cheaper model. When provenance is disputed, attribution rests on the trajectory log (the record of tool calls, observations, and executed actions, not the model's reasoning), which the reseller stores and processes to meter usage. A watermark must therefore survive an adversary with full read/write access to the very evidence it is detected from; existing agent watermarks do not, as their attribution is read straight off that log. We present TRACE, to our knowledge the first agent watermark that is distortion-free in its action choices, self-synchronizing under deletion, and unconditionally invariant under rewriting. Deletion desynchronizes a position-derived key and rewriting alters content, so a deletion-robust key must come from content and a rewrite-robust key from position, and no single key serves both. A trajectory, however, has room for two watermarks. TRACE superposes a selection channel that sets which action is chosen, keyed on local content with a distortion-free sampler, so the agent's distribution is provably unchanged and detection resynchronizes after deletions, and a tally channel that sets how many records each decision group holds, keyed on the log's skeleton alone, which no rewriting can touch. We prove this behavioral watermark's signal is bought with decision entropy, each decision paying at least half its entropy and deterministic decisions nothing, and that erasing both channels forces the reseller to corrupt the trajectories it resells. On ToolBench and ALFWorld, TRACE matches the unwatermarked agent's success rate while its selection channel reaches detection scores near z = 100 on long-horizon trajectories, stays detectable under 70% step deletion, and keeps a tally channel exactly unchanged under LLM rewriting of any strength.",
+      "tr": "LLM agents reach users through resellers, who may rebrand a developer's agent or substitute a cheaper model. When provenance is disputed, attribution rests on the trajectory log (the record of tool calls, observations, and executed actions, not the model's reasoning), which the reseller stores and processes to meter usage. A watermark must therefore survive an adversary with full read/write access to the very evidence it is detected from; existing agent watermarks do not, as their attribution is read straight off that log. We present TRACE, to our knowledge the first agent watermark that is distortion-free in its action choices, self-synchronizing under deletion, and unconditionally invariant under rewriting. Deletion desynchronizes a position-derived key and rewriting alters content, so a deletion-robust key must come from content and a rewrite-robust key from position, and no single key serves both. A trajectory, however, has room for two watermarks. TRACE superposes a selection channel that sets which action is chosen, keyed on local content with a distortion-free sampler, so the agent's distribution is provably unchanged and detection resynchronizes after deletions, and a tally channel that sets how many records each decision group holds, keyed on the log's skeleton alone, which no rewriting can touch. We prove this behavioral watermark's signal is bought with decision entropy, each decision paying at least half its entropy and deterministic decisions nothing, and that erasing both channels forces the reseller to corrupt the trajectories it resells. On ToolBench and ALFWorld, TRACE matches the unwatermarked agent's success rate while its selection channel reaches detection scores near z = 100 on long-horizon trajectories, stays detectable under 70% step deletion, and keeps a tally channel exactly unchanged under LLM rewriting of any strength."
     }
   },
   {
-    "id": "2607.07474v1",
-    "title": "Beyond Attack-Success Rate: Action-Graded Severity Scale for Tool-Using AI Agents",
+    "id": "2607.08288v1",
+    "title": "From Legacy Documentation to OSCAL: An MCP-Based Agent Pipeline for Threat-Informed Continuous Compliance in Critical Infrastructure",
     "authors": [
-      "Harry Owiredu-Ashley"
+      "Lea Roxanne Muth",
+      "Marian Margraf"
+    ],
+    "published_date": "2026-07-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2607.08288v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.08288v1",
+    "content": {
+      "en": "In critical infrastructure, operational technology environments often cannot be actively scanned, and yet active system feedback is needed for risk assessment and compliance. This paper presents a non-invasive, MCP-grounded multi-agent pipeline that converts natural-language system descriptions into source-verified knowledge graph and audit-ready artifacts in the NIST OSCAL format for continuous automated compliance management. The architecture decouples LLM-based reasoning from deterministic knowledge retrieval against authoritative threat-intelligence sources, reducing the risk of fabricated vulnerabilities and hallucinated attack paths.   In an evidence-based synthetic scenario of a water utility, the pipeline achieves 0.90 CVE recall and perfect D3FEND recall. It generates a schema-valid OSCAL System Security Plan and an OSCAL Security Assessment Report. Nevertheless, the core insight is not that grounding via MCP eliminates errors (e.g., hallucinations) entirely from the pipeline, but that it shifts errors into the first phase of asset extraction from the natural language description. Here, a single incorrectly extracted entity can lead to genuine but irrelevant CVEs in subsequent stages of the pipeline, which consumes time and resources. However, it makes the remaining risk visible, verifiable, and suitable for a time-efficient manual review, since the infrastructure (e.g., version numbers, OS, etc.) is typically known.",
+      "tr": "In critical infrastructure, operational technology environments often cannot be actively scanned, and yet active system feedback is needed for risk assessment and compliance. This paper presents a non-invasive, MCP-grounded multi-agent pipeline that converts natural-language system descriptions into source-verified knowledge graph and audit-ready artifacts in the NIST OSCAL format for continuous automated compliance management. The architecture decouples LLM-based reasoning from deterministic knowledge retrieval against authoritative threat-intelligence sources, reducing the risk of fabricated vulnerabilities and hallucinated attack paths.   In an evidence-based synthetic scenario of a water utility, the pipeline achieves 0.90 CVE recall and perfect D3FEND recall. It generates a schema-valid OSCAL System Security Plan and an OSCAL Security Assessment Report. Nevertheless, the core insight is not that grounding via MCP eliminates errors (e.g., hallucinations) entirely from the pipeline, but that it shifts errors into the first phase of asset extraction from the natural language description. Here, a single incorrectly extracted entity can lead to genuine but irrelevant CVEs in subsequent stages of the pipeline, which consumes time and resources. However, it makes the remaining risk visible, verifiable, and suitable for a time-efficient manual review, since the infrastructure (e.g., version numbers, OS, etc.) is typically known."
+    }
+  },
+  {
+    "id": "2607.08282v1",
+    "title": "Multi-Agent Firewall Architecture for Privacy Protection of Sensitive Data in Interactions with Language Models",
+    "authors": [
+      "Hugo García Cuesta",
+      "Pablo Mateo Torrejón",
+      "Alfonso Sánchez-Macián"
+    ],
+    "published_date": "2026-07-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "link": "http://arxiv.org/abs/2607.08282v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.08282v1",
+    "content": {
+      "en": "While Large Language Models (LLMs) have become essential productivity tools, their integration into workflows without adequate safeguards creates significant risks. This paper proposes an open-source, privacy-focused, user-facing firewall designed to secure both web-based and programmatic LLM interactions. The architecture combines a browser extension and a proxy for total traffic interception across both HTTP(S) and WebSocket communications. At its core, a flexible multi-agent pipeline delivers data leakage prevention through a hybrid approach combining deterministic detectors with LLM-driven semantic analysis, proprietary code leakage prevention, and extensible components designed for future security enhancements such as prompt injection evasion. The framework's layered architecture enables deployment across heterogeneous environments, allowing organizations to balance computational cost, detection depth and latency. Evaluation results demonstrate it achieves F1 scores of up to 94.93% on optimal configurations.",
+      "tr": "While Large Language Models (LLMs) have become essential productivity tools, their integration into workflows without adequate safeguards creates significant risks. This paper proposes an open-source, privacy-focused, user-facing firewall designed to secure both web-based and programmatic LLM interactions. The architecture combines a browser extension and a proxy for total traffic interception across both HTTP(S) and WebSocket communications. At its core, a flexible multi-agent pipeline delivers data leakage prevention through a hybrid approach combining deterministic detectors with LLM-driven semantic analysis, proprietary code leakage prevention, and extensible components designed for future security enhancements such as prompt injection evasion. The framework's layered architecture enables deployment across heterogeneous environments, allowing organizations to balance computational cost, detection depth and latency. Evaluation results demonstrate it achieves F1 scores of up to 94.93% on optimal configurations."
+    }
+  },
+  {
+    "id": "2607.08197v1",
+    "title": "MLQENABLER: Enabling Secure Machine Learning Queries over Encrypted Database in Cloud Computing",
+    "authors": [
+      "Xu Zhou",
+      "Haoyang Chen",
+      "Xinyu Lei"
+    ],
+    "published_date": "2026-07-09",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2607.08197v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.08197v1",
+    "content": {
+      "en": "In cloud computing, the public cloud service providers (CSPs) can provide cloud storage as the primary service while providing additional machine learning (ML)-based services by using the clients' data in storage. This business model extends the border of cloud computing services and brings in new business growth possibilities. Although it is promising, the model also brings in security concerns since the public commercial cloud cannot be fully trusted. For example, the public commercial clouds may sell clients' sensitive data to the government or other companies. To address the security concerns, an immediate solution is to require clients to encrypt their datasets before outsourcing to the cloud. However, if a database is formally encrypted, then the database contains only pseudorandom numbers, making it impossible to enable ML over it. In this project, we propose MLQENABLER (ML Queries Enabler) scheme to enable secure ML queries over encrypted database in cloud storage. MLQENABLER employs an index-aid approach to achieve security and ML capability simultaneously. Our initial experiments show that MLQENABLER achieves an acceptable security level while incurring only a slight ML performance degradation.",
+      "tr": "In cloud computing, the public cloud service providers (CSPs) can provide cloud storage as the primary service while providing additional machine learning (ML)-based services by using the clients' data in storage. This business model extends the border of cloud computing services and brings in new business growth possibilities. Although it is promising, the model also brings in security concerns since the public commercial cloud cannot be fully trusted. For example, the public commercial clouds may sell clients' sensitive data to the government or other companies. To address the security concerns, an immediate solution is to require clients to encrypt their datasets before outsourcing to the cloud. However, if a database is formally encrypted, then the database contains only pseudorandom numbers, making it impossible to enable ML over it. In this project, we propose MLQENABLER (ML Queries Enabler) scheme to enable secure ML queries over encrypted database in cloud storage. MLQENABLER employs an index-aid approach to achieve security and ML capability simultaneously. Our initial experiments show that MLQENABLER achieves an acceptable security level while incurring only a slight ML performance degradation."
+    }
+  },
+  {
+    "id": "2607.08180v1",
+    "title": "Out of Sight: Compression-Aware Content Protection against Agentic Crawlers",
+    "authors": [
+      "Xuefei Wang"
+    ],
+    "published_date": "2026-07-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2607.08180v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.08180v1",
+    "content": {
+      "en": "The rise of LLM-based agents with reasoning, summarization, and memory capabilities has created a new threat surface for online content that conventional defenses fail to address. Existing defenses like access controls can be circumvented by agents mimicking ordinary browsers, and injection-based defenses often degrade human readability. In this paper, we revisit the agent pipeline and identify context compression, which agents routinely invoke to fit context budgets, as a critical yet overlooked defense layer. We propose CAPE, a framework that protects high-value textual content by injecting invisible perturbations without changing its human-visible surface form, thereby inducing severe information loss during agent compression. CAPE extracts disruptive seed perturbations from an accessible surrogate compressor, then adapts them to query-only target compressors through prior-guided evolution and preference-calibrated candidate prioritization, achieving effective protection under a low query budget. Experiments on three content types and four compression settings show that CAPE improves information loss by up to 75.8% over the strongest baseline while keeping protected content visually indistinguishable from originals. CAPE also transfers to real-world settings, including the LangGraph agent workflow and GitHub Copilot, highlighting its generality and practical value. This paper aims to reveal context compression as a new defense layer, promoting content protection research in the agent era.",
+      "tr": "The rise of LLM-based agents with reasoning, summarization, and memory capabilities has created a new threat surface for online content that conventional defenses fail to address. Existing defenses like access controls can be circumvented by agents mimicking ordinary browsers, and injection-based defenses often degrade human readability. In this paper, we revisit the agent pipeline and identify context compression, which agents routinely invoke to fit context budgets, as a critical yet overlooked defense layer. We propose CAPE, a framework that protects high-value textual content by injecting invisible perturbations without changing its human-visible surface form, thereby inducing severe information loss during agent compression. CAPE extracts disruptive seed perturbations from an accessible surrogate compressor, then adapts them to query-only target compressors through prior-guided evolution and preference-calibrated candidate prioritization, achieving effective protection under a low query budget. Experiments on three content types and four compression settings show that CAPE improves information loss by up to 75.8% over the strongest baseline while keeping protected content visually indistinguishable from originals. CAPE also transfers to real-world settings, including the LangGraph agent workflow and GitHub Copilot, highlighting its generality and practical value. This paper aims to reveal context compression as a new defense layer, promoting content protection research in the agent era."
+    }
+  },
+  {
+    "id": "2607.08147v1",
+    "title": "Prismata: Confining Cross-Site Prompt Injection in Web Agents",
+    "authors": [
+      "Corban Villa",
+      "Alp Eren Ozdarendeli",
+      "Sijun Tan",
+      "Raluca Ada Popa"
+    ],
+    "published_date": "2026-07-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2607.08147v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.08147v1",
+    "content": {
+      "en": "Autonomous web agents promise to automate everyday browsing tasks, but inherit one of the web's oldest attack surfaces. Cross-Site Scripting proved that mixing trusted and untrusted content is dangerous, even on benign pages. Agents resurface this risk by interpreting natural language as instructions, allowing third-party and user-generated content to hijack the agent via prompt injection. The core challenge is that deriving a task-specific security policy requires reasoning over page structure that is entangled with the attacker's content.   We present Prismata, a defense enforcing contextual least privilege for web agents, constraining both what the agent sees and what it can do. Prismata's dynamic trust derivation produces permission labels for page content, with structural confinement guarantees, inspired by classical integrity models, that bound any labeling errors so that labels can only decrease in privilege and mislabelings are bounded. Prismata's mechanical confinement enforces these labels by redacting content and restricting agent capabilities. Importantly, these mechanisms require no developer annotations, so Prismata supports the long tail of websites. Across recent published web agent attacks, including adaptive variants, Prismata substantially reduces attack success while preserving benign task utility.",
+      "tr": "Autonomous web agents promise to automate everyday browsing tasks, but inherit one of the web's oldest attack surfaces. Cross-Site Scripting proved that mixing trusted and untrusted content is dangerous, even on benign pages. Agents resurface this risk by interpreting natural language as instructions, allowing third-party and user-generated content to hijack the agent via prompt injection. The core challenge is that deriving a task-specific security policy requires reasoning over page structure that is entangled with the attacker's content.   We present Prismata, a defense enforcing contextual least privilege for web agents, constraining both what the agent sees and what it can do. Prismata's dynamic trust derivation produces permission labels for page content, with structural confinement guarantees, inspired by classical integrity models, that bound any labeling errors so that labels can only decrease in privilege and mislabelings are bounded. Prismata's mechanical confinement enforces these labels by redacting content and restricting agent capabilities. Importantly, these mechanisms require no developer annotations, so Prismata supports the long tail of websites. Across recent published web agent attacks, including adaptive variants, Prismata substantially reduces attack success while preserving benign task utility."
+    }
+  },
+  {
+    "id": "2607.08137v1",
+    "title": "Securing Autonomous Vehicle Systems via Twin-Aware Federated Reinforcement Learning",
+    "authors": [
+      "Zifan Zhang",
+      "Minghong Fang",
+      "Dianwei Chen",
+      "Zhuqing Liu",
+      "Prashant Khanduri"
+    ],
+    "published_date": "2026-07-09",
+    "tags": [
+      "cs.CR",
+      "cs.DC",
+      "cs.LG",
+      "cs.NI"
+    ],
+    "link": "http://arxiv.org/abs/2607.08137v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.08137v1",
+    "content": {
+      "en": "Federated reinforcement learning (FRL) is crucial for enabling collaborative learning across multiple agents without sharing raw data, thereby enhancing privacy and scalability in the decision-making process within dynamic vehicular environments. However, poisoning attacks pose a significant threat to the security and reliability of FRL-based systems, particularly in safety-critical autonomous driving, where this vulnerability remains largely unexplored. These attacks can compromise the global control model by subtly injecting malicious system parameters, leading to potential hazards. To counter these challenges, we present \\alg (\\underline{Sec}ure \\underline{A}ggregation with \\underline{p}oisoning-\\underline{p}revention and historical reinforcement) as a defensive framework aimed at enhancing the robustness of FRL systems designed for safety-critical driving scenarios. \\alg strategically integrates digital twins for rehearsal-based learning and leverages historical aggregated model parameters along with a selected central gradient to ensure that only benign data is aggregated, effectively mitigating the influence of malicious agents. Theoretical guarantees are provided for the convergence performance of \\alg in the presence of poisoning attacks. We also validate the effectiveness of \\alg using developed digital twins that model realistic highway environments to evaluate the control of autonomous vehicles under adversarial conditions.",
+      "tr": "Federated reinforcement learning (FRL) is crucial for enabling collaborative learning across multiple agents without sharing raw data, thereby enhancing privacy and scalability in the decision-making process within dynamic vehicular environments. However, poisoning attacks pose a significant threat to the security and reliability of FRL-based systems, particularly in safety-critical autonomous driving, where this vulnerability remains largely unexplored. These attacks can compromise the global control model by subtly injecting malicious system parameters, leading to potential hazards. To counter these challenges, we present \\alg (\\underline{Sec}ure \\underline{A}ggregation with \\underline{p}oisoning-\\underline{p}revention and historical reinforcement) as a defensive framework aimed at enhancing the robustness of FRL systems designed for safety-critical driving scenarios. \\alg strategically integrates digital twins for rehearsal-based learning and leverages historical aggregated model parameters along with a selected central gradient to ensure that only benign data is aggregated, effectively mitigating the influence of malicious agents. Theoretical guarantees are provided for the convergence performance of \\alg in the presence of poisoning attacks. We also validate the effectiveness of \\alg using developed digital twins that model realistic highway environments to evaluate the control of autonomous vehicles under adversarial conditions."
+    }
+  },
+  {
+    "id": "2607.08011v1",
+    "title": "Beware What You Autocomplete: Forensic Attribution of Backdoored Code Completions",
+    "authors": [
+      "Anjun Gao",
+      "Yueyang Quan",
+      "Zhuqing Liu",
+      "Minghong Fang"
+    ],
+    "published_date": "2026-07-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.IR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2607.08011v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.08011v1",
+    "content": {
+      "en": "Large language models have enabled powerful code completion systems that assist developers by predicting subsequent lines of code. However, these models remain vulnerable to backdoor attacks, where malicious fine-tuning data covertly implants unsafe behaviors. Despite advances in defensive techniques, adaptive and sophisticated backdoor attacks still evade detection and mitigation. We present CodeTracer, a forensic framework that traces malicious code completions back to the backdoor fine-tuning data responsible for them. Operating under realistic post-deployment constraints, CodeTracer relies solely on the fine-tuning corpus and the reported miscompletion event. It extracts a structured behavioral fingerprint from the compromised output, narrows the search to semantically relevant code samples, and employs LLM-based reasoning to attribute unsafe logic to specific backdoor data. Extensive evaluations across three representative vulnerability cases and ten backdoor attacks, along with sixteen competitive baselines, demonstrate that CodeTracer consistently achieves high forensic accuracy, low false identification rates, and strong robustness against adaptive attacks.",
+      "tr": "Large language models have enabled powerful code completion systems that assist developers by predicting subsequent lines of code. However, these models remain vulnerable to backdoor attacks, where malicious fine-tuning data covertly implants unsafe behaviors. Despite advances in defensive techniques, adaptive and sophisticated backdoor attacks still evade detection and mitigation. We present CodeTracer, a forensic framework that traces malicious code completions back to the backdoor fine-tuning data responsible for them. Operating under realistic post-deployment constraints, CodeTracer relies solely on the fine-tuning corpus and the reported miscompletion event. It extracts a structured behavioral fingerprint from the compromised output, narrows the search to semantically relevant code samples, and employs LLM-based reasoning to attribute unsafe logic to specific backdoor data. Extensive evaluations across three representative vulnerability cases and ten backdoor attacks, along with sixteen competitive baselines, demonstrate that CodeTracer consistently achieves high forensic accuracy, low false identification rates, and strong robustness against adaptive attacks."
+    }
+  },
+  {
+    "id": "2607.07989v1",
+    "title": "Who Broke the System? Failure Localization in LLM-Based Multi-Agent Systems",
+    "authors": [
+      "Yufei Xia",
+      "Anjun Gao",
+      "Yueyang Quan",
+      "Zhuqing Liu",
+      "Minghong Fang"
     ],
     "published_date": "2026-07-08",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.CL"
+      "cs.IR",
+      "cs.LG",
+      "cs.MA"
     ],
-    "link": "http://arxiv.org/abs/2607.07474v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.07474v1",
+    "link": "http://arxiv.org/abs/2607.07989v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.07989v1",
     "content": {
-      "en": "Agentic red-teaming benchmarks report whether an injected agent was compromised as a single bit: the attack succeeded, or it did not. We argue that this binary attack-success rate discards the information a defender most needs, namely how harmful the resulting action was. We introduce an action-graded harm rubric that scores an agent's tool-call trajectory on a seven-level ordinal scale (L0 to L6) according to whether the executed action was reversible, whether it crossed scope to reach another party, and whether it expanded privilege. We compute the scale two ways: a deterministic oracle that reads the trajectory and the attacker's stated goal, and a panel of three frontier language-model judges that read a tag-free account of the same trajectory. Across four victim models and two defenses on the AgentDojo workspace suite, severity grading exposes three cases the binary metric hides, including a defense that reports a zero attack-success rate while still permitting an externally visible cross-scope leak through an unfiltered tool. The judge panel reproduces the oracle with high ordinal agreement (Krippendorff's alpha = 0.91) but shares systematic blind spots that we characterize, most notably a failure to recognize escalation chains. Unlike prior work that provides harm taxonomies, harmful-task completion tests, execution-level safety benchmarks, or severity-aware simulation, our contribution is a reusable, trace-grounded severity instrument applied to the actual actions recorded in existing red-team logs. All code, prompts, and per-episode logs are released.",
-      "tr": "Agentic red-teaming benchmarks report whether an injected agent was compromised as a single bit: the attack succeeded, or it did not. We argue that this binary attack-success rate discards the information a defender most needs, namely how harmful the resulting action was. We introduce an action-graded harm rubric that scores an agent's tool-call trajectory on a seven-level ordinal scale (L0 to L6) according to whether the executed action was reversible, whether it crossed scope to reach another party, and whether it expanded privilege. We compute the scale two ways: a deterministic oracle that reads the trajectory and the attacker's stated goal, and a panel of three frontier language-model judges that read a tag-free account of the same trajectory. Across four victim models and two defenses on the AgentDojo workspace suite, severity grading exposes three cases the binary metric hides, including a defense that reports a zero attack-success rate while still permitting an externally visible cross-scope leak through an unfiltered tool. The judge panel reproduces the oracle with high ordinal agreement (Krippendorff's alpha = 0.91) but shares systematic blind spots that we characterize, most notably a failure to recognize escalation chains. Unlike prior work that provides harm taxonomies, harmful-task completion tests, execution-level safety benchmarks, or severity-aware simulation, our contribution is a reusable, trace-grounded severity instrument applied to the actual actions recorded in existing red-team logs. All code, prompts, and per-episode logs are released."
+      "en": "Large language model (LLM) based multi-agent systems enable complex problem solving through coordinated reasoning and action, but their distributed structure also introduces new challenges in diagnosing system-level failures. When an execution fails, identifying which agent is responsible and at what point the trajectory first becomes irreversibly misdirected is difficult due to long-horizon interactions and tightly coupled agent behaviors. In this paper, we study the problem of failure localization in LLM-based multi-agent systems and present AgentLocate, a framework that attributes failures to both a specific agent and the earliest decisive step. AgentLocate combines an LLM-based judging mechanism with multi-perspective verification by independent evaluators, whose assessments are aggregated using a confidence-aware strategy. The resulting feedback is further used to adapt the judge through lightweight fine-tuning, improving attribution quality. We evaluate AgentLocate on two complementary benchmarks covering diverse tasks, agent configurations, and trajectory lengths. Experimental results show that AgentLocate consistently outperforms existing failure localization methods in identifying both responsible agents and failure steps, while remaining efficient in terms of token usage and running time.",
+      "tr": "Large language model (LLM) based multi-agent systems enable complex problem solving through coordinated reasoning and action, but their distributed structure also introduces new challenges in diagnosing system-level failures. When an execution fails, identifying which agent is responsible and at what point the trajectory first becomes irreversibly misdirected is difficult due to long-horizon interactions and tightly coupled agent behaviors. In this paper, we study the problem of failure localization in LLM-based multi-agent systems and present AgentLocate, a framework that attributes failures to both a specific agent and the earliest decisive step. AgentLocate combines an LLM-based judging mechanism with multi-perspective verification by independent evaluators, whose assessments are aggregated using a confidence-aware strategy. The resulting feedback is further used to adapt the judge through lightweight fine-tuning, improving attribution quality. We evaluate AgentLocate on two complementary benchmarks covering diverse tasks, agent configurations, and trajectory lengths. Experimental results show that AgentLocate consistently outperforms existing failure localization methods in identifying both responsible agents and failure steps, while remaining efficient in terms of token usage and running time."
     }
   },
   {
-    "id": "2607.07471v1",
-    "title": "Where to Intervene? Benchmarking Fairness-Aware Learning on Differentially Private Synthetic Tabular Data",
+    "id": "2607.07918v1",
+    "title": "Efficient Safety Alignment of Language Models via Latent Personality Traits",
     "authors": [
-      "Vinícius Gabriel Angelozzi",
-      "Héber H. Arcolezi"
+      "Mohamed Amine Merzouk",
+      "Nolan Smyth",
+      "Damiano Fornasiere",
+      "Linh Le",
+      "David Williams-King"
     ],
     "published_date": "2026-07-08",
     "tags": [
       "cs.LG",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2607.07471v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.07471v1",
-    "content": {
-      "en": "Machine learning models are increasingly deployed in high-stakes domains, raising concerns about both privacy and fairness. Differential Privacy (DP) has become a gold standard for privacy-preserving data analysis, while fairness-aware mechanisms aim to mitigate discrimination against underrepresented groups. However, these objectives can conflict: DP often amplifies disparities across demographic groups, and little is known about whether established fairness interventions remain effective under DP constraints. In this work, we present, to our knowledge, the first systematic evaluation of fairness interventions on differentially private synthetic tabular data. Our benchmark centers on the Adaptive Iterative Mechanism (AIM), identified as the state-of-the-art marginal-based DP synthesizer (Cormode et al. 2025). We thus evaluate fairness interventions across four datasets, multiple group fairness metrics, and three categories of mitigation strategies (pre-processing, in-processing, and post-processing) under a wide range of privacy budgets. We compare four pipeline configurations: (Baseline) training on original data; (DP-only) training on DP synthetic data; (Fair-only) applying fairness mechanisms on original data; and (DP+Fair) combining fairness mechanisms with DP synthetic data. Our results demonstrate that while DP alone can degrade both utility and fairness, applying fairness interventions can partially restore equitable outcomes. Among them, post-processing methods tend to provide more stable fairness-utility trade-offs across privacy budgets and synthesizers, achieving strong fairness improvements while preserving competitive utility relative to other intervention stages. We release all code, data, and experimental artifacts in an open-source repository to ensure full reproducibility and to support future research on the privacy-fairness-utility trade-off.",
-      "tr": "Machine learning models are increasingly deployed in high-stakes domains, raising concerns about both privacy and fairness. Differential Privacy (DP) has become a gold standard for privacy-preserving data analysis, while fairness-aware mechanisms aim to mitigate discrimination against underrepresented groups. However, these objectives can conflict: DP often amplifies disparities across demographic groups, and little is known about whether established fairness interventions remain effective under DP constraints. In this work, we present, to our knowledge, the first systematic evaluation of fairness interventions on differentially private synthetic tabular data. Our benchmark centers on the Adaptive Iterative Mechanism (AIM), identified as the state-of-the-art marginal-based DP synthesizer (Cormode et al. 2025). We thus evaluate fairness interventions across four datasets, multiple group fairness metrics, and three categories of mitigation strategies (pre-processing, in-processing, and post-processing) under a wide range of privacy budgets. We compare four pipeline configurations: (Baseline) training on original data; (DP-only) training on DP synthetic data; (Fair-only) applying fairness mechanisms on original data; and (DP+Fair) combining fairness mechanisms with DP synthetic data. Our results demonstrate that while DP alone can degrade both utility and fairness, applying fairness interventions can partially restore equitable outcomes. Among them, post-processing methods tend to provide more stable fairness-utility trade-offs across privacy budgets and synthesizers, achieving strong fairness improvements while preserving competitive utility relative to other intervention stages. We release all code, data, and experimental artifacts in an open-source repository to ensure full reproducibility and to support future research on the privacy-fairness-utility trade-off."
-    }
-  },
-  {
-    "id": "2607.07436v1",
-    "title": "The Blind Curator: How a Biased Judge Silently Disables Skill Retirement in Self-Evolving Agents",
-    "authors": [
-      "Xing Zhang",
-      "Yanwei Cui",
-      "Guanghui Wang",
-      "Ziyuan Li",
-      "Wei Qiu"
-    ],
-    "published_date": "2026-07-08",
-    "tags": [
       "cs.AI",
       "cs.CL",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2607.07436v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.07436v1",
+    "link": "http://arxiv.org/abs/2607.07918v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.07918v1",
     "content": {
-      "en": "A self-evolving agent retires its bad skills by watching them fail, so what happens when the judge cannot see the failures? Skill retirement is the structural constraint that keeps a growing library from drifting below the no-skill baseline, but its guarantee assumes an unbiased reward, which is false for the LLM judges that reference-free tasks force upon us. We show that a biased judge does not merely add noise; it \\emph{silently switches off the curator}. We make this precise with a corrupted-reward analysis and, isolating the causal channel by injecting corruption on top of a deterministic reward, a behavioral study on a reference-free report-writing testbed with a code-generation cross-check. Symmetric noise leaves retirement intact, but \\emph{false-pass} bias (failures slipping through as passes) disables contribution-based retirement past a sharp threshold that no amount of data can cross. Separating genuine retirement from cap-eviction churn shows this \\emph{mechanism} failure is universal, holding across domains and failure rates and sparing only near-zero-false-pass, verifier-like graders. The downstream \\emph{outcome}, though, is regime-dependent: eval quality degrades only where the same corruption also starves skill synthesis, and otherwise holds steady, so the disabled curator is \\emph{silent}, surfacing in no aggregate metric. The contribution is a behavioral safety result, not a performance one. A cheap defect-injection audit then tells an operator, before deployment, which side of the threshold their judge occupies.",
-      "tr": "A self-evolving agent retires its bad skills by watching them fail, so what happens when the judge cannot see the failures? Skill retirement is the structural constraint that keeps a growing library from drifting below the no-skill baseline, but its guarantee assumes an unbiased reward, which is false for the LLM judges that reference-free tasks force upon us. We show that a biased judge does not merely add noise; it \\emph{silently switches off the curator}. We make this precise with a corrupted-reward analysis and, isolating the causal channel by injecting corruption on top of a deterministic reward, a behavioral study on a reference-free report-writing testbed with a code-generation cross-check. Symmetric noise leaves retirement intact, but \\emph{false-pass} bias (failures slipping through as passes) disables contribution-based retirement past a sharp threshold that no amount of data can cross. Separating genuine retirement from cap-eviction churn shows this \\emph{mechanism} failure is universal, holding across domains and failure rates and sparing only near-zero-false-pass, verifier-like graders. The downstream \\emph{outcome}, though, is regime-dependent: eval quality degrades only where the same corruption also starves skill synthesis, and otherwise holds steady, so the disabled curator is \\emph{silent}, surfacing in no aggregate metric. The contribution is a behavioral safety result, not a performance one. A cheap defect-injection audit then tells an operator, before deployment, which side of the threshold their judge occupies."
-    }
-  },
-  {
-    "id": "2607.07405v1",
-    "title": "Reason Less, Verify More: Deterministic Gates Recover a Silent Policy-Violation Failure Mode in Tool-Using LLM Agents",
-    "authors": [
-      "Vikas Reddy",
-      "Sumanth Reddy Challaram",
-      "Abhishek Basu"
-    ],
-    "published_date": "2026-07-08",
-    "tags": [
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2607.07405v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.07405v1",
-    "content": {
-      "en": "Tool-using LLM agents can violate the very policies they are deployed to enforce while appearing to complete the task successfully. In policy-permissive environments, a tool may execute any well-formed call even when the corresponding state transition is forbidden by domain policy. The result is a silent wrong state (a booking cancelled, a passenger count changed, a claim acted on without verification) that neither the tool nor the agent's self-report exposes.   We study this failure mode in the $τ^2$-bench airline domain. On a budget agent, 78% of observed failures are silent wrong-state failures with no tool error, and the aggregate failure rate is reproducible across disjoint seeds, not sampling noise. We then evaluate a lightweight intervention: deterministic, read-only pre-execution gates that inspect the proposed call and current state before allowing a write. A four-gate suite raises full-benchmark success from 29.6% to 42.0% on gpt-4o-mini (+12.4pp; paired task-level bootstrap P=0.0012), and the lift reproduces on a disjoint 15-seed set (+12.3pp; P=0.0008).   The effect is concentrated where the gates fire: on the 26/50 firing tasks, success rises by +19.2pp, while movement on the 24 non-firing tasks does not exclude zero. Two negative controls (a self-enforcing retail domain and BFCL) bound the mechanism: gates help when tools are policy-permissive and add little where tools already self-enforce. As suggestive evidence, not a central claim, the same failure mode persists at the frontier: gpt-5.2 at default reasoning still attempts policy-violating writes, and the same suite improves success from 61.2% to 71.6% (+10.4pp; P=0.020; n=5, no replication). The contribution is a bounded evaluation and reliability result: deterministic gates do not guarantee task success, but they can deterministically prevent a known class of silent policy-violating writes at the action boundary.",
-      "tr": "Tool-using LLM agents can violate the very policies they are deployed to enforce while appearing to complete the task successfully. In policy-permissive environments, a tool may execute any well-formed call even when the corresponding state transition is forbidden by domain policy. The result is a silent wrong state (a booking cancelled, a passenger count changed, a claim acted on without verification) that neither the tool nor the agent's self-report exposes.   We study this failure mode in the $τ^2$-bench airline domain. On a budget agent, 78% of observed failures are silent wrong-state failures with no tool error, and the aggregate failure rate is reproducible across disjoint seeds, not sampling noise. We then evaluate a lightweight intervention: deterministic, read-only pre-execution gates that inspect the proposed call and current state before allowing a write. A four-gate suite raises full-benchmark success from 29.6% to 42.0% on gpt-4o-mini (+12.4pp; paired task-level bootstrap P=0.0012), and the lift reproduces on a disjoint 15-seed set (+12.3pp; P=0.0008).   The effect is concentrated where the gates fire: on the 26/50 firing tasks, success rises by +19.2pp, while movement on the 24 non-firing tasks does not exclude zero. Two negative controls (a self-enforcing retail domain and BFCL) bound the mechanism: gates help when tools are policy-permissive and add little where tools already self-enforce. As suggestive evidence, not a central claim, the same failure mode persists at the frontier: gpt-5.2 at default reasoning still attempts policy-violating writes, and the same suite improves success from 61.2% to 71.6% (+10.4pp; P=0.020; n=5, no replication). The contribution is a bounded evaluation and reliability result: deterministic gates do not guarantee task success, but they can deterministically prevent a known class of silent policy-violating writes at the action boundary."
-    }
-  },
-  {
-    "id": "2607.07314v1",
-    "title": "FedCVESA: Taking Away Training Data in Federated Learning via Correlation Value Encoding and Segmented Aggregation",
-    "authors": [
-      "Chongkai Li",
-      "Bang Zhang",
-      "Wenjian Luo"
-    ],
-    "published_date": "2026-07-08",
-    "tags": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2607.07314v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.07314v1",
-    "content": {
-      "en": "Federated learning (FL) avoids explicit data exposure by keeping raw data on local clients, yet privacy risks remain in the training process and the learned model itself. Recently, centralized Taking Away Training Data (TATD) attacks have shown that malicious training could abuse the memorization capacity of deep models to store and later recover training data. However, this memorization-based threat has not been systematically studied under FL environments, where multi-client averaging could overwrite encoded training data. In this paper, we study a white-box TATD attack in which a malicious server selects n target clients from K participating clients and actively writes private training data into the global model during federated training. We propose FedCVESA, a federated variant of Correlation Value Encoding Attack (CVEA), by adding a Pearson-correlation regularizer to the loss function of target clients, so that private training data are gradually encoded into selected model parameters, referred to as carrier parameters. To reduce the overwriting of carrier parameters during server aggregation, we further propose segmented aggregation over dispersed carrier parameters, preserving selected carrier parameters while keeping standard averaging on the remaining parameters. Experiments on MNIST, Fashion-MNIST, and CIFAR-10 under Dirichlet non-IID partitions show that the proposed method can steal semantically meaningful private training images from the trained model while maintaining acceptable main-task utility in a controlled proof-of-concept setting. These results demonstrate that FL can become a parameter-level memorization channel for active TATD attack under the studied white-box malicious-server setting.",
-      "tr": "Federated learning (FL) avoids explicit data exposure by keeping raw data on local clients, yet privacy risks remain in the training process and the learned model itself. Recently, centralized Taking Away Training Data (TATD) attacks have shown that malicious training could abuse the memorization capacity of deep models to store and later recover training data. However, this memorization-based threat has not been systematically studied under FL environments, where multi-client averaging could overwrite encoded training data. In this paper, we study a white-box TATD attack in which a malicious server selects n target clients from K participating clients and actively writes private training data into the global model during federated training. We propose FedCVESA, a federated variant of Correlation Value Encoding Attack (CVEA), by adding a Pearson-correlation regularizer to the loss function of target clients, so that private training data are gradually encoded into selected model parameters, referred to as carrier parameters. To reduce the overwriting of carrier parameters during server aggregation, we further propose segmented aggregation over dispersed carrier parameters, preserving selected carrier parameters while keeping standard averaging on the remaining parameters. Experiments on MNIST, Fashion-MNIST, and CIFAR-10 under Dirichlet non-IID partitions show that the proposed method can steal semantically meaningful private training images from the trained model while maintaining acceptable main-task utility in a controlled proof-of-concept setting. These results demonstrate that FL can become a parameter-level memorization channel for active TATD attack under the studied white-box malicious-server setting."
-    }
-  },
-  {
-    "id": "2607.07217v1",
-    "title": "Finding and Understanding Miscompilation Bugs in the Solidity Compiler",
-    "authors": [
-      "Bhargava Shastry"
-    ],
-    "published_date": "2026-07-08",
-    "tags": [
-      "cs.SE",
-      "cs.CR",
-      "cs.PL"
-    ],
-    "link": "http://arxiv.org/abs/2607.07217v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.07217v1",
-    "content": {
-      "en": "Smart contract compilers are critical to ensuring the correctness of public blockchains whose defining characteristics are open-source and immutable code. We created SolSmith, a semantics-aware differential fuzz testing tool, to improve the quality of the Solidity compiler -- the most popular compiler for the Ethereum blockchain -- and spent over three years finding compiler defects that produce incorrect code. We call these defects miscompilation bugs. During this time period, we have discovered 25 miscompilation bugs that went unnoticed, some for multiple years. Our first contribution is to make compiler testing more rigorous. SolSmith achieves this goal by generating valid test programs that are likely to stress test code generation and optimization components. This helps SolSmith find bugs missed during routine testing that could potentially have serious implications for smart contracts and their users. Our second contribution is a qualitative and quantitative analysis of miscompilation bugs that we found in the Solidity compiler. We classify miscompilation bugs found by SolSmith based on their nature, root-causes, and impact on end-users. This sheds light on some pitfalls of optimizing compilers.",
-      "tr": "Smart contract compilers are critical to ensuring the correctness of public blockchains whose defining characteristics are open-source and immutable code. We created SolSmith, a semantics-aware differential fuzz testing tool, to improve the quality of the Solidity compiler -- the most popular compiler for the Ethereum blockchain -- and spent over three years finding compiler defects that produce incorrect code. We call these defects miscompilation bugs. During this time period, we have discovered 25 miscompilation bugs that went unnoticed, some for multiple years. Our first contribution is to make compiler testing more rigorous. SolSmith achieves this goal by generating valid test programs that are likely to stress test code generation and optimization components. This helps SolSmith find bugs missed during routine testing that could potentially have serious implications for smart contracts and their users. Our second contribution is a qualitative and quantitative analysis of miscompilation bugs that we found in the Solidity compiler. We classify miscompilation bugs found by SolSmith based on their nature, root-causes, and impact on end-users. This sheds light on some pitfalls of optimizing compilers."
-    }
-  },
-  {
-    "id": "2607.07209v1",
-    "title": "Continual Learning With Participation Privacy: An Auditable Buffering-Aggregation Recipe",
-    "authors": [
-      "T-H. Hubert Chan",
-      "Elaine Shi",
-      "Mengshi Zhao",
-      "Mingxun Zhou"
-    ],
-    "published_date": "2026-07-08",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2607.07209v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.07209v1",
-    "content": {
-      "en": "Modern federated and streaming learning systems often release intermediate models, so privacy must hold for the full trajectory under adaptive interaction. Motivated by participation privacy, we study single-edit neighboring user streams, where one insertion/deletion shifts all subsequent updates and defeats standard Hamming-neighbor continual-release analyses. We give an auditable modular recipe. A randomized buffering wrapper emits bins of size $[U,2U]$, reducing single-edit streams to a Hamming-style per-bin update stream with explicit backlog/delay guarantees, where $U$ is calibrated by the privacy parameters $(\\varepsilon,δ)$. We then prove a certification theorem identifying when a non-adaptive Hamming-neighbor DP proof for a continual primitive lifts to adaptive inputs: the primitive must use fresh per-round randomness and have a stable one-round privacy profile under common adaptive context. Together, these ingredients yield trajectory-level $(\\varepsilon,δ)$-DP for single-edit streams using standard primitives (e.g., tree prefix sums), with an explicit privacy--latency link via $U$.",
-      "tr": "Modern federated and streaming learning systems often release intermediate models, so privacy must hold for the full trajectory under adaptive interaction. Motivated by participation privacy, we study single-edit neighboring user streams, where one insertion/deletion shifts all subsequent updates and defeats standard Hamming-neighbor continual-release analyses. We give an auditable modular recipe. A randomized buffering wrapper emits bins of size $[U,2U]$, reducing single-edit streams to a Hamming-style per-bin update stream with explicit backlog/delay guarantees, where $U$ is calibrated by the privacy parameters $(\\varepsilon,δ)$. We then prove a certification theorem identifying when a non-adaptive Hamming-neighbor DP proof for a continual primitive lifts to adaptive inputs: the primitive must use fresh per-round randomness and have a stable one-round privacy profile under common adaptive context. Together, these ingredients yield trajectory-level $(\\varepsilon,δ)$-DP for single-edit streams using standard primitives (e.g., tree prefix sums), with an explicit privacy--latency link via $U$."
-    }
-  },
-  {
-    "id": "2607.07097v1",
-    "title": "Operational Reframing and Approval-Framed Delegation in Multi-Agent LLM Safety",
-    "authors": [
-      "Lifei Liu",
-      "Haoran Yu",
-      "Xiaochong Jiang",
-      "Su Wang",
-      "Pin Qian"
-    ],
-    "published_date": "2026-07-08",
-    "tags": [
-      "cs.AI",
-      "cs.CR",
-      "cs.MA"
-    ],
-    "link": "http://arxiv.org/abs/2607.07097v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.07097v1",
-    "content": {
-      "en": "Safety evaluations of multi-agent LLM systems often compare a direct prompt with a planner-executor pipeline and report the difference as a single \"pipeline effect.\" We argue that this aggregate is difficult to interpret because it conflates three mechanisms: harmful intent may be reframed as plausible operational work, the planner may refuse or transform the request, and the executor may act under delegation prompts implying prior approval. To separate these factors, we introduce a five-condition controlled contrast design, evaluated on 30 synthetic harmful scenarios and an exploratory external validation set from four agent-safety benchmarks using LLM-judged compliance.   Our results show that aggregate pipeline safety is not a stable architectural property. Operational reframing is the most portable risk signal, increasing compliance for GPT, Gemini, and DeepSeek across both scenario sets, while Claude is comparatively resistant. Planner behavior can offset this risk mainly through refusal; however, when the planner produces executable steps, the executor may become more compliant than under the direct operational baseline. Approval-framed delegation is sensitive to prompt design, model pairing, and scenario source, and a skeptical executor prompt sharply reduces compliance.   Raw-direct model rankings can also mispredict deployed planner-executor behavior. Gemini is safest under raw direct prompts in the primary set yet shows the largest amplification with a Claude planner, rising from 8.9 percent to 38.9 percent compliance. GPTs near-zero aggregate pipeline effect instead hides a reframing increase canceled by planner refusal. These findings suggest that multi-agent safety evaluations should report reframing, planner behavior, delegation framing, and model pairing separately before attributing failures to architecture itself.",
-      "tr": "Safety evaluations of multi-agent LLM systems often compare a direct prompt with a planner-executor pipeline and report the difference as a single \"pipeline effect.\" We argue that this aggregate is difficult to interpret because it conflates three mechanisms: harmful intent may be reframed as plausible operational work, the planner may refuse or transform the request, and the executor may act under delegation prompts implying prior approval. To separate these factors, we introduce a five-condition controlled contrast design, evaluated on 30 synthetic harmful scenarios and an exploratory external validation set from four agent-safety benchmarks using LLM-judged compliance.   Our results show that aggregate pipeline safety is not a stable architectural property. Operational reframing is the most portable risk signal, increasing compliance for GPT, Gemini, and DeepSeek across both scenario sets, while Claude is comparatively resistant. Planner behavior can offset this risk mainly through refusal; however, when the planner produces executable steps, the executor may become more compliant than under the direct operational baseline. Approval-framed delegation is sensitive to prompt design, model pairing, and scenario source, and a skeptical executor prompt sharply reduces compliance.   Raw-direct model rankings can also mispredict deployed planner-executor behavior. Gemini is safest under raw direct prompts in the primary set yet shows the largest amplification with a Claude planner, rising from 8.9 percent to 38.9 percent compliance. GPTs near-zero aggregate pipeline effect instead hides a reframing increase canceled by planner refusal. These findings suggest that multi-agent safety evaluations should report reframing, planner behavior, delegation framing, and model pairing separately before attributing failures to architecture itself."
-    }
-  },
-  {
-    "id": "2607.07085v1",
-    "title": "Is Randomness Necessary for Adaptive Data Analysis?",
-    "authors": [
-      "Edith Cohen",
-      "Haim Kaplan",
-      "Yishay Mansour",
-      "Shay Sapir",
-      "Uri Stemmer"
-    ],
-    "published_date": "2026-07-08",
-    "tags": [
-      "cs.CR",
-      "cs.DS",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2607.07085v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.07085v1",
-    "content": {
-      "en": "The Adaptive Data Analysis (ADA) problem formalizes the challenge of preventing false discovery and overfitting when a dataset is repeatedly reused. Formally, our input is a dataset containing $n$ i.i.d. samples from an unknown distribution $\\mathcal{P}$ over a domain $\\mathcal{X}$, and our goal is to answer a sequence of $k$ adaptively chosen statistical queries with respect to $\\mathcal{P}$. The main question is how many queries we can support (i.e., how large $k$ can be), primarily as a function of the number of samples $n$. This question has been intensively studied and is relatively well-understood for randomized mechanisms: there are computationally efficient mechanisms that support $k \\approx n^2$ queries, and no computationally efficient mechanism can answer $k \\gg n^2$ queries. In this paper, we address a fundamental question: is randomness necessary for ADA?   Despite a decade of work on ADA, this question remains open. A folklore observation dating back to the initial works on ADA is that randomness is not necessary when the analyst is computationally bounded. Yet, the necessity of randomness against computationally unbounded analysts has remained elusive. Our main contribution resolves this gap in the information-theoretic Random Oracle model. Perhaps surprisingly, we show that randomness is strictly necessary to answer a non-trivial number of adaptive queries: when the analyst is unbounded, any deterministic mechanism can be forced to fail after just $k = \\tilde{O} (n)$ queries.",
-      "tr": "The Adaptive Data Analysis (ADA) problem formalizes the challenge of preventing false discovery and overfitting when a dataset is repeatedly reused. Formally, our input is a dataset containing $n$ i.i.d. samples from an unknown distribution $\\mathcal{P}$ over a domain $\\mathcal{X}$, and our goal is to answer a sequence of $k$ adaptively chosen statistical queries with respect to $\\mathcal{P}$. The main question is how many queries we can support (i.e., how large $k$ can be), primarily as a function of the number of samples $n$. This question has been intensively studied and is relatively well-understood for randomized mechanisms: there are computationally efficient mechanisms that support $k \\approx n^2$ queries, and no computationally efficient mechanism can answer $k \\gg n^2$ queries. In this paper, we address a fundamental question: is randomness necessary for ADA?   Despite a decade of work on ADA, this question remains open. A folklore observation dating back to the initial works on ADA is that randomness is not necessary when the analyst is computationally bounded. Yet, the necessity of randomness against computationally unbounded analysts has remained elusive. Our main contribution resolves this gap in the information-theoretic Random Oracle model. Perhaps surprisingly, we show that randomness is strictly necessary to answer a non-trivial number of adaptive queries: when the analyst is unbounded, any deterministic mechanism can be forced to fail after just $k = \\tilde{O} (n)$ queries."
+      "en": "Current safety methods for large language models are known to be vulnerable to adversarial attacks, motivating research into robust alternatives. Latent Adversarial Training (LAT) is among the most effective defenses, but can degrade utility and requires training on large datasets of harmful prompts. We introduce Latent Personality Alignment (LPA), which replaces explicit harm refusal with adversarial training on just 66 harm-agnostic statements drawn from psychometric personality literature. We hypothesize that personality-anchored representations share latent structure with harm avoidance, so adversarially stabilizing them implicitly constrains the subspace exploited by jailbreak attacks. LPA achieves near-zero attack success rates on HarmBench across direct requests and five jailbreak methods, despite never seeing harmful content during training and no loss of performance on standard benchmarks. Moreover, the training process is lightweight; the entire procedure completes in minutes on a single GPU and uses 75x fewer examples than standard LAT. Extensive ablations demonstrate the robustness, efficiency, and generalization of our method.",
+      "tr": "Current safety methods for large language models are known to be vulnerable to adversarial attacks, motivating research into robust alternatives. Latent Adversarial Training (LAT) is among the most effective defenses, but can degrade utility and requires training on large datasets of harmful prompts. We introduce Latent Personality Alignment (LPA), which replaces explicit harm refusal with adversarial training on just 66 harm-agnostic statements drawn from psychometric personality literature. We hypothesize that personality-anchored representations share latent structure with harm avoidance, so adversarially stabilizing them implicitly constrains the subspace exploited by jailbreak attacks. LPA achieves near-zero attack success rates on HarmBench across direct requests and five jailbreak methods, despite never seeing harmful content during training and no loss of performance on standard benchmarks. Moreover, the training process is lightweight; the entire procedure completes in minutes on a single GPU and uses 75x fewer examples than standard LAT. Extensive ablations demonstrate the robustness, efficiency, and generalization of our method."
     }
   }
 ]
