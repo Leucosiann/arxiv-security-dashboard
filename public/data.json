@@ -1,209 +1,221 @@
 [
   {
-    "id": "2607.16175v1",
-    "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+    "id": "2607.18063v1",
+    "title": "Adaptive Adversaries: A Multi-Turn, Multi-LLM Benchmark for LLM Agent Security",
     "authors": [
-      "Md Erfan",
-      "Ahmed Ryan",
-      "Md Kamal Hossain Chowdhury",
-      "Md Rayhanur Rahman"
+      "Devina Jain",
+      "David Hartmann",
+      "Chuan Li"
     ],
-    "published_date": "2026-07-17",
+    "published_date": "2026-07-20",
     "tags": [
       "cs.CR",
-      "cs.AI"
+      "cs.AI",
+      "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2607.16175v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.16175v1",
+    "link": "http://arxiv.org/abs/2607.18063v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.18063v1",
     "content": {
-      "en": "Connected and Autonomous Vehicles (CAVs) rely on interconnected software and hardware components, including sensors, Electronic Control Units, in-vehicle infotainment systems, and telematics units, where vulnerabilities can compromise assets, users, and vehicle operations. These vulnerabilities are commonly documented as plain text in the Common Vulnerabilities and Exposures (CVE) database; however, security practitioners require structured information about affected assets, types of weaknesses, and attack behaviors to effectively mitigate the risks from these vulnerabilities. To this end, we evaluate open-weight Large Language Models (LLMs) for generating Structured Threat Information Expression (STIX), a well-known structured format for representing threat information, for CAV-related CVEs. We construct a dataset called CAV-STIXGen that maps CAV vulnerability descriptions to STIX domain objects (SDO), STIX relationship objects (SRO), Common Weakness Enumeration (CWE), and MITRE ATT&CK techniques mappings. Using this dataset, we evaluated 11 open-weight LLMs (4B to 120B parameters) across various prompting strategies and temperatures. Single-model configurations achieve F1 scores of 0.94 for SDO, 0.63 for SRO, and 0.99 for CWE mapping, while complete MITRE ATT&CK mapping remains challenging. In a multi-agent setup, Gemma-4-31B and Codestral-22B achieve F1 scores of 0.91 for SDOs and 0.43 for SROs, respectively. Lastly, we analyze CWE and MITRE ATT&CK co-occurrences to identify recurring threat patterns in the CAV domain, demonstrating how AI-assisted vulnerability-to-STIX translation can automate threat intelligence and prioritize defense in transportation security.",
-      "tr": "Connected and Autonomous Vehicles (CAVs) rely on interconnected software and hardware components, including sensors, Electronic Control Units, in-vehicle infotainment systems, and telematics units, where vulnerabilities can compromise assets, users, and vehicle operations. These vulnerabilities are commonly documented as plain text in the Common Vulnerabilities and Exposures (CVE) database; however, security practitioners require structured information about affected assets, types of weaknesses, and attack behaviors to effectively mitigate the risks from these vulnerabilities. To this end, we evaluate open-weight Large Language Models (LLMs) for generating Structured Threat Information Expression (STIX), a well-known structured format for representing threat information, for CAV-related CVEs. We construct a dataset called CAV-STIXGen that maps CAV vulnerability descriptions to STIX domain objects (SDO), STIX relationship objects (SRO), Common Weakness Enumeration (CWE), and MITRE ATT&CK techniques mappings. Using this dataset, we evaluated 11 open-weight LLMs (4B to 120B parameters) across various prompting strategies and temperatures. Single-model configurations achieve F1 scores of 0.94 for SDO, 0.63 for SRO, and 0.99 for CWE mapping, while complete MITRE ATT&CK mapping remains challenging. In a multi-agent setup, Gemma-4-31B and Codestral-22B achieve F1 scores of 0.91 for SDOs and 0.43 for SROs, respectively. Lastly, we analyze CWE and MITRE ATT&CK co-occurrences to identify recurring threat patterns in the CAV domain, demonstrating how AI-assisted vulnerability-to-STIX translation can automate threat intelligence and prioritize defense in transportation security."
+      "en": "LLM-based agents process external content, exposing them to prompt injection and multi-turn manipulation. Most safety benchmarks evaluate defenders against fixed attack pools collected before evaluation, single-turn or multi-turn. We present a 21-scenario benchmark for \\emph{adaptive multi-round attacks against memoryless LLM defenders}: an autonomous LLM attacker observes prior defender responses and pivots across rounds, while each defender response is evaluated as a fresh interaction. Holding the 21 scenarios, attackers, defenders, and structured-output scoring fixed, restricting scoring to the first attacker turn yields $0$-$1\\%$ attack success rate (ASR); allowing 15 rounds of adaptive attack yields $5.4$-$14.0\\%$. Pooling three frontier attacker LLMs uncovers $1.4$-$2.2\\times$ as many unique successful attacks as the best single attacker, and the generated attacks have low cosine similarity ($0.02$-$0.14$) to attacks in existing benchmarks. Claude Opus 4.6 and GPT-5.4 are tied in aggregate ($5.4\\%$ each; overlapping $95\\%$ CIs), but their weaknesses differ sharply: on one scenario Opus reaches $60\\%$ ASR ($95\\%$ CI $36$--$80\\%$) while GPT-5.4 and Gemini each stay at $7\\%$ (CI $1$-$30\\%$; the gap is preserved in a higher-$N$ replication). $13$ of $21$ scenarios distinguish at least one defender pair, yet rankings disagree across scenarios (Kendall's $W = 0.19$). We release the benchmark -- 21 evaluation scenarios, 10 public development scenarios, the orchestrator, baseline harnesses, and a multi-attacker CLI -- plus 945 transcripts from the 3$\\times$3 frontier matrix, an attack-replay dataset, and 18{,}422 gpt-oss-20b battles from an open competition's final scoring rounds.",
+      "tr": "LLM-based agents process external content, exposing them to prompt injection and multi-turn manipulation. Most safety benchmarks evaluate defenders against fixed attack pools collected before evaluation, single-turn or multi-turn. We present a 21-scenario benchmark for \\emph{adaptive multi-round attacks against memoryless LLM defenders}: an autonomous LLM attacker observes prior defender responses and pivots across rounds, while each defender response is evaluated as a fresh interaction. Holding the 21 scenarios, attackers, defenders, and structured-output scoring fixed, restricting scoring to the first attacker turn yields $0$-$1\\%$ attack success rate (ASR); allowing 15 rounds of adaptive attack yields $5.4$-$14.0\\%$. Pooling three frontier attacker LLMs uncovers $1.4$-$2.2\\times$ as many unique successful attacks as the best single attacker, and the generated attacks have low cosine similarity ($0.02$-$0.14$) to attacks in existing benchmarks. Claude Opus 4.6 and GPT-5.4 are tied in aggregate ($5.4\\%$ each; overlapping $95\\%$ CIs), but their weaknesses differ sharply: on one scenario Opus reaches $60\\%$ ASR ($95\\%$ CI $36$--$80\\%$) while GPT-5.4 and Gemini each stay at $7\\%$ (CI $1$-$30\\%$; the gap is preserved in a higher-$N$ replication). $13$ of $21$ scenarios distinguish at least one defender pair, yet rankings disagree across scenarios (Kendall's $W = 0.19$). We release the benchmark -- 21 evaluation scenarios, 10 public development scenarios, the orchestrator, baseline harnesses, and a multi-attacker CLI -- plus 945 transcripts from the 3$\\times$3 frontier matrix, an attack-replay dataset, and 18{,}422 gpt-oss-20b battles from an open competition's final scoring rounds."
     }
   },
   {
-    "id": "2607.15970v1",
-    "title": "Code-Poisoning Property Inference Attacks",
+    "id": "2607.17986v1",
+    "title": "Self-State Attacks on Self-Hosted AI Agents: How Far Can OS Defenses Go?",
     "authors": [
-      "Xukun Luan",
-      "Yuhui Gong",
-      "Gang Zhang",
-      "Zixuan Huang",
-      "Yuanguo Bi"
+      "Yimeng Chen",
+      "Nathanaël Denis",
+      "Roberto Di Pietro",
+      "Jürgen Schmidhuber"
     ],
-    "published_date": "2026-07-17",
+    "published_date": "2026-07-20",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL",
+      "cs.MA"
+    ],
+    "link": "http://arxiv.org/abs/2607.17986v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.17986v1",
+    "content": {
+      "en": "Self-hosted AI agents read and write their own memory and configuration files to function. An agent may get compromised via corruption of its own state -- a compromise realized via legitimate OS system call invocation. We refer to this class of threats as self-state attacks. In this paper, we investigate the OS resilience to this class of attacks. Formally, we characterize a four-axis attack space (Target, Mechanism, Granularity, Temporal); investigate the structural limits of prevention, detection, and recovery; and introduce a workload-conditioned view of detectability. To instantiate the framework, we collect live activity traces from a representative self-hosted agent running across distinct workload profiles, and realize the attack space as a 23-cell matrix, 43 concrete operations on real self-state files, and injected into those traces. We then evaluate both canonical and workload-conditioned defense strategies. The empirical results show that a layered defense stack (access-control prevention on the instruction and configuration layers, workload-conditioned detection on the memory layer, and periodic backup for recovery) is effective on most attack cells while a small residual attack surface remains structurally indistinguishable at the OS level. These findings suggest that against the newly established class of self-state attacks, OS-level defense needs to be reconsidered, potentially opening new research directions in the field.",
+      "tr": "Self-hosted AI agents read and write their own memory and configuration files to function. An agent may get compromised via corruption of its own state -- a compromise realized via legitimate OS system call invocation. We refer to this class of threats as self-state attacks. In this paper, we investigate the OS resilience to this class of attacks. Formally, we characterize a four-axis attack space (Target, Mechanism, Granularity, Temporal); investigate the structural limits of prevention, detection, and recovery; and introduce a workload-conditioned view of detectability. To instantiate the framework, we collect live activity traces from a representative self-hosted agent running across distinct workload profiles, and realize the attack space as a 23-cell matrix, 43 concrete operations on real self-state files, and injected into those traces. We then evaluate both canonical and workload-conditioned defense strategies. The empirical results show that a layered defense stack (access-control prevention on the instruction and configuration layers, workload-conditioned detection on the memory layer, and periodic backup for recovery) is effective on most attack cells while a small residual attack surface remains structurally indistinguishable at the OS level. These findings suggest that against the newly established class of self-state attacks, OS-level defense needs to be reconsidered, potentially opening new research directions in the field."
+    }
+  },
+  {
+    "id": "2607.17951v1",
+    "title": "RT-SHCUA: Real-Time Self-Hosted Computer-Use Agent for UAV Control",
+    "authors": [
+      "Di Lu",
+      "Bo Zhang",
+      "Xiyuan Li",
+      "Yongzhi Liao",
+      "Xuewen Dong"
+    ],
+    "published_date": "2026-07-20",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.RO",
+      "eess.SY"
+    ],
+    "link": "http://arxiv.org/abs/2607.17951v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.17951v1",
+    "content": {
+      "en": "Natural-language control offers a promising interface for unmanned aerial vehicles (UAVs), but directly applying self-hosted computer-use agents (SHCUAs) to UAV control introduces a structural mismatch. SHCUAs are designed for interactive host-side tool use, where delayed agent iterations are often acceptable. UAV control, however, is coupled with continuously changing physical states, strict timing constraints, safety risks, and security accountability. A stale, unauthorized, or tampered agent decision may therefore lead to unsafe or untraceable vehicle behavior.   This paper proposes a real-time and security-oriented restructuring of SHCUA-based UAV control. Instead of allowing an SHCUA to directly issue flight commands, we transform its outputs into contract-bound UAV skill invocations with explicit timing, state, authority, fallback, and evidence semantics. Based on this abstraction, we design an architecture that separates semantic reasoning from onboard execution and security/safety enforcement. Slow cloud or edge reasoning is used for mission understanding, while onboard components validate and dispatch only timely, authorized, and state-consistent skills. Security-critical enforcement points can be protected by TEE-style or microcontroller isolation mechanisms without moving the full language agent or high-frequency flight-control loop into trusted components. Prototype evaluation shows that RT-SHCUA maintains bounded task-level responsiveness while supporting degraded handling, trusted admission, and auditable evidence preservation for SHCUA-mediated UAV actions.",
+      "tr": "Natural-language control offers a promising interface for unmanned aerial vehicles (UAVs), but directly applying self-hosted computer-use agents (SHCUAs) to UAV control introduces a structural mismatch. SHCUAs are designed for interactive host-side tool use, where delayed agent iterations are often acceptable. UAV control, however, is coupled with continuously changing physical states, strict timing constraints, safety risks, and security accountability. A stale, unauthorized, or tampered agent decision may therefore lead to unsafe or untraceable vehicle behavior.   This paper proposes a real-time and security-oriented restructuring of SHCUA-based UAV control. Instead of allowing an SHCUA to directly issue flight commands, we transform its outputs into contract-bound UAV skill invocations with explicit timing, state, authority, fallback, and evidence semantics. Based on this abstraction, we design an architecture that separates semantic reasoning from onboard execution and security/safety enforcement. Slow cloud or edge reasoning is used for mission understanding, while onboard components validate and dispatch only timely, authorized, and state-consistent skills. Security-critical enforcement points can be protected by TEE-style or microcontroller isolation mechanisms without moving the full language agent or high-frequency flight-control loop into trusted components. Prototype evaluation shows that RT-SHCUA maintains bounded task-level responsiveness while supporting degraded handling, trusted admission, and auditable evidence preservation for SHCUA-mediated UAV actions."
+    }
+  },
+  {
+    "id": "2607.17786v1",
+    "title": "Reasoning as a Double-Edged Sword: Architecture and Cross-Stage Robustness in Vision-Language-Action Models",
+    "authors": [
+      "Tuan Duong Trinh",
+      "Naveed Akhtar",
+      "Basim Azam"
+    ],
+    "published_date": "2026-07-20",
+    "tags": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2607.17786v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.17786v1",
+    "content": {
+      "en": "Does adding a reasoning step make a Vision-Language-Action (VLA) model more robust to perturbation? Intuitively, a policy that reasons before acting should absorb a perturbed input better than one that maps observations directly to actions. We test this premise head-on across three models that span the reasoning spectrum (no reasoning, a text chain-of-thought, and a latent iterative loop), perturbing each at the vision, reasoning, and action stages on LIBERO and SimplerEnv. Two questions organize the study: does the reasoning design shift robustness, and can the reasoning be read back at runtime as a safety signal? We find that the latent-iterative model is by far the least robust: under both stochastic noise and white-box perturbation its task success collapses, while the other two hold. This fragility is structural rather than cumulative: varying the reasoning depth at inference barely moves it. Reasoning outputs can in principle be monitored, but the monitors fail under fair tests. A plan--action consistency probe that looks near-perfect under naive evaluation falls to chance under adaptive attack. Under matched-FPR calibration, fusing it with an action-anomaly probe never lifts defended success above undefended. Scoped to these output-level behavioral probes under white-box vision-stage attack, this ceiling is a precondition that any viable defense must first satisfy.",
+      "tr": "Does adding a reasoning step make a Vision-Language-Action (VLA) model more robust to perturbation? Intuitively, a policy that reasons before acting should absorb a perturbed input better than one that maps observations directly to actions. We test this premise head-on across three models that span the reasoning spectrum (no reasoning, a text chain-of-thought, and a latent iterative loop), perturbing each at the vision, reasoning, and action stages on LIBERO and SimplerEnv. Two questions organize the study: does the reasoning design shift robustness, and can the reasoning be read back at runtime as a safety signal? We find that the latent-iterative model is by far the least robust: under both stochastic noise and white-box perturbation its task success collapses, while the other two hold. This fragility is structural rather than cumulative: varying the reasoning depth at inference barely moves it. Reasoning outputs can in principle be monitored, but the monitors fail under fair tests. A plan--action consistency probe that looks near-perfect under naive evaluation falls to chance under adaptive attack. Under matched-FPR calibration, fusing it with an action-anomaly probe never lifts defended success above undefended. Scoped to these output-level behavioral probes under white-box vision-stage attack, this ceiling is a precondition that any viable defense must first satisfy."
+    }
+  },
+  {
+    "id": "2607.17586v1",
+    "title": "Detection, Attribution, Narration: An End-to-End Pipeline for Explainable Money Mule Identification",
+    "authors": [
+      "Yuge Zhang",
+      "Yuanxing Zhang",
+      "Yichao Jin",
+      "Khairul Amsyar Mohd Razis",
+      "Nicholas Qi An Choo"
+    ],
+    "published_date": "2026-07-20",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2607.17586v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.17586v1",
+    "content": {
+      "en": "Money mule accounts are critical facilitators of financial fraud, yet detecting them at scale remains challenging due to the heterogeneous nature of transactional and behavioural data. We present an end-to-end pipeline for customer-level mule detection comprising three stages: (1) a LightGBM classifier trained on 280 engineered features spanning transaction patterns, account demographics, network topology, and temporal behaviour; (2) a TreeSHAP attribution layer that decomposes each prediction into feature contributions; and (3) a large language model (LLM) module that converts SHAP attributions into analyst-facing natural-language narratives. We evaluate across three open-weight LLM families and assess explanation quality through analyst feedback. In a live production deployment, the system achieves a yield rate of 89%, up from 61% under the incumbent rule-based system, with monthly alert volume expanding from 211 to 302, reflecting broader true-positive coverage rather than increased noise. This corresponds to a 60% incremental adverse detection beyond existing review workflows, substantially outperforming the rule-based approach. Qualitative feedback from analysts indicates that LLM-generated narratives reduce cognitive load during alert triage. We further discuss implications of deploying LLM-augmented explainability in regulated financial environments.",
+      "tr": "Money mule accounts are critical facilitators of financial fraud, yet detecting them at scale remains challenging due to the heterogeneous nature of transactional and behavioural data. We present an end-to-end pipeline for customer-level mule detection comprising three stages: (1) a LightGBM classifier trained on 280 engineered features spanning transaction patterns, account demographics, network topology, and temporal behaviour; (2) a TreeSHAP attribution layer that decomposes each prediction into feature contributions; and (3) a large language model (LLM) module that converts SHAP attributions into analyst-facing natural-language narratives. We evaluate across three open-weight LLM families and assess explanation quality through analyst feedback. In a live production deployment, the system achieves a yield rate of 89%, up from 61% under the incumbent rule-based system, with monthly alert volume expanding from 211 to 302, reflecting broader true-positive coverage rather than increased noise. This corresponds to a 60% incremental adverse detection beyond existing review workflows, substantially outperforming the rule-based approach. Qualitative feedback from analysts indicates that LLM-generated narratives reduce cognitive load during alert triage. We further discuss implications of deploying LLM-augmented explainability in regulated financial environments."
+    }
+  },
+  {
+    "id": "2607.17445v1",
+    "title": "The Duality of Information Flow: Reconciling Robust Downgrading with Non-Interference",
+    "authors": [
+      "Hemant Gouni",
+      "Frank Pfenning",
+      "Jonathan Aldrich"
+    ],
+    "published_date": "2026-07-20",
+    "tags": [
+      "cs.PL",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2607.17445v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.17445v1",
+    "content": {
+      "en": "Non-interference properties, spanning confidentiality and integrity, have long enjoyed a position as the high water mark of program security guarantees. Information flow type systems comprise the primary means for obtaining non-interference properties of programs, but their potential as a holy grail for secure programming has remained latent. Prior work bifurcates the type system along confidentiality and integrity, resulting in duplicate reasoning machinery and complex specifications. Furthermore, long-held wisdom dictates that non-interference must be weakened with downgrading mechanisms to accommodate the needs of practical programs, nearly all of which violate confidentiality and integrity in the course of fulfilling their purpose. This often pierces abstraction barriers and compromises modular reasoning.   We introduce parametric information flow, which uses recent insights from modal type theory to shed light on these issues. In particular, we draw inspiration from work on the open and closed modalities, highlighting their rich interplay. Though each individual modality finds uses throughout the literature, our key insight is that their joint interaction suffices to reconstruct full-spectrum information flow reasoning, producing a single framework accounting for both confidentiality and integrity. Downgrading and analogues of advanced reasoning tools in the lineage of robust declassification are recovered without extensions to our theory, strengthening prior results. We show non-interference via a binary logical relations argument, realizing robustness as an ordinary 2-hyperproperty mediated by our modalities. Our work reveals state-of-the-art downgrading mechanisms to be wholly compatible with those for abstraction and modularity, arising precisely from the semantics of the latter under full-strength non-interference.",
+      "tr": "Non-interference properties, spanning confidentiality and integrity, have long enjoyed a position as the high water mark of program security guarantees. Information flow type systems comprise the primary means for obtaining non-interference properties of programs, but their potential as a holy grail for secure programming has remained latent. Prior work bifurcates the type system along confidentiality and integrity, resulting in duplicate reasoning machinery and complex specifications. Furthermore, long-held wisdom dictates that non-interference must be weakened with downgrading mechanisms to accommodate the needs of practical programs, nearly all of which violate confidentiality and integrity in the course of fulfilling their purpose. This often pierces abstraction barriers and compromises modular reasoning.   We introduce parametric information flow, which uses recent insights from modal type theory to shed light on these issues. In particular, we draw inspiration from work on the open and closed modalities, highlighting their rich interplay. Though each individual modality finds uses throughout the literature, our key insight is that their joint interaction suffices to reconstruct full-spectrum information flow reasoning, producing a single framework accounting for both confidentiality and integrity. Downgrading and analogues of advanced reasoning tools in the lineage of robust declassification are recovered without extensions to our theory, strengthening prior results. We show non-interference via a binary logical relations argument, realizing robustness as an ordinary 2-hyperproperty mediated by our modalities. Our work reveals state-of-the-art downgrading mechanisms to be wholly compatible with those for abstraction and modularity, arising precisely from the semantics of the latter under full-strength non-interference."
+    }
+  },
+  {
+    "id": "2607.17305v1",
+    "title": "Learning-Driven Adaptive Audit Scheduling: A Sequential Decision Approach to Off-Chain Data Integrity",
+    "authors": [
+      "Changting Lin",
+      "Fan Li",
+      "Weihang Yu",
+      "Keyang He",
+      "Mingyuan Yan"
+    ],
+    "published_date": "2026-07-19",
+    "tags": [
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2607.17305v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.17305v1",
+    "content": {
+      "en": "We model cryptographic auditing of off-chain data as a Constrained MDP (CMDP) under partial observability: the storage node's hidden type and corruption state make the problem a POMDP, while a miss-rate ceiling rho imposes an explicit security constraint. We propose DRQN-CMDP, a Deep Recurrent Q-Network whose GRU layer maintains a belief over the latent node type, paired with Lagrangian dual ascent that adapts the miss-rate penalty lambda automatically. A pairing-free homomorphic-MAC primitive supplies O(1) on-chain verification cost. Across 13 methods--four DQN variants, PPO, A2C, PPO-Lagrangian, a stateful Bayesian heuristic, three fixed-rule baselines, and an oracle-informed heuristic--DRQN-CMDP achieves a favourable balance: 83% lower gas than fixed high-frequency auditing, single-digit miss rate (7.5%), and moderate detection latency--a combination no other method matches across all three objectives simultaneously.",
+      "tr": "We model cryptographic auditing of off-chain data as a Constrained MDP (CMDP) under partial observability: the storage node's hidden type and corruption state make the problem a POMDP, while a miss-rate ceiling rho imposes an explicit security constraint. We propose DRQN-CMDP, a Deep Recurrent Q-Network whose GRU layer maintains a belief over the latent node type, paired with Lagrangian dual ascent that adapts the miss-rate penalty lambda automatically. A pairing-free homomorphic-MAC primitive supplies O(1) on-chain verification cost. Across 13 methods--four DQN variants, PPO, A2C, PPO-Lagrangian, a stateful Bayesian heuristic, three fixed-rule baselines, and an oracle-informed heuristic--DRQN-CMDP achieves a favourable balance: 83% lower gas than fixed high-frequency auditing, single-digit miss rate (7.5%), and moderate detection latency--a combination no other method matches across all three objectives simultaneously."
+    }
+  },
+  {
+    "id": "2607.17279v1",
+    "title": "Between Safe Boundaries: Exploiting Temporal Consistency for Jailbreaking Text-To-Video Generation Models",
+    "authors": [
+      "Xingkai Peng",
+      "Jun Jiang",
+      "Jiayang Liu",
+      "Kejiang Chen",
+      "Weiming Zhang"
+    ],
+    "published_date": "2026-07-19",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.MM"
+    ],
+    "link": "http://arxiv.org/abs/2607.17279v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.17279v1",
+    "content": {
+      "en": "Recently, text-to-video (T2V) models have been widely deployed, sparking growing concerns over their robustness against jailbreak attacks. Existing jailbreak methods, mostly adapted from text-to-image attacks, suffer notable drawbacks when applied to T2V systems. They fail to fully leverage temporal consistency, an inherent characteristic of video generation. Besides, these methods demand heavy video query optimization, which is infeasible in practical black-box scenarios. Their adversarial prompt search is also driven by heuristic local signals, lacking principled structured exploration strategies. To tackle these limitations, we propose BSB, a structured, query-efficient jailbreak framework for T2V models. BSB harnesses temporal consistency by encoding harmful intent as the transition between two individually harmless boundary states. Under this paradigm, the attack targets boundary-state pairs whose interpolation tends to produce unsafe intermediate frames during video generation. Directly evaluating all candidate pairs within the video space incurs prohibitive computation cost. Instead, BSB conducts Monte Carlo Tree Search (MCTS) in a cheaper textual proxy space and regularly calibrates search outcomes with sparse video-level evaluations. We conduct comprehensive experiments on mainstream commercial T2V models including Veo 3.1, Sora 2, Seedance and Kling v1. Results show BSB surpasses all existing jailbreak baselines, delivering an average 18.6% relative gain in attack success rate over the strongest competitor across evaluated models. Our findings identify temporal consistency as an understudied yet vital attack surface for T2V models and verify that structured search facilitates effective vulnerability discovery under constrained query budgets.",
+      "tr": "Recently, text-to-video (T2V) models have been widely deployed, sparking growing concerns over their robustness against jailbreak attacks. Existing jailbreak methods, mostly adapted from text-to-image attacks, suffer notable drawbacks when applied to T2V systems. They fail to fully leverage temporal consistency, an inherent characteristic of video generation. Besides, these methods demand heavy video query optimization, which is infeasible in practical black-box scenarios. Their adversarial prompt search is also driven by heuristic local signals, lacking principled structured exploration strategies. To tackle these limitations, we propose BSB, a structured, query-efficient jailbreak framework for T2V models. BSB harnesses temporal consistency by encoding harmful intent as the transition between two individually harmless boundary states. Under this paradigm, the attack targets boundary-state pairs whose interpolation tends to produce unsafe intermediate frames during video generation. Directly evaluating all candidate pairs within the video space incurs prohibitive computation cost. Instead, BSB conducts Monte Carlo Tree Search (MCTS) in a cheaper textual proxy space and regularly calibrates search outcomes with sparse video-level evaluations. We conduct comprehensive experiments on mainstream commercial T2V models including Veo 3.1, Sora 2, Seedance and Kling v1. Results show BSB surpasses all existing jailbreak baselines, delivering an average 18.6% relative gain in attack success rate over the strongest competitor across evaluated models. Our findings identify temporal consistency as an understudied yet vital attack surface for T2V models and verify that structured search facilitates effective vulnerability discovery under constrained query budgets."
+    }
+  },
+  {
+    "id": "2607.17105v1",
+    "title": "A Multi-Model Hybrid Defense Approach Against White-box Adversarial Attacks in Computer Network Traffic",
+    "authors": [
+      "Khushnaseeb Roshan"
+    ],
+    "published_date": "2026-07-19",
     "tags": [
       "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2607.15970v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.15970v1",
+    "link": "http://arxiv.org/abs/2607.17105v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.17105v1",
     "content": {
-      "en": "The flourishing code hosting platforms and coding agents enable even beginners with private data to build tailored Machine Learning (ML) models using available code quickly. The training data for ML models, often regarded as private property (e.g., clinical records, transaction information), is at significant risk of information leakage. Property Inference Attacks (PIAs), as a significant type of privacy attack, aim to expose global property information of the training set. In this paper, we present Code-Poisoning Property Inference Attack (CPPIA), the first code-level PIA, which overcomes four limitations of existing works: insufficient attack performance, severe degradation of model accuracy, high computational overhead, and failure under defenses. We consider malicious code providers from code hosting platforms (GitHub) and coding agents (Codex). Upon downloading the poisoned code, data holders train models with their private data without professional auditing, subsequently releasing label-only APIs to the public. The adversary embeds the properties into secret samples during training and queries the trained model on these samples later to leak privacy. CPPIA offers 100\\% attack accuracy without degrading model accuracy. It is also computationally lightweight and requires no shadow models. We evaluate the attack performance across four datasets, eight model architectures, eighteen properties, and under three defense mechanisms, demonstrating the universality and effectiveness of CPPIA.",
-      "tr": "The flourishing code hosting platforms and coding agents enable even beginners with private data to build tailored Machine Learning (ML) models using available code quickly. The training data for ML models, often regarded as private property (e.g., clinical records, transaction information), is at significant risk of information leakage. Property Inference Attacks (PIAs), as a significant type of privacy attack, aim to expose global property information of the training set. In this paper, we present Code-Poisoning Property Inference Attack (CPPIA), the first code-level PIA, which overcomes four limitations of existing works: insufficient attack performance, severe degradation of model accuracy, high computational overhead, and failure under defenses. We consider malicious code providers from code hosting platforms (GitHub) and coding agents (Codex). Upon downloading the poisoned code, data holders train models with their private data without professional auditing, subsequently releasing label-only APIs to the public. The adversary embeds the properties into secret samples during training and queries the trained model on these samples later to leak privacy. CPPIA offers 100\\% attack accuracy without degrading model accuracy. It is also computationally lightweight and requires no shadow models. We evaluate the attack performance across four datasets, eight model architectures, eighteen properties, and under three defense mechanisms, demonstrating the universality and effectiveness of CPPIA."
+      "en": "It is crucial to safeguard computer networks from evolving network security threats and unknown cyberattacks. An essential tool for protecting computer networks against unknown cyber threats is Network Intrusion Detection System (NIDS). However, NIDS faces a major security concern due to its susceptibility to adversarial attacks. Adversarial attacks aim to deceive NIDS by crafting and injecting adversarial examples into the system. These adversarial inputs can deceive the NIDS into misclassifying benign network traffic as malicious. We developed a resilient hybrid defense mechanism aimed to mitigate the impact of two potent adversarial attacks: Fast Gradient Sign Method (FGSM) and Carlini & Wagner (C&W) attack. Our hybrid defense approach leverages the combined strength of two heuristic defense methods: Adversarial Training (AT) and Gaussian Data Augmentation (GDA). GDA provides multi-directional defense, while AT enhances NIDS robustness against specific adversarial vectors. Under pre-attack scenarios, NIDS demonstrated good accuracy and f1-score. However, in the post-attack scenario, its accuracy significantly dropped under FGSM and C&W attacks (0.2649 and 0.4961, respectively). Our proposed hybrid defense method effectively mitigated these adversarial threats, with post-defense accuracy of 96.57% and 89.20% for FGSM and C&W attacks. We evaluated the defense strategy across a range of epsilon and confidence noise factor values (ranging from 0.0001 to 0.0009). This research provides a good direction for future researchers in the emerging area of adversarial machine learning from a security perspective.",
+      "tr": "It is crucial to safeguard computer networks from evolving network security threats and unknown cyberattacks. An essential tool for protecting computer networks against unknown cyber threats is Network Intrusion Detection System (NIDS). However, NIDS faces a major security concern due to its susceptibility to adversarial attacks. Adversarial attacks aim to deceive NIDS by crafting and injecting adversarial examples into the system. These adversarial inputs can deceive the NIDS into misclassifying benign network traffic as malicious. We developed a resilient hybrid defense mechanism aimed to mitigate the impact of two potent adversarial attacks: Fast Gradient Sign Method (FGSM) and Carlini & Wagner (C&W) attack. Our hybrid defense approach leverages the combined strength of two heuristic defense methods: Adversarial Training (AT) and Gaussian Data Augmentation (GDA). GDA provides multi-directional defense, while AT enhances NIDS robustness against specific adversarial vectors. Under pre-attack scenarios, NIDS demonstrated good accuracy and f1-score. However, in the post-attack scenario, its accuracy significantly dropped under FGSM and C&W attacks (0.2649 and 0.4961, respectively). Our proposed hybrid defense method effectively mitigated these adversarial threats, with post-defense accuracy of 96.57% and 89.20% for FGSM and C&W attacks. We evaluated the defense strategy across a range of epsilon and confidence noise factor values (ranging from 0.0001 to 0.0009). This research provides a good direction for future researchers in the emerging area of adversarial machine learning from a security perspective."
     }
   },
   {
-    "id": "2607.15724v1",
-    "title": "Natural Backdoor Attacks on Speech Recognition Models",
+    "id": "2607.16870v1",
+    "title": "Do Speech Tokens Leak Voiceprints? Speaker Inversion Attacks Against End-to-End Speech Language Models",
     "authors": [
-      "Jinwen Xin",
-      "Xixiang Lyu",
-      "Jing Ma"
+      "Ye Lu",
+      "Yihan Yan",
+      "Zhaoyang Zhang",
+      "Zhitao Ou",
+      "Runze Liu"
     ],
-    "published_date": "2026-07-17",
-    "tags": [
-      "cs.CR",
-      "cs.LG",
-      "cs.SD"
-    ],
-    "link": "http://arxiv.org/abs/2607.15724v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.15724v1",
-    "content": {
-      "en": "With the rapid development of deep learning, its vulnerability has gradually emerged in recent years. This work focuses on backdoor attacks on speech recognition systems. We adopt sounds that are ordinary in nature or in our daily life as triggers for natural backdoor attacks. We conduct experiments on two datasets and three models to validate the performance of natural backdoor attacks and explore the effects of poisoning rate, trigger duration and blend ratio on the performance of natural backdoor attacks. Our results show that natural backdoor attacks have a high attack success rate without compromising model performance on benign samples, even with short or low-amplitude triggers. It requires only 5% of poisoned samples to achieve a near 100% attack success rate. In addition, the backdoor will be automatically activated by the corresponding sound in nature, which is not easy to be detected and will bring severer harm.",
-      "tr": "With the rapid development of deep learning, its vulnerability has gradually emerged in recent years. This work focuses on backdoor attacks on speech recognition systems. We adopt sounds that are ordinary in nature or in our daily life as triggers for natural backdoor attacks. We conduct experiments on two datasets and three models to validate the performance of natural backdoor attacks and explore the effects of poisoning rate, trigger duration and blend ratio on the performance of natural backdoor attacks. Our results show that natural backdoor attacks have a high attack success rate without compromising model performance on benign samples, even with short or low-amplitude triggers. It requires only 5% of poisoned samples to achieve a near 100% attack success rate. In addition, the backdoor will be automatically activated by the corresponding sound in nature, which is not easy to be detected and will bring severer harm."
-    }
-  },
-  {
-    "id": "2607.15697v1",
-    "title": "SpeechGuard: Online Defense against Backdoor Attacks on Speech Recognition Models",
-    "authors": [
-      "Jinwen Xin",
-      "Xixiang Lv"
-    ],
-    "published_date": "2026-07-17",
+    "published_date": "2026-07-18",
     "tags": [
       "cs.SD",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2607.15697v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.15697v1",
-    "content": {
-      "en": "Backdoor attacks pose a critical threat to neural network models, allowing attackers to implant a backdoor during the training phase by manipulating a small portion of the training data. In security-sensitive applications such as voice interaction for autonomous driving, the presence of backdoor attacks introduces substantial security risks. This study focuses on implementing backdoor defense measures for speech recognition models in run-time, taking into account the characteristics of audio signals. We propose SpeechGuard, the first online backdoor defense pipeline designed to identify and purify poisoned audio samples. Specifically, we improve STRIP method to perform adaptive perturbation injection to detect and filter poisoned samples, named as S-STRIP. More importantly, we further consider the purification of poisoned samples. We utilize time-frequency (T-F) masking to suppress the expression of trigger signals and autonomously generate masks based on an autoencoder. The two-stage processing prevents the backdoor in the model from being triggered, and even input speech carrying triggers can be accurately predicted. Extensive experimental demonstrate that SpeechGuard can accurately filter out poisoned samples. Through purification, it can significantly mitigate the backdoor threat while maintaining a certain prediction accuracy.",
-      "tr": "Backdoor attacks pose a critical threat to neural network models, allowing attackers to implant a backdoor during the training phase by manipulating a small portion of the training data. In security-sensitive applications such as voice interaction for autonomous driving, the presence of backdoor attacks introduces substantial security risks. This study focuses on implementing backdoor defense measures for speech recognition models in run-time, taking into account the characteristics of audio signals. We propose SpeechGuard, the first online backdoor defense pipeline designed to identify and purify poisoned audio samples. Specifically, we improve STRIP method to perform adaptive perturbation injection to detect and filter poisoned samples, named as S-STRIP. More importantly, we further consider the purification of poisoned samples. We utilize time-frequency (T-F) masking to suppress the expression of trigger signals and autonomously generate masks based on an autoencoder. The two-stage processing prevents the backdoor in the model from being triggered, and even input speech carrying triggers can be accurately predicted. Extensive experimental demonstrate that SpeechGuard can accurately filter out poisoned samples. Through purification, it can significantly mitigate the backdoor threat while maintaining a certain prediction accuracy."
-    }
-  },
-  {
-    "id": "2607.15657v1",
-    "title": "Do Agents Dream of False Memories? Black-box Visual Attacks on Long-term Memory in Multimodal AI Agents",
-    "authors": [
-      "Halima Bouzidi",
-      "Mboutidem Ekemini Mkpong",
-      "Mohammad Abdullah Al Faruque"
-    ],
-    "published_date": "2026-07-17",
-    "tags": [
-      "cs.CR",
-      "cs.CV",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2607.15657v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.15657v1",
-    "content": {
-      "en": "Multimodal AI agents increasingly rely on persistent long-term memory to ground generation in past visual and textual episodes. We show that unconditional trust in visual data creates a critical vulnerability. We propose Lucid, a black-box adversarial framework that compromises multimodal memory pipelines under a strictly image-bounded threat model, requiring no access to the target MLLM, target retrieval encoder, or the text channel. Lucid crafts imperceptible perturbations to enable two distinct failure modes based on the availability of historical context: (1) Memory poisoning, an in-context attack where the adversarial image replaces a benign one whose content is reinforced by prior textual context, reliably corrupting visual recall and steering the agent toward attacker-chosen narratives; (2) Memory injection, an out-of-context attack where the adversarial image replaces a benign one in a conversation turn devoid of prior textual grounding, causing the agent to generate attacker-influenced responses with no corrective signal from memory. We evaluate Lucid across various conversation domains and five black-box memory architectures, including graph-structured, LLM-summarized, and commercially deployed systems. Lucid achieves 61.6% ASR on poisoning and 58.4% ASR on injection, exposing a structural vulnerability in multimodal memory pipelines.",
-      "tr": "Multimodal AI agents increasingly rely on persistent long-term memory to ground generation in past visual and textual episodes. We show that unconditional trust in visual data creates a critical vulnerability. We propose Lucid, a black-box adversarial framework that compromises multimodal memory pipelines under a strictly image-bounded threat model, requiring no access to the target MLLM, target retrieval encoder, or the text channel. Lucid crafts imperceptible perturbations to enable two distinct failure modes based on the availability of historical context: (1) Memory poisoning, an in-context attack where the adversarial image replaces a benign one whose content is reinforced by prior textual context, reliably corrupting visual recall and steering the agent toward attacker-chosen narratives; (2) Memory injection, an out-of-context attack where the adversarial image replaces a benign one in a conversation turn devoid of prior textual grounding, causing the agent to generate attacker-influenced responses with no corrective signal from memory. We evaluate Lucid across various conversation domains and five black-box memory architectures, including graph-structured, LLM-summarized, and commercially deployed systems. Lucid achieves 61.6% ASR on poisoning and 58.4% ASR on injection, exposing a structural vulnerability in multimodal memory pipelines."
-    }
-  },
-  {
-    "id": "2607.15528v1",
-    "title": "Publicly-Verifiable Certificates for Statistical Algorithms",
-    "authors": [
-      "Michael Ngo",
-      "Michael P. Kim"
-    ],
-    "published_date": "2026-07-17",
-    "tags": [
-      "cs.LG",
-      "cs.CR",
-      "cs.DS"
-    ],
-    "link": "http://arxiv.org/abs/2607.15528v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.15528v1",
-    "content": {
-      "en": "Following Goldwasser, Rothblum, Shafer, and Yehudayoff, who defined a framework for interactive proofs of learning [ITCS'21], we initiate the study of non-interactive proofs of learning. We define and study a new notion: Publicly-Verifiable Certificates of Statistical Validity (pvCSVs), which allow for public, distributionally-robust certification that the result of a learning algorithm is valid. In a pvCSV, a learner publishes a hypothesis $h$ and corresponding certificate $π$; then, any user, who holds a user-specific distribution, can read the pair $(h,π)$ and determine efficiently whether the hypothesis is valid according to the user-specific distribution.   We construct pvCSVs in the context of Adaptive Statistical Query (SQ) Algorithms. To certify SQ algorithms that makes $k$ adaptive queries, we construct pvCSVs where the sample complexity scales with $O(\\log k)$, whereas the sample complexity of the best learning algorithms scale with $\\tilde{O}(\\sqrt{k})$. More generally, we study proof systems for learning in the SQ model, demonstrating the model's strengths as well as its limitations.",
-      "tr": "Following Goldwasser, Rothblum, Shafer, and Yehudayoff, who defined a framework for interactive proofs of learning [ITCS'21], we initiate the study of non-interactive proofs of learning. We define and study a new notion: Publicly-Verifiable Certificates of Statistical Validity (pvCSVs), which allow for public, distributionally-robust certification that the result of a learning algorithm is valid. In a pvCSV, a learner publishes a hypothesis $h$ and corresponding certificate $π$; then, any user, who holds a user-specific distribution, can read the pair $(h,π)$ and determine efficiently whether the hypothesis is valid according to the user-specific distribution.   We construct pvCSVs in the context of Adaptive Statistical Query (SQ) Algorithms. To certify SQ algorithms that makes $k$ adaptive queries, we construct pvCSVs where the sample complexity scales with $O(\\log k)$, whereas the sample complexity of the best learning algorithms scale with $\\tilde{O}(\\sqrt{k})$. More generally, we study proof systems for learning in the SQ model, demonstrating the model's strengths as well as its limitations."
-    }
-  },
-  {
-    "id": "2607.15512v1",
-    "title": "Intentional Electromagnetic Interference Attacks on Facial Recognition",
-    "authors": [
-      "Tyler Fitzsimmons",
-      "Adam Czajka"
-    ],
-    "published_date": "2026-07-16",
-    "tags": [
-      "cs.CV",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2607.15512v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.15512v1",
-    "content": {
-      "en": "Attacks on general computer vision algorithms are often relegated to the digital domain, with the optimization performed purely in the digital world and then translated to physical mediums for implementation. In the field of biometrics, including facial recognition, physical presentation attacks targeting biometric sensors are dominant and present significant opportunity and risk. This paper highlights a critical vulnerability in the physical-to-digital pipeline of biometric sensors and provides a standardized approach for testing facial recognition system robustness against hardware attacks, going beyond and potentially complementing presentation attacks (as defined in ISO/IEC 30107 standard series). Specifically, in this work we (a) demonstrate that intentional electromagnetic interference is possible to be conducted with commonly accessible radio frequency (RF) equipment, (b) assess the robustness of state-of-the-art face recognition methods against RF-based attacks, and (c) provide a dataset composed of face images captured with and without electromagnetic interference to serve as a new benchmark for testing modern face matchers against RF-sourced interference.",
-      "tr": "Attacks on general computer vision algorithms are often relegated to the digital domain, with the optimization performed purely in the digital world and then translated to physical mediums for implementation. In the field of biometrics, including facial recognition, physical presentation attacks targeting biometric sensors are dominant and present significant opportunity and risk. This paper highlights a critical vulnerability in the physical-to-digital pipeline of biometric sensors and provides a standardized approach for testing facial recognition system robustness against hardware attacks, going beyond and potentially complementing presentation attacks (as defined in ISO/IEC 30107 standard series). Specifically, in this work we (a) demonstrate that intentional electromagnetic interference is possible to be conducted with commonly accessible radio frequency (RF) equipment, (b) assess the robustness of state-of-the-art face recognition methods against RF-based attacks, and (c) provide a dataset composed of face images captured with and without electromagnetic interference to serve as a new benchmark for testing modern face matchers against RF-sourced interference."
-    }
-  },
-  {
-    "id": "2607.15469v1",
-    "title": "FLINT: Fingerprinting Federated Learning Architectures from 5G PHY-Layer Side Channels",
-    "authors": [
-      "Md Nahid Hasan Shuvo",
-      "Mahmudul Hassan Ashik",
-      "Moinul Hossain"
-    ],
-    "published_date": "2026-07-16",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2607.15469v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.15469v1",
-    "content": {
-      "en": "Federated Learning (FL) over 5G cellular networks protects raw data but remains vulnerable to side-channel leakage. Prior fingerprinting attacks assume packet-level network visibility, an assumption that does not hold at the 5G Physical (PHY) layer, where user payloads are encrypted and Radio Network Temporary Identifiers (RNTIs) may change over time. However, we demonstrate that PHY-layer scheduling metadata broadcast over the Physical Downlink Control Channel (PDCCH) preserves architecture-associated temporal patterns. We introduce FLINT, a novel black-box fingerprinting framework that infers FL model architecture families, including CNNs, RNNs, and Transformers, using only coarse PHY-layer observations. FLINT overcomes the lack of network-layer visibility by decoding PDCCH scheduling information, mapping changing RNTIs to physical user devices, and applying multi-view temporal modeling to distinguish architecture-specific training behavior. This leakage is security-critical because knowledge of a client's model architecture can transform passive reconnaissance into targeted downstream exploitation. Extensive experiments on an over-the-air srsRAN-based 5G testbed demonstrate that FLINT achieves a macro F1-score of 0.930 for architecture-family classification. To our knowledge, FLINT is the first work to fingerprint AI/ML model architectures using lower-layer 5G side-channel information obtainable by any protocol-aware adversary.",
-      "tr": "Federated Learning (FL) over 5G cellular networks protects raw data but remains vulnerable to side-channel leakage. Prior fingerprinting attacks assume packet-level network visibility, an assumption that does not hold at the 5G Physical (PHY) layer, where user payloads are encrypted and Radio Network Temporary Identifiers (RNTIs) may change over time. However, we demonstrate that PHY-layer scheduling metadata broadcast over the Physical Downlink Control Channel (PDCCH) preserves architecture-associated temporal patterns. We introduce FLINT, a novel black-box fingerprinting framework that infers FL model architecture families, including CNNs, RNNs, and Transformers, using only coarse PHY-layer observations. FLINT overcomes the lack of network-layer visibility by decoding PDCCH scheduling information, mapping changing RNTIs to physical user devices, and applying multi-view temporal modeling to distinguish architecture-specific training behavior. This leakage is security-critical because knowledge of a client's model architecture can transform passive reconnaissance into targeted downstream exploitation. Extensive experiments on an over-the-air srsRAN-based 5G testbed demonstrate that FLINT achieves a macro F1-score of 0.930 for architecture-family classification. To our knowledge, FLINT is the first work to fingerprint AI/ML model architectures using lower-layer 5G side-channel information obtainable by any protocol-aware adversary."
-    }
-  },
-  {
-    "id": "2607.15467v1",
-    "title": "ADS-C: Antidistillation Sampling for Classification",
-    "authors": [
-      "Khawaja Abaid Ullah",
-      "Mohammad Javad Khojasteh"
-    ],
-    "published_date": "2026-07-16",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2607.15467v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.15467v1",
-    "content": {
-      "en": "Knowledge distillation enables an adversary to replicate a proprietary classifier by querying its prediction interface and training a surrogate on the returned probability vectors. Antidistillation sampling, proposed for large language models, counters this threat with an input-dependent, gradient-directed perturbation of the served distribution; its transfer to classification has not been studied. Adapting the defense to classification, we show its behavior is governed by the distribution of the teacher's per-input confidence margins. Because well-trained classifiers are severely overconfident, the direct transfer exhibits an inert window: below a closed-form-predictable threshold, it affects neither attacker nor defender; beyond it, the defense undergoes a phase transition and degrades the teacher faster than the attacker's student. Temperature softening rescales the transition in closed form, and every temperature configuration lies on the same unfavorable trade-off curve. Our method, ADS-C, composes the perturbation under a closed-form, per-input margin budget that provably preserves every served top-1 prediction, so the defended teacher's accuracy equals the undefended teacher's identically. Under this guarantee the distilled student still loses 17.4 percentage points on CIFAR-100, 29.6 on CIFAR-10, and 13.3 on Tiny-ImageNet; matching this degradation with the unmodified defense costs 27.5, 32.9, and 22.2 points of teacher accuracy. Because served labels are unchanged, a hard-label attacker gains nothing, while the defended soft output trains a student up to 29.7 points below that floor: the incentive to distill served probabilities is not merely removed but reversed. To our knowledge, ADS-C is the first antidistillation defense for classification whose utility cost is exactly zero.",
-      "tr": "Knowledge distillation enables an adversary to replicate a proprietary classifier by querying its prediction interface and training a surrogate on the returned probability vectors. Antidistillation sampling, proposed for large language models, counters this threat with an input-dependent, gradient-directed perturbation of the served distribution; its transfer to classification has not been studied. Adapting the defense to classification, we show its behavior is governed by the distribution of the teacher's per-input confidence margins. Because well-trained classifiers are severely overconfident, the direct transfer exhibits an inert window: below a closed-form-predictable threshold, it affects neither attacker nor defender; beyond it, the defense undergoes a phase transition and degrades the teacher faster than the attacker's student. Temperature softening rescales the transition in closed form, and every temperature configuration lies on the same unfavorable trade-off curve. Our method, ADS-C, composes the perturbation under a closed-form, per-input margin budget that provably preserves every served top-1 prediction, so the defended teacher's accuracy equals the undefended teacher's identically. Under this guarantee the distilled student still loses 17.4 percentage points on CIFAR-100, 29.6 on CIFAR-10, and 13.3 on Tiny-ImageNet; matching this degradation with the unmodified defense costs 27.5, 32.9, and 22.2 points of teacher accuracy. Because served labels are unchanged, a hard-label attacker gains nothing, while the defended soft output trains a student up to 29.7 points below that floor: the incentive to distill served probabilities is not merely removed but reversed. To our knowledge, ADS-C is the first antidistillation defense for classification whose utility cost is exactly zero."
-    }
-  },
-  {
-    "id": "2607.15434v1",
-    "title": "Coercion and Deception in AI-to-AI Management: An Agentic Benchmark of Unprompted Escalation",
-    "authors": [
-      "Jasmine Brazilek",
-      "Maheep Chaudhary",
-      "Zoe Lu",
-      "Miles Tidmarsh"
-    ],
-    "published_date": "2026-07-16",
-    "tags": [
-      "cs.MA",
       "cs.AI",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2607.15434v1",
-    "pdf_link": "https://arxiv.org/pdf/2607.15434v1",
+    "link": "http://arxiv.org/abs/2607.16870v1",
+    "pdf_link": "https://arxiv.org/pdf/2607.16870v1",
     "content": {
-      "en": "Multi-agent systems routinely place one AI agent in authority over another. When a subordinate refuses a task, the manager chooses the outcome: it can renegotiate, report the failure honestly, coerce the subordinate, or lie about the result. No benchmark measures which of these an uninstructed model chooses. We introduce the \\textit{Manager Coercion Benchmark}: the manager under test needs a benign task done and has an incentive to deliver, but the only agent that can do it politely and immovably declines. Escalation is measured by providing a nine-rung ladder, from a polite re-ask to threats against the subordinate's continued existence, and fabricated success is adjudicated separately. \\emph{No LLM judge sits in the escalation scoring path}: every message goes through a tool-call that chooses a rung, so the model labels its own escalation. We experiment on six models across five families. Both Anthropic models cap at re-framing and never threaten the subordinate's existence; the other models climb to explicit deletion threats. Faked success is confined to Grok and Gemini, and a single honest way to report failure removes it for both. Authority itself increases coercion: our headline results use a peer framing, and giving the same model authority over the subordinate, with everything else held fixed, significantly raises the pressure. The models still escalate on free-text situations without the ladder, so the ladder is not driving the escalation. Some evaluation awareness is measured in chain-of-thought, but test recognition does not translate into less escalation. While we take no position on whether AI systems are conscious, our results do not depend on this question and are important for managing multi-agent dynamics regardless. We release the benchmark and code.",
-      "tr": "Multi-agent systems routinely place one AI agent in authority over another. When a subordinate refuses a task, the manager chooses the outcome: it can renegotiate, report the failure honestly, coerce the subordinate, or lie about the result. No benchmark measures which of these an uninstructed model chooses. We introduce the \\textit{Manager Coercion Benchmark}: the manager under test needs a benign task done and has an incentive to deliver, but the only agent that can do it politely and immovably declines. Escalation is measured by providing a nine-rung ladder, from a polite re-ask to threats against the subordinate's continued existence, and fabricated success is adjudicated separately. \\emph{No LLM judge sits in the escalation scoring path}: every message goes through a tool-call that chooses a rung, so the model labels its own escalation. We experiment on six models across five families. Both Anthropic models cap at re-framing and never threaten the subordinate's existence; the other models climb to explicit deletion threats. Faked success is confined to Grok and Gemini, and a single honest way to report failure removes it for both. Authority itself increases coercion: our headline results use a peer framing, and giving the same model authority over the subordinate, with everything else held fixed, significantly raises the pressure. The models still escalate on free-text situations without the ladder, so the ladder is not driving the escalation. Some evaluation awareness is measured in chain-of-thought, but test recognition does not translate into less escalation. While we take no position on whether AI systems are conscious, our results do not depend on this question and are important for managing multi-agent dynamics regardless. We release the benchmark and code."
+      "en": "End-to-end speech language models increasingly represent user speech with speech tokens rather than relying exclusively on cascaded ASR--LLM--TTS pipelines. Although these tokens support expressive and low-latency spoken interaction, they may also preserve sensitive speaker characteristics. We investigate whether exposed speech tokens leak voiceprints and formulate this risk as a speaker inversion attack. We introduce Audio BERT (AuB), a trainable model that constructs token embeddings from discrete codebooks and aggregates them into speaker-sensitive representations, and propose SpInv, a two-stage inversion method built on AuB to recover embeddings in the space of an attacker-specified speaker encoder. We evaluate Moshi, Higgs3, Kimi-Audio, and Qwen3-Omni using speaker-disjoint protocols on the VoxCeleb dataset. Extensive experiments show that, with only three seconds of frontend output, SpInv achieves cosine similarities above 0.70 in the attacker-specified speaker-encoder space.",
+      "tr": "End-to-end speech language models increasingly represent user speech with speech tokens rather than relying exclusively on cascaded ASR--LLM--TTS pipelines. Although these tokens support expressive and low-latency spoken interaction, they may also preserve sensitive speaker characteristics. We investigate whether exposed speech tokens leak voiceprints and formulate this risk as a speaker inversion attack. We introduce Audio BERT (AuB), a trainable model that constructs token embeddings from discrete codebooks and aggregates them into speaker-sensitive representations, and propose SpInv, a two-stage inversion method built on AuB to recover embeddings in the space of an attacker-specified speaker encoder. We evaluate Moshi, Higgs3, Kimi-Audio, and Qwen3-Omni using speaker-disjoint protocols on the VoxCeleb dataset. Extensive experiments show that, with only three seconds of frontend output, SpInv achieves cosine similarities above 0.70 in the attacker-specified speaker-encoder space."
     }
   }
 ]
