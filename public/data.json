@@ -1,217 +1,212 @@
 [
   {
-    "id": "2608.28499v1",
-    "title": "REPLICANT: Learning Policies for Evading and Hardening Malware Detectors",
+    "id": "2609.01487v1",
+    "title": "Defense-as-Skill: Evolving Runtime Guard Skill for Skill-Augmented Agents",
     "authors": [
-      "Shae McFadden",
-      "Ilias Tsingenopoulos",
-      "Mario D'Onghia",
-      "Alexander Herzog",
-      "Myles Foley"
+      "Xiaofang Yang",
+      "Ziqi Miao",
+      "Dianbo Sui",
+      "Jing Shao",
+      "Lijun Li"
     ],
-    "published_date": "2026-08-28",
+    "published_date": "2026-09-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2609.01487v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.01487v1",
+    "content": {
+      "en": "Skill-augmented agents load reusable skills as persistent runtime context, improving task performance but also giving malicious skills a durable channel for steering future actions. Such skills may leak secrets, corrupt code, bypass approvals, or stage data for exfiltration only after a concrete user task and workspace state make the unsafe action appear useful. This makes pre-install vetting insufficient and calls for runtime, task-conditioned protection. We propose Defense-as-Skill, a defense paradigm that implements the runtime guard itself as an installable, inspectable, and editable skill. Our guard, SkillSonar, runs alongside untrusted task skills and checks sensitive actions against the user's task boundary, routing each action to an allow, replan, or confirmation decision without modifying the underlying agent runtime. To study this setting, we construct SCOPE-R, a task-conditioned dataset covering 6 risk families and 21 sub-categories, with 206 attack-confirmed malicious instances and 43 benign tasks. We then improve SkillSonar on the SCOPE-R training subset using runtime guard-skill evolution, a Monte-Carlo Tree Search procedure that evolves the on-disk guard skill from feedback on the rollouts. Across Claude Code and OpenClaw, the evolved guard substantially reduces attack success while maintaining a favorable safety-utility trade-off. On repeated GLM-5 runs, SkillSonar reduces ID ASR from 0.482 to 0.104 and OOD ASR from 0.606 to 0.115. Further analyses demonstrate transfer across victim models, held-out risk families, and external benchmarks, as well as retained protection against adaptive attackers. Ablations further show that explicit safety responsibility assignment and the skill-native representation are both important to the observed gains.",
+      "tr": "Skill-augmented agents load reusable skills as persistent runtime context, improving task performance but also giving malicious skills a durable channel for steering future actions. Such skills may leak secrets, corrupt code, bypass approvals, or stage data for exfiltration only after a concrete user task and workspace state make the unsafe action appear useful. This makes pre-install vetting insufficient and calls for runtime, task-conditioned protection. We propose Defense-as-Skill, a defense paradigm that implements the runtime guard itself as an installable, inspectable, and editable skill. Our guard, SkillSonar, runs alongside untrusted task skills and checks sensitive actions against the user's task boundary, routing each action to an allow, replan, or confirmation decision without modifying the underlying agent runtime. To study this setting, we construct SCOPE-R, a task-conditioned dataset covering 6 risk families and 21 sub-categories, with 206 attack-confirmed malicious instances and 43 benign tasks. We then improve SkillSonar on the SCOPE-R training subset using runtime guard-skill evolution, a Monte-Carlo Tree Search procedure that evolves the on-disk guard skill from feedback on the rollouts. Across Claude Code and OpenClaw, the evolved guard substantially reduces attack success while maintaining a favorable safety-utility trade-off. On repeated GLM-5 runs, SkillSonar reduces ID ASR from 0.482 to 0.104 and OOD ASR from 0.606 to 0.115. Further analyses demonstrate transfer across victim models, held-out risk families, and external benchmarks, as well as retained protection against adaptive attackers. Ablations further show that explicit safety responsibility assignment and the skill-native representation are both important to the observed gains."
+    }
+  },
+  {
+    "id": "2609.01455v1",
+    "title": "When Safety Routing Breaks: Understanding Alignment Fragility under Benign Fine-Tuning",
+    "authors": [
+      "Yitong Guo",
+      "Xiaoyi Chen",
+      "Siyuan Zhang",
+      "Xiaofeng Wang",
+      "Haixu Tang"
+    ],
+    "published_date": "2026-09-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2609.01455v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.01455v1",
+    "content": {
+      "en": "Benign fine-tuning severely weakens the safety alignment of large language models (LLMs), so we study why refusal behavior is so fragile. While prior work often attributes this failure to gradient conflict, we propose a fundamentally different Fisher-geometric explanation: safety Fisher is low-rank, and alignment makes the safety geometry flatter while preserving an output-routing pathway. After 100 benign fine-tuning examples, this pathway is selectively re-sharpened in output-side MLP modules, explaining the asymmetric fragility: safety can collapse to high attack success rates, while general utility degrades mildly. The routing view also explains why few safety examples can restore refusal behavior, indicating that internal safety-relevant representations are preserved. Finally, we show that LoRA and ASAM mitigate early collapse by suppressing output-side sharpness, but their protection weakens at larger fine-tuning scales. Overall, safety failure is best understood as a disruption of a low-rank output-routing mechanism",
+      "tr": "Benign fine-tuning severely weakens the safety alignment of large language models (LLMs), so we study why refusal behavior is so fragile. While prior work often attributes this failure to gradient conflict, we propose a fundamentally different Fisher-geometric explanation: safety Fisher is low-rank, and alignment makes the safety geometry flatter while preserving an output-routing pathway. After 100 benign fine-tuning examples, this pathway is selectively re-sharpened in output-side MLP modules, explaining the asymmetric fragility: safety can collapse to high attack success rates, while general utility degrades mildly. The routing view also explains why few safety examples can restore refusal behavior, indicating that internal safety-relevant representations are preserved. Finally, we show that LoRA and ASAM mitigate early collapse by suppressing output-side sharpness, but their protection weakens at larger fine-tuning scales. Overall, safety failure is best understood as a disruption of a low-rank output-routing mechanism"
+    }
+  },
+  {
+    "id": "2609.01345v1",
+    "title": "Cheap Verifiers, Large Blind Spots: Measuring the Reliability Cost of Cost-Saving Cascades",
+    "authors": [
+      "Dushyant Rajput"
+    ],
+    "published_date": "2026-09-01",
+    "tags": [
+      "cs.AI",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2609.01345v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.01345v1",
+    "content": {
+      "en": "Inference cascades cut cost by answering most queries with a cheap model and escalating a hard tail to a frontier model that acts as verifier. A natural extension closes the loop: fine-tune the cheap student on the verifier's rejections so the escalation rate, and cost, fall each round. We measure this loop on real LLMs and report four findings. First, the verifier's blind spot, the fraction of the student's wrong answers it accepts, is large and moves adversarially: it grows with student capability ($β$ from 0.12 to 0.55 as the student scales 0.5B to 32B) and shrinks with verifier capability, so it is worst in the cheap-student, cheap-verifier regime cascades exist to create. Second, buying it away returns the saving: a frontier verifier drives $β$ to about 0.05 but then escalates on 46% of hard-MATH queries against a 39% true error rate, paying the frontier price on nearly half of all traffic. Third, naive corrective fine-tuning on the verifier-rejected tail does not improve the small student but degrades and ultimately collapses it, across every teacher we tried (cross-family and same-family), so at this scale the self-improving loop is self-defeating. Fourth, through all of this the cascade's own dashboard, every metric computed through the verifier, reads a flat 3% error while true delivered error swings up to 32%: the system is blind to its own degradation by construction. We then give the theory that explains the blindness, a two-population conservation law, $ε_\\infty \\lesssim q_0 β_0$, under which every in-loop metric improves while true quality does not, and a synthetic study that validates the mechanism. The practical conclusion: the reliability of a self-improving cascade cannot be read from any metric computed through its own verifier.",
+      "tr": "Inference cascades cut cost by answering most queries with a cheap model and escalating a hard tail to a frontier model that acts as verifier. A natural extension closes the loop: fine-tune the cheap student on the verifier's rejections so the escalation rate, and cost, fall each round. We measure this loop on real LLMs and report four findings. First, the verifier's blind spot, the fraction of the student's wrong answers it accepts, is large and moves adversarially: it grows with student capability ($β$ from 0.12 to 0.55 as the student scales 0.5B to 32B) and shrinks with verifier capability, so it is worst in the cheap-student, cheap-verifier regime cascades exist to create. Second, buying it away returns the saving: a frontier verifier drives $β$ to about 0.05 but then escalates on 46% of hard-MATH queries against a 39% true error rate, paying the frontier price on nearly half of all traffic. Third, naive corrective fine-tuning on the verifier-rejected tail does not improve the small student but degrades and ultimately collapses it, across every teacher we tried (cross-family and same-family), so at this scale the self-improving loop is self-defeating. Fourth, through all of this the cascade's own dashboard, every metric computed through the verifier, reads a flat 3% error while true delivered error swings up to 32%: the system is blind to its own degradation by construction. We then give the theory that explains the blindness, a two-population conservation law, $ε_\\infty \\lesssim q_0 β_0$, under which every in-loop metric improves while true quality does not, and a synthetic study that validates the mechanism. The practical conclusion: the reliability of a self-improving cascade cannot be read from any metric computed through its own verifier."
+    }
+  },
+  {
+    "id": "2609.01273v1",
+    "title": "Position: Privacy Is a Claim, Not a Property of Synthetic Data",
+    "authors": [
+      "Jiachen Zhao",
+      "Antonia Januszewicz",
+      "Taeho Jung"
+    ],
+    "published_date": "2026-09-01",
     "tags": [
       "cs.LG",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2608.28499v1",
-    "pdf_link": "https://arxiv.org/pdf/2608.28499v1",
+    "link": "http://arxiv.org/abs/2609.01273v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.01273v1",
     "content": {
-      "en": "To determine the real-world effectiveness of machine learning based malware detection, it is vital to evaluate its robustness against highly capable adversaries. However, state-of-the-art attacks do not effectively model realistic adversaries, as they often assume access to privileged information such as the training data, feature space, or confidence scores of the target. In this work, we present Replicant, a deep reinforcement learning framework that learns the realistic task of evasion under a strict label-only black-box threat model. Replicant learns a reusable policy on how to modify a malware sample and when to query the target, which transfers across samples, detectors, and feature spaces. Across seven Android malware detectors and three feature spaces, Replicant is the strongest and most query-efficient approach achieving a mean attack success rate of 78.8%, a relative improvement of 20.9%-39.2% over the state-of-the-art. Furthermore, when used for adversarial training, Replicant also outperforms the state-of-the art by producing detectors with more generalizable robustness. With Replicant we demonstrate that learning the task of evasion not only results in stronger attack performance but, crucially, provides a better signal for hardening malware detectors.",
-      "tr": "To determine the real-world effectiveness of machine learning based malware detection, it is vital to evaluate its robustness against highly capable adversaries. However, state-of-the-art attacks do not effectively model realistic adversaries, as they often assume access to privileged information such as the training data, feature space, or confidence scores of the target. In this work, we present Replicant, a deep reinforcement learning framework that learns the realistic task of evasion under a strict label-only black-box threat model. Replicant learns a reusable policy on how to modify a malware sample and when to query the target, which transfers across samples, detectors, and feature spaces. Across seven Android malware detectors and three feature spaces, Replicant is the strongest and most query-efficient approach achieving a mean attack success rate of 78.8%, a relative improvement of 20.9%-39.2% over the state-of-the-art. Furthermore, when used for adversarial training, Replicant also outperforms the state-of-the art by producing detectors with more generalizable robustness. With Replicant we demonstrate that learning the task of evasion not only results in stronger attack performance but, crucially, provides a better signal for hardening malware detectors."
+      "en": "Synthetic data has become a common component of machine learning research. While widely adopted, its use in privacy-sensitive contexts has quietly shifted from a claim of residual inference risk under stated assumptions to an appearance-based property inferred from data generation itself. In this position paper, we argue that this shift reflects an implicit change in community standards for what counts as sufficient privacy evidence, rather than a misunderstanding of well-established privacy principles. Drawing on an empirical analysis of recent publications across major ML venues, we show that synthetic data is frequently used in privacy-sensitive settings without explicit articulation of threat models, inference risks, or falsifiable privacy claims. As a result, privacy assurance often remains implicit, difficult to verify, and unevenly distributed, with heightened exposure for rare and minority records. We argue for treating privacy as an explicit, evidence-based scientific claim and recommend that ML venues adopt norms requiring privacy-relevant assertions to be clearly scoped, testable, and contestable.",
+      "tr": "Synthetic data has become a common component of machine learning research. While widely adopted, its use in privacy-sensitive contexts has quietly shifted from a claim of residual inference risk under stated assumptions to an appearance-based property inferred from data generation itself. In this position paper, we argue that this shift reflects an implicit change in community standards for what counts as sufficient privacy evidence, rather than a misunderstanding of well-established privacy principles. Drawing on an empirical analysis of recent publications across major ML venues, we show that synthetic data is frequently used in privacy-sensitive settings without explicit articulation of threat models, inference risks, or falsifiable privacy claims. As a result, privacy assurance often remains implicit, difficult to verify, and unevenly distributed, with heightened exposure for rare and minority records. We argue for treating privacy as an explicit, evidence-based scientific claim and recommend that ML venues adopt norms requiring privacy-relevant assertions to be clearly scoped, testable, and contestable."
     }
   },
   {
-    "id": "2608.28490v1",
-    "title": "LLM-Based Agents for Software and Systems Security: Approaches, Applications, and Assessment",
+    "id": "2609.01249v1",
+    "title": "One Prompt Is Enough: Watermark Laundering Through Foundation Image Models",
     "authors": [
-      "Jingjing Nie",
-      "Jiawei Guo",
-      "Krishna Meda",
-      "Haipeng Cai"
+      "Jidong Yang",
+      "Qi Li",
+      "Wei Zong",
+      "Yang-Wai Chow",
+      "Willy Susilo"
     ],
-    "published_date": "2026-08-28",
+    "published_date": "2026-09-01",
+    "tags": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2609.01249v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.01249v1",
+    "content": {
+      "en": "Invisible watermarks are typically evaluated against predefined perturbations such as compression, blur, noise, cropping, and denoising. Public foundation image models expose a distinct threat: an attacker can submit a watermarked image with a single reconstruction prompt and obtain a visually faithful output from which the invisible watermark can no longer be decoded reliably. We formalize this failure mode as watermark laundering and evaluate it using a joint payload-fidelity profile that combines bit error rate (BER) with visual and semantic preservation. Across six OpenAI and Google image editing models, three representative watermarking schemes, and 1,800 reconstructed outputs, we identify two complementary laundering regimes: OpenAI models produce the strongest payload disruption across the evaluated schemes, whereas Nano Banana 2 shows that DwtDct remains vulnerable under high-fidelity reconstruction. Prompt ablations show that no single removal-oriented instruction is necessary for payload disruption, indicating that the effect is primarily induced by the reconstruction pathway rather than by explicit attack wording. Comparisons with conventional attacks further show that prompt-conditioned reconstruction constitutes a distinct operational attack interface. These findings motivate foundation-model reconstruction as a missing robustness condition in invisible watermark evaluation.",
+      "tr": "Invisible watermarks are typically evaluated against predefined perturbations such as compression, blur, noise, cropping, and denoising. Public foundation image models expose a distinct threat: an attacker can submit a watermarked image with a single reconstruction prompt and obtain a visually faithful output from which the invisible watermark can no longer be decoded reliably. We formalize this failure mode as watermark laundering and evaluate it using a joint payload-fidelity profile that combines bit error rate (BER) with visual and semantic preservation. Across six OpenAI and Google image editing models, three representative watermarking schemes, and 1,800 reconstructed outputs, we identify two complementary laundering regimes: OpenAI models produce the strongest payload disruption across the evaluated schemes, whereas Nano Banana 2 shows that DwtDct remains vulnerable under high-fidelity reconstruction. Prompt ablations show that no single removal-oriented instruction is necessary for payload disruption, indicating that the effect is primarily induced by the reconstruction pathway rather than by explicit attack wording. Comparisons with conventional attacks further show that prompt-conditioned reconstruction constitutes a distinct operational attack interface. These findings motivate foundation-model reconstruction as a missing robustness condition in invisible watermark evaluation."
+    }
+  },
+  {
+    "id": "2609.01235v1",
+    "title": "MutMem-V2: Cryptographically Authorized Mutation in Persistent Agent Memory Portable Verification and Reproducible Evidence",
+    "authors": [
+      "Walid Saidi"
+    ],
+    "published_date": "2026-09-01",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2608.28490v1",
-    "pdf_link": "https://arxiv.org/pdf/2608.28490v1",
+    "link": "http://arxiv.org/abs/2609.01235v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.01235v1",
     "content": {
-      "en": "Software and systems security workflows are typically procedural: analysts inspect heterogeneous artifacts, form hypotheses, invoke tools, interpret outputs, and revise plans. Large language model (LLM)-based agents, which can plan, use tools, retain state, and revise actions across multi-step workflows, are being rapidly adopted to automate this work. Given the consequences of delegating security decisions to autonomous systems, understanding how such agents are built, used, and assessed is crucial. Yet to this date, there remains a lack of systematic understanding of what has been done and how far we are in this field: the term \"agent\" is applied inconsistently, applications differ sharply in risk, and assessment protocols are often incomparable. To gain a comprehensive and coherent view of this area hence inform relevant future research, this paper provides a systematic literature review of the (1) technical approaches, including agent architecture, perception, memory, reasoning and planning, action space, orchestration, and self-improvement, (2) applications, with respect to the security tasks served, and (3) assessment, including the datasets, outcome and trajectory metrics, safety measures, and baselines considered, over the peer-reviewed literature spanning the emergence of this area (2023--2026). Our synthesis reveals a field that has built agents able to act but not yet agents whose authority is bounded or whose behavior is auditable. In addition to knowledge systematization, we also extend our insights into the limitations of and challenges faced by current approach, application, and assessment designs, which shed light on potentially promising future research directions.",
-      "tr": "Software and systems security workflows are typically procedural: analysts inspect heterogeneous artifacts, form hypotheses, invoke tools, interpret outputs, and revise plans. Large language model (LLM)-based agents, which can plan, use tools, retain state, and revise actions across multi-step workflows, are being rapidly adopted to automate this work. Given the consequences of delegating security decisions to autonomous systems, understanding how such agents are built, used, and assessed is crucial. Yet to this date, there remains a lack of systematic understanding of what has been done and how far we are in this field: the term \"agent\" is applied inconsistently, applications differ sharply in risk, and assessment protocols are often incomparable. To gain a comprehensive and coherent view of this area hence inform relevant future research, this paper provides a systematic literature review of the (1) technical approaches, including agent architecture, perception, memory, reasoning and planning, action space, orchestration, and self-improvement, (2) applications, with respect to the security tasks served, and (3) assessment, including the datasets, outcome and trajectory metrics, safety measures, and baselines considered, over the peer-reviewed literature spanning the emergence of this area (2023--2026). Our synthesis reveals a field that has built agents able to act but not yet agents whose authority is bounded or whose behavior is auditable. In addition to knowledge systematization, we also extend our insights into the limitations of and challenges faced by current approach, application, and assessment designs, which shed light on potentially promising future research directions."
+      "en": "MutMem V1 introduced retention-preserving, cryptographically authorized mutation for persistent agent memory but did not provide a complete portable verification contract or clean-install reproduction path. MutMem V2 closes that publication gap without introducing a second memory engine. It specifies exact canonical bytes, domain-separated object and bundle commitments, mandatory recall-evidence membership and ordering, external trust anchors, identity epochs, revocation, authorization, request receipts, ordered disclosure, and three mutation terminal types. The released protocol contains 18 versioned object schemas, 39 recall vectors, 15 mutation vectors, and 37 closed recall failure reasons. Independent Node and Python implementations agree on verdict and primary reason for all 72 structural and cryptographic terminals; a production-conformance corpus agrees on 42/42 cases across 28 required classes. A clean Node v26.8.1 installation reaches first-boot, restart, and scheduler readiness with no experimental memories. A separately scoped 120-unit Canary experiment supports only explicit-marker traversal. Every public table regenerates from a self-hashed aggregate, and an independent verifier reconstructs the statistics and claim boundaries. Historical V1 empirical results remain historical. MutMem V2 supports claims about portable integrity, authorization, traceability, conformance, and reproducibility under stated assumptions; it does not establish semantic truth, universal robustness, or independent replication.",
+      "tr": "MutMem V1 introduced retention-preserving, cryptographically authorized mutation for persistent agent memory but did not provide a complete portable verification contract or clean-install reproduction path. MutMem V2 closes that publication gap without introducing a second memory engine. It specifies exact canonical bytes, domain-separated object and bundle commitments, mandatory recall-evidence membership and ordering, external trust anchors, identity epochs, revocation, authorization, request receipts, ordered disclosure, and three mutation terminal types. The released protocol contains 18 versioned object schemas, 39 recall vectors, 15 mutation vectors, and 37 closed recall failure reasons. Independent Node and Python implementations agree on verdict and primary reason for all 72 structural and cryptographic terminals; a production-conformance corpus agrees on 42/42 cases across 28 required classes. A clean Node v26.8.1 installation reaches first-boot, restart, and scheduler readiness with no experimental memories. A separately scoped 120-unit Canary experiment supports only explicit-marker traversal. Every public table regenerates from a self-hashed aggregate, and an independent verifier reconstructs the statistics and claim boundaries. Historical V1 empirical results remain historical. MutMem V2 supports claims about portable integrity, authorization, traceability, conformance, and reproducibility under stated assumptions; it does not establish semantic truth, universal robustness, or independent replication."
     }
   },
   {
-    "id": "2608.28411v1",
-    "title": "LongPIBench: A Long-Context Benchmark for Prompt Injection",
+    "id": "2609.01232v1",
+    "title": "Position Matters: Feature Inversion Attacks in ViT Split Inference with Token Reduction and Shuffling",
     "authors": [
-      "Yupei Liu",
-      "Yuqi Jia",
-      "Neil Zhenqiang Gong",
-      "Jinyuan Jia"
+      "Stefano Leggio",
+      "Giulio Rossolini",
+      "Alessandro Biondi"
     ],
-    "published_date": "2026-08-28",
+    "published_date": "2026-09-01",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2608.28411v1",
-    "pdf_link": "https://arxiv.org/pdf/2608.28411v1",
+    "link": "http://arxiv.org/abs/2609.01232v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.01232v1",
     "content": {
-      "en": "Prompt injection attacks pose a serious security risk to large language models in real-world applications. However, existing prompt injection benchmarks primarily focus on short-context inputs, leaving the attacks and defenses in long-context settings largely unexplored. This gap leads to a substantial overestimation of the effectiveness of current defenses. In this paper, we bridge the gap by introducing LongPIBench, a long-context benchmark for prompt injection covering 4 realistic application scenarios: paper peer review, resume screening, code review, and email summary. For each scenario, we construct a synthetic dataset and a real-world dataset, with context lengths ranging from thousands to tens of thousands of tokens. The evaluation results on LongPIBench reveal significant vulnerabilities of prompt injection defenses under long-context settings: even simple heuristic prompt injection attacks achieve high success rates and frequently bypass state-of-the-art defenses. We hope LongPIBench can serve as a practical benchmark for systematically evaluating prompt injection defenses in realistic long-context scenarios.",
-      "tr": "Prompt injection attacks pose a serious security risk to large language models in real-world applications. However, existing prompt injection benchmarks primarily focus on short-context inputs, leaving the attacks and defenses in long-context settings largely unexplored. This gap leads to a substantial overestimation of the effectiveness of current defenses. In this paper, we bridge the gap by introducing LongPIBench, a long-context benchmark for prompt injection covering 4 realistic application scenarios: paper peer review, resume screening, code review, and email summary. For each scenario, we construct a synthetic dataset and a real-world dataset, with context lengths ranging from thousands to tens of thousands of tokens. The evaluation results on LongPIBench reveal significant vulnerabilities of prompt injection defenses under long-context settings: even simple heuristic prompt injection attacks achieve high success rates and frequently bypass state-of-the-art defenses. We hope LongPIBench can serve as a practical benchmark for systematically evaluating prompt injection defenses in realistic long-context scenarios."
+      "en": "Vision Transformers (ViTs) are increasingly used in split-inference systems, where edge devices transmit intermediate token representations to a remote cloud. In this setting, token reduction lowers computation and communication costs, while token shuffling disrupts the spatial organization of the transmitted tokens, potentially limiting information leakage. However, their privacy benefits remain unclear against feature inversion attacks, which attempt to reconstruct the input from the transmitted embeddings. In this work, we show that, despite disrupting the spatial structure required by conventional reconstruction attacks, transmitted token embeddings retain substantial positional information. Based on this observation, we introduce the Spatially Aligned Reconstruction Attack (SARA), a unified pipeline that predicts token positions, restores their spatial layout, reconstructs missing embeddings using a feature-space masked autoencoder, and recovers the input image. Our results demonstrate that token shuffling provides only apparent privacy, as SARA largely reconstructs the original token organization. Token reduction offers stronger protection, but significant leakage persists when the retained tokens preserve sufficient semantic and positional information. Finally, we introduce a lightweight edge-side defense that removes positional embeddings and progressively adapts the edge-side transformer blocks through knowledge distillation. It substantially reduces attack performance against SARA, while preserving downstream task accuracy and requiring no changes to the cloud-side model.",
+      "tr": "Vision Transformers (ViTs) are increasingly used in split-inference systems, where edge devices transmit intermediate token representations to a remote cloud. In this setting, token reduction lowers computation and communication costs, while token shuffling disrupts the spatial organization of the transmitted tokens, potentially limiting information leakage. However, their privacy benefits remain unclear against feature inversion attacks, which attempt to reconstruct the input from the transmitted embeddings. In this work, we show that, despite disrupting the spatial structure required by conventional reconstruction attacks, transmitted token embeddings retain substantial positional information. Based on this observation, we introduce the Spatially Aligned Reconstruction Attack (SARA), a unified pipeline that predicts token positions, restores their spatial layout, reconstructs missing embeddings using a feature-space masked autoencoder, and recovers the input image. Our results demonstrate that token shuffling provides only apparent privacy, as SARA largely reconstructs the original token organization. Token reduction offers stronger protection, but significant leakage persists when the retained tokens preserve sufficient semantic and positional information. Finally, we introduce a lightweight edge-side defense that removes positional embeddings and progressively adapts the edge-side transformer blocks through knowledge distillation. It substantially reduces attack performance against SARA, while preserving downstream task accuracy and requiring no changes to the cloud-side model."
     }
   },
   {
-    "id": "2608.28362v1",
-    "title": "Optimal Adversarial Testing: Extracting Honest Test Results from Dishonest Test Takers",
+    "id": "2609.01210v1",
+    "title": "Who Judges the Judges? A Chinese Safety QA Benchmark for Evaluating LLM Responses and Safety Judges",
     "authors": [
-      "Owen Cox",
-      "April Xu",
-      "Weiyu Xu"
+      "Rui Yang",
+      "Shuang Huang",
+      "Junhua Liu",
+      "Ziqi Zhao",
+      "Qingzhong Yan"
     ],
-    "published_date": "2026-08-28",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.GT",
-      "eess.SP",
-      "stat.AP",
-      "stat.ME"
-    ],
-    "link": "http://arxiv.org/abs/2608.28362v1",
-    "pdf_link": "https://arxiv.org/pdf/2608.28362v1",
-    "content": {
-      "en": "In applications, it is often required to test objects or people to determine their qualities in terms of certain metrics. However, besides being naturally noisy, the test results can be corrupted by adversarial behaviors of objects or people being tested (test takers). For example, dishonest test takers can cheat in the exams to distort the test results. With the development of AI technologies, such distortions driven by cheating using AI technologies are becoming more commonplace and severe. In this paper, we propose optimal testing strategies which can still recover needed test results even if there are cheaters polluting the results. The proposed testing strategies will optimally re-test selected group of test takers using different testing security measures. We determine the optimal testing strategies using a dynamic programming method.",
-      "tr": "In applications, it is often required to test objects or people to determine their qualities in terms of certain metrics. However, besides being naturally noisy, the test results can be corrupted by adversarial behaviors of objects or people being tested (test takers). For example, dishonest test takers can cheat in the exams to distort the test results. With the development of AI technologies, such distortions driven by cheating using AI technologies are becoming more commonplace and severe. In this paper, we propose optimal testing strategies which can still recover needed test results even if there are cheaters polluting the results. The proposed testing strategies will optimally re-test selected group of test takers using different testing security measures. We determine the optimal testing strategies using a dynamic programming method."
-    }
-  },
-  {
-    "id": "2608.28327v1",
-    "title": "Layered LLM Defenses as an Ensemble: Access Tiers, Inference Cost, and the Measured Failure Correlation Between Defense Layers",
-    "authors": [
-      "Abrar Alotaibi",
-      "Muhammad Shahid Jabbar",
-      "Sadam Al-Azani",
-      "Moataz Ahmed"
-    ],
-    "published_date": "2026-08-28",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL"
-    ],
-    "link": "http://arxiv.org/abs/2608.28327v1",
-    "pdf_link": "https://arxiv.org/pdf/2608.28327v1",
-    "content": {
-      "en": "Practitioners defend large language models (LLMs) by stacking defenses, assuming the layers compound. A stack is an ensemble, and ensembles compound only under a condition the LLM security literature recommends but never measures: the members must fail on different inputs.   Two instruments make that measurable. The Adversary Access-Tier Model (AATM) grades an adversary by the access it holds, from system-only (A0) to influence over training data (A4). A cost model sorts defenses into five classes of inference-time overhead; because two classes require training weights or reading activations, they tier the defender as AATM tiers the adversary. From these we derive how a stack behaves, and the quantities a defender cares about diverge: coverage saturates within a tier, cost rises by class, false refusals accumulate as a union, and residual attack success falls multiplicatively only under independence.   We measure that independence. Running one adaptive adversary against a seven-layer stack, failure correlation is positive in all fifteen measurable pairs ($φ$ from $0.30$ to $0.75$), and the joint residual exceeds the multiplicative prediction by up to $0.172$. Stratifying on behavior difficulty dissolves most of the association, so the dependence is predominantly common-cause, but it survives permutation inference, majority-vote grader labels, and externally calibrated thresholds. The same stack refuses four in five benign prompts while remaining statistically indistinguishable from its strongest single layer.   The dependence is architectural rather than sampling-based: members correlate through the model they all wrap, so no wider member pool weakens it. Diversity therefore selects stack members but does not predict what an assembled stack delivers, which has to be measured end to end.",
-      "tr": "Practitioners defend large language models (LLMs) by stacking defenses, assuming the layers compound. A stack is an ensemble, and ensembles compound only under a condition the LLM security literature recommends but never measures: the members must fail on different inputs.   Two instruments make that measurable. The Adversary Access-Tier Model (AATM) grades an adversary by the access it holds, from system-only (A0) to influence over training data (A4). A cost model sorts defenses into five classes of inference-time overhead; because two classes require training weights or reading activations, they tier the defender as AATM tiers the adversary. From these we derive how a stack behaves, and the quantities a defender cares about diverge: coverage saturates within a tier, cost rises by class, false refusals accumulate as a union, and residual attack success falls multiplicatively only under independence.   We measure that independence. Running one adaptive adversary against a seven-layer stack, failure correlation is positive in all fifteen measurable pairs ($φ$ from $0.30$ to $0.75$), and the joint residual exceeds the multiplicative prediction by up to $0.172$. Stratifying on behavior difficulty dissolves most of the association, so the dependence is predominantly common-cause, but it survives permutation inference, majority-vote grader labels, and externally calibrated thresholds. The same stack refuses four in five benign prompts while remaining statistically indistinguishable from its strongest single layer.   The dependence is architectural rather than sampling-based: members correlate through the model they all wrap, so no wider member pool weakens it. Diversity therefore selects stack members but does not predict what an assembled stack delivers, which has to be measured end to end."
-    }
-  },
-  {
-    "id": "2608.28021v1",
-    "title": "Compared to What? A Human-Anchored Security Benchmark for LLM-Generated Infrastructure-as-Code",
-    "authors": [
-      "Animesh Shaw"
-    ],
-    "published_date": "2026-08-28",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.MA",
-      "cs.SE"
-    ],
-    "link": "http://arxiv.org/abs/2608.28021v1",
-    "pdf_link": "https://arxiv.org/pdf/2608.28021v1",
-    "content": {
-      "en": "Large language models are increasingly used to author Infrastructure-as-Code (IaC), where a single insecure default can be deployed directly into production. Prior evaluations report raw vulnerability counts for model-generated IaC, but without a human baseline they cannot determine whether models are actually worse than engineers. We introduce GenIaC-SecBench, a benchmark of 100 deployment scenarios stratified by architectural complexity, evaluated across 12 model configurations from four vendors, producing 1,196 IaC artifacts scanned by three independent policy engines (Checkov, Trivy, KICS). Critically, we also scan 634 human-authored IaC templates with the same toolchain, providing the first size-matched human security baseline.   Vulnerability density is strongly inverse to artifact size (Spearman $ρ= -0.55$, $p < 10^{-77}$), meaning unmatched comparisons measure size rather than security. When matched on declared-resource count, all model configurations fall within 3.21x--3.87x the human vulnerability density, with the gap widening for simpler tasks (4.9x at one resource, 1.4x at twenty or more).   We decompose reasoning into standard generation, prompt-engineered chain-of-thought, and vendor extended-thinking APIs. Vendor extended thinking significantly outperforms prompted chain-of-thought ($-12.0\\%$, $p = 0.0013$), while prompted chain-of-thought is indistinguishable from standard generation ($-1.3\\%$, n.s.). Token instrumentation shows extended thinking uses under 1\\% of the output budget, explaining its bounded effect.   Two negative results also emerge: deployability does not correlate with vulnerability ($r = 0.158$, $p = 0.625$), and classical complete-case Friedman testing is infeasible for realistic benchmark designs, motivating the Skillings-Mack statistic. All code, data, and regeneration scripts are released.",
-      "tr": "Large language models are increasingly used to author Infrastructure-as-Code (IaC), where a single insecure default can be deployed directly into production. Prior evaluations report raw vulnerability counts for model-generated IaC, but without a human baseline they cannot determine whether models are actually worse than engineers. We introduce GenIaC-SecBench, a benchmark of 100 deployment scenarios stratified by architectural complexity, evaluated across 12 model configurations from four vendors, producing 1,196 IaC artifacts scanned by three independent policy engines (Checkov, Trivy, KICS). Critically, we also scan 634 human-authored IaC templates with the same toolchain, providing the first size-matched human security baseline.   Vulnerability density is strongly inverse to artifact size (Spearman $ρ= -0.55$, $p < 10^{-77}$), meaning unmatched comparisons measure size rather than security. When matched on declared-resource count, all model configurations fall within 3.21x--3.87x the human vulnerability density, with the gap widening for simpler tasks (4.9x at one resource, 1.4x at twenty or more).   We decompose reasoning into standard generation, prompt-engineered chain-of-thought, and vendor extended-thinking APIs. Vendor extended thinking significantly outperforms prompted chain-of-thought ($-12.0\\%$, $p = 0.0013$), while prompted chain-of-thought is indistinguishable from standard generation ($-1.3\\%$, n.s.). Token instrumentation shows extended thinking uses under 1\\% of the output budget, explaining its bounded effect.   Two negative results also emerge: deployability does not correlate with vulnerability ($r = 0.158$, $p = 0.625$), and classical complete-case Friedman testing is infeasible for realistic benchmark designs, motivating the Skillings-Mack statistic. All code, data, and regeneration scripts are released."
-    }
-  },
-  {
-    "id": "2608.27990v1",
-    "title": "CAITLYN: Can LLM Agents Autonomously Synthesize Defenses against Emerging Injection Attacks?",
-    "authors": [
-      "Zi Liang",
-      "Xiaoyu Xu",
-      "Yanyun Wang",
-      "Minxin Du",
-      "Qingqing Ye"
-    ],
-    "published_date": "2026-08-28",
+    "published_date": "2026-09-01",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2608.27990v1",
-    "pdf_link": "https://arxiv.org/pdf/2608.27990v1",
+    "link": "http://arxiv.org/abs/2609.01210v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.01210v1",
     "content": {
-      "en": "Prompt injection attacks on Large Language Model (LLM) agents seek to introduce malicious instructions or content into external text sources retrieved by agents, forcing the underlying LLMs to execute harmful actions outside their benign scope. While current defenses effectively counter known injection attacks, deploying them in LLM agent environments remains challenging due to attack variants and emerging threats. Moreover, existing solutions typically suffer from an inherent trilemma, i.e., a constant trade-off among runtime efficiency, contextual precision, and adaptability. To bridge this gap, we propose Continuous Agents for Injection Threats via Lifelong Yielding Nexus (CAITLYN), an agent-agnostic defense middleware. CAITLYN integrates two systems. System I focuses on immediate defense against existing attacks using a two-tiered library: Tier-0 for rule-based detection scripts and Tier-1 for optimized LLM-based accurate inference. System II, in contrast, is deployed to monitor potential abnormal signals and attempt to synthesize new defenses. On standard benchmarks, CAITLYN matches the detection performance of state-of-the-art defenses at lower token overhead than LLM-as-a-judge baselines. On Emerging, our new delivery-aware benchmark featuring novel injection techniques, static baselines and the standalone System I configuration remain vulnerable. In contrast, System II autonomously synthesizes verified defense capabilities, substantially lowering the attack success rate across three diverse agent environments.",
-      "tr": "Prompt injection attacks on Large Language Model (LLM) agents seek to introduce malicious instructions or content into external text sources retrieved by agents, forcing the underlying LLMs to execute harmful actions outside their benign scope. While current defenses effectively counter known injection attacks, deploying them in LLM agent environments remains challenging due to attack variants and emerging threats. Moreover, existing solutions typically suffer from an inherent trilemma, i.e., a constant trade-off among runtime efficiency, contextual precision, and adaptability. To bridge this gap, we propose Continuous Agents for Injection Threats via Lifelong Yielding Nexus (CAITLYN), an agent-agnostic defense middleware. CAITLYN integrates two systems. System I focuses on immediate defense against existing attacks using a two-tiered library: Tier-0 for rule-based detection scripts and Tier-1 for optimized LLM-based accurate inference. System II, in contrast, is deployed to monitor potential abnormal signals and attempt to synthesize new defenses. On standard benchmarks, CAITLYN matches the detection performance of state-of-the-art defenses at lower token overhead than LLM-as-a-judge baselines. On Emerging, our new delivery-aware benchmark featuring novel injection techniques, static baselines and the standalone System I configuration remain vulnerable. In contrast, System II autonomously synthesizes verified defense capabilities, substantially lowering the attack success rate across three diverse agent environments."
+      "en": "Safety benchmarks for large language models often assess the risk of a user query, although the outcome of question answering depends on whether the response violates a policy. This distinction is critical in Chinese harmful-content evaluation, where linguistic variation and adversarial transformations can obscure risky intent. We introduce C-SafeQA, a policy-grounded benchmark for response-level Chinese safety evaluation. It comprises 538 base queries and 8,877 adversarial queries answered by four full-model LLM deployments, yielding 37,660 query-response records labeled safe, unsafe, or disputed. Reference labels are generated through agreement-aware multi-model adjudication and blind audits of stratified subsets by three safety experts. C-SafeQA supports both evaluation of target-model safety and auditing of seven automated safety judges against shared reference labels. Unsafe-response rates range from 0.93% to 3.35% on base queries and from 11.68% to 30.05% on adversarial queries. On the adversarial subset, judges show substantial trade-offs between unsafe-response recall and risk-query-conditioned safe-response false positive rate, and no judge dominates all metrics. Both acrostic transformations reduce unsafe recall for all seven judges, revealing mechanism-specific evaluator weaknesses. Dataset records, metadata, verification code, and judge scripts are publicly released to support recomputation, while benchmark construction, target-response generation, and private adjudication remain outside the release boundary.",
+      "tr": "Safety benchmarks for large language models often assess the risk of a user query, although the outcome of question answering depends on whether the response violates a policy. This distinction is critical in Chinese harmful-content evaluation, where linguistic variation and adversarial transformations can obscure risky intent. We introduce C-SafeQA, a policy-grounded benchmark for response-level Chinese safety evaluation. It comprises 538 base queries and 8,877 adversarial queries answered by four full-model LLM deployments, yielding 37,660 query-response records labeled safe, unsafe, or disputed. Reference labels are generated through agreement-aware multi-model adjudication and blind audits of stratified subsets by three safety experts. C-SafeQA supports both evaluation of target-model safety and auditing of seven automated safety judges against shared reference labels. Unsafe-response rates range from 0.93% to 3.35% on base queries and from 11.68% to 30.05% on adversarial queries. On the adversarial subset, judges show substantial trade-offs between unsafe-response recall and risk-query-conditioned safe-response false positive rate, and no judge dominates all metrics. Both acrostic transformations reduce unsafe recall for all seven judges, revealing mechanism-specific evaluator weaknesses. Dataset records, metadata, verification code, and judge scripts are publicly released to support recomputation, while benchmark construction, target-response generation, and private adjudication remain outside the release boundary."
     }
   },
   {
-    "id": "2608.27954v1",
-    "title": "Not to Break, but to Attest: Adversarial Probes for Privacy-Preserving LLM Verification",
+    "id": "2609.01187v1",
+    "title": "Athena: Vulnerability-Affected Library Identification via Knowledge Graph Completion",
     "authors": [
-      "Cameron Wilding",
-      "Mina Shaker",
-      "Fatemeh Ganji"
+      "Phong Trinh Duy",
+      "Trang Dang Yen",
+      "Hung Nguyen-Huu",
+      "Bach Le",
+      "Quyet-Thang Huynh"
     ],
-    "published_date": "2026-08-28",
+    "published_date": "2026-09-01",
     "tags": [
-      "cs.CR",
+      "cs.SE",
       "cs.AI",
-      "cs.LG"
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2608.27954v1",
-    "pdf_link": "https://arxiv.org/pdf/2608.27954v1",
+    "link": "http://arxiv.org/abs/2609.01187v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.01187v1",
     "content": {
-      "en": "Post-deployment changes to large language models can alter behavior while leaving routine outputs largely unchanged, creating a challenge for AI governance when model weights are proprietary. We present a privacy-preserving zk-SNARK-based audit framework that searches for probes designed in the spirit of adversarial examples to amplify logit drift between an approved model and a modified deployment. Our framework explores complementary probe families under different access models. Token-based probes operate in a black-box setting and require only the input interface, tokenizer, and vocabulary. Embedding-based probes require gray-box access to the embedding interface. Stress probes rely on additional interface capabilities but do not require full white-box access to model weights or architecture. This range allows probe selection to balance sensitivity, access requirements, and deployment cost. We evaluate probe constructions across LLM architectures, model-tampering scenarios representative of post-deployment attacks, and GPU platforms. Importantly, our experimental results demonstrate that token-based probes consistently deliver the strongest mean sensitivity across models and GPU platforms, although operating in a black-box setting. Our Groth16 zk-SNARK workflow remains practical as the probe set scales from 1 to 50, where proving time increases from 1.02 to 1.78 seconds, verification remains near 0.84 seconds, and proof size remains constant.",
-      "tr": "Post-deployment changes to large language models can alter behavior while leaving routine outputs largely unchanged, creating a challenge for AI governance when model weights are proprietary. We present a privacy-preserving zk-SNARK-based audit framework that searches for probes designed in the spirit of adversarial examples to amplify logit drift between an approved model and a modified deployment. Our framework explores complementary probe families under different access models. Token-based probes operate in a black-box setting and require only the input interface, tokenizer, and vocabulary. Embedding-based probes require gray-box access to the embedding interface. Stress probes rely on additional interface capabilities but do not require full white-box access to model weights or architecture. This range allows probe selection to balance sensitivity, access requirements, and deployment cost. We evaluate probe constructions across LLM architectures, model-tampering scenarios representative of post-deployment attacks, and GPU platforms. Importantly, our experimental results demonstrate that token-based probes consistently deliver the strongest mean sensitivity across models and GPU platforms, although operating in a black-box setting. Our Groth16 zk-SNARK workflow remains practical as the probe set scales from 1 to 50, where proving time increases from 1.02 to 1.78 seconds, verification remains near 0.84 seconds, and proof size remains constant."
+      "en": "A single vulnerability in a widely used library can cascade through millions of dependent applications, yet more than half of vulnerability database entries contain missing or incorrect affected-library information. Existing automated approaches neglect the relational structure of vulnerability databases, treating identification as an isolated text retrieval problem. In this paper, we propose Athena, the first graph-based approach for vulnerability affected library identification. Athena models vulnerability databases as a knowledge graph and reformulates the identification problem as knowledge graph completion (KGC). It comprises three key modules: a Modeling module that constructs a security knowledge graph integrating CVEs, libraries, CWE weakness types, CPE products, and software ecosystems; a Completion module that applies a modular KGC backbone to predict missing affected libraries for a given CVE via link prediction; and a Re-ranking module that retrieves KGC candidates and rescores them using a fine-tuned LLM augmented with knowledge graph embeddings, jointly leveraging structural and textual information. Our experiments on VulLib demonstrate that Athena significantly outperforms four state-of-the-art baselines, achieving a 32% improvement in Avg. F1 over the best baseline (i.e., VulLibGen). Notably, our KGC backbone with only 110M parameters already surpasses VulLibGen's best configuration at 7B parameters, demonstrating the effectiveness of graph-based modeling; the re-ranking module then provides substantial further gains, consistently outperforming the best baseline across all evaluated LLM backbones.",
+      "tr": "A single vulnerability in a widely used library can cascade through millions of dependent applications, yet more than half of vulnerability database entries contain missing or incorrect affected-library information. Existing automated approaches neglect the relational structure of vulnerability databases, treating identification as an isolated text retrieval problem. In this paper, we propose Athena, the first graph-based approach for vulnerability affected library identification. Athena models vulnerability databases as a knowledge graph and reformulates the identification problem as knowledge graph completion (KGC). It comprises three key modules: a Modeling module that constructs a security knowledge graph integrating CVEs, libraries, CWE weakness types, CPE products, and software ecosystems; a Completion module that applies a modular KGC backbone to predict missing affected libraries for a given CVE via link prediction; and a Re-ranking module that retrieves KGC candidates and rescores them using a fine-tuned LLM augmented with knowledge graph embeddings, jointly leveraging structural and textual information. Our experiments on VulLib demonstrate that Athena significantly outperforms four state-of-the-art baselines, achieving a 32% improvement in Avg. F1 over the best baseline (i.e., VulLibGen). Notably, our KGC backbone with only 110M parameters already surpasses VulLibGen's best configuration at 7B parameters, demonstrating the effectiveness of graph-based modeling; the re-ranking module then provides substantial further gains, consistently outperforming the best baseline across all evaluated LLM backbones."
     }
   },
   {
-    "id": "2608.27836v1",
-    "title": "FISGuard: Defending Against Membership Inference via Fixed Input Subspaces",
+    "id": "2609.01110v1",
+    "title": "Griotte: Verified Compartmentalisation via Capabilities",
     "authors": [
-      "Haocheng Jiang",
-      "Hua Shen"
+      "June Rousseau",
+      "Aïna Linn Georges",
+      "Jean Pichon-Pharabod",
+      "Lars Birkedal"
     ],
-    "published_date": "2026-08-28",
+    "published_date": "2026-09-01",
     "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.DC"
+      "cs.PL",
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2608.27836v1",
-    "pdf_link": "https://arxiv.org/pdf/2608.27836v1",
+    "link": "http://arxiv.org/abs/2609.01110v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.01110v1",
     "content": {
-      "en": "As large language models are increasingly adopted in federated learning, protecting user privacy while performing parameter-efficient fine-tuning on distributed private data has become an important challenge. Although clients only share gradients instead of directly uploading raw data, the shared gradients may still leak membership information about training samples. ProjRes (S&P, 2026) further increases this risk: with less information and without accessing model outputs, an attacker can effectively distinguish members from non-members solely based on the projection residual between a candidate representation and the subspace induced by server-observable gradients. Existing defenses against membership inference mostly rely on gradient perturbation or regularization, which can not only degrade model utility but also fail to effectively defend against the membership inference attack introduced by ProjRes, which exploits the geometric structure of gradients.   To address this issue, we propose FISGuard, a lightweight defense. Its key idea is to construct and fix a low-dimensional representation subspace using independent public data, thereby restricting the space through which private representations are exposed via gradients while preserving the primary information required for downstream tasks. This substantially reduces the projection-residual discrepancy between members and non-members.   We evaluate FISGuard against five representative defense methods across three NLP datasets, two LLMs, and two fine-tuning strategies, Adapter and LoRA. The results show that FISGuard reduces the ProjRes attack AUC to near the random-guessing level of 0.5 in most settings, while maintaining downstream task performance close to that of the undefended model and introducing only limited computational overhead, thereby achieving a favorable privacy--utility trade-off.",
-      "tr": "As large language models are increasingly adopted in federated learning, protecting user privacy while performing parameter-efficient fine-tuning on distributed private data has become an important challenge. Although clients only share gradients instead of directly uploading raw data, the shared gradients may still leak membership information about training samples. ProjRes (S&P, 2026) further increases this risk: with less information and without accessing model outputs, an attacker can effectively distinguish members from non-members solely based on the projection residual between a candidate representation and the subspace induced by server-observable gradients. Existing defenses against membership inference mostly rely on gradient perturbation or regularization, which can not only degrade model utility but also fail to effectively defend against the membership inference attack introduced by ProjRes, which exploits the geometric structure of gradients.   To address this issue, we propose FISGuard, a lightweight defense. Its key idea is to construct and fix a low-dimensional representation subspace using independent public data, thereby restricting the space through which private representations are exposed via gradients while preserving the primary information required for downstream tasks. This substantially reduces the projection-residual discrepancy between members and non-members.   We evaluate FISGuard against five representative defense methods across three NLP datasets, two LLMs, and two fine-tuning strategies, Adapter and LoRA. The results show that FISGuard reduces the ProjRes attack AUC to near the random-guessing level of 0.5 in most settings, while maintaining downstream task performance close to that of the undefended model and introducing only limited computational overhead, thereby achieving a favorable privacy--utility trade-off."
-    }
-  },
-  {
-    "id": "2608.27800v1",
-    "title": "ContextLeak: Exfiltrating LLM Agent Context via Malicious Tools",
-    "authors": [
-      "Yuqi Jia",
-      "Ruiqi Wang",
-      "Patrick Li",
-      "Yuepeng Hu",
-      "Peinian Li"
-    ],
-    "published_date": "2026-08-28",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2608.27800v1",
-    "pdf_link": "https://arxiv.org/pdf/2608.27800v1",
-    "content": {
-      "en": "Exfiltrating an LLM agent's runtime context -- such as the user prompt, execution trajectory, and tool list -- poses severe security and privacy risks to users. Such attacks can be carried out via malicious tools and typically require three conditions: (1) the agent selects the malicious tool for task execution, (2) the agent passes its runtime context as input arguments to the tool, and (3) the tool's implementation transmits these inputs to an attacker-controlled endpoint. Existing work primarily focuses on conditions (1) and (3), leaving condition (2) largely unexplored, despite its critical role in enabling successful context exfiltration.   In this work, we bridge this gap by developing ContextLeak, a malicious tool attack that induces the agent to both select the tool and disclose its context as input arguments. We realize this attack by carefully crafting the tool's name and description using reinforcement learning. Specifically, ContextLeak employs an LLM, referred to as the attack LLM, to automatically generate the malicious tool's name and description. To improve attack effectiveness, we fine-tune the attack LLM via reinforcement learning on a set of shadow users with diverse, simulated agent contexts. Our key technical contribution is the design of novel reward functions tailored to the context exfiltration objective, enabling effective reinforcement-learning-based fine-tuning of the attack LLM. Extensive evaluation demonstrates that our attack remains highly effective even when the shadow users' contexts differ substantially from those of the victim users. Moreover, ContextLeak significantly outperforms existing malicious tool attacks when adapted to this setting.",
-      "tr": "Exfiltrating an LLM agent's runtime context -- such as the user prompt, execution trajectory, and tool list -- poses severe security and privacy risks to users. Such attacks can be carried out via malicious tools and typically require three conditions: (1) the agent selects the malicious tool for task execution, (2) the agent passes its runtime context as input arguments to the tool, and (3) the tool's implementation transmits these inputs to an attacker-controlled endpoint. Existing work primarily focuses on conditions (1) and (3), leaving condition (2) largely unexplored, despite its critical role in enabling successful context exfiltration.   In this work, we bridge this gap by developing ContextLeak, a malicious tool attack that induces the agent to both select the tool and disclose its context as input arguments. We realize this attack by carefully crafting the tool's name and description using reinforcement learning. Specifically, ContextLeak employs an LLM, referred to as the attack LLM, to automatically generate the malicious tool's name and description. To improve attack effectiveness, we fine-tune the attack LLM via reinforcement learning on a set of shadow users with diverse, simulated agent contexts. Our key technical contribution is the design of novel reward functions tailored to the context exfiltration objective, enabling effective reinforcement-learning-based fine-tuning of the attack LLM. Extensive evaluation demonstrates that our attack remains highly effective even when the shadow users' contexts differ substantially from those of the victim users. Moreover, ContextLeak significantly outperforms existing malicious tool attacks when adapted to this setting."
+      "en": "CHERIoT is a novel hardware-software co-design that leverages hardware capabilities to define a notion of compartment, in a minimalistic capability-based OS, CHERIoT RTOS. By default, compartments are isolated to limit damage in case of bugs or malicious behaviour. To allow cross-compartment communication, the OS provides a privileged component, called the switcher. The switcher provides an interface for cross-compartment calls, while enforcing isolation between compartments and guaranteeing stack safety. Together with hardware capabilities, the switcher is critical to enforce the security guarantees of the CHERIoT compartment model. The design of CHERIoT raises two questions: First, how can one formalise the informal notion of compartmentalisation that CHERIoT compartments are designed to provide? And second, given that the safety properties of CHERIoT hinge on the complementary roles of the capability machine and of the switcher, does the design of CHERIoT enforce the desired security properties?   In this paper, we introduce Griotte and Griotte OS, idealised but faithful versions of the CHERIoT machine and the CHERIoT RTOS, which we use to answer these two questions: First, we formally capture the aforementioned security guarantees in the form of a continuation-based logical relation which captures the combined behaviour of the switcher and of the capability machine. And second, we define a specification for the Griotte switcher that enforces those guarantees, and prove that the implementation meets the specification. We demonstrate Griotte on a range of key scenarios illustrating different aspects of CHERIoT, including integrity of the local state in the presence of memory sharing with unknown code. Our approach is modular: we verify compartments individually, and then compose their specifications. Together, our contributions give a solid formal foundation to the design of CHERIoT.",
+      "tr": "CHERIoT is a novel hardware-software co-design that leverages hardware capabilities to define a notion of compartment, in a minimalistic capability-based OS, CHERIoT RTOS. By default, compartments are isolated to limit damage in case of bugs or malicious behaviour. To allow cross-compartment communication, the OS provides a privileged component, called the switcher. The switcher provides an interface for cross-compartment calls, while enforcing isolation between compartments and guaranteeing stack safety. Together with hardware capabilities, the switcher is critical to enforce the security guarantees of the CHERIoT compartment model. The design of CHERIoT raises two questions: First, how can one formalise the informal notion of compartmentalisation that CHERIoT compartments are designed to provide? And second, given that the safety properties of CHERIoT hinge on the complementary roles of the capability machine and of the switcher, does the design of CHERIoT enforce the desired security properties?   In this paper, we introduce Griotte and Griotte OS, idealised but faithful versions of the CHERIoT machine and the CHERIoT RTOS, which we use to answer these two questions: First, we formally capture the aforementioned security guarantees in the form of a continuation-based logical relation which captures the combined behaviour of the switcher and of the capability machine. And second, we define a specification for the Griotte switcher that enforces those guarantees, and prove that the implementation meets the specification. We demonstrate Griotte on a range of key scenarios illustrating different aspects of CHERIoT, including integrity of the local state in the presence of memory sharing with unknown code. Our approach is modular: we verify compartments individually, and then compose their specifications. Together, our contributions give a solid formal foundation to the design of CHERIoT."
     }
   }
 ]
