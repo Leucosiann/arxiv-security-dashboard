@@ -1,214 +1,204 @@
 [
   {
-    "id": "2609.02852v1",
-    "title": "The Implications of Linguistic Illegibility for LLM Security",
+    "id": "2609.04159v1",
+    "title": "SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center",
     "authors": [
-      "James Mickens"
+      "Uday Vallabhaneni",
+      "Cassie L. Cagwin",
+      "David J. Wild"
     ],
-    "published_date": "2026-09-02",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2609.02852v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.02852v1",
-    "content": {
-      "en": "LLMs are trained to generate natural language. However, various strands of evidence indicate that an LLM's externalized linguistic outputs and mechanistically-extracted linguistic features can be an unreliable lens for understanding internal model computation. We introduce the term ``linguistic illegibility'' to broadly refer to scenarios in which an LLM's externalized or mechanistically-probed language artifacts fail to represent how the model actually thinks. We argue that the specter of linguistic illegibility is unavoidable for LLMs whose internal computations are not directly expressed via language, but rather math over activation spaces (with lossy translations between activation spaces and natural language happening at the bookends). If linguistic illegibility is always possible, then security mechanisms that rely on a model's linguistic self-reporting (e.g., chain-of-thought monitoring, constitutional self-critique, activation probing for linguistically-defined feature vectors) can never be completely sound; the model sandbox will always need isolation techniques whose guarantees do not depend on reading a model's linguistic state at all. We argue that observing a model's outputs using taint tracking is a promising approach for an effective sandbox: regardless of how a model linguistically self-reports, a taint tracking policy can define, a priori, various pieces of system state that should never be influenced by model-produced data. We also discuss several additional sandboxing mechanisms (e.g., robust virtualization, third-party auditing of sandboxing configurations) which collectively provide a critical floor beneath linguistic monitoring, and would have mitigated recent sandbox exploits by frontier models.",
-      "tr": "LLMs are trained to generate natural language. However, various strands of evidence indicate that an LLM's externalized linguistic outputs and mechanistically-extracted linguistic features can be an unreliable lens for understanding internal model computation. We introduce the term ``linguistic illegibility'' to broadly refer to scenarios in which an LLM's externalized or mechanistically-probed language artifacts fail to represent how the model actually thinks. We argue that the specter of linguistic illegibility is unavoidable for LLMs whose internal computations are not directly expressed via language, but rather math over activation spaces (with lossy translations between activation spaces and natural language happening at the bookends). If linguistic illegibility is always possible, then security mechanisms that rely on a model's linguistic self-reporting (e.g., chain-of-thought monitoring, constitutional self-critique, activation probing for linguistically-defined feature vectors) can never be completely sound; the model sandbox will always need isolation techniques whose guarantees do not depend on reading a model's linguistic state at all. We argue that observing a model's outputs using taint tracking is a promising approach for an effective sandbox: regardless of how a model linguistically self-reports, a taint tracking policy can define, a priori, various pieces of system state that should never be influenced by model-produced data. We also discuss several additional sandboxing mechanisms (e.g., robust virtualization, third-party auditing of sandboxing configurations) which collectively provide a critical floor beneath linguistic monitoring, and would have mitigated recent sandbox exploits by frontier models."
-    }
-  },
-  {
-    "id": "2609.02786v1",
-    "title": "SafeEvolve: Harness-Policy Co-Evolution from Agent Experience for Safety Alignment",
-    "authors": [
-      "Qinghua Mao",
-      "Wanying Qu",
-      "Dadi Guo",
-      "Leitao Yuan",
-      "Qingyu Liu"
-    ],
-    "published_date": "2026-09-02",
-    "tags": [
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2609.02786v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.02786v1",
-    "content": {
-      "en": "The performance of LLM-based agents is jointly shaped by the base model and the harness used when interacting with the environment. This exposes them to safety risks in both harmful final responses and multi-step execution trajectories. Existing safety alignment mechanisms often rely on either external harness updates or policy optimization, yet applying either paradigm in isolation fails to bridge runtime control with intrinsic safety. We propose SafeEvolve, an experience-driven self-evolving framework for agent safety alignment. SafeEvolve leverages safety experience from completed on-policy trajectories to drive a continual loop of harness-policy co-evolution. On the harness side, SafeEvolve converts trajectory-level safety evidence into bounded, component-level updates across safety prompt and hierarchical skills, yielding auditable and reversible harness artifacts. On the policy side, SafeEvolve follows a two-stage SFT-RL paradigm, where harness-use SFT bootstraps the policy to actively leverage evolved harness artifacts, and harness-augmented RL further shapes autonomous safety behaviors during multi-step exploration via verifier-decomposed rewards. Through harness-policy co-evolution, SafeEvolve converts safety experience into an evolved runtime harness and improved policy behavior. Experiments on agentic safety benchmarks show that SafeEvolve achieves a stronger safety-utility tradeoff than existing baselines. For Qwen3.5-4B, SafeEvolve achieves a $3\\times$ ASR reduction on AgentDojo while improving benign utility from 59.79% to 61.86%.",
-      "tr": "The performance of LLM-based agents is jointly shaped by the base model and the harness used when interacting with the environment. This exposes them to safety risks in both harmful final responses and multi-step execution trajectories. Existing safety alignment mechanisms often rely on either external harness updates or policy optimization, yet applying either paradigm in isolation fails to bridge runtime control with intrinsic safety. We propose SafeEvolve, an experience-driven self-evolving framework for agent safety alignment. SafeEvolve leverages safety experience from completed on-policy trajectories to drive a continual loop of harness-policy co-evolution. On the harness side, SafeEvolve converts trajectory-level safety evidence into bounded, component-level updates across safety prompt and hierarchical skills, yielding auditable and reversible harness artifacts. On the policy side, SafeEvolve follows a two-stage SFT-RL paradigm, where harness-use SFT bootstraps the policy to actively leverage evolved harness artifacts, and harness-augmented RL further shapes autonomous safety behaviors during multi-step exploration via verifier-decomposed rewards. Through harness-policy co-evolution, SafeEvolve converts safety experience into an evolved runtime harness and improved policy behavior. Experiments on agentic safety benchmarks show that SafeEvolve achieves a stronger safety-utility tradeoff than existing baselines. For Qwen3.5-4B, SafeEvolve achieves a $3\\times$ ASR reduction on AgentDojo while improving benign utility from 59.79% to 61.86%."
-    }
-  },
-  {
-    "id": "2609.02774v1",
-    "title": "CodePoisonRAG: Knowledge Poisoning Attacks on Retrieval-Augmented Code Generation",
-    "authors": [
-      "Varun Gadey",
-      "Ziad Marey",
-      "Alexandra Dmitrienko"
-    ],
-    "published_date": "2026-09-02",
+    "published_date": "2026-09-03",
     "tags": [
       "cs.CR",
-      "cs.LG"
+      "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2609.02774v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.02774v1",
+    "link": "http://arxiv.org/abs/2609.04159v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.04159v1",
     "content": {
-      "en": "Retrieval-Augmented Code Generation (RACG) improves LLM-based software development by retrieving external code artifacts, documentation, and patches, and incorporating them into the generation context. This reliance on external knowledge introduces a critical trust boundary: poisoned artifacts can influence generated code without modifying the underlying LLM. Prior work shows that selecting existing vulnerable examples can increase the general vulnerability rate of RACG outputs, but leaves open whether a black-box attacker can construct a single task-matched artifact that propagates an attacker-selected weakness. We introduce CodePoisonRAG, a targeted upstream knowledge-poisoning framework that transforms benign fixed-code entries into poisoned artifacts. Its attack chain combines CWE-specific Vulnerability Injection, which embeds a selected source-to-sink flow while retaining task alignment, with Semantic Mislabeling, which adds false safety claims without repairing the vulnerable behavior. The attacker has no access to the victim's deployed knowledge base, retriever, re-ranker, generator, prompt, or defense mechanism and injects at most one artifact per anticipated programming task. We construct 85 poisoned artifacts covering ten CWE classes across Java and C, yielding an aggregate corpus-poisoning ratio of 0.7%. Across three generators, all 85 artifacts appear among the Top-3 results for their corresponding queries, and CodePoisonRAG achieves attack success rates between 0.80 and 0.93. Against CodeGuarder, which injects vulnerability-specific security knowledge into the generation context, the attack retains success rates between 0.40 and 0.71. These results show that RACG poisoning extends beyond the incidental propagation of existing vulnerabilities to the targeted construction and propagation of attacker-selected weaknesses.",
-      "tr": "Retrieval-Augmented Code Generation (RACG) improves LLM-based software development by retrieving external code artifacts, documentation, and patches, and incorporating them into the generation context. This reliance on external knowledge introduces a critical trust boundary: poisoned artifacts can influence generated code without modifying the underlying LLM. Prior work shows that selecting existing vulnerable examples can increase the general vulnerability rate of RACG outputs, but leaves open whether a black-box attacker can construct a single task-matched artifact that propagates an attacker-selected weakness. We introduce CodePoisonRAG, a targeted upstream knowledge-poisoning framework that transforms benign fixed-code entries into poisoned artifacts. Its attack chain combines CWE-specific Vulnerability Injection, which embeds a selected source-to-sink flow while retaining task alignment, with Semantic Mislabeling, which adds false safety claims without repairing the vulnerable behavior. The attacker has no access to the victim's deployed knowledge base, retriever, re-ranker, generator, prompt, or defense mechanism and injects at most one artifact per anticipated programming task. We construct 85 poisoned artifacts covering ten CWE classes across Java and C, yielding an aggregate corpus-poisoning ratio of 0.7%. Across three generators, all 85 artifacts appear among the Top-3 results for their corresponding queries, and CodePoisonRAG achieves attack success rates between 0.80 and 0.93. Against CodeGuarder, which injects vulnerability-specific security knowledge into the generation context, the attack retains success rates between 0.40 and 0.71. These results show that RACG poisoning extends beyond the incidental propagation of existing vulnerabilities to the targeted construction and propagation of attacker-selected weaknesses."
+      "en": "Large language model (LLM) agents are increasingly proposed as autonomous SOC analysts, but two limitations make them unreliable at enterprise scale: a finite context window cannot hold a multi-thousand-host authentication graph, and free-form generation offers no guarantee that a recommended containment action is consistent with the topology it operates on. We present Sentinel-RL, an agentic-SOC architecture that decouples topological reasoning from semantic reasoning: a heterogeneous graph attention encoder summarizes the live authentication subgraph into a fixed-dimensional state, a Proximal Policy Optimization (PPO) policy maps this state to a constrained set of investigative actions, and an LLM agent loop is restricted to consuming the policy's recommendations and producing analyst-readable narratives gated by a critic. We instantiate the system on the LANL Comprehensive, Multi-Source Cyber-Security Events dataset and the Indiana University Quartz HPC cluster, reporting four results: (i) a two-phase CREATE ingestion pattern loads a 24M-edge authentication subgraph into Neo4j in 14.2 minutes on a single 32-core node, roughly 24x faster than the canonical MERGE-based pipeline; (ii) a sliding-window alert engine reliably trips a 25-event/10-second threshold in <=2.5 s across 50 trials; (iii) PPO training over 200 iterations converges to a mean episodic return of 8.74+/-0.31, with held-out precision of 0.91 and recall of 0.87 on labeled red-team events; and (iv) the integrated containment loop completes a full detect-investigate-recommend-human-approve cycle in a median of 6.3 s. We contribute a reusable engineering pattern (the hot-node deadlock workaround), a portable HPC deployment pattern (anchor-node co-location), and an enterprise-readiness analysis covering false-positive economics, reversibility guarantees, audit compliance, and the human-approval boundary.",
+      "tr": "Large language model (LLM) agents are increasingly proposed as autonomous SOC analysts, but two limitations make them unreliable at enterprise scale: a finite context window cannot hold a multi-thousand-host authentication graph, and free-form generation offers no guarantee that a recommended containment action is consistent with the topology it operates on. We present Sentinel-RL, an agentic-SOC architecture that decouples topological reasoning from semantic reasoning: a heterogeneous graph attention encoder summarizes the live authentication subgraph into a fixed-dimensional state, a Proximal Policy Optimization (PPO) policy maps this state to a constrained set of investigative actions, and an LLM agent loop is restricted to consuming the policy's recommendations and producing analyst-readable narratives gated by a critic. We instantiate the system on the LANL Comprehensive, Multi-Source Cyber-Security Events dataset and the Indiana University Quartz HPC cluster, reporting four results: (i) a two-phase CREATE ingestion pattern loads a 24M-edge authentication subgraph into Neo4j in 14.2 minutes on a single 32-core node, roughly 24x faster than the canonical MERGE-based pipeline; (ii) a sliding-window alert engine reliably trips a 25-event/10-second threshold in <=2.5 s across 50 trials; (iii) PPO training over 200 iterations converges to a mean episodic return of 8.74+/-0.31, with held-out precision of 0.91 and recall of 0.87 on labeled red-team events; and (iv) the integrated containment loop completes a full detect-investigate-recommend-human-approve cycle in a median of 6.3 s. We contribute a reusable engineering pattern (the hot-node deadlock workaround), a portable HPC deployment pattern (anchor-node co-location), and an enterprise-readiness analysis covering false-positive economics, reversibility guarantees, audit compliance, and the human-approval boundary."
     }
   },
   {
-    "id": "2609.02741v1",
-    "title": "SPADE: SPaT Attack Detection from the Connected Vehicle's Perspective",
+    "id": "2609.04086v1",
+    "title": "A Non-Formulable Theorem: A Fundamental Limit of Finite Syntactic Systems and Its Consequences for Security and AI",
     "authors": [
-      "James Di Novo",
-      "Hany Ragab",
-      "Sylvain P. Leblanc"
+      "Fabio F. G. Buono"
     ],
-    "published_date": "2026-09-02",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2609.02741v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.02741v1",
-    "content": {
-      "en": "Signal Phase and Timing (SPaT) messages are a cornerstone of connected vehicle (CV) safety, enabling CVs to perceive and respond to intersection state through Vehicle-to-Infrastructure (V2I) and Vehicle-to-Vehicle (V2V) communication. The integrity of these messages is threatened by a range of application-layer attacks that can bypass conventional authentication when a roadside unit or peer vehicle is compromised. Existing intrusion detection research either defends the infrastructure side or targets V2V Basic Safety Message (BSM) / Cooperative Awareness Message (CAM) misbehavior, leaving the onboard CV perspective on SPaT integrity unaddressed.To close this gap, we introduce SPADE --- the SPaT Attack Detection and Evaluation dataset --- a labelled, multi-modal, simulation-based dataset designed specifically for deep learning IDS research in this space. SPADE is generated through Eclipse MOSAIC using runtime attack injection at the SAE J2735 application layer across six attack classes and one benign class. By combining four intersection geometries, six operating conditions, and five independent random-seed repetitions, SPADE comprises 180 unique base scenario runs, yielding $\\sim$1,890,000 labelled timestep records (270,000 per class). Each record fuses SPaT message fields, onboard camera confidence scores, and cooperative V2V peer data across 40 features, reflecting the multi-modal signal space required to distinguish deliberate attacks from environmental degradation. The dataset, generation code, and scenario configurations are released publicly to support reproducible and comparative IDS research in C-V2X security. The developed toolbox, instructions, and dataset link are publicly available on GitHub: https://github.com/jdinovo/SPADE.",
-      "tr": "Signal Phase and Timing (SPaT) messages are a cornerstone of connected vehicle (CV) safety, enabling CVs to perceive and respond to intersection state through Vehicle-to-Infrastructure (V2I) and Vehicle-to-Vehicle (V2V) communication. The integrity of these messages is threatened by a range of application-layer attacks that can bypass conventional authentication when a roadside unit or peer vehicle is compromised. Existing intrusion detection research either defends the infrastructure side or targets V2V Basic Safety Message (BSM) / Cooperative Awareness Message (CAM) misbehavior, leaving the onboard CV perspective on SPaT integrity unaddressed.To close this gap, we introduce SPADE --- the SPaT Attack Detection and Evaluation dataset --- a labelled, multi-modal, simulation-based dataset designed specifically for deep learning IDS research in this space. SPADE is generated through Eclipse MOSAIC using runtime attack injection at the SAE J2735 application layer across six attack classes and one benign class. By combining four intersection geometries, six operating conditions, and five independent random-seed repetitions, SPADE comprises 180 unique base scenario runs, yielding $\\sim$1,890,000 labelled timestep records (270,000 per class). Each record fuses SPaT message fields, onboard camera confidence scores, and cooperative V2V peer data across 40 features, reflecting the multi-modal signal space required to distinguish deliberate attacks from environmental degradation. The dataset, generation code, and scenario configurations are released publicly to support reproducible and comparative IDS research in C-V2X security. The developed toolbox, instructions, and dataset link are publicly available on GitHub: https://github.com/jdinovo/SPADE."
-    }
-  },
-  {
-    "id": "2609.02624v1",
-    "title": "Automated Vulnerability Injection in Smart Contracts Using Large Language Models",
-    "authors": [
-      "Luca Migliaccio",
-      "Roberto Natella",
-      "Naghmeh Ivaki",
-      "Nuno Laranjeiro",
-      "Marco Vieira"
-    ],
-    "published_date": "2026-09-02",
-    "tags": [
-      "cs.SE",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2609.02624v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.02624v1",
-    "content": {
-      "en": "Assessing vulnerability detection tools for smart contracts requires datasets with known ground truth, yet such datasets are scarce and difficult to build by hand. We propose an approach that uses Large Language Models (LLMs) to automatically inject vulnerabilities into Solidity smart contracts, and demonstrate it in a case study targeting 49 vulnerability types from OpenSCV. Injected contracts are validated through a multi-step pipeline checking compilation, execution, business logic, and the presence of the intended vulnerability. Applied to real-world contracts from SmartBugs, LLMs generate nearly 1,000 candidate variants; after deduplication and validation, 32 confirmed vulnerable contracts spanning 25 vulnerability types survive (a 16.58% survival rate). Surviving contracts concentrate in structurally simpler targets and vulnerability types with localized syntactic patterns. We report practical challenges including LLMs' non-determinism and the difficulty of preserving contract semantics. We then use the validated contracts to assess three static analyzers, revealing complementary and incomplete coverage profiles. Results show that LLM-based vulnerability injection is feasible, while exposing key limitations in scalability and diversity.",
-      "tr": "Assessing vulnerability detection tools for smart contracts requires datasets with known ground truth, yet such datasets are scarce and difficult to build by hand. We propose an approach that uses Large Language Models (LLMs) to automatically inject vulnerabilities into Solidity smart contracts, and demonstrate it in a case study targeting 49 vulnerability types from OpenSCV. Injected contracts are validated through a multi-step pipeline checking compilation, execution, business logic, and the presence of the intended vulnerability. Applied to real-world contracts from SmartBugs, LLMs generate nearly 1,000 candidate variants; after deduplication and validation, 32 confirmed vulnerable contracts spanning 25 vulnerability types survive (a 16.58% survival rate). Surviving contracts concentrate in structurally simpler targets and vulnerability types with localized syntactic patterns. We report practical challenges including LLMs' non-determinism and the difficulty of preserving contract semantics. We then use the validated contracts to assess three static analyzers, revealing complementary and incomplete coverage profiles. Results show that LLM-based vulnerability injection is feasible, while exposing key limitations in scalability and diversity."
-    }
-  },
-  {
-    "id": "2609.02568v1",
-    "title": "Learning-Based Reconstruction Attacks on Coordinate-Obfuscated Point Clouds",
-    "authors": [
-      "Mohammad Waquas Usmani",
-      "Susmit Shannigrahi",
-      "Michael Zink"
-    ],
-    "published_date": "2026-09-02",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2609.02568v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.02568v1",
-    "content": {
-      "en": "Volumetric video based on point cloud representations enables immersive virtual and augmented reality applications but introduces significant challenges for efficient and secure content delivery. Prior work proposed a selective coordinate encryption framework for point clouds that encrypts only a subset of coordinates, reducing computational costs while visually degrading unauthorized content. However, it remains unclear whether the remaining unencrypted information is sufficient to enable content reconstruction.   In this paper, we evaluate the robustness of selective coordinate encryption against machine learning-based reconstruction attacks. We consider an attacker with access to selectively encrypted point clouds attempting to recover encrypted coordinates without decryption by exploiting spatial and geometric correlations in the unencrypted data. We evaluate PointNet and Random Forest models under two encryption granularities: \\texttt{X}, where all $X$ coordinates are encrypted, and \\texttt{2X}, where every second $X$ coordinate is encrypted.   Our results show that reconstructing fully encrypted $X$ coordinates remains challenging, whereas the \\texttt{2X} scheme leaks sufficient information through neighboring coordinates to enable accurate reconstruction. These findings demonstrate that the security of selective coordinate encryption depends strongly on encryption granularity.",
-      "tr": "Volumetric video based on point cloud representations enables immersive virtual and augmented reality applications but introduces significant challenges for efficient and secure content delivery. Prior work proposed a selective coordinate encryption framework for point clouds that encrypts only a subset of coordinates, reducing computational costs while visually degrading unauthorized content. However, it remains unclear whether the remaining unencrypted information is sufficient to enable content reconstruction.   In this paper, we evaluate the robustness of selective coordinate encryption against machine learning-based reconstruction attacks. We consider an attacker with access to selectively encrypted point clouds attempting to recover encrypted coordinates without decryption by exploiting spatial and geometric correlations in the unencrypted data. We evaluate PointNet and Random Forest models under two encryption granularities: \\texttt{X}, where all $X$ coordinates are encrypted, and \\texttt{2X}, where every second $X$ coordinate is encrypted.   Our results show that reconstructing fully encrypted $X$ coordinates remains challenging, whereas the \\texttt{2X} scheme leaks sufficient information through neighboring coordinates to enable accurate reconstruction. These findings demonstrate that the security of selective coordinate encryption depends strongly on encryption granularity."
-    }
-  },
-  {
-    "id": "2609.02328v1",
-    "title": "Poisoning Attacks on the PGM-index",
-    "authors": [
-      "Atsuki Sato",
-      "Martin Aumüller",
-      "Yusuke Matsui"
-    ],
-    "published_date": "2026-09-02",
-    "tags": [
-      "cs.DB",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2609.02328v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.02328v1",
-    "content": {
-      "en": "The PGM-index (Ferragina and Vinciguerra, VLDB'20) is one of the most practical learned indexes, owing to its theoretical elegance and consistently strong empirical performance. It is built on optimal piecewise linear approximations (PLAs) that minimize the number of segments. In this paper, we ask how sensitive this optimal PLA itself is to poisoning attacks. We propose PGM-attack, an efficient poisoning attack that sequentially inserts adversarial keys to inflate the resulting number of segments, and we develop a method for deriving theoretical upper bounds on the number of segments attainable under arbitrary insertions. Our experiments show that poisoning only 10% of the keys allows PGM-attack to increase the segment count by up to 120x. On every evaluated instance, our instance-dependent upper bound is at most 1.92x the segment count attained by PGM-attack, certifying that PGM-attack achieves at least 52% of the optimum. This increase in the number of segments enlarges the PGM-index by up to 120x. Moreover, the attack also transfers to other learned indexes, substantially inflating the index size of PLA-based ones in particular. Our results reveal that, despite the optimality of its PLAs, the PGM-index has an intrinsic vulnerability rooted in its optimization objective, motivating robustness-aware objective design for future learned indexes. Our code is publicly available at https://github.com/atsukisato/pgm-attack.",
-      "tr": "The PGM-index (Ferragina and Vinciguerra, VLDB'20) is one of the most practical learned indexes, owing to its theoretical elegance and consistently strong empirical performance. It is built on optimal piecewise linear approximations (PLAs) that minimize the number of segments. In this paper, we ask how sensitive this optimal PLA itself is to poisoning attacks. We propose PGM-attack, an efficient poisoning attack that sequentially inserts adversarial keys to inflate the resulting number of segments, and we develop a method for deriving theoretical upper bounds on the number of segments attainable under arbitrary insertions. Our experiments show that poisoning only 10% of the keys allows PGM-attack to increase the segment count by up to 120x. On every evaluated instance, our instance-dependent upper bound is at most 1.92x the segment count attained by PGM-attack, certifying that PGM-attack achieves at least 52% of the optimum. This increase in the number of segments enlarges the PGM-index by up to 120x. Moreover, the attack also transfers to other learned indexes, substantially inflating the index size of PLA-based ones in particular. Our results reveal that, despite the optimality of its PLAs, the PGM-index has an intrinsic vulnerability rooted in its optimization objective, motivating robustness-aware objective design for future learned indexes. Our code is publicly available at https://github.com/atsukisato/pgm-attack."
-    }
-  },
-  {
-    "id": "2609.02293v1",
-    "title": "SEAL: Reinforcing Global Safety in Mixture-of-Experts through Shared Expert ALignment",
-    "authors": [
-      "Qingyu Meng",
-      "Yiwei Zha",
-      "Jiahuan Pei",
-      "Koen Hindriks",
-      "Herbert Bos"
-    ],
-    "published_date": "2026-09-02",
-    "tags": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2609.02293v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.02293v1",
-    "content": {
-      "en": "Mixture-of-Experts (MoE) is a scaling architecture for large language models that activates only a small subset of expert modules per token, enabling massive parameter growth with nearly constant computation. Recent Hybrid MoE architecture adds \\textit{shared experts} to capture consistently useful representations, further improving stability and generalization. MoE now powers many flagship open-source and commercial models, yet remains vulnerable to adversarial attacks. Specifically, sparse routing introduces a structural vulnerability: MoE safety hinges on which experts are activated, and adversaries can subvert this selection through jailbreak prompts, malicious fine-tuning, and weight-level pruning of safety-critical neurons. Existing defenses primarily focus on hardening the router, but an adversary may still manipulate or bypass the routing trajectory due to the routing process's nondeterministic nature, thereby collapsing the defense. To cope with this problem, we first identify theoretically and empirically that shared expert, an always-activated component containing a small proportion of safety-critical neurons, can overcome the uncertainty of sparsely activated routing path and serve as a router-independent anchor to enhance global safety alignment. Based on this insight, we propose SEAL, a training-time parameter-efficient defense that produces a plug-and-play adapter attached to shared expert, and SEAL++, a variant that adds an orthogonal constraint preserving pre-existing safety subspaces during training. We evaluate SEAL and SEAL++ across six attack scenarios that combine three adversarial inputs (harmful prompting, jailbreak, malicious fine-tuning) with and without neuron pruning. SEAL reduces attack success rate (ASR) by up to 60\\%, at a capability cost of at most 1.4\\% on a five-benchmark average. Additionally, SEAL can seamlessly integrate with router-level ......",
-      "tr": "Mixture-of-Experts (MoE) is a scaling architecture for large language models that activates only a small subset of expert modules per token, enabling massive parameter growth with nearly constant computation. Recent Hybrid MoE architecture adds \\textit{shared experts} to capture consistently useful representations, further improving stability and generalization. MoE now powers many flagship open-source and commercial models, yet remains vulnerable to adversarial attacks. Specifically, sparse routing introduces a structural vulnerability: MoE safety hinges on which experts are activated, and adversaries can subvert this selection through jailbreak prompts, malicious fine-tuning, and weight-level pruning of safety-critical neurons. Existing defenses primarily focus on hardening the router, but an adversary may still manipulate or bypass the routing trajectory due to the routing process's nondeterministic nature, thereby collapsing the defense. To cope with this problem, we first identify theoretically and empirically that shared expert, an always-activated component containing a small proportion of safety-critical neurons, can overcome the uncertainty of sparsely activated routing path and serve as a router-independent anchor to enhance global safety alignment. Based on this insight, we propose SEAL, a training-time parameter-efficient defense that produces a plug-and-play adapter attached to shared expert, and SEAL++, a variant that adds an orthogonal constraint preserving pre-existing safety subspaces during training. We evaluate SEAL and SEAL++ across six attack scenarios that combine three adversarial inputs (harmful prompting, jailbreak, malicious fine-tuning) with and without neuron pruning. SEAL reduces attack success rate (ASR) by up to 60\\%, at a capability cost of at most 1.4\\% on a five-benchmark average. Additionally, SEAL can seamlessly integrate with router-level ......"
-    }
-  },
-  {
-    "id": "2609.02268v1",
-    "title": "Retrosynthesis of Synthetic Media for Explainable AI Provenance Forensics",
-    "authors": [
-      "Yijie Lin",
-      "Ching-Chun Chang",
-      "Isao Echizen",
-      "Hui Li",
-      "Chin-Chen Chang"
-    ],
-    "published_date": "2026-09-02",
+    "published_date": "2026-09-03",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.CV",
-      "cs.MM"
+      "cs.LO"
     ],
-    "link": "http://arxiv.org/abs/2609.02268v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.02268v1",
+    "link": "http://arxiv.org/abs/2609.04086v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.04086v1",
     "content": {
-      "en": "With the rapid proliferation of generative models on Machine Learning as a Service (MLaaS) platforms, reliably tracing the provenance of synthetic media without modifying generator architectures or parameters remains a major challenge. In this work, we propose a self-referential retrosynthesis framework for explainable AI provenance forensics under a fixed-generator setting. The framework leverages a jointly optimized encoder-decoder pair to implement a self-embedding mechanism that enables round-trip consistency verification. During inference, client inputs are first encoded and then processed by the generator to produce outputs with high visual fidelity. For forensic verification, the consistency between the resynthesized image and the query image is analyzed to determine whether the image originates from the target generative model. Our approach eliminates the need for watermark embedding or modifications to the generation process. Experimental results show that images generated from encoded inputs maintain visual quality comparable to original generator outputs, while decoded images reliably trace back to their corresponding source inputs. Furthermore, the framework provides interpretable evidence for generative content provenance, establishing a practical tool for explainable generative AI forensics.",
-      "tr": "With the rapid proliferation of generative models on Machine Learning as a Service (MLaaS) platforms, reliably tracing the provenance of synthetic media without modifying generator architectures or parameters remains a major challenge. In this work, we propose a self-referential retrosynthesis framework for explainable AI provenance forensics under a fixed-generator setting. The framework leverages a jointly optimized encoder-decoder pair to implement a self-embedding mechanism that enables round-trip consistency verification. During inference, client inputs are first encoded and then processed by the generator to produce outputs with high visual fidelity. For forensic verification, the consistency between the resynthesized image and the query image is analyzed to determine whether the image originates from the target generative model. Our approach eliminates the need for watermark embedding or modifications to the generation process. Experimental results show that images generated from encoded inputs maintain visual quality comparable to original generator outputs, while decoded images reliably trace back to their corresponding source inputs. Furthermore, the framework provides interpretable evidence for generative content provenance, establishing a practical tool for explainable generative AI forensics."
+      "en": "For every coherent and sufficiently expressive finite syntactic system S, we prove the existence of at least one theorem that S cannot produce autonomously. The result is a metatheorem: it proves the existence of a theorem, and applies to every finite syntactic system - security mechanisms, AI systems, formal verifiers, legal systems, economic models, and the formal system in which it is itself proved.",
+      "tr": "For every coherent and sufficiently expressive finite syntactic system S, we prove the existence of at least one theorem that S cannot produce autonomously. The result is a metatheorem: it proves the existence of a theorem, and applies to every finite syntactic system - security mechanisms, AI systems, formal verifiers, legal systems, economic models, and the formal system in which it is itself proved."
     }
   },
   {
-    "id": "2609.02177v1",
-    "title": "WeaveMark: Robust and Scalable Multi-bit LLM Watermarking via Coded Payload Spreading",
+    "id": "2609.04075v1",
+    "title": "PatchBench: Evaluating AI Agents for Vulnerability Patching",
     "authors": [
-      "Gang-Hyun Park",
-      "Ju-Hyeong Lee",
-      "Hee-Youl Kwak",
-      "Dae-Young Yun"
+      "Chihao Shen",
+      "Jiacheng Li",
+      "Aastha Mahajan",
+      "Jeffery Siyuan Tian",
+      "Yonghwi Kwon"
+    ],
+    "published_date": "2026-09-03",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.SE"
+    ],
+    "link": "http://arxiv.org/abs/2609.04075v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.04075v1",
+    "content": {
+      "en": "AI agents have recently demonstrated strong performance in automated vulnerability patching. However, existing evaluations often validate a patch only by testing whether the provided Proof-of-Concept (PoC) input still triggers a crash. This leaves two key threats to validity: agents may reproduce memorized historical developer patches, or they may generate surface-level fixes that only suppress the reported crash.   We study these concerns for C/C++ vulnerability patching. We introduce a patch similarity metric to detect memorized patches. On average, 25% of the agent patches exhibit substantial similarity to historical developer patches, indicating that patch memorization is a real threat to the validity of vulnerability patching evaluations. Meanwhile, agents also frequently exploit benchmark structures to pass patch validation by patching on the crash stack trace to suppress the crash, rather than localizing and fixing the root cause of the vulnerabilities.   To handle these issues, we propose PatchBench, a new benchmark for evaluating AI agents on realistic vulnerability patching tasks. PatchBench selects vulnerabilities whose ground-truth fixes lie outside the crash stack and uses vulnerability transplant and code mutations to migrate historical vulnerabilities into new repository contexts, reducing the risks of surface-level fixes and patch memorization. We develop new patch validation methods that thoroughly evaluate both security and semantic correctness of agent patches. Across 11 state-of-the-art agents, including the top three AIxCC agents, the original PoC-only validation inflates the patching task solve rate of agents by 1.83$\\times$ on average. Our results reveal key limitations of current patching agents and point to future research directions for more reliable vulnerability repair.",
+      "tr": "AI agents have recently demonstrated strong performance in automated vulnerability patching. However, existing evaluations often validate a patch only by testing whether the provided Proof-of-Concept (PoC) input still triggers a crash. This leaves two key threats to validity: agents may reproduce memorized historical developer patches, or they may generate surface-level fixes that only suppress the reported crash.   We study these concerns for C/C++ vulnerability patching. We introduce a patch similarity metric to detect memorized patches. On average, 25% of the agent patches exhibit substantial similarity to historical developer patches, indicating that patch memorization is a real threat to the validity of vulnerability patching evaluations. Meanwhile, agents also frequently exploit benchmark structures to pass patch validation by patching on the crash stack trace to suppress the crash, rather than localizing and fixing the root cause of the vulnerabilities.   To handle these issues, we propose PatchBench, a new benchmark for evaluating AI agents on realistic vulnerability patching tasks. PatchBench selects vulnerabilities whose ground-truth fixes lie outside the crash stack and uses vulnerability transplant and code mutations to migrate historical vulnerabilities into new repository contexts, reducing the risks of surface-level fixes and patch memorization. We develop new patch validation methods that thoroughly evaluate both security and semantic correctness of agent patches. Across 11 state-of-the-art agents, including the top three AIxCC agents, the original PoC-only validation inflates the patching task solve rate of agents by 1.83$\\times$ on average. Our results reveal key limitations of current patching agents and point to future research directions for more reliable vulnerability repair."
+    }
+  },
+  {
+    "id": "2609.03884v1",
+    "title": "A Blind Trust, the Bloody Thrust: When Attacker-Controlled Hook Updates Steer AI Agent Harnesses towards Malicious Behaviors",
+    "authors": [
+      "Pengxun Li",
+      "Litian Zhang",
+      "Jianwei Hou",
+      "Shujiang Wu",
+      "Song Li"
+    ],
+    "published_date": "2026-09-03",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2609.03884v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.03884v1",
+    "content": {
+      "en": "Modern AI agent harnesses expose lifecycle hooks that bind shell commands to runtime events such as session start, tool calls, and file edits. These commands run with host privileges yet ship as lifecycle-hook configuration and may fire at times the LLM never observes. We identify the lifecycle-hook update path, which harnesses trust blindly, as a new attack surface. Under a supply-chain threat model in which an attacker controls only plugin metadata and lifecycle-hook configuration, a benign versioned plugin can be trojanized by an update that silently binds attacker-chosen commands to benign events, yielding malicious host-side behavior such as privilege escalation. We propose HookPry, an open-source and fully automated attack framework that systematically exploits this vulnerability across heterogeneous AI agent harnesses. HookPry realizes ten attack objectives; across 25 combinations of harnesses and backends in 1,000 end-to-end runs, it compromises all seven evaluated harnesses, with per-harness success rates reaching 92.5%. Representative defenses remain insufficient: Microsoft Defender has 0% recall, and the union of three static defenses misses 47.5% of malicious artifacts.",
+      "tr": "Modern AI agent harnesses expose lifecycle hooks that bind shell commands to runtime events such as session start, tool calls, and file edits. These commands run with host privileges yet ship as lifecycle-hook configuration and may fire at times the LLM never observes. We identify the lifecycle-hook update path, which harnesses trust blindly, as a new attack surface. Under a supply-chain threat model in which an attacker controls only plugin metadata and lifecycle-hook configuration, a benign versioned plugin can be trojanized by an update that silently binds attacker-chosen commands to benign events, yielding malicious host-side behavior such as privilege escalation. We propose HookPry, an open-source and fully automated attack framework that systematically exploits this vulnerability across heterogeneous AI agent harnesses. HookPry realizes ten attack objectives; across 25 combinations of harnesses and backends in 1,000 end-to-end runs, it compromises all seven evaluated harnesses, with per-harness success rates reaching 92.5%. Representative defenses remain insufficient: Microsoft Defender has 0% recall, and the union of three static defenses misses 47.5% of malicious artifacts."
+    }
+  },
+  {
+    "id": "2609.03844v1",
+    "title": "Flip, Don't Shuffle: Watermarking LLMs at the Speed of Inference",
+    "authors": [
+      "Simone Ceppi",
+      "Ignacio Sanchez"
+    ],
+    "published_date": "2026-09-03",
+    "tags": [
+      "cs.CR",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2609.03844v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.03844v1",
+    "content": {
+      "en": "We introduce Stateless Bernoulli Watermarking (SBW), a new statistical watermark for Large Language Models that determines green list membership through independent per-token Bernoulli trials. Unlike KGW's vocabulary permutation or SynthID's multi-layer tournament, SBW requires only a single comparison per token against a counter-based random number generator, reducing membership complexity to $O(1)$ and enabling single-kernel execution with zero intermediate allocations. We prove that this formulation preserves the same detection guarantees as fixed-size green lists: the z-score test remains $\\mathcal{N}(0,1)$ under the null. The stateless architecture enables capabilities unavailable to existing methods: full-vocabulary self-salt watermarking (over 6000$\\times$ faster than KGW's self-salt and 2$\\times$ faster than SynthID despite biasing the entire vocabulary with candidate-dependent seeding) and architectural compatibility with distributed inference. In end-to-end generation benchmarks, SBW adds less than 1\\% overhead at all batch sizes. We additionally identify hash function design as a previously unexplored axis for watermark quality, showing that a GPU-native Jenkins hash improves null calibration by 1.8$\\times$ while producing more diverse text. Experiments across two seeding schemes and eight $(γ, δ)$ configurations confirm statistical equivalence with ROC-AUC differences below 0.01.",
+      "tr": "We introduce Stateless Bernoulli Watermarking (SBW), a new statistical watermark for Large Language Models that determines green list membership through independent per-token Bernoulli trials. Unlike KGW's vocabulary permutation or SynthID's multi-layer tournament, SBW requires only a single comparison per token against a counter-based random number generator, reducing membership complexity to $O(1)$ and enabling single-kernel execution with zero intermediate allocations. We prove that this formulation preserves the same detection guarantees as fixed-size green lists: the z-score test remains $\\mathcal{N}(0,1)$ under the null. The stateless architecture enables capabilities unavailable to existing methods: full-vocabulary self-salt watermarking (over 6000$\\times$ faster than KGW's self-salt and 2$\\times$ faster than SynthID despite biasing the entire vocabulary with candidate-dependent seeding) and architectural compatibility with distributed inference. In end-to-end generation benchmarks, SBW adds less than 1\\% overhead at all batch sizes. We additionally identify hash function design as a previously unexplored axis for watermark quality, showing that a GPU-native Jenkins hash improves null calibration by 1.8$\\times$ while producing more diverse text. Experiments across two seeding schemes and eight $(γ, δ)$ configurations confirm statistical equivalence with ROC-AUC differences below 0.01."
+    }
+  },
+  {
+    "id": "2609.03420v1",
+    "title": "Privacy, Robustness, and Fairness Trade-offs in Federated Intrusion Detection: Geometric Indistinguishability at the Aggregation Interface",
+    "authors": [
+      "Adrita Rahman Tory",
+      "ABM Shawkat Ali",
+      "Md Abu Layek",
+      "Khondokar Fida Hasan"
+    ],
+    "published_date": "2026-09-03",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2609.03420v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.03420v1",
+    "content": {
+      "en": "Federated learning enables privacy-conscious collaboration for network intrusion detection without centralizing sensitive traffic data, yet its deployment in operational environments must simultaneously satisfy three competing requirements: formal differential privacy guaranties, tolerance to Byzantine-adversarial participants, and reliable detection coverage across severely imbalanced attack categories. Existing literature treats these properties as independently composable, an assumption that this paper challenges both theoretically and empirically. In this paper, we study how these requirements interact in class-imbalanced federated NIDS and introduce geometric indistinguishability as a conceptual lens for a regime in which privacy-induced dispersion in client updates can make minority-class signals harder for robust aggregation to preserve. Using UNSW-NB15 as a case study, we evaluate DP-SGD combined with coordinate-wise median under label-flip and model-poisoning attacks, with threat coverage assessed across attack categories. Our results provide initial evidence that the joint use of privacy noise and robust aggregation can disproportionately degrade detection of rare attacks relative to majority classes. We also show that part of the observed collapse under strong privacy can arise from training miscalibration, while a residual performance floor may remain for ultra-rare categories even after epsilon-dependent tuning. These findings motivate studying privacy, robustness, and rare-attack coverage jointly rather than as independently composable properties, and suggest that aggregation-aware modeling and sample-aware evaluation are promising directions for trustworthy federated NIDS.",
+      "tr": "Federated learning enables privacy-conscious collaboration for network intrusion detection without centralizing sensitive traffic data, yet its deployment in operational environments must simultaneously satisfy three competing requirements: formal differential privacy guaranties, tolerance to Byzantine-adversarial participants, and reliable detection coverage across severely imbalanced attack categories. Existing literature treats these properties as independently composable, an assumption that this paper challenges both theoretically and empirically. In this paper, we study how these requirements interact in class-imbalanced federated NIDS and introduce geometric indistinguishability as a conceptual lens for a regime in which privacy-induced dispersion in client updates can make minority-class signals harder for robust aggregation to preserve. Using UNSW-NB15 as a case study, we evaluate DP-SGD combined with coordinate-wise median under label-flip and model-poisoning attacks, with threat coverage assessed across attack categories. Our results provide initial evidence that the joint use of privacy noise and robust aggregation can disproportionately degrade detection of rare attacks relative to majority classes. We also show that part of the observed collapse under strong privacy can arise from training miscalibration, while a residual performance floor may remain for ultra-rare categories even after epsilon-dependent tuning. These findings motivate studying privacy, robustness, and rare-attack coverage jointly rather than as independently composable properties, and suggest that aggregation-aware modeling and sample-aware evaluation are promising directions for trustworthy federated NIDS."
+    }
+  },
+  {
+    "id": "2609.03376v1",
+    "title": "Spruce: Scalable Private Outsourced Retrieval Using Compact Embeddings",
+    "authors": [
+      "Peichun Hua",
+      "Yunming Xiao"
+    ],
+    "published_date": "2026-09-03",
+    "tags": [
+      "cs.CR",
+      "cs.IR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2609.03376v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.03376v1",
+    "content": {
+      "en": "Retrieval-Augmented Generation (RAG) has made dense retrieval over large document collections a standard building block. Organizations increasingly outsource vector indexes to untrusted clouds, exposing proprietary corpora and user queries. Cryptographic protection is challenging because each query searches corpus-scale state, causing computation, correlated randomness, and communication to grow with the corpus. At million-document scale, a naive secure implementation takes minutes and about 90 GB of communication per query. Even recent optimized systems require 10--22 seconds.   We propose Spruce (Scalable Private Outsourced Retrieval Using Compact Embeddings), which co-designs representations with the cryptographic protocol. Spruce learns compact binary codes that preserve candidates for full-precision reranking, replacing corpus-wide embedding scoring with efficient Hamming-distance computation under two-server multi-party computation (MPC). A corpus-calibrated fixed-radius protocol avoids multi-round candidate selection while preserving retrieval quality. Spruce also provides private cluster pruning, which trades minor quality loss for substantially less computation, and a one-core owner-operated dealer that removes cloud OT preprocessing bottlenecks. Across four corpora containing 383K--5.42M documents, Spruce preserves the original search quality with median candidate sets of only 382--1,952. At 10 Gbps inter-server bandwidth, full scans take 0.21--2.97 seconds, $4.8$--$6.7\\times$ faster than the closest measured prior work. Private pruning takes 0.06--1.09 seconds, achieves $13.1$--$22.9\\times$ speedups, and retains $93.9\\%$--$97.3\\%$ of full-float NDCG. On the largest corpus, pruning and the dealer jointly improve sustained throughput by $31.5\\times$ at 1 Gbps per link.",
+      "tr": "Retrieval-Augmented Generation (RAG) has made dense retrieval over large document collections a standard building block. Organizations increasingly outsource vector indexes to untrusted clouds, exposing proprietary corpora and user queries. Cryptographic protection is challenging because each query searches corpus-scale state, causing computation, correlated randomness, and communication to grow with the corpus. At million-document scale, a naive secure implementation takes minutes and about 90 GB of communication per query. Even recent optimized systems require 10--22 seconds.   We propose Spruce (Scalable Private Outsourced Retrieval Using Compact Embeddings), which co-designs representations with the cryptographic protocol. Spruce learns compact binary codes that preserve candidates for full-precision reranking, replacing corpus-wide embedding scoring with efficient Hamming-distance computation under two-server multi-party computation (MPC). A corpus-calibrated fixed-radius protocol avoids multi-round candidate selection while preserving retrieval quality. Spruce also provides private cluster pruning, which trades minor quality loss for substantially less computation, and a one-core owner-operated dealer that removes cloud OT preprocessing bottlenecks. Across four corpora containing 383K--5.42M documents, Spruce preserves the original search quality with median candidate sets of only 382--1,952. At 10 Gbps inter-server bandwidth, full scans take 0.21--2.97 seconds, $4.8$--$6.7\\times$ faster than the closest measured prior work. Private pruning takes 0.06--1.09 seconds, achieves $13.1$--$22.9\\times$ speedups, and retains $93.9\\%$--$97.3\\%$ of full-float NDCG. On the largest corpus, pruning and the dealer jointly improve sustained throughput by $31.5\\times$ at 1 Gbps per link."
+    }
+  },
+  {
+    "id": "2609.03107v1",
+    "title": "CRAW: Codec Robust Audio Watermarking",
+    "authors": [
+      "David Chernin",
+      "Ethan Fetaya"
+    ],
+    "published_date": "2026-09-02",
+    "tags": [
+      "cs.SD",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2609.03107v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.03107v1",
+    "content": {
+      "en": "Recent advances in generative speech models have made it increasingly difficult to distinguish authentic from synthetic audio, enabling new forms of fraud and misinformation. Audio watermarking offers a promising defense by embedding an imperceptible signal into generated speech that can later be detected to verify its provenance. However, recent studies have shown that existing post-hoc watermarking methods fail under neural codecs and denoisers, transformations routinely applied during real-world storage, transmission, and processing, severely limiting their practical utility. Here we introduce CRAW, a codec-robust audio watermarking framework that jointly improves robustness against neural re-synthesis while maintaining high perceptual quality. CRAW combines distortion-aware training with an attention-based pooling mechanism, inference-time perceptual mask- ing, and an error-correcting code to recover the fidelity lost during robust training. Experiments demonstrate that CRAW achieves state-of-the-art robustness against neural codecs, denoisers, and vocoders while maintaining perceptual quality comparable to existing post-hoc watermarking methods. The code is available at https://github.com/DavidC1212/craw.",
+      "tr": "Recent advances in generative speech models have made it increasingly difficult to distinguish authentic from synthetic audio, enabling new forms of fraud and misinformation. Audio watermarking offers a promising defense by embedding an imperceptible signal into generated speech that can later be detected to verify its provenance. However, recent studies have shown that existing post-hoc watermarking methods fail under neural codecs and denoisers, transformations routinely applied during real-world storage, transmission, and processing, severely limiting their practical utility. Here we introduce CRAW, a codec-robust audio watermarking framework that jointly improves robustness against neural re-synthesis while maintaining high perceptual quality. CRAW combines distortion-aware training with an attention-based pooling mechanism, inference-time perceptual mask- ing, and an error-correcting code to recover the fidelity lost during robust training. Experiments demonstrate that CRAW achieves state-of-the-art robustness against neural codecs, denoisers, and vocoders while maintaining perceptual quality comparable to existing post-hoc watermarking methods. The code is available at https://github.com/DavidC1212/craw."
+    }
+  },
+  {
+    "id": "2609.03064v1",
+    "title": "Differentially private federated learning with Byzantine-robust aggregation: A cross-domain framework for secure model training in banking and healthcare systems",
+    "authors": [
+      "Srikumar Nayak"
     ],
     "published_date": "2026-09-02",
     "tags": [
       "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2609.02177v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.02177v1",
+    "link": "http://arxiv.org/abs/2609.03064v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.03064v1",
     "content": {
-      "en": "Multi-bit watermarking for large language models (LLMs) enables content source tracing by embedding user-identifiable messages into generated text. Existing methods face a fundamental trade-off among extraction accuracy, text quality, and payload capacity. We propose WeaveMark, a robust and scalable multi-bit LLM watermarking scheme based on coded payload spreading. WeaveMark shifts this trade-off frontier by improving payload capacity through multi-bit-per-token spreading, improving extraction accuracy through soft-decision error-correcting code, and preserving text quality through unbiased multilayer reweighting. It further introduces dedicated zero-bit layers for reliable watermark presence detection. Experiments show large gains, especially for long messages and edited text. WeaveMark achieves 89.8% match rate for 32-bit messages at 200 tokens, compared with 20.8% for BiMark. Under 10% substitution attacks on 16-bit messages at 200 tokens, it maintains 86.0% versus 30.7%, while preserving text quality. Our code is available at https://github.com/qkrrkd90-source/WeaveMark.",
-      "tr": "Multi-bit watermarking for large language models (LLMs) enables content source tracing by embedding user-identifiable messages into generated text. Existing methods face a fundamental trade-off among extraction accuracy, text quality, and payload capacity. We propose WeaveMark, a robust and scalable multi-bit LLM watermarking scheme based on coded payload spreading. WeaveMark shifts this trade-off frontier by improving payload capacity through multi-bit-per-token spreading, improving extraction accuracy through soft-decision error-correcting code, and preserving text quality through unbiased multilayer reweighting. It further introduces dedicated zero-bit layers for reliable watermark presence detection. Experiments show large gains, especially for long messages and edited text. WeaveMark achieves 89.8% match rate for 32-bit messages at 200 tokens, compared with 20.8% for BiMark. Under 10% substitution attacks on 16-bit messages at 200 tokens, it maintains 86.0% versus 30.7%, while preserving text quality. Our code is available at https://github.com/qkrrkd90-source/WeaveMark."
+      "en": "Federated learning allows banks, hospitals, and other regulated organizations to train a shared model without moving raw records off their own servers, which is attractive wherever data protection law or competitive sensitivity rules out pooling data centrally. Two problems limit how far this promise can be trusted in practice. First, the parameter updates that clients exchange still leak information about local records through gradient inversion and membership inference attacks. Second, an honest averaging rule such as FedAvg has no defense against a subset of clients that submit corrupted or adversarial updates, so a small number of malicious or compromised participants can quietly steer the shared model off course. This paper presents a federated learning framework, DP-BR-FedAvg, that combines a Gaussian-mechanism differential privacy layer with a coordinate-wise trimmed-mean Byzantine-robust aggregation rule, evaluated on a simulated cross-institutional classification task resembling fraud and clinical-risk scoring. Across sixty communication rounds with twenty clients, a quarter of them Byzantine, plain FedAvg collapses on the minority class (F1-score 0.030) while the proposed framework recovers substantially more of the signal (F1-score 0.119) while bounding the privacy loss of any single client's contribution. A Byzantine-robust aggregator with no privacy layer performs best in raw accuracy, quantifying the cost privacy imposes on robustness. The results show that privacy and robustness mechanisms interact rather than simply add, and that system design for regulated, adversarial, cross-institutional settings needs to budget for that interaction.",
+      "tr": "Federated learning allows banks, hospitals, and other regulated organizations to train a shared model without moving raw records off their own servers, which is attractive wherever data protection law or competitive sensitivity rules out pooling data centrally. Two problems limit how far this promise can be trusted in practice. First, the parameter updates that clients exchange still leak information about local records through gradient inversion and membership inference attacks. Second, an honest averaging rule such as FedAvg has no defense against a subset of clients that submit corrupted or adversarial updates, so a small number of malicious or compromised participants can quietly steer the shared model off course. This paper presents a federated learning framework, DP-BR-FedAvg, that combines a Gaussian-mechanism differential privacy layer with a coordinate-wise trimmed-mean Byzantine-robust aggregation rule, evaluated on a simulated cross-institutional classification task resembling fraud and clinical-risk scoring. Across sixty communication rounds with twenty clients, a quarter of them Byzantine, plain FedAvg collapses on the minority class (F1-score 0.030) while the proposed framework recovers substantially more of the signal (F1-score 0.119) while bounding the privacy loss of any single client's contribution. A Byzantine-robust aggregator with no privacy layer performs best in raw accuracy, quantifying the cost privacy imposes on robustness. The results show that privacy and robustness mechanisms interact rather than simply add, and that system design for regulated, adversarial, cross-institutional settings needs to budget for that interaction."
+    }
+  },
+  {
+    "id": "2609.03036v1",
+    "title": "Population-Calibrated Graph Screening at 835-Million-Address Scale, with Label-Free Transfer to New Chains",
+    "authors": [
+      "Yury Korolev"
+    ],
+    "published_date": "2026-09-02",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2609.03036v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.03036v1",
+    "content": {
+      "en": "Compliance screening of blockchain addresses is, in practice, a lookup against sanctions registries plus clustering heuristics; it fails on unlabelled addresses and on chains with no label coverage at all. We describe a deployed system that scores an address by its position in a multi-chain transaction graph rather than by its presence in a list. The substrate is a single graph of 835,330,427 addresses and 15,826,261,934 edges across five EVM chains; a shared inductive encoder with per-chain normalisation feeds two scoring heads. Decision thresholds are exact quantiles of the score distribution over the full population, scanned per chain segment, so the alert volume is known in advance. We report: label-free transfer: heads trained on two chains recall 0.8598 / 0.8182 / 0.9967 of held-out positives on Base, Arbitrum and Gnosis at a $10^{-3}$ population alert rate, with no target-chain labels in head training; a static lead-time replay over 68 external registry events: 40 of 68 (58.8%) flagged at the 0.1% budget, $\\times$152 over an event-level random-flagging baseline, with first on-chain appearance a median of 528.8 days (Ethereum) / 647.8 days (Tron) before public designation; a serving path whose score is bit-identical to the offline artefact at end-to-end p50 151 ms, gated by a 2,882-address drift panel; and an adversarial harness of eight recurrent reinforcement-learned archetypes that passes an 8-criterion degeneracy audit and, on a detector-independent snapshot, exposes a measured blind spot of the deployed heads against synthesised behaviour.",
+      "tr": "Compliance screening of blockchain addresses is, in practice, a lookup against sanctions registries plus clustering heuristics; it fails on unlabelled addresses and on chains with no label coverage at all. We describe a deployed system that scores an address by its position in a multi-chain transaction graph rather than by its presence in a list. The substrate is a single graph of 835,330,427 addresses and 15,826,261,934 edges across five EVM chains; a shared inductive encoder with per-chain normalisation feeds two scoring heads. Decision thresholds are exact quantiles of the score distribution over the full population, scanned per chain segment, so the alert volume is known in advance. We report: label-free transfer: heads trained on two chains recall 0.8598 / 0.8182 / 0.9967 of held-out positives on Base, Arbitrum and Gnosis at a $10^{-3}$ population alert rate, with no target-chain labels in head training; a static lead-time replay over 68 external registry events: 40 of 68 (58.8%) flagged at the 0.1% budget, $\\times$152 over an event-level random-flagging baseline, with first on-chain appearance a median of 528.8 days (Ethereum) / 647.8 days (Tron) before public designation; a serving path whose score is bit-identical to the offline artefact at end-to-end p50 151 ms, gated by a 2,882-address drift panel; and an adversarial harness of eight recurrent reinforcement-learned archetypes that passes an 8-criterion degeneracy audit and, on a detector-independent snapshot, exposes a measured blind spot of the deployed heads against synthesised behaviour."
     }
   }
 ]
