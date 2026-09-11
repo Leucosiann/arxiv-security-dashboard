@@ -1,213 +1,211 @@
 [
   {
-    "id": "2609.10298v1",
-    "title": "Learning Intrusion Response Strategies for OT Systems",
+    "id": "2609.11780v1",
+    "title": "Predicting Privacy Leakage from Weight Spectral Density",
     "authors": [
-      "Duc Huy Le",
-      "Rolf Stadler"
+      "Richard J. Preen",
+      "Jim Smith"
     ],
-    "published_date": "2026-09-09",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2609.10298v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.10298v1",
-    "content": {
-      "en": "Cyberattacks against Operational Technology (OT) systems, which monitor and control industrial processes, pose an increasing threat to essential societal services. For this reason, developing automated intrusion response strategies is highly important. In this paper, we present a formal model of an OT intrusion response use case using the POMDP framework. It includes a realistic model of partial observability that is based on traffic measurements. This approach allows us to develop tractable, learning-based solution methods for automated intrusion response, which are based on PPO. We evaluate the obtained response strategies on an emulated OT system and find that they are effective against several types of MITRE attacks for the studied use case.",
-      "tr": "Cyberattacks against Operational Technology (OT) systems, which monitor and control industrial processes, pose an increasing threat to essential societal services. For this reason, developing automated intrusion response strategies is highly important. In this paper, we present a formal model of an OT intrusion response use case using the POMDP framework. It includes a realistic model of partial observability that is based on traffic measurements. This approach allows us to develop tractable, learning-based solution methods for automated intrusion response, which are based on PPO. We evaluate the obtained response strategies on an emulated OT system and find that they are effective against several types of MITRE attacks for the studied use case."
-    }
-  },
-  {
-    "id": "2609.10264v1",
-    "title": "Maverick: Private and Verifiable LLM Inference Made Practical via Matrix-Vector Multiplication Delegation",
-    "authors": [
-      "Ben Merbaum",
-      "Mohammad Amin Raeisi",
-      "Wenhao Wang",
-      "Charalampos Papamanthou",
-      "Katerina Sotiraki"
-    ],
-    "published_date": "2026-09-09",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2609.10264v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.10264v1",
-    "content": {
-      "en": "Open-source large language models (LLMs) are increasingly competitive with closed-source models while offering transparency and the ability to run inference without exposing user inputs to a service provider. However, running large-scale models locally requires substantial computational resources. In practice, users may still resort to a third-party provider, giving rise to privacy and correctness concerns. Existing solutions that address these problems often impose substantial server overhead or introduce additional trust assumptions.   In this paper, we present Maverick, a novel approach to private and verifiable LLM inference based on a protocol for delegating matrix-vector multiplication, a dominant operation in LLMs. At its core, Maverick provides, to our knowledge, the first information-theoretically sound verification protocol for matrix-vector multiplication delegation with transparent preprocessing, efficient (batch) verification, and virtually no server overhead. We combine this verification primitive with LPN-based pseudorandom masking to provide input privacy.   We implement our matrix-vector delegation primitive and use it to build an end-to-end prototype of Maverick, which we evaluate on Qwen3-4B by measuring throughput in tokens per second. We evaluate client configurations with 1-8 threads. With one client thread and a CPU server using up to 128 threads, Maverick achieves throughput gains over local inference of up to 17x when privacy masks are generated online, 45x when they are precomputed, and 44x when only verification is required. With four client threads, the corresponding gains are 13x, 18x, and 17x. When server computation is no longer the bottleneck, client-side microbenchmarks with simulated network delay show speedups of 12x-20x, 34x-135x, and 38x-157x.",
-      "tr": "Open-source large language models (LLMs) are increasingly competitive with closed-source models while offering transparency and the ability to run inference without exposing user inputs to a service provider. However, running large-scale models locally requires substantial computational resources. In practice, users may still resort to a third-party provider, giving rise to privacy and correctness concerns. Existing solutions that address these problems often impose substantial server overhead or introduce additional trust assumptions.   In this paper, we present Maverick, a novel approach to private and verifiable LLM inference based on a protocol for delegating matrix-vector multiplication, a dominant operation in LLMs. At its core, Maverick provides, to our knowledge, the first information-theoretically sound verification protocol for matrix-vector multiplication delegation with transparent preprocessing, efficient (batch) verification, and virtually no server overhead. We combine this verification primitive with LPN-based pseudorandom masking to provide input privacy.   We implement our matrix-vector delegation primitive and use it to build an end-to-end prototype of Maverick, which we evaluate on Qwen3-4B by measuring throughput in tokens per second. We evaluate client configurations with 1-8 threads. With one client thread and a CPU server using up to 128 threads, Maverick achieves throughput gains over local inference of up to 17x when privacy masks are generated online, 45x when they are precomputed, and 44x when only verification is required. With four client threads, the corresponding gains are 13x, 18x, and 17x. When server computation is no longer the bottleneck, client-side microbenchmarks with simulated network delay show speedups of 12x-20x, 34x-135x, and 38x-157x."
-    }
-  },
-  {
-    "id": "2609.10142v1",
-    "title": "Active Adaptation, Not Static Defense: Temporal Dynamics of Preventative Steering in Adversarial Fine-Tuning",
-    "authors": [
-      "Jing Guan",
-      "Yachao Yang",
-      "Zhaoliang Liu",
-      "Yuyao Zhang",
-      "Fanyu Meng"
-    ],
-    "published_date": "2026-09-09",
-    "tags": [
-      "cs.CL",
-      "cs.AI",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2609.10142v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.10142v1",
-    "content": {
-      "en": "Large language models remain fragile against malicious fine-tuning, motivating training-time defenses against harmful persona drift. Preventative Steering injects undesirable-trait persona vectors during fine-tuning and removes them at evaluation time, yet the mechanism behind its lasting protection remains unclear. Analyzing its temporal optimization dynamics, we find that the defense emerges from an early compensatory adaptation phase followed by a steady-state phase where the corrective signal decays; in parameter space, attention output projections emerge as the dominant residual-write route for defensive updates. Through Intervention Delta Preservation (IDP) and IDP Continuation experiments, we further show that preserving or reinjecting the weight offset fails to maintain protection, indicating that preventative steering relies on active adaptation rather than a static defense. Motivated by this finding, we propose Progressive Intensity Scheduling (PIS), which starts with a moderate injection strength and increases it after static-strength alignment begins to decay. Across the evaluated Qwen2.5 and Gemma-3 models, PIS improves safety robustness over static-strength steering while reducing harmful trait expression.",
-      "tr": "Large language models remain fragile against malicious fine-tuning, motivating training-time defenses against harmful persona drift. Preventative Steering injects undesirable-trait persona vectors during fine-tuning and removes them at evaluation time, yet the mechanism behind its lasting protection remains unclear. Analyzing its temporal optimization dynamics, we find that the defense emerges from an early compensatory adaptation phase followed by a steady-state phase where the corrective signal decays; in parameter space, attention output projections emerge as the dominant residual-write route for defensive updates. Through Intervention Delta Preservation (IDP) and IDP Continuation experiments, we further show that preserving or reinjecting the weight offset fails to maintain protection, indicating that preventative steering relies on active adaptation rather than a static defense. Motivated by this finding, we propose Progressive Intensity Scheduling (PIS), which starts with a moderate injection strength and increases it after static-strength alignment begins to decay. Across the evaluated Qwen2.5 and Gemma-3 models, PIS improves safety robustness over static-strength steering while reducing harmful trait expression."
-    }
-  },
-  {
-    "id": "2609.10105v1",
-    "title": "Beyond Training: A Feasibility Taxonomy for Inference-Time AI Governance",
-    "authors": [
-      "Samar Ansari"
-    ],
-    "published_date": "2026-09-09",
-    "tags": [
-      "cs.CY",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2609.10105v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.10105v1",
-    "content": {
-      "en": "Compute governance today is a governance of training: the thresholds, reporting requirements, and frontier-AI regimes now in force attach to training compute and treat the trained model as the regulatory unit. That picture is incomplete: capability increasingly migrates to the deployment stage through inference-time scaling, agentic scaffolding, and compression onto consumer hardware. This paper asks which mechanisms are available once the regulatory object shifts from the training run to the inference call. We develop a feasibility taxonomy of twenty inference-time mechanisms across monitoring, verification, and enforcement, each rated on a four-point readiness scale against a documented four-vendor evidence base. We then stress the taxonomy against a two-dimensional adversary model (three capability tiers crossed with four adversary roles) and map each mechanism to four governance scenarios (domestic regulation, bilateral or multilateral coordination, industry self-regulation, and compute-marketplace governance). Fifteen of the twenty mechanisms have commercial technical substrates in production today, although governance-grade assurance and adversarial robustness vary substantially. The adversary analysis shows that this readiness holds only against a cooperative deployer and a low-to-medium-capability user: no mechanism rates adequate against a high-capability state-level deployer, and fine-tuning removes the model-internal components of the enforcement cluster, although platform-external controls can persist. A substitution analysis connects the taxonomy to a companion hardware paper as a conditional substitution principle describing when inference-stage and hardware-stage mechanisms provide comparable regulatory coverage under stated conditions. A second-rater reliability check on a random subset of the readiness ratings returned a quadratic-weighted Cohen's kappa of 0.74.",
-      "tr": "Compute governance today is a governance of training: the thresholds, reporting requirements, and frontier-AI regimes now in force attach to training compute and treat the trained model as the regulatory unit. That picture is incomplete: capability increasingly migrates to the deployment stage through inference-time scaling, agentic scaffolding, and compression onto consumer hardware. This paper asks which mechanisms are available once the regulatory object shifts from the training run to the inference call. We develop a feasibility taxonomy of twenty inference-time mechanisms across monitoring, verification, and enforcement, each rated on a four-point readiness scale against a documented four-vendor evidence base. We then stress the taxonomy against a two-dimensional adversary model (three capability tiers crossed with four adversary roles) and map each mechanism to four governance scenarios (domestic regulation, bilateral or multilateral coordination, industry self-regulation, and compute-marketplace governance). Fifteen of the twenty mechanisms have commercial technical substrates in production today, although governance-grade assurance and adversarial robustness vary substantially. The adversary analysis shows that this readiness holds only against a cooperative deployer and a low-to-medium-capability user: no mechanism rates adequate against a high-capability state-level deployer, and fine-tuning removes the model-internal components of the enforcement cluster, although platform-external controls can persist. A substitution analysis connects the taxonomy to a companion hardware paper as a conditional substitution principle describing when inference-stage and hardware-stage mechanisms provide comparable regulatory coverage under stated conditions. A second-rater reliability check on a random subset of the readiness ratings returned a quadratic-weighted Cohen's kappa of 0.74."
-    }
-  },
-  {
-    "id": "2609.10002v1",
-    "title": "What Makes Adversarial Examples Transfer Across Deepfake Detectors?",
-    "authors": [
-      "Rafael M. Mamede",
-      "Pedro C. Neto",
-      "Ana F. Sequeira"
-    ],
-    "published_date": "2026-09-09",
-    "tags": [
-      "cs.CV",
-      "cs.AI",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2609.10002v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.10002v1",
-    "content": {
-      "en": "Deepfake detectors remain vulnerable to transfer-based black-box attacks, in which adversarial examples are generated on a source surrogate model and transferred to a target model, unknown to the attacker. Yet how source--target compatibility shapes attack success remains poorly understood. Prior studies evaluate limited detector pools and rarely disentangle architectural from training factors. We conduct a controlled evaluation of adversarial transferability across 60 detectors spanning six backbones, two pretraining regimes, and five training-data configurations, using two attack procedures: AutoAttack (AA) and the Carlini--Wagner attack with Expectation over Transformation (CW--EOT). Matched comparisons reveal significantly higher transfer when source and target share an exact backbone, architecture family, pretraining regime, or training data. This compatibility structure is attack-dependent: exact backbone compatibility has the largest effect under AA, whereas shared pretraining and training data have the largest effects under CW--EOT. When transfer is averaged across non-target sources, mean attack success rate (ASR) is $7.21\\%$ under AA and $19.52\\%$ under CW--EOT. By contrast, a multi-source oracle combining both attacks attains a \\(64.48\\%\\) mean ASR after excluding exact backbone and training-data matches, showing that source averaging can substantially understate target vulnerability. We release 240,000 adversarially perturbed images, complete pairwise transfer results, detector configurations, and evaluation code. These findings establish source--target compatibility and source-model selection as central dimensions of credible transfer-based black-box robustness evaluation.",
-      "tr": "Deepfake detectors remain vulnerable to transfer-based black-box attacks, in which adversarial examples are generated on a source surrogate model and transferred to a target model, unknown to the attacker. Yet how source--target compatibility shapes attack success remains poorly understood. Prior studies evaluate limited detector pools and rarely disentangle architectural from training factors. We conduct a controlled evaluation of adversarial transferability across 60 detectors spanning six backbones, two pretraining regimes, and five training-data configurations, using two attack procedures: AutoAttack (AA) and the Carlini--Wagner attack with Expectation over Transformation (CW--EOT). Matched comparisons reveal significantly higher transfer when source and target share an exact backbone, architecture family, pretraining regime, or training data. This compatibility structure is attack-dependent: exact backbone compatibility has the largest effect under AA, whereas shared pretraining and training data have the largest effects under CW--EOT. When transfer is averaged across non-target sources, mean attack success rate (ASR) is $7.21\\%$ under AA and $19.52\\%$ under CW--EOT. By contrast, a multi-source oracle combining both attacks attains a \\(64.48\\%\\) mean ASR after excluding exact backbone and training-data matches, showing that source averaging can substantially understate target vulnerability. We release 240,000 adversarially perturbed images, complete pairwise transfer results, detector configurations, and evaluation code. These findings establish source--target compatibility and source-model selection as central dimensions of credible transfer-based black-box robustness evaluation."
-    }
-  },
-  {
-    "id": "2609.09848v1",
-    "title": "Subgroup Membership Inference Audits of Differentially Private Synthetic Text",
-    "authors": [
-      "Yidan Sun",
-      "Viktor Schlegel",
-      "Srinivasan Nandakumar",
-      "Siew Kei Lam",
-      "Anil Anthony Bharath"
-    ],
-    "published_date": "2026-09-09",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2609.09848v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.09848v1",
-    "content": {
-      "en": "Synthetic data releases are increasingly proposed in the literature as a means of sharing realistic data replicas in lieu of sensitive private datasets. Even when the worst-case privacy leakage of such releases is bounded by means of differential privacy (DP), in practice a residual risk remains. Membership inference attack (MIA) audits are conducted to empirically quantify this risk. However, existing methods only measure average-case risk for randomly drawn records, which might conceal the risk to vulnerable subgroups. To highlight this issue, we define a subgroup-targeted membership inference game in which the target pool is an explicit parameter, and instantiate it with an audit of 32 proxies under three scenarios with different levels of attacker knowledge, across four datasets, three generators (DP-SGD fine-tuning, API-based prompting, and activation steering), and five privacy budgets. The audit shows that synthetic releases leak subgroup membership and that prior attacks systematically underestimate this leakage. DP is effective at the aggregate level: it substantially reduces average leakage at every budget we test. Three observations temper this picture. First, the remaining leakage is concentrated rather than spread out: under DP, a tenth of the records carries roughly 40% of it. Second, the protection DP delivers in practice is uneven: within its worst-case guarantee, the noise removes more of the measured leakage from random records than from high-risk ones---and a merged-pool audit that scores both record types against shared negatives confirms this at the record level. Third, \\emph{which} records leak proves to be a property of the release mechanism rather than of the record alone, so record-level risk cannot be assessed independently of the release.",
-      "tr": "Synthetic data releases are increasingly proposed in the literature as a means of sharing realistic data replicas in lieu of sensitive private datasets. Even when the worst-case privacy leakage of such releases is bounded by means of differential privacy (DP), in practice a residual risk remains. Membership inference attack (MIA) audits are conducted to empirically quantify this risk. However, existing methods only measure average-case risk for randomly drawn records, which might conceal the risk to vulnerable subgroups. To highlight this issue, we define a subgroup-targeted membership inference game in which the target pool is an explicit parameter, and instantiate it with an audit of 32 proxies under three scenarios with different levels of attacker knowledge, across four datasets, three generators (DP-SGD fine-tuning, API-based prompting, and activation steering), and five privacy budgets. The audit shows that synthetic releases leak subgroup membership and that prior attacks systematically underestimate this leakage. DP is effective at the aggregate level: it substantially reduces average leakage at every budget we test. Three observations temper this picture. First, the remaining leakage is concentrated rather than spread out: under DP, a tenth of the records carries roughly 40% of it. Second, the protection DP delivers in practice is uneven: within its worst-case guarantee, the noise removes more of the measured leakage from random records than from high-risk ones---and a merged-pool audit that scores both record types against shared negatives confirms this at the record level. Third, \\emph{which} records leak proves to be a property of the release mechanism rather than of the record alone, so record-level risk cannot be assessed independently of the release."
-    }
-  },
-  {
-    "id": "2609.09798v1",
-    "title": "CS-Guard: Benchmarking LLM Guardrails for Code Generation Security",
-    "authors": [
-      "Jinyang Li",
-      "Mingyu Guo",
-      "Hung X. Nguyen"
-    ],
-    "published_date": "2026-09-09",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2609.09798v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.09798v1",
-    "content": {
-      "en": "Large language models (LLMs) have been ex- ploited to generate malware, but the effective- ness of guardrails for code generation secu- rity remains unclear. We introduce CS-Guard, the first benchmark to systematically evalu- ate guardrails for code generation security. It covers 1) text-to-code generation with 1000 high-quality malware-generation prompts, 7 jailbreak attacks, and a novel fictional scenario attack (FSA) that embeds malicious intent in a legitimate fictional software-development sce- nario; and 2) code-to-code generation with 331 code prompts spanning code infilling, code completion, and code translation. We empiri- cally evaluate 9 guardrails across seven LLMs. We find that current guardrails perform poorly against malicious code-generation re- quests: for text-to-code, the average attack success rate (ASR) after jailbreaks reaches about 50% for many guardrails; for code-to- code, average ASR approaches 100% on base LLMs and remains high across many guardrails (14.4% to nearly 100%). Our FSA also achieves ASR close to 100% across many guardrails, raising major reliability concerns for real-world software development. To sup- port future research, CS-Guard uses a modular three-layer guardrail taxonomy that lets devel- opers register guardrails for evaluation. We release the benchmark and data to enable fur- ther community evaluation.",
-      "tr": "Large language models (LLMs) have been ex- ploited to generate malware, but the effective- ness of guardrails for code generation secu- rity remains unclear. We introduce CS-Guard, the first benchmark to systematically evalu- ate guardrails for code generation security. It covers 1) text-to-code generation with 1000 high-quality malware-generation prompts, 7 jailbreak attacks, and a novel fictional scenario attack (FSA) that embeds malicious intent in a legitimate fictional software-development sce- nario; and 2) code-to-code generation with 331 code prompts spanning code infilling, code completion, and code translation. We empiri- cally evaluate 9 guardrails across seven LLMs. We find that current guardrails perform poorly against malicious code-generation re- quests: for text-to-code, the average attack success rate (ASR) after jailbreaks reaches about 50% for many guardrails; for code-to- code, average ASR approaches 100% on base LLMs and remains high across many guardrails (14.4% to nearly 100%). Our FSA also achieves ASR close to 100% across many guardrails, raising major reliability concerns for real-world software development. To sup- port future research, CS-Guard uses a modular three-layer guardrail taxonomy that lets devel- opers register guardrails for evaluation. We release the benchmark and data to enable fur- ther community evaluation."
-    }
-  },
-  {
-    "id": "2609.09793v1",
-    "title": "How Fragile Is Safety Alignment at Frontier Scale? A Single-Direction Attack on a 320B MoE",
-    "authors": [
-      "Yi Shi",
-      "Tanyu Chen",
-      "Kai Shen"
-    ],
-    "published_date": "2026-09-09",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2609.09793v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.09793v1",
-    "content": {
-      "en": "Directional ablation removes an aligned language model's ability to refuse by projecting a single \"refusal direction\" out of the weights that write the residual stream. It needs no gradient-based training and no optimization, only a few hundred contrastive prompts, which makes it the canonical white-box attack on open-weight alignment. However, it has been established only on dense models up to roughly 70B parameters. We study whether it survives the shift to frontier mixture-of-experts (MoE) models whose residual streams are no longer a single tensor and whose weights ship quantized. We apply it to GLM-5.3-Flash (320B parameters, 288 routed experts, a four-wide hyper-connection residual, block-FP8). The attack survives the architecture, but what it reaches is no longer where a reader of the original recipe would look for it. Editing the attention, dense and routed-expert writers on their own removes 0.039, 0.016 and 0.148 of refusal respectively; editing all three together removes 0.776. As a result, 74% of the effect exists only under the joint intervention. The part the conventional recipe reaches by module-name matching accounts for 0.066 of that 0.776, which is why it fails silently on an MoE. The effect does not follow from removing just any direction: ablating a random direction orthogonal to it leaves refusal unchanged. A category-concentrated residue survives every edit we tried: subspaces fitted on violence, sexual content and hate leave measurable refusal at every rank from 1 to 12. We report the method, the 41-89 percentage-point reductions it achieves across seven harmful benchmarks with no detected change in capability, and the boundary where it stops.",
-      "tr": "Directional ablation removes an aligned language model's ability to refuse by projecting a single \"refusal direction\" out of the weights that write the residual stream. It needs no gradient-based training and no optimization, only a few hundred contrastive prompts, which makes it the canonical white-box attack on open-weight alignment. However, it has been established only on dense models up to roughly 70B parameters. We study whether it survives the shift to frontier mixture-of-experts (MoE) models whose residual streams are no longer a single tensor and whose weights ship quantized. We apply it to GLM-5.3-Flash (320B parameters, 288 routed experts, a four-wide hyper-connection residual, block-FP8). The attack survives the architecture, but what it reaches is no longer where a reader of the original recipe would look for it. Editing the attention, dense and routed-expert writers on their own removes 0.039, 0.016 and 0.148 of refusal respectively; editing all three together removes 0.776. As a result, 74% of the effect exists only under the joint intervention. The part the conventional recipe reaches by module-name matching accounts for 0.066 of that 0.776, which is why it fails silently on an MoE. The effect does not follow from removing just any direction: ablating a random direction orthogonal to it leaves refusal unchanged. A category-concentrated residue survives every edit we tried: subspaces fitted on violence, sexual content and hate leave measurable refusal at every rank from 1 to 12. We report the method, the 41-89 percentage-point reductions it achieves across seven harmful benchmarks with no detected change in capability, and the boundary where it stops."
-    }
-  },
-  {
-    "id": "2609.09659v1",
-    "title": "Cascading Gradient Inversion via LT-Code Inspired Peeling in Federated Learning",
-    "authors": [
-      "Saeed Shariati",
-      "Mohsen Alambardar Meybodi"
-    ],
-    "published_date": "2026-09-09",
+    "published_date": "2026-09-10",
     "tags": [
       "cs.LG",
-      "cs.AI",
-      "cs.CR"
+      "cs.CR",
+      "cs.NE"
     ],
-    "link": "http://arxiv.org/abs/2609.09659v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.09659v1",
+    "link": "http://arxiv.org/abs/2609.11780v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.11780v1",
     "content": {
-      "en": "Federated learning shares model updates rather than raw data, yet these updates can be inverted to reconstruct the clients' training data. Analytic reconstruction attacks, which invert a gradient in closed form, degrade as the batch grows: prior single-round attacks recover only about half of a batch of size $100$ even when the attacker fully controls the network parameters, and known upper bounds limit what any such method can recover. We establish a connection between gradient inversion and the theory of erasure-correcting codes, and use it to construct attacks that exceed these bounds. Our attacks recover batches exactly, together with every sample's label, from a single FedSGD round, and certify each recovery without ground-truth data. On eight image and tabular benchmarks they outperform prior single-round attacks by a wide margin. Even a passive attacker who only observes an honestly trained network recovers $94$--$100\\%$ of ImageNet batches at sizes up to $128$, more than prior single-round attacks achieve even with active manipulation of the model, and in the active setting more than $90\\%$ is recovered at batch sizes of several hundred. These results show that the privacy leakage of federated learning has been underestimated.",
-      "tr": "Federated learning shares model updates rather than raw data, yet these updates can be inverted to reconstruct the clients' training data. Analytic reconstruction attacks, which invert a gradient in closed form, degrade as the batch grows: prior single-round attacks recover only about half of a batch of size $100$ even when the attacker fully controls the network parameters, and known upper bounds limit what any such method can recover. We establish a connection between gradient inversion and the theory of erasure-correcting codes, and use it to construct attacks that exceed these bounds. Our attacks recover batches exactly, together with every sample's label, from a single FedSGD round, and certify each recovery without ground-truth data. On eight image and tabular benchmarks they outperform prior single-round attacks by a wide margin. Even a passive attacker who only observes an honestly trained network recovers $94$--$100\\%$ of ImageNet batches at sizes up to $128$, more than prior single-round attacks achieve even with active manipulation of the model, and in the active setting more than $90\\%$ is recovered at batch sizes of several hundred. These results show that the privacy leakage of federated learning has been underestimated."
+      "en": "Membership inference attacks (MIAs) are widely used to audit the privacy disclosure risk of machine learning models, however current state-of-the-art attacks require training computationally expensive shadow models, making large-scale privacy evaluation impractical. In this work, we investigate whether inexpensive spectral metrics derived from the heavy-tailed self-regularisation framework can serve as proxies for MIA vulnerability. We evaluate several WeightWatcher spectral metrics on image and tabular classification tasks and compare their relationship with MIA privacy leakage against conventional measures of generalisation. Across datasets, stable rank exhibits a strong positive correlation with overall MIA success, while Log alpha-Norm shows a consistent negative correlation with MIA vulnerability at the low false-positive regime. These associations are observed to be stronger than those obtained using the generalisation gap. The results indicate that neural network spectra may contain information about privacy leakage that is not fully captured by conventional measures of overfitting, motivating spectral analysis as a promising direction for scalable privacy auditing.",
+      "tr": "Membership inference attacks (MIAs) are widely used to audit the privacy disclosure risk of machine learning models, however current state-of-the-art attacks require training computationally expensive shadow models, making large-scale privacy evaluation impractical. In this work, we investigate whether inexpensive spectral metrics derived from the heavy-tailed self-regularisation framework can serve as proxies for MIA vulnerability. We evaluate several WeightWatcher spectral metrics on image and tabular classification tasks and compare their relationship with MIA privacy leakage against conventional measures of generalisation. Across datasets, stable rank exhibits a strong positive correlation with overall MIA success, while Log alpha-Norm shows a consistent negative correlation with MIA vulnerability at the low false-positive regime. These associations are observed to be stronger than those obtained using the generalisation gap. The results indicate that neural network spectra may contain information about privacy leakage that is not fully captured by conventional measures of overfitting, motivating spectral analysis as a promising direction for scalable privacy auditing."
     }
   },
   {
-    "id": "2609.09604v1",
-    "title": "Watermarks Without Verification: AI Text Watermarking After the EU AI Act",
+    "id": "2609.11777v1",
+    "title": "Differentially Private EEG Feature Anonymization: A Privacy-Utility Case Study in Clinical Neurophysiology",
     "authors": [
-      "Alexander Nemecek",
-      "Vipin Chaudhary",
-      "Erman Ayday"
+      "Noman Sadiq",
+      "Mohsen Toorani"
     ],
-    "published_date": "2026-09-09",
+    "published_date": "2026-09-10",
     "tags": [
-      "cs.CY",
+      "cs.CR",
+      "cs.LG",
+      "eess.SP"
+    ],
+    "link": "http://arxiv.org/abs/2609.11777v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.11777v1",
+    "content": {
+      "en": "Clinical electroencephalography (EEG) data are valuable for healthcare research and for developing artificial intelligence (AI)-based clinical decision-support systems, but EEG recordings and derived features may contain sensitive patient-specific information. This creates privacy risks when data are reused, analyzed, or shared across clinical and research environments. Conventional anonymization methods are often insufficient for high-dimensional biomedical signals, since removing direct identifiers does not necessarily prevent re-identification, linkage, or inference risks. At the same time, strong privacy protection may distort clinically relevant signal characteristics and reduce data utility. This paper studies subject-level differential privacy for protecting clinical EEG-derived feature representations using Gaussian and Laplace perturbations. The proposed framework considers three deployment scenarios: client-side anonymization, centralized server-side anonymization, and decentralized local training. Following EEG preprocessing and feature extraction, Gaussian and Laplace perturbations are applied to the resulting patient-level EEG feature representations. The Laplace experiments evaluate the implemented noise scales, while the scales required for formal full-vector calibration are derived separately. The effects of both perturbations are assessed using statistical utility measures and a downstream machine-learning-based utility check. The results show that differentially private perturbation can be integrated into EEG processing workflows, but the selected mechanism, privacy parameters, and sensitivity calibration strongly influence data utility. The study highlights the practical privacy-utility trade-off in DP-based EEG feature anonymization and the challenges of preserving downstream utility in small and imbalanced clinical EEG datasets.",
+      "tr": "Clinical electroencephalography (EEG) data are valuable for healthcare research and for developing artificial intelligence (AI)-based clinical decision-support systems, but EEG recordings and derived features may contain sensitive patient-specific information. This creates privacy risks when data are reused, analyzed, or shared across clinical and research environments. Conventional anonymization methods are often insufficient for high-dimensional biomedical signals, since removing direct identifiers does not necessarily prevent re-identification, linkage, or inference risks. At the same time, strong privacy protection may distort clinically relevant signal characteristics and reduce data utility. This paper studies subject-level differential privacy for protecting clinical EEG-derived feature representations using Gaussian and Laplace perturbations. The proposed framework considers three deployment scenarios: client-side anonymization, centralized server-side anonymization, and decentralized local training. Following EEG preprocessing and feature extraction, Gaussian and Laplace perturbations are applied to the resulting patient-level EEG feature representations. The Laplace experiments evaluate the implemented noise scales, while the scales required for formal full-vector calibration are derived separately. The effects of both perturbations are assessed using statistical utility measures and a downstream machine-learning-based utility check. The results show that differentially private perturbation can be integrated into EEG processing workflows, but the selected mechanism, privacy parameters, and sensitivity calibration strongly influence data utility. The study highlights the practical privacy-utility trade-off in DP-based EEG feature anonymization and the challenges of preserving downstream utility in small and imbalanced clinical EEG datasets."
+    }
+  },
+  {
+    "id": "2609.11404v1",
+    "title": "Deep-Fake CAPTCHA: Mitigating Next-Generation Social Engineering Attacks",
+    "authors": [
+      "Guy Frankovits",
+      "Lior Yasur",
+      "Fred M. Grabovski",
+      "Yisroel Mirsky"
+    ],
+    "published_date": "2026-09-10",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2609.11404v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.11404v1",
+    "content": {
+      "en": "This paper presents DF-CAPTCHA, an active defense against real-time deepfake impersonation in voice and video calls. Instead of passively searching for artifacts, DF-CAPTCHA prompts the caller to perform simple challenge-response tasks that are easy for humans but difficult for current real-time deepfake systems to generate convincingly. The framework verifies the response using four criteria: realism, identity consistency, task completion, and response time. We evaluate the approach across both audio and video modalities using user studies and experiments with real-time deepfake models. Results show that people often struggle to distinguish real-time deepfakes from authentic media, while DF-CAPTCHA substantially improves detection performance over passive methods, reaching high accuracy in both modalities. These findings suggest that active challenge-based verification is a practical and robust defense against next-generation social engineering attacks based on real-time deepfakes.",
+      "tr": "This paper presents DF-CAPTCHA, an active defense against real-time deepfake impersonation in voice and video calls. Instead of passively searching for artifacts, DF-CAPTCHA prompts the caller to perform simple challenge-response tasks that are easy for humans but difficult for current real-time deepfake systems to generate convincingly. The framework verifies the response using four criteria: realism, identity consistency, task completion, and response time. We evaluate the approach across both audio and video modalities using user studies and experiments with real-time deepfake models. Results show that people often struggle to distinguish real-time deepfakes from authentic media, while DF-CAPTCHA substantially improves detection performance over passive methods, reaching high accuracy in both modalities. These findings suggest that active challenge-based verification is a practical and robust defense against next-generation social engineering attacks based on real-time deepfakes."
+    }
+  },
+  {
+    "id": "2609.11152v1",
+    "title": "terms.txt: A Consent and Compensation Protocol for Agentic Web Access",
+    "authors": [
+      "Rajarshi Chowdhury"
+    ],
+    "published_date": "2026-09-10",
+    "tags": [
+      "cs.NI",
+      "cs.AI",
+      "cs.CR",
+      "cs.CY"
+    ],
+    "link": "http://arxiv.org/abs/2609.11152v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.11152v1",
+    "content": {
+      "en": "The open web ran on an unwritten bargain: sites admitted crawlers, and search engines sent visitors back. Public measurements show that bargain breaking under AI crawlers and agents. Automated clients now make up most requests, training dominates Cloudflare-classified crawling, and the largest AI platforms fetch thousands of pages for each visitor they return. The web's common control, robots.txt, cannot express identity, purpose, terms, or price, can be circumvented, and newer alternatives are largely proprietary CDN features. We specify terms.txt, a robots.txt-style file for per-path, per-purpose machine-access terms, plus an origin-enforced exchange using Web Bot Auth signatures, signed intent, delegation tokens, HTTP 402 negotiation, and signed receipts. We define what the exchange can enforce, audit, and leave to contract. A dependency-free implementation adds 0.20 to 0.65 ms per request on one vCPU.",
+      "tr": "The open web ran on an unwritten bargain: sites admitted crawlers, and search engines sent visitors back. Public measurements show that bargain breaking under AI crawlers and agents. Automated clients now make up most requests, training dominates Cloudflare-classified crawling, and the largest AI platforms fetch thousands of pages for each visitor they return. The web's common control, robots.txt, cannot express identity, purpose, terms, or price, can be circumvented, and newer alternatives are largely proprietary CDN features. We specify terms.txt, a robots.txt-style file for per-path, per-purpose machine-access terms, plus an origin-enforced exchange using Web Bot Auth signatures, signed intent, delegation tokens, HTTP 402 negotiation, and signed receipts. We define what the exchange can enforce, audit, and leave to contract. A dependency-free implementation adds 0.20 to 0.65 ms per request on one vCPU."
+    }
+  },
+  {
+    "id": "2609.11028v1",
+    "title": "BenchShield: Formal Model-Backed Instrumentation for Reward Integrity in LLM-Agent Evaluation Infrastructure",
+    "authors": [
+      "Shenghan Zheng",
+      "Zonglin Di",
+      "Yimin Liu",
+      "Kyoung Whan Choe",
+      "Jiankai Sun"
+    ],
+    "published_date": "2026-09-10",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.SE",
+      "eess.SY"
+    ],
+    "link": "http://arxiv.org/abs/2609.11028v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.11028v1",
+    "content": {
+      "en": "LM-agent benchmarks increasingly function as interactive evaluation infrastructure. Agents observe state, call tools, modify workspaces,   submit artifacts, and receive rewards from outcome procedures. This interactivity makes evaluations vulnerable to reward hacking: an agent   improves its measured score by exploiting the reward-relevant trajectory instead of solving the intended task. Existing defenses rely largely   on task-specific patches, prompt instructions, or post-hoc detectors. They do not provide reusable evidence that a concrete run remained   within its intended evaluation boundary. This paper presents BenchShield, a model-backed instrumentation layer for reward integrity in   LLM-agent evaluation. BenchShield grounds detection in a finite lifecycle model of an evaluation's reward-relevant events. Within the   benchmark infrastructure, two complementary analyses operate over this model. A static, phase-aware taint analysis exposes reward-hacking   paths before a run. Its runtime counterpart uses infrastructure-side evidence to attribute concrete agent use and emit evidence-backed claims.   We construct BenchShield Trajectories, a human-labeled corpus of 456 adjudicated trajectories from more than 31,000 public agent runs across   three benchmarks. Compared with an agentic hackability scanner baseline on the same tasks and model, BenchShield improves full-chain recall   from 23-94% to 77-100%, same-vector coverage from 16-56% to 43-78%, and reduces per-task cost by up to 65%. Its runtime analysis achieves 96%   accuracy in detecting reward hacking from infrastructure-side evidence.",
+      "tr": "LM-agent benchmarks increasingly function as interactive evaluation infrastructure. Agents observe state, call tools, modify workspaces,   submit artifacts, and receive rewards from outcome procedures. This interactivity makes evaluations vulnerable to reward hacking: an agent   improves its measured score by exploiting the reward-relevant trajectory instead of solving the intended task. Existing defenses rely largely   on task-specific patches, prompt instructions, or post-hoc detectors. They do not provide reusable evidence that a concrete run remained   within its intended evaluation boundary. This paper presents BenchShield, a model-backed instrumentation layer for reward integrity in   LLM-agent evaluation. BenchShield grounds detection in a finite lifecycle model of an evaluation's reward-relevant events. Within the   benchmark infrastructure, two complementary analyses operate over this model. A static, phase-aware taint analysis exposes reward-hacking   paths before a run. Its runtime counterpart uses infrastructure-side evidence to attribute concrete agent use and emit evidence-backed claims.   We construct BenchShield Trajectories, a human-labeled corpus of 456 adjudicated trajectories from more than 31,000 public agent runs across   three benchmarks. Compared with an agentic hackability scanner baseline on the same tasks and model, BenchShield improves full-chain recall   from 23-94% to 77-100%, same-vector coverage from 16-56% to 43-78%, and reduces per-task cost by up to 65%. Its runtime analysis achieves 96%   accuracy in detecting reward hacking from infrastructure-side evidence."
+    }
+  },
+  {
+    "id": "2609.11008v1",
+    "title": "DeFiFusion: Combining Transaction Events with Smart Contracts to Detect Price Manipulation Attacks",
+    "authors": [
+      "Rui Cao",
+      "Shaojing Fan",
+      "Liming Fang",
+      "Yuchan Liu",
+      "Yingying Jiao"
+    ],
+    "published_date": "2026-09-10",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.SE"
+    ],
+    "link": "http://arxiv.org/abs/2609.11008v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.11008v1",
+    "content": {
+      "en": "Decentralized Finance (DeFi) has emerged as a rapidly growing blockchain-based financial service, where market transaction dynamics and underlying smart contract logic are intricately intertwined. This autonomous interplay, while eliminating centralized intermediaries, significantly expands the vulnerability surface of DeFi protocols to Price Manipulation Attacks (PMAs), which have already inflicted catastrophic financial losses. Despite their gravity, existing detection paradigms suffer from fundamental limitations. Transaction-centric methods lack awareness of contract execution semantics, making them prone to false positives under legitimate market volatility, while static contract analyses ignore real transaction behaviors and frequently report vulnerabilities that are infeasible to exploit in practice. We present DeFiFusion, a dual-modal PMA detection framework that closes this gap by jointly modeling transaction events and smart contract semantics within a unified pipeline. Our core insight is that PMA maliciousness emerges only from the interaction between transaction behaviors and the contract logic they exploit; neither signal suffices in isolation. Accordingly, we derive price-manipulation-aware event encoding for extracting fine-grained temporal and economic features tailored to manipulation patterns. We further introduce LLM-based contract semantic extraction to supply the execution-logic context that prior behavioral methods lack. To fuse these modalities, we propose a Dual-Modal Projection-Fusion Transformer with T5-style relative positional encoding, capturing the cyclic multi-stage execution structures that distinguish PMAs from benign market activity. Extensive experiments demonstrate that DeFiFusion consistently achieves state-of-the-art detection performance, effectively recalling 222 of the 225 PMA cases while maintaining a precision of 96.10%.",
+      "tr": "Decentralized Finance (DeFi) has emerged as a rapidly growing blockchain-based financial service, where market transaction dynamics and underlying smart contract logic are intricately intertwined. This autonomous interplay, while eliminating centralized intermediaries, significantly expands the vulnerability surface of DeFi protocols to Price Manipulation Attacks (PMAs), which have already inflicted catastrophic financial losses. Despite their gravity, existing detection paradigms suffer from fundamental limitations. Transaction-centric methods lack awareness of contract execution semantics, making them prone to false positives under legitimate market volatility, while static contract analyses ignore real transaction behaviors and frequently report vulnerabilities that are infeasible to exploit in practice. We present DeFiFusion, a dual-modal PMA detection framework that closes this gap by jointly modeling transaction events and smart contract semantics within a unified pipeline. Our core insight is that PMA maliciousness emerges only from the interaction between transaction behaviors and the contract logic they exploit; neither signal suffices in isolation. Accordingly, we derive price-manipulation-aware event encoding for extracting fine-grained temporal and economic features tailored to manipulation patterns. We further introduce LLM-based contract semantic extraction to supply the execution-logic context that prior behavioral methods lack. To fuse these modalities, we propose a Dual-Modal Projection-Fusion Transformer with T5-style relative positional encoding, capturing the cyclic multi-stage execution structures that distinguish PMAs from benign market activity. Extensive experiments demonstrate that DeFiFusion consistently achieves state-of-the-art detection performance, effectively recalling 222 of the 225 PMA cases while maintaining a precision of 96.10%."
+    }
+  },
+  {
+    "id": "2609.10992v1",
+    "title": "Demystifying the Privacy-Utility Trade-off in LLM Interactions",
+    "authors": [
+      "Zhenhua Liu",
+      "Zhanxu Xie",
+      "Junjie Yu",
+      "Tong Zhu",
+      "Lijun Li"
+    ],
+    "published_date": "2026-09-10",
+    "tags": [
       "cs.AI",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2609.09604v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.09604v1",
+    "link": "http://arxiv.org/abs/2609.10992v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.10992v1",
     "content": {
-      "en": "On August 2, 2026, the obligations of Article 50 of the EU AI Act took effect, requiring generative AI providers to mark the content their systems produce and ensure it can be detected as AI-generated. Days later, Anthropic disclosed that every Claude model released after that date embeds a watermark based on SynthID-Text in all generated text, enabled by default with no user opt-out; Google has deployed SynthID-Text in Gemini since 2024. Users objected that the watermark degrades quality, particularly for code, that it secretly encodes identifying information, and, in mutual contradiction, that it is easily removable and inescapable; the vendor answered with assurances of unchanged quality, no identifying information, and robustness to light editing. In this work, we argue that neither the objections nor the assurances can currently be verified and that this unverifiability, rather than watermarking itself, is the substantive governance failure. We sort the contested assertions by what it would take to settle each and evaluate the open-source SynthID-Text implementation on two open-weight models, because no public tool can test the deployed systems. On prose, the measured effect of the watermark does not exceed that of changing the sampling seed. On code, the cost is three points of correctness on one model and below measurement on the other, while detection remains near chance, a limitation of detectability rather than quality. The remaining gaps trace to withheld access or missing institutions and we map each to a requirement: release of matched outputs, configuration disclosure, accredited audits, a shared evaluation protocol, and interoperable detection.",
-      "tr": "On August 2, 2026, the obligations of Article 50 of the EU AI Act took effect, requiring generative AI providers to mark the content their systems produce and ensure it can be detected as AI-generated. Days later, Anthropic disclosed that every Claude model released after that date embeds a watermark based on SynthID-Text in all generated text, enabled by default with no user opt-out; Google has deployed SynthID-Text in Gemini since 2024. Users objected that the watermark degrades quality, particularly for code, that it secretly encodes identifying information, and, in mutual contradiction, that it is easily removable and inescapable; the vendor answered with assurances of unchanged quality, no identifying information, and robustness to light editing. In this work, we argue that neither the objections nor the assurances can currently be verified and that this unverifiability, rather than watermarking itself, is the substantive governance failure. We sort the contested assertions by what it would take to settle each and evaluate the open-source SynthID-Text implementation on two open-weight models, because no public tool can test the deployed systems. On prose, the measured effect of the watermark does not exceed that of changing the sampling seed. On code, the cost is three points of correctness on one model and below measurement on the other, while detection remains near chance, a limitation of detectability rather than quality. The remaining gaps trace to withheld access or missing institutions and we map each to a requirement: release of matched outputs, configuration disclosure, accredited audits, a shared evaluation protocol, and interoperable detection."
+      "en": "The integration of Large Language Models into daily tasks relies on context-rich instructions, inevitably exposing sensitive user information. Current privacy-preserving methods typically employ context-agnostic static rules, causing severe utility degradation. However, the specific mechanisms governing how sanitization impacts downstream performance remain largely underexplored. To address this, we conduct a systematic analysis to deconstruct the privacy-utility trade-off, uncovering three underlying mechanisms: (1) Context-Dependent Utility, which first establishes when to sanitize by revealing that data value shifts from critical constraints to dispensable noise based on user intent; (2) Strategic Adaptation, which subsequently determines how to sanitize by dictating that the choice between removal and replacement depends on the task's reliance on factual integrity versus structural coherence; and (3) Combinatorial Interplay, which finally extends the protection scope by demonstrating that attributes form a semantic web of synergistic dependencies or antagonistic redundancies. Guided by these insights, we introduce an intent-driven local protection framework. By distilling a lightweight model Veilmind-4B to drive a dynamic extraction-sanitization-restoration pipeline, our approach reaches a low-leakage privacy point while preserving substantially higher response utility than existing privacy-oriented baselines, advancing the privacy-utility trade-off toward the Pareto frontier.",
+      "tr": "The integration of Large Language Models into daily tasks relies on context-rich instructions, inevitably exposing sensitive user information. Current privacy-preserving methods typically employ context-agnostic static rules, causing severe utility degradation. However, the specific mechanisms governing how sanitization impacts downstream performance remain largely underexplored. To address this, we conduct a systematic analysis to deconstruct the privacy-utility trade-off, uncovering three underlying mechanisms: (1) Context-Dependent Utility, which first establishes when to sanitize by revealing that data value shifts from critical constraints to dispensable noise based on user intent; (2) Strategic Adaptation, which subsequently determines how to sanitize by dictating that the choice between removal and replacement depends on the task's reliance on factual integrity versus structural coherence; and (3) Combinatorial Interplay, which finally extends the protection scope by demonstrating that attributes form a semantic web of synergistic dependencies or antagonistic redundancies. Guided by these insights, we introduce an intent-driven local protection framework. By distilling a lightweight model Veilmind-4B to drive a dynamic extraction-sanitization-restoration pipeline, our approach reaches a low-leakage privacy point while preserving substantially higher response utility than existing privacy-oriented baselines, advancing the privacy-utility trade-off toward the Pareto frontier."
+    }
+  },
+  {
+    "id": "2609.10952v1",
+    "title": "Empirical Evaluation of Data Poisoning Attacks in Supervised Learning",
+    "authors": [
+      "Toshif Khan",
+      "Muhammad Abusaqer"
+    ],
+    "published_date": "2026-09-10",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2609.10952v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.10952v1",
+    "content": {
+      "en": "Data poisoning corrupts training data to degrade a model or to plant attacker-controlled behavior. This study evaluates two representative training-time attacks, label flipping and backdoor poisoning, on MNIST and Fashion-MNIST with three baseline classifiers: Logistic Regression, Linear SVM, and Random Forest. Clean training is compared with poisoning rates of 5%, 10%, and 20% using clean-test accuracy, macro-precision, macro-recall, macro-F1, and, for backdoors, attack success rate. Label flipping caused clear degradation, largest for Logistic Regression and Linear SVM, while Random Forest stayed comparatively stable. Backdoor poisoning reached attack success rates from 0.9667 to 1.0000 on both datasets and all three models while often keeping clean-test performance near baseline. The results separate indiscriminate poisoning, which shows up in standard metrics, from targeted backdoor poisoning, which stays comparatively stealthy while embedding highly effective malicious behavior, and they support security-oriented evaluation beyond conventional clean-test metrics.",
+      "tr": "Data poisoning corrupts training data to degrade a model or to plant attacker-controlled behavior. This study evaluates two representative training-time attacks, label flipping and backdoor poisoning, on MNIST and Fashion-MNIST with three baseline classifiers: Logistic Regression, Linear SVM, and Random Forest. Clean training is compared with poisoning rates of 5%, 10%, and 20% using clean-test accuracy, macro-precision, macro-recall, macro-F1, and, for backdoors, attack success rate. Label flipping caused clear degradation, largest for Logistic Regression and Linear SVM, while Random Forest stayed comparatively stable. Backdoor poisoning reached attack success rates from 0.9667 to 1.0000 on both datasets and all three models while often keeping clean-test performance near baseline. The results separate indiscriminate poisoning, which shows up in standard metrics, from targeted backdoor poisoning, which stays comparatively stealthy while embedding highly effective malicious behavior, and they support security-oriented evaluation beyond conventional clean-test metrics."
+    }
+  },
+  {
+    "id": "2609.10935v1",
+    "title": "Empirical Evaluation of Membership Inference Attacks on NLP Text Classifiers: A Baseline Study on SST-2",
+    "authors": [
+      "William Novak",
+      "Muhammad Abusaqer"
+    ],
+    "published_date": "2026-09-10",
+    "tags": [
+      "cs.CR",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2609.10935v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.10935v1",
+    "content": {
+      "en": "Membership inference attacks (MIAs) try to determine whether a specific record was used to train a model, a privacy risk that matters in natural language processing (NLP), where training data can contain sensitive user text. This paper presents a controlled benchmark of membership inference vulnerability for text classification on the GLUE SST-2 sentiment dataset. A TF-IDF + Logistic Regression pipeline and a fine-tuned DistilBERT classifier are compared under a loss-threshold MIA, with utility measured by development accuracy and macro F1. DistilBERT reached 0.9466 accuracy and 0.9460 macro F1 against 0.8756 and 0.8727 for Logistic Regression, yet both models leaked membership signal (Attack AUC 0.5615 and 0.5800, respectively). Two mitigations were tested. Stronger regularization reduced leakage for Logistic Regression at a visible utility cost, whereas fine-tuning DistilBERT for 2 epochs instead of 3 reduced leakage with negligible accuracy loss. Lightweight training adjustments can improve the privacy-utility trade-off without complex defenses.",
+      "tr": "Membership inference attacks (MIAs) try to determine whether a specific record was used to train a model, a privacy risk that matters in natural language processing (NLP), where training data can contain sensitive user text. This paper presents a controlled benchmark of membership inference vulnerability for text classification on the GLUE SST-2 sentiment dataset. A TF-IDF + Logistic Regression pipeline and a fine-tuned DistilBERT classifier are compared under a loss-threshold MIA, with utility measured by development accuracy and macro F1. DistilBERT reached 0.9466 accuracy and 0.9460 macro F1 against 0.8756 and 0.8727 for Logistic Regression, yet both models leaked membership signal (Attack AUC 0.5615 and 0.5800, respectively). Two mitigations were tested. Stronger regularization reduced leakage for Logistic Regression at a visible utility cost, whereas fine-tuning DistilBERT for 2 epochs instead of 3 reduced leakage with negligible accuracy loss. Lightweight training adjustments can improve the privacy-utility trade-off without complex defenses."
+    }
+  },
+  {
+    "id": "2609.10892v1",
+    "title": "DriftNet: A Dual-Head Trajectory Transformer for Detecting and Localizing Prompt Injection in LLM Agents",
+    "authors": [
+      "Asif Pinjari",
+      "Mithun Paul Saint-Germain"
+    ],
+    "published_date": "2026-09-09",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2609.10892v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.10892v1",
+    "content": {
+      "en": "When an indirect prompt injection succeeds against an LLM agent, the compromise is visible in the agent's own behavior: a benign prefix of tool calls, a poisoned observation, and a suffix of actions that serve the attacker. An operator needs three facts: where the attack entered, which steps it corrupted, and whether apparent poison was resisted. Existing systems return either a whole-trace verdict or a single unsafe index. We present DriftNet, a dual-head trajectory Transformer that reads a logged tool-call trajectory and answers all three questions in one forward pass: one head classifies the trajectory as compromised or not, and a second assigns every step one of four labels (benign, injection point, hijacked, failed injection). To our knowledge it is the first supervised detector to produce this joint output. A frozen sentence encoder and four identity-free world features embed each step; the trained trunk, under two million parameters and optimized with a class-weighted joint objective over both heads, needs no access to the agent's model. On the task-disjoint split of the AgentDrift benchmark (12,536 trajectories, 71,024 labeled steps), with a 20-configuration sweep bounding hyperparameter sensitivity to 0.011 F1 and the test part evaluated exactly once, DriftNet reaches trajectory-level F1 of 0.983, exact injection-point recovery on 98.7% of attacked trajectories, hijacked-span IoU of 0.979, zero flags on 218 resisted attacks, and 2.9% flags on hard negatives. A surface baseline retrained on the identical split recovers 11.1% of partial hijacks and 17.1% of delayed executions; DriftNet reaches 98.6% and 93.2% while lowering every false-alarm rate. Reading all 26 residual errors shows that most misses trace to trajectories whose labeled injection observation carries no legible instruction, and we report the benchmark's measured world-identity regularity alongside the results.",
+      "tr": "When an indirect prompt injection succeeds against an LLM agent, the compromise is visible in the agent's own behavior: a benign prefix of tool calls, a poisoned observation, and a suffix of actions that serve the attacker. An operator needs three facts: where the attack entered, which steps it corrupted, and whether apparent poison was resisted. Existing systems return either a whole-trace verdict or a single unsafe index. We present DriftNet, a dual-head trajectory Transformer that reads a logged tool-call trajectory and answers all three questions in one forward pass: one head classifies the trajectory as compromised or not, and a second assigns every step one of four labels (benign, injection point, hijacked, failed injection). To our knowledge it is the first supervised detector to produce this joint output. A frozen sentence encoder and four identity-free world features embed each step; the trained trunk, under two million parameters and optimized with a class-weighted joint objective over both heads, needs no access to the agent's model. On the task-disjoint split of the AgentDrift benchmark (12,536 trajectories, 71,024 labeled steps), with a 20-configuration sweep bounding hyperparameter sensitivity to 0.011 F1 and the test part evaluated exactly once, DriftNet reaches trajectory-level F1 of 0.983, exact injection-point recovery on 98.7% of attacked trajectories, hijacked-span IoU of 0.979, zero flags on 218 resisted attacks, and 2.9% flags on hard negatives. A surface baseline retrained on the identical split recovers 11.1% of partial hijacks and 17.1% of delayed executions; DriftNet reaches 98.6% and 93.2% while lowering every false-alarm rate. Reading all 26 residual errors shows that most misses trace to trajectories whose labeled injection observation carries no legible instruction, and we report the benchmark's measured world-identity regularity alongside the results."
     }
   }
 ]
