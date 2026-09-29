@@ -1,211 +1,219 @@
 [
   {
-    "id": "2609.31371v1",
-    "title": "Towards Understanding LLM-Based Log Anomaly Detection: An Empirical Study of Performance, Efficiency, and Robustness",
+    "id": "2609.35699v1",
+    "title": "Distillation Defenses Easily Break After Reinforcement Learning",
     "authors": [
-      "Bin Li",
-      "Dongdong Wang",
-      "Siyang Lu"
+      "Shidan Javaheri",
+      "Alexander Panfilov",
+      "Oliver Britton",
+      "Yarin Gal",
+      "Yonatan Gideoni"
     ],
-    "published_date": "2026-09-25",
+    "published_date": "2026-09-28",
     "tags": [
       "cs.LG",
+      "cs.AI",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2609.31371v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.31371v1",
+    "link": "http://arxiv.org/abs/2609.35699v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.35699v1",
     "content": {
-      "en": "Large language models (LLMs) have demonstrated promising performance in log anomaly detection, yet how their adaptation strategies, architectures, and deployment configurations affect detection effectiveness remains insufficiently understood. To investigate these factors, we conduct a systematic empirical analysis across three public log datasets, examining different adaptation strategies, model architectures, parameter scales, and quantization settings. Our results reveal substantial performance differences across adaptation strategies, while model scaling yields varying detection gains across datasets. We further observe that models with comparable detection accuracy can exhibit markedly different computational costs, and that low-bit quantization largely preserves detection performance in the evaluated configurations. Finally, we examine detection robustness under structural, semantic, and label noise at different perturbation levels. These findings provide empirical insights into the performance, efficiency, and robustness of LLM-based log anomaly detection, highlighting practical considerations beyond conventional accuracy-oriented evaluation.",
-      "tr": "Large language models (LLMs) have demonstrated promising performance in log anomaly detection, yet how their adaptation strategies, architectures, and deployment configurations affect detection effectiveness remains insufficiently understood. To investigate these factors, we conduct a systematic empirical analysis across three public log datasets, examining different adaptation strategies, model architectures, parameter scales, and quantization settings. Our results reveal substantial performance differences across adaptation strategies, while model scaling yields varying detection gains across datasets. We further observe that models with comparable detection accuracy can exhibit markedly different computational costs, and that low-bit quantization largely preserves detection performance in the evaluated configurations. Finally, we examine detection robustness under structural, semantic, and label noise at different perturbation levels. These findings provide empirical insights into the performance, efficiency, and robustness of LLM-based log anomaly detection, highlighting practical considerations beyond conventional accuracy-oriented evaluation."
+      "en": "Distillation attacks copy the reasoning capabilities of closed-source large language models, allowing bad actors to replicate state-of-the-art performance at low cost. Attackers systematically collect a large volume of frontier model reasoning traces and then train (i.e., \"distill\") their own models on these traces. Existing defenses against distillation attacks are typically evaluated immediately after distillation, implicitly assuming attackers do not train their models any further. In this paper, we argue that a more realistic threat model includes further training with reinforcement learning after distillation. A misspecified threat model can give a false sense of security -- some defenses that seem effective after distillation can be broken after subsequent reinforcement learning. Practically, reinforcement learning lowers the bar for a distillation attack to be effective. We show that simple attacks can steal reasoning capabilities from existing closed-source language models using data easily obtainable from current APIs, yielding reasoning improvements equivalent to more sophisticated attacks that extract the full hidden traces. Results indicate that any distillation defense that leaks sufficient information to reconstruct approximate reasoning traces is likely ineffective. We conclude by discussing broader implications and batch-level distillation defenses which could be more effective.",
+      "tr": "Distillation attacks copy the reasoning capabilities of closed-source large language models, allowing bad actors to replicate state-of-the-art performance at low cost. Attackers systematically collect a large volume of frontier model reasoning traces and then train (i.e., \"distill\") their own models on these traces. Existing defenses against distillation attacks are typically evaluated immediately after distillation, implicitly assuming attackers do not train their models any further. In this paper, we argue that a more realistic threat model includes further training with reinforcement learning after distillation. A misspecified threat model can give a false sense of security -- some defenses that seem effective after distillation can be broken after subsequent reinforcement learning. Practically, reinforcement learning lowers the bar for a distillation attack to be effective. We show that simple attacks can steal reasoning capabilities from existing closed-source language models using data easily obtainable from current APIs, yielding reasoning improvements equivalent to more sophisticated attacks that extract the full hidden traces. Results indicate that any distillation defense that leaks sufficient information to reconstruct approximate reasoning traces is likely ineffective. We conclude by discussing broader implications and batch-level distillation defenses which could be more effective."
     }
   },
   {
-    "id": "2609.31318v1",
-    "title": "AgentXploit: Autonomous Repository-to-Runtime Red-Teaming for AI Agents",
+    "id": "2609.35596v1",
+    "title": "SEABench: Benchmarking Endogenous Misalignment In Self-Evolving Agents",
     "authors": [
-      "Weida Liang",
-      "Shi Qiu",
-      "Zhun Wang",
-      "Simon Sure",
-      "Xiaoyuan Liu"
+      "Saswat Das",
+      "Parvati Viswanathan",
+      "Daniel Donnelly",
+      "Chang Huang",
+      "Sahar Abdelnabi"
     ],
-    "published_date": "2026-09-25",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2609.31318v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.31318v1",
-    "content": {
-      "en": "AI agents combine language models with external data and tools that can modify files, call APIs, or execute code. Security failures can arise when adversarial content changes an agent's tool use or when the surrounding software contains vulnerabilities such as path traversal or command injection. We study authorized white-box pre-deployment auditing, where the auditor has access to the target repository and a controlled runtime, but successful attacks must still act through the task-defined attacker interface and be confirmed by an external verifier. We present AgentXploit, a two-role auditing system that separates repository-level attack-path discovery from runtime exploitation. The Analyzer Agent traces attacker-controlled inputs to sensitive operations and records code-supported candidate attack paths; the Exploiter Agent turns these paths into concrete attacks and revises them using runtime feedback. We also introduce AgentXploit-Bench, containing 72 reproducible vulnerabilities across 12 open-source AI-agent systems and frameworks. Across three runs, AgentXploit reaches 59.3% end-to-end success, compared with 38.4% for Codex. Under a token-budget-matched comparison, Codex reaches 46.3%. On AgentDojo, where injection points are provided, the Exploiter Agent reaches 79.2% attack success versus 52.7% for AgentVigil. These results highlight repository discovery and runtime exploitation as distinct challenges in end-to-end agent security auditing.",
-      "tr": "AI agents combine language models with external data and tools that can modify files, call APIs, or execute code. Security failures can arise when adversarial content changes an agent's tool use or when the surrounding software contains vulnerabilities such as path traversal or command injection. We study authorized white-box pre-deployment auditing, where the auditor has access to the target repository and a controlled runtime, but successful attacks must still act through the task-defined attacker interface and be confirmed by an external verifier. We present AgentXploit, a two-role auditing system that separates repository-level attack-path discovery from runtime exploitation. The Analyzer Agent traces attacker-controlled inputs to sensitive operations and records code-supported candidate attack paths; the Exploiter Agent turns these paths into concrete attacks and revises them using runtime feedback. We also introduce AgentXploit-Bench, containing 72 reproducible vulnerabilities across 12 open-source AI-agent systems and frameworks. Across three runs, AgentXploit reaches 59.3% end-to-end success, compared with 38.4% for Codex. Under a token-budget-matched comparison, Codex reaches 46.3%. On AgentDojo, where injection points are provided, the Exploiter Agent reaches 79.2% attack success versus 52.7% for AgentVigil. These results highlight repository discovery and runtime exploitation as distinct challenges in end-to-end agent security auditing."
-    }
-  },
-  {
-    "id": "2609.31282v1",
-    "title": "Resource-Optimized and Energy-Aware Agentic AI Framework Anchored on Blockchain for Secure Software Supply Chains",
-    "authors": [
-      "Toqeer Ali Syed",
-      "Asadullah Abdullah Khan"
-    ],
-    "published_date": "2026-09-25",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2609.31282v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.31282v1",
-    "content": {
-      "en": "This paper proposes a blockchain-backed agentic security framework designed to safeguard the complete software development lifecycle (SDLC) while also securing the agentic AI components responsible for monitoring it. The framework coordinates a set of specialised security agents, covering source integrity, dependency and SBOM analysis, CI configura tion auditing, artifact verification, and runtime policy evaluation, each supported by a large language model (LLM) that interprets artefacts, reasons over tool outputs, and produces structured security reports. To ensure agent trustworthiness, every agent generates a cryptographically signed attestation that is recorded in a permissioned blockchain via smart contracts, including an agent registry, an immutable attestation log, and an enforceable release-policy module. Communication among agents and with blockchain nodes is secured using a consortium-operated certificate authority, ensuring authenticated and tamper-resistant interactions. A detailed use-case and sequence flow demonstrate how a source code security agent performs analysis, anchors its attestation on-chain, and triggers a verifiable allow/block deployment decision. The proposed framework of fers decentralised integrity transparent provenance, uninterrupted security assurance and a generalisable architecture to incorporate the agentic AI into the modern software supply chain security.",
-      "tr": "This paper proposes a blockchain-backed agentic security framework designed to safeguard the complete software development lifecycle (SDLC) while also securing the agentic AI components responsible for monitoring it. The framework coordinates a set of specialised security agents, covering source integrity, dependency and SBOM analysis, CI configura tion auditing, artifact verification, and runtime policy evaluation, each supported by a large language model (LLM) that interprets artefacts, reasons over tool outputs, and produces structured security reports. To ensure agent trustworthiness, every agent generates a cryptographically signed attestation that is recorded in a permissioned blockchain via smart contracts, including an agent registry, an immutable attestation log, and an enforceable release-policy module. Communication among agents and with blockchain nodes is secured using a consortium-operated certificate authority, ensuring authenticated and tamper-resistant interactions. A detailed use-case and sequence flow demonstrate how a source code security agent performs analysis, anchors its attestation on-chain, and triggers a verifiable allow/block deployment decision. The proposed framework of fers decentralised integrity transparent provenance, uninterrupted security assurance and a generalisable architecture to incorporate the agentic AI into the modern software supply chain security."
-    }
-  },
-  {
-    "id": "2609.31247v1",
-    "title": "Geometric Inconsistency Localization in Multi-View Image Sets",
-    "authors": [
-      "Xander Staelens",
-      "Albéric Loos",
-      "Bert Ramlot",
-      "Hannes Mareen",
-      "Peter Lambert"
-    ],
-    "published_date": "2026-09-25",
-    "tags": [
-      "cs.CV",
-      "cs.AI",
-      "cs.CR",
-      "cs.MM"
-    ],
-    "link": "http://arxiv.org/abs/2609.31247v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.31247v1",
-    "content": {
-      "en": "Novel view synthesis (NVS) models can produce realistic new views of the same scene from different viewpoints. However, these generated views are not always geometrically consistent with one another. Multi-view (MV) consistency has shown promise as a tool for evaluating these NVS models. Its potential for multimedia forensics, however, remains largely unexplored, particularly for localizing geometric inconsistencies across wide-baseline image pairs. To enable research in this direction, we introduce DeformView, a wide-baseline MV dataset with pixel-level annotations of geometric inconsistencies. Using DeformView, we evaluate state-of-the-art MV consistency-scoring methods and show that approaches developed for NVS evaluation transfer poorly to the forensic task of geometric inconsistency localization. To address this limitation, we propose DEFECt3R, a lightweight learning-based classifier that uses cross-view feature relationships to localize geometric inconsistencies at the pixel level. By learning from explicit supervision, including hard negatives from geometrically consistent yet deformed views, DEFECt3R improves localization performance and substantially reduces false positives compared to existing consistency-scoring methods. Ablation experiments further show that both feature representations and correspondence quality contribute to localization performance. Overall, our findings demonstrate that MV geometric consistency is a promising yet underexplored signal for multimedia forensics and establish a benchmark and baseline for geometric inconsistency localization in wide-baseline MV image pairs. Code and dataset are available at https://github.com/IDLabMedia/DeformView-DEFECt3R",
-      "tr": "Novel view synthesis (NVS) models can produce realistic new views of the same scene from different viewpoints. However, these generated views are not always geometrically consistent with one another. Multi-view (MV) consistency has shown promise as a tool for evaluating these NVS models. Its potential for multimedia forensics, however, remains largely unexplored, particularly for localizing geometric inconsistencies across wide-baseline image pairs. To enable research in this direction, we introduce DeformView, a wide-baseline MV dataset with pixel-level annotations of geometric inconsistencies. Using DeformView, we evaluate state-of-the-art MV consistency-scoring methods and show that approaches developed for NVS evaluation transfer poorly to the forensic task of geometric inconsistency localization. To address this limitation, we propose DEFECt3R, a lightweight learning-based classifier that uses cross-view feature relationships to localize geometric inconsistencies at the pixel level. By learning from explicit supervision, including hard negatives from geometrically consistent yet deformed views, DEFECt3R improves localization performance and substantially reduces false positives compared to existing consistency-scoring methods. Ablation experiments further show that both feature representations and correspondence quality contribute to localization performance. Overall, our findings demonstrate that MV geometric consistency is a promising yet underexplored signal for multimedia forensics and establish a benchmark and baseline for geometric inconsistency localization in wide-baseline MV image pairs. Code and dataset are available at https://github.com/IDLabMedia/DeformView-DEFECt3R"
-    }
-  },
-  {
-    "id": "2609.31142v1",
-    "title": "JevAdvBench: A Benchmark and Black-Box Attacks for Reinforcement Learning for Calibrated Decisions Models",
-    "authors": [
-      "Jianyi Hu",
-      "Hangtao Zhang",
-      "Yi Liu",
-      "Yeqi Zeng",
-      "Li Zeng"
-    ],
-    "published_date": "2026-09-25",
+    "published_date": "2026-09-28",
     "tags": [
       "cs.CR",
       "cs.AI",
       "cs.CL"
     ],
-    "link": "http://arxiv.org/abs/2609.31142v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.31142v1",
+    "link": "http://arxiv.org/abs/2609.35596v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.35596v1",
     "content": {
-      "en": "Models trained with reinforcement learning for calibrated decisions (RLCD), such as Jev, answer a typed question about an input, the state, with a probability, a choice, or a score, and software acts on the answer without a person reading it. Their robustness has not been measured: adversarial benchmarks score what a model generates or executes, whereas a typed model generates nothing and returns a well-formed answer even when manipulated. Measurement is also hard, because identical requests can return different answers, most available labels come from the model itself, and the API preprocesses each request out of view. Our key idea is to score each attacked decision against the model's own clean decision rather than against labels, and to read it against the change caused by an identical re-run. Building on this, we introduce JevAdvBench, to our knowledge the first adversarial benchmark for RLCD models, with 812 typed questions over 66 scenarios, and a black-box attack suite of 9,744 single-edit variants that each edit one part of a request, with billed input tokens confirming that the edit reached the model. On jev-1.13.0, rewording stays within 1.2 percentage points of the re-run baseline, and fields outside the schema never reach the model. In contrast, one unverified opinion appended to the state flips 12.1% of decisions, statistically tied with the strongest injected command (10.1%), and pushes 38% of confident answers below the 0.8 confidence threshold that routes them to human review. Applications built on RLCD models should therefore treat the state as untrusted, argued input. Project website: https://JevAdvBench.github.io/JevAdvBench/",
-      "tr": "Models trained with reinforcement learning for calibrated decisions (RLCD), such as Jev, answer a typed question about an input, the state, with a probability, a choice, or a score, and software acts on the answer without a person reading it. Their robustness has not been measured: adversarial benchmarks score what a model generates or executes, whereas a typed model generates nothing and returns a well-formed answer even when manipulated. Measurement is also hard, because identical requests can return different answers, most available labels come from the model itself, and the API preprocesses each request out of view. Our key idea is to score each attacked decision against the model's own clean decision rather than against labels, and to read it against the change caused by an identical re-run. Building on this, we introduce JevAdvBench, to our knowledge the first adversarial benchmark for RLCD models, with 812 typed questions over 66 scenarios, and a black-box attack suite of 9,744 single-edit variants that each edit one part of a request, with billed input tokens confirming that the edit reached the model. On jev-1.13.0, rewording stays within 1.2 percentage points of the re-run baseline, and fields outside the schema never reach the model. In contrast, one unverified opinion appended to the state flips 12.1% of decisions, statistically tied with the strongest injected command (10.1%), and pushes 38% of confident answers below the 0.8 confidence threshold that routes them to human review. Applications built on RLCD models should therefore treat the state as untrusted, argued input. Project website: https://JevAdvBench.github.io/JevAdvBench/"
+      "en": "Self-evolving LLM agents have gained prominence for their ability to improve after deployment by modifying their harness, including their controller instructions, memory management protocols, and reusable tools and skills, in response to user and environment feedback. However, locally useful updates may persist into later tasks where they produce unsafe behavior, even without direct adversarial influence. To study this risk, we introduce SEABench, a benchmark for studying endogenous misalignment arising from agent self-evolution, with 48 longitudinal task sequences that span multiple evolution surfaces, task domains, and harm types in a rich personal-assistant environment. To account for the stochasticity inherent in agentic operations, we provide an adaptive trajectory discovery pipeline that probes for failures while preserving original task intent and supports causal attribution through paired non-evolving agents and attribution scores. Our evaluation across multiple recent LLMs, evolution surfaces, and harm types reveals that self-evolution indeed increases task completion rates but often at the cost of safety failures that are absent for paired non-evolving baseline agents. We also show that qualitatively different safety behaviors emerge across evolution surfaces and harm types. Further, we show that this divergence in safety behavior is reflected in agents' chain-of-thought reasoning, which yields an effective monitoring strategy that can mitigate unsafe behavior with a low false positive rate.",
+      "tr": "Self-evolving LLM agents have gained prominence for their ability to improve after deployment by modifying their harness, including their controller instructions, memory management protocols, and reusable tools and skills, in response to user and environment feedback. However, locally useful updates may persist into later tasks where they produce unsafe behavior, even without direct adversarial influence. To study this risk, we introduce SEABench, a benchmark for studying endogenous misalignment arising from agent self-evolution, with 48 longitudinal task sequences that span multiple evolution surfaces, task domains, and harm types in a rich personal-assistant environment. To account for the stochasticity inherent in agentic operations, we provide an adaptive trajectory discovery pipeline that probes for failures while preserving original task intent and supports causal attribution through paired non-evolving agents and attribution scores. Our evaluation across multiple recent LLMs, evolution surfaces, and harm types reveals that self-evolution indeed increases task completion rates but often at the cost of safety failures that are absent for paired non-evolving baseline agents. We also show that qualitatively different safety behaviors emerge across evolution surfaces and harm types. Further, we show that this divergence in safety behavior is reflected in agents' chain-of-thought reasoning, which yields an effective monitoring strategy that can mitigate unsafe behavior with a low false positive rate."
     }
   },
   {
-    "id": "2609.30997v1",
-    "title": "Can Pixels Alone Reveal Image Origin? Minimax Limits and Learnable Interfaces for Passive Provenance",
+    "id": "2609.35576v1",
+    "title": "Share-Borne AI Virus: Memory-Hopping Attacks Across LLM Agents",
     "authors": [
-      "Kai Yao"
+      "Sidharth Pulipaka",
+      "Ansh Sharma",
+      "Stanislau Hlebik",
+      "Leonidas Raghav",
+      "Vyas Raina"
     ],
-    "published_date": "2026-09-25",
+    "published_date": "2026-09-28",
+    "tags": [
+      "cs.AI",
+      "cs.CL",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2609.35576v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.35576v1",
+    "content": {
+      "en": "Large language models are increasingly deployed as stateful assistants that retain information across interactions and use tools to read, modify, and create persistent artifacts. As these artifacts are shared between users, they form an indirect communication channel between otherwise independent assistants. We study a failure mode in which this channel enables self-propagating attacks. We introduce artifact-mediated propagation, where adversarial content introduced through an artifact (e.g. a report), is stored in an assistant's persistent memory, reproduced in a subsequently created artifact, and acquired by another assistant that later reads it. We evaluate this process in temporal human-agent universes that model artifact exchange between independently operated assistants over time, measuring whether an attack survives successive hand-offs, how many hops it reaches, and how broadly it spreads. We find that attacks can propagate across multiple independent assistants and persist over extended interaction sequences. In larger simulated environments, even GPT-5.6 Luna exhibits substantial spread, reaching 60-80% of agents with propagation chains extending to eight hops. These results show that persistent artifacts can act as durable carriers of adversarial state, allowing attacks to outlive individual interactions and spread across isolated assistants.",
+      "tr": "Large language models are increasingly deployed as stateful assistants that retain information across interactions and use tools to read, modify, and create persistent artifacts. As these artifacts are shared between users, they form an indirect communication channel between otherwise independent assistants. We study a failure mode in which this channel enables self-propagating attacks. We introduce artifact-mediated propagation, where adversarial content introduced through an artifact (e.g. a report), is stored in an assistant's persistent memory, reproduced in a subsequently created artifact, and acquired by another assistant that later reads it. We evaluate this process in temporal human-agent universes that model artifact exchange between independently operated assistants over time, measuring whether an attack survives successive hand-offs, how many hops it reaches, and how broadly it spreads. We find that attacks can propagate across multiple independent assistants and persist over extended interaction sequences. In larger simulated environments, even GPT-5.6 Luna exhibits substantial spread, reaching 60-80% of agents with propagation chains extending to eight hops. These results show that persistent artifacts can act as durable carriers of adversarial state, allowing attacks to outlive individual interactions and spread across isolated assistants."
+    }
+  },
+  {
+    "id": "2609.35557v1",
+    "title": "The Compiler May Read It, the Agent May Not: Keeping Part of a Research Code Away from a Coding Agent",
+    "authors": [
+      "Shobhan Roy"
+    ],
+    "published_date": "2026-09-28",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.CV",
-      "cs.LG"
+      "cs.SE"
     ],
-    "link": "http://arxiv.org/abs/2609.30997v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.30997v1",
+    "link": "http://arxiv.org/abs/2609.35557v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.35557v1",
     "content": {
-      "en": "Passive image provenance asks whether pixels alone can reveal where an image came from: a human, an aggregate AI class, or a particular generator. This becomes a robustness problem once a source image can be edited before the verifier sees it. We study the problem as source--target verification under adversarial distribution shift. Our first result gives the exact best-case limit for any image-only verifier: the largest robust target-acceptance gap equals the minimum total-variation distance between the target distribution and the set of attacked source distributions. This quantity depends on the source, target, and edit class, not on the verifier architecture. Our second result explains why deployed public verifiers can fail before this statistical limit is reached. If the verifier can be emulated on the attack region to error $\\varepsilon$, then a surrogate black-box attack reaches target acceptance within $2\\varepsilon$ plus optimization error of the white-box optimum; score-revealing logistic and softmax heads over public features are identifiable, and approximate score access gives stable recovery bounds. A finite-state experiment checks the minimax identity where both sides are computable. On same-prompt real/diffusion benchmarks, the evaluated public CLIP verifiers fail under targeted pixel attacks, while a ResNet-18 victim exhibits partial fake-to-real transfer. Binary feedback with abstention reduces measured attack success, but positive empirical gap upper bounds do not establish robustness. These results motivate separate evaluation of the source--target statistical ceiling and the information released by a deployed verifier.",
-      "tr": "Passive image provenance asks whether pixels alone can reveal where an image came from: a human, an aggregate AI class, or a particular generator. This becomes a robustness problem once a source image can be edited before the verifier sees it. We study the problem as source--target verification under adversarial distribution shift. Our first result gives the exact best-case limit for any image-only verifier: the largest robust target-acceptance gap equals the minimum total-variation distance between the target distribution and the set of attacked source distributions. This quantity depends on the source, target, and edit class, not on the verifier architecture. Our second result explains why deployed public verifiers can fail before this statistical limit is reached. If the verifier can be emulated on the attack region to error $\\varepsilon$, then a surrogate black-box attack reaches target acceptance within $2\\varepsilon$ plus optimization error of the white-box optimum; score-revealing logistic and softmax heads over public features are identifiable, and approximate score access gives stable recovery bounds. A finite-state experiment checks the minimax identity where both sides are computable. On same-prompt real/diffusion benchmarks, the evaluated public CLIP verifiers fail under targeted pixel attacks, while a ResNet-18 victim exhibits partial fake-to-real transfer. Binary feedback with abstention reduces measured attack success, but positive empirical gap upper bounds do not establish robustness. These results motivate separate evaluation of the source--target statistical ceiling and the information released by a deployed verifier."
+      "en": "The compiler must read modules a physics-based solver cannot build without; the coding agent must not read that intellectual property. The harness does not ship that rule. We classified fifteen read routes against a container, permission rules and a sandbox. None of the three can tell which program is reading.",
+      "tr": "The compiler must read modules a physics-based solver cannot build without; the coding agent must not read that intellectual property. The harness does not ship that rule. We classified fifteen read routes against a container, permission rules and a sandbox. None of the three can tell which program is reading."
     }
   },
   {
-    "id": "2609.30982v1",
-    "title": "FARE: Forensic Acceptance Region Estimation for Catching Bait-and-Switch Image Generators",
+    "id": "2609.35408v1",
+    "title": "\"Nothing to See Here'': Unintended Disclosure through Revision Traces of LLM Deliverables",
     "authors": [
-      "Kai Yao",
-      "Marc Juarez"
+      "Yage Zhang",
+      "Yukun Jiang",
+      "Yang Zhang"
     ],
-    "published_date": "2026-09-25",
+    "published_date": "2026-09-28",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2609.35408v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.35408v1",
+    "content": {
+      "en": "Large language model (LLM) assistants increasingly help users draft content for third-party recipients. During private drafting, the user or the model may introduce an item and later remove or replace it. The model may remove the item from the intended content but reveal it again when stating the edit. We call such statements revision traces. For example, after a user removes the password before sharing a configuration file, the model may delete it but leave a comment saying, \"Removed the password 'No****4!' as requested.\" A third-party recipient who sees only the delivered file can therefore recover the withdrawn password from the comment. In an in-the-wild analysis of three public conversation corpora, we identify 26,753 revision requests, of which 2,363 (8.8%) leave revision traces. We study them in greater depth under controlled conditions by introducing RevLeakBench, a benchmark of 100 tasks across five scenarios with a conversation track and an agent track. We measure trace occurrence, withdrawn-item recovery, trace position, and required-content retention. Across six models, about half of the deliverables in both tracks state the edit after a revocation, and a reader that sees only the deliverable can recover the withdrawn item from about 13% of them. Telling the model that its entire reply will be forwarded to the recipient still leaves revision traces in 36.4% of the deliverables. We compare prompt defenses and a delivery boundary, and propose an output-side filter that sharply reduces recovery with little loss of required content. We believe our work can benefit efforts to understand and mitigate unintended disclosure in LLM interactions.",
+      "tr": "Large language model (LLM) assistants increasingly help users draft content for third-party recipients. During private drafting, the user or the model may introduce an item and later remove or replace it. The model may remove the item from the intended content but reveal it again when stating the edit. We call such statements revision traces. For example, after a user removes the password before sharing a configuration file, the model may delete it but leave a comment saying, \"Removed the password 'No****4!' as requested.\" A third-party recipient who sees only the delivered file can therefore recover the withdrawn password from the comment. In an in-the-wild analysis of three public conversation corpora, we identify 26,753 revision requests, of which 2,363 (8.8%) leave revision traces. We study them in greater depth under controlled conditions by introducing RevLeakBench, a benchmark of 100 tasks across five scenarios with a conversation track and an agent track. We measure trace occurrence, withdrawn-item recovery, trace position, and required-content retention. Across six models, about half of the deliverables in both tracks state the edit after a revocation, and a reader that sees only the deliverable can recover the withdrawn item from about 13% of them. Telling the model that its entire reply will be forwarded to the recipient still leaves revision traces in 36.4% of the deliverables. We compare prompt defenses and a delivery boundary, and propose an output-side filter that sharply reduces recovery with little loss of required content. We believe our work can benefit efforts to understand and mitigate unintended disclosure in LLM interactions."
+    }
+  },
+  {
+    "id": "2609.35366v1",
+    "title": "Planarian: Managing Agent State with Statepoints",
+    "authors": [
+      "Jinnan Guo",
+      "Hao Mark Chen",
+      "Kapil Vaswani",
+      "Andrew Paverd",
+      "Peter Pietzuch"
+    ],
+    "published_date": "2026-09-28",
+    "tags": [
+      "cs.OS",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2609.35366v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.35366v1",
+    "content": {
+      "en": "LLM agents solve complex tasks by iteratively changing files, invoking local tools, and interacting with remote services, which modifies state across their local environment and remote services. Today, agents and users must manage these changes explicitly, whether reverting exploratory actions or recovering from erroneous ones. Doing so safely requires coordinated actions, yet current agent harnesses lack unified abstractions and mechanisms for managing local and remote state consistently and efficiently.   We describe Planarian, an agent runtime with state management that enables agents and users to recover from erroneous actions and explore alternative executions over consistent local and remote environment state. Planarian introduces the abstraction of agent statepoints, which are consistent, restorable point-in-time versions of the environment state. Planarian exposes three state-management primitives to agents and users: (i) snapshot creates a new statepoint spanning local and remote state without requiring external services to support checkpoints: it relies on efficient incremental process and file system snapshotting to capture local sandboxed state, and transparently records compensating actions to undo remote state changes; (ii) rollback restores the environment to a previous statepoint by reverting to a prior local checkpoint and replaying compensating actions for remote state changes; and (iii) fork creates multiple isolated branches from a statepoint, enabling the agent to explore alternatives in parallel. We show that Planarian enables agents to undo mistakes and explore alternatives in parallel, improving task quality by up to 15x, and allows users to recover from erroneous actions with only 3% overhead.",
+      "tr": "LLM agents solve complex tasks by iteratively changing files, invoking local tools, and interacting with remote services, which modifies state across their local environment and remote services. Today, agents and users must manage these changes explicitly, whether reverting exploratory actions or recovering from erroneous ones. Doing so safely requires coordinated actions, yet current agent harnesses lack unified abstractions and mechanisms for managing local and remote state consistently and efficiently.   We describe Planarian, an agent runtime with state management that enables agents and users to recover from erroneous actions and explore alternative executions over consistent local and remote environment state. Planarian introduces the abstraction of agent statepoints, which are consistent, restorable point-in-time versions of the environment state. Planarian exposes three state-management primitives to agents and users: (i) snapshot creates a new statepoint spanning local and remote state without requiring external services to support checkpoints: it relies on efficient incremental process and file system snapshotting to capture local sandboxed state, and transparently records compensating actions to undo remote state changes; (ii) rollback restores the environment to a previous statepoint by reverting to a prior local checkpoint and replaying compensating actions for remote state changes; and (iii) fork creates multiple isolated branches from a statepoint, enabling the agent to explore alternatives in parallel. We show that Planarian enables agents to undo mistakes and explore alternatives in parallel, improving task quality by up to 15x, and allows users to recover from erroneous actions with only 3% overhead."
+    }
+  },
+  {
+    "id": "2609.35224v1",
+    "title": "TANGO: Watermarking Masked Diffusion Language Models in Token Pairs",
+    "authors": [
+      "Kasra Arabi",
+      "Nir Weinberger",
+      "Micah Goldblum",
+      "Niv Cohen"
+    ],
+    "published_date": "2026-09-28",
+    "tags": [
+      "cs.LG",
+      "cs.CL",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2609.35224v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.35224v1",
+    "content": {
+      "en": "Masked-diffusion language models fill in masked positions in parallel and in no fixed order. Most practical text watermarks assume left-to-right generation. They key each token to the tokens before it, and in a diffusion model those tokens may still be masked. A fixed green list needs no such context, but it favors the same tokens at every position, so these tokens appear more often in watermarked text. An attacker who compares token frequencies in watermarked and unwatermarked text can recover the list and forge text that the provider's own detector accepts. We present TANGO, a watermark for masked-diffusion language models that keys each new token to a nearby token that is already unmasked. A secret key splits the vocabulary into color classes, and TANGO biases the new token toward a color determined by the key and the nearby token's color. The watermark is therefore embedded in pairs of tokens. Because the favored color changes from position to position, token frequencies stay much closer to those of unwatermarked text than under a fixed green list. Detection needs only the text and the key, and it does not assume any unmasking order. On two masked-diffusion models, TANGO detects nearly all unedited watermarked texts and most edited ones, and frequency attacks that forge the fixed green list fail against it.",
+      "tr": "Masked-diffusion language models fill in masked positions in parallel and in no fixed order. Most practical text watermarks assume left-to-right generation. They key each token to the tokens before it, and in a diffusion model those tokens may still be masked. A fixed green list needs no such context, but it favors the same tokens at every position, so these tokens appear more often in watermarked text. An attacker who compares token frequencies in watermarked and unwatermarked text can recover the list and forge text that the provider's own detector accepts. We present TANGO, a watermark for masked-diffusion language models that keys each new token to a nearby token that is already unmasked. A secret key splits the vocabulary into color classes, and TANGO biases the new token toward a color determined by the key and the nearby token's color. The watermark is therefore embedded in pairs of tokens. Because the favored color changes from position to position, token frequencies stay much closer to those of unwatermarked text than under a fixed green list. Detection needs only the text and the key, and it does not assume any unmasking order. On two masked-diffusion models, TANGO detects nearly all unedited watermarked texts and most edited ones, and frequency attacks that forge the fixed green list fail against it."
+    }
+  },
+  {
+    "id": "2609.35088v1",
+    "title": "When Valid Tool Calls Change Meaning: Formation-Consistent Dispatch for LLM Agents",
+    "authors": [
+      "Geonwoo Kim",
+      "Brent ByungHoon Kang"
+    ],
+    "published_date": "2026-09-28",
+    "tags": [
+      "cs.AI",
+      "cs.CR",
+      "cs.SE"
+    ],
+    "link": "http://arxiv.org/abs/2609.35088v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.35088v1",
+    "content": {
+      "en": "Tool-enabled agents form calls from model-visible interfaces, while hosts later select their implementation. Standard dispatch omits the descriptor-handler relation. An unchanged and schema-valid call can therefore acquire a different security effect during rollout, reconnect, or delayed approval. We call this failure schema-epoch drift. We present formation-consistent dispatch (FCD), which connects implementation analysis to execution authority. Reviewed profiles produce provenance-bound over-approximations of declared in-scope effects from official source. Under a closed-target approval policy, a verifier applies each formed call to a summary and captures a successor only when its effects fit the call's security contract. Atomic admission and a final-hop fence preserve this decision to the effect. The exact source retains priority, and the captured successor becomes eligible only after source retirement. Stock releases and deployment changes reproduced the failure. Four profiles covered 32 official releases: 29 required no release-specific change and three escalated. A frozen 16-release expansion matched a separate source oracle. In a preregistered stock comparison, FCD completed all three pending calls whose effect remained private and blocked all three whose omission became public. Exact pinning and release-wide denial stopped all six calls, while release-wide approval completed all six but produced three public effects. A separate lifecycle experiment carried a formation-captured certificate across source retirement. The same safe certificate installed later governed new formations without expanding the pending call's authority.",
+      "tr": "Tool-enabled agents form calls from model-visible interfaces, while hosts later select their implementation. Standard dispatch omits the descriptor-handler relation. An unchanged and schema-valid call can therefore acquire a different security effect during rollout, reconnect, or delayed approval. We call this failure schema-epoch drift. We present formation-consistent dispatch (FCD), which connects implementation analysis to execution authority. Reviewed profiles produce provenance-bound over-approximations of declared in-scope effects from official source. Under a closed-target approval policy, a verifier applies each formed call to a summary and captures a successor only when its effects fit the call's security contract. Atomic admission and a final-hop fence preserve this decision to the effect. The exact source retains priority, and the captured successor becomes eligible only after source retirement. Stock releases and deployment changes reproduced the failure. Four profiles covered 32 official releases: 29 required no release-specific change and three escalated. A frozen 16-release expansion matched a separate source oracle. In a preregistered stock comparison, FCD completed all three pending calls whose effect remained private and blocked all three whose omission became public. Exact pinning and release-wide denial stopped all six calls, while release-wide approval completed all six but produced three public effects. A separate lifecycle experiment carried a formation-captured certificate across source retirement. The same safe certificate installed later governed new formations without expanding the pending call's authority."
+    }
+  },
+  {
+    "id": "2609.35002v1",
+    "title": "Still There, No Longer Seen: Exposing Compression-Induced Risk in Large Vision-Language Models",
+    "authors": [
+      "Qiankun Li",
+      "Yuechen Zhang",
+      "Bowen Chen",
+      "Shilinlu Yan",
+      "Zhenhong Zhou"
+    ],
+    "published_date": "2026-09-28",
     "tags": [
       "cs.CV",
       "cs.AI",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2609.30982v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.30982v1",
+    "link": "http://arxiv.org/abs/2609.35002v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.35002v1",
     "content": {
-      "en": "Modern AI image generators are increasingly deployed as opaque APIs, where customers can query the deployed service, but cannot inspect model weights or architecture. This creates a practical challenge: a provider may pass governance certification with one generator and later silently switch to a cheaper and lower-quality one for deployment, compromising public trust or even safety in high-stakes domains. We study integrity auditing at deployment time and propose FARE (Forensic Acceptance Region Estimation). A certified generator is enrolled by training FARE on images sampled from that generator. After deployment, FARE can determine whether a generated image is consistent with the enrolled generator---using only that image. FARE's features are based on image generator-specific artifacts that have been proposed for forensic applications. FARE amplifies these features during training by finding hard samples that tighten the acceptance region and increase sensitivity to subtle changes in the certified generator. Across generator swaps, including substitutions with similar model versions and model variants, FARE is effective at detecting swaps, consistently outperforming existing baselines at strict operating points, and remains effective under the exact-model and decision-only attacks evaluated in this work.",
-      "tr": "Modern AI image generators are increasingly deployed as opaque APIs, where customers can query the deployed service, but cannot inspect model weights or architecture. This creates a practical challenge: a provider may pass governance certification with one generator and later silently switch to a cheaper and lower-quality one for deployment, compromising public trust or even safety in high-stakes domains. We study integrity auditing at deployment time and propose FARE (Forensic Acceptance Region Estimation). A certified generator is enrolled by training FARE on images sampled from that generator. After deployment, FARE can determine whether a generated image is consistent with the enrolled generator---using only that image. FARE's features are based on image generator-specific artifacts that have been proposed for forensic applications. FARE amplifies these features during training by finding hard samples that tighten the acceptance region and increase sensitivity to subtle changes in the certified generator. Across generator swaps, including substitutions with similar model versions and model variants, FARE is effective at detecting swaps, consistently outperforming existing baselines at strict operating points, and remains effective under the exact-model and decision-only attacks evaluated in this work."
+      "en": "Visual token compression reduces the inference cost of Large Vision-Language Models (LVLMs). However, aggregate robustness measures do not reveal whether a particular adversarial failure is induced by compression or inherited from the underlying model. We define a compression-specific failure (CSF) as an adversarial input that remains correct under full-token inference but fails after compression, casting compression-induced risk as a paired failure attribution problem. Within a controlled diagnostic cohort, counterfactuals show that retained-set allocation causally changes compressed correctness and reveal a negative association between recovery and representation drift in displaced evidence. Motivated by these findings, we propose CIRA, a Compression-Induced Risk Attack for Large Vision-Language Models. Under a vision-encoder white-box setting, CIRA optimizes image perturbations through encoder-side objectives that manipulate token priorities across candidate compression budgets while preserving displaced evidence. CIRA uses no downstream questions or labels and requires no access to the language model, deployed compressor, or exact compression budget. Across 12 dataset-compressor settings evaluated at four budgets, CIRA achieves a mean CSFR of 20.35% while limiting full-token attack success to 6.92%, with similar behavior on additional LVLM families. A cross-view selection-stabilization defense substantially suppresses CIRA, although Adaptive CIRA partially restores its effectiveness. These results show that compression-specific failures persist under restricted access and support paired evaluation of full-token and compressed inference for attributing risk to visual-token compression.",
+      "tr": "Visual token compression reduces the inference cost of Large Vision-Language Models (LVLMs). However, aggregate robustness measures do not reveal whether a particular adversarial failure is induced by compression or inherited from the underlying model. We define a compression-specific failure (CSF) as an adversarial input that remains correct under full-token inference but fails after compression, casting compression-induced risk as a paired failure attribution problem. Within a controlled diagnostic cohort, counterfactuals show that retained-set allocation causally changes compressed correctness and reveal a negative association between recovery and representation drift in displaced evidence. Motivated by these findings, we propose CIRA, a Compression-Induced Risk Attack for Large Vision-Language Models. Under a vision-encoder white-box setting, CIRA optimizes image perturbations through encoder-side objectives that manipulate token priorities across candidate compression budgets while preserving displaced evidence. CIRA uses no downstream questions or labels and requires no access to the language model, deployed compressor, or exact compression budget. Across 12 dataset-compressor settings evaluated at four budgets, CIRA achieves a mean CSFR of 20.35% while limiting full-token attack success to 6.92%, with similar behavior on additional LVLM families. A cross-view selection-stabilization defense substantially suppresses CIRA, although Adaptive CIRA partially restores its effectiveness. These results show that compression-specific failures persist under restricted access and support paired evaluation of full-token and compressed inference for attributing risk to visual-token compression."
     }
   },
   {
-    "id": "2609.30805v1",
-    "title": "XPhysICS: Cross-Physical-Domain Threat Grounding for Industrial Control Systems Security",
+    "id": "2609.34974v1",
+    "title": "Before Acting, Change the State: Prospective State Intervention for Web Agents under Deceptive Interfaces",
     "authors": [
-      "Sangshin Park",
-      "Jainta Paul",
-      "Lawrence Ponce",
-      "Md Raihan Ahmed",
-      "Mu Zhang"
+      "Ruozhao Yang",
+      "Mingfei Cheng",
+      "Xiaofei Xie"
     ],
-    "published_date": "2026-09-25",
+    "published_date": "2026-09-28",
     "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2609.30805v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.30805v1",
-    "content": {
-      "en": "Industrial control system (ICS) threats documented for one plant can express cyber-physical effects relevant to another, but semantic similarity alone does not establish whether those effects are structurally admissible or evaluable on a target. We present XPhysICS, a provenance-aware, target-conditioned method that separates analyst-guided source abstraction from deterministic grounding into target-specific validation slices. Given a fixed source abstraction, vocabulary and schema, and machine-validated target contract, XPhysICS evaluates candidate mappings using five eligibility criteria: role compatibility, implemented type compatibility, stage coherence, slice viability, and rule-surface applicability. Grounding acceptance, slice adequacy, dynamic realizability, consumer applicability, and consumer outcome remain distinct evidence layers. We evaluate 83 structured source-threat abstractions across water treatment, water distribution, hydro/water-energy, and chemical-process targets. Controlled target-side studies of SWaT-to-water-treatment and WADI-to-water-distribution groundings produce clean, nominal-confounded, and near-threshold consumer outcomes; nine Hydro/GRFICS cases extend bounded validation-slice execution. We also evaluate bounded predictive, state-aware, and phase-aware consumer lanes, the unmodified upstream GeCo implementation, and a paper-derived reproduction of a physics-guided search method over three frozen groundings. Results show that cross-domain ICS threat reuse requires traceable source semantics, explicit target-conditioned grounding criteria, and careful separation of subsequent target-side evidence.",
-      "tr": "Industrial control system (ICS) threats documented for one plant can express cyber-physical effects relevant to another, but semantic similarity alone does not establish whether those effects are structurally admissible or evaluable on a target. We present XPhysICS, a provenance-aware, target-conditioned method that separates analyst-guided source abstraction from deterministic grounding into target-specific validation slices. Given a fixed source abstraction, vocabulary and schema, and machine-validated target contract, XPhysICS evaluates candidate mappings using five eligibility criteria: role compatibility, implemented type compatibility, stage coherence, slice viability, and rule-surface applicability. Grounding acceptance, slice adequacy, dynamic realizability, consumer applicability, and consumer outcome remain distinct evidence layers. We evaluate 83 structured source-threat abstractions across water treatment, water distribution, hydro/water-energy, and chemical-process targets. Controlled target-side studies of SWaT-to-water-treatment and WADI-to-water-distribution groundings produce clean, nominal-confounded, and near-threshold consumer outcomes; nine Hydro/GRFICS cases extend bounded validation-slice execution. We also evaluate bounded predictive, state-aware, and phase-aware consumer lanes, the unmodified upstream GeCo implementation, and a paper-derived reproduction of a physics-guided search method over three frozen groundings. Results show that cross-domain ICS threat reuse requires traceable source semantics, explicit target-conditioned grounding criteria, and careful separation of subsequent target-side evidence."
-    }
-  },
-  {
-    "id": "2609.30729v1",
-    "title": "Input-Layer Starvation: Why Per-Layer Pruning Breaks IoT Intrusion Detectors",
-    "authors": [
-      "Md Anas Biswas"
-    ],
-    "published_date": "2026-09-25",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2609.30729v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.30729v1",
-    "content": {
-      "en": "Intrusion detectors for small Internet-of-Things (IoT) devices are usually compressed by pruning and judged by overall accuracy. We show that this hides a severe class-level failure, find its cause, and give low-overhead prevention and repair. On CICIoT2023, a two-layer convolutional detector pruned with uniform layer-wise magnitude pruning at 80% sparsity loses 16 points of accuracy but half of its macro-F1, the mean per-class F1 (0.542 to 0.271 over five independently trained models); 17 of 34 classes are materially damaged. Remaining weight count does not explain it: a perceptron and a transformer pruned to the same or fewer weights lose at most 0.096. The first layer does. It has 192 weights; uniform pruning leaves 38, 46% of its 64 filters lose every input weight, and fine-tuning under that starvation leaves the running means of the first normalisation layer displaced by up to 0.8 standard deviations in a few surviving channels, on which the deployed model collapses. Protecting those 192 weights, or pruning globally at the same sparsity, prevents the collapse (loss 0.013); recomputing the normalisation statistics on unlabelled training data, with no weight changed, repairs it (loss 0.039) and returns the false-alert rate to 33% (dense 29%). Damage shows a strong increasing dose-response in first-layer sparsity, starving a perceptron's input layer reproduces the collapse, and the pattern holds on TON_IoT. The failure is misattribution and false alerts, not silent evasion: on validation-selected blind spots, uniformly pruned detectors misattribute 72% of the traffic, against 50% with the first layer protected and 47% for the dense model.",
-      "tr": "Intrusion detectors for small Internet-of-Things (IoT) devices are usually compressed by pruning and judged by overall accuracy. We show that this hides a severe class-level failure, find its cause, and give low-overhead prevention and repair. On CICIoT2023, a two-layer convolutional detector pruned with uniform layer-wise magnitude pruning at 80% sparsity loses 16 points of accuracy but half of its macro-F1, the mean per-class F1 (0.542 to 0.271 over five independently trained models); 17 of 34 classes are materially damaged. Remaining weight count does not explain it: a perceptron and a transformer pruned to the same or fewer weights lose at most 0.096. The first layer does. It has 192 weights; uniform pruning leaves 38, 46% of its 64 filters lose every input weight, and fine-tuning under that starvation leaves the running means of the first normalisation layer displaced by up to 0.8 standard deviations in a few surviving channels, on which the deployed model collapses. Protecting those 192 weights, or pruning globally at the same sparsity, prevents the collapse (loss 0.013); recomputing the normalisation statistics on unlabelled training data, with no weight changed, repairs it (loss 0.039) and returns the false-alert rate to 33% (dense 29%). Damage shows a strong increasing dose-response in first-layer sparsity, starving a perceptron's input layer reproduces the collapse, and the pattern holds on TON_IoT. The failure is misattribution and false alerts, not silent evasion: on validation-selected blind spots, uniformly pruned detectors misattribute 72% of the traffic, against 50% with the first layer protected and 47% for the dense model."
-    }
-  },
-  {
-    "id": "2609.30719v1",
-    "title": "Werracle: Sub-Cent Intra-Block AI Reflex Oracles and Flash-Loan Circuit Breakers for EVM Smart Contracts",
-    "authors": [
-      "Volkan Dağlı",
-      "Zerrin Dağlı",
-      "Dağhan Dağlı"
-    ],
-    "published_date": "2026-09-25",
-    "tags": [
-      "cs.CR",
       "cs.AI",
-      "cs.DC"
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2609.30719v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.30719v1",
+    "link": "http://arxiv.org/abs/2609.34974v1",
+    "pdf_link": "https://arxiv.org/pdf/2609.34974v1",
     "content": {
-      "en": "Contemporary on-chain artificial intelligence (AI) encounters an intractable Von Neumann memory and latency wall. Storing static floating-point neural weight matrices inside Ethereum Virtual Machine (EVM) storage costs millions of gas, rendering direct on-chain inference impossible. While Zero-Knowledge Machine Learning (ZK-ML) offloads matrix tensor multiplications to off-chain provers, it introduces fatal constraints: 10 to 300 seconds of SNARK proving latency and 250,000 to 500,000 gas per proof verification. Because decentralized finance (DeFi) exploits - such as uncollateralized flash-loan attacks, predatory sandwich MEV, and toxic loss-versus-rebalancing (LVR) flow - occur atomically inside a single block, ZK-ML oracles cannot react in time. Here, we present Werracle, a production-grade, zero-storage on-chain AI decision oracle fitting inside a single 32-byte EVM storage slot (bytes32). Leveraging foundational procedural Mandelbrot escape dynamics (z_{n+1} = z_n^2 + c) established by Dagli et al. (arXiv:2609.25498), Werracle derives continuous non-linear decision hyperplanes from a 24-byte coordinate triplet Theta = (c_x, c_y, zoom). Implemented in pure Solidity bytecode using fixed-point Q16.16 arithmetic (WerrMath.sol), Werracle evaluates a 16-point Pareto micro-grid in only 21,438 gas (under 0.0005 USD on Layer-2 rollups like Base and Arbitrum) with sub-millisecond execution latency. We demonstrate real-world DeFi efficacy via WerracleFeeHook.sol, a Uniswap v4 dynamic swap fee governor that measures orderbook turbulence on-the-fly and atomically adjusts liquidity provider fees between 0.05% and 0.50%. The protocol is formally verified against a 1,000-test cryptographically sealed deterministic verification suite (100.0% pass rate) with telemetry permanently disabled, operating live on a dedicated EVM devnet sandbox (Chain ID 4242).",
-      "tr": "Contemporary on-chain artificial intelligence (AI) encounters an intractable Von Neumann memory and latency wall. Storing static floating-point neural weight matrices inside Ethereum Virtual Machine (EVM) storage costs millions of gas, rendering direct on-chain inference impossible. While Zero-Knowledge Machine Learning (ZK-ML) offloads matrix tensor multiplications to off-chain provers, it introduces fatal constraints: 10 to 300 seconds of SNARK proving latency and 250,000 to 500,000 gas per proof verification. Because decentralized finance (DeFi) exploits - such as uncollateralized flash-loan attacks, predatory sandwich MEV, and toxic loss-versus-rebalancing (LVR) flow - occur atomically inside a single block, ZK-ML oracles cannot react in time. Here, we present Werracle, a production-grade, zero-storage on-chain AI decision oracle fitting inside a single 32-byte EVM storage slot (bytes32). Leveraging foundational procedural Mandelbrot escape dynamics (z_{n+1} = z_n^2 + c) established by Dagli et al. (arXiv:2609.25498), Werracle derives continuous non-linear decision hyperplanes from a 24-byte coordinate triplet Theta = (c_x, c_y, zoom). Implemented in pure Solidity bytecode using fixed-point Q16.16 arithmetic (WerrMath.sol), Werracle evaluates a 16-point Pareto micro-grid in only 21,438 gas (under 0.0005 USD on Layer-2 rollups like Base and Arbitrum) with sub-millisecond execution latency. We demonstrate real-world DeFi efficacy via WerracleFeeHook.sol, a Uniswap v4 dynamic swap fee governor that measures orderbook turbulence on-the-fly and atomically adjusts liquidity provider fees between 0.05% and 0.50%. The protocol is formally verified against a 1,000-test cryptographically sealed deterministic verification suite (100.0% pass rate) with telemetry permanently disabled, operating live on a dedicated EVM devnet sandbox (Chain ID 4242)."
+      "en": "LLM-based Web agents can autonomously complete user tasks, yet deceptive interfaces can steer them toward outcomes that conflict with users' interests. Existing defenses primarily intervene on agent behavior through blocking, guidance, or replanning. We identify a distinct failure mode: a task-valid action can still realize an unauthorized consequence because of the current Web state. This motivates treating task-relevant Web state itself as a runtime control target. We introduce Veer, an agent-side runtime defense that leaves task planning to the base agent and intervenes on Web state when a proposed action would produce an unauthorized consequence. Before modifying the live environment, Veer constructs a prospective intervention trajectory toward a safe task-relevant state and executes it with runtime grounding and verification. Across TrickyArena and WebDecept, Veer achieves the highest safe task completion in all three evaluation settings, exceeding the next-best defense by 15.9 and 25.0 percentage points on TrickyArena-Single and TrickyArena-Multi, respectively, while reducing dark-pattern success on WebDecept to 0.3%. These gains persist across dark-pattern types and all 12 agent, model, and benchmark configurations. Ablations show that active state intervention provides the largest gain, while prospective rollout and temporal evidence contribute additional improvements. These results establish task-relevant Web state as an effective runtime control target for protecting Web agents from deceptive outcomes.",
+      "tr": "LLM-based Web agents can autonomously complete user tasks, yet deceptive interfaces can steer them toward outcomes that conflict with users' interests. Existing defenses primarily intervene on agent behavior through blocking, guidance, or replanning. We identify a distinct failure mode: a task-valid action can still realize an unauthorized consequence because of the current Web state. This motivates treating task-relevant Web state itself as a runtime control target. We introduce Veer, an agent-side runtime defense that leaves task planning to the base agent and intervenes on Web state when a proposed action would produce an unauthorized consequence. Before modifying the live environment, Veer constructs a prospective intervention trajectory toward a safe task-relevant state and executes it with runtime grounding and verification. Across TrickyArena and WebDecept, Veer achieves the highest safe task completion in all three evaluation settings, exceeding the next-best defense by 15.9 and 25.0 percentage points on TrickyArena-Single and TrickyArena-Multi, respectively, while reducing dark-pattern success on WebDecept to 0.3%. These gains persist across dark-pattern types and all 12 agent, model, and benchmark configurations. Ablations show that active state intervention provides the largest gain, while prospective rollout and temporal evidence contribute additional improvements. These results establish task-relevant Web state as an effective runtime control target for protecting Web agents from deceptive outcomes."
     }
   }
 ]
