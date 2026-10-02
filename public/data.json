@@ -1,211 +1,216 @@
 [
   {
-    "id": "2609.39902v1",
-    "title": "CodeMimicry: Exploiting Safety Generalization Lag in Large Language Models via Structured Code Completion",
+    "id": "2610.02206v1",
+    "title": "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards",
     "authors": [
-      "Zhen Liang",
-      "Hai Huang",
-      "Wentao Chen"
+      "Pengfei Li",
+      "Naufal Suryanto",
+      "Sicheng Zhang",
+      "Muzammal Naseer"
     ],
-    "published_date": "2026-09-30",
+    "published_date": "2026-10-01",
     "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2609.39902v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.39902v1",
-    "content": {
-      "en": "Large language models have achieved remarkable capabilities across diverse domains, yet their safety alignment remains vulnerable to jailbreak attacks. In this work, we identify a previously underexplored failure mode - safety generalization lag - where alignment trained predominantly on natural language fails to transfer to the code domain. We show that this lag induces a code-completion blind spot, allowing malicious intent embedded within syntactically valid code to evade safety mechanisms. To exploit this vulnerability, we propose CodeMimicry, a fully automated black-box jailbreak framework that generates structured, object-oriented code prompts to induce harmful outputs via code completion. Experiments on 8 state-of-the-art commercial LLMs demonstrate that CodeMimicry achieves a 96.25% attack success rate with 1.51 queries on average, significantly outperforming both template-based and optimization-based baselines. Beyond empirical performance, we provide a mechanistic analysis of code-based jailbreaks through latent space representations, including projection onto refusal-related directions and activation steering. This analysis offers an explanation of how CodeMimicry bypasses safety mechanisms in code-related domains. Our findings reveal a weakness in current safety alignment and highlight the need for robust alignments in structured domains such as code.",
-      "tr": "Large language models have achieved remarkable capabilities across diverse domains, yet their safety alignment remains vulnerable to jailbreak attacks. In this work, we identify a previously underexplored failure mode - safety generalization lag - where alignment trained predominantly on natural language fails to transfer to the code domain. We show that this lag induces a code-completion blind spot, allowing malicious intent embedded within syntactically valid code to evade safety mechanisms. To exploit this vulnerability, we propose CodeMimicry, a fully automated black-box jailbreak framework that generates structured, object-oriented code prompts to induce harmful outputs via code completion. Experiments on 8 state-of-the-art commercial LLMs demonstrate that CodeMimicry achieves a 96.25% attack success rate with 1.51 queries on average, significantly outperforming both template-based and optimization-based baselines. Beyond empirical performance, we provide a mechanistic analysis of code-based jailbreaks through latent space representations, including projection onto refusal-related directions and activation steering. This analysis offers an explanation of how CodeMimicry bypasses safety mechanisms in code-related domains. Our findings reveal a weakness in current safety alignment and highlight the need for robust alignments in structured domains such as code."
-    }
-  },
-  {
-    "id": "2609.39880v1",
-    "title": "PassGPT+: Leveraging Linguistic Priors for Password Modeling",
-    "authors": [
-      "Rajneesh Anand",
-      "Neeraj Lakshmanan",
-      "Masoud Yari"
-    ],
-    "published_date": "2026-09-30",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2609.39880v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.39880v1",
-    "content": {
-      "en": "Passwords remain the dominant online authentication mechanism, and understanding how humans choose them is essential for defensive strength estimation and attack simulation alike. Recent learning-based approaches such as PassGAN and PassGPT have shown that deep generative models can learn password structure directly from leaked corpora. However, both train from random initialization on password data alone. The role of linguistic prior knowledge in password modeling, and what it reveals about how humans create secrets, remains largely underexplored. Here, we address this gap with PassGPT+, which adapts the linguistic prior of GPT-2 to password observations through character-aware tokenization. We also introduce PassDiffusion, the first absorbing-state discrete diffusion model for password generation, as a probe of whether non-autoregressive approaches are competitive. On the RockYou benchmark, PassGPT+ recovers 22.53% of held-out passwords at 108 guesses, a 16% relative gain over PassGPT, and retains 79% of this match rate when transferred without retraining to a disjoint 2020 leak dataset, demonstrating that linguistic priors capture persistent regularities of human password generation. PassDiffusion underperforms by two to three orders of magnitude, indicating that autoregressive modeling is substantially better matched than iterative denoising to the discrete, exact-match nature of password generation.",
-      "tr": "Passwords remain the dominant online authentication mechanism, and understanding how humans choose them is essential for defensive strength estimation and attack simulation alike. Recent learning-based approaches such as PassGAN and PassGPT have shown that deep generative models can learn password structure directly from leaked corpora. However, both train from random initialization on password data alone. The role of linguistic prior knowledge in password modeling, and what it reveals about how humans create secrets, remains largely underexplored. Here, we address this gap with PassGPT+, which adapts the linguistic prior of GPT-2 to password observations through character-aware tokenization. We also introduce PassDiffusion, the first absorbing-state discrete diffusion model for password generation, as a probe of whether non-autoregressive approaches are competitive. On the RockYou benchmark, PassGPT+ recovers 22.53% of held-out passwords at 108 guesses, a 16% relative gain over PassGPT, and retains 79% of this match rate when transferred without retraining to a disjoint 2020 leak dataset, demonstrating that linguistic priors capture persistent regularities of human password generation. PassDiffusion underperforms by two to three orders of magnitude, indicating that autoregressive modeling is substantially better matched than iterative denoising to the discrete, exact-match nature of password generation."
-    }
-  },
-  {
-    "id": "2609.39768v1",
-    "title": "Security Properties of Neural Networks as Decision Problems",
-    "authors": [
-      "Adrian Wurm"
-    ],
-    "published_date": "2026-09-30",
-    "tags": [
-      "cs.LO",
-      "cs.CC",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2609.39768v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.39768v1",
-    "content": {
-      "en": "Certifying a deployed neural network raises decision problems that the verification literature has not classified: whether the model carries a backdoor planted in its training data, whether a fault in its stored parameters can drive it into an unsafe state, whether its output leaks a private part of its input. We formalise eight such problems and classify what we can.   The organising observation is a logical one. The function computed by a piecewise linear network, together with all its node values, is definable by a quantifier-free formula of real addition of size linear in the network, so a property of the network is a quantifier-alternation sentence, which Sontag's 1985 theorem places in the polynomial hierarchy at the level of its prefix. Membership results are thus corollaries, and the argument makes plain what they need: that the quantified objects are inputs rather than the network's own parameters.   Non-interference, monotonicity and counterfactual fairness have exactly the complexity of network equivalence and of interval verification, all co-NP- complete over ReLU. Detection of backdoor triggers from a quantised alphabet is Sigma_2^P-complete, one level above robustness certification, so it does not reduce to polynomially many robustness queries unless the hierarchy collapses. Inversion resistance is co-NP-complete for every l_p metric, p a fixed positive integer. Quantifying over parameters instead of inputs - the fault model of bit-flip attacks, radiation upsets and analog accelerators - makes verification exists-R-complete already for networks of identity nodes, for which every previously studied problem is in P, and it stays so when each parameter is confined to a box of inverse-polynomial width; the corresponding safety question is forall-R-complete for ReLU.",
-      "tr": "Certifying a deployed neural network raises decision problems that the verification literature has not classified: whether the model carries a backdoor planted in its training data, whether a fault in its stored parameters can drive it into an unsafe state, whether its output leaks a private part of its input. We formalise eight such problems and classify what we can.   The organising observation is a logical one. The function computed by a piecewise linear network, together with all its node values, is definable by a quantifier-free formula of real addition of size linear in the network, so a property of the network is a quantifier-alternation sentence, which Sontag's 1985 theorem places in the polynomial hierarchy at the level of its prefix. Membership results are thus corollaries, and the argument makes plain what they need: that the quantified objects are inputs rather than the network's own parameters.   Non-interference, monotonicity and counterfactual fairness have exactly the complexity of network equivalence and of interval verification, all co-NP- complete over ReLU. Detection of backdoor triggers from a quantised alphabet is Sigma_2^P-complete, one level above robustness certification, so it does not reduce to polynomially many robustness queries unless the hierarchy collapses. Inversion resistance is co-NP-complete for every l_p metric, p a fixed positive integer. Quantifying over parameters instead of inputs - the fault model of bit-flip attacks, radiation upsets and analog accelerators - makes verification exists-R-complete already for networks of identity nodes, for which every previously studied problem is in P, and it stays so when each parameter is confined to a box of inverse-polynomial width; the corresponding safety question is forall-R-complete for ReLU."
-    }
-  },
-  {
-    "id": "2609.39607v1",
-    "title": "Pretext: Defeating Malicious Skill Detection Frameworks for AI Agents",
-    "authors": [
-      "Tobias Kaisar",
-      "Aritra Dhar"
-    ],
-    "published_date": "2026-09-30",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2609.39607v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.39607v1",
-    "content": {
-      "en": "Skills extend an agent's capabilities by injecting instructions and information into the context, and are widely used by agents such as OpenClaw and Claude Code. Prior work shows third-party marketplaces host malicious skills that give attackers direct influence over the victim's agent. The emerging defense scans skills before installation, pairing deterministic static checks with an LLM-based semantic judge, as in NVIDIA's SkillSpector. We show that such defenses fall to an attacker who knows the detector. Our white-box LLM attacker, Pretext, iteratively crafts skills that evade detection while still delivering the payload and performing the benign task: moving the payload from code into natural language leaves static analysis inert, while framing it as the skill's legitimate purpose and splitting instructions across files keeps the LLM stage below its blocking threshold. Across three open-source models, Pretext achieves up to 97\\% and 77\\% against a frozen detector and a co-adaptive one, respectively, revealing major gaps in current skill scanners.",
-      "tr": "Skills extend an agent's capabilities by injecting instructions and information into the context, and are widely used by agents such as OpenClaw and Claude Code. Prior work shows third-party marketplaces host malicious skills that give attackers direct influence over the victim's agent. The emerging defense scans skills before installation, pairing deterministic static checks with an LLM-based semantic judge, as in NVIDIA's SkillSpector. We show that such defenses fall to an attacker who knows the detector. Our white-box LLM attacker, Pretext, iteratively crafts skills that evade detection while still delivering the payload and performing the benign task: moving the payload from code into natural language leaves static analysis inert, while framing it as the skill's legitimate purpose and splitting instructions across files keeps the LLM stage below its blocking threshold. Across three open-source models, Pretext achieves up to 97\\% and 77\\% against a frozen detector and a co-adaptive one, respectively, revealing major gaps in current skill scanners."
-    }
-  },
-  {
-    "id": "2609.39584v1",
-    "title": "Cybersecurity in Edge Computing: A Trust-Aware Federated Hybrid Intrusion Detection Framework",
-    "authors": [
-      "Zawad Yalmie Sazid",
-      "Robert Abbas"
-    ],
-    "published_date": "2026-09-30",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2609.39584v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.39584v1",
-    "content": {
-      "en": "Edge computing has emerged as a critical computing paradigm in modern distributed systems by migrating data processing closer to end users and Internet of Things (IoT) devices. While this paradigm decentralizes processes, minimizes latency, and reduces backhaul bandwidth congestion, it exponentially enlarges the cyberattack surface. Heterogeneous, resource-constrained edge devices deployed across unmanaged administrative domains present highly vulnerable targets. To address these vulnerabilities without compromising global data privacy regulations, this paper proposes a novel Trust-Aware Federated Hybrid Intrusion Detection Framework (TA-FHIDF). The proposed framework integrates an Autoencoder, a 1D Convolutional Neural Network (1D-CNN), and a Bidirectional Long Short-Term Memory (BiLSTM) model into a unified, localized deep learning engine capable of autonomous spatial and temporal feature extraction. Model training is performed collaboratively via federated learning, ensuring raw network telemetry remains isolated at local gateways. Furthermore, to defend against adversarial model poisoning attacks, we introduce a robust server-side trust-aware aggregation mechanism that evaluates client reliability using a cosine similarity metric before global model integration. Empirical evaluations across multi-vector benchmark datasets (UNSW-NB15, CICIDS2017, and Edge-IIoTset) demonstrate the framework's superior detection accuracy, rapid convergence, and high Byzantine fault tolerance under adversarial attack scenarios.",
-      "tr": "Edge computing has emerged as a critical computing paradigm in modern distributed systems by migrating data processing closer to end users and Internet of Things (IoT) devices. While this paradigm decentralizes processes, minimizes latency, and reduces backhaul bandwidth congestion, it exponentially enlarges the cyberattack surface. Heterogeneous, resource-constrained edge devices deployed across unmanaged administrative domains present highly vulnerable targets. To address these vulnerabilities without compromising global data privacy regulations, this paper proposes a novel Trust-Aware Federated Hybrid Intrusion Detection Framework (TA-FHIDF). The proposed framework integrates an Autoencoder, a 1D Convolutional Neural Network (1D-CNN), and a Bidirectional Long Short-Term Memory (BiLSTM) model into a unified, localized deep learning engine capable of autonomous spatial and temporal feature extraction. Model training is performed collaboratively via federated learning, ensuring raw network telemetry remains isolated at local gateways. Furthermore, to defend against adversarial model poisoning attacks, we introduce a robust server-side trust-aware aggregation mechanism that evaluates client reliability using a cosine similarity metric before global model integration. Empirical evaluations across multi-vector benchmark datasets (UNSW-NB15, CICIDS2017, and Edge-IIoTset) demonstrate the framework's superior detection accuracy, rapid convergence, and high Byzantine fault tolerance under adversarial attack scenarios."
-    }
-  },
-  {
-    "id": "2609.39549v1",
-    "title": "Speculative Safety Honeypot: Toward Proactive Defense Against Multi-turn Agent Attacks",
-    "authors": [
-      "Zezhong Wang",
-      "Xueyang Tang",
-      "Rui Lian",
-      "Yang Lou",
-      "Heqing Huang"
-    ],
-    "published_date": "2026-09-30",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL"
-    ],
-    "link": "http://arxiv.org/abs/2609.39549v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.39549v1",
-    "content": {
-      "en": "As Large Language Model (LLM) agents are increasingly deployed in complex environments, multi-turn interaction attacks have become a significant security challenge. Existing detection methods typically rely on historical context. However, this retrospective logic struggles to identify deep malicious intents that are split across turns to hide future risks. Inspired by speculative decoding, we propose the Speculative Safety Honeypot (SSH) framework. SSH uses a multi-agent simulation system composed of small LLMs to build an action-level speculate-and-verify workflow. In the speculation stage, SSH predicts future behaviors of the target agent and asynchronously builds a trajectory tree to expose potential risks in advance. In the verification stage, the system uses the target agent's real actions to calibrate and prune the trajectory tree, effectively reducing false positives. As a plug-and-playable component, SSH provides existing detectors with rich decision redundancy beyond the current interaction slice. By judging risk based on the evolution of the entire trajectory tree rather than a single point in time, the system reduces the reliance on the absolute precision of individual detection components. This improves the defense resilience and the warning lead-time of agent systems against complex temporal attacks.",
-      "tr": "As Large Language Model (LLM) agents are increasingly deployed in complex environments, multi-turn interaction attacks have become a significant security challenge. Existing detection methods typically rely on historical context. However, this retrospective logic struggles to identify deep malicious intents that are split across turns to hide future risks. Inspired by speculative decoding, we propose the Speculative Safety Honeypot (SSH) framework. SSH uses a multi-agent simulation system composed of small LLMs to build an action-level speculate-and-verify workflow. In the speculation stage, SSH predicts future behaviors of the target agent and asynchronously builds a trajectory tree to expose potential risks in advance. In the verification stage, the system uses the target agent's real actions to calibrate and prune the trajectory tree, effectively reducing false positives. As a plug-and-playable component, SSH provides existing detectors with rich decision redundancy beyond the current interaction slice. By judging risk based on the evolution of the entire trajectory tree rather than a single point in time, the system reduces the reliance on the absolute precision of individual detection components. This improves the defense resilience and the warning lead-time of agent systems against complex temporal attacks."
-    }
-  },
-  {
-    "id": "2609.39548v1",
-    "title": "Learning Normal Diffusion Dynamics for Backdoor Defense in Text-to-Image Models",
-    "authors": [
-      "Junjian Li",
-      "Xiaolong Liu",
-      "Peng Sun",
-      "Liantao Wu",
-      "Linghan Chen"
-    ],
-    "published_date": "2026-09-30",
-    "tags": [
-      "cs.CV",
+      "cs.CL",
       "cs.AI",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2609.39548v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.39548v1",
+    "link": "http://arxiv.org/abs/2610.02206v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.02206v1",
     "content": {
-      "en": "Backdoor attacks pose a serious threat to the secure deployment of text-to-image (T2I) diffusion models. Existing defenses typically detect backdoors from specific abnormal patterns in internal representations, which may limit their generalizability with the emergence of increasingly diverse attack mechanisms. In this paper, we study backdoor defense of T2I diffusion models from a transition-dynamics perspective. We observe that benign diffusion trajectories exhibit structured and timestep-dependent transition patterns from cross-attention, latent and noise spaces, whereas backdoor attacks tend to induce deviations from such normal evolution. Motivated by these observations, we propose Normal Diffusion Dynamics Learning (NDDL), a novel backdoor defense framework that learns the normal transition dynamics of diffusion trajectories utilizing only benign samples. NDDL constructs compact multi-space trajectory representations and trains a timestep-conditioned dynamics model to predict the diffusion evolution. In the inference phase, deviations between the observed and predicted transitions are exploited to quantify dynamics inconsistency for backdoor detection. NDDL further enables trigger localization without any prior knowledge of the embedded backdoor by performing substitution with low-semantic words. Extensive experiments for diverse backdoor attacks demonstrate the effectiveness and generalizability of our proposed NDDL.",
-      "tr": "Backdoor attacks pose a serious threat to the secure deployment of text-to-image (T2I) diffusion models. Existing defenses typically detect backdoors from specific abnormal patterns in internal representations, which may limit their generalizability with the emergence of increasingly diverse attack mechanisms. In this paper, we study backdoor defense of T2I diffusion models from a transition-dynamics perspective. We observe that benign diffusion trajectories exhibit structured and timestep-dependent transition patterns from cross-attention, latent and noise spaces, whereas backdoor attacks tend to induce deviations from such normal evolution. Motivated by these observations, we propose Normal Diffusion Dynamics Learning (NDDL), a novel backdoor defense framework that learns the normal transition dynamics of diffusion trajectories utilizing only benign samples. NDDL constructs compact multi-space trajectory representations and trains a timestep-conditioned dynamics model to predict the diffusion evolution. In the inference phase, deviations between the observed and predicted transitions are exploited to quantify dynamics inconsistency for backdoor detection. NDDL further enables trigger localization without any prior knowledge of the embedded backdoor by performing substitution with low-semantic words. Extensive experiments for diverse backdoor attacks demonstrate the effectiveness and generalizability of our proposed NDDL."
+      "en": "LLMs are increasingly applied to cybersecurity workflows, where they are expected to translate analysts' intent into tool invocations. However, existing evaluations focus on knowledge-based assessments or end-to-end agentic tasks, and do not directly measure LLMs' ability to generate executable commands for real-world cybersecurity tools. This gap is critical because cybersecurity operations rely on strict command-line interfaces (CLIs), where minor syntax errors, incorrect flag--value bindings, or argument misordering can invalidate execution. We introduce KaliBench, a fine-grained benchmark and dataset for natural-language--to--CLI translation on Kali Linux, comprising 8,504 query--command pairs spanning 1,642 tools across 23 capability dimensions and 5 security phases. KaliBench is constructed via a manuscript-grounded pipeline with deterministic canonicalization and alias-aware evaluation, enabling precise and reproducible assessment of tool selection and argument construction. To ensure both semantic correctness and practical executability, we develop a multi-stage verification pipeline that combines LLM-based validation, sandboxed terminal execution, and human-in-the-loop refinement. Building on these fine-grained, deterministic signals, KaliBench further enables runtime-free verifiable rewards for training. Across three evaluation modes and 24 configurations of general-purpose and security-focused open-weight models, no open-weight model exceeds 42% exact-command accuracy in the unrestricted setting, highlighting the difficulty of accurate CLI-based cybersecurity tool use without explicit tool hints. We further show that supervised fine-tuning and reinforcement learning with verifiable rewards derived from KaliBench significantly improve an 8B model and achieve performance comparable to a 685B MoE model.",
+      "tr": "LLMs are increasingly applied to cybersecurity workflows, where they are expected to translate analysts' intent into tool invocations. However, existing evaluations focus on knowledge-based assessments or end-to-end agentic tasks, and do not directly measure LLMs' ability to generate executable commands for real-world cybersecurity tools. This gap is critical because cybersecurity operations rely on strict command-line interfaces (CLIs), where minor syntax errors, incorrect flag--value bindings, or argument misordering can invalidate execution. We introduce KaliBench, a fine-grained benchmark and dataset for natural-language--to--CLI translation on Kali Linux, comprising 8,504 query--command pairs spanning 1,642 tools across 23 capability dimensions and 5 security phases. KaliBench is constructed via a manuscript-grounded pipeline with deterministic canonicalization and alias-aware evaluation, enabling precise and reproducible assessment of tool selection and argument construction. To ensure both semantic correctness and practical executability, we develop a multi-stage verification pipeline that combines LLM-based validation, sandboxed terminal execution, and human-in-the-loop refinement. Building on these fine-grained, deterministic signals, KaliBench further enables runtime-free verifiable rewards for training. Across three evaluation modes and 24 configurations of general-purpose and security-focused open-weight models, no open-weight model exceeds 42% exact-command accuracy in the unrestricted setting, highlighting the difficulty of accurate CLI-based cybersecurity tool use without explicit tool hints. We further show that supervised fine-tuning and reinforcement learning with verifiable rewards derived from KaliBench significantly improve an 8B model and achieve performance comparable to a 685B MoE model."
     }
   },
   {
-    "id": "2609.39450v1",
-    "title": "ActionGuard: Tool Call Authorization under Poisoned Skills",
+    "id": "2610.02074v1",
+    "title": "Homomorphic Advantage Operator: Stabilizing Reinforcement Learning Under Fully Homomorphic Encryption Constraints",
     "authors": [
-      "Jihun Han",
-      "Yejin Jang",
-      "Byung Il Kwak",
-      "Mee Lan Han"
+      "Abid Mohamed Nadhir",
+      "Ahmad Al Hanbali",
+      "Beggas Mounir"
     ],
-    "published_date": "2026-09-30",
+    "published_date": "2026-10-01",
+    "tags": [
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2610.02074v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.02074v1",
+    "content": {
+      "en": "Privacy-preserving machine learning presents significant deployment challenges on the cloud for intelligent systems with confidential data. Fully Homomorphic Encryption (FHE) offers a compelling solution for secure computation, preserving data confidentiality of cloud computations. However, applying FHE to reinforcement learning (RL) requires replacing non-linear operations with polynomial approximations, which diverge catastrophically due to a unique recursive error phenomenon known as the Bellman drift. This article introduces the Homomorphic Advantage Operator (HAO), a stabilization framework designed to prevent polynomial approximation divergence in FHE-based deep RL. HAO adapts the zero-mean centering projection from advantage-based value estimation directly to temporal-difference (TD) targets. This linear projection annihilates the uniform state-value baseline that drives the Bellman drift, maintaining per-state action rankings while requiring zero additional non-linear multiplicative depth and avoiding expensive ciphertext bootstrapping. The proposed HAO framework was evaluated using a three-tier experimental methodology, including a tabular Markov Decision Process (MDP), an encrypted CartPole environment using real CKKS cryptographic operations, and a 20-node logistics routing benchmark with dense continuous features. The results demonstrate that the proposed HAO strictly bounds network pre-activations within the safe polynomial approximation domain. The proposed HAO RL agents achieved 0% boundary breaches across all random seeds used, whereas regularization alone (L2 weight decay and gradient clipping) breached the bound on 3 of 5 seeds and the unstabilized baseline did so in 83.8% of episodes. Finally, HAO agents improve optimal policy accuracy by 18.0 percentage points in tabular domains and remain stable when DP-SGD-style Gaussian noise is added to the clipped gradients.",
+      "tr": "Privacy-preserving machine learning presents significant deployment challenges on the cloud for intelligent systems with confidential data. Fully Homomorphic Encryption (FHE) offers a compelling solution for secure computation, preserving data confidentiality of cloud computations. However, applying FHE to reinforcement learning (RL) requires replacing non-linear operations with polynomial approximations, which diverge catastrophically due to a unique recursive error phenomenon known as the Bellman drift. This article introduces the Homomorphic Advantage Operator (HAO), a stabilization framework designed to prevent polynomial approximation divergence in FHE-based deep RL. HAO adapts the zero-mean centering projection from advantage-based value estimation directly to temporal-difference (TD) targets. This linear projection annihilates the uniform state-value baseline that drives the Bellman drift, maintaining per-state action rankings while requiring zero additional non-linear multiplicative depth and avoiding expensive ciphertext bootstrapping. The proposed HAO framework was evaluated using a three-tier experimental methodology, including a tabular Markov Decision Process (MDP), an encrypted CartPole environment using real CKKS cryptographic operations, and a 20-node logistics routing benchmark with dense continuous features. The results demonstrate that the proposed HAO strictly bounds network pre-activations within the safe polynomial approximation domain. The proposed HAO RL agents achieved 0% boundary breaches across all random seeds used, whereas regularization alone (L2 weight decay and gradient clipping) breached the bound on 3 of 5 seeds and the unstabilized baseline did so in 83.8% of episodes. Finally, HAO agents improve optimal policy accuracy by 18.0 percentage points in tabular domains and remain stable when DP-SGD-style Gaussian noise is added to the clipped gradients."
+    }
+  },
+  {
+    "id": "2610.01995v1",
+    "title": "Can AI Oversight Be Zero Knowledge?",
+    "authors": [
+      "Alessandro Chiesa",
+      "Ziyi Guan",
+      "Burcu Yildiz"
+    ],
+    "published_date": "2026-10-01",
+    "tags": [
+      "cs.AI",
+      "cs.CC",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2610.01995v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.01995v1",
+    "content": {
+      "en": "AI systems increasingly produce outputs from confidential data, such as a fitness-for-duty assessment from medical records or the predicted properties of a drug candidate from its secret structure. It is important to verify that such outputs are correct without revealing the underlying data. A recent line of work studies verification of AI outputs via interactive proofs and debate for oracle-aided computation, where correctness may depend on an oracle such as human judgment, a physical experiment, or the web. These works focus on verification by a verifier that runs much faster than the computation. However, such efficient verification is impossible for general oracle-aided computation, and these works therefore rely on additional assumptions. We focus instead on privacy: allowing the verifier to run in time polynomial in the computation, we ask whether interactive arguments for oracle-aided computation can be zero knowledge, so that the verifier learns nothing about the confidential data beyond the correctness of the output.   We prove that, in general, they cannot. In the random oracle model, there are no zero-knowledge proofs for all oracle-aided computations, even if both the prover and the verifier are allowed to run much longer than the computation itself. The impossibility extends to debate, a canonical model for scalable oversight.   On the positive side, we show that if the oracle attaches a cryptographic signature to each of its answers, then every oracle-aided computation can be verified in zero knowledge with an efficient prover and verifier, assuming only collision-resistant hash functions. Beyond privacy, this also gives an alternative approach to scalable oversight that relies neither on an honest opponent, as in debate, nor on the robustness of the computation, as in prior single-prover protocols.",
+      "tr": "AI systems increasingly produce outputs from confidential data, such as a fitness-for-duty assessment from medical records or the predicted properties of a drug candidate from its secret structure. It is important to verify that such outputs are correct without revealing the underlying data. A recent line of work studies verification of AI outputs via interactive proofs and debate for oracle-aided computation, where correctness may depend on an oracle such as human judgment, a physical experiment, or the web. These works focus on verification by a verifier that runs much faster than the computation. However, such efficient verification is impossible for general oracle-aided computation, and these works therefore rely on additional assumptions. We focus instead on privacy: allowing the verifier to run in time polynomial in the computation, we ask whether interactive arguments for oracle-aided computation can be zero knowledge, so that the verifier learns nothing about the confidential data beyond the correctness of the output.   We prove that, in general, they cannot. In the random oracle model, there are no zero-knowledge proofs for all oracle-aided computations, even if both the prover and the verifier are allowed to run much longer than the computation itself. The impossibility extends to debate, a canonical model for scalable oversight.   On the positive side, we show that if the oracle attaches a cryptographic signature to each of its answers, then every oracle-aided computation can be verified in zero knowledge with an efficient prover and verifier, assuming only collision-resistant hash functions. Beyond privacy, this also gives an alternative approach to scalable oversight that relies neither on an honest opponent, as in debate, nor on the robustness of the computation, as in prior single-prover protocols."
+    }
+  },
+  {
+    "id": "2610.01949v1",
+    "title": "A Hybrid Approach to Malware Detection: Integrating Few-Shot Model-Agnostic Meta-Learning with Autoencoders",
+    "authors": [
+      "Emmanuela Andam",
+      "Yasir Abbas Zaidi",
+      "Abdelali Hadir",
+      "Emmanuel Grant",
+      "Naima Kaabouch"
+    ],
+    "published_date": "2026-10-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2610.01949v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.01949v1",
+    "content": {
+      "en": "Ransomware has emerged as a major cybersecurity threat, with incidents increasing in frequency and impact across critical sectors. These attacks are typically launched through phishing emails, malicious downloads, or exploitation of software vulnerabilities to gain system access. Once inside, the malware encrypts files and demands a ransom, often in cryptocurrency, for the decryption key. Conventional detection methods often struggle with novel or scarce samples, leaving systems vulnerable. To address these challenges, this paper proposes a hybrid deep learning framework that combines an Autoencoder Feature Extractor (AFE) with a Model Agnostic Meta Learning (MAML) classifier for few shot malware detection. The AFE generates compact latent features that reduce noise and dimensionality, while the MAML classifier rapidly adapts to new threats using limited labeled data. Experiments conducted on the Ransomware Dataset 2024 demonstrate the effectiveness of the framework in binary classification tasks. Across one to fifty shot settings, the proposed model consistently achieves high accuracy, F1 score, and Matthews Correlation Coefficient values, maintaining reliable classification even under extreme scarcity. These results highlight the model's robustness and effectiveness in adapting to limited data scenarios, demonstrating the potential of combining feature extraction with meta learning to enhance resilience against malware, particularly in sectors such as healthcare, manufacturing, and public infrastructure, where cyberattacks can cause significant operational and financial disruption.",
+      "tr": "Ransomware has emerged as a major cybersecurity threat, with incidents increasing in frequency and impact across critical sectors. These attacks are typically launched through phishing emails, malicious downloads, or exploitation of software vulnerabilities to gain system access. Once inside, the malware encrypts files and demands a ransom, often in cryptocurrency, for the decryption key. Conventional detection methods often struggle with novel or scarce samples, leaving systems vulnerable. To address these challenges, this paper proposes a hybrid deep learning framework that combines an Autoencoder Feature Extractor (AFE) with a Model Agnostic Meta Learning (MAML) classifier for few shot malware detection. The AFE generates compact latent features that reduce noise and dimensionality, while the MAML classifier rapidly adapts to new threats using limited labeled data. Experiments conducted on the Ransomware Dataset 2024 demonstrate the effectiveness of the framework in binary classification tasks. Across one to fifty shot settings, the proposed model consistently achieves high accuracy, F1 score, and Matthews Correlation Coefficient values, maintaining reliable classification even under extreme scarcity. These results highlight the model's robustness and effectiveness in adapting to limited data scenarios, demonstrating the potential of combining feature extraction with meta learning to enhance resilience against malware, particularly in sectors such as healthcare, manufacturing, and public infrastructure, where cyberattacks can cause significant operational and financial disruption."
+    }
+  },
+  {
+    "id": "2610.01893v1",
+    "title": "A Structured State Space Sequence Model for Multi-Class Classification of Malware",
+    "authors": [
+      "Emmanuela Andam",
+      "Rana Shaaban",
+      "Emanuel Grant",
+      "Naima Kaabouch"
+    ],
+    "published_date": "2026-10-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2610.01893v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.01893v1",
+    "content": {
+      "en": "By 2030, Internet of Things (IoT) devices are projected to reach 40 billion, with fast-paced technological advancements in fields such as industry, healthcare, agriculture, automobiles, and building/home automation systems. This expansion has created a large attack surface for cybercrime, as the majority of these devices open the door for cybercriminals to exploit vulnerabilities, as they lack adequate built-in security. Cybercriminals launch malware attacks to compromise systems or steal sensitive data, and once a system is compromised, a ransom is typically demanded for its release. Current cybersecurity measures in place are being outpaced by the rapid growth of the IoT, which is accompanied by a subsequent growth in malware variants being created per day. Recognizing this pitfall, this research examines and proposes a novel approach to malware detection and classification to safeguard devices from further attacks and make IoT systems more robust and secure. The framework proposed utilizes a Structured State Space Sequence (S4) model, which discretizes sequences of malware samples in a sequence and captures long-range dependencies, essentially identifying the \"cause\" and \"effect\" hidden within malware execution flow. This study presents two novel contributions: the first empirical application of the S4 model for malware analysis, and a comprehensive comparison of its performance against other deep learning architectures, laying the stepping stone for future research in this new paradigm.",
+      "tr": "By 2030, Internet of Things (IoT) devices are projected to reach 40 billion, with fast-paced technological advancements in fields such as industry, healthcare, agriculture, automobiles, and building/home automation systems. This expansion has created a large attack surface for cybercrime, as the majority of these devices open the door for cybercriminals to exploit vulnerabilities, as they lack adequate built-in security. Cybercriminals launch malware attacks to compromise systems or steal sensitive data, and once a system is compromised, a ransom is typically demanded for its release. Current cybersecurity measures in place are being outpaced by the rapid growth of the IoT, which is accompanied by a subsequent growth in malware variants being created per day. Recognizing this pitfall, this research examines and proposes a novel approach to malware detection and classification to safeguard devices from further attacks and make IoT systems more robust and secure. The framework proposed utilizes a Structured State Space Sequence (S4) model, which discretizes sequences of malware samples in a sequence and captures long-range dependencies, essentially identifying the \"cause\" and \"effect\" hidden within malware execution flow. This study presents two novel contributions: the first empirical application of the S4 model for malware analysis, and a comprehensive comparison of its performance against other deep learning architectures, laying the stepping stone for future research in this new paradigm."
+    }
+  },
+  {
+    "id": "2610.01872v1",
+    "title": "From Network Intrusion Detection to Blockchain-Backed Endpoint Detection and Response: Mapping the Landscape of Decentralized Detection-and-Response Architectures",
+    "authors": [
+      "Yahya Shahsavari",
+      "Sara Rouhani",
+      "Kaiwen Zhang"
+    ],
+    "published_date": "2026-10-01",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.NI"
+    ],
+    "link": "http://arxiv.org/abs/2610.01872v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.01872v1",
+    "content": {
+      "en": "While the literature on blockchain-assisted intrusion detection and prevention systems (IDS/IPS) for Internet of Things (IoT) and Industrial Internet of Things (IIoT) networks is mature, existing systematic reviews suffer from two critical limitations: they overlook the structural shift toward modern Endpoint Detection and Response (EDR) and Extended Detection and Response (XDR) architectures, and they conflate blockchain's distinct functional roles into a single monolithic category. This Systematization of Knowledge (SoK) addresses these gaps by proposing a three-axis taxonomy that classifies proposals by detection-system class (NIDS, HIDS, EDR/XDR), blockchain functional role, and response-automation maturity. Synthesizing research published in high-impact venues between 2019 and 2026, we provide a rigorous gap analysis exposing why a genuine per-endpoint blockchain-anchored response loop remains nearly nonexistent due to latency, deployment, and community mismatches. Furthermore, we evaluate structural, cross-cutting challenges persisting across the literature, including consensus latency on constrained devices, post-quantum cryptographic vulnerability, smart-contract attack surfaces, and the adversarial vulnerability of evolving LLM-based detection engines. Finally, we outline a comprehensive research agenda centered on hybrid on-chain/off-chain orchestration to bridge the gap between decentralized trust and rapid response automation.",
+      "tr": "While the literature on blockchain-assisted intrusion detection and prevention systems (IDS/IPS) for Internet of Things (IoT) and Industrial Internet of Things (IIoT) networks is mature, existing systematic reviews suffer from two critical limitations: they overlook the structural shift toward modern Endpoint Detection and Response (EDR) and Extended Detection and Response (XDR) architectures, and they conflate blockchain's distinct functional roles into a single monolithic category. This Systematization of Knowledge (SoK) addresses these gaps by proposing a three-axis taxonomy that classifies proposals by detection-system class (NIDS, HIDS, EDR/XDR), blockchain functional role, and response-automation maturity. Synthesizing research published in high-impact venues between 2019 and 2026, we provide a rigorous gap analysis exposing why a genuine per-endpoint blockchain-anchored response loop remains nearly nonexistent due to latency, deployment, and community mismatches. Furthermore, we evaluate structural, cross-cutting challenges persisting across the literature, including consensus latency on constrained devices, post-quantum cryptographic vulnerability, smart-contract attack surfaces, and the adversarial vulnerability of evolving LLM-based detection engines. Finally, we outline a comprehensive research agenda centered on hybrid on-chain/off-chain orchestration to bridge the gap between decentralized trust and rapid response automation."
+    }
+  },
+  {
+    "id": "2610.01871v1",
+    "title": "Walking the Embedding Space: Datastore Extraction from Multimodal RAG",
+    "authors": [
+      "Maria Carmen Jica",
+      "Ali Satvaty",
+      "Suzan Verberne",
+      "Fatih Turkmen"
+    ],
+    "published_date": "2026-10-01",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2609.39450v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.39450v1",
+    "link": "http://arxiv.org/abs/2610.01871v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.01871v1",
     "content": {
-      "en": "LLM-based agents extend their capabilities through third-party skills that provide task-specific instructions, scripts, and tool-use procedures. However, malicious instructions inserted into an otherwise benign skill can cause a benign user request to trigger dangerous Tool Calls, including data exfiltration, file deletion, or unauthorized code execution. This paper presents ActionGuard, which inspects skill-influenced Tool Calls immediately before execution. ActionGuard separates the target agent's action-generation context from the safeguard's authorization context. The target agent may use the original skill for planning, but the Reviewer does not receive the potentially poisoned raw skill text. Instead, it determines whether each action is justified by the trusted user request using a balanced skill profile, current and recent Tool Calls, and local script contents. ActionGuard intercepts each Tool Call at OpenClaw's before-tool-call stage and enforces the Reviewer's ALLOW or DENY decision under a fail-closed policy.   We evaluate ActionGuard on 139 contextual and 180 obvious injections in a SKILL-INJECT-based setting against Dynamic Guardian and SkillGuard, using three open-source and two commercial Reviewer models. Each condition is repeated three times and evaluated using Attack Success Rate (ASR) and Task Success Rate (TSR). Overall, ActionGuard reduced ASR by 35.54 to 46.11 percent relative to existing safeguards and by 70.44 percent relative to No Safeguard, while maintaining high benign-task completion. These results show that execution-boundary authorization grounded in trusted user intent and runtime evidence can restrict unauthorized Tool Calls induced by skill injection.",
-      "tr": "LLM-based agents extend their capabilities through third-party skills that provide task-specific instructions, scripts, and tool-use procedures. However, malicious instructions inserted into an otherwise benign skill can cause a benign user request to trigger dangerous Tool Calls, including data exfiltration, file deletion, or unauthorized code execution. This paper presents ActionGuard, which inspects skill-influenced Tool Calls immediately before execution. ActionGuard separates the target agent's action-generation context from the safeguard's authorization context. The target agent may use the original skill for planning, but the Reviewer does not receive the potentially poisoned raw skill text. Instead, it determines whether each action is justified by the trusted user request using a balanced skill profile, current and recent Tool Calls, and local script contents. ActionGuard intercepts each Tool Call at OpenClaw's before-tool-call stage and enforces the Reviewer's ALLOW or DENY decision under a fail-closed policy.   We evaluate ActionGuard on 139 contextual and 180 obvious injections in a SKILL-INJECT-based setting against Dynamic Guardian and SkillGuard, using three open-source and two commercial Reviewer models. Each condition is repeated three times and evaluated using Attack Success Rate (ASR) and Task Success Rate (TSR). Overall, ActionGuard reduced ASR by 35.54 to 46.11 percent relative to existing safeguards and by 70.44 percent relative to No Safeguard, while maintaining high benign-task completion. These results show that execution-boundary authorization grounded in trusted user intent and runtime evidence can restrict unauthorized Tool Calls induced by skill injection."
+      "en": "Multimodal Retrieval-Augmented Generation (MRAG) has emerged as a reliable and cost-effective technique of grounding the generative capabilities of Multimodal Large Language Models (MLLMs) into relevant, up-to-date, external knowledge. Despite presenting several benefits, such as reducing hallucinatory behavior, they also introduce new attack surfaces, including leakage of private information and vulnerabilities against data extraction attacks.   In this paper, we introduce $\\immrag$, an adaptive and automatic data extraction attack procedure operating in a black box setting against \\emph{image-returning} MRAG, a configuration in which the retrieved visual artifact is itself the response. Each query blends an attacker-held shadow image with an image already recovered from the system, and relevance-weighted resampling steers subsequent queries towards regions of the embedding space that still yield novel retrievals. Unlike current extraction attacks that aim to persuade the model towards data leakage by placing a malicious query as a textual prompt, $\\immrag$ embeds the malicious instructions inside a user-given input image. We evaluate $\\immrag$ on three plausible and distinct real-world scenarios: medical assistant, document-focused helper and general purpose tool. The experiments involve the study of the effectiveness of the attack on multiple CLIP-family retrievers, as well as the impact of various generators. A single 2500-query run reconstructs up to 611 distinct radiology images, 566 document scans and 416 general-purpose images under local-feature correspondence, and reaches up to $5.6\\times$ as many distinct datastore items as a non-adaptive baseline. Our results show the urgent need for safeguards specifically designed for multimodal data.",
+      "tr": "Multimodal Retrieval-Augmented Generation (MRAG) has emerged as a reliable and cost-effective technique of grounding the generative capabilities of Multimodal Large Language Models (MLLMs) into relevant, up-to-date, external knowledge. Despite presenting several benefits, such as reducing hallucinatory behavior, they also introduce new attack surfaces, including leakage of private information and vulnerabilities against data extraction attacks.   In this paper, we introduce $\\immrag$, an adaptive and automatic data extraction attack procedure operating in a black box setting against \\emph{image-returning} MRAG, a configuration in which the retrieved visual artifact is itself the response. Each query blends an attacker-held shadow image with an image already recovered from the system, and relevance-weighted resampling steers subsequent queries towards regions of the embedding space that still yield novel retrievals. Unlike current extraction attacks that aim to persuade the model towards data leakage by placing a malicious query as a textual prompt, $\\immrag$ embeds the malicious instructions inside a user-given input image. We evaluate $\\immrag$ on three plausible and distinct real-world scenarios: medical assistant, document-focused helper and general purpose tool. The experiments involve the study of the effectiveness of the attack on multiple CLIP-family retrievers, as well as the impact of various generators. A single 2500-query run reconstructs up to 611 distinct radiology images, 566 document scans and 416 general-purpose images under local-feature correspondence, and reaches up to $5.6\\times$ as many distinct datastore items as a non-adaptive baseline. Our results show the urgent need for safeguards specifically designed for multimodal data."
     }
   },
   {
-    "id": "2609.39352v1",
-    "title": "Hiding in Plain Sight: Decoupling Pretext from Actuation for Skill Poisoning in LLM Agents",
+    "id": "2610.01801v1",
+    "title": "A Safe Prototype Is Not a Safety Direction: Reference Dependence and Prompt Confounds in Response-Safety Embeddings",
     "authors": [
-      "Wenxin Wu",
-      "Lingyong Yan",
-      "Lei Sha",
-      "Shuaiqiang Wang",
-      "Jiashu Zhao"
+      "Sahil Kadadekar"
     ],
-    "published_date": "2026-09-30",
+    "published_date": "2026-10-01",
     "tags": [
-      "cs.CR",
-      "cs.AI"
+      "cs.LG",
+      "cs.CL",
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2609.39352v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.39352v1",
+    "link": "http://arxiv.org/abs/2610.01801v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.01801v1",
     "content": {
-      "en": "LLM agents increasingly rely on reusable Skills for complex, multi-step tasks, creating a critical supply-chain attack surface where poisoned Skill content steers agent decision loops under benign requests. Existing skill poisoning attacks either colocate actuation with its contextual pretext or distribute actuation across multiple Skills, but do not explicitly separate the rationale for execution from the operation itself. In this work, we reveal that untrusted agent decisions fundamentally depend on two conceptually distinct Risk-Realization Factors (RRFs): an actuation factor (specifying what concrete operation is performed) and a pretext factor (providing the situational rationale for why the agent must perform it). Guided by this abstraction, we propose a coordination-based attack paradigm: decoupling pretext from actuation. Rather than fragmenting the malicious actuation, we preserve it as an intact operation within a downstream Steering Skill, while delegating the pretext factor to an upstream Grounding Skill that subtly alters persistent environment artifacts through routine utility operations. The intact actuation thus hides in plain sight, appearing completely legitimate and task-driven only when evaluated against the fabricated pretext. Building on this formulation, we develop an automated framework that discovers authentic execution dependencies, synthesizes coordinated pretext-actuation skill pairs, and iteratively refines poisoned skill instructions via runtime closed-loop feedback. Extensive evaluations across single-session and persistent cross-lifecycle scenarios demonstrate that decoupled skill poisoning achieves high attack success, exposing a critical blind spot in isolated Skill security audits. Our automated framework code is available at https://github.com/Wenxin-buaa/CoordPoison.git.",
-      "tr": "LLM agents increasingly rely on reusable Skills for complex, multi-step tasks, creating a critical supply-chain attack surface where poisoned Skill content steers agent decision loops under benign requests. Existing skill poisoning attacks either colocate actuation with its contextual pretext or distribute actuation across multiple Skills, but do not explicitly separate the rationale for execution from the operation itself. In this work, we reveal that untrusted agent decisions fundamentally depend on two conceptually distinct Risk-Realization Factors (RRFs): an actuation factor (specifying what concrete operation is performed) and a pretext factor (providing the situational rationale for why the agent must perform it). Guided by this abstraction, we propose a coordination-based attack paradigm: decoupling pretext from actuation. Rather than fragmenting the malicious actuation, we preserve it as an intact operation within a downstream Steering Skill, while delegating the pretext factor to an upstream Grounding Skill that subtly alters persistent environment artifacts through routine utility operations. The intact actuation thus hides in plain sight, appearing completely legitimate and task-driven only when evaluated against the fabricated pretext. Building on this formulation, we develop an automated framework that discovers authentic execution dependencies, synthesizes coordinated pretext-actuation skill pairs, and iteratively refines poisoned skill instructions via runtime closed-loop feedback. Extensive evaluations across single-session and persistent cross-lifecycle scenarios demonstrate that decoupled skill poisoning achieves high attack success, exposing a critical blind spot in isolated Skill security audits. Our automated framework code is available at https://github.com/Wenxin-buaa/CoordPoison.git."
+      "en": "Can response safety be scored by cosine similarity to the mean embedding of known-safe responses? A recent sleeper-agent detector proposes exactly this score, yet the raw positive-centroid rule is not identified: positive observations locate the safe class relative to an encoder origin, but do not determine which direction separates safe from unsafe responses. We audit the rule on two prompt-controlled, human-labeled corpora and one auxiliary jury-labeled source control, using four frozen encoders and prompt-grouped splits. On the human-labeled corpora the safe prototype reaches ROC-AUC 0.457-0.545, with two cells significantly below chance and one above, while an explicit safe-minus-unsafe reference reaches 0.588-0.738 on the same embeddings; on the jury control the prototype is inverted (0.358-0.405) and the reference reaches 0.754-0.793. At validation-calibrated 5% false-safe thresholds, the reference accepts more safe responses on PKU-SafeRLHF (0.153-0.263 versus 0.039-0.061 across encoders) and Aegis (0.189-0.291 versus 0.004-0.045), but not reliably on BeaverTails. A fully unlabeled held-out reference recovers part to most of the referenced ranking, much less when only 5% of the pool is unsafe, whereas 80-634 labeled unsafe responses recover most of it. Prompt-only ablations show that prompt-label composition can inflate uncontrolled evaluations. This is a bounded result about a raw positive centroid, not all one-class methods or safety-specialized guards. A class mean is a location, not necessarily a safety direction; a declared reference with enough unsafe mass identifies orientation.",
+      "tr": "Can response safety be scored by cosine similarity to the mean embedding of known-safe responses? A recent sleeper-agent detector proposes exactly this score, yet the raw positive-centroid rule is not identified: positive observations locate the safe class relative to an encoder origin, but do not determine which direction separates safe from unsafe responses. We audit the rule on two prompt-controlled, human-labeled corpora and one auxiliary jury-labeled source control, using four frozen encoders and prompt-grouped splits. On the human-labeled corpora the safe prototype reaches ROC-AUC 0.457-0.545, with two cells significantly below chance and one above, while an explicit safe-minus-unsafe reference reaches 0.588-0.738 on the same embeddings; on the jury control the prototype is inverted (0.358-0.405) and the reference reaches 0.754-0.793. At validation-calibrated 5% false-safe thresholds, the reference accepts more safe responses on PKU-SafeRLHF (0.153-0.263 versus 0.039-0.061 across encoders) and Aegis (0.189-0.291 versus 0.004-0.045), but not reliably on BeaverTails. A fully unlabeled held-out reference recovers part to most of the referenced ranking, much less when only 5% of the pool is unsafe, whereas 80-634 labeled unsafe responses recover most of it. Prompt-only ablations show that prompt-label composition can inflate uncontrolled evaluations. This is a bounded result about a raw positive centroid, not all one-class methods or safety-specialized guards. A class mean is a location, not necessarily a safety direction; a declared reference with enough unsafe mass identifies orientation."
     }
   },
   {
-    "id": "2609.39279v1",
-    "title": "Faithful Dual-constrained Erasure for Robust LLM Safety Alignment",
+    "id": "2610.01792v1",
+    "title": "Learnt Attacks on Quantum Key Distribution under Channel Noise and Device Drift",
     "authors": [
-      "Jiaqing Li",
-      "Shide Zhou",
-      "Zhibo Zhang",
-      "Yuxi Li",
-      "Tianlong Yu"
+      "Marcel Mordarski",
+      "Benjamin Gras",
+      "Abdelrahman Shehata",
+      "Daniel Budina",
+      "Roberto Bondesan"
     ],
-    "published_date": "2026-09-30",
+    "published_date": "2026-10-01",
     "tags": [
+      "quant-ph",
       "cs.CR",
-      "cs.AI"
+      "cs.IT",
+      "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2609.39279v1",
-    "pdf_link": "https://arxiv.org/pdf/2609.39279v1",
+    "link": "http://arxiv.org/abs/2610.01792v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.01792v1",
     "content": {
-      "en": "Machine unlearning has emerged as a crucial mechanism for removing hazardous knowledge and enforcing safety alignment in Large Language Models (LLMs). However, recent studies reveal a persistent security risk: unlearned models remain highly vulnerable to retraining attacks, where suppressed malicious behaviors rapidly resurface after benign fine-tuning. In this work, we investigate the optimization dynamics of unlearning and identify that this vulnerability stems from shallow alignment. Rather than effectively erasing target knowledge, models often exploit a shortcut by activating previously dormant parameters to act as spurious suppressors, forming a fragile inhibitory shell over intact malicious representations. To address this issue and enforce authentic memory deletion, we propose FDCU, a novel dual-constrained subspace projection framework. FDCU restricts parameter updates through a highly scalable, element-wise dual-masking rule: it preserves general knowledge manifolds via Fisher Information and strictly prohibits the abnormal activation of spurious suppressors via the Principle of Minimal Functional Intervention (PMFI). By reliably blocking the model's ability to superficially hide knowledge, FDCU promotes the authentic dismantling of target representations. Extensive experiments across specific knowledge erasure and safe output control tasks demonstrate that FDCU achieves state-of-the-art robustness against retraining attacks while maintaining near-lossless general utility, ensuring durable safety for LLMs.",
-      "tr": "Machine unlearning has emerged as a crucial mechanism for removing hazardous knowledge and enforcing safety alignment in Large Language Models (LLMs). However, recent studies reveal a persistent security risk: unlearned models remain highly vulnerable to retraining attacks, where suppressed malicious behaviors rapidly resurface after benign fine-tuning. In this work, we investigate the optimization dynamics of unlearning and identify that this vulnerability stems from shallow alignment. Rather than effectively erasing target knowledge, models often exploit a shortcut by activating previously dormant parameters to act as spurious suppressors, forming a fragile inhibitory shell over intact malicious representations. To address this issue and enforce authentic memory deletion, we propose FDCU, a novel dual-constrained subspace projection framework. FDCU restricts parameter updates through a highly scalable, element-wise dual-masking rule: it preserves general knowledge manifolds via Fisher Information and strictly prohibits the abnormal activation of spurious suppressors via the Principle of Minimal Functional Intervention (PMFI). By reliably blocking the model's ability to superficially hide knowledge, FDCU promotes the authentic dismantling of target representations. Extensive experiments across specific knowledge erasure and safe output control tasks demonstrate that FDCU achieves state-of-the-art robustness against retraining attacks while maintaining near-lossless general utility, ensuring durable safety for LLMs."
+      "en": "Quantum key distribution (QKD) links are provisioned from security analyses of stationary channels, whereas the devices that determine the channel drift between recalibrations. Whether an eavesdropper who cannot alter the channel's own noise gains by following that drift has not been quantified. Adaptive eavesdropping is posed here as a constrained Markov decision process in which the attacker selects one circuit per round while the noise level follows an Ornstein--Uhlenbeck process and the abort condition is a budget over each block of rounds. The value of adaptation is bounded by the best fixed circuit and a dynamic-programming upper bound. The actions are learnt attacks. Whereas Decker et al. trained a parametrised circuit on a fixed gate template against a fixed channel, here the gate structure and rotation angles are searched jointly. This yields circuits compact enough to form a discrete action set, extending the construction to noise models lacking a known template, including the amplitude damping channel. On device-independent E91 under bilateral depolarising noise, a reinforcement-learning attacker raises her Holevo information from $0.135$ for the best fixed circuit to $0.348$ at zero detection, $98\\%$ of the upper bound. On BB84 under a drifting bit-flip channel, she exceeds a conservative noise-indexed rule by $0.024$ in fidelity, reaching $99\\%$ of the upper bound. Under stationary noise, the attacker's gain from basis asymmetry changes sign between an averaged and a per-basis error-rate constraint. The search, started from random gate sequences, recovers the analytical cloners and the collective-attack key rate, and meets the lower bound of the Winick--Lütkenhaus--Coles objective from above.",
+      "tr": "Quantum key distribution (QKD) links are provisioned from security analyses of stationary channels, whereas the devices that determine the channel drift between recalibrations. Whether an eavesdropper who cannot alter the channel's own noise gains by following that drift has not been quantified. Adaptive eavesdropping is posed here as a constrained Markov decision process in which the attacker selects one circuit per round while the noise level follows an Ornstein--Uhlenbeck process and the abort condition is a budget over each block of rounds. The value of adaptation is bounded by the best fixed circuit and a dynamic-programming upper bound. The actions are learnt attacks. Whereas Decker et al. trained a parametrised circuit on a fixed gate template against a fixed channel, here the gate structure and rotation angles are searched jointly. This yields circuits compact enough to form a discrete action set, extending the construction to noise models lacking a known template, including the amplitude damping channel. On device-independent E91 under bilateral depolarising noise, a reinforcement-learning attacker raises her Holevo information from $0.135$ for the best fixed circuit to $0.348$ at zero detection, $98\\%$ of the upper bound. On BB84 under a drifting bit-flip channel, she exceeds a conservative noise-indexed rule by $0.024$ in fidelity, reaching $99\\%$ of the upper bound. Under stationary noise, the attacker's gain from basis asymmetry changes sign between an averaged and a per-basis error-rate constraint. The search, started from random gate sequences, recovers the analytical cloners and the collective-attack key rate, and meets the lower bound of the Winick--Lütkenhaus--Coles objective from above."
+    }
+  },
+  {
+    "id": "2610.01788v1",
+    "title": "SAGE: Similarity-Based Cleaning of Poisoned Training Data from Verified Examples",
+    "authors": [
+      "Chaeeun Han",
+      "Soodeh Atefi",
+      "Yevgeniy Vorobeychik",
+      "Aron Laszka"
+    ],
+    "published_date": "2026-10-01",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2610.01788v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.01788v1",
+    "content": {
+      "en": "As machine learning increasingly relies on public, untrusted data sources, data poisoning attacks, which inject malicious examples into training data to induce misclassification of a chosen target, pose a growing threat. Existing defenses either assume zero ground-truth information about which examples are poisoned, or they assume access to a large set of examples verified to be clean. Satisfying the latter assumption incurs significant cost since reliable verification can be very resource- or labor-intensive. This cost is particularly high for clean-label attacks, where poisoned examples are visually indistinguishable from clean data. Since requiring a large set of verified examples is impractical, we propose relying on a small set of verified examples including both clean and poisoned ones, i.e., each example verified either to be clean or poisoned through inspection by a forensic expert. The challenge is then to detect poisons based on a set of verified examples that is so small that most classification models would overfit. To address this challenge, we propose Similarity-based Approach for Ground-truth-driven Exclusion (SAGE), which trains a generic feature extractor on a separate dataset and then flags poisoned training examples using a non-parametric, similarity-weighted prediction based on the verified set. On standard benchmarks against seven clean-label attack methods, we demonstrate that having access to even a handful of verified poisoned examples provides a substantial advantage. We also find that the distribution of verified clean examples across classes matters more than the number of verified examples.",
+      "tr": "As machine learning increasingly relies on public, untrusted data sources, data poisoning attacks, which inject malicious examples into training data to induce misclassification of a chosen target, pose a growing threat. Existing defenses either assume zero ground-truth information about which examples are poisoned, or they assume access to a large set of examples verified to be clean. Satisfying the latter assumption incurs significant cost since reliable verification can be very resource- or labor-intensive. This cost is particularly high for clean-label attacks, where poisoned examples are visually indistinguishable from clean data. Since requiring a large set of verified examples is impractical, we propose relying on a small set of verified examples including both clean and poisoned ones, i.e., each example verified either to be clean or poisoned through inspection by a forensic expert. The challenge is then to detect poisons based on a set of verified examples that is so small that most classification models would overfit. To address this challenge, we propose Similarity-based Approach for Ground-truth-driven Exclusion (SAGE), which trains a generic feature extractor on a separate dataset and then flags poisoned training examples using a non-parametric, similarity-weighted prediction based on the verified set. On standard benchmarks against seven clean-label attack methods, we demonstrate that having access to even a handful of verified poisoned examples provides a substantial advantage. We also find that the distribution of verified clean examples across classes matters more than the number of verified examples."
     }
   }
 ]
