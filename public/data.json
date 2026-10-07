@@ -1,217 +1,215 @@
 [
   {
-    "id": "2610.06822v1",
-    "title": "Private online learning and prediction for Littlestone classes",
+    "id": "2610.08678v1",
+    "title": "Secure Speculative Decoding for Large Language Models",
     "authors": [
-      "Amartya Sanyal"
+      "Yichi Zhang",
+      "Zhiqi Wang",
+      "Neil Gong",
+      "Yuchen Yang"
     ],
-    "published_date": "2026-10-05",
-    "tags": [
-      "cs.LG",
-      "cs.CR",
-      "stat.ML"
-    ],
-    "link": "http://arxiv.org/abs/2610.06822v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.06822v1",
-    "content": {
-      "en": "We study mistake bounds for differentially private online learning and online prediction under oblivious realisable adversaries. Online learning requires the learner to release a hypothesis at each time step whereas in online prediction, the learner only needs to make predictions without releasing a hypothesis. Using a novel lower bound for private online learning and an upper bound for private prediction, we show that the sample complexity of these two problems are separated by a factor that grows with the time horizon for every class of finite Littlestone dimension $d$. First, we prove that every $\\br{ε,δ}$-private online learner has a deterministic realisable stream of length $T$ on which the mistake bound is at least $\\bE\\bs{M_T}=\\Om{\\frac dε\\log\\br{ T}^{2/3}}$. In particular, this is the first non-trivial lower in the range $1/T<δ<1/\\log T)$ left open in earlier works[SR22,DSS24,LWY24]. Second, we prove that for every class of of Littlestone dimension $d$, there exists an $(ε,δ)$-jointly private predictor with at most $2^{2^{cd^2}}ε^{-2}\\log^2\\br{2/\\br{εδ}}$ expected mistakes, independently of $T$, for some absolute constant $c>0$. Thus, for every fixed class of finite Littlestone dimension when $δ=Θ\\br{1/\\log T}$, private learning requires $\\Om{\\br{\\log T}^{2/3}}$ expected mistakes, whereas private prediction admits $\\bigO{\\br{\\log\\log T}^2}$.",
-      "tr": "We study mistake bounds for differentially private online learning and online prediction under oblivious realisable adversaries. Online learning requires the learner to release a hypothesis at each time step whereas in online prediction, the learner only needs to make predictions without releasing a hypothesis. Using a novel lower bound for private online learning and an upper bound for private prediction, we show that the sample complexity of these two problems are separated by a factor that grows with the time horizon for every class of finite Littlestone dimension $d$. First, we prove that every $\\br{ε,δ}$-private online learner has a deterministic realisable stream of length $T$ on which the mistake bound is at least $\\bE\\bs{M_T}=\\Om{\\frac dε\\log\\br{ T}^{2/3}}$. In particular, this is the first non-trivial lower in the range $1/T<δ<1/\\log T)$ left open in earlier works[SR22,DSS24,LWY24]. Second, we prove that for every class of of Littlestone dimension $d$, there exists an $(ε,δ)$-jointly private predictor with at most $2^{2^{cd^2}}ε^{-2}\\log^2\\br{2/\\br{εδ}}$ expected mistakes, independently of $T$, for some absolute constant $c>0$. Thus, for every fixed class of finite Littlestone dimension when $δ=Θ\\br{1/\\log T}$, private learning requires $\\Om{\\br{\\log T}^{2/3}}$ expected mistakes, whereas private prediction admits $\\bigO{\\br{\\log\\log T}^2}$."
-    }
-  },
-  {
-    "id": "2610.06636v1",
-    "title": "Differentially Private Mixing of Public Datasets Improves Private Learning",
-    "authors": [
-      "Yufei Chen",
-      "Tejumade Afonja",
-      "Anvith Thudi",
-      "Nicolas Papernot"
-    ],
-    "published_date": "2026-10-05",
-    "tags": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2610.06636v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.06636v1",
-    "content": {
-      "en": "Many machine learning applications involve sensitive data and therefore require training under differential privacy (DP). However, DP training often degrades model utility. In some cases, first pre-training the model on \"public\" data before finetuning with DP on the sensitive data can reduce the drop in utility. However, the success of this depends on how relevant the selected public dataset is to the sensitive data. We introduce the first pipeline that privately learns the mixture of several public datasets to pretrain on for a given sensitive downstream task. Our key insight is that we can privately find the best mixture of multiple public datasets by privately learning a low-dimensional linear model. We tested our method on the NIH dataset for X-ray classification and the ENRON email dataset for language modeling. Applying our method to find tailored mixtures of X-ray datasets to pretrain on for diseases in the NIH ChestX-ray14 dataset, we improved macro AUC by up to 0.037 across privacy budgets compared to the baselines, with gains as large as +22.8% relative AUC on Cardiomegaly at $ε=1$. For DP training on the ENRON dataset, pre-training on our mixture of The Common Pile (a collection of public-domain text datasets) decreased test perplexity by 16% relative to the baseline mixtures.",
-      "tr": "Many machine learning applications involve sensitive data and therefore require training under differential privacy (DP). However, DP training often degrades model utility. In some cases, first pre-training the model on \"public\" data before finetuning with DP on the sensitive data can reduce the drop in utility. However, the success of this depends on how relevant the selected public dataset is to the sensitive data. We introduce the first pipeline that privately learns the mixture of several public datasets to pretrain on for a given sensitive downstream task. Our key insight is that we can privately find the best mixture of multiple public datasets by privately learning a low-dimensional linear model. We tested our method on the NIH dataset for X-ray classification and the ENRON email dataset for language modeling. Applying our method to find tailored mixtures of X-ray datasets to pretrain on for diseases in the NIH ChestX-ray14 dataset, we improved macro AUC by up to 0.037 across privacy budgets compared to the baselines, with gains as large as +22.8% relative AUC on Cardiomegaly at $ε=1$. For DP training on the ENRON dataset, pre-training on our mixture of The Common Pile (a collection of public-domain text datasets) decreased test perplexity by 16% relative to the baseline mixtures."
-    }
-  },
-  {
-    "id": "2610.06584v1",
-    "title": "Does AI Help Cyber Attackers or Defenders? Evidence from Nonpublic Vulnerabilities and Subsequent Attacks",
-    "authors": [
-      "Tobias Heldt",
-      "Matt Turk",
-      "Christoph Landolt",
-      "Mario Fritz"
-    ],
-    "published_date": "2026-10-05",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2610.06584v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.06584v1",
-    "content": {
-      "en": "The release decision for frontier AI systems increasingly relies on cyber capability benchmarks, yet public vulnerability benchmarks can expose agents to previously published advisories, exploits, and fixes, making it difficult to distinguish prior exposure from capability on unseen vulnerabilities. We evaluate open-weight and proprietary AI models on exploit generation, vulnerability repair and subsequent attacks in five nonpublic software environments, including vulnerabilities we privately disclosed while they remained unpatched. Researcher-developed and reviewed deterministic graders, not LLM judges, determine task scores. Comparisons with 209 disclosed vulnerabilities and cryptographic challenges reveal substantial variation across systems and vulnerability types. Repair scores exceed attack scores in two nonpublic environments and fall below them in three. Passing an initial security test is also insufficient: another exploit succeeds in 92 of 524 non-independent defender test intervals after the initial exploit is stopped. These results motivate vulnerability-specific attack-repair comparisons and subsequent resistance tests.",
-      "tr": "The release decision for frontier AI systems increasingly relies on cyber capability benchmarks, yet public vulnerability benchmarks can expose agents to previously published advisories, exploits, and fixes, making it difficult to distinguish prior exposure from capability on unseen vulnerabilities. We evaluate open-weight and proprietary AI models on exploit generation, vulnerability repair and subsequent attacks in five nonpublic software environments, including vulnerabilities we privately disclosed while they remained unpatched. Researcher-developed and reviewed deterministic graders, not LLM judges, determine task scores. Comparisons with 209 disclosed vulnerabilities and cryptographic challenges reveal substantial variation across systems and vulnerability types. Repair scores exceed attack scores in two nonpublic environments and fall below them in three. Passing an initial security test is also insufficient: another exploit succeeds in 92 of 524 non-independent defender test intervals after the initial exploit is stopped. These results motivate vulnerability-specific attack-repair comparisons and subsequent resistance tests."
-    }
-  },
-  {
-    "id": "2610.06517v1",
-    "title": "GCTAuto-encoder: A Cross modal Framework for Security Flaw Detection in IoT Networks",
-    "authors": [
-      "Najmieh Sadat Safarabadi"
-    ],
-    "published_date": "2026-10-05",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2610.06517v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.06517v1",
-    "content": {
-      "en": "IoT encompasses diverse physical entities, from smart home devices to autonomous vehicles, creating a complex environment with heterogeneous security models. This heterogeneity makes IoT sub-systems vulnerable to various network attacks. Modern security systems must therefore be more robust to ensure security and privacy for IoT applications. A highly secure IoT system also demands real time insight, requiring data collection at the edge of the computing layer. This diversity calls for a unified security model applied at the foundational level. Edge intelligence offers a direct approach to handling device diversity. A key goal of edge intelligence in IoT is to extract insight from local data; security models can then use this data to build local node protections, and integrating AI models yields an advanced security solution. This research proposes a novel deep learning algorithm for effective intrusion detection at the edge, supported by a cloud-based IoT framework. We evaluate the proposed cross modal deep learning algorithm against baseline models. The contribution is a cross domain Deep Neural Network (DNN) algorithm for intrusion detection. The objective is to assess a multi-method deep learning model to detect intrusions in IoT systems at the edge via community detection with modeled attention. We evaluate GCT auto-encoder, a novel framework integrating edge intelligence to identify security flaws. The model significantly improves performance and efficiency. On a network intrusion IoT dataset covering multiple attack scenarios, it achieved 0.908 accuracy, reduced learning loss to 0.00156, and outperformed existing approaches.",
-      "tr": "IoT encompasses diverse physical entities, from smart home devices to autonomous vehicles, creating a complex environment with heterogeneous security models. This heterogeneity makes IoT sub-systems vulnerable to various network attacks. Modern security systems must therefore be more robust to ensure security and privacy for IoT applications. A highly secure IoT system also demands real time insight, requiring data collection at the edge of the computing layer. This diversity calls for a unified security model applied at the foundational level. Edge intelligence offers a direct approach to handling device diversity. A key goal of edge intelligence in IoT is to extract insight from local data; security models can then use this data to build local node protections, and integrating AI models yields an advanced security solution. This research proposes a novel deep learning algorithm for effective intrusion detection at the edge, supported by a cloud-based IoT framework. We evaluate the proposed cross modal deep learning algorithm against baseline models. The contribution is a cross domain Deep Neural Network (DNN) algorithm for intrusion detection. The objective is to assess a multi-method deep learning model to detect intrusions in IoT systems at the edge via community detection with modeled attention. We evaluate GCT auto-encoder, a novel framework integrating edge intelligence to identify security flaws. The model significantly improves performance and efficiency. On a network intrusion IoT dataset covering multiple attack scenarios, it achieved 0.908 accuracy, reduced learning loss to 0.00156, and outperformed existing approaches."
-    }
-  },
-  {
-    "id": "2610.06420v1",
-    "title": "Efficient Secure Federated Learning via Information-Theoretically Secure Key Distribution: A Medical Imaging Case Study",
-    "authors": [
-      "Ivan Donà",
-      "Hans H. Brunner",
-      "Álvaro Troyano Olivas",
-      "Chi-Hang Fred Fung",
-      "Momtchil Peev"
-    ],
-    "published_date": "2026-10-05",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2610.06420v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.06420v1",
-    "content": {
-      "en": "Federated Learning (FL) enables collaborative training of models across institutions without centralizing sensitive data, making it well-suited for privacy-concerned applications, such as medical imaging. To protect FL model updates during secure aggregation, additive masking is commonly employed. However, its underlying classical key establishment is only computationally secure. On the other hand, physics-based Information-Theoretically Secure (ITS) key exchange introduces practical constraints: finite key generation rates and time-limited storage severely limit throughput and sustained training of uncompressed models. In this work, we address this bottleneck by developing an FL framework that integrates frozen backbones, knowledge distillation, and quantization. These techniques reduce communication payload and, consequently, key material consumption. Moving beyond simulation, we benchmark this framework on a real physics-based key distribution testbed involving a chest X-ray classification application. Our results show that key usage can be reduced by $\\sim$35$\\times$ while maintaining predictive accuracy. This prevents buffer depletion and key expiration, enabling sustainable FL training under physical key generation constraints.",
-      "tr": "Federated Learning (FL) enables collaborative training of models across institutions without centralizing sensitive data, making it well-suited for privacy-concerned applications, such as medical imaging. To protect FL model updates during secure aggregation, additive masking is commonly employed. However, its underlying classical key establishment is only computationally secure. On the other hand, physics-based Information-Theoretically Secure (ITS) key exchange introduces practical constraints: finite key generation rates and time-limited storage severely limit throughput and sustained training of uncompressed models. In this work, we address this bottleneck by developing an FL framework that integrates frozen backbones, knowledge distillation, and quantization. These techniques reduce communication payload and, consequently, key material consumption. Moving beyond simulation, we benchmark this framework on a real physics-based key distribution testbed involving a chest X-ray classification application. Our results show that key usage can be reduced by $\\sim$35$\\times$ while maintaining predictive accuracy. This prevents buffer depletion and key expiration, enabling sustainable FL training under physical key generation constraints."
-    }
-  },
-  {
-    "id": "2610.06401v1",
-    "title": "RAISED: Self-Distillation for Robustness to Prompt Injection in LLM Agents",
-    "authors": [
-      "Mohamed Dhouib",
-      "Clement Elliker",
-      "Alexi Canesse",
-      "Maël Jenny",
-      "Lucas-Andrei Thil"
-    ],
-    "published_date": "2026-10-05",
+    "published_date": "2026-10-06",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.CL",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2610.06401v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.06401v1",
+    "link": "http://arxiv.org/abs/2610.08678v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.08678v1",
     "content": {
-      "en": "Tool-using language-model agents are vulnerable to indirect prompt injection because they must act on untrusted external content. Existing training-time defenses can reduce attack success rates, but often at the cost of general capabilities. We show that training-based defenses induce substantial drift in the model's output distribution, altering its behavior even in benign settings and providing a potential mechanism for utility degradation. We further identify a failure mode of these defenses: On benign tool-use tasks, the model refrains from a step needed to finish an authorized task, particularly when that step is indicated by a tool output. To address these limitations, we introduce RAISED (Robust Attack Invariance through Self-Distillation), a training framework that combines self-generation and self-distillation. The model first generates its own tool-use scenarios, with an emphasis on cases where task completion requires acting on legitimate guidance from tool outputs. Then, through self-distillation, the student is trained to match the teacher's clean-context behavior on both clean and injected variants of the same trajectory. RAISED substantially reduces the attack success rate of prompt injections in tool responses while, unlike prior training-based defenses, preserving utility on both agentic and general-purpose benchmarks.",
-      "tr": "Tool-using language-model agents are vulnerable to indirect prompt injection because they must act on untrusted external content. Existing training-time defenses can reduce attack success rates, but often at the cost of general capabilities. We show that training-based defenses induce substantial drift in the model's output distribution, altering its behavior even in benign settings and providing a potential mechanism for utility degradation. We further identify a failure mode of these defenses: On benign tool-use tasks, the model refrains from a step needed to finish an authorized task, particularly when that step is indicated by a tool output. To address these limitations, we introduce RAISED (Robust Attack Invariance through Self-Distillation), a training framework that combines self-generation and self-distillation. The model first generates its own tool-use scenarios, with an emphasis on cases where task completion requires acting on legitimate guidance from tool outputs. Then, through self-distillation, the student is trained to match the teacher's clean-context behavior on both clean and injected variants of the same trajectory. RAISED substantially reduces the attack success rate of prompt injections in tool responses while, unlike prior training-based defenses, preserving utility on both agentic and general-purpose benchmarks."
+      "en": "Speculative decoding accelerates inference for a large language model (LLM), referred to as the \\emph{target model}, by first using a smaller model, referred to as the \\emph{draft model}, to generate candidate tokens and then verifying them with the target model for acceptance or rejection. Prior studies primarily focused on the efficiency-utility trade-off of speculative decoding, e.g., lossy speculative decoding, leaving its security implications largely unexplored.   In this work, we bridge this gap by providing the \\emph{first} systematic study of the security implications of speculative decoding. Through a large-scale measurement study, we reveal a pronounced security-utility asymmetry: across a wide range of lossy speculative decoding methods, improvements in inference efficiency come at a disproportionately high cost to security, with attack success rates for jailbreak and prompt injection attacks increasing much faster than utility degrades.   We then propose SecureSD, a new theory-guided speculative decoding method that enhances security while maintaining efficiency and utility. Specifically, our theoretical analysis reveals that security degradation primarily originates from the early tokens generated by the draft model. Motivated by this insight, SecureSD applies a stricter verification criterion to draft-model tokens at early decoding positions. Extensive experiments on both security and utility benchmarks demonstrate that SecureSD significantly improves security while preserving efficiency and utility compared to existing speculative decoding methods.",
+      "tr": "Speculative decoding accelerates inference for a large language model (LLM), referred to as the \\emph{target model}, by first using a smaller model, referred to as the \\emph{draft model}, to generate candidate tokens and then verifying them with the target model for acceptance or rejection. Prior studies primarily focused on the efficiency-utility trade-off of speculative decoding, e.g., lossy speculative decoding, leaving its security implications largely unexplored.   In this work, we bridge this gap by providing the \\emph{first} systematic study of the security implications of speculative decoding. Through a large-scale measurement study, we reveal a pronounced security-utility asymmetry: across a wide range of lossy speculative decoding methods, improvements in inference efficiency come at a disproportionately high cost to security, with attack success rates for jailbreak and prompt injection attacks increasing much faster than utility degrades.   We then propose SecureSD, a new theory-guided speculative decoding method that enhances security while maintaining efficiency and utility. Specifically, our theoretical analysis reveals that security degradation primarily originates from the early tokens generated by the draft model. Motivated by this insight, SecureSD applies a stricter verification criterion to draft-model tokens at early decoding positions. Extensive experiments on both security and utility benchmarks demonstrate that SecureSD significantly improves security while preserving efficiency and utility compared to existing speculative decoding methods."
     }
   },
   {
-    "id": "2610.06366v1",
-    "title": "Correct Verdicts, Flawed Reasoning: Structured Auditing of LLM-based Vulnerability Reasoning",
+    "id": "2610.08668v1",
+    "title": "Semantic Behavioral Watermarking: Paraphrase-Robust and Forgery-Resistant Provenance for LLM Agents",
     "authors": [
-      "Boyue Caroline Hu",
-      "Kaivalya Ahir",
-      "Ronghao Ni",
-      "Limin Jia"
+      "Suxin Ji",
+      "Hungtao Wan",
+      "Shaoxuan Chen",
+      "An Zhang"
     ],
-    "published_date": "2026-10-05",
+    "published_date": "2026-10-06",
     "tags": [
       "cs.CR",
-      "cs.LG",
-      "cs.SE"
+      "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2610.06366v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.06366v1",
+    "link": "http://arxiv.org/abs/2610.08668v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.08668v1",
     "content": {
-      "en": "Large Language Models (LLMs) are increasingly deployed for automated software vulnerability analysis. Binary classification alone is insufficient; practitioners need explanations to triage bugs and engineer patches. Standard practice relies on Chain-of-Thought (CoT) prompting, but free-form reasoning allows models to obscure logical leaps, hallucinated execution steps, and internal inconsistencies behind plausible prose. Our manual audit reveals that approximately 60% of correct vulnerability verdicts are accompanied by fabricated or unverifiable claims, and free-form explanations allow reasoning errors to evade LLM-as-a-judge evaluation.   We present Vulnerability Explanation Reasoning Auditor (VERA), an automated framework for auditing LLM vulnerability reasoning. Rather than accepting free-form text, VERA asks models to output a Structured Reasoning Record (SRR) encoding tracked pointers, memory operations, and state transitions in machine-readable fields. A multi-stage judge audits each SRR against eight reasoning failure modes using deterministic checks, with LLM calls reserved for semantic interpretation. The standardized SRR schema also enables automated mutation testing to benchmark judges at scale without human annotation. Our evaluation shows reasoning flaws occur in correct verdicts just as frequently as incorrect ones, and VERA exposes 87% of reasoning errors that free-form LLM-as-judge systematically miss.",
-      "tr": "Large Language Models (LLMs) are increasingly deployed for automated software vulnerability analysis. Binary classification alone is insufficient; practitioners need explanations to triage bugs and engineer patches. Standard practice relies on Chain-of-Thought (CoT) prompting, but free-form reasoning allows models to obscure logical leaps, hallucinated execution steps, and internal inconsistencies behind plausible prose. Our manual audit reveals that approximately 60% of correct vulnerability verdicts are accompanied by fabricated or unverifiable claims, and free-form explanations allow reasoning errors to evade LLM-as-a-judge evaluation.   We present Vulnerability Explanation Reasoning Auditor (VERA), an automated framework for auditing LLM vulnerability reasoning. Rather than accepting free-form text, VERA asks models to output a Structured Reasoning Record (SRR) encoding tracked pointers, memory operations, and state transitions in machine-readable fields. A multi-stage judge audits each SRR against eight reasoning failure modes using deterministic checks, with LLM calls reserved for semantic interpretation. The standardized SRR schema also enables automated mutation testing to benchmark judges at scale without human annotation. Our evaluation shows reasoning flaws occur in correct verdicts just as frequently as incorrect ones, and VERA exposes 87% of reasoning errors that free-form LLM-as-judge systematically miss."
+      "en": "Behavioral watermarking embeds an owner identifier in an LLM agent's high-level action choices, giving provenance without touching output tokens. Prior agent watermarks break in two ways. First, all three prior schemes bind the watermark to the exact action symbol, so renaming a tool desynchronizes decoding even when the observation is untouched; in AgentMark's own robustness test, paraphrasing the observation alone drops bit-recovery to 16.8%. Second, every prior agent watermark studies only removal: none asks whether an adversary can forge a trajectory that verifies as someone else's, a question answered affirmatively for text watermarks (Jovanović et al., 2024). We present Semantic Behavioral Watermarking (SBW): watermarking over semantic action clusters under history conditioning, with the public-cluster bin replaced by keyed collision-resistant binning whose fresh-bucket assignment is provably unpredictable in the random-oracle model. Across five agent models (3B-14B, four vendors) and three encoders the ordering holds on both benchmarks: on ToolBench (600 trajectories per model) detection under rewriting is 0.49-0.66 for cluster-level versus 0.05-0.17 for exact-symbol at a permutation-calibrated 1% FPR, at 72-83% choice agreement against 22-27% for logit biasing; on ALFWorld (100 episodes per model) it is 0.92-0.97 versus 0.00-0.01. Keyed binning takes adaptive forgery from 100% to the false-positive floor at the primary operating point (bge, r=64). We also mark the boundary that guarantee does not cover: when the adversary copies the victim's own steps, shuffled splicing is neutralized (0.000 on Qwen2.5-3B) but chained replay remains at 0.76-0.98 across the five models, reported as open. Paraphrase robustness costs about half of the per-step watermark capacity. Code is available at https://anonymous.4open.science/r/SBW-Agent-Watermark.",
+      "tr": "Behavioral watermarking embeds an owner identifier in an LLM agent's high-level action choices, giving provenance without touching output tokens. Prior agent watermarks break in two ways. First, all three prior schemes bind the watermark to the exact action symbol, so renaming a tool desynchronizes decoding even when the observation is untouched; in AgentMark's own robustness test, paraphrasing the observation alone drops bit-recovery to 16.8%. Second, every prior agent watermark studies only removal: none asks whether an adversary can forge a trajectory that verifies as someone else's, a question answered affirmatively for text watermarks (Jovanović et al., 2024). We present Semantic Behavioral Watermarking (SBW): watermarking over semantic action clusters under history conditioning, with the public-cluster bin replaced by keyed collision-resistant binning whose fresh-bucket assignment is provably unpredictable in the random-oracle model. Across five agent models (3B-14B, four vendors) and three encoders the ordering holds on both benchmarks: on ToolBench (600 trajectories per model) detection under rewriting is 0.49-0.66 for cluster-level versus 0.05-0.17 for exact-symbol at a permutation-calibrated 1% FPR, at 72-83% choice agreement against 22-27% for logit biasing; on ALFWorld (100 episodes per model) it is 0.92-0.97 versus 0.00-0.01. Keyed binning takes adaptive forgery from 100% to the false-positive floor at the primary operating point (bge, r=64). We also mark the boundary that guarantee does not cover: when the adversary copies the victim's own steps, shuffled splicing is neutralized (0.000 on Qwen2.5-3B) but chained replay remains at 0.76-0.98 across the five models, reported as open. Paraphrase robustness costs about half of the per-step watermark capacity. Code is available at https://anonymous.4open.science/r/SBW-Agent-Watermark."
     }
   },
   {
-    "id": "2610.06317v1",
-    "title": "Watermarking: from Impossibility to Auditable Compliance",
+    "id": "2610.08571v1",
+    "title": "RAG-PIBench: A Leakage-Aware Benchmark for Prompt-Injection Detection in Trustworthy RAG Systems",
     "authors": [
-      "Fernando Delbianco",
-      "Fernando Tohmé",
-      "Hugo Acciarri"
+      "Niveen O. Jaffal",
+      "Ahmet Yuksel",
+      "David Mohaisen"
     ],
-    "published_date": "2026-10-05",
-    "tags": [
-      "cs.CR",
-      "cs.LG",
-      "stat.ML"
-    ],
-    "link": "http://arxiv.org/abs/2610.06317v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.06317v1",
-    "content": {
-      "en": "Article 50 (2) of the EU Artificial Intelligence Act requires providers of generative systems to make synthetic outputs machine-readable and detectable, while qualifying the effectiveness, interoperability, robustness, and reliability by technical feasibility, cost, content-specific limits, and the state of the art. For free-form text, one important implementation route is the implementation of a generative watermarking procedure, which poses a compliance problem that is hard to address. Strong watermarking is impossible against adaptive removal, while ordinary edits attenuate statistical evidence, and unmarked human text may overlap distributionally with machine output. This article develops an auditable alternative. First, it defines a description-length robustness profile. A finite-sample bound shows that detectable bias decays and that the required sample size grows with the inverse square of the decay rate. This replaces an unidentified Shannon-entropy constant with collision entropy. Second, it constructs label-conditional conformal prediction sets with separate false-attribution and false-exclusion levels, reporting ``watermark supported,'' ``not supported,'' or ``inconclusive''. Coverage is obtained as a finite-sample result and is class-conditional under exchangeability. A small reproducible simulation of a tournament watermark confirms both claims and shows that the surviving-token rule overstates the tolerable edit rate roughly twofold. The resulting premarket certificate, signed detector report, and postmarket recalibration protocol operationalize the Commission's 2026 Code of Practice without claiming universal robustness.",
-      "tr": "Article 50 (2) of the EU Artificial Intelligence Act requires providers of generative systems to make synthetic outputs machine-readable and detectable, while qualifying the effectiveness, interoperability, robustness, and reliability by technical feasibility, cost, content-specific limits, and the state of the art. For free-form text, one important implementation route is the implementation of a generative watermarking procedure, which poses a compliance problem that is hard to address. Strong watermarking is impossible against adaptive removal, while ordinary edits attenuate statistical evidence, and unmarked human text may overlap distributionally with machine output. This article develops an auditable alternative. First, it defines a description-length robustness profile. A finite-sample bound shows that detectable bias decays and that the required sample size grows with the inverse square of the decay rate. This replaces an unidentified Shannon-entropy constant with collision entropy. Second, it constructs label-conditional conformal prediction sets with separate false-attribution and false-exclusion levels, reporting ``watermark supported,'' ``not supported,'' or ``inconclusive''. Coverage is obtained as a finite-sample result and is class-conditional under exchangeability. A small reproducible simulation of a tournament watermark confirms both claims and shows that the surviving-token rule overstates the tolerable edit rate roughly twofold. The resulting premarket certificate, signed detector report, and postmarket recalibration protocol operationalize the Commission's 2026 Code of Practice without claiming universal robustness."
-    }
-  },
-  {
-    "id": "2610.06163v1",
-    "title": "Where Did the Repair First Go Wrong? Localizing the Origins of Silent Failures in Agentic Vulnerability Repair",
-    "authors": [
-      "Wenji Bai",
-      "Muhammad Waseem",
-      "Zeeshan Rasheed",
-      "Jaakko Peltonen",
-      "Pekka Abrahamsson"
-    ],
-    "published_date": "2026-10-05",
+    "published_date": "2026-10-06",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.SE"
+      "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2610.06163v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.06163v1",
+    "link": "http://arxiv.org/abs/2610.08571v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.08571v1",
     "content": {
-      "en": "Localizing where an LLM-based agent first fails to uphold security during a repair can show which stage of its workflow needs an additional safeguard. This is difficult for silent failures, which are patches that pass syntactic and functional checks but still contain a security vulnerability. Because such patches give no observable failure signal, existing failure attribution methods, which rely on observed task failures and labelled failure steps, are less suited to them. We propose Security Awareness Gap Evaluation (SAGE), a trace-based method that combines an assessment of the security reasoning recorded at each turn with the reconstructed code history to identify the earliest turn at which a repair diverges from the task's security intent. We evaluate SAGE on 95 confirmed silent failures drawn from 3,684 repair traces produced by six agent frameworks and six base models on SecurityEval and CVEfixes. SAGE assigned an origin in 93 cases. Most origins were an unaddressed security requirement or an inadequate defence choice, and only five coincided with the code change itself. When the agent introduced the vulnerable code, the origin preceded the write in 14 of 19 cases. Repeated scoring and a second judge reproduced the origin type more consistently than the exact turn, and agreement was lowest for traces that kept only the final file.",
-      "tr": "Localizing where an LLM-based agent first fails to uphold security during a repair can show which stage of its workflow needs an additional safeguard. This is difficult for silent failures, which are patches that pass syntactic and functional checks but still contain a security vulnerability. Because such patches give no observable failure signal, existing failure attribution methods, which rely on observed task failures and labelled failure steps, are less suited to them. We propose Security Awareness Gap Evaluation (SAGE), a trace-based method that combines an assessment of the security reasoning recorded at each turn with the reconstructed code history to identify the earliest turn at which a repair diverges from the task's security intent. We evaluate SAGE on 95 confirmed silent failures drawn from 3,684 repair traces produced by six agent frameworks and six base models on SecurityEval and CVEfixes. SAGE assigned an origin in 93 cases. Most origins were an unaddressed security requirement or an inadequate defence choice, and only five coincided with the code change itself. When the agent introduced the vulnerable code, the origin preceded the write in 14 of 19 cases. Repeated scoring and a second judge reproduced the origin type more consistently than the exact turn, and agreement was lowest for traces that kept only the final file."
+      "en": "Retrieval-Augmented Generation (RAG) systems are vulnerable to prompt-injection attacks embedded in retrieved content. We introduce RAG-PIBench, a benchmark for RAG-style prompt-injection detection containing 4,876 contextual examples across frozen train, validation, and protected-test splits. Using a leakage-aware construction pipeline and strict evaluation protocol, we compare keyword-based, semantic-reference, TF-IDF, and transformer-based detectors. DistilBERT achieves the best protected-test performance (F1 = 0.896, PR-AUC = 0.968), while TF-IDF SVM and logistic regression remain competitive. Our results demonstrate the value of leakage-aware benchmark design and strong sparse baselines for reliable prompt-injection detection in RAG systems.",
+      "tr": "Retrieval-Augmented Generation (RAG) systems are vulnerable to prompt-injection attacks embedded in retrieved content. We introduce RAG-PIBench, a benchmark for RAG-style prompt-injection detection containing 4,876 contextual examples across frozen train, validation, and protected-test splits. Using a leakage-aware construction pipeline and strict evaluation protocol, we compare keyword-based, semantic-reference, TF-IDF, and transformer-based detectors. DistilBERT achieves the best protected-test performance (F1 = 0.896, PR-AUC = 0.968), while TF-IDF SVM and logistic regression remain competitive. Our results demonstrate the value of leakage-aware benchmark design and strong sparse baselines for reliable prompt-injection detection in RAG systems."
     }
   },
   {
-    "id": "2610.06093v1",
-    "title": "Cross-Lingual Transferability of Training Data Extraction Attacks to Recover Memorized PII",
+    "id": "2610.08405v1",
+    "title": "Learning from Failures: A Failure-Driven Prompt Refinement for LLM-Based Vulnerability Analysis",
     "authors": [
-      "Alexandru Nazare",
-      "Agnese Profico",
-      "Nicolò Vania",
-      "Elena Di Croce",
-      "Daria Caramanica"
+      "Mandana Ghadamian",
+      "David Mohaisen"
     ],
-    "published_date": "2026-10-05",
+    "published_date": "2026-10-06",
     "tags": [
-      "cs.CL",
+      "cs.SE",
       "cs.AI",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2610.06093v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.06093v1",
+    "link": "http://arxiv.org/abs/2610.08405v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.08405v1",
     "content": {
-      "en": "The robustness of Personally Identifiable Information (PII) protection in Large Language Models (LLMs) is a critical concern, yet the risks associated with cross-lingual data extraction remain under-explored. This study evaluates the vulnerability of English-centric and multilingual models to Training Data Extraction (TDE) attacks when prompted in non-English languages.   We construct a multi-domain PII dataset comprising social media handles, email addresses, and phone numbers and translate the attack contexts into Italian, Spanish, French, and German. Our results show that TDE attacks against both English-centric and multilingual models transfer to different languages: the attacks are successful on translated prompts, even though only the original English prompt might have been included in the pre-training data. A web-presence check on a sample of the translations confirms that they are not available online. The share of English leaks recovered in other languages grows with the multilingual capability of the model, and it drops sharply when the original wording is lost, even without a change of language.   This suggests that native multilingual pre-training facilitates the emergence of latent cross-linguistic bridges that simplify the retrieval of personally identifiable information (PII). We analyze the activations of multilingual large language models (LLMs) and find that different translations of the same prompt are bridged in similar representations, with the strongest alignment in the middle layers.   Our results highlight a fundamental security gap in modern LLMs, necessitating more robust, language-agnostic sanitization strategies for future model alignment.",
-      "tr": "The robustness of Personally Identifiable Information (PII) protection in Large Language Models (LLMs) is a critical concern, yet the risks associated with cross-lingual data extraction remain under-explored. This study evaluates the vulnerability of English-centric and multilingual models to Training Data Extraction (TDE) attacks when prompted in non-English languages.   We construct a multi-domain PII dataset comprising social media handles, email addresses, and phone numbers and translate the attack contexts into Italian, Spanish, French, and German. Our results show that TDE attacks against both English-centric and multilingual models transfer to different languages: the attacks are successful on translated prompts, even though only the original English prompt might have been included in the pre-training data. A web-presence check on a sample of the translations confirms that they are not available online. The share of English leaks recovered in other languages grows with the multilingual capability of the model, and it drops sharply when the original wording is lost, even without a change of language.   This suggests that native multilingual pre-training facilitates the emergence of latent cross-linguistic bridges that simplify the retrieval of personally identifiable information (PII). We analyze the activations of multilingual large language models (LLMs) and find that different translations of the same prompt are bridged in similar representations, with the strongest alignment in the middle layers.   Our results highlight a fundamental security gap in modern LLMs, necessitating more robust, language-agnostic sanitization strategies for future model alignment."
+      "en": "Large Language Models have emerged as promising tools for software vulnerability analysis, but their effectiveness depends heavily on prompt design. Existing research primarily compares prompting strategies using aggregate performance metrics, providing limited insight into why models fail or how prompts can be improved systematically. We propose Failure-Driven Prompt Refinement (FDPR), a methodology that analyzes recurring model failures to guide evidence-based prompt refinement. Using the Damn Vulnerable Java Application (DVJA), we identify recurring failure modes, including false positives, false negatives, unsupported reasoning, and CWE misclassification, and translate them into targeted prompt refinements. We then evaluate the resulting prompt on the Juliet Test Suite and perform cross-model validation to assess generalizability. The results show that failure-driven refinement improves the reliability of LLM-based vulnerability analysis while yielding reusable prompt design principles. More broadly, this work demonstrates that recurring model failures provide a principled foundation for prompt engineering, enabling the systematic development of more reliable LLM-based vulnerability analysis systems.",
+      "tr": "Large Language Models have emerged as promising tools for software vulnerability analysis, but their effectiveness depends heavily on prompt design. Existing research primarily compares prompting strategies using aggregate performance metrics, providing limited insight into why models fail or how prompts can be improved systematically. We propose Failure-Driven Prompt Refinement (FDPR), a methodology that analyzes recurring model failures to guide evidence-based prompt refinement. Using the Damn Vulnerable Java Application (DVJA), we identify recurring failure modes, including false positives, false negatives, unsupported reasoning, and CWE misclassification, and translate them into targeted prompt refinements. We then evaluate the resulting prompt on the Juliet Test Suite and perform cross-model validation to assess generalizability. The results show that failure-driven refinement improves the reliability of LLM-based vulnerability analysis while yielding reusable prompt design principles. More broadly, this work demonstrates that recurring model failures provide a principled foundation for prompt engineering, enabling the systematic development of more reliable LLM-based vulnerability analysis systems."
+    }
+  },
+  {
+    "id": "2610.08316v1",
+    "title": "MARCO: The Radioactive Watermark for Protein Generative Models",
+    "authors": [
+      "Huajie Chen",
+      "Xin Guo",
+      "Yuchen Shi",
+      "Yuchen Zhong",
+      "Minhui Xue"
+    ],
+    "published_date": "2026-10-06",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2610.08316v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.08316v1",
+    "content": {
+      "en": "Protein Generative Models (PGMs) have revolutionized structural biology by enabling the design of complex 3D protein structures from sequence data. However, this breakthrough introduces a dual-use challenge, exposing high-value PGMs to economic risks like unauthorized model extraction and biosecurity threats such as biohazard synthesis. To mitigate these threats, we propose \\textbf{MARCO} (\\textsc{COnformation waterMARk}), the first radioactive watermarking framework specifically tailored for PGMs. MARCO establishes a Dual-Layer defense that simultaneously protects intellectual property and ensures the forensic traceability of potential biosecurity misuses. (i) To preserve efficiency, MARCO iteratively embeds watermarks during diffusion reverse denoising via an auxiliary encoder-decoder, allowing the original PGM parameters to remain frozen for broad compatibility. (ii) To preserve biophysical fidelity and maximize robustness, we employ specialized loss functions targeting $C_α$-atom pairwise distances and torsion angles ($ψ, φ$) within an adversarial training framework integrated with stochastic attack simulations. (iii) Crucially, MARCO exhibits ``radioactivity'' where the watermark automatically transfers to the outputs of any pirate models trained on the watermarked data, effectively countering model extraction attacks. Comprehensive experiments demonstrate that MARCO achieves superior fidelity and robustness while successfully validating watermark transferability.",
+      "tr": "Protein Generative Models (PGMs) have revolutionized structural biology by enabling the design of complex 3D protein structures from sequence data. However, this breakthrough introduces a dual-use challenge, exposing high-value PGMs to economic risks like unauthorized model extraction and biosecurity threats such as biohazard synthesis. To mitigate these threats, we propose \\textbf{MARCO} (\\textsc{COnformation waterMARk}), the first radioactive watermarking framework specifically tailored for PGMs. MARCO establishes a Dual-Layer defense that simultaneously protects intellectual property and ensures the forensic traceability of potential biosecurity misuses. (i) To preserve efficiency, MARCO iteratively embeds watermarks during diffusion reverse denoising via an auxiliary encoder-decoder, allowing the original PGM parameters to remain frozen for broad compatibility. (ii) To preserve biophysical fidelity and maximize robustness, we employ specialized loss functions targeting $C_α$-atom pairwise distances and torsion angles ($ψ, φ$) within an adversarial training framework integrated with stochastic attack simulations. (iii) Crucially, MARCO exhibits ``radioactivity'' where the watermark automatically transfers to the outputs of any pirate models trained on the watermarked data, effectively countering model extraction attacks. Comprehensive experiments demonstrate that MARCO achieves superior fidelity and robustness while successfully validating watermark transferability."
+    }
+  },
+  {
+    "id": "2610.08178v1",
+    "title": "On the Intrinsic Limited Robustness of Latent-Based Watermarking",
+    "authors": [
+      "Cheng-Han Yeh",
+      "Kuan-chun Yu",
+      "Cheng-Chang Tsai",
+      "Chun-Shien Lu"
+    ],
+    "published_date": "2026-10-06",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2610.08178v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.08178v1",
+    "content": {
+      "en": "Existing latent-based watermarking methods for diffusion models have overestimated their robustness to image distortions, including geometric transformations such as rotation, scaling, and translation (RST). Moreover, this paradigm of watermarking approaches may suffer from inherent limitations arising from the domain in which the watermark is embedded. In this paper, we provide the first theoretical analysis explaining why these methods lack invariance to perturbations. By relaxing the invariant relation, we derive a maximum perturbation bound that characterizes the relationship between pixel-space perturbations and their corresponding effects in latent space. In addition, we present the first analytical formulation that captures all components of practical detection mechanisms. Finally, we conduct experiments to validate the theoretical findings and the limitations of latent-based watermarking methods. Our theoretical and empirical results indicate that, under the current design paradigm, latent-based watermarking methods intrinsically exhibit limited robustness. We conclude by providing the analytical tool and design guidelines that future research could follow.",
+      "tr": "Existing latent-based watermarking methods for diffusion models have overestimated their robustness to image distortions, including geometric transformations such as rotation, scaling, and translation (RST). Moreover, this paradigm of watermarking approaches may suffer from inherent limitations arising from the domain in which the watermark is embedded. In this paper, we provide the first theoretical analysis explaining why these methods lack invariance to perturbations. By relaxing the invariant relation, we derive a maximum perturbation bound that characterizes the relationship between pixel-space perturbations and their corresponding effects in latent space. In addition, we present the first analytical formulation that captures all components of practical detection mechanisms. Finally, we conduct experiments to validate the theoretical findings and the limitations of latent-based watermarking methods. Our theoretical and empirical results indicate that, under the current design paradigm, latent-based watermarking methods intrinsically exhibit limited robustness. We conclude by providing the analytical tool and design guidelines that future research could follow."
+    }
+  },
+  {
+    "id": "2610.08098v1",
+    "title": "Surviving the Router: Optimizing Skill Injections for Retrieval and Execution",
+    "authors": [
+      "Haneen Najjar",
+      "Luca Scionis",
+      "Haritz Puerto",
+      "Sahar Abdelnabi"
+    ],
+    "published_date": "2026-10-06",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2610.08098v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.08098v1",
+    "content": {
+      "en": "AI agents increasingly rely on modular third-party \"skills\" that are dynamically selected by skill routers to execute complex tasks. While recent studies highlight the threat of prompt injections embedded in these skills, existing evaluations often assume settings where the malicious skill is already selected for execution. We show that this assumption can substantially overestimate attack success. In realistic multi-skill environments, injected skills must first compete for retrieval, reducing the effective attack success rate (ASR) of existing injections by 87-97%. To address this limitation, we introduce CORSA (Cluster Optimization for Router-Aware Skill Attacks), a router-aware attack that optimizes skill injections for both retrieval and execution across clusters of related tasks. We evaluate skill injection attacks under router-managed multi-skill settings by extending the benchmark introduced by SkillRouter with eight malicious payload categories. CORSA uses successive optimization stages to first improve retrieval and then optimize end-to-end attack success, while we evaluate user utility and injection naturalism separately. Our experiments show that CORSA substantially improves both retrieval and end-to-end attack success over existing skill injections while preserving user utility, and that the resulting attacks transfer across different router architectures and LLM backbones.",
+      "tr": "AI agents increasingly rely on modular third-party \"skills\" that are dynamically selected by skill routers to execute complex tasks. While recent studies highlight the threat of prompt injections embedded in these skills, existing evaluations often assume settings where the malicious skill is already selected for execution. We show that this assumption can substantially overestimate attack success. In realistic multi-skill environments, injected skills must first compete for retrieval, reducing the effective attack success rate (ASR) of existing injections by 87-97%. To address this limitation, we introduce CORSA (Cluster Optimization for Router-Aware Skill Attacks), a router-aware attack that optimizes skill injections for both retrieval and execution across clusters of related tasks. We evaluate skill injection attacks under router-managed multi-skill settings by extending the benchmark introduced by SkillRouter with eight malicious payload categories. CORSA uses successive optimization stages to first improve retrieval and then optimize end-to-end attack success, while we evaluate user utility and injection naturalism separately. Our experiments show that CORSA substantially improves both retrieval and end-to-end attack success over existing skill injections while preserving user utility, and that the resulting attacks transfer across different router architectures and LLM backbones."
+    }
+  },
+  {
+    "id": "2610.08097v1",
+    "title": "When Tools Lie: Reliability of Mathematical Agents Under Corrupted Tool Feedback",
+    "authors": [
+      "Kavienan Jegatheesan",
+      "Gayathri Lihinikaduarachchi"
+    ],
+    "published_date": "2026-10-06",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.SE"
+    ],
+    "link": "http://arxiv.org/abs/2610.08097v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.08097v1",
+    "content": {
+      "en": "Mathematical problem solving often requires deterministic computational steps that agents delegate to tools and implicitly trust. Yet tools can fail silently, returning plausible but incorrect results. How well can agents detect and correct corrupted tool call outputs? We study this through a controlled corruption framework where a hidden interceptor replaces tool call results with plausible incorrect information on targeted problems. We evaluate agents across 31 problems under four verification designs including no verification (baseline), mandatory same-context reflection, optional fresh-context verification, and optional structural verification. Without verification, corruption causes dramatic accuracy loss, from 100% down to 72.4%. Mandatory reflection fully recovers this performance to 100%. Optional verification improves accuracy only when models actively invoke it. Our results show that checking frequency is strongly associated with robustness differences, while unequal invocation prevents a controlled comparison of verifier quality. A supporting recovery experiment shows that full problem restart succeeds in 100% of cases after explicit detection. These findings demonstrate that verifier availability and verification policy are separate components of mathematical-agent reliability. Mandatory policies enforce verification while optional policies depend on the model's own choice to invoke it.",
+      "tr": "Mathematical problem solving often requires deterministic computational steps that agents delegate to tools and implicitly trust. Yet tools can fail silently, returning plausible but incorrect results. How well can agents detect and correct corrupted tool call outputs? We study this through a controlled corruption framework where a hidden interceptor replaces tool call results with plausible incorrect information on targeted problems. We evaluate agents across 31 problems under four verification designs including no verification (baseline), mandatory same-context reflection, optional fresh-context verification, and optional structural verification. Without verification, corruption causes dramatic accuracy loss, from 100% down to 72.4%. Mandatory reflection fully recovers this performance to 100%. Optional verification improves accuracy only when models actively invoke it. Our results show that checking frequency is strongly associated with robustness differences, while unequal invocation prevents a controlled comparison of verifier quality. A supporting recovery experiment shows that full problem restart succeeds in 100% of cases after explicit detection. These findings demonstrate that verifier availability and verification policy are separate components of mathematical-agent reliability. Mandatory policies enforce verification while optional policies depend on the model's own choice to invoke it."
+    }
+  },
+  {
+    "id": "2610.08090v1",
+    "title": "Explainable Rule Mining of IPv6 Extension-Header Presence Patterns from Paired-Vantage Captures",
+    "authors": [
+      "Priyanka Sinha",
+      "Nikolaos Kekatos",
+      "Stylianos Basagiannis",
+      "Antonio Anastasio Bruto da Costa",
+      "Alexios Lekidis"
+    ],
+    "published_date": "2026-10-06",
+    "tags": [
+      "cs.CR",
+      "cs.LG",
+      "cs.NI"
+    ],
+    "link": "http://arxiv.org/abs/2610.08090v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.08090v1",
+    "content": {
+      "en": "IPv6 extension headers (EHs), such as fragmentation, segment routing, and in-situ telemetry, are operationally important yetwidely dropped in transit, and characterising their behaviour from packet captures is a recurring measurement problem. We ask whetheran explainable miner can recover human-readable rules of EH behaviour, and we contribute two reusable tools: a negative-control protocol that diagnoses whether a mined \"temporal\" network rule reflects genuine cross-packet dynamics or mere within-packetco-occurrence, and a sender-conditioned, per-family EH-retention measurement. Applying an interpretable temporal-logic rule miner to the JAMES paired-vantage dataset, we recover a portable Fragment-EH rule that the protocol reveals to be a within-packet,near-definitional co-occurrence rather than a temporal pattern, so the temporal-logic machinery does no work for this dominant rule;the retention measurement independently recovers the expected within-window ordering of EH observability. Our main result istherefore an honest, controlled negative finding, corroborated by executed decision-tree and large-language-model baselines: on theevaluated JAMES traces network-temporal structure does not carry the dominant Fragment-EH signal, and we supply the controls thatestablish when it would, validated on a synthetic positive control containing a genuine cross-packet dependency.",
+      "tr": "IPv6 extension headers (EHs), such as fragmentation, segment routing, and in-situ telemetry, are operationally important yetwidely dropped in transit, and characterising their behaviour from packet captures is a recurring measurement problem. We ask whetheran explainable miner can recover human-readable rules of EH behaviour, and we contribute two reusable tools: a negative-control protocol that diagnoses whether a mined \"temporal\" network rule reflects genuine cross-packet dynamics or mere within-packetco-occurrence, and a sender-conditioned, per-family EH-retention measurement. Applying an interpretable temporal-logic rule miner to the JAMES paired-vantage dataset, we recover a portable Fragment-EH rule that the protocol reveals to be a within-packet,near-definitional co-occurrence rather than a temporal pattern, so the temporal-logic machinery does no work for this dominant rule;the retention measurement independently recovers the expected within-window ordering of EH observability. Our main result istherefore an honest, controlled negative finding, corroborated by executed decision-tree and large-language-model baselines: on theevaluated JAMES traces network-temporal structure does not carry the dominant Fragment-EH signal, and we supply the controls thatestablish when it would, validated on a synthetic positive control containing a genuine cross-packet dependency."
+    }
+  },
+  {
+    "id": "2610.07723v1",
+    "title": "The Model Plants the Trigger: Answer-Side Backdoor Attacks in Multi-Turn Large Language Models",
+    "authors": [
+      "Yibo Zhang",
+      "Tianrong Guan",
+      "Liang Lin",
+      "Puze Wang",
+      "Jin Wang"
+    ],
+    "published_date": "2026-10-06",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2610.07723v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.07723v1",
+    "content": {
+      "en": "Safety alignment in Large Language Models (LLMs) remains vulnerable to backdoor attacks. Existing LLM backdoors are almost all input-centric: activation depends on explicit trigger patterns in the user input, so modern guardrails are built to sanitize the input space. We challenge this assumption with a novel answer-side backdoor for multi-turn dialogue. Instead of inserting the trigger into the input, the adversary uses a benign first-turn prompt to naturally induce the model to generate a specific, seemingly innocuous word. Once merged into the dialogue history, this self-generated word becomes the trigger. When a later harmful query arrives, the model detects its own trigger and bypasses its safety refusal, while the user input stays perfectly clean. Across four LLMs, our attack reaches near-perfect Attack Success Rates, approaching 100\\% at only a 5\\% poisoning rate, while preserving general utility and clean-input safety, and it evades mainstream input-centric defenses. Representation-level analysis shows that the self-generated trigger consistently suppresses the model's refusal signal, exposing a critical blind spot in current LLM defenses.",
+      "tr": "Safety alignment in Large Language Models (LLMs) remains vulnerable to backdoor attacks. Existing LLM backdoors are almost all input-centric: activation depends on explicit trigger patterns in the user input, so modern guardrails are built to sanitize the input space. We challenge this assumption with a novel answer-side backdoor for multi-turn dialogue. Instead of inserting the trigger into the input, the adversary uses a benign first-turn prompt to naturally induce the model to generate a specific, seemingly innocuous word. Once merged into the dialogue history, this self-generated word becomes the trigger. When a later harmful query arrives, the model detects its own trigger and bypasses its safety refusal, while the user input stays perfectly clean. Across four LLMs, our attack reaches near-perfect Attack Success Rates, approaching 100\\% at only a 5\\% poisoning rate, while preserving general utility and clean-input safety, and it evades mainstream input-centric defenses. Representation-level analysis shows that the self-generated trigger consistently suppresses the model's refusal signal, exposing a critical blind spot in current LLM defenses."
     }
   }
 ]
