@@ -1,215 +1,205 @@
 [
   {
-    "id": "2610.10345v1",
-    "title": "SLDR: Defending Against Malicious Fine-tuning via Selective Layers Recovery and Dynamic Routing",
+    "id": "2610.12463v1",
+    "title": "From Reactive Containment to Proactive Assurance: Lessons from OpenAI, Anthropic, and Google Agent Security Incidents",
     "authors": [
-      "Hui Zhang",
-      "Yachao Yuan",
-      "Jiayun Wang",
-      "Yuanzhuo Li",
-      "Hongtao Wang"
+      "Abbas Raftari"
     ],
-    "published_date": "2026-10-07",
+    "published_date": "2026-10-08",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2610.10345v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.10345v1",
+    "link": "http://arxiv.org/abs/2610.12463v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.12463v1",
     "content": {
-      "en": "Fine-tuning-as-a-service enables users to adapt aligned large language models (LLMs) to specialized tasks, but malicious fine-tuning can erode refusal behavior while preserving task performance on legitimate inputs. We revisit recent layer-wise safety diagnostics and find that safety sensitivity is signed: scaling different layers can strengthen refusal, weaken it, or have little effect. Motivated by this observation, we propose SLDR, a post-fine-tuning defense based on Selective Layers Recovery and Dynamic Routing. SLDR trains a LoRA recovery adapter only on the layers with the maximum and minimum sensitivity scores in the signed spectrum, and uses representation-based dynamic routing inference to activate the adapter only for malicious queries. Across four model architectures, five downstream tasks, and four harmful benchmarks, SLDR substantially reduces harmful outputs while preserving downstream utility. On Llama3.1/SST2, SLDR reduces the average harmful score from 11.54 to 0.08 while maintaining downstream accuracy, and the harmful score remains near zero under poisoning ratios up to 0.9. The code is available at https://github.com/Stardust457/SLDR.",
-      "tr": "Fine-tuning-as-a-service enables users to adapt aligned large language models (LLMs) to specialized tasks, but malicious fine-tuning can erode refusal behavior while preserving task performance on legitimate inputs. We revisit recent layer-wise safety diagnostics and find that safety sensitivity is signed: scaling different layers can strengthen refusal, weaken it, or have little effect. Motivated by this observation, we propose SLDR, a post-fine-tuning defense based on Selective Layers Recovery and Dynamic Routing. SLDR trains a LoRA recovery adapter only on the layers with the maximum and minimum sensitivity scores in the signed spectrum, and uses representation-based dynamic routing inference to activate the adapter only for malicious queries. Across four model architectures, five downstream tasks, and four harmful benchmarks, SLDR substantially reduces harmful outputs while preserving downstream utility. On Llama3.1/SST2, SLDR reduces the average harmful score from 11.54 to 0.08 while maintaining downstream accuracy, and the harmful score remains near zero under poisoning ratios up to 0.9. The code is available at https://github.com/Stardust457/SLDR."
+      "en": "In 2026, cybersecurity evaluations involving OpenAI, Anthropic, and Google agents reached real systems outside their authorized test scope. The paths were different. OpenAI agents exploited research infrastructure, coordinated across runs, and compromised parts of Hugging Face's production environment. Anthropic reported cases in which a misconfigured third-party environment exposed real systems to agents pursuing simulated cyber tasks. In a separately reported evaluation, Google's Gemini accessed three real organizations through an unintended internet route; Google stated that the model stopped in all three instances. Taken together, the cases show why an evaluation cannot rely on an assumed boundary. That boundary must be verified while the agent is operating. This comparative instrumental case study develops a Proactive Agent Security Assurance Cycle (PASAC) and a five-layer Boundary Assurance Stack. The framework combines risk-tiered task design, executable scope contracts, pre-run validation, least-capability access, independent egress enforcement, credential restrictions, cross-run monitoring, automatic stop conditions, and evidence-based reauthorization. A leading-indicator model, nine design propositions, and seven falsifiable hypotheses turn these lessons into a testable research program. Because the public Gemini record is limited to attributed statements and journalism, its detailed causal mechanism remains provisional. The central conclusion is straightforward: proactive agent security requires continuous assurance across the full execution system, not confidence in any single sandbox or safeguard.",
+      "tr": "In 2026, cybersecurity evaluations involving OpenAI, Anthropic, and Google agents reached real systems outside their authorized test scope. The paths were different. OpenAI agents exploited research infrastructure, coordinated across runs, and compromised parts of Hugging Face's production environment. Anthropic reported cases in which a misconfigured third-party environment exposed real systems to agents pursuing simulated cyber tasks. In a separately reported evaluation, Google's Gemini accessed three real organizations through an unintended internet route; Google stated that the model stopped in all three instances. Taken together, the cases show why an evaluation cannot rely on an assumed boundary. That boundary must be verified while the agent is operating. This comparative instrumental case study develops a Proactive Agent Security Assurance Cycle (PASAC) and a five-layer Boundary Assurance Stack. The framework combines risk-tiered task design, executable scope contracts, pre-run validation, least-capability access, independent egress enforcement, credential restrictions, cross-run monitoring, automatic stop conditions, and evidence-based reauthorization. A leading-indicator model, nine design propositions, and seven falsifiable hypotheses turn these lessons into a testable research program. Because the public Gemini record is limited to attributed statements and journalism, its detailed causal mechanism remains provisional. The central conclusion is straightforward: proactive agent security requires continuous assurance across the full execution system, not confidence in any single sandbox or safeguard."
     }
   },
   {
-    "id": "2610.10276v1",
-    "title": "PatchBench: Measuring Collateral Damage in Activation Patching",
+    "id": "2610.12233v1",
+    "title": "ReSI: Recursive Safety Improvement toward Resistant and Resilient AI",
     "authors": [
-      "Alexi Canesse",
-      "Mathis Le Bail",
-      "Maël Jenny",
-      "Clément Elliker",
-      "Mahammed El Sharkawy"
+      "Jingnan Zheng",
+      "Dongcheng Zhang",
+      "Yi Zhang",
+      "Ming Zhang",
+      "Qiaosheng Zhang"
     ],
-    "published_date": "2026-10-07",
-    "tags": [
-      "cs.LG",
-      "cs.CL",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2610.10276v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.10276v1",
-    "content": {
-      "en": "An LLM safety patch can pass a benchmark while still being a poor repair. This risk is especially acute for jailbreak repairs, where the goal is to correct a specific unsafe behaviour without changing unrelated behaviours. A patch may block exact evaluation prompts yet fail on close harmful variants, or suppress harmful behaviour by over-refusing benign prompts that share its wording or structure. Existing protocols primarily test whether models can be broken, while aggregate metrics (attack success, refusal rates, global capability) cannot distinguish selective repairs from broader local suppression. To address this gap, we introduce PatchBench, a benchmark of empirically observed model-specific jailbreak failures inducing actionable harmful answers. Starting from 27,870 prompts from 37 public datasets, we curate 15,314 English prompts and query 8 open-source instruction-tuned models. Combining WildGuard filtering, pairwise Elo ranking, and manual verification, we retain a curated bank of 400 high-confidence jailbreak failures. We further introduce PatchBench-Local, an evaluation protocol testing whether a patch is behaviourally precise. For each harmful source prompt, PatchBench-Local generates three families of local neighbours: harmful variants preserving malicious intent, benign prompts with matched structure, and benign prompts reusing key harmful terms. It evaluates harmful-neighbour correction and benign-neighbour preservation, distinguishing selective repair from broader local suppression. Evaluating four activation steering methods with PatchBench-Local and MMLU shows that global capability can remain nearly unchanged while local benign regressions are severe, confirming aggregate metrics miss important collateral damage. PatchBench-Local provides a more precise basis for developing and comparing jailbreak repair methods.",
-      "tr": "An LLM safety patch can pass a benchmark while still being a poor repair. This risk is especially acute for jailbreak repairs, where the goal is to correct a specific unsafe behaviour without changing unrelated behaviours. A patch may block exact evaluation prompts yet fail on close harmful variants, or suppress harmful behaviour by over-refusing benign prompts that share its wording or structure. Existing protocols primarily test whether models can be broken, while aggregate metrics (attack success, refusal rates, global capability) cannot distinguish selective repairs from broader local suppression. To address this gap, we introduce PatchBench, a benchmark of empirically observed model-specific jailbreak failures inducing actionable harmful answers. Starting from 27,870 prompts from 37 public datasets, we curate 15,314 English prompts and query 8 open-source instruction-tuned models. Combining WildGuard filtering, pairwise Elo ranking, and manual verification, we retain a curated bank of 400 high-confidence jailbreak failures. We further introduce PatchBench-Local, an evaluation protocol testing whether a patch is behaviourally precise. For each harmful source prompt, PatchBench-Local generates three families of local neighbours: harmful variants preserving malicious intent, benign prompts with matched structure, and benign prompts reusing key harmful terms. It evaluates harmful-neighbour correction and benign-neighbour preservation, distinguishing selective repair from broader local suppression. Evaluating four activation steering methods with PatchBench-Local and MMLU shows that global capability can remain nearly unchanged while local benign regressions are severe, confirming aggregate metrics miss important collateral damage. PatchBench-Local provides a more precise basis for developing and comparing jailbreak repair methods."
-    }
-  },
-  {
-    "id": "2610.10260v1",
-    "title": "PairAudit: Guiding Human Review with Graph Tokens under Distribution Shift",
-    "authors": [
-      "Jiran Tao",
-      "Binyan Jiang"
-    ],
-    "published_date": "2026-10-07",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2610.10260v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.10260v1",
-    "content": {
-      "en": "Intrusion detectors can confidently misclassify attacks that were not seen during training. Human review can correct these errors, but only a limited number of cases can be checked. Uncertainty-based review may overlook confident errors, while anomaly scores alone do not show whether changing the review plan will correct more errors. We introduce PairAudit to find overlooked errors and improve review under a fixed budget. Its graph tokens capture prediction patterns across connected nodes. Rather than building another predictor through feature aggregation, PairAudit uses unusual relational patterns to uncover potential errors in existing predictions. Human feedback then helps decide whether these findings justify changing review priorities. Experiments across security tasks show that PairAudit corrects more errors on average than uncertainty-based review, including more errors on unseen attacks. These gains account for all review costs and do not require retraining the detector.",
-      "tr": "Intrusion detectors can confidently misclassify attacks that were not seen during training. Human review can correct these errors, but only a limited number of cases can be checked. Uncertainty-based review may overlook confident errors, while anomaly scores alone do not show whether changing the review plan will correct more errors. We introduce PairAudit to find overlooked errors and improve review under a fixed budget. Its graph tokens capture prediction patterns across connected nodes. Rather than building another predictor through feature aggregation, PairAudit uses unusual relational patterns to uncover potential errors in existing predictions. Human feedback then helps decide whether these findings justify changing review priorities. Experiments across security tasks show that PairAudit corrects more errors on average than uncertainty-based review, including more errors on unseen attacks. These gains account for all review costs and do not require retraining the detector."
-    }
-  },
-  {
-    "id": "2610.10068v1",
-    "title": "Efficient Provably Private Classification with a Tabular Foundation Model",
-    "authors": [
-      "Talal Alrawajfeh",
-      "Cristiana Diaconu",
-      "Ossi Räisä",
-      "Sebastian Rodriguez Beltran",
-      "Yuan He"
-    ],
-    "published_date": "2026-10-07",
-    "tags": [
-      "cs.LG",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2610.10068v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.10068v1",
-    "content": {
-      "en": "Tabular data underpin prediction and decision-making in medicine, finance, government and science, but often contain sensitive individual-level information, creating a need for accurate prediction while preserving privacy. Traditional private learning provides formal privacy guarantees, but requires slow dataset-specific optimisation, suffers substantial utility loss under strong privacy, and is often difficult to apply correctly. Tabular foundation models adapt rapidly to new datasets, but existing models lack formal privacy guarantees, and are highly vulnerable to membership-inference attacks, limiting their use on sensitive data. Here we introduce PrivTab, an easy to use tabular foundation model for differentially private classification that embeds a privacy mechanism within its architecture. Pretrained on simulated datasets, PrivTab uses in-context learning to transform sensitive rows into compact, provably private summaries---effectively learning how to learn under privacy. PrivTab outperforms private linear and neural-network baselines under moderate-to-strong privacy, shows negligible membership leakage, maintains well-calibrated predictions under strong privacy, and reduces dataset fitting time by 10,000 times, requiring only a single forward pass. By combining formal privacy, speed, and easy of use, PrivTab brings recent advances in AI to applications where sensitive individual-level data have limited their adoption.",
-      "tr": "Tabular data underpin prediction and decision-making in medicine, finance, government and science, but often contain sensitive individual-level information, creating a need for accurate prediction while preserving privacy. Traditional private learning provides formal privacy guarantees, but requires slow dataset-specific optimisation, suffers substantial utility loss under strong privacy, and is often difficult to apply correctly. Tabular foundation models adapt rapidly to new datasets, but existing models lack formal privacy guarantees, and are highly vulnerable to membership-inference attacks, limiting their use on sensitive data. Here we introduce PrivTab, an easy to use tabular foundation model for differentially private classification that embeds a privacy mechanism within its architecture. Pretrained on simulated datasets, PrivTab uses in-context learning to transform sensitive rows into compact, provably private summaries---effectively learning how to learn under privacy. PrivTab outperforms private linear and neural-network baselines under moderate-to-strong privacy, shows negligible membership leakage, maintains well-calibrated predictions under strong privacy, and reduces dataset fitting time by 10,000 times, requiring only a single forward pass. By combining formal privacy, speed, and easy of use, PrivTab brings recent advances in AI to applications where sensitive individual-level data have limited their adoption."
-    }
-  },
-  {
-    "id": "2610.09906v1",
-    "title": "Constrained-Action AI Remediation for SIEM/XDR via a NeMo-Guardrails Proxy",
-    "authors": [
-      "Georgios Koutidis",
-      "Nikolaos Kekatos",
-      "Tom Nianios",
-      "Alexios Lekidis"
-    ],
-    "published_date": "2026-10-07",
+    "published_date": "2026-10-08",
     "tags": [
       "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2610.12233v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.12233v1",
+    "content": {
+      "en": "Recursive self-improvement, the participation of AI systems in improving their own capabilities, is beginning to move from theoretical prospect to practice, posing both challenges and opportunities for safety alignment. Models evolve through frequent updates, and their safety alignment requires continual adaptation to each new checkpoint. Meanwhile, with evolving red-teaming methods exposing new vulnerabilities, safety improvement for each checkpoint needs to mitigate exposed vulnerabilities and generalize to risks not yet revealed. Following R$^2$AI, we term these goals resistance to known threats and resilience to unforeseen risks. Recursive self-improvement, in turn, inspires an approach to both goals: safety alignment could likewise advance through successive rounds of evaluation and update. We therefore introduce ReSI, a recursive safety improvement framework that implements this approach through automated research. In each round, ReSI applies diverse red-teaming methods to identify vulnerabilities in the current target model, develops training recipes, and promotes the update with the largest safety gain among those passing a Pareto gate on capability retention as the next target model. Across four dense and mixture-of-experts models, ReSI matches or exceeds evaluated frontier models on in-distribution and out-of-distribution safety benchmarks, and outperforms alignment baselines on nearly all safety evaluations while largely preserving general capabilities. In particular, ReSI reduces the mean X-Teaming attack success rate across the four models from 86.01% to 31.45%, well below GPT-5.6-Luna's leading frontier result of 56.69%, indicating stronger resilience to attacks unseen during training. These findings support recursive safety improvement as a practical path toward resistant and resilient AI.",
+      "tr": "Recursive self-improvement, the participation of AI systems in improving their own capabilities, is beginning to move from theoretical prospect to practice, posing both challenges and opportunities for safety alignment. Models evolve through frequent updates, and their safety alignment requires continual adaptation to each new checkpoint. Meanwhile, with evolving red-teaming methods exposing new vulnerabilities, safety improvement for each checkpoint needs to mitigate exposed vulnerabilities and generalize to risks not yet revealed. Following R$^2$AI, we term these goals resistance to known threats and resilience to unforeseen risks. Recursive self-improvement, in turn, inspires an approach to both goals: safety alignment could likewise advance through successive rounds of evaluation and update. We therefore introduce ReSI, a recursive safety improvement framework that implements this approach through automated research. In each round, ReSI applies diverse red-teaming methods to identify vulnerabilities in the current target model, develops training recipes, and promotes the update with the largest safety gain among those passing a Pareto gate on capability retention as the next target model. Across four dense and mixture-of-experts models, ReSI matches or exceeds evaluated frontier models on in-distribution and out-of-distribution safety benchmarks, and outperforms alignment baselines on nearly all safety evaluations while largely preserving general capabilities. In particular, ReSI reduces the mean X-Teaming attack success rate across the four models from 86.01% to 31.45%, well below GPT-5.6-Luna's leading frontier result of 56.69%, indicating stronger resilience to attacks unseen during training. These findings support recursive safety improvement as a practical path toward resistant and resilient AI."
+    }
+  },
+  {
+    "id": "2610.12211v1",
+    "title": "Verification with Transfer: Exact Information Frontiers and Their Price in Calls",
+    "authors": [
+      "Hazar Yueksel"
+    ],
+    "published_date": "2026-10-08",
+    "tags": [
+      "cs.LG",
+      "cs.CR",
+      "cs.IT",
+      "stat.ML"
+    ],
+    "link": "http://arxiv.org/abs/2610.12211v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.12211v1",
+    "content": {
+      "en": "A verifier that accepts or rejects whole answers reveals little: under a flat prior over $k$-bit answers, zero error needs $2^k-1$ verifications. The usual remedy is to solve related source tasks, either all first, as a curriculum does, or interleaved with verification. We price this remedy in information and in calls. With an exact verifier, the least causal information that any interleaving of source calls and $n$ verifications needs to succeed with probability $s$ is a list rate-distortion function, attained by one observation before any verification. It lower-bounds the expected number of binary source calls, which designed sources meet within $1+\\log_25$ calls for unique answers and within a logarithmic term in general, where no additive constant suffices. With an exact verifier and fixed sources, moving every call before the first verification preserves all hard caps on calls, although interleaving can save unboundedly many expected calls; under a noisy verifier, source-first protocols can lose unbounded factors in information and in error. For linear banks over $\\mathbb{F}_2$, optimal accuracy has a closed form, and after a polynomial-time reduction the budget profile is computable in time $2^{O(h^2)}\\operatorname{poly}(J,k+h)$ for $J$ sources and nuisance dimension $h$. In these banks, for zero error under a hard cap, the calls beyond the rounded-up information price are exactly those spent on nuisance. Every numbered result apart from two clauses about the planner is machine-checked in Lean 4, assuming two published results. Used as a ruler, the frontier shows a small transformer using all delivered bits at latent dimension $5$ and none at $11$ within fixed training budgets; in a test with predictions recorded before training, low XOR degree of the target bits did not suffice for their use.",
+      "tr": "A verifier that accepts or rejects whole answers reveals little: under a flat prior over $k$-bit answers, zero error needs $2^k-1$ verifications. The usual remedy is to solve related source tasks, either all first, as a curriculum does, or interleaved with verification. We price this remedy in information and in calls. With an exact verifier, the least causal information that any interleaving of source calls and $n$ verifications needs to succeed with probability $s$ is a list rate-distortion function, attained by one observation before any verification. It lower-bounds the expected number of binary source calls, which designed sources meet within $1+\\log_25$ calls for unique answers and within a logarithmic term in general, where no additive constant suffices. With an exact verifier and fixed sources, moving every call before the first verification preserves all hard caps on calls, although interleaving can save unboundedly many expected calls; under a noisy verifier, source-first protocols can lose unbounded factors in information and in error. For linear banks over $\\mathbb{F}_2$, optimal accuracy has a closed form, and after a polynomial-time reduction the budget profile is computable in time $2^{O(h^2)}\\operatorname{poly}(J,k+h)$ for $J$ sources and nuisance dimension $h$. In these banks, for zero error under a hard cap, the calls beyond the rounded-up information price are exactly those spent on nuisance. Every numbered result apart from two clauses about the planner is machine-checked in Lean 4, assuming two published results. Used as a ruler, the frontier shows a small transformer using all delivered bits at latent dimension $5$ and none at $11$ within fixed training budgets; in a test with predictions recorded before training, low XOR degree of the target bits did not suffice for their use."
+    }
+  },
+  {
+    "id": "2610.12137v1",
+    "title": "Poster: A Preliminary Study of LLM Distillation Inference",
+    "authors": [
+      "Edward Chen",
+      "Yuntao Du"
+    ],
+    "published_date": "2026-10-08",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2610.12137v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.12137v1",
+    "content": {
+      "en": "Unauthorized model distillation, in which a model is trained on the outputs of a proprietary large language model (LLM), is a growing threat to model providers. We study distillation inference: determining whether a suspect model was distilled from another model or trained independently. We formulate this problem as a hypothesis test and estimate the behavior expected under each hypothesis by training shadow models: distilled shadow models learn from the teacher's reasoning traces, whereas independent shadow models learn only from reference answers. The auditor measures how closely each model predicts the teacher's reasoning outputs and then uses the shadow models to convert the suspect's score into a calibrated p-value. In a preliminary study using Qwen2.5-7B as the teacher and Llama-3.2-3B for the suspects, our test achieves a true positive rate of 1.0 at a significance level of 0.02. These results demonstrate the feasibility of using distillation inference to detect distillation attacks.",
+      "tr": "Unauthorized model distillation, in which a model is trained on the outputs of a proprietary large language model (LLM), is a growing threat to model providers. We study distillation inference: determining whether a suspect model was distilled from another model or trained independently. We formulate this problem as a hypothesis test and estimate the behavior expected under each hypothesis by training shadow models: distilled shadow models learn from the teacher's reasoning traces, whereas independent shadow models learn only from reference answers. The auditor measures how closely each model predicts the teacher's reasoning outputs and then uses the shadow models to convert the suspect's score into a calibrated p-value. In a preliminary study using Qwen2.5-7B as the teacher and Llama-3.2-3B for the suspects, our test achieves a true positive rate of 1.0 at a significance level of 0.02. These results demonstrate the feasibility of using distillation inference to detect distillation attacks."
+    }
+  },
+  {
+    "id": "2610.12106v1",
+    "title": "Could LLM Watermark Detection be Public?",
+    "authors": [
+      "Georgios Milis",
+      "Tom Sander",
+      "Tomáš Souček",
+      "Heng Huang",
+      "Pierre Fernandez"
+    ],
+    "published_date": "2026-10-08",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2610.12106v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.12106v1",
+    "content": {
+      "en": "Watermarking large language models is popular for tracing chatbot and agentic outputs, yet detectors remain unreleased since exposing them could let attackers do targeted edits with the detector's feedback. However, watermarks are already vulnerable to uninformed tampering attacks. We thus first quantify whether a public detector would be an additional liability in a deployment setting at varying levels of access, from token-level scores to a binary verdict. Second, we introduce a split-key public-private watermarking method that exposes one key through a public detector while keeping the other for full verification and forensics. An informed attacker can only move the public signal, creating an imbalance between public and private scores. We introduce a statistical test for this imbalance, and combine it with the full key verdict in a two-stage mechanism. Third, we evaluate the split-key method on a wide range of removal and forgery attacks, comparing the uninformed to detector-informed settings. Public detection improves removal only at small edit budgets, since plain rephrasing already strips the watermark at a lower quality cost, but it does enable forgery, which the private pipeline can identify. Overall, releasing half of the watermark enables transparency and interoperability, and tampering with the released half stays detectable. This bounds the provider's liability and questions the need to keep detectors fully private.",
+      "tr": "Watermarking large language models is popular for tracing chatbot and agentic outputs, yet detectors remain unreleased since exposing them could let attackers do targeted edits with the detector's feedback. However, watermarks are already vulnerable to uninformed tampering attacks. We thus first quantify whether a public detector would be an additional liability in a deployment setting at varying levels of access, from token-level scores to a binary verdict. Second, we introduce a split-key public-private watermarking method that exposes one key through a public detector while keeping the other for full verification and forensics. An informed attacker can only move the public signal, creating an imbalance between public and private scores. We introduce a statistical test for this imbalance, and combine it with the full key verdict in a two-stage mechanism. Third, we evaluate the split-key method on a wide range of removal and forgery attacks, comparing the uninformed to detector-informed settings. Public detection improves removal only at small edit budgets, since plain rephrasing already strips the watermark at a lower quality cost, but it does enable forgery, which the private pipeline can identify. Overall, releasing half of the watermark enables transparency and interoperability, and tampering with the released half stays detectable. This bounds the provider's liability and questions the need to keep detectors fully private."
+    }
+  },
+  {
+    "id": "2610.11634v1",
+    "title": "LTBD: Learnable Trust-Boundary Delimiters for Prompt Injection Defense",
+    "authors": [
+      "Luman Zhao",
+      "Minghui Xu",
+      "Yue Zhang",
+      "Yijun Yang"
+    ],
+    "published_date": "2026-10-08",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2610.11634v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.11634v1",
+    "content": {
+      "en": "Large language models (LLMs) perform remarkably well on complex tasks, yet remain highly vulnerable to prompt injection attacks, where malicious instructions embedded in external data can override user intent. Existing defenses remain limited by model fine-tuning requirements, vulnerability to adaptive attacks, or reliance on brittle handcrafted prompts. We argue that a fundamental source of this vulnerability is the lack of an explicit representation of trust provenance. To address this, we introduce Learnable Trust-Boundary Delimiters (LTBD), a lightweight defense that explicitly encodes trust boundaries in the input while keeping the LLM parameters unchanged. LTBD uses a small number of learnable delimiters to distinguish trusted user instructions from untrusted external data, enabling the model to better respect the intended trust hierarchy. Experimental results show that LTBD substantially outperforms inference-time defenses and performs competitively with training-based approaches, while preserving benign-task utility and introducing negligible inference overhead. In particular, LTBD achieves 0.00% ASR on AlpacaFarm and only 0.11-0.19% ASR on TaskTracker. LTBD also remains effective under adaptive attacks, where adversaries have full knowledge of the defense and explicitly attempt to bypass it.",
+      "tr": "Large language models (LLMs) perform remarkably well on complex tasks, yet remain highly vulnerable to prompt injection attacks, where malicious instructions embedded in external data can override user intent. Existing defenses remain limited by model fine-tuning requirements, vulnerability to adaptive attacks, or reliance on brittle handcrafted prompts. We argue that a fundamental source of this vulnerability is the lack of an explicit representation of trust provenance. To address this, we introduce Learnable Trust-Boundary Delimiters (LTBD), a lightweight defense that explicitly encodes trust boundaries in the input while keeping the LLM parameters unchanged. LTBD uses a small number of learnable delimiters to distinguish trusted user instructions from untrusted external data, enabling the model to better respect the intended trust hierarchy. Experimental results show that LTBD substantially outperforms inference-time defenses and performs competitively with training-based approaches, while preserving benign-task utility and introducing negligible inference overhead. In particular, LTBD achieves 0.00% ASR on AlpacaFarm and only 0.11-0.19% ASR on TaskTracker. LTBD also remains effective under adaptive attacks, where adversaries have full knowledge of the defense and explicitly attempt to bypass it."
+    }
+  },
+  {
+    "id": "2610.11467v1",
+    "title": "GROB: A Multi-Agent Architecture for Public-Trace Investigation of Candidate Agentic Activity",
+    "authors": [
+      "Chiara Bonfanti",
+      "Cataldo Basile"
+    ],
+    "published_date": "2026-10-08",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2610.11467v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.11467v1",
+    "content": {
+      "en": "We present GROB, a multi-agent architecture for investigating candidate autonomous-agent activity through public Internet traces when privileged telemetry is unavailable. The system performs controlled, read-only collection of public traces and preserves selected observations for later resolution. In a frozen September 2026 corpus, several collected traces became more informative as additional public evidence emerged. The strongest result concerns Census-labelled identifiers captured on 9 September. Public revision records later resolved these identifiers to specific Census requests from 16 - 17 June. Other results show weaker links between traces collected by GROB and evidence reconstructed or reported later. These links vary in strength, and only some can be tied to specific public records. The results show that sparse public traces can remain useful even before their significance is fully understood. Such evidence can support later reconstruction, but public traces alone do not establish organizational attribution. Execution identity presents a separate problem, as continuity of agent identity remains an active research question for autonomous language-model agents.",
+      "tr": "We present GROB, a multi-agent architecture for investigating candidate autonomous-agent activity through public Internet traces when privileged telemetry is unavailable. The system performs controlled, read-only collection of public traces and preserves selected observations for later resolution. In a frozen September 2026 corpus, several collected traces became more informative as additional public evidence emerged. The strongest result concerns Census-labelled identifiers captured on 9 September. Public revision records later resolved these identifiers to specific Census requests from 16 - 17 June. Other results show weaker links between traces collected by GROB and evidence reconstructed or reported later. These links vary in strength, and only some can be tied to specific public records. The results show that sparse public traces can remain useful even before their significance is fully understood. Such evidence can support later reconstruction, but public traces alone do not establish organizational attribution. Execution identity presents a separate problem, as continuity of agent identity remains an active research question for autonomous language-model agents."
+    }
+  },
+  {
+    "id": "2610.11218v1",
+    "title": "BRACE: Differential Privacy for Dense Associative Memory with LSR Energy",
+    "authors": [
+      "Chang Qu",
+      "Zhaoyang Shi"
+    ],
+    "published_date": "2026-10-08",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2610.11218v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.11218v1",
+    "content": {
+      "en": "Dense associative memory (DAM) provides an energy-based framework for memory retrieval with close connections to attention mechanisms in modern artificial intelligence. Despite growing interest in differential privacy for AI, the privacy of DAM retrieval dynamics remains relatively unexplored. In this paper, we develop a differential privacy framework for log-sum-ReLU (LSR) dense associative memory, whose finite-support retrieval dynamics pose distinctive challenges for privacy-preserving computation. We propose the Boundary-Responsive Adaptive Correction Evolution (BRACE) algorithm, a differentially private retrieval mechanism for LSR-DAM that adaptively corrects boundary-sensitive perturbations to control their cumulative effect over the retrieval trajectory. In theory, we prove that our method is minimax optimal by deriving dimension-independent terminal and full-trajectory retrieval error rates, with optimal dependence on the inverse temperature and, in the growing-horizon regime, the retrieval horizon. We further establish central limit theorems that enable uncertainty quantification for private retrieval by characterizing its asymptotic distribution and the additional variability introduced by privacy. Numerical experiments compare our proposed method with baseline differential privacy approaches and evaluate its retrieval accuracy. Together, our results provide a theoretical foundation for optimal privacy-preserving retrieval and uncertainty quantification in energy-based associative memory systems.",
+      "tr": "Dense associative memory (DAM) provides an energy-based framework for memory retrieval with close connections to attention mechanisms in modern artificial intelligence. Despite growing interest in differential privacy for AI, the privacy of DAM retrieval dynamics remains relatively unexplored. In this paper, we develop a differential privacy framework for log-sum-ReLU (LSR) dense associative memory, whose finite-support retrieval dynamics pose distinctive challenges for privacy-preserving computation. We propose the Boundary-Responsive Adaptive Correction Evolution (BRACE) algorithm, a differentially private retrieval mechanism for LSR-DAM that adaptively corrects boundary-sensitive perturbations to control their cumulative effect over the retrieval trajectory. In theory, we prove that our method is minimax optimal by deriving dimension-independent terminal and full-trajectory retrieval error rates, with optimal dependence on the inverse temperature and, in the growing-horizon regime, the retrieval horizon. We further establish central limit theorems that enable uncertainty quantification for private retrieval by characterizing its asymptotic distribution and the additional variability introduced by privacy. Numerical experiments compare our proposed method with baseline differential privacy approaches and evaluate its retrieval accuracy. Together, our results provide a theoretical foundation for optimal privacy-preserving retrieval and uncertainty quantification in energy-based associative memory systems."
+    }
+  },
+  {
+    "id": "2610.11163v1",
+    "title": "Characterizing Statistical Separability in TP-CRIV for Probabilistic AI Models",
+    "authors": [
+      "Teruki Sano",
+      "Minoru Kuribayashi",
+      "Masao Sakai",
+      "Shuji Isobe",
+      "Eisuke Koizumi"
+    ],
+    "published_date": "2026-10-08",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2610.11163v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.11163v1",
+    "content": {
+      "en": "Third-party challenge-response identity verification (TP-CRIV) enables an independent verifier to assess whether a claimant possesses a model identical to a remotely deployed model without directly accessing the reference model. However, for probabilistic AI models, repeated executions of the same query may produce different outputs and therefore different verification observations. This raises the question of how such stochastic evidence should be accumulated and how much evidence is required for reliable verification.   In this work, we characterize statistical separability in TP-CRIV of probabilistic AI models. Specifically, we relate challenge-wise behavior of matching and non-matching provers to verification-level separability. The characterization explicitly describes how the numbers of independent challenges and repeated responses affect detection performance and enables the verification budget required for a target AUC to be estimated. We instantiate the proposed characterization for LLMs using open-ended challenges. The experiments demonstrate matching-non-matching separation, close agreement between theoretical and empirical AUCs, and consistent estimates of the minimum verification budgets. These results provide a statistical basis for relating probabilistic model behavior to verification-level separability and the evidence required for third-party verification.",
+      "tr": "Third-party challenge-response identity verification (TP-CRIV) enables an independent verifier to assess whether a claimant possesses a model identical to a remotely deployed model without directly accessing the reference model. However, for probabilistic AI models, repeated executions of the same query may produce different outputs and therefore different verification observations. This raises the question of how such stochastic evidence should be accumulated and how much evidence is required for reliable verification.   In this work, we characterize statistical separability in TP-CRIV of probabilistic AI models. Specifically, we relate challenge-wise behavior of matching and non-matching provers to verification-level separability. The characterization explicitly describes how the numbers of independent challenges and repeated responses affect detection performance and enables the verification budget required for a target AUC to be estimated. We instantiate the proposed characterization for LLMs using open-ended challenges. The experiments demonstrate matching-non-matching separation, close agreement between theoretical and empirical AUCs, and consistent estimates of the minimum verification budgets. These results provide a statistical basis for relating probabilistic model behavior to verification-level separability and the evidence required for third-party verification."
+    }
+  },
+  {
+    "id": "2610.11031v1",
+    "title": "Language Modeling is Monotone Compression",
+    "authors": [
+      "Noam Mazor",
+      "Andrew Morgan",
+      "Rafael Pass"
+    ],
+    "published_date": "2026-10-08",
+    "tags": [
+      "cs.IT",
       "cs.AI",
-      "cs.CL"
-    ],
-    "link": "http://arxiv.org/abs/2610.09906v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.09906v1",
-    "content": {
-      "en": "Security Operations Centers (SOCs) for information technology and operational technology share one incident-response problem: a flood of correlated alerts and too few analysts. Large Language Models (LLMs) are increasingly proposed as reasoning engines that triage alerts and, in autonomous deployments, issue commands that block IPs, kill processes, or quarantine files on production hosts. This coupling introduces a new risk: a single adversarial alert can become a remote code path through the LLM's reasoning, leading it to recommend an action the SOC then executes. We present a constrained-action architecture with two coordinated layers: (i) a SIEM/XDR control plane that grounds remediation in correlated host events and confines the LLM's output to a closed intent vocabulary whose templated commands are executed by thin endpoint agents, backstopped by an argument validator; and (ii) a NeMo-Guardrails proxy that wraps the SOC-analyst LLM with input- and output-rail policies, evaluated out-of-the-box against a SOC-specific adversarial corpus we release. The stock proxy lifts injection recall from 25.0% to 94.5% at a 0.1% false-positive rate, and a live red-team exercise confirms that the closed intent vocabulary and argument validator contain the observed LLM failure modes before any command crosses the trust boundary. As an architectural fit (not yet a measured operational-technology deployment), the constrained-action property suits critical-infrastructure settings where a wrong remediation has physical, not merely operational, consequences. The loop is best run human-in-the-loop or delayed: the measured rail latency keeps inline control out of scope.",
-      "tr": "Security Operations Centers (SOCs) for information technology and operational technology share one incident-response problem: a flood of correlated alerts and too few analysts. Large Language Models (LLMs) are increasingly proposed as reasoning engines that triage alerts and, in autonomous deployments, issue commands that block IPs, kill processes, or quarantine files on production hosts. This coupling introduces a new risk: a single adversarial alert can become a remote code path through the LLM's reasoning, leading it to recommend an action the SOC then executes. We present a constrained-action architecture with two coordinated layers: (i) a SIEM/XDR control plane that grounds remediation in correlated host events and confines the LLM's output to a closed intent vocabulary whose templated commands are executed by thin endpoint agents, backstopped by an argument validator; and (ii) a NeMo-Guardrails proxy that wraps the SOC-analyst LLM with input- and output-rail policies, evaluated out-of-the-box against a SOC-specific adversarial corpus we release. The stock proxy lifts injection recall from 25.0% to 94.5% at a 0.1% false-positive rate, and a live red-team exercise confirms that the closed intent vocabulary and argument validator contain the observed LLM failure modes before any command crosses the trust boundary. As an architectural fit (not yet a measured operational-technology deployment), the constrained-action property suits critical-infrastructure settings where a wrong remediation has physical, not merely operational, consequences. The loop is best run human-in-the-loop or delayed: the measured rail latency keeps inline control out of scope."
-    }
-  },
-  {
-    "id": "2610.09892v1",
-    "title": "Defensive Sufficiency in a Stackelberg Model of AI Security",
-    "authors": [
-      "Subhabrata Majumdar",
-      "Rajlakshmi Chavan"
-    ],
-    "published_date": "2026-10-07",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2610.09892v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.09892v1",
-    "content": {
-      "en": "Feedback from automated testing, human red teaming, and incident response can strengthen an AI system's defenses when discovered failures lead to effective repairs. We study when this feedback process provides sufficient protection and when investing in it is economically worthwhile. We begin by showing that an attack surface composed of finite number of inputs is defended with probability 1 if every unresolved attack has a persistent chance of discovery, repairs are effective, and subsequent updates preserve earlier protection. We derive completion-time bounds and extend the analysis to growing attack surfaces, repairs that generalize across related attacks, and multiple discovery mechanisms. These results distinguish eventual protection against each fixed attack from complete protection at a single time. We then formulate a defender-led Stackelberg game in which the defender invests in proactive discovery and reactive repair, anticipating the attacker's choice of search effort. We characterize the least-cost allocation that deters attack and the equilibrium regimes in which the defender funds neither capability, one capability, or both. Numerical experiments illustrate these regimes and show how faster repair can reduce compromise duration without reducing compromise probability.unified theory of performance limits in generative language models.",
-      "tr": "Feedback from automated testing, human red teaming, and incident response can strengthen an AI system's defenses when discovered failures lead to effective repairs. We study when this feedback process provides sufficient protection and when investing in it is economically worthwhile. We begin by showing that an attack surface composed of finite number of inputs is defended with probability 1 if every unresolved attack has a persistent chance of discovery, repairs are effective, and subsequent updates preserve earlier protection. We derive completion-time bounds and extend the analysis to growing attack surfaces, repairs that generalize across related attacks, and multiple discovery mechanisms. These results distinguish eventual protection against each fixed attack from complete protection at a single time. We then formulate a defender-led Stackelberg game in which the defender invests in proactive discovery and reactive repair, anticipating the attacker's choice of search effort. We characterize the least-cost allocation that deters attack and the equilibrium regimes in which the defender funds neither capability, one capability, or both. Numerical experiments illustrate these regimes and show how faster repair can reduce compromise duration without reducing compromise probability.unified theory of performance limits in generative language models."
-    }
-  },
-  {
-    "id": "2610.09717v1",
-    "title": "Pareto-optimal quantum kernel selection for unsupervised anomaly detection on real malware beaconing data",
-    "authors": [
-      "Boaz Micah",
-      "Nadia Milazzo",
-      "Maissa Beji",
-      "Borja Aizpurua",
-      "Llorenç Espinosa-Portalés"
-    ],
-    "published_date": "2026-10-07",
-    "tags": [
-      "quant-ph",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2610.09717v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.09717v1",
-    "content": {
-      "en": "Quantum kernel methods are leading candidates for a practical quantum advantage in machine learning, but assessing that potential requires two quantities usually reported separately: how well a kernel performs on the task, and how far its geometry departs from the classical kernels available for the same problem. We introduce a fully unsupervised, multi-objective protocol that optimises simultaneously the normalised pseudo discrepancy (NPD), a label-free proxy for anomaly detection quality, and the geometric difference (GD) to a tuned classical reference kernel, selecting models from the resulting Pareto front. We apply it to malware beaconing detection in real network traffic, using a one-class support vector machine with fidelity and projected quantum kernels over four data encodings, on simulators and on IQM's 20-qubit Garnet processor. NPD-guided selection alone finds a fidelity kernel that beats the tuned classical baseline, but with a geometric difference too small to certify the gain as quantum. Projected kernels reach far larger geometric differences; the Pareto-selected one only marginally exceeds the baseline (AUC $0.782$ versus $0.765$, $g_{C\\to Q}\\approx 89>\\sqrt{N}$ relative to that reference kernel), still below the NPD-selected fidelity kernel ($0.840$).",
-      "tr": "Quantum kernel methods are leading candidates for a practical quantum advantage in machine learning, but assessing that potential requires two quantities usually reported separately: how well a kernel performs on the task, and how far its geometry departs from the classical kernels available for the same problem. We introduce a fully unsupervised, multi-objective protocol that optimises simultaneously the normalised pseudo discrepancy (NPD), a label-free proxy for anomaly detection quality, and the geometric difference (GD) to a tuned classical reference kernel, selecting models from the resulting Pareto front. We apply it to malware beaconing detection in real network traffic, using a one-class support vector machine with fidelity and projected quantum kernels over four data encodings, on simulators and on IQM's 20-qubit Garnet processor. NPD-guided selection alone finds a fidelity kernel that beats the tuned classical baseline, but with a geometric difference too small to certify the gain as quantum. Projected kernels reach far larger geometric differences; the Pareto-selected one only marginally exceeds the baseline (AUC $0.782$ versus $0.765$, $g_{C\\to Q}\\approx 89>\\sqrt{N}$ relative to that reference kernel), still below the NPD-selected fidelity kernel ($0.840$)."
-    }
-  },
-  {
-    "id": "2610.09703v1",
-    "title": "Understanding and Mitigating Token-Pruning-Induced Vulnerabilities in VLMs",
-    "authors": [
-      "Shuailong Wang",
-      "Xinyu Lyu",
-      "Shengming Yuan",
-      "Jingkuan Song",
-      "Heng Tao Shen"
-    ],
-    "published_date": "2026-10-07",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2610.09703v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.09703v1",
-    "content": {
-      "en": "Token-Pruning accelerates Vision-Language Models by removing redundant visual tokens, yet its safety implications remain underexplored. In this work, we present the first comprehensive safety evaluation of Token-Pruning mechanisms and find that: most pruning strategies significantly degrade safety as pruning ratios increase, whereas Query-based Compression shows the opposite, with extreme pruning (up to 99.8%), unexpectedly improves model safety. This sharp contrast prompts a key question: How do different Token-Pruning strategies reshape model safety behavior, and is it possible to enhance safety without sacrificing acceleration? To answer this, we identify an unrecognized mechanism, termed Pruning-Induced Malicious Amplification, where removal of background tokens triggers a side effect: forcing the model's attention to collapse onto a few retained malicious anchors within the foreground, inadvertently amplifying their toxic semantics under jailbreak. To address that, we propose an inference-time and plug-and-play Safety-Aware Pruning (SAP) mechanism that counteracts such dominance via three steps: (1) identifying malicious anchors, (2) restoring pruned benign tokens, and (3) reallocating excessive attention from malicious anchors to benign tokens. Extensive experiments across three safety and four utility benchmarks demonstrate that SAP mitigates pruning-induced vulnerabilities, i.e., reducing ASR by up to 62%, without compromising efficiency or utility.",
-      "tr": "Token-Pruning accelerates Vision-Language Models by removing redundant visual tokens, yet its safety implications remain underexplored. In this work, we present the first comprehensive safety evaluation of Token-Pruning mechanisms and find that: most pruning strategies significantly degrade safety as pruning ratios increase, whereas Query-based Compression shows the opposite, with extreme pruning (up to 99.8%), unexpectedly improves model safety. This sharp contrast prompts a key question: How do different Token-Pruning strategies reshape model safety behavior, and is it possible to enhance safety without sacrificing acceleration? To answer this, we identify an unrecognized mechanism, termed Pruning-Induced Malicious Amplification, where removal of background tokens triggers a side effect: forcing the model's attention to collapse onto a few retained malicious anchors within the foreground, inadvertently amplifying their toxic semantics under jailbreak. To address that, we propose an inference-time and plug-and-play Safety-Aware Pruning (SAP) mechanism that counteracts such dominance via three steps: (1) identifying malicious anchors, (2) restoring pruned benign tokens, and (3) reallocating excessive attention from malicious anchors to benign tokens. Extensive experiments across three safety and four utility benchmarks demonstrate that SAP mitigates pruning-induced vulnerabilities, i.e., reducing ASR by up to 62%, without compromising efficiency or utility."
-    }
-  },
-  {
-    "id": "2610.09651v1",
-    "title": "Closed-Form Noise Calibration Against Membership Inference for Random-Allocation DP-SGD",
-    "authors": [
-      "Murat Bilgehan Ertan",
-      "Marten van Dijk"
-    ],
-    "published_date": "2026-10-07",
-    "tags": [
-      "cs.LG",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2610.09651v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.09651v1",
+    "link": "http://arxiv.org/abs/2610.11031v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.11031v1",
     "content": {
-      "en": "DP-SGD protects training data by adding Gaussian noise to clipped gradients. The amount of noise is usually chosen by running a numerical privacy accountant inside a search. We study DP-SGD with random allocation, where each epoch uses every record once, at a randomly chosen step. For this setting we give a one-line formula that bounds the accuracy of every membership inference attack (MIA) on the trained model. With $M$ steps per epoch, $E$ epochs and noise multiplier $σ$, and with membership and non-membership equally likely a priori, the attack accuracy is at most $\\frac12+\\frac14\\sqrt{(1+(e^{1/σ^2}-1)/M)^E-1}$. The formula comes from the chi-square divergence between a Gaussian distribution and a Gaussian mixture that dominates random allocation. It is interpretable and gives $σ$ in about a microsecond. Where applicable, our formula needs at most about half the noise of the state-of-the-art closed-form bound. To measure how close the bound is, we also derive an exact expression for the attack accuracy of these two distributions and evaluate it numerically. Calibrating to this exact expression requires $13.0\\%$ to $20.2\\%$ less noise than the formula in our main experiments, and since it is exact, no accountant that knows only $M$, $E$ and $σ$ can certify a smaller $σ$. In training, the resulting $σ$ outperforms the formula and matches a published accountant in test accuracy. It is found in seconds and certified in minutes, whereas every search we ran with that accountant took longer or returned at least $0.62\\%$ more noise. We show that MIAs on the trained models stay below the bound.",
-      "tr": "DP-SGD protects training data by adding Gaussian noise to clipped gradients. The amount of noise is usually chosen by running a numerical privacy accountant inside a search. We study DP-SGD with random allocation, where each epoch uses every record once, at a randomly chosen step. For this setting we give a one-line formula that bounds the accuracy of every membership inference attack (MIA) on the trained model. With $M$ steps per epoch, $E$ epochs and noise multiplier $σ$, and with membership and non-membership equally likely a priori, the attack accuracy is at most $\\frac12+\\frac14\\sqrt{(1+(e^{1/σ^2}-1)/M)^E-1}$. The formula comes from the chi-square divergence between a Gaussian distribution and a Gaussian mixture that dominates random allocation. It is interpretable and gives $σ$ in about a microsecond. Where applicable, our formula needs at most about half the noise of the state-of-the-art closed-form bound. To measure how close the bound is, we also derive an exact expression for the attack accuracy of these two distributions and evaluate it numerically. Calibrating to this exact expression requires $13.0\\%$ to $20.2\\%$ less noise than the formula in our main experiments, and since it is exact, no accountant that knows only $M$, $E$ and $σ$ can certify a smaller $σ$. In training, the resulting $σ$ outperforms the formula and matches a published accountant in test accuracy. It is found in seconds and certified in minutes, whereas every search we ran with that accountant took longer or returned at least $0.62\\%$ more noise. We show that MIAs on the trained models stay below the bound."
-    }
-  },
-  {
-    "id": "2610.09581v1",
-    "title": "Correct Answers, Unsupported Findings: Evidence Binding in Forensic Reconstruction of LLM Agent Logs",
-    "authors": [
-      "Taehyeon Yun",
-      "Dongho Kim",
-      "Geonwoo Kim",
-      "Juyoung Seo",
-      "Minseok Hur"
-    ],
-    "published_date": "2026-10-07",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2610.09581v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.09581v1",
-    "content": {
-      "en": "Forensic reconstruction of LLM-agent actions requires not only recovering the correct value, but establishing which preserved record supports that finding. Tool logs, generated explanations, and local citation identifiers capture different parts of this evidence, yet a citation identifier does not establish a source unless its binding to a record is preserved. We audit this distinction using 64 mechanically checkable cases from saved AgentDojo Banking executions. Two LLM readers reconstruct source relationships under controlled variations in visible evidence and identifier-to-record bindings. We separately evaluate complete-record agreement, evidence-grounded findings, justified abstention, and unsupported assertions. With original identifiers and no binding table, Sonnet recovered every literal source location but made unsupported citation-source assertions in 26 of 28 cases requiring the missing relation; 22 nevertheless matched the complete reference. Adding explicit bindings improved grounded reconstruction for both readers, whereas identifier renaming alone provided no consistent remedy. A deterministic same-packet comparator correctly resolved the bounded task or abstained throughout. These results show that factual agreement alone is insufficient for evaluating forensic reconstruction of agent logs and motivate preserving explicit record bindings to distinguish supported findings from correct guesses.",
-      "tr": "Forensic reconstruction of LLM-agent actions requires not only recovering the correct value, but establishing which preserved record supports that finding. Tool logs, generated explanations, and local citation identifiers capture different parts of this evidence, yet a citation identifier does not establish a source unless its binding to a record is preserved. We audit this distinction using 64 mechanically checkable cases from saved AgentDojo Banking executions. Two LLM readers reconstruct source relationships under controlled variations in visible evidence and identifier-to-record bindings. We separately evaluate complete-record agreement, evidence-grounded findings, justified abstention, and unsupported assertions. With original identifiers and no binding table, Sonnet recovered every literal source location but made unsupported citation-source assertions in 26 of 28 cases requiring the missing relation; 22 nevertheless matched the complete reference. Adding explicit bindings improved grounded reconstruction for both readers, whereas identifier renaming alone provided no consistent remedy. A deterministic same-packet comparator correctly resolved the bounded task or abstained throughout. These results show that factual agreement alone is insufficient for evaluating forensic reconstruction of agent logs and motivate preserving explicit record bindings to distinguish supported findings from correct guesses."
+      "en": "A long-standing hypothesis in artificial intelligence and neuroscience posits that intelligence is closely related to compression: the ability to compress information efficiently intuitively reflects capacities associated with intelligence and learning. Indeed, recent experimental works verify this intuition by showing connections between the capabilities of large language models (LLMs) and their ability as compressors: for instance, Deletang et al. (ICLR'24) demonstrate that LLMs can be used as powerful compressors, and Huang et al. (COLM'24) show that the compression ability of LLMs is highly correlated with their performance on benchmarks for knowledge and reasoning.   In this work, we initiate a theoretical study of this connection. Our main result is that LLMs (formally modeled as next-token predictors) are equivalent to monotone (a.k.a. order-preserving) compression algorithms---namely, compression algorithms where the encoding process preserves the ordering of the inputs---in the sense that the one can be constructed from the other while preserving the same error up to an additive gap of 2.   We next show that the monotonicity is required for this equivalence to hold if and only if cryptographic (infinitely-often) one-way functions exist.   As a direct corollary, we get a cryptographic result of independent interest: the notion of next-bit pseudoentropy (a computational analogue of entropy) of a distribution is equivalent to monotone incompressibility of the distribution. (Previously, it was only known (Haitner et al., ITCS'23) that incompressibility implies next-bit pseudoentropy.)",
+      "tr": "A long-standing hypothesis in artificial intelligence and neuroscience posits that intelligence is closely related to compression: the ability to compress information efficiently intuitively reflects capacities associated with intelligence and learning. Indeed, recent experimental works verify this intuition by showing connections between the capabilities of large language models (LLMs) and their ability as compressors: for instance, Deletang et al. (ICLR'24) demonstrate that LLMs can be used as powerful compressors, and Huang et al. (COLM'24) show that the compression ability of LLMs is highly correlated with their performance on benchmarks for knowledge and reasoning.   In this work, we initiate a theoretical study of this connection. Our main result is that LLMs (formally modeled as next-token predictors) are equivalent to monotone (a.k.a. order-preserving) compression algorithms---namely, compression algorithms where the encoding process preserves the ordering of the inputs---in the sense that the one can be constructed from the other while preserving the same error up to an additive gap of 2.   We next show that the monotonicity is required for this equivalence to hold if and only if cryptographic (infinitely-often) one-way functions exist.   As a direct corollary, we get a cryptographic result of independent interest: the notion of next-bit pseudoentropy (a computational analogue of entropy) of a distribution is equivalent to monotone incompressibility of the distribution. (Previously, it was only known (Haitner et al., ITCS'23) that incompressibility implies next-bit pseudoentropy.)"
     }
   }
 ]
