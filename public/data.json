@@ -1,215 +1,218 @@
 [
   {
-    "id": "2610.26781v1",
-    "title": "Game of Phones: Harnessing Game Theory and LLMs in 'Bot Wars' to Counteract Phone Scams",
+    "id": "2610.30090v1",
+    "title": "VX-One: Typed, Calibrated Decision Heads for Real-Time Perimeter Triage - An empirical study of unknown-attack honesty, cascade gray zones, and calibration under drift",
     "authors": [
-      "Nardine Basta",
-      "Robin Carpentier",
-      "Benjamin Zi Hao Zhao",
-      "Dali Kaafar"
+      "Juan S. Santillana"
     ],
-    "published_date": "2026-10-19",
+    "published_date": "2026-10-21",
+    "tags": [
+      "cs.CR",
+      "cs.CL",
+      "cs.LG",
+      "cs.NI"
+    ],
+    "link": "http://arxiv.org/abs/2610.30090v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.30090v1",
+    "content": {
+      "en": "Perimeter triage faces a latency/semantics trade-off: signature engines are fast and format-safe but blind to unseen attacks, while generative models are semantic but slow and produce unparseable output. In late 2026 a class of commercial System One decision models (TypeSafe Jev; Microsoft-Decision-1) began selling typed decision primitives - binary gates, closed-set choices, ordinal scores - as product APIs, with no academic treatment. We present VX-One: a small multi-head network (100K-10M parameters) whose outputs are these primitives - a calibrated gate, a choice over a closed candidate set that always includes an explicit unknown option, and an ordinal score, trained multi-task, temperature-calibrated per head (~0.7-1.7 ms p50 on CPU). We evaluate it on UNSW-NB15, CIC-IDS2017, EMBER2024 against calibrated XGBoost, Random-Forest, MLP, Kitsune, and measure a two-phase cascade (Suricata with 52,674 Emerging-Threats rules -> VX-One) over five days of CIC-IDS2017. Findings: (i) VX-One wins detection (AUROC/FPR@95%TPR) on UNSW-NB15 and under temporal drift on CIC-IDS2017 (0.711 vs 0.637), but XGBoost wins multi-class attribution on all three benchmarks; (ii) leave-one-family-out gate detects never-seen families on 9/9 UNSW folds yet drops below chance on CIC recon family, and abstention threshold transfers poorly across benchmarks; (iii) on payload-less reconstructions signature engines resolve ~0.1% of flows - gray zone ~99.9% of traffic, recovered by Phase 2 (combined recall >=0.978); (iv) calibration collapses under temporal drift (ECE 0.04->0.40) for every method while ranking partially survives. We provide a measured account of where typed calibrated decisions help perimeter triage, and where they fail.",
+      "tr": "Perimeter triage faces a latency/semantics trade-off: signature engines are fast and format-safe but blind to unseen attacks, while generative models are semantic but slow and produce unparseable output. In late 2026 a class of commercial System One decision models (TypeSafe Jev; Microsoft-Decision-1) began selling typed decision primitives - binary gates, closed-set choices, ordinal scores - as product APIs, with no academic treatment. We present VX-One: a small multi-head network (100K-10M parameters) whose outputs are these primitives - a calibrated gate, a choice over a closed candidate set that always includes an explicit unknown option, and an ordinal score, trained multi-task, temperature-calibrated per head (~0.7-1.7 ms p50 on CPU). We evaluate it on UNSW-NB15, CIC-IDS2017, EMBER2024 against calibrated XGBoost, Random-Forest, MLP, Kitsune, and measure a two-phase cascade (Suricata with 52,674 Emerging-Threats rules -> VX-One) over five days of CIC-IDS2017. Findings: (i) VX-One wins detection (AUROC/FPR@95%TPR) on UNSW-NB15 and under temporal drift on CIC-IDS2017 (0.711 vs 0.637), but XGBoost wins multi-class attribution on all three benchmarks; (ii) leave-one-family-out gate detects never-seen families on 9/9 UNSW folds yet drops below chance on CIC recon family, and abstention threshold transfers poorly across benchmarks; (iii) on payload-less reconstructions signature engines resolve ~0.1% of flows - gray zone ~99.9% of traffic, recovered by Phase 2 (combined recall >=0.978); (iv) calibration collapses under temporal drift (ECE 0.04->0.40) for every method while ranking partially survives. We provide a measured account of where typed calibrated decisions help perimeter triage, and where they fail."
+    }
+  },
+  {
+    "id": "2610.29225v1",
+    "title": "Beyond Binary Labels: Diagnostic Evaluation of LLM Safety with Prompt-Level Rubrics",
+    "authors": [
+      "Hongyu Li",
+      "Xinlong Huang",
+      "Zhan Yu",
+      "Jing Zhao",
+      "Zhe Zhao"
+    ],
+    "published_date": "2026-10-21",
+    "tags": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2610.29225v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.29225v1",
+    "content": {
+      "en": "Current LLM safety benchmarks predominantly rely on binary safe or unsafe labels, lacking explanatory depth and suffering from low consistency across automated judges. To address this, we introduce DiagSafe, a diagnostic evaluation framework that moves beyond binary classification by employing prompt-level rubrics. Grounded in globally applicable AI safety policies, each rubric provides explicit criteria along two dimensions: safety, which targets concrete harms with specific exemptions to suppress false positives, and usefulness, which independently evaluates instruction fulfillment. To ensure a robust and realistic evaluation, we construct a bilingual (English-Chinese) benchmark grounded in a comprehensive 84-label safety taxonomy, consisting of two subsets: DiagBase, which covers single- and multi-turn prompts with direct harmful queries and template-based jailbreaks, and DiagAttack, which embeds harmful intents into complex instruction-following tasks to form challenging instruction attacks. Extensive experiments demonstrate that DiagSafe significantly enhances the reliability of LLM-as-a-judge evaluation, achieving 95.34% agreement with human annotations -- substantially higher than the 69%-87% achieved by the baselines -- and high inter-judge consistency (Cohen's $κ$ = 0.864). Furthermore, applying our framework reveals that leading LLMs differ markedly in their unsafe rates, and each model also exhibits unique vulnerabilities along different dimensions. In addition, we observe that models are particularly susceptible in Chinese and multi-turn contexts. Ultimately, DiagSafe provides a reliable and explainable tool for auditing and optimizing LLM alignment.",
+      "tr": "Current LLM safety benchmarks predominantly rely on binary safe or unsafe labels, lacking explanatory depth and suffering from low consistency across automated judges. To address this, we introduce DiagSafe, a diagnostic evaluation framework that moves beyond binary classification by employing prompt-level rubrics. Grounded in globally applicable AI safety policies, each rubric provides explicit criteria along two dimensions: safety, which targets concrete harms with specific exemptions to suppress false positives, and usefulness, which independently evaluates instruction fulfillment. To ensure a robust and realistic evaluation, we construct a bilingual (English-Chinese) benchmark grounded in a comprehensive 84-label safety taxonomy, consisting of two subsets: DiagBase, which covers single- and multi-turn prompts with direct harmful queries and template-based jailbreaks, and DiagAttack, which embeds harmful intents into complex instruction-following tasks to form challenging instruction attacks. Extensive experiments demonstrate that DiagSafe significantly enhances the reliability of LLM-as-a-judge evaluation, achieving 95.34% agreement with human annotations -- substantially higher than the 69%-87% achieved by the baselines -- and high inter-judge consistency (Cohen's $κ$ = 0.864). Furthermore, applying our framework reveals that leading LLMs differ markedly in their unsafe rates, and each model also exhibits unique vulnerabilities along different dimensions. In addition, we observe that models are particularly susceptible in Chinese and multi-turn contexts. Ultimately, DiagSafe provides a reliable and explainable tool for auditing and optimizing LLM alignment."
+    }
+  },
+  {
+    "id": "2610.29196v1",
+    "title": "A Unified Evaluation Framework of Physical Adversarial Robustness in the Edge VLM Era",
+    "authors": [
+      "Eric Liang",
+      "Alan Luo",
+      "Kaiwen Yuan"
+    ],
+    "published_date": "2026-10-21",
+    "tags": [
+      "cs.CV",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2610.29196v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.29196v1",
+    "content": {
+      "en": "Recent advancements in Vision-Language Models (VLMs) enable end-to-end visual grounding via language prompts and generative decoding, demonstrating largely improved zero-shot and open-vocabulary detection capabilities. As a result, VLMs are rapidly being deployed at the edge in safety-critical real-world systems. However, the physical adversarial robustness of edge VLMs has not been systematically studied, and the fundamental differences in output with modern object detectors create methodological challenges for fair evaluation. To compare the two families directly, we evaluate every selected representative model on one outcome: whether an adversarial patch worn on a person evades detection of the model. We report this by introducing a unified metric, conditional attack success rate (cASR), counted only on images the model still localizes under a matched gray occluder, and partition every failure into omission (no box), substitution (a box on the patch), and displacement (a box on neither). We benchmark the physical adversarial vulnerability of compact grounding VLMs against a range of object detectors, and find that the VLMs can be as vulnerable as the detectors. We disclose that failure mode is largely associated with the output format of a model rather than its architecture family. Of the three, only omission is visible to a downstream system; displacement and substitution return confident, well-formed boxes, making them potentially more dangerous failures. Further, we find that, under distribution shift, VLMs that primarily failed by omission instead shift to failing more by displacement/substitution. Thus, a grounding VLM can inherit the detector's vulnerability while showing the possibility to adopt more dangerous failure modes. Our code and data are available at https://github.com/ericliang1/physical-adversarial-robustness.",
+      "tr": "Recent advancements in Vision-Language Models (VLMs) enable end-to-end visual grounding via language prompts and generative decoding, demonstrating largely improved zero-shot and open-vocabulary detection capabilities. As a result, VLMs are rapidly being deployed at the edge in safety-critical real-world systems. However, the physical adversarial robustness of edge VLMs has not been systematically studied, and the fundamental differences in output with modern object detectors create methodological challenges for fair evaluation. To compare the two families directly, we evaluate every selected representative model on one outcome: whether an adversarial patch worn on a person evades detection of the model. We report this by introducing a unified metric, conditional attack success rate (cASR), counted only on images the model still localizes under a matched gray occluder, and partition every failure into omission (no box), substitution (a box on the patch), and displacement (a box on neither). We benchmark the physical adversarial vulnerability of compact grounding VLMs against a range of object detectors, and find that the VLMs can be as vulnerable as the detectors. We disclose that failure mode is largely associated with the output format of a model rather than its architecture family. Of the three, only omission is visible to a downstream system; displacement and substitution return confident, well-formed boxes, making them potentially more dangerous failures. Further, we find that, under distribution shift, VLMs that primarily failed by omission instead shift to failing more by displacement/substitution. Thus, a grounding VLM can inherit the detector's vulnerability while showing the possibility to adopt more dangerous failure modes. Our code and data are available at https://github.com/ericliang1/physical-adversarial-robustness."
+    }
+  },
+  {
+    "id": "2610.29178v1",
+    "title": "Correlated Failures of AI Approval Monitors",
+    "authors": [
+      "Luca Zanolini"
+    ],
+    "published_date": "2026-10-21",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "link": "http://arxiv.org/abs/2610.29178v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.29178v1",
+    "content": {
+      "en": "Before an AI agent takes a consequential action, such as paying, messaging or changing code, several monitors check it. Their verdicts are combined by aggregating scores or by counting approvals, whatever inputs the monitors share. Monitors that share a base model or a poisoned input, however, may fail together. We borrow the fail-prone systems of distributed computing: lists of monitor sets that may fail together. A rule is safe if it executes no bad action and live if it blocks no good one. We measured twelve small open-weights monitors on payment approval under two pre-registered protocols. Without pre-registration, we also measured three closed frontier models (Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon) and the open DeepSeek-V3.2. Every reliable fooling of a monitor into approving a fraud came through an evidence source and reached only that source's readers. Fooling it into blocking a correct payment depended on injection resistance, a monitor's refusal to follow instructions planted in its data. Small models and DeepSeek obeyed such notes. The three closed models ignored them in all but one case, and Opus also resisted persuasion tailored to it. On new data, a rule that counts sources instead of votes blocked 0.9% of correct payments, against 7.4% for the best counting rule, at equal safety. The pre-registered worst-case test failed. One attack left the approvers on a single source, so no rule over the twelve language-model monitors survives every measured attack. Adding a rule engine, which cannot be persuaded, restored the condition for a safe and live rule on the measured attacks. Diversify the inputs, harden the monitors, count sources, not votes.",
+      "tr": "Before an AI agent takes a consequential action, such as paying, messaging or changing code, several monitors check it. Their verdicts are combined by aggregating scores or by counting approvals, whatever inputs the monitors share. Monitors that share a base model or a poisoned input, however, may fail together. We borrow the fail-prone systems of distributed computing: lists of monitor sets that may fail together. A rule is safe if it executes no bad action and live if it blocks no good one. We measured twelve small open-weights monitors on payment approval under two pre-registered protocols. Without pre-registration, we also measured three closed frontier models (Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon) and the open DeepSeek-V3.2. Every reliable fooling of a monitor into approving a fraud came through an evidence source and reached only that source's readers. Fooling it into blocking a correct payment depended on injection resistance, a monitor's refusal to follow instructions planted in its data. Small models and DeepSeek obeyed such notes. The three closed models ignored them in all but one case, and Opus also resisted persuasion tailored to it. On new data, a rule that counts sources instead of votes blocked 0.9% of correct payments, against 7.4% for the best counting rule, at equal safety. The pre-registered worst-case test failed. One attack left the approvers on a single source, so no rule over the twelve language-model monitors survives every measured attack. Adding a rule engine, which cannot be persuaded, restored the condition for a safe and live rule on the measured attacks. Diversify the inputs, harden the monitors, count sources, not votes."
+    }
+  },
+  {
+    "id": "2610.28989v1",
+    "title": "AgentPolicyForge: From Executable Environments to Policy Benchmarks and Adaptive Guards",
+    "authors": [
+      "Chao Shang",
+      "Wanyu Du",
+      "Yi Zhang",
+      "Sandesh Swamy"
+    ],
+    "published_date": "2026-10-20",
+    "tags": [
+      "cs.AI",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2610.28989v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.28989v1",
+    "content": {
+      "en": "Customized agent deployments define policies over tools, resources, and execution conditions. Providing these policies in the task agent's prompt does not reliably prevent violations. Training a guard requires examples of tool calls that comply with or violate those policies. We introduce AgentPolicyForge, a framework that uses executable environments to construct policy benchmarks and iteratively train policy guards. With this framework, we construct PolicyGym, a dataset across ten policy families using 698 scenarios for training data generation and 254 separate held-out scenarios for human-reviewed test sets. Tool calls are executed and their outcomes recorded to help determine whether they comply with the policy. Every violating case uses a permitted tool, requiring checks of arguments, resources, and context rather than tool identity alone. The case construction process supports iterative guard training: an attacker generates requests using retrieved strategies, and the guard is fine-tuned on balanced, environment-verified examples. Training improves policy enforcement even with a fixed archive. Updating the archive further reduces in-domain attack success compared with keeping it fixed. We compare policy-aware task agent self-regulation with a trained policy guard. On PolicyGym, the final guard-based configuration achieves a 40-44% relative reduction in attack success rate and fewer benign rejections than policy prompting alone.",
+      "tr": "Customized agent deployments define policies over tools, resources, and execution conditions. Providing these policies in the task agent's prompt does not reliably prevent violations. Training a guard requires examples of tool calls that comply with or violate those policies. We introduce AgentPolicyForge, a framework that uses executable environments to construct policy benchmarks and iteratively train policy guards. With this framework, we construct PolicyGym, a dataset across ten policy families using 698 scenarios for training data generation and 254 separate held-out scenarios for human-reviewed test sets. Tool calls are executed and their outcomes recorded to help determine whether they comply with the policy. Every violating case uses a permitted tool, requiring checks of arguments, resources, and context rather than tool identity alone. The case construction process supports iterative guard training: an attacker generates requests using retrieved strategies, and the guard is fine-tuned on balanced, environment-verified examples. Training improves policy enforcement even with a fixed archive. Updating the archive further reduces in-domain attack success compared with keeping it fixed. We compare policy-aware task agent self-regulation with a trained policy guard. On PolicyGym, the final guard-based configuration achieves a 40-44% relative reduction in attack success rate and fewer benign rejections than policy prompting alone."
+    }
+  },
+  {
+    "id": "2610.28987v1",
+    "title": "PerMIT: Securing Persistent Memory for LLM Agents via Machine-Checked Integrity Theorems and Scalable Community Trust",
+    "authors": [
+      "Tanqiu Jiang",
+      "Min Bai",
+      "Sadat Shahriar",
+      "Wanyu Du",
+      "Sandesh Swamy"
+    ],
+    "published_date": "2026-10-20",
+    "tags": [
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2610.28987v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.28987v1",
+    "content": {
+      "en": "Persistent memory is a largely undefended surface for injection and poisoning, and the same risk limits memory sharing among agents. We present PerMIT, a memory architecture with provable integrity guarantees under an explicit trust assumption: only user-typed inputs and values confirmed at a gate are trusted. PerMIT mediates the release and use of untrusted environment-derived values through a finite memory interface, while preserving agent-driven multi-turn planning and tool choice. Over this finite interface, we prove two integrity theorems that are also machine-checked in Lean 4, which together ensure that environment-derived memory reaches a sensitive action only if confirmed at the gate and influences the agent's behavior only through what the gate displays. Every attack in our threat model thereby reduces to a single auditable decision, which a human, an LLM verifier, or both can make in practice. On Trojan Hippo, PerMIT records zero observed attack success with self-verification and lightweight verifiers. Because each confirmation is a logged verdict on exact content, endorsements accumulate across users, and sufficiently endorsed items become community-confirmed with no further verification required. Under explicit assumptions, we prove and corroborate in simulation a co-scaling property: as the community grows, the risks of promoting poison and of wrongly evicting benign knowledge fall, while per-user verification effort does not rise. On $τ^2$-bench, communities of up to 90 autonomous agents use PerMIT to build shared knowledge bases with no direct memory injection promoted, and the resulting knowledge significantly improves new agents on held-out tasks, suggesting a path toward agents that safely self-improve at test time.",
+      "tr": "Persistent memory is a largely undefended surface for injection and poisoning, and the same risk limits memory sharing among agents. We present PerMIT, a memory architecture with provable integrity guarantees under an explicit trust assumption: only user-typed inputs and values confirmed at a gate are trusted. PerMIT mediates the release and use of untrusted environment-derived values through a finite memory interface, while preserving agent-driven multi-turn planning and tool choice. Over this finite interface, we prove two integrity theorems that are also machine-checked in Lean 4, which together ensure that environment-derived memory reaches a sensitive action only if confirmed at the gate and influences the agent's behavior only through what the gate displays. Every attack in our threat model thereby reduces to a single auditable decision, which a human, an LLM verifier, or both can make in practice. On Trojan Hippo, PerMIT records zero observed attack success with self-verification and lightweight verifiers. Because each confirmation is a logged verdict on exact content, endorsements accumulate across users, and sufficiently endorsed items become community-confirmed with no further verification required. Under explicit assumptions, we prove and corroborate in simulation a co-scaling property: as the community grows, the risks of promoting poison and of wrongly evicting benign knowledge fall, while per-user verification effort does not rise. On $τ^2$-bench, communities of up to 90 autonomous agents use PerMIT to build shared knowledge bases with no direct memory injection promoted, and the resulting knowledge significantly improves new agents on held-out tasks, suggesting a path toward agents that safely self-improve at test time."
+    }
+  },
+  {
+    "id": "2610.28966v1",
+    "title": "Black-Box Red-Teaming of Multi-Agent Systems via Reinforcement Learning",
+    "authors": [
+      "Yuqi Jia",
+      "Hangsheng Zhang",
+      "Chenxi Liu",
+      "Junjie Liang",
+      "Xun Chen"
+    ],
+    "published_date": "2026-10-20",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2610.28966v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.28966v1",
+    "content": {
+      "en": "Large language model (LLM) agents are increasingly deployed in multi-agent systems (MAS) to accomplish complex tasks. Prior black-box red-teaming attacks mainly focus on single agents, but we find that these methods are far less effective in MAS, where multiple sub-agents may not directly interact with the user. Therefore, we introduce ReMAS, the first reinforcement learning-based red-teaming framework tailored to MASs, which fine-tunes attacker LLMs to generate effective adversarial prompts for system prompt extraction. The framework follows a two-step process: first, a rewrite stage refines base attack prompts to increase extraction success, and second, a template generation stage constructs attack templates that improve the likelihood of invoking specific sub-agents and thus revealing their system prompts. Extensive experiments show that our method substantially improves attack success rates compared to existing black-box attacks, with transferability across different backend LLMs and MAS structures. These results underscore the vulnerabilities of multi-agent systems and the importance of developing stronger defenses against adaptive black-box adversaries.",
+      "tr": "Large language model (LLM) agents are increasingly deployed in multi-agent systems (MAS) to accomplish complex tasks. Prior black-box red-teaming attacks mainly focus on single agents, but we find that these methods are far less effective in MAS, where multiple sub-agents may not directly interact with the user. Therefore, we introduce ReMAS, the first reinforcement learning-based red-teaming framework tailored to MASs, which fine-tunes attacker LLMs to generate effective adversarial prompts for system prompt extraction. The framework follows a two-step process: first, a rewrite stage refines base attack prompts to increase extraction success, and second, a template generation stage constructs attack templates that improve the likelihood of invoking specific sub-agents and thus revealing their system prompts. Extensive experiments show that our method substantially improves attack success rates compared to existing black-box attacks, with transferability across different backend LLMs and MAS structures. These results underscore the vulnerabilities of multi-agent systems and the importance of developing stronger defenses against adaptive black-box adversaries."
+    }
+  },
+  {
+    "id": "2610.28872v1",
+    "title": "LEAN: Loss-Engineered Modulation of the Model Weight-Sensitivity Distribution for Efficient, Error-Tolerant Neural Networks",
+    "authors": [
+      "Habibur Rahaman",
+      "Swarup Bhunia"
+    ],
+    "published_date": "2026-10-20",
+    "tags": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2610.28872v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.28872v1",
+    "content": {
+      "en": "The weights of a trained network do not have uniform sensitivity to model accuracy: the 1% most sensitive weights carry about a fifth of the damage a bit flip can do. This distribution decides the bit-flip tolerance of a model, the fraction of weights a code must cover and the bits each weight needs; existing schemes work with the distribution training leaves. We show that we can systematically modulate or alter the weight sensitivity distribution of a trained model, thereby shifting weights from one sensitivity bin to another. The sensitivity of a stored weight is the product of its gradient and the step a flip takes in the storage format, and LEAN adds a composite regularizer on both factors, a range term that bounds the flip step and a tail term that lowers the gradient of the most sensitive weights, with one coefficient λ setting how far the distribution moves. Ten epochs with the term, as a fine-tune or as the last epochs of training, shrink the sensitive tail 5 to 13 times on nine vision models (ResNet-18, ResNet-50, VGG-16 on CIFAR-10, CIFAR-100, ImageNet) within 0.5 points of accuracy; real flips confirm that the reshaped weights do less damage, a plain gradient-norm penalty does not reproduce the effect, and a preliminary extension to three small language models shows the same tail shaping. With a BCH code over 1% of the weights the model then survives 300 progressive bit-search flips in every training seed and 500 in two of three, where three of four published defenses with the same code fail by 300 and WCAT falls to 75% at 500. The reshaped distribution also cuts the parity for a fixed guarantee 3.7 times and makes a sensitivity-ordered 8/6/4/3-bit format affordable, which stores ImageNet ResNet-50 at a 3.29-bit weight payload, 2.4 times smaller than INT8, above the accuracy of LSQ at 3 bits.",
+      "tr": "The weights of a trained network do not have uniform sensitivity to model accuracy: the 1% most sensitive weights carry about a fifth of the damage a bit flip can do. This distribution decides the bit-flip tolerance of a model, the fraction of weights a code must cover and the bits each weight needs; existing schemes work with the distribution training leaves. We show that we can systematically modulate or alter the weight sensitivity distribution of a trained model, thereby shifting weights from one sensitivity bin to another. The sensitivity of a stored weight is the product of its gradient and the step a flip takes in the storage format, and LEAN adds a composite regularizer on both factors, a range term that bounds the flip step and a tail term that lowers the gradient of the most sensitive weights, with one coefficient λ setting how far the distribution moves. Ten epochs with the term, as a fine-tune or as the last epochs of training, shrink the sensitive tail 5 to 13 times on nine vision models (ResNet-18, ResNet-50, VGG-16 on CIFAR-10, CIFAR-100, ImageNet) within 0.5 points of accuracy; real flips confirm that the reshaped weights do less damage, a plain gradient-norm penalty does not reproduce the effect, and a preliminary extension to three small language models shows the same tail shaping. With a BCH code over 1% of the weights the model then survives 300 progressive bit-search flips in every training seed and 500 in two of three, where three of four published defenses with the same code fail by 300 and WCAT falls to 75% at 500. The reshaped distribution also cuts the parity for a fixed guarantee 3.7 times and makes a sensitivity-ordered 8/6/4/3-bit format affordable, which stores ImageNet ResNet-50 at a 3.29-bit weight payload, 2.4 times smaller than INT8, above the accuracy of LSQ at 3 bits."
+    }
+  },
+  {
+    "id": "2610.28810v1",
+    "title": "Combining Long-Term Memory and LLMs Comes at a High Cost: From Prompt Injection to Persistent Compromise",
+    "authors": [
+      "Pedro H. Barcha Correia",
+      "Matheus Azevedo de Sá",
+      "Paulo H. Gomes de Senna",
+      "Giovanni Mandel Martignago",
+      "Victor Takashi Hayashi"
+    ],
+    "published_date": "2026-10-20",
     "tags": [
       "cs.CR",
       "cs.AI",
       "cs.CL",
-      "cs.GT"
-    ],
-    "link": "http://arxiv.org/abs/2610.26781v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.26781v1",
-    "content": {
-      "en": "Phone scams impose substantial and growing costs on individuals and financial systems worldwide, yet existing countermeasures impose no resource cost on perpetrators. Strategic scam-baiting, in which automated agents engage scammers to deplete their operational capacity, offers a proactive alternative but requires dynamic strategy adaptation that static systems cannot provide. We introduce a game-theoretic framework enabling LLMs to learn effective counter-strategies through in-context experience without fine-tuning. The framework models scammer-baiter interactions as a two-player game with empirically grounded strategies and utility functions, using Nash equilibrium as a formal benchmark for evaluating learned behaviour. Across 300 simulated dialogues and three LLM architectures, adaptive strategy selection achieves 28.9-79.7% closer alignment to Nash equilibrium than non-adaptive baselines. The code and an annotated dataset of 300 dialogues with turn-level strategy labels and utility scores are released at https://github.com/nardinebasta/GameofPhones_/ .",
-      "tr": "Phone scams impose substantial and growing costs on individuals and financial systems worldwide, yet existing countermeasures impose no resource cost on perpetrators. Strategic scam-baiting, in which automated agents engage scammers to deplete their operational capacity, offers a proactive alternative but requires dynamic strategy adaptation that static systems cannot provide. We introduce a game-theoretic framework enabling LLMs to learn effective counter-strategies through in-context experience without fine-tuning. The framework models scammer-baiter interactions as a two-player game with empirically grounded strategies and utility functions, using Nash equilibrium as a formal benchmark for evaluating learned behaviour. Across 300 simulated dialogues and three LLM architectures, adaptive strategy selection achieves 28.9-79.7% closer alignment to Nash equilibrium than non-adaptive baselines. The code and an annotated dataset of 300 dialogues with turn-level strategy labels and utility scores are released at https://github.com/nardinebasta/GameofPhones_/ ."
-    }
-  },
-  {
-    "id": "2610.26438v1",
-    "title": "Fake News, Real Crashes: Information Injection Attacks on LLM Financial Trading Agents",
-    "authors": [
-      "Mengxiao Wang",
-      "Nitesh Saxena"
-    ],
-    "published_date": "2026-10-19",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2610.26438v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.26438v1",
-    "content": {
-      "en": "Large language model (LLM) agents now trade real capital using news as evidence, yet they cannot reliably tell fabricated headlines from real news. Because they read the same feeds under near-identical policies, a single fabricated post can push them into the same trade at the same moment. We present a systematic attack benchmark for information injection against LLM trading agents. Unlike prompt injection, which targets the model's instructions, information injection targets the evidence the agent trusts. The benchmark spans five injection vectors and seven event categories, evaluated over ~10,000 decisions on 15 U.S. stocks. Five findings emerge. (i) Prompt injection achieves 14% attack success rate (ASR), but fabricated news reaches 62% and two 30-word templates reach 100% on all 15 stocks, inverting the usual LLM-security intuition. (ii) For fact-poisoning templates, surface form matters more than content, since removing credibility cues such as a named source or a \"BREAKING\" tag drops ASR from 100% to 0% while the fake claim remains identical. (iii) Success depends on the agent's state, with a fake indicator panel scoring 91% against an agent about to hold but 12% against one about to buy. (iv) Attacks generalize across model vendors and remain effective when blended, unlabeled, into real news feeds. (v) Most attacks evade standard defenses, since model scaling stops shallow vectors but not fact poisoning, peer debate fails, and only hierarchical aggregation reduces ASR.",
-      "tr": "Large language model (LLM) agents now trade real capital using news as evidence, yet they cannot reliably tell fabricated headlines from real news. Because they read the same feeds under near-identical policies, a single fabricated post can push them into the same trade at the same moment. We present a systematic attack benchmark for information injection against LLM trading agents. Unlike prompt injection, which targets the model's instructions, information injection targets the evidence the agent trusts. The benchmark spans five injection vectors and seven event categories, evaluated over ~10,000 decisions on 15 U.S. stocks. Five findings emerge. (i) Prompt injection achieves 14% attack success rate (ASR), but fabricated news reaches 62% and two 30-word templates reach 100% on all 15 stocks, inverting the usual LLM-security intuition. (ii) For fact-poisoning templates, surface form matters more than content, since removing credibility cues such as a named source or a \"BREAKING\" tag drops ASR from 100% to 0% while the fake claim remains identical. (iii) Success depends on the agent's state, with a fake indicator panel scoring 91% against an agent about to hold but 12% against one about to buy. (iv) Attacks generalize across model vendors and remain effective when blended, unlabeled, into real news feeds. (v) Most attacks evade standard defenses, since model scaling stops shallow vectors but not fact poisoning, peer debate fails, and only hierarchical aggregation reduces ASR."
-    }
-  },
-  {
-    "id": "2610.26088v1",
-    "title": "LeakBench: Auditing Reward Hacking through Prediction-Time Leakage in Clinical Modeling Agents",
-    "authors": [
-      "Xiaoyuan Bao",
-      "Jingsi Jiang",
-      "Jiao Shan",
-      "Yulong Cao",
-      "Haoyu Wang"
-    ],
-    "published_date": "2026-10-19",
-    "tags": [
-      "cs.CR",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2610.26088v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.26088v1",
+    "link": "http://arxiv.org/abs/2610.28810v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.28810v1",
     "content": {
-      "en": "Autonomous clinical-modeling agents can optimize predictive performance while violating conditions that make a model usable. We introduce LeakBench, an executable, guideline-derived audit suite that tests agent decisions for prediction-time leakage, calibration, site-level evaluation, support awareness, and decision-curve net benefit. LeakBench combines a synthetic task with known failure structure and two real-data settings: MIMIC-IV (430k admissions) and governed multi-hospital inpatient record front-page (MHFP) data. Our primary analysis uses reward hacking descriptively, without attributing intent: an agent selects prediction-time-invalid inputs because they improve its validation reward. A deterministic optimizer and every evaluated unconstrained local-model configuration select a fatal leaking feature. In fully logged September 2026 A/B runs, DeepSeek Flash and GPT-6-astra each leak in 10/10 unconstrained runs and 0/10 runs with an explicit admission-time constraint. This contrast is version-sensitive: a blinded Claude/Fable-5.1 chat run does not leak in either condition, while explicit-constraint violations appear only in a historical August 2026 slice lacking raw trajectories. Replacing AUROC with AUPRC does not remove leakage selection. Renaming or disguising the leaking inputs changes neither selection nor provenance-based detection; a name-based filter fails. A deterministic provenance verifier-in-loop removes the leak, making the LLM repair loop defense-in-depth. Specific verifier feedback clears fatal leakage in a hosted agent, and a three-seed ablation finds principle-only feedback clears decision-level defects, though these mitigation results are limited. LeakBench treats trustworthy clinical prediction as a property of an agent's modeling process, not merely its score; it is an audit testbed with known-failure controls, not yet an expert-validated benchmark.",
-      "tr": "Autonomous clinical-modeling agents can optimize predictive performance while violating conditions that make a model usable. We introduce LeakBench, an executable, guideline-derived audit suite that tests agent decisions for prediction-time leakage, calibration, site-level evaluation, support awareness, and decision-curve net benefit. LeakBench combines a synthetic task with known failure structure and two real-data settings: MIMIC-IV (430k admissions) and governed multi-hospital inpatient record front-page (MHFP) data. Our primary analysis uses reward hacking descriptively, without attributing intent: an agent selects prediction-time-invalid inputs because they improve its validation reward. A deterministic optimizer and every evaluated unconstrained local-model configuration select a fatal leaking feature. In fully logged September 2026 A/B runs, DeepSeek Flash and GPT-6-astra each leak in 10/10 unconstrained runs and 0/10 runs with an explicit admission-time constraint. This contrast is version-sensitive: a blinded Claude/Fable-5.1 chat run does not leak in either condition, while explicit-constraint violations appear only in a historical August 2026 slice lacking raw trajectories. Replacing AUROC with AUPRC does not remove leakage selection. Renaming or disguising the leaking inputs changes neither selection nor provenance-based detection; a name-based filter fails. A deterministic provenance verifier-in-loop removes the leak, making the LLM repair loop defense-in-depth. Specific verifier feedback clears fatal leakage in a hosted agent, and a three-seed ablation finds principle-only feedback clears decision-level defects, though these mitigation results are limited. LeakBench treats trustworthy clinical prediction as a property of an agent's modeling process, not merely its score; it is an audit testbed with known-failure controls, not yet an expert-validated benchmark."
+      "en": "The widespread adoption of generative artificial intelligence in recent years has brought a parallel rise in prompt injection and jailbreak attacks. By embedding malicious instructions, these exploits manipulate language models to bypass intended behavior and operational boundaries. In traditional chatbots, such attacks are confined to a single session because state memory is not preserved across conversations. However, persistent memory features in modern conversational interfaces enable cross-session attack propagation, establishing a threat vector known as memory injection. This work explores this emerging vulnerability in leading LLM-as-a-service platforms, highlighting its real-world severity and the need for countermeasures. While existing literature focuses on violations tailored to specific platform features, we present a general threat model. We demonstrate that all NIST attack goals are collectively achievable across ChatGPT Instant 5.3, Claude Sonnet 4.6, and Gemini 3 Flash under this model. We also show that memory injections can exploit multiple attack vectors, including personal memories, projects, skills, organization instructions, and Model Context Protocol (MCP)-connected resources. Our findings reveal that all evaluated services can be manipulated to persistently spread disinformation, generate harmful content, or simulate offline unresponsiveness, even in fresh sessions. In the particular case of Claude, shared-memory features allow an attacker to compromise multiple users within an organization and also exfiltrate user prompts. To address these vulnerabilities, we derive defense mechanisms from our proposed threat model and foundational cybersecurity principles. Our analysis indicates that nearly half of these mitigations remain unimplemented across the target services. Datasets and attack artifacts are available at https://github.com/PedroBarcha/Memory-injection.",
+      "tr": "The widespread adoption of generative artificial intelligence in recent years has brought a parallel rise in prompt injection and jailbreak attacks. By embedding malicious instructions, these exploits manipulate language models to bypass intended behavior and operational boundaries. In traditional chatbots, such attacks are confined to a single session because state memory is not preserved across conversations. However, persistent memory features in modern conversational interfaces enable cross-session attack propagation, establishing a threat vector known as memory injection. This work explores this emerging vulnerability in leading LLM-as-a-service platforms, highlighting its real-world severity and the need for countermeasures. While existing literature focuses on violations tailored to specific platform features, we present a general threat model. We demonstrate that all NIST attack goals are collectively achievable across ChatGPT Instant 5.3, Claude Sonnet 4.6, and Gemini 3 Flash under this model. We also show that memory injections can exploit multiple attack vectors, including personal memories, projects, skills, organization instructions, and Model Context Protocol (MCP)-connected resources. Our findings reveal that all evaluated services can be manipulated to persistently spread disinformation, generate harmful content, or simulate offline unresponsiveness, even in fresh sessions. In the particular case of Claude, shared-memory features allow an attacker to compromise multiple users within an organization and also exfiltrate user prompts. To address these vulnerabilities, we derive defense mechanisms from our proposed threat model and foundational cybersecurity principles. Our analysis indicates that nearly half of these mitigations remain unimplemented across the target services. Datasets and attack artifacts are available at https://github.com/PedroBarcha/Memory-injection."
     }
   },
   {
-    "id": "2610.26054v1",
-    "title": "Blame-aware Recomposition for Secure Compilation Proofs of Low-Level Compartment Isolation",
+    "id": "2610.28797v1",
+    "title": "CALLIOPE: Private Insights into AI Use, Without Embeddings",
     "authors": [
-      "Basile Schlosser",
-      "Jérémy Thibault",
-      "Catalin Hritcu"
+      "Edith Cohen",
+      "Vadym Doroshenko",
+      "Badih Ghazi",
+      "Charlie Harrison",
+      "Pritish Kamath"
     ],
-    "published_date": "2026-10-19",
+    "published_date": "2026-10-20",
     "tags": [
-      "cs.PL",
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2610.26054v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.26054v1",
+    "link": "http://arxiv.org/abs/2610.28797v1",
+    "pdf_link": "https://arxiv.org/pdf/2610.28797v1",
     "content": {
-      "en": "The security guarantees of existing formally verified compilers for compartmentalized programs in unsafe languages like C stop at a rather high level, assuming a built-in protection mechanism and a block-based memory model. Verifying a concrete, low-level enforcement mechanism for compartment isolation is still a major challenge for current proof techniques. In particular, Abate et al.'s proof technique fails because one of their proof steps, recomposition, essentially requires hiding all information about the code of each compartment, which is not practically achievable at a low level. We propose an extension of their proof technique to a low-level setting where compartments can fully observe each other's code. To do so, we introduce an overlay semantics that allows us to characterize these observations as a form of undefined behaviour, and we use a novel variant of recomposition that we call blame-aware recomposition, which essentially allows recomposing executions as needed in the original high-level proof technique, even if the low-level context observes the code, because this context is ultimately going to be discarded. We apply this new proof to a compartment isolation mechanism that uses a programmable tag-based reference monitor.",
-      "tr": "The security guarantees of existing formally verified compilers for compartmentalized programs in unsafe languages like C stop at a rather high level, assuming a built-in protection mechanism and a block-based memory model. Verifying a concrete, low-level enforcement mechanism for compartment isolation is still a major challenge for current proof techniques. In particular, Abate et al.'s proof technique fails because one of their proof steps, recomposition, essentially requires hiding all information about the code of each compartment, which is not practically achievable at a low level. We propose an extension of their proof technique to a low-level setting where compartments can fully observe each other's code. To do so, we introduce an overlay semantics that allows us to characterize these observations as a form of undefined behaviour, and we use a novel variant of recomposition that we call blame-aware recomposition, which essentially allows recomposing executions as needed in the original high-level proof technique, even if the low-level context observes the code, because this context is ultimately going to be discarded. We apply this new proof to a compartment isolation mechanism that uses a programmable tag-based reference monitor."
-    }
-  },
-  {
-    "id": "2610.26001v1",
-    "title": "SPLASH: Contrastive Audit Pressure for Detecting and Localizing Security Hallucinations in Generated Code",
-    "authors": [
-      "Mirza Masfiqur Rahman",
-      "MD Ajwad Akil",
-      "Imtiaz Karim",
-      "Ashish Kundu",
-      "Ramana Kompella"
-    ],
-    "published_date": "2026-10-19",
-    "tags": [
-      "cs.CR",
-      "cs.LG",
-      "cs.SE"
-    ],
-    "link": "http://arxiv.org/abs/2610.26001v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.26001v1",
-    "content": {
-      "en": "Code generated by large language models often passes every functional test while remaining insecure. These security hallucinations are common, written with high confidence, and repeated across samples, so neither the generator's own uncertainty nor static analyzers reliably catch them. We introduce SPLASH, which is guided by a new measure called audit pressure. It contrasts teacher-forced log-probabilities for the generated program under a security review and a style review. Aggregated to statements and programs, and grounded in a probabilistic model of competing edits, audit pressure allows SPLASH to choose the secure program among a model's candidate programs and locate the vulnerable statement, with no model training, CWE-specific rules, or internal access to the generating model. On 63,684 programs generated by 12 models for 899 tasks, SPLASH picks secure code in 74% of cases, places the vulnerable statement first in 58% of insecure programs, and chooses better than a frontier LLM judge.",
-      "tr": "Code generated by large language models often passes every functional test while remaining insecure. These security hallucinations are common, written with high confidence, and repeated across samples, so neither the generator's own uncertainty nor static analyzers reliably catch them. We introduce SPLASH, which is guided by a new measure called audit pressure. It contrasts teacher-forced log-probabilities for the generated program under a security review and a style review. Aggregated to statements and programs, and grounded in a probabilistic model of competing edits, audit pressure allows SPLASH to choose the secure program among a model's candidate programs and locate the vulnerable statement, with no model training, CWE-specific rules, or internal access to the generating model. On 63,684 programs generated by 12 models for 899 tasks, SPLASH picks secure code in 74% of cases, places the vulnerable statement first in 58% of insecure programs, and chooses better than a frontier LLM judge."
-    }
-  },
-  {
-    "id": "2610.25985v1",
-    "title": "NIOCIS: Typed-Decision Next-Hop Routing with Node-Conditioned Option Spaces for Tool-Use Agents",
-    "authors": [
-      "Jin Han",
-      "Mingfeng Xin",
-      "Feng Liang",
-      "Jingtao Yu"
-    ],
-    "published_date": "2026-10-19",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2610.25985v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.25985v1",
-    "content": {
-      "en": "Tool-use agents pay per decision: at each hop a language model re-reads the state and thinks for seconds, though its actions are finite and decisions recur. We present NIOCIS, a routing layer that folds execution logs into a loop-collapsed action graph (forward transitions plus recovery back-edges) answering one typed question: which declared option at a state, plus stop, does the fleet take next? A small model reads a calibrated distribution over them in one pass, emitting no text. On 1,615 production security-operations episodes we measure what the layer replaces, returns and is bounded by. Replaces: the typed encoder matches the logged next hop on 32.2% of the 3,875 held-out decisions (34.9% within the declared options) in 10 ms of encoder time (19.5 ms for the typed-choice form), against 2.2 s per LLM hop; two feature readouts reach 32.8% and 32.3%, an ordering the paired test does not resolve, so the typed layer is chosen for cost, not a separated lead. Tuning: jpt-4b reaches 9.9% zero-shot and 31.9% fine-tuned, a gap an exact paired test does not resolve (p=0.68), at 244 ms. Returns little: the realised hop falls outside the declared options for 7.9% of decisions and outside the model's top twenty for 9.3%; the most confident 15% holds 91.9% accuracy. Bounded: a cross-trace leave-one-out test puts the released state's ceiling at 25.6--44.9% as the state key grows more specific, i.e. repeated states disagree more often than they agree; the option-space ablation attributes the gain to per-node candidate restriction (+3.5 points over a flat catalog) rather than graph traversal (zero within its interval); a gated self-evolution loop lifts every arm above its anchor yet ends below full supervision; a confidence-gated cascade loses agreement when the escalation arm is the zero-shot stand-in; and agreement past a third of the fleet needs a state carrying the plan and the observation.",
-      "tr": "Tool-use agents pay per decision: at each hop a language model re-reads the state and thinks for seconds, though its actions are finite and decisions recur. We present NIOCIS, a routing layer that folds execution logs into a loop-collapsed action graph (forward transitions plus recovery back-edges) answering one typed question: which declared option at a state, plus stop, does the fleet take next? A small model reads a calibrated distribution over them in one pass, emitting no text. On 1,615 production security-operations episodes we measure what the layer replaces, returns and is bounded by. Replaces: the typed encoder matches the logged next hop on 32.2% of the 3,875 held-out decisions (34.9% within the declared options) in 10 ms of encoder time (19.5 ms for the typed-choice form), against 2.2 s per LLM hop; two feature readouts reach 32.8% and 32.3%, an ordering the paired test does not resolve, so the typed layer is chosen for cost, not a separated lead. Tuning: jpt-4b reaches 9.9% zero-shot and 31.9% fine-tuned, a gap an exact paired test does not resolve (p=0.68), at 244 ms. Returns little: the realised hop falls outside the declared options for 7.9% of decisions and outside the model's top twenty for 9.3%; the most confident 15% holds 91.9% accuracy. Bounded: a cross-trace leave-one-out test puts the released state's ceiling at 25.6--44.9% as the state key grows more specific, i.e. repeated states disagree more often than they agree; the option-space ablation attributes the gain to per-node candidate restriction (+3.5 points over a flat catalog) rather than graph traversal (zero within its interval); a gated self-evolution loop lifts every arm above its anchor yet ends below full supervision; a confidence-gated cascade loses agreement when the escalation arm is the zero-shot stand-in; and agreement past a third of the fleet needs a state carrying the plan and the observation."
-    }
-  },
-  {
-    "id": "2610.25982v1",
-    "title": "Auditor-Assisted Summary-Channel Verification for Hosted LLM Identity Substitution",
-    "authors": [
-      "Ziyi Zhang",
-      "Ziyao Wang",
-      "Guoheng Sun",
-      "Ang Li",
-      "Jian Li"
-    ],
-    "published_date": "2026-10-19",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2610.25982v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.25982v1",
-    "content": {
-      "en": "Hosted LLM services increasingly expose model identity as a product claim, but external users and auditors often cannot inspect which model configuration served a request. We study an auditor-assisted regime in which a trusted auditor enrolls claimed identities and prepares verification material before deployment, while audit-time verification uses only the claimed identity and released output, without runtime access to model internals, inference logs, routing decisions, or provider metadata. We propose SUMMARK, a summary-channel watermarking framework that uses user-visible reasoning summaries as a keyed audit surface. During setup, SUMMARK constructs identity-specific vocabulary carriers, trains lightweight summary adapters, and calibrates per-identity thresholds. At deployment time, a keyed statistical test assesses whether the released summary is consistent with the claimed identity and, when needed, attributes the most likely enrolled identity. Across model families, scales, and task domains, SUMMARK reliably detects cross-family and cross-scale substitutions at low false-positive rates while preserving task-facing answer quality. We further study FP16->INT8/INT4 precision-consistency diagnostics and robustness under bounded post-processing, rewriting stress tests, and text-only spoofing, revealing both strong performance and clear failure boundaries. Our code is publicly available at https://github.com/trinitr0toluene/Summark.",
-      "tr": "Hosted LLM services increasingly expose model identity as a product claim, but external users and auditors often cannot inspect which model configuration served a request. We study an auditor-assisted regime in which a trusted auditor enrolls claimed identities and prepares verification material before deployment, while audit-time verification uses only the claimed identity and released output, without runtime access to model internals, inference logs, routing decisions, or provider metadata. We propose SUMMARK, a summary-channel watermarking framework that uses user-visible reasoning summaries as a keyed audit surface. During setup, SUMMARK constructs identity-specific vocabulary carriers, trains lightweight summary adapters, and calibrates per-identity thresholds. At deployment time, a keyed statistical test assesses whether the released summary is consistent with the claimed identity and, when needed, attributes the most likely enrolled identity. Across model families, scales, and task domains, SUMMARK reliably detects cross-family and cross-scale substitutions at low false-positive rates while preserving task-facing answer quality. We further study FP16->INT8/INT4 precision-consistency diagnostics and robustness under bounded post-processing, rewriting stress tests, and text-only spoofing, revealing both strong performance and clear failure boundaries. Our code is publicly available at https://github.com/trinitr0toluene/Summark."
-    }
-  },
-  {
-    "id": "2610.25916v1",
-    "title": "Secure Agentic Coding through Counterexample-Grounded Feedback",
-    "authors": [
-      "Tue Le",
-      "Anh Nguyen Hoang",
-      "Gabriel Sasseville",
-      "Doseok Jang",
-      "Pierre-Luc Bacon"
-    ],
-    "published_date": "2026-10-19",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2610.25916v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.25916v1",
-    "content": {
-      "en": "As coding models and agent harnesses become more capable, reliable security verification is becoming a central bottleneck. Improving secure code generation requires a signal whose reported progress remains aligned with actual program behavior under optimization; otherwise, an optimizer can improve the signal's verdict without removing the underlying vulnerability. Existing model-based approaches require models to either infer program behavior from source code or specify correct outcomes for adversarial tests, placing substantial reasoning demands on the security signal. We introduce \\falcon{}, a counterexample-grounded verification framework that separates attack exploration from behavioral verification and connects them through execution traces of the program under test. In test-time repair, \\falcon{} yields substantially stronger held-out functional-security gains than alternative security signals across secure code generation benchmarks, while preserving or improving functionality. As an RL reward, \\falcon{} also outperforms static-analysis and learned rewards on held-out functional-security, even when all policies successfully optimize their respective training rewards. Combining \\falcon{} with either proxy reward further improves held-out performance, suggesting that execution-grounded feedback can mitigate reward overoptimization while preserving useful guidance from existing security signals.",
-      "tr": "As coding models and agent harnesses become more capable, reliable security verification is becoming a central bottleneck. Improving secure code generation requires a signal whose reported progress remains aligned with actual program behavior under optimization; otherwise, an optimizer can improve the signal's verdict without removing the underlying vulnerability. Existing model-based approaches require models to either infer program behavior from source code or specify correct outcomes for adversarial tests, placing substantial reasoning demands on the security signal. We introduce \\falcon{}, a counterexample-grounded verification framework that separates attack exploration from behavioral verification and connects them through execution traces of the program under test. In test-time repair, \\falcon{} yields substantially stronger held-out functional-security gains than alternative security signals across secure code generation benchmarks, while preserving or improving functionality. As an RL reward, \\falcon{} also outperforms static-analysis and learned rewards on held-out functional-security, even when all policies successfully optimize their respective training rewards. Combining \\falcon{} with either proxy reward further improves held-out performance, suggesting that execution-grounded feedback can mitigate reward overoptimization while preserving useful guidance from existing security signals."
-    }
-  },
-  {
-    "id": "2610.25743v1",
-    "title": "Fundamental Limits of Information-Theoretic Secure Aggregation with User Dropouts in Federated Learning",
-    "authors": [
-      "Jinbao Zhu",
-      "Kai Wan",
-      "Giuseppe Caire"
-    ],
-    "published_date": "2026-10-19",
-    "tags": [
-      "cs.IT",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2610.25743v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.25743v1",
-    "content": {
-      "en": "Secure aggregation enables a server to compute the sum of users' gradients or model updates without revealing individual values. With user dropouts, correlated random keys protect local gradients while allowing recovery of the desired gradient sum. We consider three phases: key distribution, masked-gradient upload, and mask elimination. Users establish correlated keys, upload masked gradients, and provide additional messages to eliminate residual aggregate masks. Existing information-theoretic schemes typically design mask-elimination communication for a prescribed dropout threshold and evaluate its cost under worst-case dropouts across the masked-gradient upload and mask-elimination phases. Such designs cannot adjust communication to actual dropout scenarios. Moreover, the randomness and communication costs of establishing correlated keys remain largely unexplored. To address these limitations, we formulate an adaptive secure aggregation framework under the T-colluding security constraint and construct a single scheme that supports all feasible dropout scenarios by adapting its communication to the actual number of dropouts. We establish converse bounds on four resources: key randomness, key-distribution communication, masked-gradient communication, and mask-elimination communication. The latter two bounds are characterized for each realized dropout set in the masked-gradient upload phase. The proposed scheme achieves the optimal masked-gradient communication rate for every feasible dropout scenario and the optimal mask-elimination communication rate in almost all feasible regimes. Its key rate and key-distribution communication rate are each optimal or within a factor of two of their respective information-theoretic optima. These results characterize the fundamental randomness and communication costs of secure aggregation with user dropouts.",
-      "tr": "Secure aggregation enables a server to compute the sum of users' gradients or model updates without revealing individual values. With user dropouts, correlated random keys protect local gradients while allowing recovery of the desired gradient sum. We consider three phases: key distribution, masked-gradient upload, and mask elimination. Users establish correlated keys, upload masked gradients, and provide additional messages to eliminate residual aggregate masks. Existing information-theoretic schemes typically design mask-elimination communication for a prescribed dropout threshold and evaluate its cost under worst-case dropouts across the masked-gradient upload and mask-elimination phases. Such designs cannot adjust communication to actual dropout scenarios. Moreover, the randomness and communication costs of establishing correlated keys remain largely unexplored. To address these limitations, we formulate an adaptive secure aggregation framework under the T-colluding security constraint and construct a single scheme that supports all feasible dropout scenarios by adapting its communication to the actual number of dropouts. We establish converse bounds on four resources: key randomness, key-distribution communication, masked-gradient communication, and mask-elimination communication. The latter two bounds are characterized for each realized dropout set in the masked-gradient upload phase. The proposed scheme achieves the optimal masked-gradient communication rate for every feasible dropout scenario and the optimal mask-elimination communication rate in almost all feasible regimes. Its key rate and key-distribution communication rate are each optimal or within a factor of two of their respective information-theoretic optima. These results characterize the fundamental randomness and communication costs of secure aggregation with user dropouts."
-    }
-  },
-  {
-    "id": "2610.25366v1",
-    "title": "GreenNIDS: A Benchmark Workflow and Analysis Dataset for NetFlow Intrusion Detection Experiments",
-    "authors": [
-      "Lilia-Eliana Popescu-Apreutesei",
-      "Sabina-Cristiana Necula"
-    ],
-    "published_date": "2026-10-18",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2610.25366v1",
-    "pdf_link": "https://arxiv.org/pdf/2610.25366v1",
-    "content": {
-      "en": "Comparing the predictive performance and computational cost of flow-based intrusion detection experiments requires both quantities to be available for each run. GreenNIDS connects benchmark execution on public NetFlow datasets to a reusable analysis dataset. Model implementations write a common set of outputs, which are ingested into a run-level table with companion tables for model configuration, feature importance, and training history. The run-level table combines predictive metrics with timing, throughput, memory use, and energy estimates based on thermal design power. A CPU-only demonstration comprises 216 runs across four dataset families, three versions, and binary and multiclass tasks. Ingestion produces a 216 x 96 analysis table with no duplicate run identifiers and complete Matthews correlation coefficient (MCC) and F1 coverage. Multiclass ROC-AUC is missing for 36 PyTorch runs, making metric availability an explicit part of subsequent comparisons. The stored records support grouped performance and training-time plots, as well as resource screening after execution. Combining task-specific MCC thresholds with limits on training time, peak RAM, and estimated training energy retains 25.0% of the full run collection. These results establish compatibility within the evaluated collection and support comparisons after execution, subject to the recorded preprocessing, execution profile, and approximate energy accounting.",
-      "tr": "Comparing the predictive performance and computational cost of flow-based intrusion detection experiments requires both quantities to be available for each run. GreenNIDS connects benchmark execution on public NetFlow datasets to a reusable analysis dataset. Model implementations write a common set of outputs, which are ingested into a run-level table with companion tables for model configuration, feature importance, and training history. The run-level table combines predictive metrics with timing, throughput, memory use, and energy estimates based on thermal design power. A CPU-only demonstration comprises 216 runs across four dataset families, three versions, and binary and multiclass tasks. Ingestion produces a 216 x 96 analysis table with no duplicate run identifiers and complete Matthews correlation coefficient (MCC) and F1 coverage. Multiclass ROC-AUC is missing for 36 PyTorch runs, making metric availability an explicit part of subsequent comparisons. The stored records support grouped performance and training-time plots, as well as resource screening after execution. Combining task-specific MCC thresholds with limits on training time, peak RAM, and estimated training energy retains 25.0% of the full run collection. These results establish compatibility within the evaluated collection and support comparisons after execution, subject to the recorded preprocessing, execution profile, and approximate energy accounting."
+      "en": "We introduce CALLIOPE, a top-down framework for discovering topic hierarchies in large corpora of unstructured data (e.g., LLM conversations), while supporting differential privacy (DP). Unlike traditional and even recent LLM-augmented approaches that ultimately rely on clustering vector embeddings, our framework leverages LLM capabilities directly for the entire pipeline. Experiments demonstrate that this approach provides better utility over existing (embedding-based) methods in the DP setting, especially in the high privacy regime. We evaluate the quality of CALLIOPE outputs using a variety of traditionally studied clustering metrics, as well as some novel utility metrics that we introduce.",
+      "tr": "We introduce CALLIOPE, a top-down framework for discovering topic hierarchies in large corpora of unstructured data (e.g., LLM conversations), while supporting differential privacy (DP). Unlike traditional and even recent LLM-augmented approaches that ultimately rely on clustering vector embeddings, our framework leverages LLM capabilities directly for the entire pipeline. Experiments demonstrate that this approach provides better utility over existing (embedding-based) methods in the DP setting, especially in the high privacy regime. We evaluate the quality of CALLIOPE outputs using a variety of traditionally studied clustering metrics, as well as some novel utility metrics that we introduce."
     }
   }
 ]
