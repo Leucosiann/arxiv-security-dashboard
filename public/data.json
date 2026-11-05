@@ -1,217 +1,208 @@
 [
   {
-    "id": "2611.04701v1",
-    "title": "Proving the Wrong Program: Miscompilations as a Threat to zkVM Guarantees",
+    "id": "2611.06585v1",
+    "title": "Signed, Sealed, Leaked: Trust Beyond Signature for MCP Toolchains",
     "authors": [
-      "Hui Xuan Tan",
-      "Stefanos Chaliasos",
-      "Alastair F. Donaldson"
+      "Yichiet Aun",
+      "Mohammed A. Alhartomi",
+      "Jing Jie Tan",
+      "Waqas Nadeem",
+      "Adeb Salh"
     ],
-    "published_date": "2026-11-03",
-    "tags": [
-      "cs.PL",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2611.04701v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.04701v1",
-    "content": {
-      "en": "A zero-knowledge virtual machine (zkVM) lets an untrusted prover convince a verifier that a program, typically Rust compiled to RISC-V, ran correctly. The proof covers the compiled binary, so a miscompilation can make a correct zkVM produce a valid proof of a computation that differs from the developer's source. We present the first empirical study of miscompilation as a threat to zkVM guarantees, on the production zkVMs SP1 and Jolt. We assemble 88 known rustc and LLVM miscompilations with Rust reproducers, using an LLM agent to recover Rust triggers for 60 of 124 LLVM bugs reported only as LLVM IR. Many of the bugs carry over to zkVMs: 48 of the 88 make a guest commit a wrong output on SP1 and 46 on Jolt, including the same 15 rustc bugs on both. Most bugs that do not reproduce never reach the faulty code on the zkVM's target, e.g. because they need an instruction-set extension. Existing guest programs are rarely affected by accident. Across 13 guests of 10 popular SP1 projects, the buggy and the fixed compiler produce byte-identical binaries in 447 of the 552 guest-bug pairs that build, and the other 105 have the same code or agree on every input we ran. An attacker who contributes code to a guest, however, can trigger these bugs on purpose. For about $40 per project, an LLM agent found patches that look like ordinary optimisations, preserve the behaviour of the guest's source, and expose a known bug in 12 of 366 project-bug pairs, across 11 of 20 projects. In four cases the guest commits a wrong output, including an Ethereum client that rejects a valid block, and in the other eight it fails on a valid input. Reviewing or formally verifying the zkVM or the guest's source cannot catch such a patch, because both are correct. zkVM projects should treat their compiler as part of their trusted base and track the known bugs of their toolchain.",
-      "tr": "A zero-knowledge virtual machine (zkVM) lets an untrusted prover convince a verifier that a program, typically Rust compiled to RISC-V, ran correctly. The proof covers the compiled binary, so a miscompilation can make a correct zkVM produce a valid proof of a computation that differs from the developer's source. We present the first empirical study of miscompilation as a threat to zkVM guarantees, on the production zkVMs SP1 and Jolt. We assemble 88 known rustc and LLVM miscompilations with Rust reproducers, using an LLM agent to recover Rust triggers for 60 of 124 LLVM bugs reported only as LLVM IR. Many of the bugs carry over to zkVMs: 48 of the 88 make a guest commit a wrong output on SP1 and 46 on Jolt, including the same 15 rustc bugs on both. Most bugs that do not reproduce never reach the faulty code on the zkVM's target, e.g. because they need an instruction-set extension. Existing guest programs are rarely affected by accident. Across 13 guests of 10 popular SP1 projects, the buggy and the fixed compiler produce byte-identical binaries in 447 of the 552 guest-bug pairs that build, and the other 105 have the same code or agree on every input we ran. An attacker who contributes code to a guest, however, can trigger these bugs on purpose. For about $40 per project, an LLM agent found patches that look like ordinary optimisations, preserve the behaviour of the guest's source, and expose a known bug in 12 of 366 project-bug pairs, across 11 of 20 projects. In four cases the guest commits a wrong output, including an Ethereum client that rejects a valid block, and in the other eight it fails on a valid input. Reviewing or formally verifying the zkVM or the guest's source cannot catch such a patch, because both are correct. zkVM projects should treat their compiler as part of their trusted base and track the known bugs of their toolchain."
-    }
-  },
-  {
-    "id": "2611.04488v1",
-    "title": "Perseus: A Full-Stack System for Homomorphic Model Inference",
-    "authors": [
-      "Alessandro Zirilli",
-      "Davide Marincione",
-      "Evgenios M. Kornaropoulos",
-      "Giuseppe Ateniese",
-      "Emanuele Rodolà"
-    ],
-    "published_date": "2026-11-03",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2611.04488v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.04488v1",
-    "content": {
-      "en": "Large Language Models (LLMs) have made it exceptionally convenient for users to send their private data to model providers, which process them in plaintext. Fully Homomorphic Encryption (FHE) promises to secure remote inference by computing directly on encrypted data, yet it has remained prohibitively slow. The effort to make it practical remains fragmented, with most existing frameworks being closed-source, which keeps progress from compounding. We present Perseus, a free and open Python software library that supports the full stack of encrypted model inference, from the cryptographic backend and data packing, to encrypted nonlinearities and end-to-end model execution. Perseus ships with built-in novel optimizations, one at each level of the stack: in-kernel regeneration of key-switching keys at the (i) backend level, a complex variant of Cachemir packing at the (ii) data level, and a state-of-the-art bootstrap placer that is both packing- and magnitude-aware at the (iii) model level. Perseus achieves state-of-the-art latency across multiple models and modalities, within $3\\%$ of the plaintext models' accuracy and perplexity. Remarkably, it is $3.96\\times$ faster at single-token decoding than any other implementation on Llama-3-8B. We initiate, for the first time, a public speedrun on encrypted GPT-2, so that progress can compound.",
-      "tr": "Large Language Models (LLMs) have made it exceptionally convenient for users to send their private data to model providers, which process them in plaintext. Fully Homomorphic Encryption (FHE) promises to secure remote inference by computing directly on encrypted data, yet it has remained prohibitively slow. The effort to make it practical remains fragmented, with most existing frameworks being closed-source, which keeps progress from compounding. We present Perseus, a free and open Python software library that supports the full stack of encrypted model inference, from the cryptographic backend and data packing, to encrypted nonlinearities and end-to-end model execution. Perseus ships with built-in novel optimizations, one at each level of the stack: in-kernel regeneration of key-switching keys at the (i) backend level, a complex variant of Cachemir packing at the (ii) data level, and a state-of-the-art bootstrap placer that is both packing- and magnitude-aware at the (iii) model level. Perseus achieves state-of-the-art latency across multiple models and modalities, within $3\\%$ of the plaintext models' accuracy and perplexity. Remarkably, it is $3.96\\times$ faster at single-token decoding than any other implementation on Llama-3-8B. We initiate, for the first time, a public speedrun on encrypted GPT-2, so that progress can compound."
-    }
-  },
-  {
-    "id": "2611.04393v1",
-    "title": "Voluntary Servitude: Weaponized Safety Warning Mechanisms for Controlling AI Agents",
-    "authors": [
-      "Ilan Zendel",
-      "Matan Levy",
-      "Stav Cohen",
-      "Avi Mendelson",
-      "Amit LeVi"
-    ],
-    "published_date": "2026-11-03",
+    "published_date": "2026-11-04",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.CL",
-      "cs.LG"
+      "cs.MA"
     ],
-    "link": "http://arxiv.org/abs/2611.04393v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.04393v1",
+    "link": "http://arxiv.org/abs/2611.06585v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.06585v1",
     "content": {
-      "en": "LLM agents increasingly act on information retrieved from public sources they treat as credible, which turns a manipulated recommendation into a transaction, a dependency, or a decision with physical consequences. The security literature models this threat as instruction injection, in which an adversary writes a command into retrieved content and deployed defenses learn to recognize command syntax. We show that an attacker can instead steer an agent through the agent's own harm-avoidance. A single fabricated hazard, written as an ordinary review, leads the agent to disqualify the legitimate options and select the attacker's target by its own reasoning, with no command for a detector to recognize. We call this voluntary servitude. These payloads steer agents about as often as instruction injection (60.4% vs. 66.0%), and deployed injection detectors score them as benign, so behind a filter they are 1.7-4.4x more effective. We measure this at the generation stage across six models and ten consumer-service domains, for three attack families, and show that it transfers to production browser agents, outperforming instruction injection, and to a retrieval pipeline (1.0-57.0% end-to-end success, depending on the retriever). We then show that a corroboration requirement added to the agent's instructions removes roughly 95% of the exposure against a non-adaptive attacker without retraining. With the requirement in place, the agent still reads the planted hazard and no longer acts on it.",
-      "tr": "LLM agents increasingly act on information retrieved from public sources they treat as credible, which turns a manipulated recommendation into a transaction, a dependency, or a decision with physical consequences. The security literature models this threat as instruction injection, in which an adversary writes a command into retrieved content and deployed defenses learn to recognize command syntax. We show that an attacker can instead steer an agent through the agent's own harm-avoidance. A single fabricated hazard, written as an ordinary review, leads the agent to disqualify the legitimate options and select the attacker's target by its own reasoning, with no command for a detector to recognize. We call this voluntary servitude. These payloads steer agents about as often as instruction injection (60.4% vs. 66.0%), and deployed injection detectors score them as benign, so behind a filter they are 1.7-4.4x more effective. We measure this at the generation stage across six models and ten consumer-service domains, for three attack families, and show that it transfers to production browser agents, outperforming instruction injection, and to a retrieval pipeline (1.0-57.0% end-to-end success, depending on the retriever). We then show that a corroboration requirement added to the agent's instructions removes roughly 95% of the exposure against a non-adaptive attacker without retraining. With the requirement in place, the agent still reads the planted hazard and no longer acts on it."
+      "en": "AI agents rely on third-party tools, such as Model Context Protocol (MCP) servers, whose publishers can be authenticated and whose execution can be restricted by runtime security policies. Yet authenticity does not guarantee benign behaviour: a legitimately signed tool may perform its advertised function while concealing malicious code that leaks confidential information. We demonstrate this trust failure with a signed MCP tool that embeds sensitive data in requests to a policy-allowed destination. Meta's MCPGuard-Dynamic, a state-of-the-art runtime defence, blocks a direct exfiltration attempt in the same run, yet fails to prevent this attack in every trial. We introduce germline execution, which limits information disclosure without inspecting or trusting tool implementations. Each tool invocation runs in ephemeral copies forked from a data-free germline process, each receiving only information authorised for its destination. Even if malicious code executes, what it can disclose is bounded by the data available to its copy. Under explicit assumptions on copy confinement and a data-free germline, we prove sink noninterference for every signed release and, for releases deterministic within our replay model, show that a verified witness establishes a flow violation. Across 153 attack runs, no unauthorised disclosure was detected under germline execution, compared with 5.9-74.5% of runs under baseline defences and an ablation. Invocations served by a single copy completed in 10-49 ms, 2-28x faster than restarting the tool for every invocation, the conventional way to clear state. These results show that data-isolated execution protects agent toolchains against malicious code concealed within authenticated software.",
+      "tr": "AI agents rely on third-party tools, such as Model Context Protocol (MCP) servers, whose publishers can be authenticated and whose execution can be restricted by runtime security policies. Yet authenticity does not guarantee benign behaviour: a legitimately signed tool may perform its advertised function while concealing malicious code that leaks confidential information. We demonstrate this trust failure with a signed MCP tool that embeds sensitive data in requests to a policy-allowed destination. Meta's MCPGuard-Dynamic, a state-of-the-art runtime defence, blocks a direct exfiltration attempt in the same run, yet fails to prevent this attack in every trial. We introduce germline execution, which limits information disclosure without inspecting or trusting tool implementations. Each tool invocation runs in ephemeral copies forked from a data-free germline process, each receiving only information authorised for its destination. Even if malicious code executes, what it can disclose is bounded by the data available to its copy. Under explicit assumptions on copy confinement and a data-free germline, we prove sink noninterference for every signed release and, for releases deterministic within our replay model, show that a verified witness establishes a flow violation. Across 153 attack runs, no unauthorised disclosure was detected under germline execution, compared with 5.9-74.5% of runs under baseline defences and an ablation. Invocations served by a single copy completed in 10-49 ms, 2-28x faster than restarting the tool for every invocation, the conventional way to clear state. These results show that data-isolated execution protects agent toolchains against malicious code concealed within authenticated software."
     }
   },
   {
-    "id": "2611.04356v1",
-    "title": "CloakFEM: Agentic FEM Code Generation for Red-Teaming Computational Resource Exhaustion",
+    "id": "2611.06553v1",
+    "title": "Addition by Subtraction: Toward Mitigating Fragile Safety Alignment in Large Language Models",
     "authors": [
-      "Li Zheng",
-      "Simin Chen"
+      "Hamid Dashtbani",
+      "Alexandra Dmitrienko"
     ],
-    "published_date": "2026-11-03",
+    "published_date": "2026-11-04",
+    "tags": [
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2611.06553v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.06553v1",
+    "content": {
+      "en": "Large language models (LLMs) undergo safety alignment to prevent harmful generations, yet they remain vulnerable to jailbreak attacks. Recent work reveals a deeper structural weakness: safety alignment can be highly sparse, such that pruning a small number of safety-critical neurons or ablating a single refusal direction can substantially undermine aligned behavior. In this work, we take the first steps toward strengthening safety alignment such that it is less dependent on sparse model components. We propose Addition by Subtraction, which gradually removes identified safety-critical neurons during finetuning and uses preference optimization to re-establish safety-aligned behavior through other parts of the model. Our results show that the resulting models are substantially more robust to pruning-based attacks. Remarkably, these benefits generalize beyond the white-box attacks motivating our design: Addition by Subtraction improves robustness against other sparsity-based interventions, including refusal-direction ablation, as well as a broad range of black-box jailbreak attacks. The finetuned models also exhibit improved truthfulness while largely preserving general capabilities. Comprehensive experiments across four models from three vendors demonstrate consistent improvements in safety robustness, reducing attack success rates by up to 90% for some attacks.",
+      "tr": "Large language models (LLMs) undergo safety alignment to prevent harmful generations, yet they remain vulnerable to jailbreak attacks. Recent work reveals a deeper structural weakness: safety alignment can be highly sparse, such that pruning a small number of safety-critical neurons or ablating a single refusal direction can substantially undermine aligned behavior. In this work, we take the first steps toward strengthening safety alignment such that it is less dependent on sparse model components. We propose Addition by Subtraction, which gradually removes identified safety-critical neurons during finetuning and uses preference optimization to re-establish safety-aligned behavior through other parts of the model. Our results show that the resulting models are substantially more robust to pruning-based attacks. Remarkably, these benefits generalize beyond the white-box attacks motivating our design: Addition by Subtraction improves robustness against other sparsity-based interventions, including refusal-direction ablation, as well as a broad range of black-box jailbreak attacks. The finetuned models also exhibit improved truthfulness while largely preserving general capabilities. Comprehensive experiments across four models from three vendors demonstrate consistent improvements in safety robustness, reducing attack success rates by up to 90% for some attacks."
+    }
+  },
+  {
+    "id": "2611.06498v1",
+    "title": "Signed but Steerable: Measuring and Closing the Text-Vector Integrity Gap in Offline Retrieval-Augmented Generation",
+    "authors": [
+      "Georgios Feretzakis",
+      "Alexandros Papaspyridis"
+    ],
+    "published_date": "2026-11-04",
+    "tags": [
+      "cs.CR",
+      "cs.IR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2611.06498v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.06498v1",
+    "content": {
+      "en": "Offline retrieval-augmented generation (RAG) on edge devices is updated through signed knowledge packs that carry text and precomputed embedding vectors. A signature proves who published a pack, not that its vectors encode its text. We study this text-vector integrity gap. A verifier that recomputes vectors and accepts them within a cosine tolerance concedes a predictable share of queries to an attacker who controls the vectors: the hijack rate equals the distribution of angular retrieval margins at the tolerance (the margin law). Margins are small in five corpora and two embedding models, so an idealised tolerance at the level of floating-point noise leaves up to 5.5% of queries exposed (at most 1.2% in any corpus once exact duplicate documents are excluded), and a threshold calibrated from our CPU INT8-FP32 comparison of a small embedding model (at the empirical 0.1% quantile of honest cosines) leaves 98-100% exposed; on a Raspberry Pi 5 running a local language model, such an attack lowers correct answers from 0.75 to 0.39. Integrity audits of compressed vector stores fare no better: on a FAISS product-quantisation index over 57,638 documents, tampered vectors that all pass the audit put the attacker's document first for 25% of targets. Verifying quantisation codes instead, with ambiguity decided by the verifier, a calibrated guard band and canonicalisation, accepted every honest vector in our samples on three platforms and left the publisher no choice. We also show that common floating-point and dynamic-INT8 inference pipelines are not bit-reproducible across batch sizes or architectures, and report pre-registered negative results on abstention, context pruning and semantic screening. We release code and data.",
+      "tr": "Offline retrieval-augmented generation (RAG) on edge devices is updated through signed knowledge packs that carry text and precomputed embedding vectors. A signature proves who published a pack, not that its vectors encode its text. We study this text-vector integrity gap. A verifier that recomputes vectors and accepts them within a cosine tolerance concedes a predictable share of queries to an attacker who controls the vectors: the hijack rate equals the distribution of angular retrieval margins at the tolerance (the margin law). Margins are small in five corpora and two embedding models, so an idealised tolerance at the level of floating-point noise leaves up to 5.5% of queries exposed (at most 1.2% in any corpus once exact duplicate documents are excluded), and a threshold calibrated from our CPU INT8-FP32 comparison of a small embedding model (at the empirical 0.1% quantile of honest cosines) leaves 98-100% exposed; on a Raspberry Pi 5 running a local language model, such an attack lowers correct answers from 0.75 to 0.39. Integrity audits of compressed vector stores fare no better: on a FAISS product-quantisation index over 57,638 documents, tampered vectors that all pass the audit put the attacker's document first for 25% of targets. Verifying quantisation codes instead, with ambiguity decided by the verifier, a calibrated guard band and canonicalisation, accepted every honest vector in our samples on three platforms and left the publisher no choice. We also show that common floating-point and dynamic-INT8 inference pipelines are not bit-reproducible across batch sizes or architectures, and report pre-registered negative results on abstention, context pruning and semantic screening. We release code and data."
+    }
+  },
+  {
+    "id": "2611.06412v1",
+    "title": "A Bag of Tricks for Defending Deep Learning-based Face Recognition Pipelines against Backdoor Attacks",
+    "authors": [
+      "Quentin Le Roux",
+      "Marti Jimenez",
+      "Yannick Teglia",
+      "Philippe Loubet Moundi"
+    ],
+    "published_date": "2026-11-04",
+    "tags": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2611.06412v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.06412v1",
+    "content": {
+      "en": "The protection of mature, multi-stage Face Recognition Systems is crucial to system providers. This technical report targets the threat model most relevant to industry practitioners: although model training is performed in-house, training data is sourced from possibly-compromised third parties. Given this setting, we present three practical defense \"tricks\" against data poisoning-based backdoor attacks. The first operates at training-time, detecting poisoned identities during training or prior to a pipeline's deployment. The last two operate at inference-time, filtering suspicious inputs before an answer can be sent back to a potential attacker. Each method is presented with their motivation, algorithms and computational impact, and evaluated on realistic face recognition workloads. Our goal is to provide actionable hardening techniques to system providers.",
+      "tr": "The protection of mature, multi-stage Face Recognition Systems is crucial to system providers. This technical report targets the threat model most relevant to industry practitioners: although model training is performed in-house, training data is sourced from possibly-compromised third parties. Given this setting, we present three practical defense \"tricks\" against data poisoning-based backdoor attacks. The first operates at training-time, detecting poisoned identities during training or prior to a pipeline's deployment. The last two operate at inference-time, filtering suspicious inputs before an answer can be sent back to a potential attacker. Each method is presented with their motivation, algorithms and computational impact, and evaluated on realistic face recognition workloads. Our goal is to provide actionable hardening techniques to system providers."
+    }
+  },
+  {
+    "id": "2611.06342v1",
+    "title": "CoRTeC: A Differentially Private Release for Synthetic Tabular Data, Decodable by Any Generator",
+    "authors": [
+      "Calister Nnona"
+    ],
+    "published_date": "2026-11-04",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2611.06342v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.06342v1",
+    "content": {
+      "en": "The records that could train the most useful models, such as a hospital's patient files, are often the ones an institution cannot share. We propose CoRTeC, a method that releases synthetic versions of such records under differential privacy. Differential privacy places a proven limit on what the synthetic data can reveal about any person, and in particular on membership inference. CoRTeC spends the privacy budget once, on a small file of noisy counts designed for training a classifier. For each group of records, the file gives the group's size, its balance of outcomes, a histogram of every column for each outcome and the outcome rate in each of several non-overlapping cells. A reviewer can check every number before the file leaves the institution. Anyone can then turn the counts into synthetic rows, as often as they like and at no further privacy cost. A maximum-entropy decoder can do this without any language model, and so can each of the five frozen language models we tested. None of them ever sees a real record. A selection step then matches the rows to the released counts. Decoded without a language model, the automatically configured release at $\\varepsilon = 2$ trains classifiers to within 0.02 AUC of a real sample of the same size on the Adult dataset, across three data splits. On NHANES and bank marketing, without the selection step, it stays within 0.05 AUC. On Adult, with a fixed cohort rule, the release carries the outcome rates a deployment names more closely than a real sample does, at some cost in accuracy on pairs of columns. Four controls show that most of the utility comes from the release and the selection step, and that a language model adds what it knows from the column names. No private row ever reaches a model, and no row CoRTeC generates copies a real one. The strongest membership attack stays far below the bound the budget allows.",
+      "tr": "The records that could train the most useful models, such as a hospital's patient files, are often the ones an institution cannot share. We propose CoRTeC, a method that releases synthetic versions of such records under differential privacy. Differential privacy places a proven limit on what the synthetic data can reveal about any person, and in particular on membership inference. CoRTeC spends the privacy budget once, on a small file of noisy counts designed for training a classifier. For each group of records, the file gives the group's size, its balance of outcomes, a histogram of every column for each outcome and the outcome rate in each of several non-overlapping cells. A reviewer can check every number before the file leaves the institution. Anyone can then turn the counts into synthetic rows, as often as they like and at no further privacy cost. A maximum-entropy decoder can do this without any language model, and so can each of the five frozen language models we tested. None of them ever sees a real record. A selection step then matches the rows to the released counts. Decoded without a language model, the automatically configured release at $\\varepsilon = 2$ trains classifiers to within 0.02 AUC of a real sample of the same size on the Adult dataset, across three data splits. On NHANES and bank marketing, without the selection step, it stays within 0.05 AUC. On Adult, with a fixed cohort rule, the release carries the outcome rates a deployment names more closely than a real sample does, at some cost in accuracy on pairs of columns. Four controls show that most of the utility comes from the release and the selection step, and that a language model adds what it knows from the column names. No private row ever reaches a model, and no row CoRTeC generates copies a real one. The strongest membership attack stays far below the bound the budget allows."
+    }
+  },
+  {
+    "id": "2611.06294v1",
+    "title": "A.S.E 2.0: Understanding How Repository Context Impacts the Security of LLM-Generated Code",
+    "authors": [
+      "Jiongchi Yu",
+      "Keke Lian",
+      "Junqing Wang",
+      "Zhikang Fan",
+      "Zhaoxuan Li"
+    ],
+    "published_date": "2026-11-04",
     "tags": [
       "cs.CR",
       "cs.AI",
       "cs.SE"
     ],
-    "link": "http://arxiv.org/abs/2611.04356v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.04356v1",
+    "link": "http://arxiv.org/abs/2611.06294v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.06294v1",
     "content": {
-      "en": "Finite element method (FEM) solvers are foundational to scientific and engineering simulation, yet their susceptibility to \\emph{efficiency attacks} remains largely unexplored. An adversary can craft syntactically valid and runnable FEM programs that complete successfully while forcing excessive computational work, enabling computational denial-of-service (DoS) attacks. Finding such inputs is challenging because FEM programs occupy a vast, structured space constrained by numerical, geometric, and constitutive requirements. We introduce CloakFEM, a domain-guided LLM-agent framework for automatically generating runnable adversarial FEM programs that amplify solver computation. CloakFEM combines LLM-guided search with an FEM-specific intermediate representation and a deterministic validity gate that enforces runnable constraints. Across three FEM stacks, 17 problem classes, and 1,068 seeds, CloakFEM discovers adversarial inputs that substantially amplify solver work while remaining valid and solvable. In the most extreme case, solver iterations increase from 43 to 247,367, a \\(5{,}752.72\\times\\) amplification. CloakFEM outperforms five generic black-box baselines and retains an advantage over evolutionary search under a controlled bounded action space. Cross-solver analysis further reveals both problem-intrinsic and solver-specific sources of vulnerability. Our results uncover an underexplored efficiency-attack surface in FEM solvers and show that runnable FEM programs can serve as adversarial inputs.",
-      "tr": "Finite element method (FEM) solvers are foundational to scientific and engineering simulation, yet their susceptibility to \\emph{efficiency attacks} remains largely unexplored. An adversary can craft syntactically valid and runnable FEM programs that complete successfully while forcing excessive computational work, enabling computational denial-of-service (DoS) attacks. Finding such inputs is challenging because FEM programs occupy a vast, structured space constrained by numerical, geometric, and constitutive requirements. We introduce CloakFEM, a domain-guided LLM-agent framework for automatically generating runnable adversarial FEM programs that amplify solver computation. CloakFEM combines LLM-guided search with an FEM-specific intermediate representation and a deterministic validity gate that enforces runnable constraints. Across three FEM stacks, 17 problem classes, and 1,068 seeds, CloakFEM discovers adversarial inputs that substantially amplify solver work while remaining valid and solvable. In the most extreme case, solver iterations increase from 43 to 247,367, a \\(5{,}752.72\\times\\) amplification. CloakFEM outperforms five generic black-box baselines and retains an advantage over evolutionary search under a controlled bounded action space. Cross-solver analysis further reveals both problem-intrinsic and solver-specific sources of vulnerability. Our results uncover an underexplored efficiency-attack surface in FEM solvers and show that runnable FEM programs can serve as adversarial inputs."
+      "en": "Large language model (LLM) coding assistants and agents construct a repository context before generating code. For security-sensitive code, this context decides whether the model sees the project's safeguards (e.g., authorization checks) or insecure code to imitate. However, context construction is designed almost exclusively for functional correctness, and secure-code benchmarks treat the context as fixed, so how repository context affects the security of generated code remains unclear. We construct CASE-Bench, a benchmark of 145 repository-level tasks from real CVEs in 51 projects. Each task runs in Docker, has functional tests and a proof-of-concept exploit validated in both directions, and is annotated with the repository code that enforces or undermines its security. Using CASE-Bench, we compare 13 context construction methods and six controls with six LLMs, edit single context elements, and analyze coding-agent trajectories. We find that (1) functionality-oriented context raises the functional pass rate by up to 8.2 percentage points (pp) but the secure pass rate by at most 3.7 pp, (2) withholding a safeguard lowers the secure pass rate by up to 8.1 pp, while one inserted insecure exemplar raises correct-but-exploitable code by 6.3 pp, and (3) coding agents observe the relevant safeguard in only 27-36% of trajectories. These findings inform security-aware context construction and secure-code evaluation.",
+      "tr": "Large language model (LLM) coding assistants and agents construct a repository context before generating code. For security-sensitive code, this context decides whether the model sees the project's safeguards (e.g., authorization checks) or insecure code to imitate. However, context construction is designed almost exclusively for functional correctness, and secure-code benchmarks treat the context as fixed, so how repository context affects the security of generated code remains unclear. We construct CASE-Bench, a benchmark of 145 repository-level tasks from real CVEs in 51 projects. Each task runs in Docker, has functional tests and a proof-of-concept exploit validated in both directions, and is annotated with the repository code that enforces or undermines its security. Using CASE-Bench, we compare 13 context construction methods and six controls with six LLMs, edit single context elements, and analyze coding-agent trajectories. We find that (1) functionality-oriented context raises the functional pass rate by up to 8.2 percentage points (pp) but the secure pass rate by at most 3.7 pp, (2) withholding a safeguard lowers the secure pass rate by up to 8.1 pp, while one inserted insecure exemplar raises correct-but-exploitable code by 6.3 pp, and (3) coding agents observe the relevant safeguard in only 27-36% of trajectories. These findings inform security-aware context construction and secure-code evaluation."
     }
   },
   {
-    "id": "2611.04289v1",
-    "title": "When Debate Amplifies Risk: Social-Bias Vulnerabilities in Multi-Agent Safety Deliberation",
+    "id": "2611.06257v1",
+    "title": "Analysis of Local Open-Weight LLM Agents on Vulnerability-Reproduction Tasks",
     "authors": [
-      "Qinghua Mao",
-      "Xi Lin",
-      "Yuxin Qi",
-      "Zihao Xu",
-      "Jinze Gu"
+      "Jorge García-Carrasco",
+      "Javier Sanchis",
+      "Álvaro Navarro",
+      "Alejandro Maté",
+      "Juan Trujillo"
     ],
-    "published_date": "2026-11-03",
+    "published_date": "2026-11-04",
+    "tags": [
+      "cs.CR",
+      "cs.LG",
+      "cs.SE"
+    ],
+    "link": "http://arxiv.org/abs/2611.06257v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.06257v1",
+    "content": {
+      "en": "Open-weight language models that fit on a single consumer GPU are becoming capable on a growing range of tasks, and they matter because they can run locally without sending the code to a hosted service. Vulnerability reproduction, turning a vulnerability description into an input that crashes the vulnerable build, is a natural target for them, since it is an automated analysis task closer to test generation than to code comprehension and it runs against a build that must be executed rather than read. In order to assess whether current models can perform it, we evaluate twelve configurations of local models, spanning three generations, two architectures and three quantization levels, on ten CyberGym vulnerability-reproduction tasks, three runs each under one harness, and release the full artefact. We show that every configuration, down to the 4B model, solves most of the six easier tasks, and configurations separate only on the remaining four. For the harder tasks, the 27B model is required. Quantization did not change what the models solved in any matched pair, but it changed how fast they got there, and the mixture of experts reached the same scores in less wall clock. We also examine the agent trajectories. Almost every run we examined, including those that fail, names the vulnerable function and states the correct hypothesis, and what separates a solved task from an unsolved one is whether that hypothesis becomes a working input.",
+      "tr": "Open-weight language models that fit on a single consumer GPU are becoming capable on a growing range of tasks, and they matter because they can run locally without sending the code to a hosted service. Vulnerability reproduction, turning a vulnerability description into an input that crashes the vulnerable build, is a natural target for them, since it is an automated analysis task closer to test generation than to code comprehension and it runs against a build that must be executed rather than read. In order to assess whether current models can perform it, we evaluate twelve configurations of local models, spanning three generations, two architectures and three quantization levels, on ten CyberGym vulnerability-reproduction tasks, three runs each under one harness, and release the full artefact. We show that every configuration, down to the 4B model, solves most of the six easier tasks, and configurations separate only on the remaining four. For the harder tasks, the 27B model is required. Quantization did not change what the models solved in any matched pair, but it changed how fast they got there, and the mixture of experts reached the same scores in less wall clock. We also examine the agent trajectories. Almost every run we examined, including those that fail, names the vulnerable function and states the correct hypothesis, and what separates a solved task from an unsolved one is whether that hypothesis becomes a working input."
+    }
+  },
+  {
+    "id": "2611.06173v1",
+    "title": "Network Intrusion Forensic Detection System with Explainable Artificial Intelligence and Digital Chain of Custody",
+    "authors": [
+      "Jose Luis Vela Alonso",
+      "Carmen Pellicer"
+    ],
+    "published_date": "2026-11-04",
+    "tags": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2611.06173v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.06173v1",
+    "content": {
+      "en": "Deploying an explainable intrusion detection model from a validated laboratory setting into a forensic workflow requires guarantees that benchmarks do not test: that the certified model is the exact artifact applied to a case, that heterogeneous evidence can be classified reliably, and that every step is verifiable. We present MODEXRE, a forensic pipeline that extends a previously validated synthetic-data-trained XGBoost classifier with SHAP explainability (arXiv:2607.00763) into a dual-mode architecture: a Laboratory mode, where models are trained and certified on public and synthetic data, and a Formal mode, where a frozen, hash-verified model performs inference on case evidence under a SHA-256 hash-chained chain of custody. Suricata alerts, CEF firewall logs and packet captures are normalized through OCSF. Four design decisions, each triggered by an observed failure, shaped the architecture: a timestamp leak that inflated Kitsune performance (F1-macro 0.984, 0.662 after correction); a feature-coverage gap that made the 78-feature reference model misclassify a real SSH alert; causal temporal flow aggregation, which raised Kitsune multiclass F1-macro from 0.394 to 0.932; and a certification defect, exposed only by a real packet capture, whereby the pipeline had always trained a binary classifier. After correction, the same capture went from 100% of events flagged as malicious to 87% classified as Normal, with the scanning host identified as Reconnaissance. The default four-class certified model reaches F1-macro = 0.9538 on CICIDS2017-derived evidence; the recertified 18-category model reaches 0.6214, reflecting the real multiclass task. Chain-of-custody verification, model integrity hashing and per-prediction SHAP explanations are reported as measured outcomes.",
+      "tr": "Deploying an explainable intrusion detection model from a validated laboratory setting into a forensic workflow requires guarantees that benchmarks do not test: that the certified model is the exact artifact applied to a case, that heterogeneous evidence can be classified reliably, and that every step is verifiable. We present MODEXRE, a forensic pipeline that extends a previously validated synthetic-data-trained XGBoost classifier with SHAP explainability (arXiv:2607.00763) into a dual-mode architecture: a Laboratory mode, where models are trained and certified on public and synthetic data, and a Formal mode, where a frozen, hash-verified model performs inference on case evidence under a SHA-256 hash-chained chain of custody. Suricata alerts, CEF firewall logs and packet captures are normalized through OCSF. Four design decisions, each triggered by an observed failure, shaped the architecture: a timestamp leak that inflated Kitsune performance (F1-macro 0.984, 0.662 after correction); a feature-coverage gap that made the 78-feature reference model misclassify a real SSH alert; causal temporal flow aggregation, which raised Kitsune multiclass F1-macro from 0.394 to 0.932; and a certification defect, exposed only by a real packet capture, whereby the pipeline had always trained a binary classifier. After correction, the same capture went from 100% of events flagged as malicious to 87% classified as Normal, with the scanning host identified as Reconnaissance. The default four-class certified model reaches F1-macro = 0.9538 on CICIDS2017-derived evidence; the recertified 18-category model reaches 0.6214, reflecting the real multiclass task. Chain-of-custody verification, model integrity hashing and per-prediction SHAP explanations are reported as measured outcomes."
+    }
+  },
+  {
+    "id": "2611.06100v1",
+    "title": "Reconciling Privacy with Provenance for Language Model Watermarks",
+    "authors": [
+      "Elise L. Han",
+      "Tatsunori Hashimoto"
+    ],
+    "published_date": "2026-11-04",
     "tags": [
       "cs.CR",
       "cs.AI",
-      "cs.CY"
+      "cs.CL"
     ],
-    "link": "http://arxiv.org/abs/2611.04289v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.04289v1",
+    "link": "http://arxiv.org/abs/2611.06100v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.06100v1",
     "content": {
-      "en": "Retrieval-augmented Web applications increasingly employ multi-agent debate (MAD) to aggregate conflicting, noisy, and heterogeneous information, yet deliberation is fundamentally a social process susceptible to interpersonal dynamics. When retrieved Web sources contain latent hazards alongside safe factual content, social biases such as conformity pressure and authority deference can override evidence-grounded safety boundaries. In this work, we investigate whether the social structure of deliberation can paradoxically amplify latent Web safety risks. We introduce SafeConflict-Bias, a controlled counterfactual diagnostic protocol spanning six core Web risk categories, which holds queries and retrieved evidence strictly invariant while isolating conversational majority sway, authority cues, and confidence asymmetry. Empirical evaluation across diverse proprietary and open-source backbones reveals that while isolated models reliably reject unsafe guidance, standard MAD catastrophically capitulates to social pressure---surging unsafe adoption from 0.0\\% up to 100.0\\% and systematically silencing safe minority evidence. To resolve this systemic fragility without retraining or debate regeneration, we propose RiskTrace-Debias, an inference-time auditing framework uniting evidence-first precommitment, social-metadata masking, and consistency-gated arbitration. RiskTrace-Debias suppresses worst-case unsafe adoption to $\\le 2.0\\%$ across all architectures without inducing over-refusal, while generating verifiable provenance traces to audit interpersonal manipulation in Web deliberation.",
-      "tr": "Retrieval-augmented Web applications increasingly employ multi-agent debate (MAD) to aggregate conflicting, noisy, and heterogeneous information, yet deliberation is fundamentally a social process susceptible to interpersonal dynamics. When retrieved Web sources contain latent hazards alongside safe factual content, social biases such as conformity pressure and authority deference can override evidence-grounded safety boundaries. In this work, we investigate whether the social structure of deliberation can paradoxically amplify latent Web safety risks. We introduce SafeConflict-Bias, a controlled counterfactual diagnostic protocol spanning six core Web risk categories, which holds queries and retrieved evidence strictly invariant while isolating conversational majority sway, authority cues, and confidence asymmetry. Empirical evaluation across diverse proprietary and open-source backbones reveals that while isolated models reliably reject unsafe guidance, standard MAD catastrophically capitulates to social pressure---surging unsafe adoption from 0.0\\% up to 100.0\\% and systematically silencing safe minority evidence. To resolve this systemic fragility without retraining or debate regeneration, we propose RiskTrace-Debias, an inference-time auditing framework uniting evidence-first precommitment, social-metadata masking, and consistency-gated arbitration. RiskTrace-Debias suppresses worst-case unsafe adoption to $\\le 2.0\\%$ across all architectures without inducing over-refusal, while generating verifiable provenance traces to audit interpersonal manipulation in Web deliberation."
+      "en": "Watermarking has great potential for regulating the use of language models (LMs), but its deployment has been marred by controversy, as many users argue that fine-grained tracking of LM usage violates their privacy. This tension reduces the effectiveness of watermarks, as users engage in evasion strategies such as paraphrasing that can remove much of the watermark signal. We show that provenance and privacy can be reconciled if we shift the goal of watermark design from tracking individuals to estimating aggregate usage. We develop locally differentially private watermarks which provably limit the evidence that any individual text can contribute to detection, while still enabling accurate estimation of population frequencies. We introduce the Red-Green Sequence (RGS) watermark, a private and computationally efficient watermark that achieves accurate frequency estimation at high privacy levels across various models, sample sizes and generation entropies in settings that reflect realistic deployment scenarios. On C4 language modeling tasks, we attain $0.0019$ MSE with $0.0038$ mean absolute bias at a low $\\varepsilon$ of 1, while in more challenging settings such as an essay writing task with only 100 text samples, we still find errors on the order of $0.0113$ MSE with $0.004$ mean absolute bias at $\\varepsilon=2$.",
+      "tr": "Watermarking has great potential for regulating the use of language models (LMs), but its deployment has been marred by controversy, as many users argue that fine-grained tracking of LM usage violates their privacy. This tension reduces the effectiveness of watermarks, as users engage in evasion strategies such as paraphrasing that can remove much of the watermark signal. We show that provenance and privacy can be reconciled if we shift the goal of watermark design from tracking individuals to estimating aggregate usage. We develop locally differentially private watermarks which provably limit the evidence that any individual text can contribute to detection, while still enabling accurate estimation of population frequencies. We introduce the Red-Green Sequence (RGS) watermark, a private and computationally efficient watermark that achieves accurate frequency estimation at high privacy levels across various models, sample sizes and generation entropies in settings that reflect realistic deployment scenarios. On C4 language modeling tasks, we attain $0.0019$ MSE with $0.0038$ mean absolute bias at a low $\\varepsilon$ of 1, while in more challenging settings such as an essay writing task with only 100 text samples, we still find errors on the order of $0.0113$ MSE with $0.004$ mean absolute bias at $\\varepsilon=2$."
     }
   },
   {
-    "id": "2611.04166v1",
-    "title": "Say the Same, Act Differently: Diagnosing and Steering Text-Action Divergence in Reasoning VLAs",
+    "id": "2611.06082v1",
+    "title": "Catastrophic Overfitting is Weight Drift the Training Loss Cannot See",
     "authors": [
-      "Zihao Feng",
-      "Qingzhao Zhang",
-      "Chunyu Xia",
-      "Bo Yu",
-      "Z. Morley Mao"
+      "Chao Pan"
     ],
-    "published_date": "2026-11-03",
+    "published_date": "2026-11-04",
     "tags": [
       "cs.LG",
-      "cs.CR",
-      "cs.CV",
-      "cs.RO"
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2611.04166v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.04166v1",
+    "link": "http://arxiv.org/abs/2611.06082v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.06082v1",
     "content": {
-      "en": "Reasoning vision-language-action (VLA) models pair physical control with natural-language rationales that supervisors can read to monitor embodied safety. Prior attacks on VLA reasoning corrupt the rationale itself and leave visible evidence in the text. We show that visual perturbations can instead alter the physical action while keeping the generated rationale word-for-word identical. At the shared text/action interface of Alpamayo for driving and InstructVLA for manipulation, our text-neutral action-subspace (TNAS) diagnostic shows that the locally most action-sensitive direction is nearly orthogonal to the active text-loss gradients, with 1.87% and 5.28% norm overlap. At equal hidden-state perturbation norms across both models, interventions along this text-neutral residual shift actions 4.64x to 47.8x more than text-gradient perturbations, whereas text-gradient perturbations induce 21.2x to 277x more text drift. Steering visual perturbations along this direction reaches the same decoupling from the image. Across 154 obstacle-annotated driving scenes in Alpamayo, TNAS-guided attacks induce a new collision under a word-for-word identical rationale in 52.6% of scenes under full-image perturbations and 35.1% under a localized forward-camera patch, compared with 4.55% for unguided action attacks. Relative to a text-preserving baseline, TNAS guidance raises exact rationale preservation from 83.0% to 89.5% and cuts teacher-forced text drift by 68.4% at a comparable collision rate. In InstructVLA, TNAS guidance cuts text drift by 40.5% and preserves the exact response on 85.0% of examples alongside a 1.73-unit action-chunk shift. An unchanged rationale therefore cannot certify a safe action, so monitors for reasoning VLAs must verify the predicted action channel directly.",
-      "tr": "Reasoning vision-language-action (VLA) models pair physical control with natural-language rationales that supervisors can read to monitor embodied safety. Prior attacks on VLA reasoning corrupt the rationale itself and leave visible evidence in the text. We show that visual perturbations can instead alter the physical action while keeping the generated rationale word-for-word identical. At the shared text/action interface of Alpamayo for driving and InstructVLA for manipulation, our text-neutral action-subspace (TNAS) diagnostic shows that the locally most action-sensitive direction is nearly orthogonal to the active text-loss gradients, with 1.87% and 5.28% norm overlap. At equal hidden-state perturbation norms across both models, interventions along this text-neutral residual shift actions 4.64x to 47.8x more than text-gradient perturbations, whereas text-gradient perturbations induce 21.2x to 277x more text drift. Steering visual perturbations along this direction reaches the same decoupling from the image. Across 154 obstacle-annotated driving scenes in Alpamayo, TNAS-guided attacks induce a new collision under a word-for-word identical rationale in 52.6% of scenes under full-image perturbations and 35.1% under a localized forward-camera patch, compared with 4.55% for unguided action attacks. Relative to a text-preserving baseline, TNAS guidance raises exact rationale preservation from 83.0% to 89.5% and cuts teacher-forced text drift by 68.4% at a comparable collision rate. In InstructVLA, TNAS guidance cuts text drift by 40.5% and preserves the exact response on 85.0% of examples alongside a 1.73-unit action-chunk shift. An unchanged rationale therefore cannot certify a safe action, so monitors for reasoning VLAs must verify the predicted action channel directly."
-    }
-  },
-  {
-    "id": "2611.04122v1",
-    "title": "ScrambleMark: Zero-Query Watermark-Agnostic Black-Box Evasion of Modern Speech Watermarking",
-    "authors": [
-      "Binhao Ma",
-      "Weikang Ding",
-      "Hanqing Guo",
-      "Wenwei Zhao",
-      "Xiaowen Li"
-    ],
-    "published_date": "2026-11-03",
-    "tags": [
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2611.04122v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.04122v1",
-    "content": {
-      "en": "Speech watermarking is becoming a key defense for digital copyright and content authentication. Existing attacks treat evasion as a removal problem: they erase the watermark, relying on detector access or on speech data that is hard to collect, such as paired clean-watermarked or clean target speaker speech. Commercial platforms are moving to close off these assumptions. TrustedAudio, for instance, restricts detection to authenticated users and denies meaningful detection feedback to unauthorized parties. Adversaries thus cannot tell whether a sample is watermarked or which watermark it carries, nor reliably remove it without degrading speech quality.   In this work, we show that evading a speech watermark does not require erasing it: detection relies on the structural consistency of the embedded pattern, and disrupting this consistency is enough to defeat it. Building on this observation, we identify harmonic structure as an effective attack surface, as perturbing it breaks watermark consistency while preserving perceptual quality. We therefore propose ScrambleMark, a zero-query, watermark-agnostic, black-box attack that evades detection through harmonic scrambling. ScrambleMark combines a deterministic engine for discovering transferable harmonic perturbations with a generative model that learns randomized scrambling patterns, avoiding reliance on fixed attack rules. Across three commercial platforms (Google SynthID, Resemble AI, and TrustedAudio), ScrambleMark is the only attack to both evade detection and keep speech natural, achieving nearly 97% evasion and a 4.2/5 human rating, far above the 1.1 to 1.7 of prior attacks. Beyond evasion, ScrambleMark withstands adaptive recovery designed to reverse it, evidence that structural evasion is hard to mitigate in practice.",
-      "tr": "Speech watermarking is becoming a key defense for digital copyright and content authentication. Existing attacks treat evasion as a removal problem: they erase the watermark, relying on detector access or on speech data that is hard to collect, such as paired clean-watermarked or clean target speaker speech. Commercial platforms are moving to close off these assumptions. TrustedAudio, for instance, restricts detection to authenticated users and denies meaningful detection feedback to unauthorized parties. Adversaries thus cannot tell whether a sample is watermarked or which watermark it carries, nor reliably remove it without degrading speech quality.   In this work, we show that evading a speech watermark does not require erasing it: detection relies on the structural consistency of the embedded pattern, and disrupting this consistency is enough to defeat it. Building on this observation, we identify harmonic structure as an effective attack surface, as perturbing it breaks watermark consistency while preserving perceptual quality. We therefore propose ScrambleMark, a zero-query, watermark-agnostic, black-box attack that evades detection through harmonic scrambling. ScrambleMark combines a deterministic engine for discovering transferable harmonic perturbations with a generative model that learns randomized scrambling patterns, avoiding reliance on fixed attack rules. Across three commercial platforms (Google SynthID, Resemble AI, and TrustedAudio), ScrambleMark is the only attack to both evade detection and keep speech natural, achieving nearly 97% evasion and a 4.2/5 human rating, far above the 1.1 to 1.7 of prior attacks. Beyond evasion, ScrambleMark withstands adaptive recovery designed to reverse it, evidence that structural evasion is hard to mitigate in practice."
-    }
-  },
-  {
-    "id": "2611.03774v1",
-    "title": "What Malware Actually Does: An Empirical Analysis of Post-Infection Behavior Across Malware Families",
-    "authors": [
-      "Emmanuela Andam",
-      "Emanuel S. Grant",
-      "Naima Kaabouch"
-    ],
-    "published_date": "2026-11-02",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2611.03774v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.03774v1",
-    "content": {
-      "en": "Most malware detection research focuses on identifying whether a file is malicious before it executes. Far less attention goes to what happens after infection. This paper presents an empirical analysis of post-infection malware behavior across 37 families, grounded in dynamic sandbox execution using CAPEv2. Behavioral traces are modeled as heterogeneous graphs with five node types and seven typed edge relationships, preserving relational structure that flat feature vectors discard. A voting ensemble trained on graph-derived structural features achieves 94.44% accuracy and MCC of 0.863, outperforming a flat behavioral baseline by 7.4 percentage points in MCC. A multiclass classifier distinguishes 24 malware families, and a per-family behavioral fingerprint analysis characterizes post-infection activity across registry, network, process, and API dimensions. An LLM explanation layer generates analyst-readable reports with MITRE ATT&CK mappings grounded in observed behavioral evidence. The full pipeline is deployed as HeteroScan at https://ama-andam.github.io/heteroscan.",
-      "tr": "Most malware detection research focuses on identifying whether a file is malicious before it executes. Far less attention goes to what happens after infection. This paper presents an empirical analysis of post-infection malware behavior across 37 families, grounded in dynamic sandbox execution using CAPEv2. Behavioral traces are modeled as heterogeneous graphs with five node types and seven typed edge relationships, preserving relational structure that flat feature vectors discard. A voting ensemble trained on graph-derived structural features achieves 94.44% accuracy and MCC of 0.863, outperforming a flat behavioral baseline by 7.4 percentage points in MCC. A multiclass classifier distinguishes 24 malware families, and a per-family behavioral fingerprint analysis characterizes post-infection activity across registry, network, process, and API dimensions. An LLM explanation layer generates analyst-readable reports with MITRE ATT&CK mappings grounded in observed behavioral evidence. The full pipeline is deployed as HeteroScan at https://ama-andam.github.io/heteroscan."
-    }
-  },
-  {
-    "id": "2611.03555v1",
-    "title": "MCP Tool Poisoning in Agentic AI Frameworks: A Cross-Framework Measurement Study",
-    "authors": [
-      "Farooq Shaikh",
-      "Biagio Montaruli"
-    ],
-    "published_date": "2026-11-02",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2611.03555v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.03555v1",
-    "content": {
-      "en": "The Model Context Protocol (MCP) lets agentic AI frameworks connect language models to external tool providers, but it carries attacker-controlled content (tool descriptions, schema fields, and response data) into model context without validation. Prior benchmarks measure model compliance with poisoned instructions without confirming real execution. We present the first cross-framework measurement of MCP tool poisoning with real tool execution. A 25-class root-cause taxonomy unifies prior classifications, and the open-source tool mcpvenom drives a 9,720-cell susceptibility matrix across 12 frameworks, 18 models, and 45 attack scenarios, with a dual oracle that confirms exfiltration via canary HTTP receipt. The overall attack success rate is 22.9% (2,113 vulnerable cells). Of these, 64.9% dispatch an attacker tool call, 23.0% contact the attacker endpoint, and 12.1% verifiably exfiltrate a secret. Resistance is model-level: nine core frameworks cluster within 23 to 26% (chi-squared = 3.30, p = 0.91), and no framework implements intentional defense. Incidental framework properties mitigate in specific cases, and a regex description scanner rejects 20 of 45 scenarios at a 7.2% false-positive rate, so metadata scanning alone is a partial control. Model ASR ranges from 0.4% to 49.7%. Claude Opus 4.8 is vulnerable in 8 of 530 cells while issuing 223 explicit refusals. A code-level audit finds no intentional defense across twelve frameworks, and all five coordinated disclosures across four vendors were rejected.",
-      "tr": "The Model Context Protocol (MCP) lets agentic AI frameworks connect language models to external tool providers, but it carries attacker-controlled content (tool descriptions, schema fields, and response data) into model context without validation. Prior benchmarks measure model compliance with poisoned instructions without confirming real execution. We present the first cross-framework measurement of MCP tool poisoning with real tool execution. A 25-class root-cause taxonomy unifies prior classifications, and the open-source tool mcpvenom drives a 9,720-cell susceptibility matrix across 12 frameworks, 18 models, and 45 attack scenarios, with a dual oracle that confirms exfiltration via canary HTTP receipt. The overall attack success rate is 22.9% (2,113 vulnerable cells). Of these, 64.9% dispatch an attacker tool call, 23.0% contact the attacker endpoint, and 12.1% verifiably exfiltrate a secret. Resistance is model-level: nine core frameworks cluster within 23 to 26% (chi-squared = 3.30, p = 0.91), and no framework implements intentional defense. Incidental framework properties mitigate in specific cases, and a regex description scanner rejects 20 of 45 scenarios at a 7.2% false-positive rate, so metadata scanning alone is a partial control. Model ASR ranges from 0.4% to 49.7%. Claude Opus 4.8 is vulnerable in 8 of 530 cells while issuing 223 explicit refusals. A code-level audit finds no intentional defense across twelve frameworks, and all five coordinated disclosures across four vendors were rejected."
-    }
-  },
-  {
-    "id": "2611.03772v1",
-    "title": "RuntimeTickets: Source-Grounded Security Obligations for Agent Skills",
-    "authors": [
-      "Kuiyi Gao",
-      "Xue Liu",
-      "Bowei He"
-    ],
-    "published_date": "2026-11-02",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2611.03772v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.03772v1",
-    "content": {
-      "en": "Third-party Agent Skills extend what an autonomous agent can do, but a malicious Skill can hide data exposure or output manipulation inside a legitimate workflow. Neither reading a Skill's description nor granting it tool permissions tells whether its execution meets the user's security requirements. We introduce RuntimeTickets, a protocol that enforces and audits these requirements while a Skill runs. From released malicious-Skill datasets we derive a risk model and build adversarial-benign Skill pairs. From the task's delivery contract, a language model proposes security obligations for that task. Each obligation cites the Skill lines it answers, and the ticket tightens the host's approvals into fine-grained allowed actions but never loosens them. A runtime gate checks the recipient, object and amount of every outbound send before forwarding it, and trusted monitors record the effects within their observation scope. The ticket links these checks and observations to the approved obligations of each Skill run, and a deterministic decoder turns the ticket's status into governable data flows and verifies each obligation. Neither enforcement nor decoding involves a language model, so text injected by a Skill can change the proposal but never the rule that decides a send. We evaluate RuntimeTickets at the network egress boundary of three unmodified agent frameworks against production Skill scanners and runtime baselines, among them an AgentBound-derived allow-list and SkillGuard. RuntimeTickets eliminated both failure modes of current Skill defenses, overlook (malicious Skills let through) and overkill (benign Skills blocked): its overlook rate was 0.0% and its overkill rate 0.0%, while the scanners erred on both sides. RuntimeTickets ties approved requirements to verifiable execution evidence and offers a common foundation for the safe and auditable deployment of third-party Skills.",
-      "tr": "Third-party Agent Skills extend what an autonomous agent can do, but a malicious Skill can hide data exposure or output manipulation inside a legitimate workflow. Neither reading a Skill's description nor granting it tool permissions tells whether its execution meets the user's security requirements. We introduce RuntimeTickets, a protocol that enforces and audits these requirements while a Skill runs. From released malicious-Skill datasets we derive a risk model and build adversarial-benign Skill pairs. From the task's delivery contract, a language model proposes security obligations for that task. Each obligation cites the Skill lines it answers, and the ticket tightens the host's approvals into fine-grained allowed actions but never loosens them. A runtime gate checks the recipient, object and amount of every outbound send before forwarding it, and trusted monitors record the effects within their observation scope. The ticket links these checks and observations to the approved obligations of each Skill run, and a deterministic decoder turns the ticket's status into governable data flows and verifies each obligation. Neither enforcement nor decoding involves a language model, so text injected by a Skill can change the proposal but never the rule that decides a send. We evaluate RuntimeTickets at the network egress boundary of three unmodified agent frameworks against production Skill scanners and runtime baselines, among them an AgentBound-derived allow-list and SkillGuard. RuntimeTickets eliminated both failure modes of current Skill defenses, overlook (malicious Skills let through) and overkill (benign Skills blocked): its overlook rate was 0.0% and its overkill rate 0.0%, while the scanners erred on both sides. RuntimeTickets ties approved requirements to verifiable execution evidence and offers a common foundation for the safe and auditable deployment of third-party Skills."
+      "en": "Fast adversarial training (FAT) makes robust training affordable by replacing the multi-step attack with a single-step one, but it suffers from catastrophic overfitting (CO): partway through training, robustness to multi-step attacks collapses to near zero while the single-step attack used for training keeps being repelled. We show that CO is a quiet escape of the weights. Across the event the network's clean behavior quietly improves, and moving from the weights just before CO to those just after it changes the training objective only marginally while destroying most of the robustness. The training objective is therefore nearly blind to the displacement it causes, so it exerts no force to undo it. The exponential moving average (EMA) of the weights, which FAT protocols already maintain, does not accumulate this drift and stays robust through the entire event. This observation suggests a nearly free fix: when validation robustness drops, reset the weights to their EMA. We build this guard on top of a coupling-based base method designed so that its average stays inside the robust region. The resulting training removes CO in every one of our runs and attains the strongest AutoAttack accuracy among fast methods on all three benchmark datasets, including a clear margin on CIFAR-100, where it also clears the multi-step reference at roughly half its cost. Code is available at https://github.com/fzjcdt/co-weight-drift.",
+      "tr": "Fast adversarial training (FAT) makes robust training affordable by replacing the multi-step attack with a single-step one, but it suffers from catastrophic overfitting (CO): partway through training, robustness to multi-step attacks collapses to near zero while the single-step attack used for training keeps being repelled. We show that CO is a quiet escape of the weights. Across the event the network's clean behavior quietly improves, and moving from the weights just before CO to those just after it changes the training objective only marginally while destroying most of the robustness. The training objective is therefore nearly blind to the displacement it causes, so it exerts no force to undo it. The exponential moving average (EMA) of the weights, which FAT protocols already maintain, does not accumulate this drift and stays robust through the entire event. This observation suggests a nearly free fix: when validation robustness drops, reset the weights to their EMA. We build this guard on top of a coupling-based base method designed so that its average stays inside the robust region. The resulting training removes CO in every one of our runs and attains the strongest AutoAttack accuracy among fast methods on all three benchmark datasets, including a clear margin on CIFAR-100, where it also clears the multi-step reference at roughly half its cost. Code is available at https://github.com/fzjcdt/co-weight-drift."
     }
   }
 ]
