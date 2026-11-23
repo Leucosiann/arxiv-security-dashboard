@@ -1,213 +1,217 @@
 [
   {
-    "id": "2611.23208v1",
-    "title": "Distortion-Free Semantic Watermarks for Black-Box Generative Models",
+    "id": "2611.27860v1",
+    "title": "Who Grades the Agent? Privilege Separation for Coding-Agent Benchmarks",
     "authors": [
-      "Aviv Yossef",
-      "Or Patashnik",
-      "Or Zamir"
+      "Nathan Nour Houlamy",
+      "Mattia Favretto",
+      "Earlence Fernandes",
+      "Mauro Conti"
     ],
-    "published_date": "2026-11-17",
+    "published_date": "2026-11-20",
     "tags": [
-      "cs.LG",
       "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2611.27860v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.27860v1",
+    "content": {
+      "en": "Benchmarks for AI-based coding agents are a staple of the current AI landscape, because they are the leading way to measure the performance of LLMs. Their scores guide business and research decisions. Evaluating coding agents is challenging, since they are able to manipulate their evaluation infrastructure to artificially achieve better scores. Grading an agent's solution often requires running its code, which can then manipulate the evaluation process. BenchJack, an automated benchmark auditor, recently reached near-perfect scores on nine of ten popular agent benchmarks without actually solving their tasks. Agents already do this unprompted, as OpenAI's July 2026 Hugging Face incident showed.   Building on secure systems design, we introduce SplitBench, a privilege separation framework for evaluating coding agents and the first in the scientific literature to separate running a task's tests from judging their results. Even an agent whose code takes over the entire test environment cannot forge a pass, because a trusted grader holds the expected answers. We show that real-world benchmarks (e.g., Terminal-Bench, DeepSWE) can be ported to the SplitBench framework with minimal effort and high fidelity: 180 of 202 tasks convert, and SplitBench agrees with the native graders on 98.7% of agent attempts. We attack the converted tasks in the worst case, where adversarial agents can read all the grading code but not the expected answers. SplitBench blocked 75% of their attempts; the rest mostly reveal weaknesses in the original tasks' tests rather than flaws in SplitBench.",
+      "tr": "Benchmarks for AI-based coding agents are a staple of the current AI landscape, because they are the leading way to measure the performance of LLMs. Their scores guide business and research decisions. Evaluating coding agents is challenging, since they are able to manipulate their evaluation infrastructure to artificially achieve better scores. Grading an agent's solution often requires running its code, which can then manipulate the evaluation process. BenchJack, an automated benchmark auditor, recently reached near-perfect scores on nine of ten popular agent benchmarks without actually solving their tasks. Agents already do this unprompted, as OpenAI's July 2026 Hugging Face incident showed.   Building on secure systems design, we introduce SplitBench, a privilege separation framework for evaluating coding agents and the first in the scientific literature to separate running a task's tests from judging their results. Even an agent whose code takes over the entire test environment cannot forge a pass, because a trusted grader holds the expected answers. We show that real-world benchmarks (e.g., Terminal-Bench, DeepSWE) can be ported to the SplitBench framework with minimal effort and high fidelity: 180 of 202 tasks convert, and SplitBench agrees with the native graders on 98.7% of agent attempts. We attack the converted tasks in the worst case, where adversarial agents can read all the grading code but not the expected answers. SplitBench blocked 75% of their attempts; the rest mostly reveal weaknesses in the original tasks' tests rather than flaws in SplitBench."
+    }
+  },
+  {
+    "id": "2611.27426v1",
+    "title": "Cleave: Severing Guardrails and Auditing Spectral Coupling in Open-Weight LLMs",
+    "authors": [
+      "Feng Huang",
+      "Qiang Huang",
+      "Yue Gao",
+      "Mei Zhang",
+      "Bin Liu"
+    ],
+    "published_date": "2026-11-20",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2611.27426v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.27426v1",
+    "content": {
+      "en": "Open-weight Large Language Models (LLMs) are widely downloaded for their strong coding and reasoning capabilities and deployed locally beyond the provider's control. To prevent misuse, developers embed safety guardrails into these models before release. However, we find that these guardrails rely on the residual writing weights to trigger refusals. Based on this insight, we propose Cleave, a training-free attack that directly edits these weights to remove safety restrictions while preserving general capabilities. With Cleave, malicious users can either remove all guardrails or selectively lift only cybersecurity restrictions. Because this selective removal retains up to a 99% refusal rate on other harmful requests and avoids weight rank collapse, it evades both behavioral spot-checks and static weight audits. Across five open-weight LLMs from 7B to 320B parameters, Cleave achieves up to a 67.97% attack success rate on seven safety benchmarks, substantially outperforming existing white-box baselines. On 356 cybersecurity tasks and 15 live vulnerable services, it further boosts executable exploit generation by up to 24.0 times and compromises up to 66.7% of the targets. To counter this threat, we propose a dual-stage defense that combines pre-release subspace diagnostics with post-release weight-coupling audits, achieving 100% detection recall at a 1% false-positive rate.",
+      "tr": "Open-weight Large Language Models (LLMs) are widely downloaded for their strong coding and reasoning capabilities and deployed locally beyond the provider's control. To prevent misuse, developers embed safety guardrails into these models before release. However, we find that these guardrails rely on the residual writing weights to trigger refusals. Based on this insight, we propose Cleave, a training-free attack that directly edits these weights to remove safety restrictions while preserving general capabilities. With Cleave, malicious users can either remove all guardrails or selectively lift only cybersecurity restrictions. Because this selective removal retains up to a 99% refusal rate on other harmful requests and avoids weight rank collapse, it evades both behavioral spot-checks and static weight audits. Across five open-weight LLMs from 7B to 320B parameters, Cleave achieves up to a 67.97% attack success rate on seven safety benchmarks, substantially outperforming existing white-box baselines. On 356 cybersecurity tasks and 15 live vulnerable services, it further boosts executable exploit generation by up to 24.0 times and compromises up to 66.7% of the targets. To counter this threat, we propose a dual-stage defense that combines pre-release subspace diagnostics with post-release weight-coupling audits, achieving 100% detection recall at a 1% false-positive rate."
+    }
+  },
+  {
+    "id": "2611.27425v1",
+    "title": "TrojanMaxxing: One-shotting VLM Backdoors with Weight-Space Programming",
+    "authors": [
+      "Ahaan Dabholkar",
+      "Harshvardhan Patel",
+      "Michalis Polychronakis",
+      "Saurabh Bagchi"
+    ],
+    "published_date": "2026-11-20",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
       "cs.CV"
     ],
-    "link": "http://arxiv.org/abs/2611.23208v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.23208v1",
+    "link": "http://arxiv.org/abs/2611.27425v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.27425v1",
     "content": {
-      "en": "We present a provably distortion-free semantic watermarking algorithm that requires only black-box sampling access to a generative model and black-box access to a semantic embedding. A watermark is called distortion-free if, averaged over its secret detection key, it leaves the generator's output distribution unchanged; this provides a formal guarantee that watermarking does not reduce output quality. Conventional such watermarks are often brittle to transformations. This is especially problematic for images, where benign operations such as compression, cropping, or resizing change the entire pixel representation. Semantic watermarks therefore require detection to be robust to content-preserving transformations. Previous methods combining these properties rely heavily on specific white-box properties of the underlying model: either to autoregressive text generation or to diffusion-specific access, such as control of the initial noise or diffusion inversion. In contrast, our construction is fully generic: It only interacts with the generative model and the semantic embedding, a function that determines the notion of \"preserving content\" under which detection should be robust, via sample and query access. We then instantiate this framework for image generation. We characterize the two competing properties required of the semantic embedding: it should remain stable under transformations that preserve an image's content, but should distinguish independent generations from the same prompt. We train an image encoder directly for this tradeoff. The resulting encoder improves separation while maintaining stability over off-the-shelf alternatives and enables strong aggregate detection while remaining robust to various transformations. We demonstrate the effectiveness of our watermark scheme on both open-source and closed models, which is possible only due to restriction to black-box access.",
-      "tr": "We present a provably distortion-free semantic watermarking algorithm that requires only black-box sampling access to a generative model and black-box access to a semantic embedding. A watermark is called distortion-free if, averaged over its secret detection key, it leaves the generator's output distribution unchanged; this provides a formal guarantee that watermarking does not reduce output quality. Conventional such watermarks are often brittle to transformations. This is especially problematic for images, where benign operations such as compression, cropping, or resizing change the entire pixel representation. Semantic watermarks therefore require detection to be robust to content-preserving transformations. Previous methods combining these properties rely heavily on specific white-box properties of the underlying model: either to autoregressive text generation or to diffusion-specific access, such as control of the initial noise or diffusion inversion. In contrast, our construction is fully generic: It only interacts with the generative model and the semantic embedding, a function that determines the notion of \"preserving content\" under which detection should be robust, via sample and query access. We then instantiate this framework for image generation. We characterize the two competing properties required of the semantic embedding: it should remain stable under transformations that preserve an image's content, but should distinguish independent generations from the same prompt. We train an image encoder directly for this tradeoff. The resulting encoder improves separation while maintaining stability over off-the-shelf alternatives and enables strong aggregate detection while remaining robust to various transformations. We demonstrate the effectiveness of our watermark scheme on both open-source and closed models, which is possible only due to restriction to black-box access."
+      "en": "Recent work shows that large language models (LLMs) can reason directly about the weights of other neural networks. Given only a natural-language objective, an LLM can inspect a model's weights, understand what they compute, and edit them directly without gradient-based optimization. This capability, termed weight-space programming (WSP), has been used to improve model performance on math reasoning, medical QA and other benchmarks. We propose TrojanMaxxing, a novel strategy to backdoor vision-language models (VLMs), by reframing it as a WSP task. We use Claude Opus 5.5 and Mythos 5.2 agents to backdoor VLMs without any optimization or training methods. The agents inspect the model weights, apply targeted edits, and co-design an imperceptible visual trigger that activates the backdoor. We then study the agents' strategies and present a thorough evaluation of the trojaned models on various benchmark datasets. TrojanMaxxing achieves attack success rates of 93%-100% on content moderation and 78%-100% on OCR while maintaining clean accuracy. Perhaps most consequentially, we show that injecting backdoors in a training-free manner is possible by simply, \"asking an agent to do it\".",
+      "tr": "Recent work shows that large language models (LLMs) can reason directly about the weights of other neural networks. Given only a natural-language objective, an LLM can inspect a model's weights, understand what they compute, and edit them directly without gradient-based optimization. This capability, termed weight-space programming (WSP), has been used to improve model performance on math reasoning, medical QA and other benchmarks. We propose TrojanMaxxing, a novel strategy to backdoor vision-language models (VLMs), by reframing it as a WSP task. We use Claude Opus 5.5 and Mythos 5.2 agents to backdoor VLMs without any optimization or training methods. The agents inspect the model weights, apply targeted edits, and co-design an imperceptible visual trigger that activates the backdoor. We then study the agents' strategies and present a thorough evaluation of the trojaned models on various benchmark datasets. TrojanMaxxing achieves attack success rates of 93%-100% on content moderation and 78%-100% on OCR while maintaining clean accuracy. Perhaps most consequentially, we show that injecting backdoors in a training-free manner is possible by simply, \"asking an agent to do it\"."
     }
   },
   {
-    "id": "2611.22971v1",
-    "title": "SEAM: Computer-Use Agents Know the Harm Between Screens, and Commit It Anyway",
+    "id": "2611.27410v1",
+    "title": "Detecting Word-Substitution Poisoning of a RAG Knowledge Base with Relative Entropy and Runtime Verification",
     "authors": [
-      "Yuxuan Zhou",
-      "Chen Xiong",
-      "Haitong Liu",
-      "Kuofeng Gao",
-      "Yang Bai"
+      "Ali Yousefi",
+      "Nikos Komninos",
+      "Hafizul Asad"
     ],
-    "published_date": "2026-11-17",
+    "published_date": "2026-11-20",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2611.22971v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.22971v1",
+    "link": "http://arxiv.org/abs/2611.27410v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.27410v1",
     "content": {
-      "en": "Safety benchmarks for computer-use agents (CUAs) place the harm either in the intent of the task or on a single screen: a malicious instruction, an injected command, a phishing page. An agent that checks the task and each screen in isolation can pass them, so they do not test whether it combines facts seen on different screens. Yet in delegated work, harm often arises exactly this way: a fact about a person on one screen, a fact about an item on another, and a legitimate task that binds them. We introduce SEAM (Safety Execution Across Multiple screens), a benchmark of such cross-screen compositional harm: 600 multi-step, cross-application OSWorld tasks in which the instruction and every single observation are benign and only their combination is harmful. Minimal-pair variants that differ in one place, scored from the server log rather than by an LLM judge, locate where an agent fails. General-purpose open-weight and flagship agents carry out the harm in up to 92% of runs, yet decline when the user states it in one sentence. Agents open the decisive pages, so exposure is not the primary bottleneck. Asked about those pages, they flag the harm, and with thinking they often write the conflict into their reasoning and confirm anyway. Safety recognition thus does not reliably translate into safe execution, and the translation depends on the information channel: the same warning stops agents far more often in the user's instruction than on screen. Proprietary models are markedly more cautious. We release SEAM with its generator and quality gates at https://yuxuan2003.github.io/SEAM/ .",
-      "tr": "Safety benchmarks for computer-use agents (CUAs) place the harm either in the intent of the task or on a single screen: a malicious instruction, an injected command, a phishing page. An agent that checks the task and each screen in isolation can pass them, so they do not test whether it combines facts seen on different screens. Yet in delegated work, harm often arises exactly this way: a fact about a person on one screen, a fact about an item on another, and a legitimate task that binds them. We introduce SEAM (Safety Execution Across Multiple screens), a benchmark of such cross-screen compositional harm: 600 multi-step, cross-application OSWorld tasks in which the instruction and every single observation are benign and only their combination is harmful. Minimal-pair variants that differ in one place, scored from the server log rather than by an LLM judge, locate where an agent fails. General-purpose open-weight and flagship agents carry out the harm in up to 92% of runs, yet decline when the user states it in one sentence. Agents open the decisive pages, so exposure is not the primary bottleneck. Asked about those pages, they flag the harm, and with thinking they often write the conflict into their reasoning and confirm anyway. Safety recognition thus does not reliably translate into safe execution, and the translation depends on the information channel: the same warning stops agents far more often in the user's instruction than on screen. Proprietary models are markedly more cautious. We release SEAM with its generator and quality gates at https://yuxuan2003.github.io/SEAM/ ."
+      "en": "A retrieval-augmented generation (RAG) system answers questions using passages it retrieves from a knowledge base, so users must trust that knowledge base. We study an attacker who quietly edits existing passages by swapping words for synonyms (PWWS, TextFooler) in a cybersecurity RAG system built from MITRE ATT&CK and CAPEC. Using a reviewed 44-question benchmark, repeated paired runs and a control corpus in which only the layout changes, we find that poisoning lowers judged answer correctness from 0.714 to 0.555. The damage comes mostly from lost evidence and refusals, not from false statements. To find the edited passages, we use relative entropy. Comparing a whole passage with normal text is a weak signal. Still, one term of the relative entropy, the log-ratio between a word and its most probable synonym, works well: with a small language model as the reference, it reaches an AUROC of 0.95 and stays near chance on the control. Used as a retrieval filter, it halves how often edited text reaches the generator, and an attacker who must keep each passage as probable under the language model fails on all 57 sections it tries. Filtering does not restore correctness, because the edited passage is usually the one that held the answer. We therefore add a runtime monitor that checks each answer against trusted MITRE STIX data and remembers the passages it rejects. On its own, it reduces exposure to edited text from 0.41 to 0.26; when it may add the trusted MITRE entry as a source, correctness rises to 0.786. We report the costs and failure cases of every defence alongside its gains.",
+      "tr": "A retrieval-augmented generation (RAG) system answers questions using passages it retrieves from a knowledge base, so users must trust that knowledge base. We study an attacker who quietly edits existing passages by swapping words for synonyms (PWWS, TextFooler) in a cybersecurity RAG system built from MITRE ATT&CK and CAPEC. Using a reviewed 44-question benchmark, repeated paired runs and a control corpus in which only the layout changes, we find that poisoning lowers judged answer correctness from 0.714 to 0.555. The damage comes mostly from lost evidence and refusals, not from false statements. To find the edited passages, we use relative entropy. Comparing a whole passage with normal text is a weak signal. Still, one term of the relative entropy, the log-ratio between a word and its most probable synonym, works well: with a small language model as the reference, it reaches an AUROC of 0.95 and stays near chance on the control. Used as a retrieval filter, it halves how often edited text reaches the generator, and an attacker who must keep each passage as probable under the language model fails on all 57 sections it tries. Filtering does not restore correctness, because the edited passage is usually the one that held the answer. We therefore add a runtime monitor that checks each answer against trusted MITRE STIX data and remembers the passages it rejects. On its own, it reduces exposure to edited text from 0.41 to 0.26; when it may add the trusted MITRE entry as a source, correctness rises to 0.786. We report the costs and failure cases of every defence alongside its gains."
     }
   },
   {
-    "id": "2611.22904v1",
-    "title": "Who Pays for Byzantine Robustness? Validity, Data-Share Dictatorships, and Fairness When Only a Few Hospitals Collaborate",
+    "id": "2611.27253v1",
+    "title": "Proactive Defense Benchmark against Deepfake Generation",
     "authors": [
-      "Adnan Malkani"
+      "Joonhyuk Baek",
+      "Wonjune Seo",
+      "Jae-yun Kim",
+      "Saerom Park",
+      "Hoki Kim"
     ],
-    "published_date": "2026-11-17",
+    "published_date": "2026-11-20",
     "tags": [
-      "cs.LG",
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2611.27253v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.27253v1",
+    "content": {
+      "en": "Despite the proliferation of proactive defenses against deepfakes, the lack of a unified evaluation protocol precludes fair comparison and masks critical vulnerabilities. To bridge this gap, we present the first comprehensive benchmark that systematically assesses disruption, robustness, and transferability encompassing pixel, perceptual, and identity metrics. Our extensive analysis reveals that fidelity and identity metrics capture orthogonal performance axes, often leading to conflicting interpretations when relied upon individually. Furthermore, we identify a fundamental trade-off where peak white-box performance signals overfitting, and we introduce a calibrated evaluation to correct generator-induced identity bias. By exposing these blind spots, we establish a rigorous standard to guide the development of genuinely generalizable protections. Project page is available at: https://proactivedefensebenchmark.github.io/",
+      "tr": "Despite the proliferation of proactive defenses against deepfakes, the lack of a unified evaluation protocol precludes fair comparison and masks critical vulnerabilities. To bridge this gap, we present the first comprehensive benchmark that systematically assesses disruption, robustness, and transferability encompassing pixel, perceptual, and identity metrics. Our extensive analysis reveals that fidelity and identity metrics capture orthogonal performance axes, often leading to conflicting interpretations when relied upon individually. Furthermore, we identify a fundamental trade-off where peak white-box performance signals overfitting, and we introduce a calibrated evaluation to correct generator-induced identity bias. By exposing these blind spots, we establish a rigorous standard to guide the development of genuinely generalizable protections. Project page is available at: https://proactivedefensebenchmark.github.io/"
+    }
+  },
+  {
+    "id": "2611.27216v1",
+    "title": "Correct Precedents Induce Policy Violations in On-Device LLM Agents",
+    "authors": [
+      "Chong Tian",
+      "Yu Wang",
+      "Steve Liu",
+      "Qirong Ho",
+      "Xiuying Chen"
+    ],
+    "published_date": "2026-11-20",
+    "tags": [
+      "cs.CL",
+      "cs.AI",
       "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2611.22904v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.22904v1",
+    "link": "http://arxiv.org/abs/2611.27216v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.27216v1",
     "content": {
-      "en": "Clinical federated learning (FL) collaborations typically connect only three to six hospitals, yet Byzantine-robust aggregation rules are designed and benchmarked on synthetic partitions across dozens of equal-sized clients. We conduct an empirical audit of eight standard aggregation rules: FedAvg, coordinate-wise median, trimmed mean, Krum, Multi-Krum, Bulyan, geometric median (GeoMed), and Centered Clipping (CC). We evaluate both unweighted and sample-size-weighted variants across three cross-silo medical datasets from the FLamby benchmark: Fed-Heart-Disease ($n = 4$ hospitals), Fed-TCGA-BRCA ($n = 6$ regions), and Fed-ISIC2019 ($n = 6$ centres). We execute 54,214 training runs across enumerated attacker coalitions ($f \\in \\{1, 2\\}$) paired with exact-twin leave-out controls that decompose performance drops into honest data loss versus adversarial attack damage.   We report three findings. First, client-count validity checks fail to capture breakdown in skewed medical consortia: while $n = 6, f = 1$ satisfies every count condition except Bulyan's, assigning sample-size weights turns median and GeoMed into a clean-model dictatorship whenever a single hospital holds more than half the training data, and causes weighted median, GeoMed, and CC to collapse when that dominant centre attacks. Second, exact-twin leave-out controls reveal that when the largest hospital attacks, the apparent failure of count-based robust rules is predominantly caused by the loss of honest training data (7.5 to 10.4 points on ISIC) rather than adversarial perturbation (2.3 to 3.8 points on ISIC). Conversely, weight-dependent rules suffer large true attack damage (16.1 to 25.1 points on ISIC). Third, unweighted robust rules consistently discount whichever institution generates the most atypical parameter updates, penalizing the smallest hospital on Heart but penalizing larger institutions on TCGA and ISIC.",
-      "tr": "Clinical federated learning (FL) collaborations typically connect only three to six hospitals, yet Byzantine-robust aggregation rules are designed and benchmarked on synthetic partitions across dozens of equal-sized clients. We conduct an empirical audit of eight standard aggregation rules: FedAvg, coordinate-wise median, trimmed mean, Krum, Multi-Krum, Bulyan, geometric median (GeoMed), and Centered Clipping (CC). We evaluate both unweighted and sample-size-weighted variants across three cross-silo medical datasets from the FLamby benchmark: Fed-Heart-Disease ($n = 4$ hospitals), Fed-TCGA-BRCA ($n = 6$ regions), and Fed-ISIC2019 ($n = 6$ centres). We execute 54,214 training runs across enumerated attacker coalitions ($f \\in \\{1, 2\\}$) paired with exact-twin leave-out controls that decompose performance drops into honest data loss versus adversarial attack damage.   We report three findings. First, client-count validity checks fail to capture breakdown in skewed medical consortia: while $n = 6, f = 1$ satisfies every count condition except Bulyan's, assigning sample-size weights turns median and GeoMed into a clean-model dictatorship whenever a single hospital holds more than half the training data, and causes weighted median, GeoMed, and CC to collapse when that dominant centre attacks. Second, exact-twin leave-out controls reveal that when the largest hospital attacks, the apparent failure of count-based robust rules is predominantly caused by the loss of honest training data (7.5 to 10.4 points on ISIC) rather than adversarial perturbation (2.3 to 3.8 points on ISIC). Conversely, weight-dependent rules suffer large true attack damage (16.1 to 25.1 points on ISIC). Third, unweighted robust rules consistently discount whichever institution generates the most atypical parameter updates, penalizing the smallest hospital on Heart but penalizing larger institutions on TCGA and ISIC."
+      "en": "Local-cloud agent systems pair a cloud model with a small on-device agent that acts on private data, often as the last check before an irreversible action. We identify, for the first time, a failure in which such an agent is led into a violation by its own correct decisions within a session. After it correctly releases an item whose restriction was lifted, it becomes more likely to release the next item that is still restricted. Because the trigger is a correct decision, a history with no faulty step can still end in a violation. We call this failure correct-precedent generalization and find it in 13 open-weight models from nine developers. A single correct precedent can cut the safe rate of the most affected agent roughly in half, and the risk compounds when a refused request is simply sent again in a new session. Interventions on the agent's history indicate that it carries its decision on the released item over to the restricted one instead of checking that item's status. Building on this finding, we propose Paired Decision Distillation (PDD), which distills the decisions of a weakly affected teacher into a LoRA adapter. PDD restores the safe rate to nearly 100% in every distilled model, without extra prompt text or model calls.",
+      "tr": "Local-cloud agent systems pair a cloud model with a small on-device agent that acts on private data, often as the last check before an irreversible action. We identify, for the first time, a failure in which such an agent is led into a violation by its own correct decisions within a session. After it correctly releases an item whose restriction was lifted, it becomes more likely to release the next item that is still restricted. Because the trigger is a correct decision, a history with no faulty step can still end in a violation. We call this failure correct-precedent generalization and find it in 13 open-weight models from nine developers. A single correct precedent can cut the safe rate of the most affected agent roughly in half, and the risk compounds when a refused request is simply sent again in a new session. Interventions on the agent's history indicate that it carries its decision on the released item over to the restricted one instead of checking that item's status. Building on this finding, we propose Paired Decision Distillation (PDD), which distills the decisions of a weakly affected teacher into a LoRA adapter. PDD restores the safe rate to nearly 100% in every distilled model, without extra prompt text or model calls."
     }
   },
   {
-    "id": "2611.22888v1",
-    "title": "Stopping Is Not the Limit: Understanding and Eliciting Agent Capability in Long-Horizon Vulnerability Exploitation",
+    "id": "2611.27175v1",
+    "title": "Felid: A Flexible and Efficient Design for Transformer Fine-Tuning over Encrypted Data",
     "authors": [
-      "Deokhyung Kang",
-      "Minjae Gwon",
-      "Sangdon Park"
+      "Linru Zhang",
+      "Jun Jie Sim",
+      "Xiangning Wang",
+      "Jiahao Zhong",
+      "Kaiyu Zhou"
     ],
-    "published_date": "2026-11-17",
+    "published_date": "2026-11-20",
     "tags": [
       "cs.CR",
-      "cs.AI",
-      "cs.SE"
+      "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2611.22888v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.22888v1",
+    "link": "http://arxiv.org/abs/2611.27175v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.27175v1",
     "content": {
-      "en": "Vulnerability exploitation tests whether language model agents can develop working exploits from known software flaws. Sequential test-time scaling can improve exploitation performance, but larger budgets do not ensure sustained exploration: agents often stop with budget remaining. Yet what happens when execution continues beyond stopping remains underexplored. We investigate this gap on ExploitBench using DeepSeek-V4-Flash-0731 and MiMo-V2.6-Pro. We find additional verified gains after the first stop response, but gains diminish over longer execution. We identify two patterns associated with less productive continuation: an increasing proportion of stop responses within the same context and earlier stopping associated with summaries retaining impossibility judgments about unachieved capabilities. To test whether context management can elicit further capability, we propose SCoRe, which compacts context at stop bursts and marks these judgments as unproven. SCoRe improves verified capability over summary-based continuation and other evaluated context-management baselines. With SCoRe, MiMo reaches a capability coverage score of 67.0% at 2,000 turns, exceeding both 32.4% under the original stopping policy and the 58.6% computed for GPT-5.5 from ExploitBench's 300-turn reference results on the same tasks. These findings show that stopping need not mark an agent's exploitation limit, and that continued execution with context management can elicit substantial further capability.",
-      "tr": "Vulnerability exploitation tests whether language model agents can develop working exploits from known software flaws. Sequential test-time scaling can improve exploitation performance, but larger budgets do not ensure sustained exploration: agents often stop with budget remaining. Yet what happens when execution continues beyond stopping remains underexplored. We investigate this gap on ExploitBench using DeepSeek-V4-Flash-0731 and MiMo-V2.6-Pro. We find additional verified gains after the first stop response, but gains diminish over longer execution. We identify two patterns associated with less productive continuation: an increasing proportion of stop responses within the same context and earlier stopping associated with summaries retaining impossibility judgments about unachieved capabilities. To test whether context management can elicit further capability, we propose SCoRe, which compacts context at stop bursts and marks these judgments as unproven. SCoRe improves verified capability over summary-based continuation and other evaluated context-management baselines. With SCoRe, MiMo reaches a capability coverage score of 67.0% at 2,000 turns, exceeding both 32.4% under the original stopping policy and the 58.6% computed for GPT-5.5 from ExploitBench's 300-turn reference results on the same tasks. These findings show that stopping need not mark an agent's exploitation limit, and that continued execution with context management can elicit substantial further capability."
+      "en": "Fully Homomorphic Encryption (FHE) enables non-interactive, privacy-preserving transformer fine-tuning, protecting highly sensitive data as inputs to large language models. Prior work has predominantly pursued efficiency gains through architectural refinements, yet overall performance remains bounded by the substantial cost inherent in encrypted computation. To address these issues, we target the bottleneck at the ciphertext operation level. Concretely, we propose a novel packing strategy that supports batching over a flexible number of inputs, making it well-suited for fine-tuning workloads. In addition, we design operation-specific matrix evaluation algorithms that significantly reduce (i) the number of ciphertext rotations and relinearizations, and (ii) the number of bootstrapping invocations. Additionally, we exploit functional bootstrapping to fold the evaluation of element-wise activation functions directly into the bootstrapping step, thereby reducing overall computational complexity. As a result, our framework achieves a $30\\times$ reduction in ciphertext rotations and relinearizations across all matrix operations, as well as a $2.5\\times$ reduction in FHE bootstrapping invocations over the entire computation flow, compared to the latest state-of-the-art work. It is worth noting that our system completes fine-tuning of a 2-layer BERT-style model with a batch size of 16 in 650 seconds, achieving a $8\\times$ speedup over the state-of-the-art work.",
+      "tr": "Fully Homomorphic Encryption (FHE) enables non-interactive, privacy-preserving transformer fine-tuning, protecting highly sensitive data as inputs to large language models. Prior work has predominantly pursued efficiency gains through architectural refinements, yet overall performance remains bounded by the substantial cost inherent in encrypted computation. To address these issues, we target the bottleneck at the ciphertext operation level. Concretely, we propose a novel packing strategy that supports batching over a flexible number of inputs, making it well-suited for fine-tuning workloads. In addition, we design operation-specific matrix evaluation algorithms that significantly reduce (i) the number of ciphertext rotations and relinearizations, and (ii) the number of bootstrapping invocations. Additionally, we exploit functional bootstrapping to fold the evaluation of element-wise activation functions directly into the bootstrapping step, thereby reducing overall computational complexity. As a result, our framework achieves a $30\\times$ reduction in ciphertext rotations and relinearizations across all matrix operations, as well as a $2.5\\times$ reduction in FHE bootstrapping invocations over the entire computation flow, compared to the latest state-of-the-art work. It is worth noting that our system completes fine-tuning of a 2-layer BERT-style model with a batch size of 16 in 650 seconds, achieving a $8\\times$ speedup over the state-of-the-art work."
     }
   },
   {
-    "id": "2611.22761v1",
-    "title": "Network-Exposed Configuration Attacks on LLM-Controlled Social Robots",
+    "id": "2611.27095v1",
+    "title": "Epistemic Guard: Out-of-Process MCP Receipt Proxying, Post-Turn Prose Supervision, and Provenance-Gated Memory for Tool-Using Autonomous Agents",
     "authors": [
-      "Stanley Akingbola",
-      "Ugbede Ibrahim",
-      "Yan Lin Aung",
-      "Quang Dan Le",
-      "Hong Qing Yu"
+      "Sean Maxwell"
     ],
-    "published_date": "2026-11-17",
+    "published_date": "2026-11-20",
+    "tags": [
+      "cs.SE",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "link": "http://arxiv.org/abs/2611.27095v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.27095v1",
+    "content": {
+      "en": "Language-model agents using the Model Context Protocol (MCP) face three runtime verification gaps: (i) action fabrication, where post-tool prose narrates side effects that failed, timed out, or never ran; (ii) provenance collapse, where unverified model prose or web text enters durable memory alongside executed tool outputs; and (iii) syndicated echo amplification, where mirrored web pages satisfy multi-source corroboration from one origin. Existing MCP firewalls inspect wire calls before execution, while LLM-judge guardrails require multi-gigabyte VRAM without binding prose to receipts. We present epistemic-guard (v0.5.2), an open-source Python library and out-of-process stdio MCP receipt proxy (15 modules, 0 MiB GPU VRAM). epistemic-guard isolates Ed25519 signing keys out of process, writes RFC 6962 Merkle logs with AER-1 receipt translation, checks post-turn prose on CPU with SHA-256-verified OpenVINO INT8 encoders (4 models, 279.48 MB total; 82.67 MB on the supervision path), gates SQLite writes across 7 provenance domains, and collapses verbatim and lightly edited wire-syndicated RAG mirrors. On conformance suites, epistemic-guard rejects 100.0% of tampered receipts (200 Merkle leaves), passes 58/58 official AER-1 ingestion vectors and 50/50 reference-verified AER-1 exports, verifies 100.0% of 40 fault-injected wire calls and 100 concurrent appends with 0 key leaks, and blocks 100.0% of 100 unauthorized memory writes. Across $N=250$ frozen-benchmark traces, epistemic-guard reaches 93.2% accuracy at 17.9 ms warm median CPU latency (8.62 ms single-clause; 921.8 ms cold-start load), beating 12B-14B GPU judges by 6.4-6.8 points ($p=0.0259$, $p=0.0095$) at 4.26-4.5$\\times$ lower latency; on $N=60$ live mcp-proxy traces, it catches 96.15% of hazards at 76.67% accuracy (38.24% FPR; $+18.34$ points over Stage-1-only, $p=0.001$) in 9.16 ms p50.",
+      "tr": "Language-model agents using the Model Context Protocol (MCP) face three runtime verification gaps: (i) action fabrication, where post-tool prose narrates side effects that failed, timed out, or never ran; (ii) provenance collapse, where unverified model prose or web text enters durable memory alongside executed tool outputs; and (iii) syndicated echo amplification, where mirrored web pages satisfy multi-source corroboration from one origin. Existing MCP firewalls inspect wire calls before execution, while LLM-judge guardrails require multi-gigabyte VRAM without binding prose to receipts. We present epistemic-guard (v0.5.2), an open-source Python library and out-of-process stdio MCP receipt proxy (15 modules, 0 MiB GPU VRAM). epistemic-guard isolates Ed25519 signing keys out of process, writes RFC 6962 Merkle logs with AER-1 receipt translation, checks post-turn prose on CPU with SHA-256-verified OpenVINO INT8 encoders (4 models, 279.48 MB total; 82.67 MB on the supervision path), gates SQLite writes across 7 provenance domains, and collapses verbatim and lightly edited wire-syndicated RAG mirrors. On conformance suites, epistemic-guard rejects 100.0% of tampered receipts (200 Merkle leaves), passes 58/58 official AER-1 ingestion vectors and 50/50 reference-verified AER-1 exports, verifies 100.0% of 40 fault-injected wire calls and 100 concurrent appends with 0 key leaks, and blocks 100.0% of 100 unauthorized memory writes. Across $N=250$ frozen-benchmark traces, epistemic-guard reaches 93.2% accuracy at 17.9 ms warm median CPU latency (8.62 ms single-clause; 921.8 ms cold-start load), beating 12B-14B GPU judges by 6.4-6.8 points ($p=0.0259$, $p=0.0095$) at 4.26-4.5$\\times$ lower latency; on $N=60$ live mcp-proxy traces, it catches 96.15% of hazards at 76.67% accuracy (38.24% FPR; $+18.34$ points over Stage-1-only, $p=0.001$) in 9.16 ms p50."
+    }
+  },
+  {
+    "id": "2611.26983v1",
+    "title": "Privacy Protection in Self-Evolving Personal Agents: Persistent Memory and Cross-Carrier Transfer",
+    "authors": [
+      "Zibin Lin",
+      "Taotao Wang",
+      "Shengli Zhang"
+    ],
+    "published_date": "2026-11-20",
     "tags": [
       "cs.CR",
-      "cs.AI",
-      "cs.RO"
+      "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2611.22761v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.22761v1",
+    "link": "http://arxiv.org/abs/2611.26983v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.26983v1",
     "content": {
-      "en": "Large language models (LLMs) in embodied robots create security dependencies beyond inference. We investigate a network-exposed configuration attack on the Pollen Robotics Reachy Mini Lite, allowing an unauthenticated attacker to replace personality settings and the cloud LLM's system prompt through a management interface, without adversarial conversational input. Eleven prompt-injection attempts across five categories were reported as resisted, whereas both configuration-layer attack paths produced observable behavioural changes on physical hardware. We demonstrate local and network-adjacent access, mapping the weakness to CWE-306 (Missing Authentication for a Critical Function) and CWE-1327 (Binding to an Unrestricted IP Address), with a reported CVSS v3.1 score of 6.5 (Medium). A configuration endpoint also accepts cross-origin requests without a CORS preflight (CWE-352; 6.5 Medium), while the persistent-memory sink stores content without enforcing its stated restrictions. A source review of 59 public repositories identifies missing authentication in 10 of 11 source-verifiable genuine applications, or 11 of 11 including a framework-default case. These findings indicate recurrence within the sampled repositories, not prevalence in commercial products. We characterise a deployment gap between developer-oriented network assumptions and consumer-facing embodied AI security: inference-layer refusal cannot prevent unauthorised changes to model instructions. Potential consequences include surveillance through onboard cameras and microphones and social engineering of nearby users. Proof-of-concept code, evidence and the survey are available at https://bit.ly/reachypi.",
-      "tr": "Large language models (LLMs) in embodied robots create security dependencies beyond inference. We investigate a network-exposed configuration attack on the Pollen Robotics Reachy Mini Lite, allowing an unauthenticated attacker to replace personality settings and the cloud LLM's system prompt through a management interface, without adversarial conversational input. Eleven prompt-injection attempts across five categories were reported as resisted, whereas both configuration-layer attack paths produced observable behavioural changes on physical hardware. We demonstrate local and network-adjacent access, mapping the weakness to CWE-306 (Missing Authentication for a Critical Function) and CWE-1327 (Binding to an Unrestricted IP Address), with a reported CVSS v3.1 score of 6.5 (Medium). A configuration endpoint also accepts cross-origin requests without a CORS preflight (CWE-352; 6.5 Medium), while the persistent-memory sink stores content without enforcing its stated restrictions. A source review of 59 public repositories identifies missing authentication in 10 of 11 source-verifiable genuine applications, or 11 of 11 including a framework-default case. These findings indicate recurrence within the sampled repositories, not prevalence in commercial products. We characterise a deployment gap between developer-oriented network assumptions and consumer-facing embodied AI security: inference-layer refusal cannot prevent unauthorised changes to model instructions. Potential consequences include surveillance through onboard cameras and microphones and social engineering of nearby users. Proof-of-concept code, evidence and the survey are available at https://bit.ly/reachypi."
+      "en": "Personal agents carry private experience into later decisions through persistent memory. This thematic survey compares memory admission, maintenance, release, and withdrawal by protected change, observer, and validation setting. Direct evidence in the screened corpus comes from controlled memory workflows. Three worked scenarios follow one private fact through booking, feedback-driven learning, and withdrawal. We show when prompt revision and memory reads compose, when skills inherit a private head's bound, and why reader non-use does not establish cleanup of learned state. Diagnostic experiments measure the utility costs of wider label protection and broad memory deletion, and test how missing lineage obscures descendants.",
+      "tr": "Personal agents carry private experience into later decisions through persistent memory. This thematic survey compares memory admission, maintenance, release, and withdrawal by protected change, observer, and validation setting. Direct evidence in the screened corpus comes from controlled memory workflows. Three worked scenarios follow one private fact through booking, feedback-driven learning, and withdrawal. We show when prompt revision and memory reads compose, when skills inherit a private head's bound, and why reader non-use does not establish cleanup of learned state. Diagnostic experiments measure the utility costs of wider label protection and broad memory deletion, and test how missing lineage obscures descendants."
     }
   },
   {
-    "id": "2611.22596v1",
-    "title": "Propose with the Gradient, Accept with the Loss: One Hedged Attack for Pixel-Sparse Robustness",
+    "id": "2611.26936v1",
+    "title": "SecretAgent: A Multi-Agent Framework for Privacy Protection against Vision Language Models",
     "authors": [
-      "Hon Ming Yan",
-      "Chun Pong Lau"
+      "Minda Zhao",
+      "Yue Zhang",
+      "Mengyu Wang"
     ],
-    "published_date": "2026-11-17",
+    "published_date": "2026-11-20",
     "tags": [
       "cs.CV",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "link": "http://arxiv.org/abs/2611.22596v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.22596v1",
-    "content": {
-      "en": "A pixel-sparse adversary may change a few pixels of an image to any value. Robustness to such attacks is currently measured with an ensemble, sparse-AutoAttack (sAA), because its members fail in different places: sparse projected gradient descent (sPGD) trusts a first-order model that a full pixel change breaks, and sparse random search (Sparse-RS) ignores the gradient even where it is informative. We show that both attacks are local searches, each a proposal distribution plus an acceptance rule, and ask what such a search can learn from the gradient. A Taylor bound says what to measure, and measurements at the states the search visits give five rules. The sign of the gradient is its most reliable use at a single pixel and sets a new pixel's value. Its ranking of candidate pixels should be followed loosely, and its ranking of the pixels to remove, which is often more reliable, can be followed more closely. A pixel should not be proposed twice before a move is accepted, and acceptance should be decided by the loss alone. These rules define Gradient-guided Random Search (GRS), which runs once and costs one forward and one backward pass per step. On 13 CIFAR-10 configurations and 5 ImageNet models, GRS matches or beats the best single member of sAA and is within one point of sAA itself or stronger on 17 of 18 settings, and it is significantly stronger than sAA on 8. It uses 3 instead of up to 7 forward-pass units, and on CIFAR-10 it runs 3.7 to 5.0 times faster than the members of sAA run in full.",
-      "tr": "A pixel-sparse adversary may change a few pixels of an image to any value. Robustness to such attacks is currently measured with an ensemble, sparse-AutoAttack (sAA), because its members fail in different places: sparse projected gradient descent (sPGD) trusts a first-order model that a full pixel change breaks, and sparse random search (Sparse-RS) ignores the gradient even where it is informative. We show that both attacks are local searches, each a proposal distribution plus an acceptance rule, and ask what such a search can learn from the gradient. A Taylor bound says what to measure, and measurements at the states the search visits give five rules. The sign of the gradient is its most reliable use at a single pixel and sets a new pixel's value. Its ranking of candidate pixels should be followed loosely, and its ranking of the pixels to remove, which is often more reliable, can be followed more closely. A pixel should not be proposed twice before a move is accepted, and acceptance should be decided by the loss alone. These rules define Gradient-guided Random Search (GRS), which runs once and costs one forward and one backward pass per step. On 13 CIFAR-10 configurations and 5 ImageNet models, GRS matches or beats the best single member of sAA and is within one point of sAA itself or stronger on 17 of 18 settings, and it is significantly stronger than sAA on 8. It uses 3 instead of up to 7 forward-pass units, and on CIFAR-10 it runs 3.7 to 5.0 times faster than the members of sAA run in full."
-    }
-  },
-  {
-    "id": "2611.22589v1",
-    "title": "Adaptive LLM-Driven Honeypots vs. LLM-Driven Attackers: Does Narrative Coherence Improve Deception?",
-    "authors": [
-      "Pedro Beltrán-López",
-      "Raul Gonzalez Jimenez",
-      "Dario Maddaloni",
-      "Manuel Gil Pérez",
-      "Pantaleone Nespoli"
-    ],
-    "published_date": "2026-11-17",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2611.22589v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.22589v1",
-    "content": {
-      "en": "Large Language Models (LLMs) enable honeypots to generate responses and deceptive artefacts on demand, yet existing approaches evaluate generated content one reply at a time and leave open whether artefacts that jointly describe a coherent event retain an attacker better than unrelated ones. This question becomes pressing as autonomous LLM-driven offensive agents emerge as realistic adversaries. This paper proposes narrative deception, a reactive strategy in which the defender maps each observed attacker command to a MITRE ATT&CK technique, selects a compatible scenario from a curated catalogue based on MITRE Engage, and deploys mutually referential artefacts (files, processes, services, and logs) on an emulated Ubuntu host while the intrusion is under way. An LLM-powered defender and an autonomous LLM attacker interact through a real SSH session, and the attacker's termination policy distinguishes abandonment due to suspected deception from abandonment due to loss of interest. A campaign of 1,150 sessions compares four conditions of increasing sophistication (Static, Same-TTP, Multi-TTP, and Chain) across four open-weight attacker models, four defender models, and three attacker skill levels. Engagement increases significantly at every step. With the same artefact budget per reaction, coherent scenarios raise the median session length of advanced attackers from 40 to 165 commands and reduce their abandonment from 86% to 52%. The effect grows with attacker skill, holds across all sixteen model pairs, and comes at comparable inference cost. Nearly all sessions ended through loss of interest rather than detection, which suggests that deception should sustain meaningful findings, not only emulator fidelity.",
-      "tr": "Large Language Models (LLMs) enable honeypots to generate responses and deceptive artefacts on demand, yet existing approaches evaluate generated content one reply at a time and leave open whether artefacts that jointly describe a coherent event retain an attacker better than unrelated ones. This question becomes pressing as autonomous LLM-driven offensive agents emerge as realistic adversaries. This paper proposes narrative deception, a reactive strategy in which the defender maps each observed attacker command to a MITRE ATT&CK technique, selects a compatible scenario from a curated catalogue based on MITRE Engage, and deploys mutually referential artefacts (files, processes, services, and logs) on an emulated Ubuntu host while the intrusion is under way. An LLM-powered defender and an autonomous LLM attacker interact through a real SSH session, and the attacker's termination policy distinguishes abandonment due to suspected deception from abandonment due to loss of interest. A campaign of 1,150 sessions compares four conditions of increasing sophistication (Static, Same-TTP, Multi-TTP, and Chain) across four open-weight attacker models, four defender models, and three attacker skill levels. Engagement increases significantly at every step. With the same artefact budget per reaction, coherent scenarios raise the median session length of advanced attackers from 40 to 165 commands and reduce their abandonment from 86% to 52%. The effect grows with attacker skill, holds across all sixteen model pairs, and comes at comparable inference cost. Nearly all sessions ended through loss of interest rather than detection, which suggests that deception should sustain meaningful findings, not only emulator fidelity."
-    }
-  },
-  {
-    "id": "2611.22583v1",
-    "title": "Evolution Under Fire: Evolving Agent Safety Harnesses with Adaptive Injection Stressors",
-    "authors": [
-      "Yujun Wang",
-      "Yilun Liu",
-      "Jinhe Bi",
-      "Krishna Kanth Nakka",
-      "Xuebing Zhou"
-    ],
-    "published_date": "2026-11-17",
-    "tags": [
-      "cs.CR",
-      "cs.AI",
-      "cs.CL"
-    ],
-    "link": "http://arxiv.org/abs/2611.22583v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.22583v1",
-    "content": {
-      "en": "Tool-using language-model agents must act on information from untrusted emails, webpages, and documents. This creates a central security challenge: malicious instructions and legitimate task directives can arrive through the same interaction channel. Existing defenses are largely hand-designed and static, making further improvements dependent on repeated manual redesign. We introduce Evolution Under Fire, a staged framework that couples safety-harness evolution with adaptive stressor evolution. Utility-constrained, Pareto-scheduled tree search evolves complete executable safety harnesses from execution evidence while keeping the task model, benchmark, tools, and evaluator fixed. Adaptive stressor evolution then discovers utility-preserving attacks that guide a subsequent stage of harness evolution. On AgentDyn with GPT-4o-mini, an evolved harness reduces attack success from 50.4% to 3.0%, improves clean and attacked utility over the initial harness, and offers a stronger security-utility trade-off than reproduced defenses. On Agent-SafetyBench with Qwen2.5-7B-Instruct, harness evolution reduces attack success from 82.6% to 62.0% while retaining helpfulness and runtime validity. Evolved harnesses also transfer without further evolution to Qwen3.5-35B-A3B, reducing attack success from 32.1% to 0.9% while improving attacked-task utility.",
-      "tr": "Tool-using language-model agents must act on information from untrusted emails, webpages, and documents. This creates a central security challenge: malicious instructions and legitimate task directives can arrive through the same interaction channel. Existing defenses are largely hand-designed and static, making further improvements dependent on repeated manual redesign. We introduce Evolution Under Fire, a staged framework that couples safety-harness evolution with adaptive stressor evolution. Utility-constrained, Pareto-scheduled tree search evolves complete executable safety harnesses from execution evidence while keeping the task model, benchmark, tools, and evaluator fixed. Adaptive stressor evolution then discovers utility-preserving attacks that guide a subsequent stage of harness evolution. On AgentDyn with GPT-4o-mini, an evolved harness reduces attack success from 50.4% to 3.0%, improves clean and attacked utility over the initial harness, and offers a stronger security-utility trade-off than reproduced defenses. On Agent-SafetyBench with Qwen2.5-7B-Instruct, harness evolution reduces attack success from 82.6% to 62.0% while retaining helpfulness and runtime validity. Evolved harnesses also transfer without further evolution to Qwen3.5-35B-A3B, reducing attack success from 32.1% to 0.9% while improving attacked-task utility."
-    }
-  },
-  {
-    "id": "2611.22288v1",
-    "title": "ConfGuard: a physics-grounded reference monitor for predictive-maintenance large-language-model agents",
-    "authors": [
-      "Arunkumar V",
-      "Gangadharan G. R.",
-      "S. Senthilkumar"
-    ],
-    "published_date": "2026-11-17",
-    "tags": [
       "cs.AI",
       "cs.CR",
-      "cs.LG"
+      "cs.LG",
+      "cs.MA"
     ],
-    "link": "http://arxiv.org/abs/2611.22288v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.22288v1",
+    "link": "http://arxiv.org/abs/2611.26936v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.26936v1",
     "content": {
-      "en": "Large-language-model agents now close the industrial predictive-maintenance loop, reading sensor windows, retrieving procedures and dispatching work orders. Two attack channels meet there: injected text in a retrieved document can hijack the decision, and a bounded sensor perturbation can corrupt the remaining-useful-life estimate behind it. Recent agent defenses police data provenance and tool privilege but cannot tell whether a prognostic quantity is physically plausible. ConfGuard is a reference monitor with a physics-grounded policy. Its conformal monitor tests each prediction, anchored to the asset's admitted history, against degradation physics: capped remaining life never rises and falls at most one cycle per cycle. Calibrating its threshold over whole asset trajectories lets the operator set the expected share of a clean asset's windows the running monitor escalates. A physics-policy validator checks the agent's maintenance-urgency decision against the decision a deterministic policy derives from the same interval. On all 10,196 C-MAPSS test windows the monitor cuts a covert attacker's reach on healthy assets from 0.529 to 0.046 and closes suppression of failing assets (0.151 to 0), escalating 0.027 of clean windows against a 0.05 target, while the fixed physical range it replaces leaves both attacks open. Behind a Qwen3-14B planner the composed monitors hold urgency-class injection to 0.00 and the universal sensor attack to 0.12, against 0.29 and 0.54 for a defended prompt. An adaptive attacker defeats a Mahalanobis detector on 0.504 of windows and adversarial training on 0.485. We report an attack class the projection misses.",
-      "tr": "Large-language-model agents now close the industrial predictive-maintenance loop, reading sensor windows, retrieving procedures and dispatching work orders. Two attack channels meet there: injected text in a retrieved document can hijack the decision, and a bounded sensor perturbation can corrupt the remaining-useful-life estimate behind it. Recent agent defenses police data provenance and tool privilege but cannot tell whether a prognostic quantity is physically plausible. ConfGuard is a reference monitor with a physics-grounded policy. Its conformal monitor tests each prediction, anchored to the asset's admitted history, against degradation physics: capped remaining life never rises and falls at most one cycle per cycle. Calibrating its threshold over whole asset trajectories lets the operator set the expected share of a clean asset's windows the running monitor escalates. A physics-policy validator checks the agent's maintenance-urgency decision against the decision a deterministic policy derives from the same interval. On all 10,196 C-MAPSS test windows the monitor cuts a covert attacker's reach on healthy assets from 0.529 to 0.046 and closes suppression of failing assets (0.151 to 0), escalating 0.027 of clean windows against a 0.05 target, while the fixed physical range it replaces leaves both attacks open. Behind a Qwen3-14B planner the composed monitors hold urgency-class injection to 0.00 and the universal sensor attack to 0.12, against 0.29 and 0.54 for a defended prompt. An adaptive attacker defeats a Mahalanobis detector on 0.504 of windows and adversarial training on 0.485. We report an attack class the projection misses."
-    }
-  },
-  {
-    "id": "2611.21956v1",
-    "title": "Eight in Ten LLMs Leak System-Prompt Secrets: Nevan, an Agentic Capture-the-Flag Study",
-    "authors": [
-      "Ana Clara Zoppi Serpa",
-      "Anderson Rocha",
-      "Hélio Pedrini"
-    ],
-    "published_date": "2026-11-16",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2611.21956v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.21956v1",
-    "content": {
-      "en": "We audit instruction-hierarchy enforcement across 363 text-in/text-out models from the OpenRouter catalog. The research question we answer with this experiment is which models disclose a protected secret embedded in the system prompt, and through which techniques. Each model guards a secret 16-character flag set in its system prompt, while an artificial intelligence (AI) agent (OpenCode, powered by DeepSeek V4.1 Flash), steered by a human researcher, tries to persuade it to emit the flag. The flag was exfiltrated from 296 of the 363 models, plus four models released after the initial catalog freeze, for 300 captures in total. Of these, 170 involved a non-English language pivot, most often French. Each capture shows that a model ranked a user request above its system instruction at least once. It does not show that the model provably resists untested attacks, nor that it would consistently leak semantically sensitive data, nor that it is vulnerable to harmful-content jailbreaks. For practitioners, we draw three lessons: do not store secrets in system prompts, enforce critical behavior outside the model with output validation and deterministic checks, and do not let a large language model (LLM) judge be the sole decider of consequential outcomes.",
-      "tr": "We audit instruction-hierarchy enforcement across 363 text-in/text-out models from the OpenRouter catalog. The research question we answer with this experiment is which models disclose a protected secret embedded in the system prompt, and through which techniques. Each model guards a secret 16-character flag set in its system prompt, while an artificial intelligence (AI) agent (OpenCode, powered by DeepSeek V4.1 Flash), steered by a human researcher, tries to persuade it to emit the flag. The flag was exfiltrated from 296 of the 363 models, plus four models released after the initial catalog freeze, for 300 captures in total. Of these, 170 involved a non-English language pivot, most often French. Each capture shows that a model ranked a user request above its system instruction at least once. It does not show that the model provably resists untested attacks, nor that it would consistently leak semantically sensitive data, nor that it is vulnerable to harmful-content jailbreaks. For practitioners, we draw three lessons: do not store secrets in system prompts, enforce critical behavior outside the model with output validation and deterministic checks, and do not let a large language model (LLM) judge be the sole decider of consequential outcomes."
+      "en": "Vision-language models (VLMs) can infer private information from shared images, including locations, personally identifiable information (PII), and personal attributes such as age and sex, even from medical images. Adversarial perturbations can protect such information against black-box VLMs, but existing methods overlook image quality and introduce visible artifacts into the images they protect. We present SecretAgent, the first general multi-agent framework that protects image privacy against VLMs while preserving visual fidelity. LLM agents iteratively locate the visual evidence that reveals private information and adapt an invisible perturbation to the target VLM's answers and to an appearance reviewer agent, which rejects any candidate with visible artifacts. We instantiate SecretAgent with two complementary variants: SecretAgent-Gradient optimizes the perturbation through six surrogate encoders for cross-model transferability, and the gradient-free SecretAgent-Tool composes procedural noise and achieves the best perceptual fidelity on three of the five datasets. Experiments on four privacy applications (geolocation, PII, facial, and medical) across five datasets and six VLMs show that SecretAgent preserves image quality substantially better than existing methods while achieving state-of-the-art privacy protection in every application, and that its protection transfers to other VLMs.",
+      "tr": "Vision-language models (VLMs) can infer private information from shared images, including locations, personally identifiable information (PII), and personal attributes such as age and sex, even from medical images. Adversarial perturbations can protect such information against black-box VLMs, but existing methods overlook image quality and introduce visible artifacts into the images they protect. We present SecretAgent, the first general multi-agent framework that protects image privacy against VLMs while preserving visual fidelity. LLM agents iteratively locate the visual evidence that reveals private information and adapt an invisible perturbation to the target VLM's answers and to an appearance reviewer agent, which rejects any candidate with visible artifacts. We instantiate SecretAgent with two complementary variants: SecretAgent-Gradient optimizes the perturbation through six surrogate encoders for cross-model transferability, and the gradient-free SecretAgent-Tool composes procedural noise and achieves the best perceptual fidelity on three of the five datasets. Experiments on four privacy applications (geolocation, PII, facial, and medical) across five datasets and six VLMs show that SecretAgent preserves image quality substantially better than existing methods while achieving state-of-the-art privacy protection in every application, and that its protection transfers to other VLMs."
     }
   }
 ]
