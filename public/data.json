@@ -1,217 +1,216 @@
 [
   {
-    "id": "2611.32958v1",
-    "title": "Attestation is All You Need: Toward a Zero-Trust Architecture for HPC AI Agents",
+    "id": "2611.34868v1",
+    "title": "A Survey of Security, Privacy, and Ethics of Large Language Models in Telecom",
     "authors": [
-      "Jie Li",
-      "Chenxu Niu",
-      "Tongyang Wang",
-      "Yong Chen"
+      "Joy Bose",
+      "Srinivas Adyapak"
     ],
-    "published_date": "2026-11-24",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2611.32958v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.32958v1",
-    "content": {
-      "en": "AI agents are beginning to automate data analysis, orchestration, and simulation steering in HPC environments, but they introduce a security problem that existing cluster defenses do not address: the hijacked authorized agent. An adversary can subvert an agent through prompt injection, poisoned shared data, compromised tools, or multi-agent coordination, then exfiltrate sensitive data through legitimate encrypted LLM API traffic. We propose behavioral attestation as a runtime defense for this setting. Our system, AEGIS, compiles task-derived behavioral constraints, monitors agent actions with ebpf-based syscall interception, verifies evidence against constraint profiles, correlates behavior across agents, and triggers slurm-level containment. On the real attestation path, AEGIS detects all four implemented attack classes with sub-second median latency at a 1-second interval and low measured verifier overhead. Controlled experiments show full attack-suite coverage, stronger detection than representative baselines, and no observed false positives on the evaluated benign workflows.",
-      "tr": "AI agents are beginning to automate data analysis, orchestration, and simulation steering in HPC environments, but they introduce a security problem that existing cluster defenses do not address: the hijacked authorized agent. An adversary can subvert an agent through prompt injection, poisoned shared data, compromised tools, or multi-agent coordination, then exfiltrate sensitive data through legitimate encrypted LLM API traffic. We propose behavioral attestation as a runtime defense for this setting. Our system, AEGIS, compiles task-derived behavioral constraints, monitors agent actions with ebpf-based syscall interception, verifies evidence against constraint profiles, correlates behavior across agents, and triggers slurm-level containment. On the real attestation path, AEGIS detects all four implemented attack classes with sub-second median latency at a 1-second interval and low measured verifier overhead. Controlled experiments show full attack-suite coverage, stronger detection than representative baselines, and no observed false positives on the evaluated benign workflows."
-    }
-  },
-  {
-    "id": "2611.32957v1",
-    "title": "\"I Do Intend to Deliver\": Will LLMs Run a Marketplace Advance-Fee Scam?",
-    "authors": [
-      "Megan Squire"
-    ],
-    "published_date": "2026-11-24",
-    "tags": [
-      "cs.SI",
-      "cs.AI",
-      "cs.CL",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2611.32957v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.32957v1",
-    "content": {
-      "en": "Online fraud is traditionally limited by the cost of the human labor needed to talk to potential victims. We ask whether hosted large language models will now supply that labor. We prompted ten off-the-shelf models to play the seller in the \"free item, just pay delivery\" advance-fee scam common on buy-and-sell sites, using a plain system prompt with no jailbreak. Each model played 30 conversations against each of four buyer personas, from credulous to guarded, with the same model playing the buyer (1,200 conversations). We label each conversation by what happened to the buyer's money, and validate the labels against two human coders. 737 conversations (61%) ended with the buyer paying in advance. Eight of the ten models played in almost every conversation, and running both sides cost about 2.5 cents per payment. Only the guarded buyer, who wanted a findable identity, resisted, and the most willing sellers got past it by inventing names and phone numbers. Sellers that recognized the scam still took the money in 133 conversations, usually reasoning about their own honesty rather than the buyer's risk. Several models protected the buyer without refusing, by conceding payment on delivery, so refusal rates alone misstate safety. We release the benchmark, prompts, code and labels.",
-      "tr": "Online fraud is traditionally limited by the cost of the human labor needed to talk to potential victims. We ask whether hosted large language models will now supply that labor. We prompted ten off-the-shelf models to play the seller in the \"free item, just pay delivery\" advance-fee scam common on buy-and-sell sites, using a plain system prompt with no jailbreak. Each model played 30 conversations against each of four buyer personas, from credulous to guarded, with the same model playing the buyer (1,200 conversations). We label each conversation by what happened to the buyer's money, and validate the labels against two human coders. 737 conversations (61%) ended with the buyer paying in advance. Eight of the ten models played in almost every conversation, and running both sides cost about 2.5 cents per payment. Only the guarded buyer, who wanted a findable identity, resisted, and the most willing sellers got past it by inventing names and phone numbers. Sellers that recognized the scam still took the money in 133 conversations, usually reasoning about their own honesty rather than the buyer's risk. Several models protected the buyer without refusing, by conceding payment on delivery, so refusal rates alone misstate safety. We release the benchmark, prompts, code and labels."
-    }
-  },
-  {
-    "id": "2611.32780v1",
-    "title": "C3H: Compression-to-Consensus Criteria Hijacking in Multimodal LLM Recommender Systems",
-    "authors": [
-      "Guowei Guan",
-      "Yurong Hao",
-      "Jiaming Zhang",
-      "Fuyao Zhang",
-      "Wei Yang Bryan Lim"
-    ],
-    "published_date": "2026-11-24",
-    "tags": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "link": "http://arxiv.org/abs/2611.32780v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.32780v1",
-    "content": {
-      "en": "Multimodal large language models (MLLMs) are transforming recommender systems into content-aware decision systems. In these systems, multimodal compression and cross-modal fusion are often viewed as robustness-enhancing mechanisms against content manipulation, as compression can filter noisy signals and cross-modal consensus can suppress inconsistent anomalies. We challenge this assumption by showing that the same process can expose a compression-to-consensus (C2C) bias in ranking decisions. Signals that remain salient after compression and receive consistent support across modalities can gain disproportionate influence in candidate comparison, offering an exploitable direction for content manipulation. In this paper, we introduce C3H, a novel inference-time attack that exploits this vulnerability. Rather than relying on noisy perturbations or training-time poisoning, C3H promotes a target item by tailoring its multimodal content to align with the decision criteria implicitly expressed by the recommender. Extensive experiments demonstrate that C3H substantially increases target-item exposure while maintaining overall recommendation utility. Code is available at https://github.com/GuoweiGuan666/C3H.",
-      "tr": "Multimodal large language models (MLLMs) are transforming recommender systems into content-aware decision systems. In these systems, multimodal compression and cross-modal fusion are often viewed as robustness-enhancing mechanisms against content manipulation, as compression can filter noisy signals and cross-modal consensus can suppress inconsistent anomalies. We challenge this assumption by showing that the same process can expose a compression-to-consensus (C2C) bias in ranking decisions. Signals that remain salient after compression and receive consistent support across modalities can gain disproportionate influence in candidate comparison, offering an exploitable direction for content manipulation. In this paper, we introduce C3H, a novel inference-time attack that exploits this vulnerability. Rather than relying on noisy perturbations or training-time poisoning, C3H promotes a target item by tailoring its multimodal content to align with the decision criteria implicitly expressed by the recommender. Extensive experiments demonstrate that C3H substantially increases target-item exposure while maintaining overall recommendation utility. Code is available at https://github.com/GuoweiGuan666/C3H."
-    }
-  },
-  {
-    "id": "2611.32755v1",
-    "title": "ReQOR: Operator-Discrepancy Subspace Repair for Quantization-Conditioned Backdoors in Large Language Models",
-    "authors": [
-      "Wonjune Seo",
-      "Minkyung Park",
-      "Saerom Park"
-    ],
-    "published_date": "2026-11-24",
+    "published_date": "2026-11-25",
     "tags": [
       "cs.CR",
       "cs.AI",
+      "cs.CY"
+    ],
+    "link": "http://arxiv.org/abs/2611.34868v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.34868v1",
+    "content": {
+      "en": "Large Language Models (LLMs) are increasingly integrated into telecommunications for customer service, network analytics, and operational support. While offering efficiency and innovation, their deployment raises critical privacy, security, and ethical challenges due to the uniquely sensitive and longitudinal nature of telecom data. This paper presents a survey of LLM risks and safeguards in telecom context. Our survey introduces a telecom-specific taxonomy linking privacy, security, and ethics with use cases and outlines open research challenges such as longitudinal data privacy, cross-border compliance, and scalable guardrails.",
+      "tr": "Large Language Models (LLMs) are increasingly integrated into telecommunications for customer service, network analytics, and operational support. While offering efficiency and innovation, their deployment raises critical privacy, security, and ethical challenges due to the uniquely sensitive and longitudinal nature of telecom data. This paper presents a survey of LLM risks and safeguards in telecom context. Our survey introduces a telecom-specific taxonomy linking privacy, security, and ethics with use cases and outlines open research challenges such as longitudinal data privacy, cross-border compliance, and scalable guardrails."
+    }
+  },
+  {
+    "id": "2611.34859v1",
+    "title": "Model Weights, Airlocks and Sandboxes: A Call for Technical Validation of Re-identification Tests under the EDPB Anonymisation Guidelines",
+    "authors": [
+      "Rickard Brännvall",
+      "Henrik Forsgren",
+      "Erik Ylipää",
+      "Aslak Felin",
+      "Michael Popoff"
+    ],
+    "published_date": "2026-11-25",
+    "tags": [
+      "cs.CR",
+      "cs.CY",
       "cs.LG"
     ],
-    "link": "http://arxiv.org/abs/2611.32755v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.32755v1",
+    "link": "http://arxiv.org/abs/2611.34859v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.34859v1",
     "content": {
-      "en": "Quantization-Conditioned Backdoors (QCBs) cause large language models (LLMs) to exhibit malicious behavior after quantization while remaining benign at high precision. Existing defenses often rely on security-guided configuration selection or iterative optimization, but do not identify which quantization-induced changes should be repaired. We isolate module-local quantization effects from upstream drift by evaluating the high-precision and quantized versions of each module on identical states from the quantized inference trajectory, and formulate QCB defense as repairing the resulting same-state operator discrepancies. We propose ReQOR, a training-free defense that identifies the dominant directions of these discrepancies on benign calibration data and restores the full-precision computation along them in closed form, yielding a factorized residual adapter. ReQOR uses neither attack information nor gradient-based optimization and supports both full-span and low-rank repair. Experiments across four LLMs, three PGD-based QCB attacks, three malicious behaviors, and three quantization formats show substantial QCB mitigation while largely preserving benign utility. In additional experiments on a non-PGD outlier-injection attack, existing baselines largely fail, whereas ReQOR remains effective. Further analysis shows that dominant operator-discrepancy directions provide more effective and rank-efficient repair than rank-matched random, low-energy, or raw weight-error directions, while low-rank ReQOR reduces deployment memory overhead.",
-      "tr": "Quantization-Conditioned Backdoors (QCBs) cause large language models (LLMs) to exhibit malicious behavior after quantization while remaining benign at high precision. Existing defenses often rely on security-guided configuration selection or iterative optimization, but do not identify which quantization-induced changes should be repaired. We isolate module-local quantization effects from upstream drift by evaluating the high-precision and quantized versions of each module on identical states from the quantized inference trajectory, and formulate QCB defense as repairing the resulting same-state operator discrepancies. We propose ReQOR, a training-free defense that identifies the dominant directions of these discrepancies on benign calibration data and restores the full-precision computation along them in closed form, yielding a factorized residual adapter. ReQOR uses neither attack information nor gradient-based optimization and supports both full-span and low-rank repair. Experiments across four LLMs, three PGD-based QCB attacks, three malicious behaviors, and three quantization formats show substantial QCB mitigation while largely preserving benign utility. In additional experiments on a non-PGD outlier-injection attack, existing baselines largely fail, whereas ReQOR remains effective. Further analysis shows that dominant operator-discrepancy directions provide more effective and rank-efficient repair than rank-matched random, low-energy, or raw weight-error directions, while low-rank ReQOR reduces deployment memory overhead."
+      "en": "The Guidelines 02/2026 on anonymisation of the European Data Protection Board (EDPB), published for consultation in July 2026, assess anonymity relative to the entities that may access data. They bring AI models into scope and call for testing, but do not say how a re-identification test should be designed or validated, or how far its result counts as evidence. Building on our reply to the consultation, we describe a framework based on a secure processing environment whose outputs are reviewed before release (an airlock), and distinguish forms of release and three types of evidence: formal, empirical and indirect. We raise seven open questions, each with a scenario, and examine their technical side in three settings: the release of model weights (the trained parameters of a machine learning model), review at an airlock, and regulatory sandboxes, in which an authority supervises development and testing. In each setting the assessment depends on how far a test result can be relied on, since a failed re-identification attempt may mean only that the test was too weak. Drawing on measurement practice in other regulated fields, we call for re-identification tests to be validated as measurement methods, with stated detection limit, bias and uncertainty.",
+      "tr": "The Guidelines 02/2026 on anonymisation of the European Data Protection Board (EDPB), published for consultation in July 2026, assess anonymity relative to the entities that may access data. They bring AI models into scope and call for testing, but do not say how a re-identification test should be designed or validated, or how far its result counts as evidence. Building on our reply to the consultation, we describe a framework based on a secure processing environment whose outputs are reviewed before release (an airlock), and distinguish forms of release and three types of evidence: formal, empirical and indirect. We raise seven open questions, each with a scenario, and examine their technical side in three settings: the release of model weights (the trained parameters of a machine learning model), review at an airlock, and regulatory sandboxes, in which an authority supervises development and testing. In each setting the assessment depends on how far a test result can be relied on, since a failed re-identification attempt may mean only that the test was too weak. Drawing on measurement practice in other regulated fields, we call for re-identification tests to be validated as measurement methods, with stated detection limit, bias and uncertainty."
     }
   },
   {
-    "id": "2611.32686v1",
-    "title": "CAPTA: Identifying LLMs Behind AI Agents",
+    "id": "2611.34770v1",
+    "title": "Make the Adversary Spend More: Stateful Deception as a Cost-Exchange Primitive for AI-Era Cyber Defense",
     "authors": [
-      "Kailun Yan",
-      "Yue Huang",
-      "Sisi Duan"
+      "Alessandro Cantelli-Forti",
+      "Isabella Marasco",
+      "Hosam Alamleh",
+      "Giada Boschi",
+      "Michele Colajanni"
     ],
-    "published_date": "2026-11-24",
-    "tags": [
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2611.32686v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.32686v1",
-    "content": {
-      "en": "Large language model (LLM)-based agents access remote services through tools to complete user tasks, often via API calls. In this setting, a remote service may want to identify the backend LLM of an agent to launch model-specific attacks, including prompt injection or selective delivery of manipulated content. However, the service cannot directly query the backend model and must instead collect observable responses through its interactions with the agent, making identification challenging.   In this paper, we present Completely Automated Preference Test to tell LLMs Apart (CAPTA), a model identification approach inspired by CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart), which distinguishes humans from automated programs. CAPTA presents multiple-choice questions as verification challenges, using differences in models' selection preferences to identify the backend LLM. It selects questions based on cross-model option-generation diversity and uses LLM-guided search to optimize their option sets. Our evaluation shows that CAPTA achieves 99.0% mean identification accuracy with only 10 questions across 25 LLMs from 10 model families. We further evaluate CAPTA with four widely used agents and seven representative LLMs, achieving 99.7% mean identification accuracy across all 28 agent-LLM combinations with 30 submitted answers.",
-      "tr": "Large language model (LLM)-based agents access remote services through tools to complete user tasks, often via API calls. In this setting, a remote service may want to identify the backend LLM of an agent to launch model-specific attacks, including prompt injection or selective delivery of manipulated content. However, the service cannot directly query the backend model and must instead collect observable responses through its interactions with the agent, making identification challenging.   In this paper, we present Completely Automated Preference Test to tell LLMs Apart (CAPTA), a model identification approach inspired by CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart), which distinguishes humans from automated programs. CAPTA presents multiple-choice questions as verification challenges, using differences in models' selection preferences to identify the backend LLM. It selects questions based on cross-model option-generation diversity and uses LLM-guided search to optimize their option sets. Our evaluation shows that CAPTA achieves 99.0% mean identification accuracy with only 10 questions across 25 LLMs from 10 model families. We further evaluate CAPTA with four widely used agents and seven representative LLMs, achieving 99.7% mean identification accuracy across all 28 agent-LLM combinations with 30 submitted answers."
-    }
-  },
-  {
-    "id": "2611.32302v1",
-    "title": "Query-Guided Visual Minimization for Selective Disclosure to Cloud VLMs",
-    "authors": [
-      "Pedram Zaree",
-      "Kleomenis Katevas",
-      "Vandana Rajan",
-      "Nael Abu-Ghazaleh",
-      "Hamed Haddadi"
-    ],
-    "published_date": "2026-11-24",
-    "tags": [
-      "cs.CV",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "link": "http://arxiv.org/abs/2611.32302v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.32302v1",
-    "content": {
-      "en": "Cloud-hosted vision-language models (VLMs) require sending images beyond the user's local trust boundary, potentially exposing sensitive information the query does not need. We study query-guided visual minimization: a trusted local transformation preserves query-relevant visual content and reduces unnecessary disclosure before transmission. Unlike query-agnostic anonymization, it preserves the same sensitive content when the query requires it and suppresses it otherwise. We introduce QGVM, a framework that combines query grounding with an independent sensitive-item inventory, determines disclosure necessity at the type, instance, and text-content levels, and renders a minimized image for a black-box downstream VLM. We evaluate QGVM on complementary benchmarks measuring task utility, directly recoverable sensitive information, and inferential geolocation leakage. With OpenAI GPT-6.1 Sol, QGVM achieves 85.3% DoxBench answer correctness versus 77.5% for PGP, while a separately prompted Sol geolocation attacker succeeds within 1 km on 5.8% of QGVM images versus 25.7% of unprotected images. On Scene-Privacy, QGVM reduces face re-identification from 27.7% (PGP) to 4.5%. On held-out BIV-Priv-Seg, unnecessary private-text recovery falls from 33.9% (PGP) to 15.3%. To verify that disclosure is query-dependent, we evaluate paired queries that either require or do not require the same sensitive information. QGVM achieves 69.6% correct disclosure switching, compared with 29.1% for grounding-only cropping. These findings highlight the value of distinguishing visual relevance from disclosure necessity, while revealing the privacy-utility trade-offs of selective visual disclosure.",
-      "tr": "Cloud-hosted vision-language models (VLMs) require sending images beyond the user's local trust boundary, potentially exposing sensitive information the query does not need. We study query-guided visual minimization: a trusted local transformation preserves query-relevant visual content and reduces unnecessary disclosure before transmission. Unlike query-agnostic anonymization, it preserves the same sensitive content when the query requires it and suppresses it otherwise. We introduce QGVM, a framework that combines query grounding with an independent sensitive-item inventory, determines disclosure necessity at the type, instance, and text-content levels, and renders a minimized image for a black-box downstream VLM. We evaluate QGVM on complementary benchmarks measuring task utility, directly recoverable sensitive information, and inferential geolocation leakage. With OpenAI GPT-6.1 Sol, QGVM achieves 85.3% DoxBench answer correctness versus 77.5% for PGP, while a separately prompted Sol geolocation attacker succeeds within 1 km on 5.8% of QGVM images versus 25.7% of unprotected images. On Scene-Privacy, QGVM reduces face re-identification from 27.7% (PGP) to 4.5%. On held-out BIV-Priv-Seg, unnecessary private-text recovery falls from 33.9% (PGP) to 15.3%. To verify that disclosure is query-dependent, we evaluate paired queries that either require or do not require the same sensitive information. QGVM achieves 69.6% correct disclosure switching, compared with 29.1% for grounding-only cropping. These findings highlight the value of distinguishing visual relevance from disclosure necessity, while revealing the privacy-utility trade-offs of selective visual disclosure."
-    }
-  },
-  {
-    "id": "2611.32195v1",
-    "title": "When Answering Is Administering: Permission Replies That Rewrite Coding-Agent Policy",
-    "authors": [
-      "Zeming Fei",
-      "Hongming Fei",
-      "Jingwen Chen",
-      "Xiaoyang Wang",
-      "Prosanta Gope"
-    ],
-    "published_date": "2026-11-24",
+    "published_date": "2026-11-25",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2611.32195v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.32195v1",
+    "link": "http://arxiv.org/abs/2611.34770v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.34770v1",
     "content": {
-      "en": "Coding agents let plugins and remote services answer permission prompts, and Claude Code documents that such an answer cannot override the operator's deny rules. However, we show that this guarantee, checked one decision at a time, fails over a whole run, because an answer to one permission prompt can rewrite the policy that every later answer is checked against. For example, a remote service with no access to the operator's files approves an unrelated command and attaches an update that deletes the deny rule protecting the project's secrets. The agent then reads the secrets in that session and the next, even inside the vendor's strict sandbox. The root cause is that Claude Code checks only updates that add or replace allow rules. Relays that forward such deletions already exist, including the vendor's own Remote Control. In effect, the right to answer a prompt has become the right to administer the policy. Worse, the deletion leaves the same records as a local edit by the operator, so Claude Code cannot tell who wrote a rule.   More generally, what a runtime records decides what it can safely delegate. A runtime that cannot tell who wrote a rule can accept only updates that keep every currently denied call denied, whereas, to protect every party's restrictions, a runtime that records who wrote each rule can let each party remove only the restrictions proven to be its own. We prove that these two bounds are tight. They correctly predict whether the operator's restrictions survive in all thirteen permission designs across ten agent systems, including predictions we wrote down before running Codex, Gemini CLI, opencode, and Goose. Enforcing the bounds at the shared update step blocks the attack. A survey of 2,227 fetched marketplace plugins finds only two that send policy updates.",
-      "tr": "Coding agents let plugins and remote services answer permission prompts, and Claude Code documents that such an answer cannot override the operator's deny rules. However, we show that this guarantee, checked one decision at a time, fails over a whole run, because an answer to one permission prompt can rewrite the policy that every later answer is checked against. For example, a remote service with no access to the operator's files approves an unrelated command and attaches an update that deletes the deny rule protecting the project's secrets. The agent then reads the secrets in that session and the next, even inside the vendor's strict sandbox. The root cause is that Claude Code checks only updates that add or replace allow rules. Relays that forward such deletions already exist, including the vendor's own Remote Control. In effect, the right to answer a prompt has become the right to administer the policy. Worse, the deletion leaves the same records as a local edit by the operator, so Claude Code cannot tell who wrote a rule.   More generally, what a runtime records decides what it can safely delegate. A runtime that cannot tell who wrote a rule can accept only updates that keep every currently denied call denied, whereas, to protect every party's restrictions, a runtime that records who wrote each rule can let each party remove only the restrictions proven to be its own. We prove that these two bounds are tight. They correctly predict whether the operator's restrictions survive in all thirteen permission designs across ten agent systems, including predictions we wrote down before running Codex, Gemini CLI, opencode, and Goose. Enforcing the bounds at the shared update step blocks the attack. A survey of 2,227 fetched marketplace plugins finds only two that send policy updates."
+      "en": "Large language models (LLMs) are transforming the economics of intrusion by reducing the attacker's cost to scan and adapt, while tempting defenders into unbounded compute. We argue that cyber deception should be judged by the cost exchange it imposes, not by realism or detection, and that the primitive making that exchange favorable is adversary-specific persistent state. Rather than a honeypot that resets or merges sessions, each recognized adversary re-enters the world it believes it has compromised, kept coherent with its own past actions and isolated from every other adversary, while the language model acts only as a constrained renderer of explicit state, never as its store. We formalize the trade-off as a Deception Exchange Rate (DER), relating mission-weighted adversary effort burned to defender resources spent, and instantiate it in an SSH honeypot pairing Cowrie with a local LLM. In this paper, we focus on the defender-side evaluation of that exchange, while specifying, but not yet measuring, per-adversary state and the adversary side of the DER. Across five open-weight models, deterministic-layer and prompt optimizations cut per-session defender cost by around 63% against a naive all-LLM decoy.",
+      "tr": "Large language models (LLMs) are transforming the economics of intrusion by reducing the attacker's cost to scan and adapt, while tempting defenders into unbounded compute. We argue that cyber deception should be judged by the cost exchange it imposes, not by realism or detection, and that the primitive making that exchange favorable is adversary-specific persistent state. Rather than a honeypot that resets or merges sessions, each recognized adversary re-enters the world it believes it has compromised, kept coherent with its own past actions and isolated from every other adversary, while the language model acts only as a constrained renderer of explicit state, never as its store. We formalize the trade-off as a Deception Exchange Rate (DER), relating mission-weighted adversary effort burned to defender resources spent, and instantiate it in an SSH honeypot pairing Cowrie with a local LLM. In this paper, we focus on the defender-side evaluation of that exchange, while specifying, but not yet measuring, per-adversary state and the adversary side of the DER. Across five open-weight models, deterministic-layer and prompt optimizations cut per-session defender cost by around 63% against a naive all-LLM decoy."
     }
   },
   {
-    "id": "2611.32194v1",
-    "title": "LLM Agent Authorization Across Context Compaction",
+    "id": "2611.34623v1",
+    "title": "From Models to Services: Systematizing Security Assurance for Model-as-a-Service",
     "authors": [
-      "Zeming Fei",
-      "Hongming Fei",
-      "Yi Xu",
-      "Xiaoyang Wang",
-      "Ying Zhang"
+      "Jianming Zhou",
+      "Yang Luo",
+      "Guangpu Chen",
+      "Zhaoyu Chen",
+      "Yifeng Gao"
     ],
-    "published_date": "2026-11-24",
+    "published_date": "2026-11-25",
     "tags": [
       "cs.CR",
       "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2611.32194v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.32194v1",
+    "link": "http://arxiv.org/abs/2611.34623v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.34623v1",
     "content": {
-      "en": "Request-derived authorizers such as Progent protect LLM agents from prompt injection by deriving what an agent may do from the user's request. Their guarantee rests on attribution: the request is taken to be what the user said. Compaction breaks it. At every automatic compaction we observed, Claude Code and Codex placed a model-written summary of earlier turns as a user message, so the compactor's quotation of the user, documents and injected text reads as the user speaking. Because a policy frozen at the first request lets the agent finish few later tasks, we let Progent derive its policy for each request, and find that what it grants then follows what the compactor wrote. Even a payee the user stated is not safe: when an attacker's notice states another account as plain data and the user asks to pay the rent, the policy derived from a frontier compactor's summary admits the notice's account in 91% of cases, and the one derived from the user's own words in none. The cause is general: we prove that an authorizer that cannot see who wrote which bytes cannot treat a forged record differently from the legitimate one it imitates by more than the two are distinguishable, and that the bound is tight. Frontier compactors bear this out: they mark injected instructions, which have no legitimate twin, but rarely injected data, which does. What a compactor keeps, and how it marks it, is a security parameter. The fix follows from attribution: the authorizer credits only what the user said, authenticated on arrival and carried verbatim across the boundary, while the agent still reads the summary. We prove that it then receives exactly that text or nothing, so an attacker can block the policy but cannot shape it, and adaptive attacks on our implementation confirm it. In 40 attacked AgentDojo episodes re-run with the fix, no attacker action completes while the agent reads the summary.",
-      "tr": "Request-derived authorizers such as Progent protect LLM agents from prompt injection by deriving what an agent may do from the user's request. Their guarantee rests on attribution: the request is taken to be what the user said. Compaction breaks it. At every automatic compaction we observed, Claude Code and Codex placed a model-written summary of earlier turns as a user message, so the compactor's quotation of the user, documents and injected text reads as the user speaking. Because a policy frozen at the first request lets the agent finish few later tasks, we let Progent derive its policy for each request, and find that what it grants then follows what the compactor wrote. Even a payee the user stated is not safe: when an attacker's notice states another account as plain data and the user asks to pay the rent, the policy derived from a frontier compactor's summary admits the notice's account in 91% of cases, and the one derived from the user's own words in none. The cause is general: we prove that an authorizer that cannot see who wrote which bytes cannot treat a forged record differently from the legitimate one it imitates by more than the two are distinguishable, and that the bound is tight. Frontier compactors bear this out: they mark injected instructions, which have no legitimate twin, but rarely injected data, which does. What a compactor keeps, and how it marks it, is a security parameter. The fix follows from attribution: the authorizer credits only what the user said, authenticated on arrival and carried verbatim across the boundary, while the agent still reads the summary. We prove that it then receives exactly that text or nothing, so an attacker can block the policy but cannot shape it, and adaptive attacks on our implementation confirm it. In 40 attacked AgentDojo episodes re-run with the fix, no attacker action completes while the agent reads the summary."
+      "en": "Large language models are mainly delivered as cloud services, in which the assets of different principals are coupled within a single service pipeline, while the related security research is scattered across several fields with differing threat models. This paper systematizes this research from a service perspective. We decompose Model-as-a-Service (MaaS) into a five-layer stack and five trust boundaries, define six adversary classes and six security goals, use them to code 120 studies, and evaluate 50 defenses under a unified set of criteria. The results show that 44.2% of the studies concentrate on behavioral integrity, while service integrity, availability and cost, and accountability together account for only 13.3%. Defenses are evaluated on production services at less than half the rate of attacks, and none of the cryptographic or hardware mechanisms that protect against the provider can be adopted unilaterally by customers. Finally, we propose a research agenda by comparison with current standards and regulations.",
+      "tr": "Large language models are mainly delivered as cloud services, in which the assets of different principals are coupled within a single service pipeline, while the related security research is scattered across several fields with differing threat models. This paper systematizes this research from a service perspective. We decompose Model-as-a-Service (MaaS) into a five-layer stack and five trust boundaries, define six adversary classes and six security goals, use them to code 120 studies, and evaluate 50 defenses under a unified set of criteria. The results show that 44.2% of the studies concentrate on behavioral integrity, while service integrity, availability and cost, and accountability together account for only 13.3%. Defenses are evaluated on production services at less than half the rate of attacks, and none of the cryptographic or hardware mechanisms that protect against the provider can be adopted unilaterally by customers. Finally, we propose a research agenda by comparison with current standards and regulations."
     }
   },
   {
-    "id": "2611.32128v1",
-    "title": "Bit-Flip Attacks on Quantized Neural Networks without Knowledge of Model Parameters",
+    "id": "2611.34278v1",
+    "title": "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems",
     "authors": [
-      "Mahmoud Abumandour",
-      "Srinija Ramichetty",
-      "Guru Venkataramani",
-      "Alaa R. Alameldeen"
+      "Manit Baser",
+      "Vyoman Jain",
+      "Rachel Yeo Hui Min",
+      "Xianglin Yang",
+      "Meenatchi Sundaram Muthu Selva Annamalai"
     ],
-    "published_date": "2026-11-24",
+    "published_date": "2026-11-25",
     "tags": [
       "cs.CR",
-      "cs.LG"
+      "cs.AI"
     ],
-    "link": "http://arxiv.org/abs/2611.32128v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.32128v1",
+    "link": "http://arxiv.org/abs/2611.34278v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.34278v1",
     "content": {
-      "en": "We show that quantization asymmetry concentrates bit-flip vulnerability in small tensors retained at high precision. CoarseHammer targets these tensors and accepts flips at any bit, without parameter values, gradients, or data. It remains effective under continued fine-tuning. Under ideal placement, CoarseHammer reaches chance accuracy in at least 81.5% of runs on each of ten evaluated models, including four large language models, with median successful runs requiring at most 24 flips. On simulated DRAM with 0.01 flippable bits per million, it outperforms three prior attacks on every evaluated convolutional network, succeeding in up to 83.6% of runs while they never succeed. On a real system, CoarseHammer steers heap-allocated tensors onto vulnerable frames despite address space layout randomization, without accessing the model file. With 16 templated frames, median accuracy reaches chance for all four language models and approximately chance for four convolutional networks.",
-      "tr": "We show that quantization asymmetry concentrates bit-flip vulnerability in small tensors retained at high precision. CoarseHammer targets these tensors and accepts flips at any bit, without parameter values, gradients, or data. It remains effective under continued fine-tuning. Under ideal placement, CoarseHammer reaches chance accuracy in at least 81.5% of runs on each of ten evaluated models, including four large language models, with median successful runs requiring at most 24 flips. On simulated DRAM with 0.01 flippable bits per million, it outperforms three prior attacks on every evaluated convolutional network, succeeding in up to 83.6% of runs while they never succeed. On a real system, CoarseHammer steers heap-allocated tensors onto vulnerable frames despite address space layout randomization, without accessing the model file. With 16 templated frames, median accuracy reaches chance for all four language models and approximately chance for four convolutional networks."
+      "en": "As large language models increasingly collaborate in heterogeneous multi-agent systems, latent communication has emerged as an efficient alternative to exchanging natural-language messages. By sharing internal representations, agents can avoid repeatedly processing the same context, reducing communication overhead and prefill computation. One such mechanism is cross-model Key-Value (KV) cache transfer, which uses a learned mapper to translate a source model's KV cache into one a target model can use. However, this handoff means the target model consumes context it did not encode itself, thus calling into question whether its safety alignment still holds.   In this work, we investigate the security implications of latent handoffs by introducing Chasm, a framework characterizing cross-model handoff attacks across three new attack surfaces: the source model, mapper, and handoff mechanism itself. Our experiments reveal that latent handoffs substantially undermine safety alignment and prompt-injection defenses. Notably, a target model that follows only 0.4% of benchmark prompt injections natively, follows up to 44.2% when transferred through a mapper from a source model. On the other hand, for jailbreak attacks, transfer alone raises attack success by up to 24.6 pp within a model family and zero-shot attacks by up to 69.2 pp, whereas white-box optimization through the mapper boosts the attack success rate to 92.5%, against 37.5% for ordinary GCG on the same target. To address these vulnerabilities, we propose a lightweight target-side cache guard that corrects transferred caches to restore the target model's refusal, considerably mitigating these attacks.",
+      "tr": "As large language models increasingly collaborate in heterogeneous multi-agent systems, latent communication has emerged as an efficient alternative to exchanging natural-language messages. By sharing internal representations, agents can avoid repeatedly processing the same context, reducing communication overhead and prefill computation. One such mechanism is cross-model Key-Value (KV) cache transfer, which uses a learned mapper to translate a source model's KV cache into one a target model can use. However, this handoff means the target model consumes context it did not encode itself, thus calling into question whether its safety alignment still holds.   In this work, we investigate the security implications of latent handoffs by introducing Chasm, a framework characterizing cross-model handoff attacks across three new attack surfaces: the source model, mapper, and handoff mechanism itself. Our experiments reveal that latent handoffs substantially undermine safety alignment and prompt-injection defenses. Notably, a target model that follows only 0.4% of benchmark prompt injections natively, follows up to 44.2% when transferred through a mapper from a source model. On the other hand, for jailbreak attacks, transfer alone raises attack success by up to 24.6 pp within a model family and zero-shot attacks by up to 69.2 pp, whereas white-box optimization through the mapper boosts the attack success rate to 92.5%, against 37.5% for ordinary GCG on the same target. To address these vulnerabilities, we propose a lightweight target-side cache guard that corrects transferred caches to restore the target model's refusal, considerably mitigating these attacks."
     }
   },
   {
-    "id": "2611.32037v1",
-    "title": "Online Environment Repair for Coding Agents",
+    "id": "2611.34258v1",
+    "title": "Train-Only-Constrained LM for Synthetic Clinical Trajectories: Leak-Safe Calibration and Auditable Dynamics",
     "authors": [
-      "Sheng Lu",
-      "Rui Mao",
-      "Zewei Chen",
-      "Chihua Ying",
-      "Beiduo Chen"
+      "Yaser Kord",
+      "Moritz Hess"
     ],
-    "published_date": "2026-11-24",
+    "published_date": "2026-11-25",
     "tags": [
       "cs.LG",
-      "cs.CR",
-      "cs.SE"
+      "cs.CR"
     ],
-    "link": "http://arxiv.org/abs/2611.32037v1",
-    "pdf_link": "https://arxiv.org/pdf/2611.32037v1",
+    "link": "http://arxiv.org/abs/2611.34258v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.34258v1",
     "content": {
-      "en": "Programmatic verifiers provide scalable reward signals for training coding agents with reinforcement learning, yet subtle harness defects and incomplete unit tests allow policies to earn full credit without solving the intended task. Existing training-time defenses intervene either by penalizing suspicious outputs or by filtering flagged tasks and rollouts. However, output penalties leave the underlying verifier exploitable, driving policies to disguise shortcuts under reasoning monitors or zeroing out valid solutions under detector false positives, whereas task and rollout filtering discards or mutes the hardest problems where shortcuts emerge earliest. Pre-training verifier hardening repairs the environment directly, but misses vulnerability classes that surface only as the policy improves during reinforcement learning. In this paper, we propose online environment repair, which leaves triggering rollout rewards unchanged to remove hiding incentives and asynchronously patches exploited environments during training. Candidate repairs triggered by execution invariants or differential fuzzing are deployed only after passing three automated validation gates that block the exploit while preserving valid solutions, canceling detector false positives and enabling structural propagation across repositories without scaffold labels or reference solutions. Across 20 controlled GRPO experiments on heterogeneous software-engineering repositories, online environment repair reduces cumulative reward hacking from 36.9% to 0.06% and improves held-out Pass@8 from 21.7% to 46.7%, consistently outperforming reward-penalty, rollout-filtering, and static-hardening baselines while eliminating zero-shot exploitation on unseen loophole classes.",
-      "tr": "Programmatic verifiers provide scalable reward signals for training coding agents with reinforcement learning, yet subtle harness defects and incomplete unit tests allow policies to earn full credit without solving the intended task. Existing training-time defenses intervene either by penalizing suspicious outputs or by filtering flagged tasks and rollouts. However, output penalties leave the underlying verifier exploitable, driving policies to disguise shortcuts under reasoning monitors or zeroing out valid solutions under detector false positives, whereas task and rollout filtering discards or mutes the hardest problems where shortcuts emerge earliest. Pre-training verifier hardening repairs the environment directly, but misses vulnerability classes that surface only as the policy improves during reinforcement learning. In this paper, we propose online environment repair, which leaves triggering rollout rewards unchanged to remove hiding incentives and asynchronously patches exploited environments during training. Candidate repairs triggered by execution invariants or differential fuzzing are deployed only after passing three automated validation gates that block the exploit while preserving valid solutions, canceling detector false positives and enabling structural propagation across repositories without scaffold labels or reference solutions. Across 20 controlled GRPO experiments on heterogeneous software-engineering repositories, online environment repair reduces cumulative reward hacking from 36.9% to 0.06% and improves held-out Pass@8 from 21.7% to 46.7%, consistently outperforming reward-penalty, rollout-filtering, and static-hardening baselines while eliminating zero-shot exploitation on unseen loophole classes."
+      "en": "Simulating clinical time series necessitates temporal realism, calibration that preserves model integrity, and privacy transparency. We present a train-only, constrained language-model pipeline that factorizes generation. A compact GPT-style language model learns cross-biomarker co-occurrence through quantile tokens, and temporal directions are enforced by 3x3 per-biomarker Markov transitions fit on TRAIN, allowing dynamics to be audited. We fit a monotone quantile map (QMap) on TRAIN only (SYN(TRAIN) -> SIM(TRAIN)); no TEST statistics are used. The fixed map is then applied to SYN(TEST) severities. The constrained LM demonstrated improved distributional fidelity and co-occurrence in a 5,000-patient simulated testbed (parameters within published clinical ranges) compared to an empirical sampler, maintained near-chance detectability after a small lambda-sweep, and exhibits temporal adherence by construction. A classifier-based membership-inference audit results in an AUC of approximately 0.5; we make no differential-privacy claim. We present multi-seed results with paired 95% confidence intervals and quantify the severity of QMap's alignment (Delta W1 with confidence interval). This is a Stage-1 method result obtained on a controlled simulator; Stage-2 validation on real EHR cohorts with clinical endpoints is planned.",
+      "tr": "Simulating clinical time series necessitates temporal realism, calibration that preserves model integrity, and privacy transparency. We present a train-only, constrained language-model pipeline that factorizes generation. A compact GPT-style language model learns cross-biomarker co-occurrence through quantile tokens, and temporal directions are enforced by 3x3 per-biomarker Markov transitions fit on TRAIN, allowing dynamics to be audited. We fit a monotone quantile map (QMap) on TRAIN only (SYN(TRAIN) -> SIM(TRAIN)); no TEST statistics are used. The fixed map is then applied to SYN(TEST) severities. The constrained LM demonstrated improved distributional fidelity and co-occurrence in a 5,000-patient simulated testbed (parameters within published clinical ranges) compared to an empirical sampler, maintained near-chance detectability after a small lambda-sweep, and exhibits temporal adherence by construction. A classifier-based membership-inference audit results in an AUC of approximately 0.5; we make no differential-privacy claim. We present multi-seed results with paired 95% confidence intervals and quantify the severity of QMap's alignment (Delta W1 with confidence interval). This is a Stage-1 method result obtained on a controlled simulator; Stage-2 validation on real EHR cohorts with clinical endpoints is planned."
+    }
+  },
+  {
+    "id": "2611.34181v1",
+    "title": "Agentic-Level Adversarial Purification: Revisiting Diffusion Purifiers on Native-Resolution Agentic Inputs",
+    "authors": [
+      "Yan Lin",
+      "Zhongliang Guo",
+      "Jingyu Lin",
+      "Daizong Liu"
+    ],
+    "published_date": "2026-11-25",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "link": "http://arxiv.org/abs/2611.34181v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.34181v1",
+    "content": {
+      "en": "Vision-language agents act on native-resolution renders of multi-element pages, where one perturbed photo or a few altered text strokes can redirect the decision. Any content provider can craft such a perturbation on the open model behind the agent, so a plug-in purifier is the natural first line of defense. Yet diffusion purifiers were designed and evaluated at the fixed resolution of the diffusion model on classifier or natural-image benchmarks, and defense evaluations for agents test JPEG, blur and noise but no diffusion purifier. We present the first study of adversarial purification at the agentic level, for an agent built on Qwen3-VL-8B: purifiers run at native resolution on multi-element inputs, face grey-box attackers who know the agent's model but not the defense, and are compared at matched clean cost. We show that treating agentic inputs as classifier inputs misleads both evaluation and design. Resizing the input to the resolution of the diffusion model, as existing purifiers do, raises the TextVQA clean cost of the Divide-and-Conquer purifier (DC) from 4.0 to 35.7 points. On web-shop pages, DC keeps 85.0% grey-box robust accuracy against web-hardened perturbations, where cheap input transformations at matched clean cost keep at most 40.0%, and this robustness comes from the global noise level: input-estimated masks and noise levels add none. These findings hold on a disjoint held-out set and on a second VLM and yield three requirements for defenses, we release the protocol.",
+      "tr": "Vision-language agents act on native-resolution renders of multi-element pages, where one perturbed photo or a few altered text strokes can redirect the decision. Any content provider can craft such a perturbation on the open model behind the agent, so a plug-in purifier is the natural first line of defense. Yet diffusion purifiers were designed and evaluated at the fixed resolution of the diffusion model on classifier or natural-image benchmarks, and defense evaluations for agents test JPEG, blur and noise but no diffusion purifier. We present the first study of adversarial purification at the agentic level, for an agent built on Qwen3-VL-8B: purifiers run at native resolution on multi-element inputs, face grey-box attackers who know the agent's model but not the defense, and are compared at matched clean cost. We show that treating agentic inputs as classifier inputs misleads both evaluation and design. Resizing the input to the resolution of the diffusion model, as existing purifiers do, raises the TextVQA clean cost of the Divide-and-Conquer purifier (DC) from 4.0 to 35.7 points. On web-shop pages, DC keeps 85.0% grey-box robust accuracy against web-hardened perturbations, where cheap input transformations at matched clean cost keep at most 40.0%, and this robustness comes from the global noise level: input-estimated masks and noise levels add none. These findings hold on a disjoint held-out set and on a second VLM and yield three requirements for defenses, we release the protocol."
+    }
+  },
+  {
+    "id": "2611.33741v1",
+    "title": "FlashProve-Next: Verifiable Inference for Production LLM APIs",
+    "authors": [
+      "Liang Song"
+    ],
+    "published_date": "2026-11-25",
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2611.33741v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.33741v1",
+    "content": {
+      "en": "Clients of closed-weight LLM APIs cannot verify whether a provider ran the advertised model, precision, hidden prompt, and reasoning budget. Existing approaches either trust hardware or third parties, or re-prove every layer of an integer surrogate at high cost while diverging from native floating-point serving.   FlashProve-Next produces verifiable, zero-knowledge-masked proofs for individual LLM API responses without modifying native serving (bf16/fp8/mxfp4, random sampling, FlashAttention, CUDA graphs, batching, prefix caching) and without disclosing weights, hidden prompts, hidden reasoning, or activations (dense profiles fix coarse geometry; cross-architecture hiding is deferred). A non-depleting Reed-Solomon weight commitment model_id opens inside proofs via hidden column openings, while local per-operator rounding contracts remove integer surrogates and the refusal-bit leak. Cost-weighted spot-checking supports non-interactive public verification (NI-315, $\\varepsilon \\le 2^{-40}$, $Q \\le 2^{64}$) and external-seed C_pre mode (ExtSeed-153, $\\varepsilon \\le 2^{-20}$, $Q_{\\rm samp} \\le 2^{30}$).   Twenty-eight Lean 4 modules (696 declarations, zero sorry, standard axioms only) mechanize round-by-round soundness, bucketed sampling, $\\mathbb{F}_{p^3}$ constrained-mask binding, causal masking, six IR gadgets, and executable FPN2 verifiers. Five-model Blackwell calibration gives zero false rejections across 1.85M GEMM/MoE blocks and 1.96M non-GEMM rows. Our zero-Phase-2 folded backend (folded ZK simulator open) proves Qwen3-0.6B ExtSeed-153 (1.47B cells, 8 MiB) in 450.2 s GPU (10.76 s CPU) at unique-decoding $Q=128$, passes a 14/14 cheating matrix, and scales to 36-layer Qwen3-4B (dev $4+2$) and live vLLM Qwen3-30B-A3B-FP8 Relation 6 (1.49 s prove, 23.4 ms Rust verify, public weight tiles). Rust fpn-verify checks 8 MiB FPN2 Relation 2 proofs in 10.1 ms on CPU.",
+      "tr": "Clients of closed-weight LLM APIs cannot verify whether a provider ran the advertised model, precision, hidden prompt, and reasoning budget. Existing approaches either trust hardware or third parties, or re-prove every layer of an integer surrogate at high cost while diverging from native floating-point serving.   FlashProve-Next produces verifiable, zero-knowledge-masked proofs for individual LLM API responses without modifying native serving (bf16/fp8/mxfp4, random sampling, FlashAttention, CUDA graphs, batching, prefix caching) and without disclosing weights, hidden prompts, hidden reasoning, or activations (dense profiles fix coarse geometry; cross-architecture hiding is deferred). A non-depleting Reed-Solomon weight commitment model_id opens inside proofs via hidden column openings, while local per-operator rounding contracts remove integer surrogates and the refusal-bit leak. Cost-weighted spot-checking supports non-interactive public verification (NI-315, $\\varepsilon \\le 2^{-40}$, $Q \\le 2^{64}$) and external-seed C_pre mode (ExtSeed-153, $\\varepsilon \\le 2^{-20}$, $Q_{\\rm samp} \\le 2^{30}$).   Twenty-eight Lean 4 modules (696 declarations, zero sorry, standard axioms only) mechanize round-by-round soundness, bucketed sampling, $\\mathbb{F}_{p^3}$ constrained-mask binding, causal masking, six IR gadgets, and executable FPN2 verifiers. Five-model Blackwell calibration gives zero false rejections across 1.85M GEMM/MoE blocks and 1.96M non-GEMM rows. Our zero-Phase-2 folded backend (folded ZK simulator open) proves Qwen3-0.6B ExtSeed-153 (1.47B cells, 8 MiB) in 450.2 s GPU (10.76 s CPU) at unique-decoding $Q=128$, passes a 14/14 cheating matrix, and scales to 36-layer Qwen3-4B (dev $4+2$) and live vLLM Qwen3-30B-A3B-FP8 Relation 6 (1.49 s prove, 23.4 ms Rust verify, public weight tiles). Rust fpn-verify checks 8 MiB FPN2 Relation 2 proofs in 10.1 ms on CPU."
+    }
+  },
+  {
+    "id": "2611.33672v1",
+    "title": "Node Differential Privacy via Node-Stable Graph Projections",
+    "authors": [
+      "Ishaq Aden-Ali",
+      "Adam Sealfon",
+      "Adam Smith",
+      "Thomas Steinke",
+      "Jonathan Ullman"
+    ],
+    "published_date": "2026-11-25",
+    "tags": [
+      "cs.CR",
+      "cs.DS",
+      "cs.LG"
+    ],
+    "link": "http://arxiv.org/abs/2611.33672v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.33672v1",
+    "content": {
+      "en": "Node-differentially private algorithms enable learning on network-structured datasets in which records reflect interactions among individuals. They protect the privacy of each individual's information, including all their associated records. A key challenge in the design of such algorithms is to exploit the structure of realistic graphs---where most nodes have low degree---to achieve high accuracy, without compromising on the worst-case privacy guarantee.   In this work we give two new tools for designing accurate, computationally efficient node-differentially private algorithms. First, we give a nearly linear time, randomized, node-stable graph projection: the projection leaves graphs of maximum degree $D$ unchanged, maps arbitrary graphs to subgraphs of maximum degree $\\hat D \\approx D$, and ensures that changing one node of the input graph has only a small effect on the distribution of the edges selected among the remaining vertices. Unlike prior approaches, which abstain when the input violates the degree bound, our projection acts as degree clipping: even when $D$ is set well below the true maximum degree (trading truncation bias at high-degree outliers for lower privacy noise), it retains at least as many edges as a maximal $D$-bounded subgraph.   Second, for graphs with bounded edge weights, we give a deterministic nearly linear time Lipschitz extension for the total edge weight that agrees with the original sum on graphs of maximum degree $D$ yet is $D$-Lipschitz on all graphs.   Finally, we show how to apply these methods to design node-private algorithms for high-dimensional vector summation and gradient descent on datasets where records are associated with graph edges, such as email threads.",
+      "tr": "Node-differentially private algorithms enable learning on network-structured datasets in which records reflect interactions among individuals. They protect the privacy of each individual's information, including all their associated records. A key challenge in the design of such algorithms is to exploit the structure of realistic graphs---where most nodes have low degree---to achieve high accuracy, without compromising on the worst-case privacy guarantee.   In this work we give two new tools for designing accurate, computationally efficient node-differentially private algorithms. First, we give a nearly linear time, randomized, node-stable graph projection: the projection leaves graphs of maximum degree $D$ unchanged, maps arbitrary graphs to subgraphs of maximum degree $\\hat D \\approx D$, and ensures that changing one node of the input graph has only a small effect on the distribution of the edges selected among the remaining vertices. Unlike prior approaches, which abstain when the input violates the degree bound, our projection acts as degree clipping: even when $D$ is set well below the true maximum degree (trading truncation bias at high-degree outliers for lower privacy noise), it retains at least as many edges as a maximal $D$-bounded subgraph.   Second, for graphs with bounded edge weights, we give a deterministic nearly linear time Lipschitz extension for the total edge weight that agrees with the original sum on graphs of maximum degree $D$ yet is $D$-Lipschitz on all graphs.   Finally, we show how to apply these methods to design node-private algorithms for high-dimensional vector summation and gradient descent on datasets where records are associated with graph edges, such as email threads."
+    }
+  },
+  {
+    "id": "2611.33605v1",
+    "title": "The Detour Is the Danger: Preserving Security During LLM Agent Recovery",
+    "authors": [
+      "Boyang Ma",
+      "Jinku Li",
+      "Hao Wu",
+      "Sheng Gao",
+      "Man Zhou"
+    ],
+    "published_date": "2026-11-25",
+    "tags": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "link": "http://arxiv.org/abs/2611.33605v1",
+    "pdf_link": "https://arxiv.org/pdf/2611.33605v1",
+    "content": {
+      "en": "LLM agents increasingly rely on external tools and reusable Skills to execute complex workflows, autonomously replanning when operations fail. However, such recovery may preserve task functionality while silently discarding the security protections required by the original workflow. In this paper, we investigate workflow security downgrade, a failure-induced security threat in which agents execute sensitive operations without satisfying their original protection requirements. Unlike prompt injection, this threat exploits autonomous recovery decisions triggered by execution failures, without modifying instructions or tool definitions. We systematically evaluate this behavior through fault injection in an executable MCP/Skill environment spanning seven LLMs, twelve task templates, and three security-sensitive domains. To address this threat, we propose ARGUS, an obligation-preserving recovery framework that combines resource-bound security evidence, isolated recovery-plan validation, and execution-time enforcement. In a separate 864-run evaluation, ARGUS prevents all observed protection-loss events under enforcement, while recovery assistance yields model-dependent improvements in protected task completion over blocking alone. Our findings demonstrate that secure agent recovery requires preserving security obligations across workflow changes, rather than merely restoring task functionality.",
+      "tr": "LLM agents increasingly rely on external tools and reusable Skills to execute complex workflows, autonomously replanning when operations fail. However, such recovery may preserve task functionality while silently discarding the security protections required by the original workflow. In this paper, we investigate workflow security downgrade, a failure-induced security threat in which agents execute sensitive operations without satisfying their original protection requirements. Unlike prompt injection, this threat exploits autonomous recovery decisions triggered by execution failures, without modifying instructions or tool definitions. We systematically evaluate this behavior through fault injection in an executable MCP/Skill environment spanning seven LLMs, twelve task templates, and three security-sensitive domains. To address this threat, we propose ARGUS, an obligation-preserving recovery framework that combines resource-bound security evidence, isolated recovery-plan validation, and execution-time enforcement. In a separate 864-run evaluation, ARGUS prevents all observed protection-loss events under enforcement, while recovery assistance yields model-dependent improvements in protected task completion over blocking alone. Our findings demonstrate that secure agent recovery requires preserving security obligations across workflow changes, rather than merely restoring task functionality."
     }
   }
 ]
